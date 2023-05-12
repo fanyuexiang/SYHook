@@ -1,0 +1,6 @@
+framework module Pods_testMonekyDylib {
+  umbrella header "Pods-testMonekyDylib-umbrella.h"
+
+  export *
+  module * { export * }
+}

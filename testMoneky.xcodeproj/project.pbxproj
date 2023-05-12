@@ -1,0 +1,967 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2C3ED4EB29F11ACC00D3F4C3 /* SYHookHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C3ED4EA29F11ACC00D3F4C3 /* SYHookHeader.h */; };
+		2CAC088129FD39C900FDA295 /* QMUIButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CAC087F29FD39C800FDA295 /* QMUIButton.m */; };
+		2CAC088229FD39C900FDA295 /* QMUIButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CAC088029FD39C900FDA295 /* QMUIButton.h */; };
+		2CAC088429FD3A2600FDA295 /* NIUICommonDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CAC088329FD3A2500FDA295 /* NIUICommonDefines.h */; };
+		65AB33D5A0861927C49C522A /* Pods_testMoneky.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DD0023F77B36A59CD3C7D5E /* Pods_testMoneky.framework */; };
+		D01DD55E2590351600946D53 /* MDConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = D01DD55D2590351600946D53 /* MDConfig.plist */; };
+		D01DD5682590351600946D53 /* libtestMonekyDylib.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = D01DD5672590351600946D53 /* libtestMonekyDylib.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		D01DD56D2590351600946D53 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D01DD56C2590351600946D53 /* JavaScriptCore.framework */; };
+		D01DD56F2590351600946D53 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D01DD56E2590351600946D53 /* Foundation.framework */; };
+		D01DD5712590351600946D53 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D01DD5702590351600946D53 /* UIKit.framework */; };
+		D01DD5762590351600946D53 /* testMonekyDylib.mm in Sources */ = {isa = PBXBuildFile; fileRef = D01DD5752590351600946D53 /* testMonekyDylib.mm */; };
+		D01DD5792590351600946D53 /* MDConfigManager.h in Headers */ = {isa = PBXBuildFile; fileRef = D01DD5782590351600946D53 /* MDConfigManager.h */; };
+		D01DD57B2590351600946D53 /* MDConfigManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D01DD57A2590351600946D53 /* MDConfigManager.m */; };
+		D01DD57D2590351600946D53 /* MDCycriptManager.h in Headers */ = {isa = PBXBuildFile; fileRef = D01DD57C2590351600946D53 /* MDCycriptManager.h */; };
+		D01DD57F2590351600946D53 /* MDCycriptManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D01DD57E2590351600946D53 /* MDCycriptManager.m */; };
+		D01DD5812590351600946D53 /* MDMethodTrace.h in Headers */ = {isa = PBXBuildFile; fileRef = D01DD5802590351600946D53 /* MDMethodTrace.h */; };
+		D01DD5832590351600946D53 /* MDMethodTrace.m in Sources */ = {isa = PBXBuildFile; fileRef = D01DD5822590351600946D53 /* MDMethodTrace.m */; };
+		D01DD5862590351600946D53 /* a1a2-selectortramps-arm.s in Sources */ = {isa = PBXBuildFile; fileRef = D01DD5852590351600946D53 /* a1a2-selectortramps-arm.s */; };
+		D01DD5882590351600946D53 /* a1a2-selectortramps-arm64.s in Sources */ = {isa = PBXBuildFile; fileRef = D01DD5872590351600946D53 /* a1a2-selectortramps-arm64.s */; };
+		D01DD58A2590351600946D53 /* a1a2-selectortramps-i386.s in Sources */ = {isa = PBXBuildFile; fileRef = D01DD5892590351600946D53 /* a1a2-selectortramps-i386.s */; };
+		D01DD58C2590351600946D53 /* a1a2-selectortramps-x86_64.s in Sources */ = {isa = PBXBuildFile; fileRef = D01DD58B2590351600946D53 /* a1a2-selectortramps-x86_64.s */; };
+		D01DD58E2590351600946D53 /* a2a3-selectortramps-arm.s in Sources */ = {isa = PBXBuildFile; fileRef = D01DD58D2590351600946D53 /* a2a3-selectortramps-arm.s */; };
+		D01DD5902590351600946D53 /* a2a3-selectortramps-i386.s in Sources */ = {isa = PBXBuildFile; fileRef = D01DD58F2590351600946D53 /* a2a3-selectortramps-i386.s */; };
+		D01DD5922590351600946D53 /* a2a3-selectortramps-x86_64.s in Sources */ = {isa = PBXBuildFile; fileRef = D01DD5912590351600946D53 /* a2a3-selectortramps-x86_64.s */; };
+		D01DD5942590351600946D53 /* OCMethodTrace.h in Headers */ = {isa = PBXBuildFile; fileRef = D01DD5932590351600946D53 /* OCMethodTrace.h */; };
+		D01DD5962590351600946D53 /* OCMethodTrace.m in Sources */ = {isa = PBXBuildFile; fileRef = D01DD5952590351600946D53 /* OCMethodTrace.m */; };
+		D01DD5982590351600946D53 /* OCSelectorTrampolines.h in Headers */ = {isa = PBXBuildFile; fileRef = D01DD5972590351600946D53 /* OCSelectorTrampolines.h */; };
+		D01DD59A2590351600946D53 /* OCSelectorTrampolines.mm in Sources */ = {isa = PBXBuildFile; fileRef = D01DD5992590351600946D53 /* OCSelectorTrampolines.mm */; };
+		D01DD59E2590351700946D53 /* LLDBTools.h in Headers */ = {isa = PBXBuildFile; fileRef = D01DD59D2590351700946D53 /* LLDBTools.h */; };
+		D01DD5A02590351700946D53 /* LLDBTools.mm in Sources */ = {isa = PBXBuildFile; fileRef = D01DD59F2590351700946D53 /* LLDBTools.mm */; };
+		D01DD5A52590351700946D53 /* AntiAntiDebug.m in Sources */ = {isa = PBXBuildFile; fileRef = D01DD5A42590351700946D53 /* AntiAntiDebug.m */; };
+		D01DD5A82590351700946D53 /* fishhook.c in Sources */ = {isa = PBXBuildFile; fileRef = D01DD5A72590351700946D53 /* fishhook.c */; };
+		D01DD5AA2590351700946D53 /* fishhook.h in Headers */ = {isa = PBXBuildFile; fileRef = D01DD5A92590351700946D53 /* fishhook.h */; };
+		D01DD5AC2590351700946D53 /* testMonekyDylib.h in Headers */ = {isa = PBXBuildFile; fileRef = D01DD5AB2590351700946D53 /* testMonekyDylib.h */; };
+		D01DD5AE2590351700946D53 /* testMonekyDylib.m in Sources */ = {isa = PBXBuildFile; fileRef = D01DD5AD2590351700946D53 /* testMonekyDylib.m */; };
+		D01DD5C425903EFC00946D53 /* NSObject+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = D01DD5C325903EFC00946D53 /* NSObject+Log.m */; };
+		D06DFF4B26C654FE00D7ABD5 /* NELPLogUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = D06DFF4026C654FE00D7ABD5 /* NELPLogUtil.m */; };
+		D06DFF4C26C654FE00D7ABD5 /* NELPLogAppender.m in Sources */ = {isa = PBXBuildFile; fileRef = D06DFF4126C654FE00D7ABD5 /* NELPLogAppender.m */; };
+		D06DFF4D26C654FE00D7ABD5 /* NELPLogMappingFile.h in Headers */ = {isa = PBXBuildFile; fileRef = D06DFF4226C654FE00D7ABD5 /* NELPLogMappingFile.h */; };
+		D06DFF4E26C654FE00D7ABD5 /* NELPLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = D06DFF4326C654FE00D7ABD5 /* NELPLogger.h */; };
+		D06DFF4F26C654FE00D7ABD5 /* NELPLogMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = D06DFF4426C654FE00D7ABD5 /* NELPLogMessage.m */; };
+		D06DFF5026C654FE00D7ABD5 /* NELPFoundationLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = D06DFF4526C654FE00D7ABD5 /* NELPFoundationLogger.h */; };
+		D06DFF5126C654FE00D7ABD5 /* NELPLogUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = D06DFF4626C654FE00D7ABD5 /* NELPLogUtil.h */; };
+		D06DFF5226C654FE00D7ABD5 /* NELPLogAppender.h in Headers */ = {isa = PBXBuildFile; fileRef = D06DFF4726C654FE00D7ABD5 /* NELPLogAppender.h */; };
+		D06DFF5326C654FE00D7ABD5 /* NELPLogMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = D06DFF4826C654FE00D7ABD5 /* NELPLogMessage.h */; };
+		D06DFF5426C654FE00D7ABD5 /* NELPLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = D06DFF4926C654FE00D7ABD5 /* NELPLogger.m */; };
+		D06DFF5526C654FE00D7ABD5 /* NELPLogMappingFile.m in Sources */ = {isa = PBXBuildFile; fileRef = D06DFF4A26C654FE00D7ABD5 /* NELPLogMappingFile.m */; };
+		EA1C142F4EB03A38DA1DB314 /* Pods_testMonekyDylib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D52348B266183D62C5E3701 /* Pods_testMonekyDylib.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D01DD5692590351600946D53 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D01DD54B2590351600946D53 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D01DD5662590351600946D53;
+			remoteInfo = testMonekyDylib;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D01DD5532590351600946D53 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D01DD5682590351600946D53 /* libtestMonekyDylib.dylib in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		2C3ED4EA29F11ACC00D3F4C3 /* SYHookHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SYHookHeader.h; sourceTree = "<group>"; };
+		2C5AA88E2A0E7719000FE097 /* testMoneky.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = testMoneky.entitlements; sourceTree = "<group>"; };
+		2CAC087F29FD39C800FDA295 /* QMUIButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QMUIButton.m; sourceTree = "<group>"; };
+		2CAC088029FD39C900FDA295 /* QMUIButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QMUIButton.h; sourceTree = "<group>"; };
+		2CAC088329FD3A2500FDA295 /* NIUICommonDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIUICommonDefines.h; sourceTree = "<group>"; };
+		4DD0023F77B36A59CD3C7D5E /* Pods_testMoneky.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_testMoneky.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		52DE593797E326AAC69C1B70 /* Pods-testMonekyDylib.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testMonekyDylib.release.xcconfig"; path = "Target Support Files/Pods-testMonekyDylib/Pods-testMonekyDylib.release.xcconfig"; sourceTree = "<group>"; };
+		99A99B0B9EEA8AE03C73D991 /* Pods-testMoneky.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testMoneky.debug.xcconfig"; path = "Target Support Files/Pods-testMoneky/Pods-testMoneky.debug.xcconfig"; sourceTree = "<group>"; };
+		9D52348B266183D62C5E3701 /* Pods_testMonekyDylib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_testMonekyDylib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D01DD5562590351600946D53 /* testMoneky.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testMoneky.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D01DD5592590351600946D53 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		D01DD55B2590351600946D53 /* quick-resign.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "quick-resign.sh"; sourceTree = "<group>"; };
+		D01DD55D2590351600946D53 /* MDConfig.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = MDConfig.plist; sourceTree = "<group>"; };
+		D01DD5602590351600946D53 /* put ipa or app here */ = {isa = PBXFileReference; lastKnownFileType = text; path = "put ipa or app here"; sourceTree = "<group>"; };
+		D01DD5612590351600946D53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D01DD5672590351600946D53 /* libtestMonekyDylib.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libtestMonekyDylib.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		D01DD56C2590351600946D53 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		D01DD56E2590351600946D53 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D01DD5702590351600946D53 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		D01DD5742590351600946D53 /* testMonekyDylib.xm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; path = testMonekyDylib.xm; sourceTree = "<group>"; };
+		D01DD5752590351600946D53 /* testMonekyDylib.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = testMonekyDylib.mm; sourceTree = "<group>"; };
+		D01DD5782590351600946D53 /* MDConfigManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MDConfigManager.h; sourceTree = "<group>"; };
+		D01DD57A2590351600946D53 /* MDConfigManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MDConfigManager.m; sourceTree = "<group>"; };
+		D01DD57C2590351600946D53 /* MDCycriptManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MDCycriptManager.h; sourceTree = "<group>"; };
+		D01DD57E2590351600946D53 /* MDCycriptManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MDCycriptManager.m; sourceTree = "<group>"; };
+		D01DD5802590351600946D53 /* MDMethodTrace.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MDMethodTrace.h; sourceTree = "<group>"; };
+		D01DD5822590351600946D53 /* MDMethodTrace.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MDMethodTrace.m; sourceTree = "<group>"; };
+		D01DD5852590351600946D53 /* a1a2-selectortramps-arm.s */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.asm; path = "a1a2-selectortramps-arm.s"; sourceTree = "<group>"; };
+		D01DD5872590351600946D53 /* a1a2-selectortramps-arm64.s */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.asm; path = "a1a2-selectortramps-arm64.s"; sourceTree = "<group>"; };
+		D01DD5892590351600946D53 /* a1a2-selectortramps-i386.s */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.asm; path = "a1a2-selectortramps-i386.s"; sourceTree = "<group>"; };
+		D01DD58B2590351600946D53 /* a1a2-selectortramps-x86_64.s */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.asm; path = "a1a2-selectortramps-x86_64.s"; sourceTree = "<group>"; };
+		D01DD58D2590351600946D53 /* a2a3-selectortramps-arm.s */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.asm; path = "a2a3-selectortramps-arm.s"; sourceTree = "<group>"; };
+		D01DD58F2590351600946D53 /* a2a3-selectortramps-i386.s */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.asm; path = "a2a3-selectortramps-i386.s"; sourceTree = "<group>"; };
+		D01DD5912590351600946D53 /* a2a3-selectortramps-x86_64.s */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.asm; path = "a2a3-selectortramps-x86_64.s"; sourceTree = "<group>"; };
+		D01DD5932590351600946D53 /* OCMethodTrace.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCMethodTrace.h; sourceTree = "<group>"; };
+		D01DD5952590351600946D53 /* OCMethodTrace.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCMethodTrace.m; sourceTree = "<group>"; };
+		D01DD5972590351600946D53 /* OCSelectorTrampolines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCSelectorTrampolines.h; sourceTree = "<group>"; };
+		D01DD5992590351600946D53 /* OCSelectorTrampolines.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = OCSelectorTrampolines.mm; sourceTree = "<group>"; };
+		D01DD59B2590351600946D53 /* selectortramps.mac */ = {isa = PBXFileReference; lastKnownFileType = text; path = selectortramps.mac; sourceTree = "<group>"; };
+		D01DD59D2590351700946D53 /* LLDBTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLDBTools.h; sourceTree = "<group>"; };
+		D01DD59F2590351700946D53 /* LLDBTools.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = LLDBTools.mm; sourceTree = "<group>"; };
+		D01DD5A42590351700946D53 /* AntiAntiDebug.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AntiAntiDebug.m; sourceTree = "<group>"; };
+		D01DD5A72590351700946D53 /* fishhook.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = fishhook.c; sourceTree = "<group>"; };
+		D01DD5A92590351700946D53 /* fishhook.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = fishhook.h; sourceTree = "<group>"; };
+		D01DD5AB2590351700946D53 /* testMonekyDylib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = testMonekyDylib.h; sourceTree = "<group>"; };
+		D01DD5AD2590351700946D53 /* testMonekyDylib.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = testMonekyDylib.m; sourceTree = "<group>"; };
+		D01DD5C325903EFC00946D53 /* NSObject+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Log.m"; sourceTree = "<group>"; };
+		D06DFF4026C654FE00D7ABD5 /* NELPLogUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NELPLogUtil.m; sourceTree = "<group>"; };
+		D06DFF4126C654FE00D7ABD5 /* NELPLogAppender.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NELPLogAppender.m; sourceTree = "<group>"; };
+		D06DFF4226C654FE00D7ABD5 /* NELPLogMappingFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NELPLogMappingFile.h; sourceTree = "<group>"; };
+		D06DFF4326C654FE00D7ABD5 /* NELPLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NELPLogger.h; sourceTree = "<group>"; };
+		D06DFF4426C654FE00D7ABD5 /* NELPLogMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NELPLogMessage.m; sourceTree = "<group>"; };
+		D06DFF4526C654FE00D7ABD5 /* NELPFoundationLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NELPFoundationLogger.h; sourceTree = "<group>"; };
+		D06DFF4626C654FE00D7ABD5 /* NELPLogUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NELPLogUtil.h; sourceTree = "<group>"; };
+		D06DFF4726C654FE00D7ABD5 /* NELPLogAppender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NELPLogAppender.h; sourceTree = "<group>"; };
+		D06DFF4826C654FE00D7ABD5 /* NELPLogMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NELPLogMessage.h; sourceTree = "<group>"; };
+		D06DFF4926C654FE00D7ABD5 /* NELPLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NELPLogger.m; sourceTree = "<group>"; };
+		D06DFF4A26C654FE00D7ABD5 /* NELPLogMappingFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NELPLogMappingFile.m; sourceTree = "<group>"; };
+		E6574C8A1C174622F9E068F5 /* Pods-testMonekyDylib.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testMonekyDylib.debug.xcconfig"; path = "Target Support Files/Pods-testMonekyDylib/Pods-testMonekyDylib.debug.xcconfig"; sourceTree = "<group>"; };
+		FBF60750FA49878748F84686 /* Pods-testMoneky.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testMoneky.release.xcconfig"; path = "Target Support Files/Pods-testMoneky/Pods-testMoneky.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D01DD5502590351600946D53 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65AB33D5A0861927C49C522A /* Pods_testMoneky.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D01DD5642590351600946D53 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D01DD56D2590351600946D53 /* JavaScriptCore.framework in Frameworks */,
+				D01DD5712590351600946D53 /* UIKit.framework in Frameworks */,
+				D01DD56F2590351600946D53 /* Foundation.framework in Frameworks */,
+				EA1C142F4EB03A38DA1DB314 /* Pods_testMonekyDylib.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2CAC087E29FD39A600FDA295 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				2CAC088329FD3A2500FDA295 /* NIUICommonDefines.h */,
+				2CAC088029FD39C900FDA295 /* QMUIButton.h */,
+				2CAC087F29FD39C800FDA295 /* QMUIButton.m */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		D01DD54A2590351600946D53 = {
+			isa = PBXGroup;
+			children = (
+				D01DD5582590351600946D53 /* testMoneky */,
+				D01DD5722590351600946D53 /* testMonekyDylib */,
+				D01DD56B2590351600946D53 /* Frameworks */,
+				D01DD5572590351600946D53 /* Products */,
+				E0D61CC52466BCD961EB8B27 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		D01DD5572590351600946D53 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D01DD5562590351600946D53 /* testMoneky.app */,
+				D01DD5672590351600946D53 /* libtestMonekyDylib.dylib */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D01DD5582590351600946D53 /* testMoneky */ = {
+			isa = PBXGroup;
+			children = (
+				2C5AA88E2A0E7719000FE097 /* testMoneky.entitlements */,
+				D06DFF3F26C654FE00D7ABD5 /* Logger */,
+				D01DD5592590351600946D53 /* icon.png */,
+				D01DD5612590351600946D53 /* Info.plist */,
+				D01DD55A2590351600946D53 /* Scripts */,
+				D01DD55C2590351600946D53 /* Config */,
+				D01DD55F2590351600946D53 /* TargetApp */,
+			);
+			path = testMoneky;
+			sourceTree = "<group>";
+		};
+		D01DD55A2590351600946D53 /* Scripts */ = {
+			isa = PBXGroup;
+			children = (
+				D01DD55B2590351600946D53 /* quick-resign.sh */,
+			);
+			path = Scripts;
+			sourceTree = "<group>";
+		};
+		D01DD55C2590351600946D53 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				D01DD55D2590351600946D53 /* MDConfig.plist */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		D01DD55F2590351600946D53 /* TargetApp */ = {
+			isa = PBXGroup;
+			children = (
+				D01DD5602590351600946D53 /* put ipa or app here */,
+			);
+			path = TargetApp;
+			sourceTree = "<group>";
+		};
+		D01DD56B2590351600946D53 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D01DD56C2590351600946D53 /* JavaScriptCore.framework */,
+				D01DD56E2590351600946D53 /* Foundation.framework */,
+				D01DD5702590351600946D53 /* UIKit.framework */,
+				4DD0023F77B36A59CD3C7D5E /* Pods_testMoneky.framework */,
+				9D52348B266183D62C5E3701 /* Pods_testMonekyDylib.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D01DD5722590351600946D53 /* testMonekyDylib */ = {
+			isa = PBXGroup;
+			children = (
+				2CAC087E29FD39A600FDA295 /* UI */,
+				D01DD5C325903EFC00946D53 /* NSObject+Log.m */,
+				2C3ED4EA29F11ACC00D3F4C3 /* SYHookHeader.h */,
+				D01DD5AB2590351700946D53 /* testMonekyDylib.h */,
+				D01DD5AD2590351700946D53 /* testMonekyDylib.m */,
+				D01DD5732590351600946D53 /* Logos */,
+				D01DD5772590351600946D53 /* Config */,
+				D01DD5842590351600946D53 /* Trace */,
+				D01DD59C2590351600946D53 /* Tools */,
+				D01DD5A32590351700946D53 /* AntiAntiDebug */,
+				D01DD5A62590351700946D53 /* fishhook */,
+				D01DD5A12590351700946D53 /* Supporting Files */,
+			);
+			path = testMonekyDylib;
+			sourceTree = "<group>";
+		};
+		D01DD5732590351600946D53 /* Logos */ = {
+			isa = PBXGroup;
+			children = (
+				D01DD5742590351600946D53 /* testMonekyDylib.xm */,
+				D01DD5752590351600946D53 /* testMonekyDylib.mm */,
+			);
+			path = Logos;
+			sourceTree = "<group>";
+		};
+		D01DD5772590351600946D53 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				D01DD5782590351600946D53 /* MDConfigManager.h */,
+				D01DD57A2590351600946D53 /* MDConfigManager.m */,
+				D01DD57C2590351600946D53 /* MDCycriptManager.h */,
+				D01DD57E2590351600946D53 /* MDCycriptManager.m */,
+				D01DD5802590351600946D53 /* MDMethodTrace.h */,
+				D01DD5822590351600946D53 /* MDMethodTrace.m */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		D01DD5842590351600946D53 /* Trace */ = {
+			isa = PBXGroup;
+			children = (
+				D01DD5852590351600946D53 /* a1a2-selectortramps-arm.s */,
+				D01DD5872590351600946D53 /* a1a2-selectortramps-arm64.s */,
+				D01DD5892590351600946D53 /* a1a2-selectortramps-i386.s */,
+				D01DD58B2590351600946D53 /* a1a2-selectortramps-x86_64.s */,
+				D01DD58D2590351600946D53 /* a2a3-selectortramps-arm.s */,
+				D01DD58F2590351600946D53 /* a2a3-selectortramps-i386.s */,
+				D01DD5912590351600946D53 /* a2a3-selectortramps-x86_64.s */,
+				D01DD5932590351600946D53 /* OCMethodTrace.h */,
+				D01DD5952590351600946D53 /* OCMethodTrace.m */,
+				D01DD5972590351600946D53 /* OCSelectorTrampolines.h */,
+				D01DD5992590351600946D53 /* OCSelectorTrampolines.mm */,
+				D01DD59B2590351600946D53 /* selectortramps.mac */,
+			);
+			path = Trace;
+			sourceTree = "<group>";
+		};
+		D01DD59C2590351600946D53 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				D01DD59D2590351700946D53 /* LLDBTools.h */,
+				D01DD59F2590351700946D53 /* LLDBTools.mm */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		D01DD5A12590351700946D53 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D01DD5A32590351700946D53 /* AntiAntiDebug */ = {
+			isa = PBXGroup;
+			children = (
+				D01DD5A42590351700946D53 /* AntiAntiDebug.m */,
+			);
+			path = AntiAntiDebug;
+			sourceTree = "<group>";
+		};
+		D01DD5A62590351700946D53 /* fishhook */ = {
+			isa = PBXGroup;
+			children = (
+				D01DD5A72590351700946D53 /* fishhook.c */,
+				D01DD5A92590351700946D53 /* fishhook.h */,
+			);
+			path = fishhook;
+			sourceTree = "<group>";
+		};
+		D06DFF3F26C654FE00D7ABD5 /* Logger */ = {
+			isa = PBXGroup;
+			children = (
+				D06DFF4526C654FE00D7ABD5 /* NELPFoundationLogger.h */,
+				D06DFF4726C654FE00D7ABD5 /* NELPLogAppender.h */,
+				D06DFF4126C654FE00D7ABD5 /* NELPLogAppender.m */,
+				D06DFF4326C654FE00D7ABD5 /* NELPLogger.h */,
+				D06DFF4926C654FE00D7ABD5 /* NELPLogger.m */,
+				D06DFF4226C654FE00D7ABD5 /* NELPLogMappingFile.h */,
+				D06DFF4A26C654FE00D7ABD5 /* NELPLogMappingFile.m */,
+				D06DFF4826C654FE00D7ABD5 /* NELPLogMessage.h */,
+				D06DFF4426C654FE00D7ABD5 /* NELPLogMessage.m */,
+				D06DFF4626C654FE00D7ABD5 /* NELPLogUtil.h */,
+				D06DFF4026C654FE00D7ABD5 /* NELPLogUtil.m */,
+			);
+			path = Logger;
+			sourceTree = SOURCE_ROOT;
+		};
+		E0D61CC52466BCD961EB8B27 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				99A99B0B9EEA8AE03C73D991 /* Pods-testMoneky.debug.xcconfig */,
+				FBF60750FA49878748F84686 /* Pods-testMoneky.release.xcconfig */,
+				E6574C8A1C174622F9E068F5 /* Pods-testMonekyDylib.debug.xcconfig */,
+				52DE593797E326AAC69C1B70 /* Pods-testMonekyDylib.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		D01DD5652590351600946D53 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D06DFF5226C654FE00D7ABD5 /* NELPLogAppender.h in Headers */,
+				D01DD57D2590351600946D53 /* MDCycriptManager.h in Headers */,
+				2CAC088429FD3A2600FDA295 /* NIUICommonDefines.h in Headers */,
+				D01DD5812590351600946D53 /* MDMethodTrace.h in Headers */,
+				D06DFF5126C654FE00D7ABD5 /* NELPLogUtil.h in Headers */,
+				D06DFF4D26C654FE00D7ABD5 /* NELPLogMappingFile.h in Headers */,
+				D06DFF4E26C654FE00D7ABD5 /* NELPLogger.h in Headers */,
+				D01DD5AA2590351700946D53 /* fishhook.h in Headers */,
+				D01DD59E2590351700946D53 /* LLDBTools.h in Headers */,
+				D06DFF5326C654FE00D7ABD5 /* NELPLogMessage.h in Headers */,
+				D01DD5792590351600946D53 /* MDConfigManager.h in Headers */,
+				2C3ED4EB29F11ACC00D3F4C3 /* SYHookHeader.h in Headers */,
+				D06DFF5026C654FE00D7ABD5 /* NELPFoundationLogger.h in Headers */,
+				D01DD5982590351600946D53 /* OCSelectorTrampolines.h in Headers */,
+				2CAC088229FD39C900FDA295 /* QMUIButton.h in Headers */,
+				D01DD5AC2590351700946D53 /* testMonekyDylib.h in Headers */,
+				D01DD5942590351600946D53 /* OCMethodTrace.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		D01DD5552590351600946D53 /* testMoneky */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D01DD5B42590351700946D53 /* Build configuration list for PBXNativeTarget "testMoneky" */;
+			buildPhases = (
+				2BC4D41E905ED0B65D214A46 /* [CP] Check Pods Manifest.lock */,
+				D01DD54F2590351600946D53 /* Sources */,
+				D01DD5502590351600946D53 /* Frameworks */,
+				D01DD5512590351600946D53 /* ShellScript */,
+				D01DD5522590351600946D53 /* Resources */,
+				D01DD5532590351600946D53 /* CopyFiles */,
+				D01DD5542590351600946D53 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D01DD56A2590351600946D53 /* PBXTargetDependency */,
+			);
+			name = testMoneky;
+			productName = testMoneky;
+			productReference = D01DD5562590351600946D53 /* testMoneky.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D01DD5662590351600946D53 /* testMonekyDylib */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D01DD5B12590351700946D53 /* Build configuration list for PBXNativeTarget "testMonekyDylib" */;
+			buildPhases = (
+				A7D452A9D4B2C05E6D2FFE2A /* [CP] Check Pods Manifest.lock */,
+				D01DD5622590351600946D53 /* ShellScript */,
+				D01DD5632590351600946D53 /* Sources */,
+				D01DD5642590351600946D53 /* Frameworks */,
+				D01DD5652590351600946D53 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = testMonekyDylib;
+			productName = testMonekyDylib;
+			productReference = D01DD5672590351600946D53 /* libtestMonekyDylib.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D01DD54B2590351600946D53 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1230;
+				TargetAttributes = {
+					D01DD5552590351600946D53 = {
+						CreatedOnToolsVersion = 12.3;
+					};
+					D01DD5662590351600946D53 = {
+						CreatedOnToolsVersion = 12.3;
+						LastSwiftMigration = 1410;
+					};
+				};
+			};
+			buildConfigurationList = D01DD54E2590351600946D53 /* Build configuration list for PBXProject "testMoneky" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D01DD54A2590351600946D53;
+			productRefGroup = D01DD5572590351600946D53 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D01DD5552590351600946D53 /* testMoneky */,
+				D01DD5662590351600946D53 /* testMonekyDylib */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D01DD5522590351600946D53 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D01DD55E2590351600946D53 /* MDConfig.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2BC4D41E905ED0B65D214A46 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-testMoneky-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A7D452A9D4B2C05E6D2FFE2A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-testMonekyDylib-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D01DD5512590351600946D53 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/opt/MonkeyDev/Tools/pack.sh\n";
+		};
+		D01DD5542590351600946D53 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/opt/MonkeyDev/Tools/pack.sh codesign\n";
+		};
+		D01DD5622590351600946D53 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/opt/MonkeyDev/bin/md --xcbp-logos\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D01DD54F2590351600946D53 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D01DD5632590351600946D53 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D06DFF5426C654FE00D7ABD5 /* NELPLogger.m in Sources */,
+				2CAC088129FD39C900FDA295 /* QMUIButton.m in Sources */,
+				D06DFF4C26C654FE00D7ABD5 /* NELPLogAppender.m in Sources */,
+				D01DD57F2590351600946D53 /* MDCycriptManager.m in Sources */,
+				D06DFF5526C654FE00D7ABD5 /* NELPLogMappingFile.m in Sources */,
+				D01DD5882590351600946D53 /* a1a2-selectortramps-arm64.s in Sources */,
+				D06DFF4B26C654FE00D7ABD5 /* NELPLogUtil.m in Sources */,
+				D01DD5862590351600946D53 /* a1a2-selectortramps-arm.s in Sources */,
+				D01DD5AE2590351700946D53 /* testMonekyDylib.m in Sources */,
+				D01DD58C2590351600946D53 /* a1a2-selectortramps-x86_64.s in Sources */,
+				D01DD5962590351600946D53 /* OCMethodTrace.m in Sources */,
+				D01DD57B2590351600946D53 /* MDConfigManager.m in Sources */,
+				D01DD5A82590351700946D53 /* fishhook.c in Sources */,
+				D01DD5A52590351700946D53 /* AntiAntiDebug.m in Sources */,
+				D01DD59A2590351600946D53 /* OCSelectorTrampolines.mm in Sources */,
+				D01DD58A2590351600946D53 /* a1a2-selectortramps-i386.s in Sources */,
+				D01DD5902590351600946D53 /* a2a3-selectortramps-i386.s in Sources */,
+				D01DD58E2590351600946D53 /* a2a3-selectortramps-arm.s in Sources */,
+				D01DD5762590351600946D53 /* testMonekyDylib.mm in Sources */,
+				D06DFF4F26C654FE00D7ABD5 /* NELPLogMessage.m in Sources */,
+				D01DD5C425903EFC00946D53 /* NSObject+Log.m in Sources */,
+				D01DD5A02590351700946D53 /* LLDBTools.mm in Sources */,
+				D01DD5922590351600946D53 /* a2a3-selectortramps-x86_64.s in Sources */,
+				D01DD5832590351600946D53 /* MDMethodTrace.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D01DD56A2590351600946D53 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D01DD5662590351600946D53 /* testMonekyDylib */;
+			targetProxy = D01DD5692590351600946D53 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		D01DD5AF2590351700946D53 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D01DD5B02590351700946D53 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D01DD5B22590351700946D53 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E6574C8A1C174622F9E068F5 /* Pods-testMonekyDylib.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development: 月祥 范 (2NGCA62WFJ)";
+				CODE_SIGN_STYLE = Manual;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				ENABLE_BITCODE = NO;
+				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*.nib *.lproj *.gch (*) .DS_Store CVS .svn .git .hg *.xcodeproj *.xcode *.pbproj *.pbxproj";
+				EXECUTABLE_PREFIX = lib;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(MonkeyDevPath)/Frameworks/**",
+					"$(MonkeyDevPath)/Librarys/**",
+					"$(MonkeyDevTheosPath)/vendor/lib",
+					"$(PROJECT_DIR)",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "testMonekyDylib/testMonekyDylib-Prefix.pch";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(MonkeyDevPath)/include",
+					"$(MonkeyDevTheosPath)/vendor/include/**",
+				);
+				INSTALL_PATH = "@executable_path/Frameworks/libtestMonekyDylib.dylib";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(MonkeyDevPath)/Frameworks",
+					"$(MonkeyDevTheosPath)/vendor/lib/**",
+				);
+				MonkeyDevPath = /opt/MonkeyDev;
+				MonkeyDevTheosPath = /opt/theos;
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					"-DTHEOS_INSTANCE_NAME=\"\\\"testMonekyDylib\\\"\"",
+					"-g",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-weak_library",
+					"/usr/lib/libc++.dylib",
+					"-weak_library",
+					"/usr/lib/libstdc++.dylib",
+					"-weak_library",
+					"$(MonkeyDevPath)/Frameworks/libsubstrate.dylib",
+					"-lcycript",
+					"-framework",
+					RevealServer,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "testMonekyDylib/testMonekyDylib-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = NO;
+			};
+			name = Debug;
+		};
+		D01DD5B32590351700946D53 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 52DE593797E326AAC69C1B70 /* Pods-testMonekyDylib.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development: 月祥 范 (2NGCA62WFJ)";
+				CODE_SIGN_STYLE = Manual;
+				COPY_PHASE_STRIP = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				ENABLE_BITCODE = NO;
+				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*.nib *.lproj *.gch (*) .DS_Store CVS .svn .git .hg *.xcodeproj *.xcode *.pbproj *.pbxproj";
+				EXECUTABLE_PREFIX = lib;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(MonkeyDevPath)/Frameworks/**",
+					"$(MonkeyDevPath)/Librarys/**",
+					"$(MonkeyDevTheosPath)/vendor/lib",
+					"$(PROJECT_DIR)",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "testMonekyDylib/testMonekyDylib-Prefix.pch";
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(MonkeyDevPath)/include",
+					"$(MonkeyDevTheosPath)/vendor/include/**",
+				);
+				INSTALL_PATH = "@executable_path/Frameworks/libtestMonekyDylib.dylib";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(MonkeyDevPath)/Frameworks",
+					"$(MonkeyDevTheosPath)/vendor/lib/**",
+				);
+				MonkeyDevPath = /opt/MonkeyDev;
+				MonkeyDevTheosPath = /opt/theos;
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					"-DTHEOS_INSTANCE_NAME=\"\\\"testMonekyDylib\\\"\"",
+					"-g",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-weak_library",
+					"/usr/lib/libc++.dylib",
+					"-weak_library",
+					"/usr/lib/libstdc++.dylib",
+					"-weak_library",
+					"$(MonkeyDevPath)/Frameworks/libsubstrate.dylib",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "testMonekyDylib/testMonekyDylib-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D01DD5B52590351700946D53 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 99A99B0B9EEA8AE03C73D991 /* Pods-testMoneky.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = testMoneky/testMoneky.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 64DK8BZY68;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = testMoneky/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MONKEYDEV_ADD_SUBSTRATE = YES;
+				MONKEYDEV_CLASS_DUMP = YES;
+				MONKEYDEV_DEFAULT_BUNDLEID = YES;
+				MONKEYDEV_INSERT_DYLIB = YES;
+				MONKEYDEV_RESTORE_SYMBOL = YES;
+				MONKEYDEV_TARGET_APP = Optional;
+				OTHER_CFLAGS = "-g";
+				PODS_CONFIGURATION_BUILD_DIR = "$BUILD_DIR/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				PODS_ROOT = "${SRCROOT}/Pods";
+				PRODUCT_BUNDLE_IDENTIFIER = fantest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D01DD5B62590351700946D53 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FBF60750FA49878748F84686 /* Pods-testMoneky.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = testMoneky/testMoneky.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 64DK8BZY68;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = testMoneky/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MONKEYDEV_ADD_SUBSTRATE = YES;
+				MONKEYDEV_CLASS_DUMP = YES;
+				MONKEYDEV_DEFAULT_BUNDLEID = YES;
+				MONKEYDEV_INSERT_DYLIB = YES;
+				MONKEYDEV_RESTORE_SYMBOL = YES;
+				MONKEYDEV_TARGET_APP = Optional;
+				OTHER_CFLAGS = "-g";
+				PODS_CONFIGURATION_BUILD_DIR = "$BUILD_DIR/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				PODS_ROOT = "${SRCROOT}/Pods";
+				PRODUCT_BUNDLE_IDENTIFIER = fantest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D01DD54E2590351600946D53 /* Build configuration list for PBXProject "testMoneky" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D01DD5AF2590351700946D53 /* Debug */,
+				D01DD5B02590351700946D53 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D01DD5B12590351700946D53 /* Build configuration list for PBXNativeTarget "testMonekyDylib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D01DD5B22590351700946D53 /* Debug */,
+				D01DD5B32590351700946D53 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D01DD5B42590351700946D53 /* Build configuration list for PBXNativeTarget "testMoneky" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D01DD5B52590351700946D53 /* Debug */,
+				D01DD5B62590351700946D53 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D01DD54B2590351600946D53 /* Project object */;
+}

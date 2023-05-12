@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SinfPaths</key>
+	<array>
+		<string>SC_Info/Tally.sinf</string>
+	</array>
+	<key>SinfReplicationPaths</key>
+	<array>
+		<string>PlugIns/BudgetIntentHandler.appex/SC_Info/BudgetIntentHandler.sinf</string>
+		<string>PlugIns/ExpendIncomeWidgetExtension.appex/SC_Info/ExpendIncomeWidgetExtension.sinf</string>
+		<string>PlugIns/QTallyToday.appex/SC_Info/QTallyToday.sinf</string>
+		<string>PlugIns/TallyLedgerIntentHandler.appex/SC_Info/TallyLedgerIntentHandler.sinf</string>
+		<string>PlugIns/TallyToday.appex/SC_Info/TallyToday.sinf</string>
+		<string>SC_Info/Tally.sinf</string>
+	</array>
+</dict>
+</plist>
