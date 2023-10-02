@@ -134,12 +134,6 @@ CHClassMethod1(void, InviteFriendsPromotiosView, showHome, id, arg1) {
     CHSuper1(InviteFriendsPromotiosView, showHome, arg1);
 }
 
-CHDeclareClass(SMMineViewModel)
-CHClassMethod0(id, SMMineViewModel, rac_getUserInfoData) {
-    id a = CHSuper0(SMMineViewModel, rac_getUserInfoData);
-    return a;
-}
-
 
 
 //add new property
