@@ -134,7 +134,15 @@ CHClassMethod1(void, InviteFriendsPromotiosView, showHome, id, arg1) {
     CHSuper1(InviteFriendsPromotiosView, showHome, arg1);
 }
 
+CHDeclareClass(DLGlobal)
 
+CHMethod0(BOOL, DLGlobal, isVip) {
+    id user = [self valueForKey:@"user"];
+    [user setValue:@(1) forKey:@"isVip"];
+    [user setValue:@(1) forKey:@"isSuper"];
+    [user setValue:@(3) forKey:@"vipType"];
+    return YES;
+}
 
 //add new property
 CHPropertyRetainNonatomic(CustomViewController, NSString*, newProperty, setNewProperty);
@@ -167,5 +175,9 @@ CHConstructor{
     
     CHLoadLateClass(InviteFriendsPromotiosView);
     CHClassHook1(InviteFriendsPromotiosView, showHome);
+    
+    // 墨记会员
+    CHLoadLateClass(DLGlobal);
+    CHHook0(DLGlobal, isVip);
 
 }

@@ -66,3 +66,10 @@ typedef void (^BUAdSDKManagerStartBlock)(BOOL success, NSError * _Nullable error
 + (void)showHome:(id)arg1;
 
 @end
+
+// 墨记会员
+@interface DLGlobal : NSObject
+
+- (BOOL)isVip;
+
+@end
