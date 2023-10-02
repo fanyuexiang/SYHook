@@ -9,8 +9,8 @@
 #import "BUAdClientBiddingProtocol-Protocol.h"
 #import "BUMopubAdMarkUpDelegate-Protocol.h"
 
-@class NSDictionary, NSString, UIView;
-@protocol BUNativeExpressFullscreenVideoAdDelegate;
+@class BUDictionary, NSObject, NSString, UIView;
+@protocol BUNativeExpressFullscreenVideoAdDelegate, BUNativeExpressFullscreenVideoAdMediationProtocol;
 
 @interface BUNativeExpressFullscreenVideoAd : BUInterfaceBaseObject <BUMopubAdMarkUpDelegate, BUAdClientBiddingProtocol>
 {
@@ -37,16 +37,20 @@
 - (void)nativeExpressFullscreenVideoAdDidLoad:(id)arg1;
 - (id)initWithSlot:(id)arg1;
 - (id)initWithSlotID:(id)arg1;
+- (void)nativeExpressFullscreenVideoAdServerRewardDidFail:(id)arg1 error:(id)arg2;
+- (void)nativeExpressFullscreenVideoAdServerRewardDidSucceed:(id)arg1 verify:(_Bool)arg2;
+- (void)nativeExpressFullscreenVideoAdWillPresentFullScreenModal:(id)arg1;
+- (void)nativeExpressFullscreenVideoAdDidShowFailed:(id)arg1 error:(id)arg2;
+@property(readonly, nonatomic) NSObject<BUNativeExpressFullscreenVideoAdMediationProtocol> *mediation;
 
 // Remaining properties
-@property(readonly, nonatomic, getter=isAdValid) _Bool adValid; // @dynamic adValid;
 @property(readonly, copy) NSString *debugDescription;
 @property(readonly, copy) NSString *description;
 @property(readonly, nonatomic) double expireTimestamp; // @dynamic expireTimestamp;
 @property(retain, nonatomic) UIView *expressAdView; // @dynamic expressAdView;
 @property(readonly) unsigned long long hash;
 @property(readonly, nonatomic) _Bool materialMetaIsFromPreload; // @dynamic materialMetaIsFromPreload;
-@property(readonly, copy, nonatomic) NSDictionary *mediaExt; // @dynamic mediaExt;
+@property(readonly, copy, nonatomic) BUDictionary *mediaExt; // @dynamic mediaExt;
 @property(readonly) Class superclass;
 
 @end

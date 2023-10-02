@@ -10,18 +10,18 @@
 
 @interface CSJDislikeTableViewCell : UITableViewCell
 {
-    UIImageView *_nextImg;
+    UIImageView *_Size_For_len;
     UILabel *_titleLable;
-    UIView *_sepLine;
+    UIView *_Str_IosMeta;
 }
 
 - (void).cxx_destruct;
-@property(retain, nonatomic) UIView *sepLine; // @synthesize sepLine=_sepLine;
+@property(retain, nonatomic) UIView *Str_IosMeta; // @synthesize Str_IosMeta=_Str_IosMeta;
 @property(retain, nonatomic) UILabel *titleLable; // @synthesize titleLable=_titleLable;
-@property(retain, nonatomic) UIImageView *nextImg; // @synthesize nextImg=_nextImg;
+@property(retain, nonatomic) UIImageView *Size_For_len; // @synthesize Size_For_len=_Size_For_len;
 - (void)setSelected:(_Bool)arg1 animated:(_Bool)arg2;
 - (void)awakeFromNib;
-- (void)refleshUIWithModel:(id)arg1 hiddenSep:(_Bool)arg2;
+- (void)YES_VcDuan:(id)arg1 hiddenSep:(_Bool)arg2;
 - (id)initWithStyle:(long long)arg1 reuseIdentifier:(id)arg2;
 
 @end

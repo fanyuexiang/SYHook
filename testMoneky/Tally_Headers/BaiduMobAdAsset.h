@@ -16,6 +16,7 @@
     NSString *_imageName;
     NSString *_imageDirectory;
     NSString *_imageUrl;
+    NSString *_imageBundleName;
     BaiduMobAdLayerGroup *_layerGroup;
     NSString *_rootDirectory;
     NSBundle *_assetBundle;
@@ -25,6 +26,7 @@
 @property(readonly, nonatomic) NSBundle *assetBundle; // @synthesize assetBundle=_assetBundle;
 @property(retain, nonatomic) NSString *rootDirectory; // @synthesize rootDirectory=_rootDirectory;
 @property(readonly, nonatomic) BaiduMobAdLayerGroup *layerGroup; // @synthesize layerGroup=_layerGroup;
+@property(readonly, nonatomic) NSString *imageBundleName; // @synthesize imageBundleName=_imageBundleName;
 @property(readonly, nonatomic) NSString *imageUrl; // @synthesize imageUrl=_imageUrl;
 @property(readonly, nonatomic) NSString *imageDirectory; // @synthesize imageDirectory=_imageDirectory;
 @property(readonly, nonatomic) NSString *imageName; // @synthesize imageName=_imageName;

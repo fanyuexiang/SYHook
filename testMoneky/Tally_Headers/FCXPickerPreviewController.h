@@ -40,7 +40,6 @@
 @property(nonatomic) __weak UIButton *currentBtn; // @synthesize currentBtn=_currentBtn;
 @property(nonatomic) long long currentPage; // @synthesize currentPage=_currentPage;
 @property(retain, nonatomic) NSArray *dataArray; // @synthesize dataArray=_dataArray;
-- (void)requestTagInfo;
 - (void)dealloc;
 - (id)dismissToButton;
 - (id)currentCellImageView;

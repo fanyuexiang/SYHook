@@ -11,6 +11,7 @@
 @interface CSJSplashCardModel : CSJBasicModel
 {
     _Bool _click_on_close;
+    long long _splash_card_style_id;
     long long _card_stay_count_down;
     NSString *_card_top_text;
     NSString *_card_text;
@@ -23,6 +24,7 @@
 @property(copy, nonatomic) NSString *card_top_text; // @synthesize card_top_text=_card_top_text;
 @property(nonatomic) long long card_stay_count_down; // @synthesize card_stay_count_down=_card_stay_count_down;
 @property(nonatomic) _Bool click_on_close; // @synthesize click_on_close=_click_on_close;
+@property(nonatomic) long long splash_card_style_id; // @synthesize splash_card_style_id=_splash_card_style_id;
 
 @end
 

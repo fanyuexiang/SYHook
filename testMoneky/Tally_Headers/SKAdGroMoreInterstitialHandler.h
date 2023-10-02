@@ -6,46 +6,22 @@
 
 #import <objc/NSObject.h>
 
-#import "ABUInterstitialAdDelegate-Protocol.h"
-#import "ABUInterstitialProAdDelegate-Protocol.h"
+@class NSDate, NSString, UIViewController;
 
-@class ABUInterstitialProAd, NSDate, NSString, UIViewController;
-
-@interface SKAdGroMoreInterstitialHandler : NSObject <ABUInterstitialProAdDelegate, ABUInterstitialAdDelegate>
+@interface SKAdGroMoreInterstitialHandler : NSObject
 {
     UIViewController *_rootController;
     NSString *_adId;
     CDUnknownBlockType _loadBlock;
-    ABUInterstitialProAd *_adObj;
     NSDate *_GroMoreStartTime;
 }
 
 - (void).cxx_destruct;
 @property(retain, nonatomic) NSDate *GroMoreStartTime; // @synthesize GroMoreStartTime=_GroMoreStartTime;
-@property(retain, nonatomic) ABUInterstitialProAd *adObj; // @synthesize adObj=_adObj;
 @property(copy, nonatomic) CDUnknownBlockType loadBlock; // @synthesize loadBlock=_loadBlock;
 @property(copy, nonatomic) NSString *adId; // @synthesize adId=_adId;
 @property(nonatomic) __weak UIViewController *rootController; // @synthesize rootController=_rootController;
-- (void)interstitialProAdWillPresentFullScreenModal:(id)arg1;
-- (void)interstitialProAdDidClose:(id)arg1;
-- (void)nativeExpressFullscreenVideoAdWillClose:(id)arg1;
-- (void)interstitialProAdDidSkip:(id)arg1;
-- (void)interstitialProAdDidClick:(id)arg1;
-- (void)interstitialProAdDidVisible:(id)arg1;
-- (void)interstitialProAdViewRenderFail:(id)arg1 error:(id)arg2;
-- (void)interstitialProAd:(id)arg1 didFailWithError:(id)arg2;
-- (void)interstitialProAdDidPlayFinish:(id)arg1 didFailWithError:(id)arg2;
-- (void)interstitialProAdDidDownLoadVideo:(id)arg1;
-- (void)interstitialProAdDidLoad:(id)arg1;
-- (void)closeAdData;
-- (void)loadAdData;
 - (id)init;
-
-// Remaining properties
-@property(readonly, copy) NSString *debugDescription;
-@property(readonly, copy) NSString *description;
-@property(readonly) unsigned long long hash;
-@property(readonly) Class superclass;
 
 @end
 

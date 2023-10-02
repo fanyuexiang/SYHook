@@ -6,12 +6,12 @@
 
 #import <objc/NSObject.h>
 
-#import "ABUCsj_BUAdSDKPrivacyProvider-Protocol.h"
-#import "ABUCustomConfigAdapter-Protocol.h"
+#import "BUAdSDKPrivacyProvider-Protocol.h"
+#import "BUMCustomConfigAdapter-Protocol.h"
 
 @class NSMutableDictionary, NSString;
 
-@interface ABUCsjConfig : NSObject <ABUCsj_BUAdSDKPrivacyProvider, ABUCustomConfigAdapter>
+@interface ABUCsjConfig : NSObject <BUAdSDKPrivacyProvider, BUMCustomConfigAdapter>
 {
     NSString *_appId;
     NSMutableDictionary *_pangleExtraDataMap;
@@ -28,12 +28,12 @@
 - (id)_formatConvert:(id)arg1;
 - (id)_pangleUserdataFormat:(id)arg1;
 - (id)_noWhiteSpaceString:(id)arg1;
+- (void)_configAdSDK:(id)arg1;
+- (void)_updatePanglePrivacyInfo:(id)arg1;
+- (void)_updatePangleExtData:(id)arg1;
 - (double)latitude;
 - (double)longitude;
 - (_Bool)canUseLocation;
-- (void)_updatePanglePrivacyInfo:(id)arg1;
-- (void)_updatePangleExtData:(id)arg1;
-- (void)didRequestAdPrivacyConfigUpdate:(id)arg1;
 - (id)drawAdapter;
 - (id)fullscreenVideoAdapter;
 - (id)interstitialAdapter;
@@ -43,10 +43,10 @@
 - (id)bannerAdapter;
 - (id)supportedMaximumVersion;
 - (id)supportedMinimumVersion;
+- (void)didReceiveConfigUpdateRequest:(id)arg1;
+- (void)didRequestAdPrivacyConfigUpdate:(id)arg1;
 - (id)networkSdkVersion;
 - (id)adapterVersion;
-- (void)didReceiveConfigUpdateRequest:(id)arg1;
-- (void)configAdSDK:(id)arg1 manager:(id)arg2;
 - (void)initializeAdapterWithConfiguration:(id)arg1;
 - (id)basedOnCustomAdapterVersion;
 

@@ -6,7 +6,7 @@
 
 #import <UIKit/UIView.h>
 
-@class UILabel, VIPLimitedCountDown;
+@class UIButton, UILabel, VIPLimitedCountDown;
 
 @interface VIPPopopStayView : UIView
 {
@@ -15,13 +15,16 @@
     UIView *_bgView;
     UILabel *_countdownLabel;
     VIPLimitedCountDown *_countdown;
+    UIButton *_floatBtn;
 }
 
 - (void).cxx_destruct;
+@property(retain, nonatomic) UIButton *floatBtn; // @synthesize floatBtn=_floatBtn;
 @property(retain, nonatomic) VIPLimitedCountDown *countdown; // @synthesize countdown=_countdown;
 @property(retain, nonatomic) UILabel *countdownLabel; // @synthesize countdownLabel=_countdownLabel;
 @property(retain, nonatomic) UIView *bgView; // @synthesize bgView=_bgView;
 @property(nonatomic) long long viewType; // @synthesize viewType=_viewType;
+- (void)userinfochange;
 - (void)tohide;
 - (void)toshow;
 - (void)endShow;

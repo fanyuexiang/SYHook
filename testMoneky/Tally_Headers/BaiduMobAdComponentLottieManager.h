@@ -15,6 +15,8 @@
 
 - (void).cxx_destruct;
 @property(retain, nonatomic) BaiduMobAdAnimationView *animationView; // @synthesize animationView=_animationView;
+- (id)initWithAnimationName:(id)arg1 withImages:(id)arg2;
+- (id)initWithAnimationName:(id)arg1;
 - (id)initWithAnimationJsonUrl:(id)arg1 animationImagesUrl:(id)arg2;
 
 @end

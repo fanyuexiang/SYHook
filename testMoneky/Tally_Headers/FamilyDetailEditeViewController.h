@@ -9,20 +9,23 @@
 #import "UITableViewDataSource-Protocol.h"
 #import "UITableViewDelegate-Protocol.h"
 
-@class NSArray, NSString, NTallyModel, SKThemeBaseView, UIImage, UILabel, UITableView;
+@class NSMutableArray, NSMutableDictionary, NSString, NTallyModel, SKThemeBaseView, UIImage, UILabel, UITableView;
 
 @interface FamilyDetailEditeViewController : FamilyViewController <UITableViewDelegate, UITableViewDataSource>
 {
     UITableView *_tableView;
-    NSArray *_titleArray;
     UILabel *_typeLabel;
     UIImage *_remarkimage;
     struct CGSize _remarkimagesize;
     NTallyModel *_editModel;
     SKThemeBaseView *_themeView;
+    NSMutableArray *_titleArray;
+    NSMutableDictionary *_titleKeys;
 }
 
 - (void).cxx_destruct;
+@property(retain, nonatomic) NSMutableDictionary *titleKeys; // @synthesize titleKeys=_titleKeys;
+@property(retain, nonatomic) NSMutableArray *titleArray; // @synthesize titleArray=_titleArray;
 @property(retain, nonatomic) SKThemeBaseView *themeView; // @synthesize themeView=_themeView;
 @property(retain, nonatomic) NTallyModel *editModel; // @synthesize editModel=_editModel;
 - (void)labelsClick;
@@ -35,6 +38,7 @@
 - (double)tableView:(id)arg1 heightForRowAtIndexPath:(id)arg2;
 - (long long)tableView:(id)arg1 numberOfRowsInSection:(long long)arg2;
 - (void)tableView:(id)arg1 willDisplayCell:(id)arg2 forRowAtIndexPath:(id)arg3;
+- (void)reloadTitleArray;
 - (void)viewWillAppear:(_Bool)arg1;
 - (void)viewDidLoad;
 - (void)shareAction;

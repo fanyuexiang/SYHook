@@ -6,25 +6,29 @@
 
 #import "FamilyViewController.h"
 
-@class CBBillDatePicker, UILabel, UIView;
+@class CBBillDatePicker, UIButton, UILabel, UIView;
 
 @interface FamilySettingsController : FamilyViewController
 {
     UILabel *_dateLabel;
     UIView *_contentView;
+    UIButton *_backBtn;
     CBBillDatePicker *_datePicker;
 }
 
 - (void).cxx_destruct;
 @property(retain, nonatomic) CBBillDatePicker *datePicker; // @synthesize datePicker=_datePicker;
+@property(retain, nonatomic) UIButton *backBtn; // @synthesize backBtn=_backBtn;
 - (void)themeChangedNotification:(id)arg1;
 - (void)quitFamily;
 - (void)requestChangeShareDate:(id)arg1;
 - (void)hideDatePicker;
+- (void)refreshBackBtn;
 - (void)actionList:(id)arg1;
 - (id)themeImage:(id)arg1;
 - (id)sectionView:(id)arg1 withIcon:(id)arg2 withEventIndex:(long long)arg3;
 - (void)setupUI;
+- (void)viewWillAppear:(_Bool)arg1;
 - (void)viewDidLoad;
 - (void)dealloc;
 

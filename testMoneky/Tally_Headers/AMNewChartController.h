@@ -30,6 +30,7 @@
 - (void)segmentSelectedIndexChange;
 - (void)addTopSegmentedView;
 - (void)viewWillDisappear:(_Bool)arg1;
+- (void)viewDidAppear:(_Bool)arg1;
 - (void)viewWillAppear:(_Bool)arg1;
 - (void)userAccountChange;
 - (void)viewDidLoad;

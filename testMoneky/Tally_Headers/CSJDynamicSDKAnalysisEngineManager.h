@@ -19,8 +19,7 @@
 - (id)init;
 - (void)__loadDefaultInfo;
 - (void)async_preloadDefaultInfo;
-- (id)_pbu_defaultValueWithFileName:(id)arg1 ext:(id)arg2;
-- (id)layoutInfoFromDictionary:(id)arg1 infoViewModel:(id)arg2 error:(id *)arg3 havePreloadDefaultInfo:(_Bool *)arg4;
+- (id)layoutInfoFromGlobalModel:(id)arg1 error:(id *)arg2 havePreloadDefaultInfo:(_Bool *)arg3;
 
 @end
 

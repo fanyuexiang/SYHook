@@ -4,14 +4,12 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
 
-#import <objc/NSObject.h>
+#import "CSJAdBaseObject.h"
 
 @class CSJAdBannerSlot, CSJSize, NSArray, NSDictionary, NSMutableArray, NSString;
 
-@interface CSJAdSlot : NSObject
+@interface CSJAdSlot : CSJAdBaseObject
 {
-    _Bool _isSupportDeepLink;
-    _Bool _isOriginAd;
     _Bool _supportRenderControl;
     _Bool _groupLoadMore;
     _Bool _needPreloadNormalReward;
@@ -75,8 +73,6 @@
 @property(nonatomic) struct CGSize adSize; // @synthesize adSize=_adSize;
 @property(nonatomic) long long adloadSeq; // @synthesize adloadSeq=_adloadSeq;
 @property(nonatomic) _Bool supportRenderControl; // @synthesize supportRenderControl=_supportRenderControl;
-@property(nonatomic) _Bool isOriginAd; // @synthesize isOriginAd=_isOriginAd;
-@property(nonatomic) _Bool isSupportDeepLink; // @synthesize isSupportDeepLink=_isSupportDeepLink;
 @property(retain, nonatomic) CSJSize *iconSize; // @synthesize iconSize=_iconSize;
 @property(retain, nonatomic) CSJSize *imgSize; // @synthesize imgSize=_imgSize;
 @property(retain, nonatomic) NSMutableArray *imgSizeArray; // @synthesize imgSizeArray=_imgSizeArray;
@@ -90,9 +86,9 @@
 - (_Bool)isRewardedOrFullscreenAd;
 - (_Bool)isFullscreenAd;
 - (_Bool)isRewardedAd;
+- (struct CGSize)incomingAdSize;
 - (_Bool)isNativeBannerOrInterstitialAd;
 - (_Bool)isExpressFeedAd;
-- (_Bool)isInterstitialAd;
 - (_Bool)isBannerAd;
 - (_Bool)isNativeFeedAd;
 - (_Bool)isFeedAd;

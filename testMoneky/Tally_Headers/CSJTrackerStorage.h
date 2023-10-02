@@ -18,17 +18,17 @@
 - (void).cxx_destruct;
 @property(retain, nonatomic) id <BUPersistenceProtocol> persistence; // @synthesize persistence=_persistence;
 @property(copy, nonatomic) NSString *name; // @synthesize name=_name;
-- (id)_pbu_internal_insertV1Track:(id)arg1;
-- (void)_pbu_internal_deleteV1TrackCreatedBefore:(double)arg1;
-- (void)_pbu_internal_updateV1TrackOfIDs:(id)arg1 sending:(_Bool)arg2;
-- (id)_pbu_internal_allV1TracksWithSendingStatus:(_Bool)arg1;
-- (void)_pbu_internal_resetSendingStatus;
-- (void)_pbu_resetSendingStatus;
-- (void)updateV1TrackOfIDs:(id)arg1 sending:(_Bool)arg2;
-- (void)deleteV1TrackCreatedBefore:(double)arg1;
-- (id)allV1Tracks;
-- (void)removeV1TracksByID:(id)arg1;
-- (id)insertV1Track:(id)arg1;
+- (id)Add_GDPRA1:(id)arg1;
+- (void)Log_Up_yAll:(double)arg1;
+- (void)Http_dirLock:(id)arg1 sending:(_Bool)arg2;
+- (id)Path_TvId:(_Bool)arg1;
+- (void)It_TagThe;
+- (void)ID_JsonCn;
+- (void)Use_PtrIv:(id)arg1 sending:(_Bool)arg2;
+- (void)Pods_FailIv:(double)arg1;
+- (id)Skip_TypeWeak;
+- (void)Idx_A1Top:(id)arg1;
+- (id)Init_TimeShow:(id)arg1;
 - (id)initWithName:(id)arg1;
 
 @end

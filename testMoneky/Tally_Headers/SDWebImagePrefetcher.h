@@ -6,7 +6,7 @@
 
 #import <objc/NSObject.h>
 
-@class NSDictionary, NSMutableSet, NSOperationQueue, SDWebImageManager;
+@class NSDictionary, NSMutableSet, NSOperationQueue, SDCallbackQueue, SDWebImageManager;
 @protocol OS_dispatch_queue, SDWebImagePrefetcherDelegate;
 
 @interface SDWebImagePrefetcher : NSObject
@@ -14,18 +14,18 @@
     SDWebImageManager *_manager;
     unsigned long long _options;
     NSDictionary *_context;
-    NSObject<OS_dispatch_queue> *_delegateQueue;
     id <SDWebImagePrefetcherDelegate> _delegate;
     NSMutableSet *_runningTokens;
     NSOperationQueue *_prefetchQueue;
+    SDCallbackQueue *_callbackQueue;
 }
 
 + (id)sharedImagePrefetcher;
 - (void).cxx_destruct;
+@property(retain, nonatomic) SDCallbackQueue *callbackQueue; // @synthesize callbackQueue=_callbackQueue;
 @property(retain, nonatomic) NSOperationQueue *prefetchQueue; // @synthesize prefetchQueue=_prefetchQueue;
 @property(retain) NSMutableSet *runningTokens; // @synthesize runningTokens=_runningTokens;
 @property(nonatomic) __weak id <SDWebImagePrefetcherDelegate> delegate; // @synthesize delegate=_delegate;
-@property(retain, nonatomic) NSObject<OS_dispatch_queue> *delegateQueue; // @synthesize delegateQueue=_delegateQueue;
 @property(copy, nonatomic) NSDictionary *context; // @synthesize context=_context;
 @property(nonatomic) unsigned long long options; // @synthesize options=_options;
 @property(retain, nonatomic) SDWebImageManager *manager; // @synthesize manager=_manager;
@@ -39,8 +39,10 @@
 - (void)callProgressBlockForToken:(id)arg1 imageURL:(id)arg2;
 - (void)cancelPrefetching;
 - (void)startPrefetchWithToken:(id)arg1;
+- (id)prefetchURLs:(id)arg1 options:(unsigned long long)arg2 context:(id)arg3 progress:(CDUnknownBlockType)arg4 completed:(CDUnknownBlockType)arg5;
 - (id)prefetchURLs:(id)arg1 progress:(CDUnknownBlockType)arg2 completed:(CDUnknownBlockType)arg3;
 - (id)prefetchURLs:(id)arg1;
+@property(retain, nonatomic) NSObject<OS_dispatch_queue> *delegateQueue;
 @property(nonatomic) unsigned long long maxConcurrentPrefetchCount;
 - (id)initWithImageManager:(id)arg1;
 - (id)init;

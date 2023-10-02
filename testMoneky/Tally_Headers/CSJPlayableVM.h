@@ -7,10 +7,11 @@
 #import "CSJRewardFullScreenBaseVM.h"
 
 #import "CSJPurePlayableLoadingViewControllerDelegate-Protocol.h"
+#import "CSJRewardedVideoWebViewDelegate-Protocol.h"
 
 @class NSString;
 
-@interface CSJPlayableVM : CSJRewardFullScreenBaseVM <CSJPurePlayableLoadingViewControllerDelegate>
+@interface CSJPlayableVM : CSJRewardFullScreenBaseVM <CSJPurePlayableLoadingViewControllerDelegate, CSJRewardedVideoWebViewDelegate>
 {
 }
 
@@ -18,14 +19,15 @@
 - (void)purePlayableVolumeChange:(id)arg1 isMute:(_Bool)arg2;
 - (void)purePlayableRemoveLoadingByTimeout;
 - (void)clickButtonTapFromPlayableLoading;
-- (void)rewardReport;
-- (void)handlePurePlayablePlayFinish;
-- (void)closeBtnControl:(_Bool)arg1;
-- (void)leftLblControl:(_Bool)arg1;
+- (void)rewardedVideoWebViewControllerOpenUrlWithParams:(id)arg1;
+- (void)End_IfStmt;
+- (void)List_lenWiki;
+- (void)You_MapSql:(_Bool)arg1;
+- (void)Pos__MainSEL:(_Bool)arg1;
 - (void)updateLeftSeconds:(id)arg1;
-- (void)startTimer;
-- (void)vmLoadData;
-- (id)initViewModelWithMeta:(id)arg1 rootViewController:(id)arg2 slot:(id)arg3;
+- (void)Row_StmtView;
+- (void)X1_PosKey;
+- (id)initLAt_KeyTm:(id)arg1 rootViewController:(id)arg2 slot:(id)arg3;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

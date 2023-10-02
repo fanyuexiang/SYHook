@@ -9,7 +9,7 @@
 #import "UITableViewDataSource-Protocol.h"
 #import "UITableViewDelegate-Protocol.h"
 
-@class FCXPieChartView, NSFetchRequest, NSMutableArray, NSString, UILabel, UIViewController;
+@class DateModel, FCXPieChartView, NSFetchRequest, NSMutableArray, NSString, UILabel, UIViewController;
 
 @interface TallyLedgerChartTableView : UITableView <UITableViewDelegate, UITableViewDataSource>
 {
@@ -27,9 +27,17 @@
     FCXPieChartView *_pieView;
     UILabel *_typeLabel;
     NSString *_previousDate;
+    DateModel *_dateModel;
+    CDUnknownBlockType _didSelectTallyMembersBlock;
+    NSMutableArray *_tallyMembers;
+    NSFetchRequest *_fetchRequestTallyMember;
 }
 
 - (void).cxx_destruct;
+@property(retain, nonatomic) NSFetchRequest *fetchRequestTallyMember; // @synthesize fetchRequestTallyMember=_fetchRequestTallyMember;
+@property(retain, nonatomic) NSMutableArray *tallyMembers; // @synthesize tallyMembers=_tallyMembers;
+@property(copy, nonatomic) CDUnknownBlockType didSelectTallyMembersBlock; // @synthesize didSelectTallyMembersBlock=_didSelectTallyMembersBlock;
+@property(retain, nonatomic) DateModel *dateModel; // @synthesize dateModel=_dateModel;
 @property(copy, nonatomic) NSString *previousDate; // @synthesize previousDate=_previousDate;
 @property(nonatomic) __weak UILabel *typeLabel; // @synthesize typeLabel=_typeLabel;
 @property(nonatomic) _Bool isPie; // @synthesize isPie=_isPie;
@@ -42,17 +50,24 @@
 @property(nonatomic) long long dateType; // @synthesize dateType=_dateType;
 @property(nonatomic) long long tallyType; // @synthesize tallyType=_tallyType;
 @property(nonatomic) __weak UIViewController *parentController; // @synthesize parentController=_parentController;
+- (void)loadTallyMembersData:(id)arg1;
+- (_Bool)hasTallyMembers;
 - (void)updateDateRangeTipLab;
 - (void)refreshPieData;
 - (void)tallyDataRefresh;
 - (void)tallyDataChange:(id)arg1;
 - (id)queryTypeData:(id)arg1;
+- (id)queryPredicate:(id)arg1;
 - (void)getTypeData:(id)arg1;
 - (void)bindTallyType:(long long)arg1 dateType:(long long)arg2 date:(id)arg3;
 - (void)updateData:(id)arg1 dateType:(long long)arg2 previousDate:(id)arg3;
 - (void)tableView:(id)arg1 didSelectRowAtIndexPath:(id)arg2;
 - (id)tableView:(id)arg1 cellForRowAtIndexPath:(id)arg2;
+- (id)tableView:(id)arg1 viewForHeaderInSection:(long long)arg2;
 - (long long)tableView:(id)arg1 numberOfRowsInSection:(long long)arg2;
+- (long long)numberOfSectionsInTableView:(id)arg1;
+- (double)tableView:(id)arg1 estimatedHeightForFooterInSection:(long long)arg2;
+- (double)tableView:(id)arg1 estimatedHeightForHeaderInSection:(long long)arg2;
 - (void)tableView:(id)arg1 willDisplayCell:(id)arg2 forRowAtIndexPath:(id)arg3;
 - (void)setup;
 - (id)initWithFrame:(struct CGRect)arg1 style:(long long)arg2;

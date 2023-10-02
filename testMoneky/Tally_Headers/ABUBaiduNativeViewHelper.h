@@ -6,13 +6,13 @@
 
 #import <objc/NSObject.h>
 
-#import "ABUMediatedNativeAdData-Protocol.h"
-#import "ABUMediatedNativeAdViewCreator-Protocol.h"
+#import "BUMMediatedNativeAdData-Protocol.h"
+#import "BUMMediatedNativeAdViewCreator-Protocol.h"
 
-@class ABUImage, NSArray, NSDictionary, NSString, UIButton, UIImageView, UILabel, UIView;
+@class BUMImage, NSArray, NSDictionary, NSString, UIButton, UIImageView, UILabel, UIView;
 @protocol ABUBaidu_BaiduMobAdNativeAdObject;
 
-@interface ABUBaiduNativeViewHelper : NSObject <ABUMediatedNativeAdViewCreator, ABUMediatedNativeAdData>
+@interface ABUBaiduNativeViewHelper : NSObject <BUMMediatedNativeAdViewCreator, BUMMediatedNativeAdData>
 {
     UIView *_view;
     UILabel *_brandLabel;
@@ -53,11 +53,11 @@
 @property(readonly, nonatomic) long long score;
 @property(readonly, nonatomic) long long imageMode;
 @property(readonly, copy, nonatomic) NSString *buttonText;
-@property(readonly, nonatomic) ABUImage *icon;
+@property(readonly, nonatomic) BUMImage *icon;
 @property(readonly, copy, nonatomic) NSString *source;
 @property(readonly, copy, nonatomic) NSString *adDescription;
 @property(readonly, copy, nonatomic) NSString *adTitle;
-@property(readonly, nonatomic) ABUImage *adLogo;
+@property(readonly, nonatomic) BUMImage *adLogo;
 @property(readonly, copy, nonatomic) NSArray *imageList;
 @property(readonly, nonatomic) long long callToType;
 @property(readonly, nonatomic) _Bool hasSupportActionBtn;

@@ -10,6 +10,8 @@
 {
 }
 
++ (double)roundNumberStringWithRound:(long long)arg1 numberString:(id)arg2;
++ (id)sk_calendarFormatAmount:(long long)arg1 amount:(id)arg2;
 + (void)sk_resetTallyLedgerGradientLayer:(id)arg1 colorts:(id)arg2 size:(struct CGSize)arg3;
 + (void)sk_resetGradientLayer:(id)arg1 colorts:(id)arg2 size:(struct CGSize)arg3 start:(struct CGPoint)arg4 end:(struct CGPoint)arg5 locations:(id)arg6;
 

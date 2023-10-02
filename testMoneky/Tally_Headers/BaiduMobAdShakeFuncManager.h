@@ -29,9 +29,17 @@
     double _lastX;
     double _lastY;
     double _lastZ;
+    double _isClearShakeConfig;
+    double _firstRoll;
+    double _firstPitch;
+    double _firstYaw;
 }
 
 - (void).cxx_destruct;
+@property(nonatomic) double firstYaw; // @synthesize firstYaw=_firstYaw;
+@property(nonatomic) double firstPitch; // @synthesize firstPitch=_firstPitch;
+@property(nonatomic) double firstRoll; // @synthesize firstRoll=_firstRoll;
+@property(nonatomic) double isClearShakeConfig; // @synthesize isClearShakeConfig=_isClearShakeConfig;
 @property(nonatomic) double lastZ; // @synthesize lastZ=_lastZ;
 @property(nonatomic) double lastY; // @synthesize lastY=_lastY;
 @property(nonatomic) double lastX; // @synthesize lastX=_lastX;
@@ -56,6 +64,8 @@
 - (void)resetFunc;
 - (void)countdownFinish;
 - (void)setupConfigInfo;
+- (_Bool)initializeFunc;
+- (id)initShakeManager;
 - (id)initShakeFunc;
 
 @end

@@ -44,20 +44,28 @@
     BaiduMobAdInstance *_adInstance;
     NSString *_app_id;
     NSDictionary *_templateConfig;
+    NSDictionary *_videoConfig;
+    NSString *_videoClick;
+    NSString *_nativeSlideEnable;
     id <BaiduMobAdNativeAdDelegate> _delegate;
     UIViewController *_presentAdViewController;
     BaiduMobAdTracker *_tracker;
     NSString *_appName;
     NSString *_adType;
+    NSString *_buyer;
 }
 
 - (void).cxx_destruct;
+@property(retain, nonatomic) NSString *buyer; // @synthesize buyer=_buyer;
 @property(copy, nonatomic) NSString *adType; // @synthesize adType=_adType;
 @property(copy, nonatomic) NSString *appName; // @synthesize appName=_appName;
 @property(retain, nonatomic) BaiduMobAdTracker *tracker; // @synthesize tracker=_tracker;
 @property(nonatomic) __weak UIViewController *presentAdViewController; // @synthesize presentAdViewController=_presentAdViewController;
 @property(nonatomic) __weak id <BaiduMobAdNativeAdDelegate> delegate; // @synthesize delegate=_delegate;
 @property int materialType; // @synthesize materialType=_materialType;
+@property(retain, nonatomic) NSString *nativeSlideEnable; // @synthesize nativeSlideEnable=_nativeSlideEnable;
+@property(retain, nonatomic) NSString *videoClick; // @synthesize videoClick=_videoClick;
+@property(retain, nonatomic) NSDictionary *videoConfig; // @synthesize videoConfig=_videoConfig;
 @property(retain, nonatomic) NSDictionary *templateConfig; // @synthesize templateConfig=_templateConfig;
 @property(copy, nonatomic) NSString *app_id; // @synthesize app_id=_app_id;
 @property(retain, nonatomic) BaiduMobAdInstance *adInstance; // @synthesize adInstance=_adInstance;
@@ -90,6 +98,7 @@
 @property(copy, nonatomic) NSString *adLogoURLString; // @synthesize adLogoURLString=_adLogoURLString;
 @property(copy, nonatomic) NSString *mainImageURLString; // @synthesize mainImageURLString=_mainImageURLString;
 @property(copy, nonatomic) NSString *iconImageURLString; // @synthesize iconImageURLString=_iconImageURLString;
+- (id)getAdDataForKey:(id)arg1;
 - (void)nativeShakeViewImpression;
 - (void)biddingFail:(id)arg1 winInfo:(id)arg2;
 - (void)biddingFail:(id)arg1;

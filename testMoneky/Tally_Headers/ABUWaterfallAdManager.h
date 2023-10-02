@@ -11,6 +11,7 @@
 @interface ABUWaterfallAdManager : NSObject
 {
     _Bool _quickMode;
+    _Bool _pLayerAddedAd;
     long long _expectAdCount;
     NSArray *_bestMediaIDs;
     CDUnknownBlockType _didBiddingDone;
@@ -18,11 +19,16 @@
     CDUnknownBlockType _didTimeOut;
     NSPointerArray *_adList;
     NSPointerArray *_pList;
+    unsigned long long _adStatus;
     NSArray *_notNeedLoadSlotIDs;
+    NSArray *_normalSlotConfigs;
 }
 
 - (void).cxx_destruct;
+@property(retain, nonatomic) NSArray *normalSlotConfigs; // @synthesize normalSlotConfigs=_normalSlotConfigs;
+@property _Bool pLayerAddedAd; // @synthesize pLayerAddedAd=_pLayerAddedAd;
 @property(copy, nonatomic) NSArray *notNeedLoadSlotIDs; // @synthesize notNeedLoadSlotIDs=_notNeedLoadSlotIDs;
+@property unsigned long long adStatus; // @synthesize adStatus=_adStatus;
 @property(retain, nonatomic) NSPointerArray *pList; // @synthesize pList=_pList;
 @property(retain, nonatomic) NSPointerArray *adList; // @synthesize adList=_adList;
 @property(copy, nonatomic) CDUnknownBlockType didTimeOut; // @synthesize didTimeOut=_didTimeOut;
@@ -36,6 +42,8 @@
 - (id)_getPriceTopAdsWithCheckAd:(_Bool)arg1 isBestAd:(_Bool *)arg2 others:(id *)arg3;
 - (id)getPriceTopAdsWithCheckAd:(_Bool)arg1 isBestAd:(_Bool *)arg2 others:(id *)arg3;
 - (void)serverBiddingRequestDidFinishWithMediaSlotIDs:(id)arg1;
+- (void)clearMarkExceptPackages:(id)arg1;
+- (_Bool)hasPAd;
 - (void)addPackage:(id)arg1;
 - (id)init;
 

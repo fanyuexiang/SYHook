@@ -9,12 +9,13 @@
 #import "CSJRewardedVideoAdDelegate-Protocol.h"
 #import "CSJRewardedVideoAgianDelegate-Protocol.h"
 
-@class CSJNativeExpressRewardedVideoAd, CSJRewardedVideoAd, NSString;
+@class CSJNativeExpressRewardedVideoAd, CSJRewardedVideoAd, NSString, UIViewController;
 
 @interface CSJRewardedVideoAgianAd : NSObject <CSJRewardedVideoAdDelegate, CSJRewardedVideoAgianDelegate>
 {
     CSJNativeExpressRewardedVideoAd *_originRewardAd;
     CSJRewardedVideoAd *_rewardVideoAd;
+    UIViewController *_originRewardRootVC;
     CDUnknownBlockType _success;
     CDUnknownBlockType _fail;
 }
@@ -22,6 +23,7 @@
 - (void).cxx_destruct;
 @property(copy, nonatomic) CDUnknownBlockType fail; // @synthesize fail=_fail;
 @property(copy, nonatomic) CDUnknownBlockType success; // @synthesize success=_success;
+@property(nonatomic) __weak UIViewController *originRewardRootVC; // @synthesize originRewardRootVC=_originRewardRootVC;
 @property(retain, nonatomic) CSJRewardedVideoAd *rewardVideoAd; // @synthesize rewardVideoAd=_rewardVideoAd;
 @property(nonatomic) __weak CSJNativeExpressRewardedVideoAd *originRewardAd; // @synthesize originRewardAd=_originRewardAd;
 - (void)rewardedVideoAdCallback:(id)arg1 withType:(unsigned long long)arg2;
@@ -39,6 +41,7 @@
 - (void)rewardedVideoAdDidLoad:(id)arg1;
 - (_Bool)showAdFromRootViewController:(id)arg1;
 - (void)loadRewardAgianWithSuccess:(CDUnknownBlockType)arg1 fail:(CDUnknownBlockType)arg2;
+@property(nonatomic) __weak UIViewController *originRootVC;
 - (id)initWithRewardedVideoAd:(id)arg1;
 
 // Remaining properties

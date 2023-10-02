@@ -72,8 +72,6 @@
 - (void)showZoomOutViewInRootView:(id)arg1;
 - (void)continuePlayWithPlayer:(id)arg1;
 - (void)layoutSubviews;
-- (void)observeValueForKeyPath:(id)arg1 ofObject:(id)arg2 change:(id)arg3 context:(void *)arg4;
-- (void)dealloc;
 - (id)initWithViewModel:(id)arg1;
 
 // Remaining properties

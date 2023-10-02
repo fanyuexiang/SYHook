@@ -10,6 +10,7 @@
 
 @interface CSJDynamicInteractionAbstractDecorator : CSJDynamicAbstractDecorator
 {
+    _Bool _didVisiable;
     CSJDynamicBrickValuesModel *_interactionInfo;
     BUTimer *_showTimer;
     BUTimer *_hiddenTimer;
@@ -19,11 +20,15 @@
 - (void).cxx_destruct;
 @property(retain, nonatomic) BUTimer *hiddenTimer; // @synthesize hiddenTimer=_hiddenTimer;
 @property(retain, nonatomic) BUTimer *showTimer; // @synthesize showTimer=_showTimer;
+@property _Bool didVisiable; // @synthesize didVisiable=_didVisiable;
 @property(retain, nonatomic) CSJDynamicBrickValuesModel *interactionInfo; // @synthesize interactionInfo=_interactionInfo;
+- (void)didRender;
 - (void)dealloc;
+- (id)contentView;
 - (void)interactionViewDidShow;
 - (void)hiddenInteractionAnimaiton;
 - (void)showInteractionAnimation;
+- (void)interactionAnimationTimerSchedule;
 - (void)showInteractionDecorator:(id)arg1;
 
 @end

@@ -9,6 +9,7 @@
 #import "NSCopying-Protocol.h"
 
 @class NSFileManager;
+@protocol OS_dispatch_queue_attr;
 
 @interface SDImageCacheConfig : NSObject <NSCopying>
 {
@@ -16,6 +17,7 @@
     _Bool _shouldCacheImagesInMemory;
     _Bool _shouldUseWeakMemoryCache;
     _Bool _shouldRemoveExpiredDataWhenEnterBackground;
+    _Bool _shouldRemoveExpiredDataWhenTerminate;
     unsigned long long _diskCacheReadingOptions;
     unsigned long long _diskCacheWritingOptions;
     double _maxDiskAge;
@@ -24,6 +26,7 @@
     unsigned long long _maxMemoryCount;
     unsigned long long _diskCacheExpireType;
     NSFileManager *_fileManager;
+    NSObject<OS_dispatch_queue_attr> *_ioQueueAttributes;
     Class _memoryCacheClass;
     Class _diskCacheClass;
 }
@@ -32,6 +35,7 @@
 - (void).cxx_destruct;
 @property(nonatomic) Class diskCacheClass; // @synthesize diskCacheClass=_diskCacheClass;
 @property(nonatomic) Class memoryCacheClass; // @synthesize memoryCacheClass=_memoryCacheClass;
+@property(retain, nonatomic) NSObject<OS_dispatch_queue_attr> *ioQueueAttributes; // @synthesize ioQueueAttributes=_ioQueueAttributes;
 @property(retain, nonatomic) NSFileManager *fileManager; // @synthesize fileManager=_fileManager;
 @property(nonatomic) unsigned long long diskCacheExpireType; // @synthesize diskCacheExpireType=_diskCacheExpireType;
 @property(nonatomic) unsigned long long maxMemoryCount; // @synthesize maxMemoryCount=_maxMemoryCount;
@@ -40,6 +44,7 @@
 @property(nonatomic) double maxDiskAge; // @synthesize maxDiskAge=_maxDiskAge;
 @property(nonatomic) unsigned long long diskCacheWritingOptions; // @synthesize diskCacheWritingOptions=_diskCacheWritingOptions;
 @property(nonatomic) unsigned long long diskCacheReadingOptions; // @synthesize diskCacheReadingOptions=_diskCacheReadingOptions;
+@property(nonatomic) _Bool shouldRemoveExpiredDataWhenTerminate; // @synthesize shouldRemoveExpiredDataWhenTerminate=_shouldRemoveExpiredDataWhenTerminate;
 @property(nonatomic) _Bool shouldRemoveExpiredDataWhenEnterBackground; // @synthesize shouldRemoveExpiredDataWhenEnterBackground=_shouldRemoveExpiredDataWhenEnterBackground;
 @property(nonatomic) _Bool shouldUseWeakMemoryCache; // @synthesize shouldUseWeakMemoryCache=_shouldUseWeakMemoryCache;
 @property(nonatomic) _Bool shouldCacheImagesInMemory; // @synthesize shouldCacheImagesInMemory=_shouldCacheImagesInMemory;

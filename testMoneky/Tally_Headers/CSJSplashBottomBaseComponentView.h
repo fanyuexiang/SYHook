@@ -25,7 +25,7 @@
 @property(retain, nonatomic) UILabel *tipTitleLabel; // @synthesize tipTitleLabel=_tipTitleLabel;
 @property(retain, nonatomic) UILabel *tipLabel; // @synthesize tipLabel=_tipLabel;
 @property(retain, nonatomic) id <CSJSplashBottomViewInterface> configuration; // @synthesize configuration=_configuration;
-- (double)splashBottomBlankHeightWithContainerFrame:(struct CGRect)arg1;
+- (double)Is_TrueRet:(struct CGRect)arg1;
 - (struct CGRect)splashBottomFrameWithContainerFrame:(struct CGRect)arg1;
 - (void)stopSplashBottomAnimation;
 - (void)startSplashBottomAnimation;

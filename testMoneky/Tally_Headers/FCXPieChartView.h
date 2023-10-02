@@ -10,6 +10,7 @@
 
 @interface FCXPieChartView : UIView
 {
+    UILabel *_amountLabel;
     double _radius;
     double _borderWidth;
     NSString *_noDataText;
@@ -25,17 +26,16 @@
     double _duration;
     NSDictionary *_textAttributes;
     UILabel *_typeLabel;
-    UILabel *_amountLabel;
 }
 
 + (double)maxViewHeightWithRadius:(double)arg1 rightItems:(long long)arg2;
 - (void).cxx_destruct;
 @property(nonatomic) _Bool cancelLoadingAnimation; // @synthesize cancelLoadingAnimation=_cancelLoadingAnimation;
-@property(retain, nonatomic) UILabel *amountLabel; // @synthesize amountLabel=_amountLabel;
 @property(retain, nonatomic) UILabel *typeLabel; // @synthesize typeLabel=_typeLabel;
 @property(retain, nonatomic) NSDictionary *textAttributes; // @synthesize textAttributes=_textAttributes;
 @property(nonatomic) double duration; // @synthesize duration=_duration;
 @property(retain, nonatomic) NSMutableArray *dataArray; // @synthesize dataArray=_dataArray;
+@property(retain, nonatomic) UILabel *amountLabel; // @synthesize amountLabel=_amountLabel;
 - (double)findPercentageOfAngleInCircle:(struct CGPoint)arg1 fromPoint:(struct CGPoint)arg2;
 - (id)progressAnimation;
 - (id)createShapeLayer:(id)arg1 strokeStart:(double)arg2 strokeEnd:(double)arg3;

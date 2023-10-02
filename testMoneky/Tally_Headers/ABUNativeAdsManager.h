@@ -38,6 +38,7 @@
 - (void)destory;
 - (void)nativeAd:(id)arg1 videoDidClick:(id)arg2;
 - (void)nativeAd:(id)arg1 videoDidPlayFinish:(id)arg2;
+- (void)nativeAd:(id)arg1 rewardDidCountDown:(long long)arg2 andNativeAd:(id)arg3;
 - (void)nativeAd:(id)arg1 videoStateDidChangedWithState:(long long)arg2 andNativeAd:(id)arg3;
 - (void)nativeAd:(id)arg1 didCloseWithNativeAd:(id)arg2 closeReasons:(id)arg3;
 - (void)nativeAd:(id)arg1 didCloseWithExpressView:(id)arg2 closeReasons:(id)arg3;
@@ -67,6 +68,7 @@
 - (void)loadAdDataWithCount:(unsigned long long)arg1;
 - (void)loadAdData;
 @property(nonatomic) __weak UIViewController *rootViewController;
+- (void)dealloc;
 - (id)initWithAdUnitID:(id)arg1 adSize:(struct CGSize)arg2;
 - (id)initWithSlot:(id)arg1;
 

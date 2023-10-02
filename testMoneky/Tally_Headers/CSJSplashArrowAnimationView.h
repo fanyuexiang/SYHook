@@ -12,28 +12,28 @@
 
 @interface CSJSplashArrowAnimationView : UIView <CSJAnimationDelegate>
 {
-    long long _arrowCount;
-    NSArray *_translateXs;
-    NSMutableArray *_arrowLayers;
-    NSMutableArray *_arrowAnimations;
+    long long _Ios_OnlyOn;
+    NSArray *_File_RowNew;
+    NSMutableArray *_Map_IDId;
+    NSMutableArray *_Of_LazyAt;
     double _delay;
-    UIImage *_arrowImage;
+    UIImage *_Pos_OutBOOL;
 }
 
 - (void).cxx_destruct;
-@property(retain, nonatomic) UIImage *arrowImage; // @synthesize arrowImage=_arrowImage;
+@property(retain, nonatomic) UIImage *Pos_OutBOOL; // @synthesize Pos_OutBOOL=_Pos_OutBOOL;
 @property(nonatomic) double delay; // @synthesize delay=_delay;
-@property(retain, nonatomic) NSMutableArray *arrowAnimations; // @synthesize arrowAnimations=_arrowAnimations;
-@property(retain, nonatomic) NSMutableArray *arrowLayers; // @synthesize arrowLayers=_arrowLayers;
-@property(copy, nonatomic) NSArray *translateXs; // @synthesize translateXs=_translateXs;
-@property(nonatomic) long long arrowCount; // @synthesize arrowCount=_arrowCount;
+@property(retain, nonatomic) NSMutableArray *Of_LazyAt; // @synthesize Of_LazyAt=_Of_LazyAt;
+@property(retain, nonatomic) NSMutableArray *Map_IDId; // @synthesize Map_IDId=_Map_IDId;
+@property(copy, nonatomic) NSArray *File_RowNew; // @synthesize File_RowNew=_File_RowNew;
+@property(nonatomic) long long Ios_OnlyOn; // @synthesize Ios_OnlyOn=_Ios_OnlyOn;
 - (void)bu_animationDidStop:(id)arg1 finished:(_Bool)arg2;
 - (void)bu_animationDidStart:(id)arg1;
 - (void)layoutSubviews;
-- (void)arrowAnimation;
-- (void)startArrowAnimation;
+- (void)URL_InitThe;
+- (void)Ios_ItemLd;
 - (void)setup;
-- (id)initSplashArrowAnimationWith:(long long)arg1 translateX:(id)arg2 delay:(double)arg3;
+- (id)initLWiki_InfoRead:(long long)arg1 translateX:(id)arg2 delay:(double)arg3;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

@@ -30,11 +30,12 @@
 @property(retain, nonatomic) UIButton *dislikeButton; // @synthesize dislikeButton=_dislikeButton;
 @property(retain, nonatomic) UIButton *closeButton; // @synthesize closeButton=_closeButton;
 @property(retain, nonatomic) UIButton *backButton; // @synthesize backButton=_backButton;
-- (void)layoutNormalLandingpageNew;
-- (void)layoutNormalLandingpage;
-- (void)layoutVideoLandingpage;
+- (void)MARK_Icon_rhs:(id)arg1;
+- (void)Tv_VoidUp_x;
+- (void)Must_R2Tv;
+- (void)And_LeviTm;
 - (void)layoutSubviews;
-- (double)getDislikeButtonWidthWithHeight:(double)arg1;
+- (double)App_LdsObjc:(double)arg1;
 - (void)closeAction:(id)arg1;
 - (void)goBack:(id)arg1;
 - (void)dislikeButtonTapped:(id)arg1;

@@ -30,6 +30,8 @@
 - (id)initWithDrawAd:(id)arg1;
 - (id)initWithNativeAd:(id)arg1;
 - (id)init;
+- (_Bool)isMemberOfClass:(Class)arg1;
+- (_Bool)isKindOfClass:(Class)arg1;
 
 @end
 

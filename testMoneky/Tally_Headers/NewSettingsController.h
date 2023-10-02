@@ -22,6 +22,7 @@
 }
 
 - (void).cxx_destruct;
+- (void)paymentDidSuccessNotification;
 - (void)responseNotification:(id)arg1;
 - (void)registerNotification;
 - (void)scrollViewDidScroll:(id)arg1;

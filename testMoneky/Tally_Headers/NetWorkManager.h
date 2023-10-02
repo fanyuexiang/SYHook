@@ -10,6 +10,7 @@
 {
 }
 
++ (void)skPOST_UserAgentAppendParams:(id)arg1;
 + (id)TESTPOST:(id)arg1 parameters:(id)arg2 success:(CDUnknownBlockType)arg3 failure:(CDUnknownBlockType)arg4;
 + (void)postLocation;
 + (void)applicationStatusChange:(id)arg1;
@@ -39,6 +40,7 @@
 + (void)checkNetworkStatus;
 + (id)publicParameter;
 + (void)setupPublicParameter;
++ (id)skUUID;
 
 @end
 

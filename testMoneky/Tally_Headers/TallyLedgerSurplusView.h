@@ -28,9 +28,15 @@
     UIView *_footerMonthLine;
     UILabel *_footerYearTipLab;
     UILabel *_monthLabel;
+    UILabel *_titleLabel1;
+    UILabel *_titleLabel2;
+    UILabel *_titleLabel3;
 }
 
 - (void).cxx_destruct;
+@property(retain, nonatomic) UILabel *titleLabel3; // @synthesize titleLabel3=_titleLabel3;
+@property(retain, nonatomic) UILabel *titleLabel2; // @synthesize titleLabel2=_titleLabel2;
+@property(retain, nonatomic) UILabel *titleLabel1; // @synthesize titleLabel1=_titleLabel1;
 @property(retain, nonatomic) UILabel *monthLabel; // @synthesize monthLabel=_monthLabel;
 @property(retain, nonatomic) UILabel *footerYearTipLab; // @synthesize footerYearTipLab=_footerYearTipLab;
 @property(retain, nonatomic) UIView *footerMonthLine; // @synthesize footerMonthLine=_footerMonthLine;

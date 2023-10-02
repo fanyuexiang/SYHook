@@ -6,15 +6,15 @@
 
 #import "VIPController.h"
 
-@class FamilyDetailsController;
+@class UIViewController;
 
 @interface FamilyVIPController : VIPController
 {
-    FamilyDetailsController *_detailsController;
+    UIViewController *_fromController;
 }
 
 - (void).cxx_destruct;
-@property(nonatomic) __weak FamilyDetailsController *detailsController; // @synthesize detailsController=_detailsController;
+@property(nonatomic) __weak UIViewController *fromController; // @synthesize fromController=_fromController;
 - (void)backAction;
 - (void)viewDidLoad;
 

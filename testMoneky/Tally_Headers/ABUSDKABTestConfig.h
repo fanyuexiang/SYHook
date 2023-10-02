@@ -6,17 +6,19 @@
 
 #import <objc/NSObject.h>
 
-@class NSString;
+@class NSDictionary;
 
 @interface ABUSDKABTestConfig : NSObject
 {
-    NSString *_abParams;
+    NSDictionary *_appAbTest;
+    long long _ifUseNewLoadOpt;
 }
 
 - (void).cxx_destruct;
-@property(readonly, copy, nonatomic) NSString *abParams; // @synthesize abParams=_abParams;
+@property(nonatomic) long long ifUseNewLoadOpt; // @synthesize ifUseNewLoadOpt=_ifUseNewLoadOpt;
+@property(readonly, copy, nonatomic) NSDictionary *appAbTest; // @synthesize appAbTest=_appAbTest;
+- (void)parseAbParams;
 - (id)toString;
-- (id)toDict;
 - (id)initWithDict:(id)arg1;
 
 @end

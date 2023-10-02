@@ -8,28 +8,31 @@
 
 #import "UITextFieldDelegate-Protocol.h"
 
-@class LoginPhonePwdTextView, NSString, UIButton, UITextField;
+@class LoginPhoneTextView, NSString, UIButton, UITextField;
 
 @interface PhoneModifyController : UIViewController <UITextFieldDelegate>
 {
-    LoginPhonePwdTextView *_phonePwdView;
-    UITextField *_pwdTextField;
-    UIButton *_pwdSecureBtn;
+    _Bool _autoShowedTF;
+    LoginPhoneTextView *_phoneView;
+    UITextField *_phoneTxtField;
     UIButton *_verBtn;
 }
 
++ (_Bool)removeTimesWithPhoneModifyErrorTimes:(id)arg1;
++ (long long)recordTimesWithPhoneModifyErrorTimes:(id)arg1;
++ (_Bool)verifyTimesWithPhoneModifyErrorTimes:(id)arg1;
 - (void).cxx_destruct;
+@property(nonatomic) _Bool autoShowedTF; // @synthesize autoShowedTF=_autoShowedTF;
 @property(retain, nonatomic) UIButton *verBtn; // @synthesize verBtn=_verBtn;
-@property(nonatomic) __weak UIButton *pwdSecureBtn; // @synthesize pwdSecureBtn=_pwdSecureBtn;
-@property(nonatomic) __weak UITextField *pwdTextField; // @synthesize pwdTextField=_pwdTextField;
-@property(retain, nonatomic) LoginPhonePwdTextView *phonePwdView; // @synthesize phonePwdView=_phonePwdView;
+@property(nonatomic) __weak UITextField *phoneTxtField; // @synthesize phoneTxtField=_phoneTxtField;
+@property(retain, nonatomic) LoginPhoneTextView *phoneView; // @synthesize phoneView=_phoneView;
+- (void)tapAction;
+- (void)verAction:(id)arg1;
+- (id)getPhoneNum;
 - (_Bool)textField:(id)arg1 shouldChangeCharactersInRange:(struct _NSRange)arg2 replacementString:(id)arg3;
 - (_Bool)textFieldShouldReturn:(id)arg1;
 - (void)textFieldTextDidChange:(id)arg1;
-- (void)tapAction;
-- (void)secureAction:(id)arg1;
-- (id)getPhoneNum;
-- (void)verAction:(id)arg1;
+- (void)viewDidAppear:(_Bool)arg1;
 - (void)viewWillAppear:(_Bool)arg1;
 - (void)viewDidLoad;
 

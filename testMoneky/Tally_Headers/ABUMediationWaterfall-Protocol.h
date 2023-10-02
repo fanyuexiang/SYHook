@@ -6,9 +6,10 @@
 
 #import "NSObject-Protocol.h"
 
-@class ABUAdPackage, ABUBiddingResult, ABUMediaAdProcess, ABUMediationSlotConfig, ABUWaterfallInitConfig, NSArray, NSDictionary, NSString;
+@class ABUAdPackage, ABUBiddingResult, ABUMediaAdProcess, ABUMediaSlotConfigGroup, ABUMediationSlotConfig, ABUWaterfallInitConfig, NSArray, NSDictionary, NSString;
 
 @protocol ABUMediationWaterfall <NSObject>
+@property(readonly, nonatomic) ABUMediaSlotConfigGroup *configGroup;
 @property(readonly, nonatomic) _Bool requestTimeout;
 @property(readonly, nonatomic) _Bool isRequesting;
 @property(readonly, copy, nonatomic) NSString *adReuseIdentifier;
@@ -17,15 +18,18 @@
 @property(readonly, nonatomic) long long requestType;
 @property(nonatomic) __weak id adBridge;
 @property(readonly) ABUMediationSlotConfig *slotConfig;
+- (double)curWfBestAdEcpmOrError:(id *)arg1;
 - (long long)primeritReqType;
 - (ABUAdPackage *)canShowAdWithCheckAd:(_Bool)arg1 isBestAd:(_Bool *)arg2 others:(id *)arg3;
 - (ABUBiddingResult *)winnerBiddingResult;
 - (NSArray *)loadedAdPackageList;
 - (ABUMediaAdProcess *)processFromMediaSlotID:(NSString *)arg1;
 - (void)trackMediationVideoCached;
+- (ABUAdPackage *)checkPreloadWithParams:(NSDictionary *)arg1 adReuseIdentifier:(NSString *)arg2 errorType:(long long *)arg3;
 - (void)startWaterfallRequestWithParams:(NSDictionary *)arg1 adReuseIdentifier:(NSString *)arg2;
 - (ABUAdPackage *)winnerAdPackageWithCount:(unsigned long long)arg1 others:(id *)arg2;
 - (NSArray *)fillFailMessages;
+- (_Bool)isLoadViaMediation;
 - (id)initWithConfig:(ABUWaterfallInitConfig *)arg1;
 @end
 

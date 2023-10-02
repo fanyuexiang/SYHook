@@ -42,6 +42,7 @@
 - (void)appendDecorator:(id)arg1;
 - (void)_pbu_calcuColorIntoView:(id)arg1 delay:(double)arg2 animations:(CDUnknownBlockType)arg3;
 - (void)calcuColorIntoView:(id)arg1;
+- (id)realContentView;
 - (void)resetSizeIfNeed_2186;
 - (void)resetSizeIfNeed_3051;
 - (void)layoutSubviews;

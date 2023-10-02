@@ -8,16 +8,16 @@
 
 #import "UITextFieldDelegate-Protocol.h"
 
-@class AdjustButton, DetaiSearchTableView, NSString, SearchHeaderView, SearchTallyChooseView, UILabel, UITextField;
+@class AdjustButton, DetaiSearchTableView, NSString, SearchHeaderView, SearchTallyChooseView, UIImageView, UILabel, UITextField, UIView;
 
 @interface SearchController : UIViewController <UITextFieldDelegate>
 {
-    DetaiSearchTableView *_tableView;
+    UIImageView *_chooseimgView;
     AdjustButton *_currentBtn;
-    SearchTallyChooseView *_chooseView;
     UITextField *_seachtextfield;
     _Bool _isSearch;
     UILabel *_timeLabel;
+    _Bool _isAdvanceSearch;
     _Bool _noLabel;
     long long _tallyType;
     long long _sortType;
@@ -26,11 +26,17 @@
     NSString *_searchString;
     NSString *_typeName;
     long long _cid;
+    UIView *_filerbgView;
+    SearchTallyChooseView *_chooseView;
     SearchHeaderView *_searchHeaderView;
+    DetaiSearchTableView *_tableView;
 }
 
 - (void).cxx_destruct;
+@property(retain, nonatomic) DetaiSearchTableView *tableView; // @synthesize tableView=_tableView;
 @property(retain, nonatomic) SearchHeaderView *searchHeaderView; // @synthesize searchHeaderView=_searchHeaderView;
+@property(retain, nonatomic) SearchTallyChooseView *chooseView; // @synthesize chooseView=_chooseView;
+@property(retain, nonatomic) UIView *filerbgView; // @synthesize filerbgView=_filerbgView;
 @property(nonatomic) _Bool noLabel; // @synthesize noLabel=_noLabel;
 @property(nonatomic) long long cid; // @synthesize cid=_cid;
 @property(retain, nonatomic) NSString *typeName; // @synthesize typeName=_typeName;
@@ -39,10 +45,10 @@
 @property(retain, nonatomic) NSString *startTimeString; // @synthesize startTimeString=_startTimeString;
 @property(nonatomic) long long sortType; // @synthesize sortType=_sortType;
 @property(nonatomic) long long tallyType; // @synthesize tallyType=_tallyType;
+- (void)searchWithKeyWord:(id)arg1;
+- (void)chooseTap;
 - (void)tallyDetailAction:(id)arg1;
 - (void)updateTimeString:(id)arg1 end:(id)arg2;
-- (void)btnClick:(id)arg1;
-- (void)setupSegmentView;
 - (void)keyboardWillHide:(id)arg1;
 - (void)textFieldChanged:(id)arg1;
 - (_Bool)textFieldShouldBeginEditing:(id)arg1;
@@ -50,6 +56,7 @@
 - (void)viewDidAppear:(_Bool)arg1;
 - (void)viewWillAppear:(_Bool)arg1;
 - (void)closeAction;
+- (void)backAction;
 - (void)refreshParam;
 - (void)viewDidLoad;
 - (void)dealloc;

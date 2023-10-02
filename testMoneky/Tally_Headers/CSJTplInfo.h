@@ -22,9 +22,17 @@
     double _score_exact_i18n;
     long long _comment_num_i18n;
     unsigned long long _material_type;
+    NSString *_ugenData;
+    NSString *_ugenMd5;
+    NSString *_ugenUrl;
+    NSString *_ugenVersion;
 }
 
 - (void).cxx_destruct;
+@property(copy, nonatomic) NSString *ugenVersion; // @synthesize ugenVersion=_ugenVersion;
+@property(copy, nonatomic) NSString *ugenUrl; // @synthesize ugenUrl=_ugenUrl;
+@property(copy, nonatomic) NSString *ugenMd5; // @synthesize ugenMd5=_ugenMd5;
+@property(copy, nonatomic) NSString *ugenData; // @synthesize ugenData=_ugenData;
 @property(nonatomic) unsigned long long material_type; // @synthesize material_type=_material_type;
 @property(nonatomic) long long comment_num_i18n; // @synthesize comment_num_i18n=_comment_num_i18n;
 @property(nonatomic) double score_exact_i18n; // @synthesize score_exact_i18n=_score_exact_i18n;

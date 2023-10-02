@@ -14,23 +14,31 @@
     _Bool _needEncrypt;
     _Bool _lastTimeCrash;
     _Bool _updateAsFirstLaunch;
+    _Bool _uploadAlog;
     id <HMDBUCrashKitDelegate> _delegate;
     NSDictionary *_extraMetaData;
     HMDBUCrashUploader *_uploader;
     NSString *_commitID;
     NSString *_sdkVersion;
     double _launchCrashThreshold;
+    id _networkProvider;
     NSObject<OS_dispatch_queue> *_dynamicDataQueue;
-    NSArray *_appIDs;
+    NSArray *_allAppIDs;
+    NSString *_currentAppID;
+    long long _alogCrashBeforeTime;
 }
 
 + (id)extraMetaData;
 + (void)setExtraMetaData:(id)arg1;
 + (id)sharedInstance;
 - (void).cxx_destruct;
-@property(retain, nonatomic) NSArray *appIDs; // @synthesize appIDs=_appIDs;
+@property(nonatomic) long long alogCrashBeforeTime; // @synthesize alogCrashBeforeTime=_alogCrashBeforeTime;
+@property(nonatomic) _Bool uploadAlog; // @synthesize uploadAlog=_uploadAlog;
+@property(retain, nonatomic) NSString *currentAppID; // @synthesize currentAppID=_currentAppID;
+@property(retain, nonatomic) NSArray *allAppIDs; // @synthesize allAppIDs=_allAppIDs;
 @property(nonatomic) _Bool updateAsFirstLaunch; // @synthesize updateAsFirstLaunch=_updateAsFirstLaunch;
 @property(retain, nonatomic) NSObject<OS_dispatch_queue> *dynamicDataQueue; // @synthesize dynamicDataQueue=_dynamicDataQueue;
+@property(nonatomic) __weak id networkProvider; // @synthesize networkProvider=_networkProvider;
 @property(nonatomic) _Bool lastTimeCrash; // @synthesize lastTimeCrash=_lastTimeCrash;
 @property(nonatomic) double launchCrashThreshold; // @synthesize launchCrashThreshold=_launchCrashThreshold;
 @property(nonatomic) _Bool needEncrypt; // @synthesize needEncrypt=_needEncrypt;
@@ -46,7 +54,7 @@
 - (id)init;
 
 // Remaining properties
-@property(retain, nonatomic) NSObject<OS_dispatch_queue> *workQueue;
+@property(retain, nonatomic) NSObject<OS_dispatch_queue> *workQueue; // @dynamic workQueue;
 
 @end
 

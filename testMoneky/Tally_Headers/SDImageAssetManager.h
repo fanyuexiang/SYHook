@@ -7,11 +7,11 @@
 #import <objc/NSObject.h>
 
 @class NSMapTable;
-@protocol OS_dispatch_semaphore;
 
 @interface SDImageAssetManager : NSObject
 {
-    NSObject<OS_dispatch_semaphore> *_lock;
+    struct os_unfair_lock_s _lock;
+    int _lock_deprecated;
     NSMapTable *_imageTable;
 }
 

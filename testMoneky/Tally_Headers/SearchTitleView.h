@@ -10,6 +10,7 @@
 {
 }
 
+- (void)layoutSubviews;
 - (struct CGSize)intrinsicContentSize;
 
 @end

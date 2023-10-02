@@ -25,7 +25,7 @@
 - (void)animateTransition:(id)arg1;
 - (id)animationControllerForPresentedController:(id)arg1 presentingController:(id)arg2 sourceController:(id)arg3;
 - (id)animationControllerForDismissedController:(id)arg1;
-- (id)initWithAdSize:(struct CGSize)arg1 materialMeta:(id)arg2;
+- (id)initLRet_ViewA0:(struct CGSize)arg1 materialMeta:(id)arg2;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

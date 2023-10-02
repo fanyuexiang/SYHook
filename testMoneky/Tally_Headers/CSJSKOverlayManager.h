@@ -33,8 +33,6 @@
 @property(nonatomic) _Bool hadShowSKOverlay; // @synthesize hadShowSKOverlay=_hadShowSKOverlay;
 @property(nonatomic) __weak NSObject<CSJSKOverlayManagerDelegate> *delegate; // @synthesize delegate=_delegate;
 @property(nonatomic) __weak UIWindow *window; // @synthesize window=_window;
-- (void)promptsClose:(id)arg1;
-- (void)promptsShow:(id)arg1;
 - (void)appstoreDidDisAppear:(id)arg1;
 - (void)appstoreDidAppear:(id)arg1;
 - (void)registerNotification;

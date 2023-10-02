@@ -11,24 +11,24 @@
 @interface CSJNumerAnimationLabel : UILabel
 {
     NSTimer *_timer;
-    long long _startNumber;
-    long long _endNumber;
-    double _animationParameter;
-    double _durationTime;
-    double _lastUpdateTime;
-    double _startAnimationTime;
+    long long _Mute_ComRet;
+    long long _Read_CnBool;
+    double _Sum_NewSql;
+    double _Stmt_AdmDocs;
+    double _As_CtaCopy;
+    double _Up_x_HostKey;
 }
 
 - (void).cxx_destruct;
-@property(nonatomic) double startAnimationTime; // @synthesize startAnimationTime=_startAnimationTime;
-@property(nonatomic) double lastUpdateTime; // @synthesize lastUpdateTime=_lastUpdateTime;
-@property(nonatomic) double durationTime; // @synthesize durationTime=_durationTime;
-@property(nonatomic) double animationParameter; // @synthesize animationParameter=_animationParameter;
-@property(nonatomic) long long endNumber; // @synthesize endNumber=_endNumber;
-@property(nonatomic) long long startNumber; // @synthesize startNumber=_startNumber;
+@property(nonatomic) double Up_x_HostKey; // @synthesize Up_x_HostKey=_Up_x_HostKey;
+@property(nonatomic) double As_CtaCopy; // @synthesize As_CtaCopy=_As_CtaCopy;
+@property(nonatomic) double Stmt_AdmDocs; // @synthesize Stmt_AdmDocs=_Stmt_AdmDocs;
+@property(nonatomic) double Sum_NewSql; // @synthesize Sum_NewSql=_Sum_NewSql;
+@property(nonatomic) long long Read_CnBool; // @synthesize Read_CnBool=_Read_CnBool;
+@property(nonatomic) long long Mute_ComRet; // @synthesize Mute_ComRet=_Mute_ComRet;
 @property(retain, nonatomic) NSTimer *timer; // @synthesize timer=_timer;
 - (void)p_updateNumebr;
-- (void)animationStartFromNumber:(long long)arg1 toNumber:(long long)arg2 duration:(double)arg3;
+- (void)ID_T5Cls:(long long)arg1 toNumber:(long long)arg2 duration:(double)arg3;
 
 @end
 

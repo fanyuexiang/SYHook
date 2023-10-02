@@ -7,17 +7,20 @@
 #import "NSURLSessionDataDelegate-Protocol.h"
 #import "NSURLSessionTaskDelegate-Protocol.h"
 
-@class NSDictionary, NSURLCredential, NSURLRequest, NSURLResponse, NSURLSession, NSURLSessionTask, NSURLSessionTaskMetrics;
+@class NSDictionary, NSIndexSet, NSSet, NSURLCredential, NSURLRequest, NSURLResponse, NSURLSession, NSURLSessionTask, NSURLSessionTaskMetrics;
 
 @protocol SDWebImageDownloaderOperation <NSURLSessionTaskDelegate, NSURLSessionDataDelegate>
 @property(readonly, nonatomic) NSURLResponse *response;
 @property(readonly, nonatomic) NSURLRequest *request;
 - (_Bool)cancel:(id)arg1;
+- (id)addHandlersForProgress:(void (^)(long long, long long, NSURL *))arg1 completed:(void (^)(UIImage *, NSData *, NSError *, _Bool))arg2 decodeOptions:(NSDictionary *)arg3;
 - (id)addHandlersForProgress:(void (^)(long long, long long, NSURL *))arg1 completed:(void (^)(UIImage *, NSData *, NSError *, _Bool))arg2;
 - (id)initWithRequest:(NSURLRequest *)arg1 inSession:(NSURLSession *)arg2 options:(unsigned long long)arg3 context:(NSDictionary *)arg4;
 - (id)initWithRequest:(NSURLRequest *)arg1 inSession:(NSURLSession *)arg2 options:(unsigned long long)arg3;
 
 @optional
+@property(copy, nonatomic) NSSet *acceptableContentTypes;
+@property(copy, nonatomic) NSIndexSet *acceptableStatusCodes;
 @property(nonatomic) double minimumProgressInterval;
 @property(retain, nonatomic) NSURLCredential *credential;
 @property(readonly, nonatomic) NSURLSessionTaskMetrics *metrics;

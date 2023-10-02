@@ -12,24 +12,24 @@
 @interface CSJURLTracker : NSObject
 {
     id <BUPersistenceProtocol> _persistence;
-    NSURLSession *_uploadSession;
+    NSURLSession *_An_rhsFail;
 }
 
-+ (id)shareURLTracker;
++ (id)Mask_CodeHas;
 - (void).cxx_destruct;
-@property(retain, nonatomic) NSURLSession *uploadSession; // @synthesize uploadSession=_uploadSession;
+@property(retain, nonatomic) NSURLSession *An_rhsFail; // @synthesize An_rhsFail=_An_rhsFail;
 @property(retain, nonatomic) id <BUPersistenceProtocol> persistence; // @synthesize persistence=_persistence;
-- (void)removeURLFromCacheWithKey:(id)arg1;
-- (long long)timesCachedKey:(id)arg1 dataDict:(id)arg2;
-- (void)addTimesCachedKey:(id)arg1 dataDict:(id)arg2;
-- (id)adIdCachedKey:(id)arg1 dataDict:(id)arg2;
-- (id)urlCachedKey:(id)arg1 dataDict:(id)arg2;
-- (void)cacheFailedURL:(id)arg1 dict:(id)arg2;
+- (void)UI_ThisAry:(id)arg1;
+- (long long)Req_DictIdfv:(id)arg1 dataDict:(id)arg2;
+- (void)Iv_SelfNil:(id)arg1 dataDict:(id)arg2;
+- (id)Fabs_PtrCn:(id)arg1 dataDict:(id)arg2;
+- (id)This_A1Ary:(id)arg1 dataDict:(id)arg2;
+- (void)_val_PopCom:(id)arg1 dict:(id)arg2;
 - (void)receiveWillEnterForegroundNotification:(id)arg1;
-- (void)trackURL:(id)arg1 model:(id)arg2;
-- (void)trackURL:(id)arg1 model:(id)arg2 isNormal:(_Bool)arg3;
+- (void)Nil_PodsNoti:(id)arg1 model:(id)arg2;
+- (void)Nil_PodsNoti:(id)arg1 model:(id)arg2 isNormal:(_Bool)arg3;
 - (void)trackURLs:(id)arg1 model:(id)arg2;
-- (void)trackURL:(id)arg1;
+- (void)Nil_PodsNoti:(id)arg1;
 - (void)trackURLs:(id)arg1;
 - (id)init;
 - (void)dealloc;

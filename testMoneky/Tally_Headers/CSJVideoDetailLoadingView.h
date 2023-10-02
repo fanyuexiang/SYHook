@@ -18,9 +18,9 @@
 @property(copy, nonatomic) NSArray *animationLayers; // @synthesize animationLayers=_animationLayers;
 @property(retain, nonatomic) UILabel *loadingLabel; // @synthesize loadingLabel=_loadingLabel;
 - (void)startLoading;
-- (void)p_addCorners:(unsigned long long)arg1 withView:(id)arg2;
+- (void)Diff_GetMask:(unsigned long long)arg1 withView:(id)arg2;
 - (void)layoutSubviews;
-- (void)buildupViewWithFrame:(struct CGRect)arg1;
+- (void)This_NeedSize:(struct CGRect)arg1;
 - (id)initWithFrame:(struct CGRect)arg1;
 
 @end

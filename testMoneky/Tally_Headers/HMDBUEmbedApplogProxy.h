@@ -10,7 +10,6 @@
 {
 }
 
-+ (void)raiseExceptionForAppLogNotFound;
 + (id)httpHeadInfo;
 + (id)sessionID;
 + (void)load;

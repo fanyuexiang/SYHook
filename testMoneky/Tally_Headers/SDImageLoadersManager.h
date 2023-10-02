@@ -9,19 +9,20 @@
 #import "SDImageLoader-Protocol.h"
 
 @class NSArray, NSMutableArray, NSString;
-@protocol OS_dispatch_semaphore;
 
 @interface SDImageLoadersManager : NSObject <SDImageLoader>
 {
+    struct os_unfair_lock_s _loadersLock;
+    int _loadersLock_deprecated;
     NSMutableArray *_imageLoaders;
-    NSObject<OS_dispatch_semaphore> *_loadersLock;
 }
 
 + (id)sharedManager;
 - (void).cxx_destruct;
-@property(retain, nonatomic) NSObject<OS_dispatch_semaphore> *loadersLock; // @synthesize loadersLock=_loadersLock;
+@property(retain, nonatomic) NSMutableArray *imageLoaders; // @synthesize imageLoaders=_imageLoaders;
 - (_Bool)shouldBlockFailedURLWithURL:(id)arg1 error:(id)arg2;
 - (id)requestImageWithURL:(id)arg1 options:(unsigned long long)arg2 context:(id)arg3 progress:(CDUnknownBlockType)arg4 completed:(CDUnknownBlockType)arg5;
+- (_Bool)canRequestImageForURL:(id)arg1 options:(unsigned long long)arg2 context:(id)arg3;
 - (_Bool)canRequestImageForURL:(id)arg1;
 - (void)removeLoader:(id)arg1;
 - (void)addLoader:(id)arg1;

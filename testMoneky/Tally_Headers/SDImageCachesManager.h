@@ -9,22 +9,22 @@
 #import "SDImageCache-Protocol.h"
 
 @class NSArray, NSMutableArray, NSString;
-@protocol OS_dispatch_semaphore;
 
 @interface SDImageCachesManager : NSObject <SDImageCache>
 {
-    NSMutableArray *_imageCaches;
+    struct os_unfair_lock_s _cachesLock;
+    int _cachesLock_deprecated;
     unsigned long long _queryOperationPolicy;
     unsigned long long _storeOperationPolicy;
     unsigned long long _removeOperationPolicy;
     unsigned long long _containsOperationPolicy;
     unsigned long long _clearOperationPolicy;
-    NSObject<OS_dispatch_semaphore> *_cachesLock;
+    NSMutableArray *_imageCaches;
 }
 
 + (id)sharedManager;
 - (void).cxx_destruct;
-@property(retain, nonatomic) NSObject<OS_dispatch_semaphore> *cachesLock; // @synthesize cachesLock=_cachesLock;
+@property(retain, nonatomic) NSMutableArray *imageCaches; // @synthesize imageCaches=_imageCaches;
 @property(nonatomic) unsigned long long clearOperationPolicy; // @synthesize clearOperationPolicy=_clearOperationPolicy;
 @property(nonatomic) unsigned long long containsOperationPolicy; // @synthesize containsOperationPolicy=_containsOperationPolicy;
 @property(nonatomic) unsigned long long removeOperationPolicy; // @synthesize removeOperationPolicy=_removeOperationPolicy;
@@ -33,16 +33,17 @@
 - (void)serialClearWithCacheType:(long long)arg1 completion:(CDUnknownBlockType)arg2 enumerator:(id)arg3;
 - (void)serialContainsImageForKey:(id)arg1 cacheType:(long long)arg2 completion:(CDUnknownBlockType)arg3 enumerator:(id)arg4 operation:(id)arg5;
 - (void)serialRemoveImageForKey:(id)arg1 cacheType:(long long)arg2 completion:(CDUnknownBlockType)arg3 enumerator:(id)arg4;
-- (void)serialStoreImage:(id)arg1 imageData:(id)arg2 forKey:(id)arg3 cacheType:(long long)arg4 completion:(CDUnknownBlockType)arg5 enumerator:(id)arg6;
+- (void)serialStoreImage:(id)arg1 imageData:(id)arg2 forKey:(id)arg3 options:(unsigned long long)arg4 context:(id)arg5 cacheType:(long long)arg6 completion:(CDUnknownBlockType)arg7 enumerator:(id)arg8;
 - (void)serialQueryImageForKey:(id)arg1 options:(unsigned long long)arg2 context:(id)arg3 cacheType:(long long)arg4 completion:(CDUnknownBlockType)arg5 enumerator:(id)arg6 operation:(id)arg7;
 - (void)concurrentClearWithCacheType:(long long)arg1 completion:(CDUnknownBlockType)arg2 enumerator:(id)arg3 operation:(id)arg4;
 - (void)concurrentContainsImageForKey:(id)arg1 cacheType:(long long)arg2 completion:(CDUnknownBlockType)arg3 enumerator:(id)arg4 operation:(id)arg5;
 - (void)concurrentRemoveImageForKey:(id)arg1 cacheType:(long long)arg2 completion:(CDUnknownBlockType)arg3 enumerator:(id)arg4 operation:(id)arg5;
-- (void)concurrentStoreImage:(id)arg1 imageData:(id)arg2 forKey:(id)arg3 cacheType:(long long)arg4 completion:(CDUnknownBlockType)arg5 enumerator:(id)arg6 operation:(id)arg7;
+- (void)concurrentStoreImage:(id)arg1 imageData:(id)arg2 forKey:(id)arg3 options:(unsigned long long)arg4 context:(id)arg5 cacheType:(long long)arg6 completion:(CDUnknownBlockType)arg7 enumerator:(id)arg8 operation:(id)arg9;
 - (void)concurrentQueryImageForKey:(id)arg1 options:(unsigned long long)arg2 context:(id)arg3 cacheType:(long long)arg4 completion:(CDUnknownBlockType)arg5 enumerator:(id)arg6 operation:(id)arg7;
 - (void)clearWithCacheType:(long long)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)containsImageForKey:(id)arg1 cacheType:(long long)arg2 completion:(CDUnknownBlockType)arg3;
 - (void)removeImageForKey:(id)arg1 cacheType:(long long)arg2 completion:(CDUnknownBlockType)arg3;
+- (void)storeImage:(id)arg1 imageData:(id)arg2 forKey:(id)arg3 options:(unsigned long long)arg4 context:(id)arg5 cacheType:(long long)arg6 completion:(CDUnknownBlockType)arg7;
 - (void)storeImage:(id)arg1 imageData:(id)arg2 forKey:(id)arg3 cacheType:(long long)arg4 completion:(CDUnknownBlockType)arg5;
 - (id)queryImageForKey:(id)arg1 options:(unsigned long long)arg2 context:(id)arg3 cacheType:(long long)arg4 completion:(CDUnknownBlockType)arg5;
 - (id)queryImageForKey:(id)arg1 options:(unsigned long long)arg2 context:(id)arg3 completion:(CDUnknownBlockType)arg4;

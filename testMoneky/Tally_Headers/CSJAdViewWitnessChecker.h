@@ -11,27 +11,27 @@
 
 @interface CSJAdViewWitnessChecker : NSObject
 {
-    BUThreadSafeDictionary *_viewTrackers;
-    NSMutableDictionary *_adViewsWitnessTimeDictionary;
+    BUThreadSafeDictionary *_Msg_A0AdId;
+    NSMutableDictionary *_Need_OfInt;
     NSObject<OS_dispatch_source> *_timer;
-    NSObject<OS_dispatch_queue> *_checkQueue;
+    NSObject<OS_dispatch_queue> *_Fm_AndInfo;
 }
 
-+ (id)dictionaryKeyWithObject:(id)arg1;
++ (id)Pos_SELFm:(id)arg1;
 + (void)setWitnessTimeForAd:(id)arg1;
 + (double)getWitnessTimeForAd:(id)arg1;
 + (id)sharedInstance;
 - (void).cxx_destruct;
-@property(retain, nonatomic) NSObject<OS_dispatch_queue> *checkQueue; // @synthesize checkQueue=_checkQueue;
+@property(retain, nonatomic) NSObject<OS_dispatch_queue> *Fm_AndInfo; // @synthesize Fm_AndInfo=_Fm_AndInfo;
 @property(retain, nonatomic) NSObject<OS_dispatch_source> *timer; // @synthesize timer=_timer;
-@property(retain, nonatomic) NSMutableDictionary *adViewsWitnessTimeDictionary; // @synthesize adViewsWitnessTimeDictionary=_adViewsWitnessTimeDictionary;
-@property(retain, nonatomic) BUThreadSafeDictionary *viewTrackers; // @synthesize viewTrackers=_viewTrackers;
-- (void)dismissEventWithTracker:(id)arg1;
-- (void)showEventWithTracker:(id)arg1;
-- (void)checkoutViewTracker;
-- (void)checkAdViewsIfWitnessed;
+@property(retain, nonatomic) NSMutableDictionary *Need_OfInt; // @synthesize Need_OfInt=_Need_OfInt;
+@property(retain, nonatomic) BUThreadSafeDictionary *Msg_A0AdId; // @synthesize Msg_A0AdId=_Msg_A0AdId;
+- (void)A0_RitVli:(id)arg1;
+- (void)Now_InfoAPI:(id)arg1;
+- (void)Bu_y_KeyApi;
+- (void)Api_M_PIName;
 - (void)removeAd:(id)arg1;
-- (void)removeAdForKey:(id)arg1;
+- (void)Lazy_SelOn:(id)arg1;
 - (void)addViewTracker:(id)arg1 ForKey:(id)arg2;
 - (void)addViewTracker:(id)arg1;
 

@@ -10,9 +10,13 @@
 + (id)AlibcJSONModel_numberWithString:(id)arg1;
 - (id)mtopJSONString;
 - (id)mtopJSONData;
+- (_Bool)isBoolNumber;
+- (_Bool)isFloatNumber;
+- (_Bool)isIntegerNumber;
+- (_Bool)isCharNumber;
+@property(readonly, nonatomic, getter=hmdBU_isBoolType) _Bool hmdBUBoolType;
+@property(readonly, nonatomic, getter=hmdBU_isIntegerType) _Bool hmdBUIntegerType;
 - (_Bool)abu_isBoolType;
 - (_Bool)abu_isIntegerType;
-@property(readonly, nonatomic, getter=isBoolType) _Bool boolType;
-@property(readonly, nonatomic, getter=isIntegerType) _Bool integerType;
 @end
 

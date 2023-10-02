@@ -12,11 +12,11 @@
 {
     NSArray *_filterWords;
     CSJNativeAd *_nativeAd;
-    NSMutableArray *_AllFilterWords;
+    NSMutableArray *_IOS_TODOT5;
 }
 
 - (void).cxx_destruct;
-@property(retain, nonatomic) NSMutableArray *AllFilterWords; // @synthesize AllFilterWords=_AllFilterWords;
+@property(retain, nonatomic) NSMutableArray *IOS_TODOT5; // @synthesize IOS_TODOT5=_IOS_TODOT5;
 @property(retain, nonatomic) CSJNativeAd *nativeAd; // @synthesize nativeAd=_nativeAd;
 @property(copy, nonatomic) NSArray *filterWords; // @synthesize filterWords=_filterWords;
 - (_Bool)isMemberOfClass:(Class)arg1;

@@ -17,15 +17,15 @@
 
 + (id)sharedInstance;
 - (void).cxx_destruct;
-@property(retain, nonatomic) id managerInstance; // @synthesize managerInstance=_managerInstance;
-@property(copy, nonatomic) NSString *dc; // @synthesize dc=_dc;
-@property(copy, nonatomic) NSString *device_id; // @synthesize device_id=_device_id;
+@property(retain) id managerInstance; // @synthesize managerInstance=_managerInstance;
+@property(copy) NSString *dc; // @synthesize dc=_dc;
+@property(copy) NSString *device_id; // @synthesize device_id=_device_id;
 - (id)getMsDidToken;
 - (id)doHttpReqSignByUrl:(id)arg1 body:(id)arg2;
+- (void)reportForScene;
 - (void)sendWithDeviceID:(id)arg1;
 - (id)bodyEncry:(id)arg1;
 - (void)setupWithDC:(id)arg1 appId:(id)arg2;
-- (id)doHttpReqSignByUrl:(id)arg1 Body:(id)arg2;
 - (id)initWithConfig:(id)arg1;
 - (id)initWithSDKID:(id)arg1 SubAppID:(id)arg2 License:(id)arg3;
 

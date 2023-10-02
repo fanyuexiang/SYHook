@@ -22,8 +22,8 @@
 @property(retain, nonatomic) NSMapTable *weakCache; // @synthesize weakCache=_weakCache;
 @property(retain, nonatomic) BUTimer *timer; // @synthesize timer=_timer;
 - (void)_fire;
-- (void)_createTimer;
-- (void)stopTrackWithView:(id)arg1;
+- (void)To_FtMod;
+- (void)Did_LoadOf:(id)arg1;
 - (void)trackWithView:(id)arg1 showAreaBlock:(CDUnknownBlockType)arg2;
 - (id)init;
 

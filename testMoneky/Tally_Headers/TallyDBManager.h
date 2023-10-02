@@ -35,7 +35,7 @@
 - (void)updateDeleteTallyModel:(id)arg1;
 - (void)deleteTallyModel:(id)arg1;
 - (void)addTallyModelSuccessAction:(id)arg1;
-- (void)addTallyModel:(id)arg1 images:(id)arg2 finish:(CDUnknownBlockType)arg3;
+- (id)addTallyModel:(id)arg1 images:(id)arg2 finish:(CDUnknownBlockType)arg3;
 - (void)userInfoDidChange;
 - (id)init;
 - (void)importTallyModel:(id)arg1;
@@ -54,6 +54,11 @@
 - (void)batchSyncTallyDataWithConfig:(CDUnknownBlockType)arg1 finish:(CDUnknownBlockType)arg2 failure:(CDUnknownBlockType)arg3;
 - (id)uploadTallyDataJSONString;
 - (long long)syncTallyDataCount;
+- (void)deleteLabelRemarkOutLabelList:(id)arg1;
+- (id)sortAllLabelRemark:(id)arg1;
+- (void)deleteLabelRemark:(id)arg1 saveContext:(_Bool)arg2;
+- (void)saveLabelRemark:(id)arg1 saveContext:(_Bool)arg2;
+- (id)remarkObjectArray:(id)arg1;
 - (id)remarkArray:(id)arg1;
 - (void)deleteRemark:(id)arg1 saveContext:(_Bool)arg2;
 - (void)saveRemark:(id)arg1 saveContext:(_Bool)arg2;

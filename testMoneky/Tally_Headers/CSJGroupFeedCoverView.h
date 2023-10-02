@@ -10,13 +10,13 @@
 
 @interface CSJGroupFeedCoverView : CSJFeedCoverView
 {
-    UIImageView *_imageView2;
-    UIImageView *_imageView3;
+    UIImageView *_ID_OsWin;
+    UIImageView *_Ext_TapCls;
 }
 
 - (void).cxx_destruct;
-@property(retain, nonatomic) UIImageView *imageView3; // @synthesize imageView3=_imageView3;
-@property(retain, nonatomic) UIImageView *imageView2; // @synthesize imageView2=_imageView2;
+@property(retain, nonatomic) UIImageView *Ext_TapCls; // @synthesize Ext_TapCls=_Ext_TapCls;
+@property(retain, nonatomic) UIImageView *ID_OsWin; // @synthesize ID_OsWin=_ID_OsWin;
 - (void)pbu_override_buildViewData;
 - (void)pbu_override_buildView;
 

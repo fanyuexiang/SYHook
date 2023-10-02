@@ -29,6 +29,7 @@
 @property(copy, nonatomic) NSString *format; // @synthesize format=_format;
 @property(copy, nonatomic) NSString *file_hash; // @synthesize file_hash=_file_hash;
 @property(copy, nonatomic) NSString *audio_url; // @synthesize audio_url=_audio_url;
+- (_Bool)validAudioInfo;
 - (id)initWithCoder:(id)arg1;
 - (void)encodeWithCoder:(id)arg1;
 - (id)initWithDictionary:(id)arg1 error:(id *)arg2;

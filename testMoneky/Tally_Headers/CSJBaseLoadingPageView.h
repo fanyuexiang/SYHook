@@ -14,11 +14,11 @@
 {
     _Bool _isPortrait;
     CDUnknownBlockType _adButtonClickBlock;
-    UIButton *_adButton;
+    UIButton *_Are_DicTrue;
 }
 
 - (void).cxx_destruct;
-@property(retain, nonatomic) UIButton *adButton; // @synthesize adButton=_adButton;
+@property(retain, nonatomic) UIButton *Are_DicTrue; // @synthesize Are_DicTrue=_Are_DicTrue;
 @property(copy, nonatomic) CDUnknownBlockType adButtonClickBlock; // @synthesize adButtonClickBlock=_adButtonClickBlock;
 @property(nonatomic) _Bool isPortrait; // @synthesize isPortrait=_isPortrait;
 - (void)startLoading;

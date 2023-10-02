@@ -10,8 +10,11 @@
 {
 }
 
++ (void)closeTipWithCalculateAsset:(id)arg1;
++ (_Bool)canAutoShowTipWithCalculateAsset:(id)arg1 needAdd:(_Bool)arg2;
 + (void)saveModel;
 + (void)calculateAssetValueAction:(id)arg1 result:(CDUnknownBlockType)arg2;
++ (_Bool)queryLastRecordWithBookID:(id)arg1 aid:(id)arg2 compareDate:(id)arg3;
 + (id)queryRecordsPredicateWithBookID:(id)arg1 aid:(id)arg2;
 + (void)queryRecordValueWithBookID:(id)arg1 rid:(id)arg2 minus:(_Bool)arg3 result:(CDUnknownBlockType)arg4;
 + (void)queryRecordValueWithBookID:(id)arg1 aid:(id)arg2 minus:(_Bool)arg3 result:(CDUnknownBlockType)arg4;

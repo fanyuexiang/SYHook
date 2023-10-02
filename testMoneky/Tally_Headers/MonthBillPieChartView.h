@@ -15,11 +15,13 @@
     CAShapeLayer *_bgLayer;
     struct CGPoint _center;
     CABasicAnimation *_progressAnimation;
+    _Bool _cancelLoadingAnimation;
     double _duration;
     NSMutableArray *_dataArray;
 }
 
 - (void).cxx_destruct;
+@property(nonatomic) _Bool cancelLoadingAnimation; // @synthesize cancelLoadingAnimation=_cancelLoadingAnimation;
 @property(retain, nonatomic) NSMutableArray *dataArray; // @synthesize dataArray=_dataArray;
 @property(nonatomic) double duration; // @synthesize duration=_duration;
 - (id)progressAnimation;

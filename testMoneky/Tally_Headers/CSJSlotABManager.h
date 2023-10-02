@@ -15,16 +15,16 @@
     NSDictionary *_extraDic;
 }
 
-+ (void)removeAllCache;
++ (void)By_XzjIdx;
 + (id)sharedInstance;
 - (void).cxx_destruct;
 @property(copy) NSDictionary *extraDic; // @synthesize extraDic=_extraDic;
 @property(retain, nonatomic) id <BUPersistenceProtocol> persistence; // @synthesize persistence=_persistence;
 - (_Bool)isMemberOfClass:(Class)arg1;
 - (_Bool)isKindOfClass:(Class)arg1;
-- (id)dynamicSlotABExtraWithID:(id)arg1;
-- (void)cacheExtraWithModel:(id)arg1;
-- (id)getCacheModel:(long long)arg1;
+- (id)Os_posMARK:(id)arg1;
+- (void)Loss_ClsAnd:(id)arg1;
+- (id)Ft_GetLeft:(long long)arg1;
 - (void)fetchSlotWithCodeGroupId:(long long)arg1 completion:(CDUnknownBlockType)arg2;
 - (id)init;
 

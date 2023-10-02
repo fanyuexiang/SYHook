@@ -8,7 +8,8 @@
 
 #import "NSCoding-Protocol.h"
 
-@class BUImage, BUPersonalizationPrompts, NSArray, NSDictionary, NSString;
+@class BUAdGroupInfo, BUImage, NSArray, NSDictionary, NSObject, NSString;
+@protocol BUMaterialMetaMediationProtocol;
 
 @interface BUMaterialMeta : BUInterfaceBaseObject <NSCoding>
 {
@@ -18,6 +19,7 @@
 - (void).cxx_destruct;
 @property(retain, nonatomic) BUMaterialMeta *iteration; // @synthesize iteration=_iteration;
 - (id)initWithDictionary:(id)arg1 error:(id *)arg2;
+@property(readonly, nonatomic) NSObject<BUMaterialMetaMediationProtocol> *mediation;
 
 // Remaining properties
 @property(copy, nonatomic) NSString *ADXName; // @dynamic ADXName;
@@ -28,12 +30,12 @@
 @property(copy, nonatomic) NSString *buttonText; // @dynamic buttonText;
 @property(nonatomic) long long commentNum; // @dynamic commentNum;
 @property(copy, nonatomic) NSArray *filterWords; // @dynamic filterWords;
+@property(retain, nonatomic) BUAdGroupInfo *groupInfo; // @dynamic groupInfo;
 @property(retain, nonatomic) BUImage *icon; // @dynamic icon;
 @property(retain, nonatomic) NSArray *imageAry; // @dynamic imageAry;
 @property(nonatomic) long long imageMode; // @dynamic imageMode;
 @property(nonatomic) long long interactionType; // @dynamic interactionType;
 @property(copy, nonatomic) NSDictionary *mediaExt; // @dynamic mediaExt;
-@property(retain, nonatomic) BUPersonalizationPrompts *personalPrompts; // @dynamic personalPrompts;
 @property(nonatomic) long long score; // @dynamic score;
 @property(copy, nonatomic) NSString *source; // @dynamic source;
 @property(nonatomic) long long videoDuration; // @dynamic videoDuration;

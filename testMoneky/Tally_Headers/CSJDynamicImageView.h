@@ -10,12 +10,15 @@
 
 @interface CSJDynamicImageView : CSJDynamicAbstractView
 {
+    _Bool _haveAddGaosi;
     CSJDynamicImageViewDecorator *_imageViewDecorator;
 }
 
 - (void).cxx_destruct;
+@property(nonatomic) _Bool haveAddGaosi; // @synthesize haveAddGaosi=_haveAddGaosi;
 @property(retain, nonatomic) CSJDynamicImageViewDecorator *imageViewDecorator; // @synthesize imageViewDecorator=_imageViewDecorator;
 - (void)updateGaosiMohuIfNeed;
+- (id)realContentView;
 - (void)render;
 - (id)initWithGlobalModel:(id)arg1 layoutDictionary:(id)arg2 parentView:(id)arg3 error:(id *)arg4;
 

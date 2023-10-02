@@ -40,7 +40,7 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>4.31</string>
+	<string>4.42</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleSupportedPlatforms</key>
@@ -119,7 +119,7 @@
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>4.31</string>
+	<string>4.42</string>
 	<key>DTAppStoreToolsBuild</key>
 	<string>14E221</string>
 	<key>DTCompiler</key>
@@ -196,6 +196,7 @@
 		<string>yanglei.tally</string>
 		<string>eleme</string>
 		<string>meituanwaimai</string>
+		<string>vipshop</string>
 	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>

@@ -16,6 +16,9 @@
     unsigned long long _width;
     unsigned long long _height;
     struct CGImageSource *_imageSource;
+    _Bool _incremental;
+    struct os_unfair_lock_s _lock;
+    int _lock_deprecated;
     NSData *_imageData;
     double _scale;
     unsigned long long _loopCount;
@@ -24,11 +27,15 @@
     _Bool _finished;
     _Bool _preserveAspectRatio;
     struct CGSize _thumbnailSize;
+    unsigned long long _limitBytes;
+    _Bool _lazyDecode;
 }
 
-+ (id)createFrameAtIndex:(unsigned long long)arg1 source:(struct CGImageSource *)arg2 scale:(double)arg3 preserveAspectRatio:(_Bool)arg4 thumbnailSize:(struct CGSize)arg5 options:(id)arg6;
++ (id)createFrameAtIndex:(unsigned long long)arg1 source:(struct CGImageSource *)arg2 scale:(double)arg3 preserveAspectRatio:(_Bool)arg4 thumbnailSize:(struct CGSize)arg5 lazyDecode:(_Bool)arg6 animatedImage:(_Bool)arg7;
 + (double)frameDurationAtIndex:(unsigned long long)arg1 source:(struct CGImageSource *)arg2;
 + (unsigned long long)imageLoopCountWithSource:(struct CGImageSource *)arg1;
++ (_Bool)canEncodeToFormat:(long long)arg1;
++ (_Bool)canDecodeFromFormat:(long long)arg1;
 + (unsigned long long)defaultLoopCount;
 + (id)loopCountProperty;
 + (id)delayTimeProperty;
@@ -37,6 +44,7 @@
 + (id)imageUTType;
 + (long long)imageFormat;
 - (void).cxx_destruct;
+- (id)safeAnimatedImageFrameAtIndex:(unsigned long long)arg1;
 - (id)animatedImageFrameAtIndex:(unsigned long long)arg1;
 - (double)animatedImageDurationAtIndex:(unsigned long long)arg1;
 @property(readonly, nonatomic) unsigned long long animatedImageFrameCount;
@@ -44,6 +52,7 @@
 @property(readonly, copy, nonatomic) NSData *animatedImageData;
 - (_Bool)scanAndCheckFramesValidWithImageSource:(struct CGImageSource *)arg1;
 - (id)initWithAnimatedImageData:(id)arg1 options:(id)arg2;
+- (id)encodedDataWithFrames:(id)arg1 loopCount:(unsigned long long)arg2 format:(long long)arg3 options:(id)arg4;
 - (id)encodedDataWithImage:(id)arg1 format:(long long)arg2 options:(id)arg3;
 - (_Bool)canEncodeToFormat:(long long)arg1;
 - (id)incrementalDecodedImageWithOptions:(id)arg1;

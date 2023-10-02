@@ -4,13 +4,13 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
 
-#import <UIKit/UICollectionViewCell.h>
+#import <objc/NSObject.h>
 
-@interface BUTerritoryCapture : UICollectionViewCell
+@interface BUTerritoryCapture : NSObject
 {
 }
 
-+ (_Bool)isCSJ;
++ (unsigned long long)type;
 
 @end
 

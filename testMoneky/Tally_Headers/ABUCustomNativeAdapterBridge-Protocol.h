@@ -14,6 +14,7 @@
 @optional
 - (void)nativeAd:(id <ABUCustomNativeAdapter>)arg1 videoDidPlayFinish:(id)arg2;
 - (void)nativeAd:(id <ABUCustomNativeAdapter>)arg1 videoDidClick:(id)arg2;
+- (void)nativeAd:(id <ABUCustomNativeAdapter>)arg1 rewardDidCountDown:(long long)arg2 andNativeAd:(id)arg3;
 - (void)nativeAd:(id <ABUCustomNativeAdapter>)arg1 videoStateDidChangedWithState:(long long)arg2 andNativeAd:(id)arg3;
 - (void)nativeAd:(id <ABUCustomNativeAdapter>)arg1 didCloseWithExpressView:(UIView *)arg2 closeReasons:(NSArray *)arg3;
 - (void)nativeAd:(id <ABUCustomNativeAdapter>)arg1 renderFailWithExpressView:(UIView *)arg2 andError:(NSError *)arg3;

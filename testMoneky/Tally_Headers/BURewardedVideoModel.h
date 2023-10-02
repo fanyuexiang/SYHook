@@ -6,16 +6,19 @@
 
 #import "BUInterfaceBaseObject.h"
 
-@class NSArray, NSString;
+@class BURewardedVideoModelMediation, NSArray, NSString;
 
 @interface BURewardedVideoModel : BUInterfaceBaseObject
 {
+    _Bool _isServerVerify;
     BURewardedVideoModel *_iteration;
 }
 
 - (void).cxx_destruct;
 @property(retain, nonatomic) BURewardedVideoModel *iteration; // @synthesize iteration=_iteration;
+@property(nonatomic) _Bool isServerVerify; // @synthesize isServerVerify=_isServerVerify;
 - (id)init;
+@property(readonly, nonatomic) BURewardedVideoModelMediation *mediation;
 
 // Remaining properties
 @property(copy, nonatomic) NSArray *advancedRewardTypes; // @dynamic advancedRewardTypes;

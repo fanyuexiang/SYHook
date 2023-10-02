@@ -27,6 +27,7 @@
 - (void)configLoadForServerDidSuccess_V2;
 - (void)configLoadDidFailed;
 - (void)configLoadDidSuccess;
+- (_Bool)preloadAdFromAd:(id)arg1 withType:(long long)arg2 andOptionalMediaSlotConfig:(id)arg3 extra:(id)arg4;
 - (_Bool)preloadAdFromAd:(id)arg1 withType:(long long)arg2 andOptionalMediaSlotConfig:(id)arg3;
 - (id)init;
 

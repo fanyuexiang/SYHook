@@ -17,7 +17,7 @@
 - (void).cxx_destruct;
 @property(retain, nonatomic) NSError *createError; // @synthesize createError=_createError;
 - (id)init;
-- (id)dynamicViewWithInfoViewModel:(id)arg1 dynamicNativeViewModel:(id)arg2 layoutInfoDictionary:(id)arg3 error:(id *)arg4;
+- (id)dynamicViewWithGlobalModel:(id)arg1 error:(id *)arg2;
 
 @end
 

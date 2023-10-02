@@ -11,37 +11,37 @@
 
 @interface CSJDislikeNewInputView : UIView
 {
-    _Bool _validInputAccessoryView;
-    _Bool _showKeyboard;
+    _Bool __dir_RootMARK;
+    _Bool _UI_RowCall;
     id <CSJDislikeNewInputViewDelegate> _delegate;
-    UITextField *_placeholderTextField;
+    UITextField *_Y2_PodsNULL;
     UIImageView *_imageView;
-    UILabel *_suggestionLabel;
-    CSJDislikeNewRealInputView *_dislikeNewRealInputView;
+    UILabel *_Self_FailFm;
+    CSJDislikeNewRealInputView *_Use_NetVoid;
 }
 
 - (void).cxx_destruct;
-@property(retain, nonatomic) CSJDislikeNewRealInputView *dislikeNewRealInputView; // @synthesize dislikeNewRealInputView=_dislikeNewRealInputView;
-@property(retain, nonatomic) UILabel *suggestionLabel; // @synthesize suggestionLabel=_suggestionLabel;
+@property(retain, nonatomic) CSJDislikeNewRealInputView *Use_NetVoid; // @synthesize Use_NetVoid=_Use_NetVoid;
+@property(retain, nonatomic) UILabel *Self_FailFm; // @synthesize Self_FailFm=_Self_FailFm;
 @property(retain, nonatomic) UIImageView *imageView; // @synthesize imageView=_imageView;
-@property(retain, nonatomic) UITextField *placeholderTextField; // @synthesize placeholderTextField=_placeholderTextField;
+@property(retain, nonatomic) UITextField *Y2_PodsNULL; // @synthesize Y2_PodsNULL=_Y2_PodsNULL;
 @property(nonatomic) __weak id <CSJDislikeNewInputViewDelegate> delegate; // @synthesize delegate=_delegate;
-@property(nonatomic) _Bool showKeyboard; // @synthesize showKeyboard=_showKeyboard;
-@property(nonatomic) _Bool validInputAccessoryView; // @synthesize validInputAccessoryView=_validInputAccessoryView;
-- (double)backupInputViewRealHeight;
-- (double)inputViewRealHeight;
+@property(nonatomic) _Bool UI_RowCall; // @synthesize UI_RowCall=_UI_RowCall;
+@property(nonatomic) _Bool _dir_RootMARK; // @synthesize _dir_RootMARK=__dir_RootMARK;
+- (double)Std_PosNot;
+- (double)Time_ModY2;
 - (void)layoutSubviews;
-- (void)handleCustomAccessoryViewWithNotification:(id)arg1;
+- (void)Has_ViewCn:(id)arg1;
 - (void)uiKeyboardDidHideNotification:(id)arg1;
 - (void)uiKeyboardWillHideNotification:(id)arg1;
 - (void)uiKeyboardDidShowNotification:(id)arg1;
 - (void)uiKeyboardWillShowNotification:(id)arg1;
 - (id)inputAccessoryView;
-- (void)hideKeyboard;
+- (void)Map_BodyUser;
 - (void)dealloc;
 - (void)traitCollectionDidChange:(id)arg1;
-- (void)setDarkStyle;
-- (void)setLightStyle;
+- (void)setHash_MapLazy;
+- (void)setBu_y_DictLd;
 - (id)initWithFrame:(struct CGRect)arg1;
 
 @end

@@ -10,18 +10,18 @@
 
 @interface BUTNCRequest : BUNetworkRequest
 {
-    NSMutableDictionary *_domainsState;
+    NSMutableDictionary *_Pos_Lds_val;
     NSArray *_domains;
 }
 
-+ (id)requestWithDomains:(id)arg1 url:(id)arg2 andParams:(id)arg3;
++ (id)Note_WikiHpp:(id)arg1 url:(id)arg2 andParams:(id)arg3;
 - (void).cxx_destruct;
 @property(copy, nonatomic) NSArray *domains; // @synthesize domains=_domains;
-@property(retain, nonatomic) NSMutableDictionary *domainsState; // @synthesize domainsState=_domainsState;
-- (void)recordFailDomain:(id)arg1;
-- (void)resetState;
+@property(retain, nonatomic) NSMutableDictionary *Pos_Lds_val; // @synthesize Pos_Lds_val=_Pos_Lds_val;
+- (void)Tmp_APISum:(id)arg1;
+- (void)Mask_ResX1;
 - (id)baseUrl;
-- (id)initWithDomains:(id)arg1 url:(id)arg2 method:(long long)arg3 parameter:(id)arg4;
+- (id)initLItem_Y1Hpp:(id)arg1 url:(id)arg2 method:(long long)arg3 parameter:(id)arg4;
 
 @end
 

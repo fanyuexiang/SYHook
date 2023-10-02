@@ -33,7 +33,11 @@
 @property(retain, nonatomic) YMDWeekDatePicker *datePicker; // @synthesize datePicker=_datePicker;
 @property(copy, nonatomic) CDUnknownBlockType editFinishHandle; // @synthesize editFinishHandle=_editFinishHandle;
 @property(copy, nonatomic) CDUnknownBlockType addFinishHandle; // @synthesize addFinishHandle=_addFinishHandle;
-- (void)showBuyVIPWithIndex:(long long)arg1 eventSource:(id)arg2;
+- (void)accountShowOnDidChanged;
+- (void)tallytypechanged:(id)arg1;
+- (void)showBuyVIP;
+- (id)periodTextField;
+- (id)labelTextField;
 - (id)remarkTextField;
 - (id)endTimeTextField;
 - (id)beginTimeTextField;
@@ -51,7 +55,10 @@
 - (void)setupEditData:(id)arg1;
 - (void)addTapGesture;
 - (void)setupListView;
+- (void)dismissAction;
+- (void)viewWillAppear:(_Bool)arg1;
 - (void)viewDidLoad;
+- (void)dealloc;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

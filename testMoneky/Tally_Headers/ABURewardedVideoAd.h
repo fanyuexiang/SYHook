@@ -8,7 +8,7 @@
 
 #import "ABUCustomRewardedVideoAdapterBridge-Protocol.h"
 
-@class ABURewardManager, ABURewardedVideoModel, NSString;
+@class ABURewardAgainManager, ABURewardManager, ABURewardedVideoModel, NSString, UIViewController;
 @protocol ABURewardedVideoAdDelegate;
 
 @interface ABURewardedVideoAd : ABUBaseAd <ABUCustomRewardedVideoAdapterBridge>
@@ -18,16 +18,22 @@
     _Bool _didDealVideoCache;
     _Bool _didDealLoad;
     _Bool _hasShown;
+    _Bool _callRewardCallback;
     _Bool _hasPlayAgain;
     ABURewardedVideoModel *_rewardedVideoModel;
     id <ABURewardedVideoAdDelegate> _delegate;
     id <ABURewardedVideoAdDelegate> _rewardPlayAgainDelegate;
+    ABURewardAgainManager *_rewardAgainManager;
     ABURewardManager *_rewardManager;
+    UIViewController *_showViewController;
 }
 
 - (void).cxx_destruct;
-@property(retain, nonatomic) ABURewardManager *rewardManager; // @synthesize rewardManager=_rewardManager;
 @property(nonatomic) _Bool hasPlayAgain; // @synthesize hasPlayAgain=_hasPlayAgain;
+@property(nonatomic) _Bool callRewardCallback; // @synthesize callRewardCallback=_callRewardCallback;
+@property(nonatomic) __weak UIViewController *showViewController; // @synthesize showViewController=_showViewController;
+@property(retain, nonatomic) ABURewardManager *rewardManager; // @synthesize rewardManager=_rewardManager;
+@property(retain, nonatomic) ABURewardAgainManager *rewardAgainManager; // @synthesize rewardAgainManager=_rewardAgainManager;
 @property(nonatomic) _Bool hasShown; // @synthesize hasShown=_hasShown;
 @property(nonatomic) _Bool didDealLoad; // @synthesize didDealLoad=_didDealLoad;
 @property(nonatomic) _Bool didDealVideoCache; // @synthesize didDealVideoCache=_didDealVideoCache;

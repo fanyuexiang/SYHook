@@ -7,12 +7,12 @@
 #import <objc/NSObject.h>
 
 #import "ABUBaidu_BaiduMobAdExpressFullScreenVideoDelegate-Protocol.h"
-#import "ABUCustomFullscreenVideoAdapter-Protocol.h"
+#import "BUMCustomFullscreenVideoAdapter-Protocol.h"
 
 @class NSString;
-@protocol ABUBaidu_BaiduMobAdExpressFullScreenVideo, ABUCustomConfigAdapter, ABUCustomFullscreenVideoAdapterBridge;
+@protocol ABUBaidu_BaiduMobAdExpressFullScreenVideo, BUMCustomConfigAdapter, BUMCustomFullscreenVideoAdapterBridge;
 
-@interface ABUBaiduFullscreenVideoAdapter : NSObject <ABUBaidu_BaiduMobAdExpressFullScreenVideoDelegate, ABUCustomFullscreenVideoAdapter>
+@interface ABUBaiduFullscreenVideoAdapter : NSObject <ABUBaidu_BaiduMobAdExpressFullScreenVideoDelegate, BUMCustomFullscreenVideoAdapter>
 {
     NSObject<ABUBaidu_BaiduMobAdExpressFullScreenVideo> *_fullScreenVideoAd;
     long long _biddingType;
@@ -40,8 +40,8 @@
 - (_Bool)enablePreloadWhenCurrentIsDisplay;
 
 // Remaining properties
-@property(nonatomic) __weak id <ABUCustomFullscreenVideoAdapterBridge> bridge;
-@property(retain, nonatomic) id <ABUCustomConfigAdapter> configAdapter;
+@property(nonatomic) __weak id <BUMCustomFullscreenVideoAdapterBridge> bridge;
+@property(retain, nonatomic) id <BUMCustomConfigAdapter> configAdapter;
 @property(readonly, copy) NSString *debugDescription;
 @property(readonly, copy) NSString *description;
 @property(readonly) unsigned long long hash;

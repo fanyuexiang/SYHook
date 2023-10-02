@@ -10,7 +10,7 @@
 #import "UITableViewDataSource-Protocol.h"
 #import "UITableViewDelegate-Protocol.h"
 
-@class CAShapeLayer, DisCoverAssetView, DiscoverCMView, DiscoveryBudgetView, FCXTabBar, MineCommonView, MineKCView, NSMutableArray, NSString, UIImageView, UITableView, UIView;
+@class CAShapeLayer, DisCoverAssetView, DiscoveryBudgetView, FCXTabBar, MineCommonView, MineKCView, NSMutableArray, NSString, UIImageView, UITableView, UIView;
 
 @interface NewDisCoveryViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate>
 {
@@ -21,7 +21,6 @@
     MineKCView *_kcView;
     MineCommonView *_mcView;
     DisCoverAssetView *_assetView;
-    DiscoverCMView *_cmView;
     double _bottomSpace;
     FCXTabBar *_tabBar;
     UIView *_navView;
@@ -59,7 +58,6 @@
 - (void)goBudget;
 - (void)goMonthBill;
 - (void)refreshSectionData;
-- (void)setupSectionCM;
 - (void)setupSectionCommonFunc;
 - (void)setupSectionKC;
 - (id)setupSectionAsset;

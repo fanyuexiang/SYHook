@@ -10,30 +10,30 @@
 
 @interface BUNetworkRequest : BUBaseRequest
 {
-    NSString *_buRequestUrl;
+    NSString *_Is_PathIv;
     NSDictionary *_parameter;
     long long _method;
-    long long _buRequestSerializerType;
-    long long _buResponseSerializerType;
+    long long _Res_SkipNote;
+    long long _Data_SelfSize;
 }
 
 + (id)requestWithURL:(id)arg1 parameter:(id)arg2 completionWithSuccess:(CDUnknownBlockType)arg3 failure:(CDUnknownBlockType)arg4;
 + (id)requestWithURL:(id)arg1 method:(long long)arg2 parameter:(id)arg3 completionWithSuccess:(CDUnknownBlockType)arg4 failure:(CDUnknownBlockType)arg5;
 - (void).cxx_destruct;
-@property(nonatomic) long long buResponseSerializerType; // @synthesize buResponseSerializerType=_buResponseSerializerType;
-@property(nonatomic) long long buRequestSerializerType; // @synthesize buRequestSerializerType=_buRequestSerializerType;
+@property(nonatomic) long long Data_SelfSize; // @synthesize Data_SelfSize=_Data_SelfSize;
+@property(nonatomic) long long Res_SkipNote; // @synthesize Res_SkipNote=_Res_SkipNote;
 @property(nonatomic) long long method; // @synthesize method=_method;
 @property(retain, nonatomic) NSDictionary *parameter; // @synthesize parameter=_parameter;
-@property(copy, nonatomic) NSString *buRequestUrl; // @synthesize buRequestUrl=_buRequestUrl;
+@property(copy, nonatomic) NSString *Is_PathIv; // @synthesize Is_PathIv=_Is_PathIv;
 - (id)requestArgument;
 - (long long)responseSerializerType;
 - (long long)requestSerializerType;
 - (long long)requestMethod;
 - (id)requestUrl;
-- (id)initWithUrl:(id)arg1 method:(long long)arg2 parameter:(id)arg3;
-- (CDUnknownBlockType)successCompletionBlockWithTNC;
-- (CDUnknownBlockType)failureCompletionBlockWithTNC;
-- (id)TNCServiceKey;
+- (id)initLRead_ListTrue:(id)arg1 method:(long long)arg2 parameter:(id)arg3;
+- (CDUnknownBlockType)App_NewAd;
+- (CDUnknownBlockType)GDPR_ObjcOn;
+- (id)Read_VoidCom;
 
 @end
 

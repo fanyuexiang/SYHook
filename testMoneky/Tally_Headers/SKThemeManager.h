@@ -10,6 +10,7 @@
 
 @interface SKThemeManager : NSObject
 {
+    _Bool _needShowGrayTheme;
     UIColor *_navBarColor;
     UIColor *_navBarTextColor;
     UIColor *_chartColor;
@@ -29,6 +30,7 @@
 
 + (id)sharedManager;
 - (void).cxx_destruct;
+@property(nonatomic) _Bool needShowGrayTheme; // @synthesize needShowGrayTheme=_needShowGrayTheme;
 @property(retain, nonatomic) SKThemeSettingItem *currentTheme; // @synthesize currentTheme=_currentTheme;
 @property(retain, nonatomic) SKThemeSettingItem *defaultTheme; // @synthesize defaultTheme=_defaultTheme;
 @property(copy, nonatomic) NSString *detailheaderimageName; // @synthesize detailheaderimageName=_detailheaderimageName;

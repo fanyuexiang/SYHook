@@ -12,20 +12,22 @@
 
 @interface SKVIPRightItem : NSObject <YYModel>
 {
-    long long _type;
+    long long _rightType;
+    long long _vipType;
     NSString *_title;
     NSString *_subtitle;
     NSString *_icon_image;
     NSString *_preview_image;
 }
 
-+ (id)model:(long long)arg1 title:(id)arg2 subtitle:(id)arg3 icon_image:(id)arg4 preview_image:(id)arg5;
++ (id)model:(long long)arg1 vipType:(long long)arg2 title:(id)arg3 subtitle:(id)arg4 icon_image:(id)arg5 preview_image:(id)arg6;
 - (void).cxx_destruct;
 @property(copy, nonatomic) NSString *preview_image; // @synthesize preview_image=_preview_image;
 @property(copy, nonatomic) NSString *icon_image; // @synthesize icon_image=_icon_image;
 @property(copy, nonatomic) NSString *subtitle; // @synthesize subtitle=_subtitle;
 @property(copy, nonatomic) NSString *title; // @synthesize title=_title;
-@property(nonatomic) long long type; // @synthesize type=_type;
+@property(nonatomic) long long vipType; // @synthesize vipType=_vipType;
+@property(nonatomic) long long rightType; // @synthesize rightType=_rightType;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

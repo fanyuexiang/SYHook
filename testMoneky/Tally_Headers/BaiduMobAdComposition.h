@@ -20,6 +20,7 @@
     NSBundle *_assetBundle;
     NSString *_cacheKey;
     NSDictionary *_imagesDic;
+    NSDictionary *_bundleImagesDic;
     struct CGRect _compBounds;
 }
 
@@ -27,9 +28,11 @@
 + (id)animationFromJSON:(id)arg1 inBundle:(id)arg2;
 + (id)animationFromJSON:(id)arg1;
 + (id)animationWithFilePath:(id)arg1;
++ (id)animationNamed:(id)arg1 inBundle:(id)arg2 withImages:(id)arg3;
 + (id)animationNamed:(id)arg1 inBundle:(id)arg2;
 + (id)animationNamed:(id)arg1;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) NSDictionary *bundleImagesDic; // @synthesize bundleImagesDic=_bundleImagesDic;
 @property(readonly, nonatomic) NSDictionary *imagesDic; // @synthesize imagesDic=_imagesDic;
 @property(copy, nonatomic) NSString *cacheKey; // @synthesize cacheKey=_cacheKey;
 @property(readonly, nonatomic) NSBundle *assetBundle; // @synthesize assetBundle=_assetBundle;
@@ -41,9 +44,10 @@
 @property(readonly, nonatomic) NSNumber *endFrame; // @synthesize endFrame=_endFrame;
 @property(readonly, nonatomic) NSNumber *startFrame; // @synthesize startFrame=_startFrame;
 @property(readonly, nonatomic) struct CGRect compBounds; // @synthesize compBounds=_compBounds;
-- (void)_mapFromJSON:(id)arg1 withAssetBundle:(id)arg2 withImages:(id)arg3;
-- (id)initWithJSON:(id)arg1 withAssetBundle:(id)arg2;
+- (void)_mapFromJSON:(id)arg1 withAssetBundle:(id)arg2 withImages:(id)arg3 useBundleImage:(_Bool)arg4;
+- (id)initWithJSON:(id)arg1 withAssetBundle:(id)arg2 withImages:(id)arg3 useBundleImage:(_Bool)arg4;
 - (id)initWithJSON:(id)arg1 withAssetBundle:(id)arg2 withImages:(id)arg3;
+- (id)initWithJSON:(id)arg1 withAssetBundle:(id)arg2;
 
 @end
 

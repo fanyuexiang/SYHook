@@ -11,7 +11,8 @@
 
 @interface BaiduMobAdRewardVideoViewController : UIViewController
 {
-    _Bool _statusBarStatus;
+    _Bool _isInit;
+    int _interfaceOrientations;
     id <BaiduMobAdRewardVideoViewControllerDelegate> _delegate;
     BaiduMobAdRewardVideoRenderer *_render;
     BaiduMobAdRewardBrowserRender *_browserRender;
@@ -20,8 +21,9 @@
 }
 
 - (void).cxx_destruct;
+@property(nonatomic) int interfaceOrientations; // @synthesize interfaceOrientations=_interfaceOrientations;
 @property(retain, nonatomic) UIAlertController *alertController; // @synthesize alertController=_alertController;
-@property(nonatomic) _Bool statusBarStatus; // @synthesize statusBarStatus=_statusBarStatus;
+@property(nonatomic) _Bool isInit; // @synthesize isInit=_isInit;
 @property(retain, nonatomic) BaiduMobAdRewardAtlasRender *AtlasRender; // @synthesize AtlasRender=_AtlasRender;
 @property(retain, nonatomic) BaiduMobAdRewardBrowserRender *browserRender; // @synthesize browserRender=_browserRender;
 @property(retain, nonatomic) BaiduMobAdRewardVideoRenderer *render; // @synthesize render=_render;
@@ -29,12 +31,11 @@
 - (void)dismissViewController:(id)arg1;
 - (void)skipConfirm:(id)arg1;
 - (void)showAlertControllerWithDic:(id)arg1;
-- (_Bool)prefersStatusBarHidden;
 - (void)initVideoViewWithObject:(id)arg1 render:(id)arg2;
 - (void)didReceiveMemoryWarning;
 - (unsigned long long)supportedInterfaceOrientations;
 - (_Bool)shouldAutorotate;
-- (void)viewWillDisappear:(_Bool)arg1;
+- (_Bool)prefersStatusBarHidden;
 - (void)viewDidAppear:(_Bool)arg1;
 - (void)viewDidLoad;
 

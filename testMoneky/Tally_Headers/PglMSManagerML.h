@@ -14,11 +14,9 @@
 
 + (id)get:(id)arg1;
 - (void)dealloc;
-- (id)whoisGame:(id)arg1 withType:(long long)arg2;
-- (void)logWithGame;
 - (id)getToken;
 - (id)getFeatureHash:(id)arg1 Body:(id)arg2;
-- (id)getReportRaw:(id)arg1:(id)arg2:(int)arg3;
+- (id)getReportRaw:(id)arg1 customInfo:(id)arg2 mode:(int)arg3;
 - (void)reportForScene:(id)arg1;
 - (id)versionInfo;
 - (CDUnknownBlockType)setCustomInfo;
@@ -30,7 +28,9 @@
 - (CDUnknownBlockType)setMode;
 - (CDUnknownBlockType)setDeviceID;
 - (id)initWithConfig:(id)arg1;
+- (void)initToken;
 - (id)initWithAppID:(id)arg1;
+- (void)OnDeviceIdAvailable:(id)arg1;
 
 @end
 

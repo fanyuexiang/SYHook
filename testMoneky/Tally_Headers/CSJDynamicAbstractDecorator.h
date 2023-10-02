@@ -21,7 +21,9 @@
 @property(nonatomic) __weak CSJDynamicAbstractView *dynamicAbstractView; // @synthesize dynamicAbstractView=_dynamicAbstractView;
 - (struct CGRect)subComponentFrame;
 - (void)updateTheme;
+- (void)didRender;
 - (void)render;
+- (void)willRender;
 - (id)init;
 
 @end

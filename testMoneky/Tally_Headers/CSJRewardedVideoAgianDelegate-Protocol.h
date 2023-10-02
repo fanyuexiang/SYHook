@@ -9,6 +9,7 @@
 @class UIViewController;
 
 @protocol CSJRewardedVideoAgianDelegate <NSObject>
+@property(nonatomic) __weak UIViewController *originRootVC;
 - (_Bool)showAdFromRootViewController:(UIViewController *)arg1;
 - (void)loadRewardAgianWithSuccess:(void (^)(void))arg1 fail:(void (^)(void))arg2;
 - (id)initWithRewardedVideoAd:(id)arg1;

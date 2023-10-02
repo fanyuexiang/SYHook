@@ -12,17 +12,17 @@
 {
     CSJAdSlot *_adSlot;
     NSString *_requestURL;
-    long long _reqType;
-    NSDictionary *_requestDictionary;
-    NSDictionary *_slotParams;
-    NSString *_reqeustID;
+    long long _ADX_SelBody;
+    NSDictionary *_Try_MaskSkip;
+    NSDictionary *_IOS_TheArea;
+    NSString *_Code_CopyVoid;
 }
 
 - (void).cxx_destruct;
-@property(copy, nonatomic) NSString *reqeustID; // @synthesize reqeustID=_reqeustID;
-@property(copy, nonatomic) NSDictionary *slotParams; // @synthesize slotParams=_slotParams;
-@property(copy, nonatomic) NSDictionary *requestDictionary; // @synthesize requestDictionary=_requestDictionary;
-@property(nonatomic) long long reqType; // @synthesize reqType=_reqType;
+@property(copy, nonatomic) NSString *Code_CopyVoid; // @synthesize Code_CopyVoid=_Code_CopyVoid;
+@property(copy, nonatomic) NSDictionary *IOS_TheArea; // @synthesize IOS_TheArea=_IOS_TheArea;
+@property(copy, nonatomic) NSDictionary *Try_MaskSkip; // @synthesize Try_MaskSkip=_Try_MaskSkip;
+@property(nonatomic) long long ADX_SelBody; // @synthesize ADX_SelBody=_ADX_SelBody;
 @property(copy, nonatomic) NSString *requestURL; // @synthesize requestURL=_requestURL;
 @property(retain, nonatomic) CSJAdSlot *adSlot; // @synthesize adSlot=_adSlot;
 

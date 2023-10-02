@@ -59,6 +59,7 @@
 - (void)startShakeFunc;
 - (void)startAnim;
 - (void)resetAnimConfig;
+- (void)addDSPOnTargetView:(id)arg1;
 - (id)createTopViewWithFrame:(struct CGRect)arg1;
 - (void)createCard;
 - (void)setupUI;

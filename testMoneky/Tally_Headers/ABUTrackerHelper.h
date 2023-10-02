@@ -15,6 +15,8 @@
 
 - (void).cxx_destruct;
 @property(retain, nonatomic) ABUMediationSlotConfig *lastMediationSlotConfig; // @synthesize lastMediationSlotConfig=_lastMediationSlotConfig;
+- (void)appendParamOfLoadConfig:(id)arg1 to:(id)arg2;
+- (void)appendParamOfOriginConfig:(id)arg1 toExtra:(id)arg2;
 - (void)appendParamOfLoadParam:(id)arg1 toExtra:(id)arg2;
 - (void)appendParamOfMediaSlotWithInfo:(id)arg1 to:(id)arg2;
 - (void)appendParamOfMediationSlotWithInfo:(id)arg1 to:(id)arg2;

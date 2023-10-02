@@ -10,14 +10,14 @@
 
 @interface CSJVideoBannerOverseaCoverView : CSJBannerOverseaCoverView
 {
-    UIImageView *_videoMaskImage;
-    UIView *_videoBottomContentView;
+    UIImageView *_Row_DataNot;
+    UIView *_Bool_DidPath;
 }
 
 - (void).cxx_destruct;
-@property(retain, nonatomic) UIView *videoBottomContentView; // @synthesize videoBottomContentView=_videoBottomContentView;
-@property(retain, nonatomic) UIImageView *videoMaskImage; // @synthesize videoMaskImage=_videoMaskImage;
-- (void)pbu_fillData_videoMaskImage;
+@property(retain, nonatomic) UIView *Bool_DidPath; // @synthesize Bool_DidPath=_Bool_DidPath;
+@property(retain, nonatomic) UIImageView *Row_DataNot; // @synthesize Row_DataNot=_Row_DataNot;
+- (void)Ran_EnumSel;
 - (void)pbu_override_buildViewData;
 - (void)pbu_override_buildView;
 

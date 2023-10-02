@@ -53,6 +53,8 @@
     NSString *_localeLanguage;
     NSString *_screenshot_time;
     NSString *_msdk_sec_did;
+    NSString *_sof_chara;
+    NSString *_wifiBSSID;
     long long _airplane;
     long long _darkmode;
     long long _headset;
@@ -62,6 +64,9 @@
     NSDictionary *_tempDicValue;
 }
 
++ (id)p_mainScreen;
++ (void)csj_resetMainScreen;
++ (id)csj_mainScreen;
 + (id)briefInfo;
 + (long long)bu_currentOrientation;
 + (unsigned long long)supportOrientationBySystemConfiguration;
@@ -70,6 +75,7 @@
 + (long long)batteryState;
 + (_Bool)is_screen_off;
 + (id)currentDevice;
++ (void)initialize;
 - (void).cxx_destruct;
 @property(copy, nonatomic) NSDictionary *tempDicValue; // @synthesize tempDicValue=_tempDicValue;
 @property(copy, nonatomic) NSString *preLoadAppLog_did_whenInit; // @synthesize preLoadAppLog_did_whenInit=_preLoadAppLog_did_whenInit;
@@ -78,6 +84,8 @@
 @property long long headset; // @synthesize headset=_headset;
 @property long long darkmode; // @synthesize darkmode=_darkmode;
 @property long long airplane; // @synthesize airplane=_airplane;
+@property(copy) NSString *wifiBSSID; // @synthesize wifiBSSID=_wifiBSSID;
+@property(copy) NSString *sof_chara; // @synthesize sof_chara=_sof_chara;
 @property(copy) NSString *msdk_sec_did; // @synthesize msdk_sec_did=_msdk_sec_did;
 @property(copy) NSString *screenshot_time; // @synthesize screenshot_time=_screenshot_time;
 @property(copy) NSString *localeLanguage; // @synthesize localeLanguage=_localeLanguage;

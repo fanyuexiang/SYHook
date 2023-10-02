@@ -8,18 +8,17 @@
 
 #import "SDMemoryCache-Protocol.h"
 
-@class NSMapTable, NSObject, NSString, SDImageCacheConfig;
-@protocol OS_dispatch_semaphore;
+@class NSMapTable, NSString, SDImageCacheConfig;
 
 @interface SDMemoryCache : NSCache <SDMemoryCache>
 {
+    struct os_unfair_lock_s _weakCacheLock;
+    int _weakCacheLock_deprecated;
     SDImageCacheConfig *_config;
     NSMapTable *_weakCache;
-    NSObject<OS_dispatch_semaphore> *_weakCacheLock;
 }
 
 - (void).cxx_destruct;
-@property(retain, nonatomic) NSObject<OS_dispatch_semaphore> *weakCacheLock; // @synthesize weakCacheLock=_weakCacheLock;
 @property(retain, nonatomic) NSMapTable *weakCache; // @synthesize weakCache=_weakCache;
 @property(retain, nonatomic) SDImageCacheConfig *config; // @synthesize config=_config;
 - (void)observeValueForKeyPath:(id)arg1 ofObject:(id)arg2 change:(id)arg3 context:(void *)arg4;

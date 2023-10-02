@@ -6,12 +6,11 @@
 
 #import <UIKit/UIView.h>
 
-@class CMTagModel, UIButton, UILabel;
+@class UIButton, UILabel;
 @protocol SKAlbumTagViewDelegate;
 
 @interface SKAlbumTagView : UIView
 {
-    CMTagModel *_tagModel;
     UIButton *_deleteBtn;
     id <SKAlbumTagViewDelegate> _delegate;
     UIView *_grayCircleView;
@@ -30,7 +29,6 @@
 @property(retain, nonatomic) UIView *grayCircleView; // @synthesize grayCircleView=_grayCircleView;
 @property(nonatomic) id <SKAlbumTagViewDelegate> delegate; // @synthesize delegate=_delegate;
 @property(retain, nonatomic) UIButton *deleteBtn; // @synthesize deleteBtn=_deleteBtn;
-@property(retain, nonatomic) CMTagModel *tagModel; // @synthesize tagModel=_tagModel;
 - (void)hideClose;
 - (void)deleteSelf;
 - (void)switchDeleteState;
@@ -40,7 +38,6 @@
 - (void)adjustFrame;
 - (void)setupUI;
 - (id)initWithFrame:(struct CGRect)arg1;
-- (id)initWithFrame:(struct CGRect)arg1 withInfo:(id)arg2;
 
 @end
 

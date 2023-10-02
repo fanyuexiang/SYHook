@@ -12,14 +12,14 @@
 
 @interface CSJSplashBottomArrowAnimationView : CSJSplashBottomBaseComponentView <CSJAnimationDelegate>
 {
-    CSJSplashArrowAnimationView *_arrowAnimationView;
+    CSJSplashArrowAnimationView *_Lock_CanNew;
 }
 
 - (void).cxx_destruct;
-@property(retain, nonatomic) CSJSplashArrowAnimationView *arrowAnimationView; // @synthesize arrowAnimationView=_arrowAnimationView;
+@property(retain, nonatomic) CSJSplashArrowAnimationView *Lock_CanNew; // @synthesize Lock_CanNew=_Lock_CanNew;
 - (void)bu_animationDidStop:(id)arg1 finished:(_Bool)arg2;
 - (void)bu_animationDidStart:(id)arg1;
-- (void)splashControlDestColorAnimation;
+- (void)Call_FailMsg;
 - (void)startSplashBottomAnimation;
 - (struct CGRect)splashBottomFrameWithContainerFrame:(struct CGRect)arg1;
 - (void)layoutSubviews;

@@ -6,13 +6,13 @@
 
 #import <objc/NSObject.h>
 
-#import "ABU_BUSplashAdDelegate-Protocol.h"
-#import "ABU_BUSplashCardDelegate-Protocol.h"
-#import "ABU_BUSplashZoomOutDelegate-Protocol.h"
+#import "BUSplashAdDelegate-Protocol.h"
+#import "BUSplashCardDelegate-Protocol.h"
+#import "BUSplashZoomOutDelegate-Protocol.h"
 
 @class ABUCsjSplashAdapter, NSString;
 
-@interface ABUCsjNewSplashAdapterReplacer : NSObject <ABU_BUSplashAdDelegate, ABU_BUSplashZoomOutDelegate, ABU_BUSplashCardDelegate>
+@interface ABUCsjNewSplashAdapterReplacer : NSObject <BUSplashAdDelegate, BUSplashZoomOutDelegate, BUSplashCardDelegate>
 {
     _Bool _didCallbackClose;
     _Bool _hasShowSplashView;

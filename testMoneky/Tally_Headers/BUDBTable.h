@@ -26,7 +26,7 @@
 - (void)_pbu_table_errorlogWithSql:(id)arg1 errorMsg:(id)arg2;
 - (_Bool)deleteAll;
 - (_Bool)deleteWithWhere:(id)arg1;
-- (id)selectWithWhere:(id)arg1 orderBy:(CDStruct_5982b7c1)arg2 limit:(CDStruct_1ef3fb1f)arg3 class:(Class)arg4;
+- (id)selectWithWhere:(id)arg1 orderBy:(CDStruct_5982b7c1)arg2 limit:(CDStruct_1ef3fb1f)arg3 modelClass:(Class)arg4;
 - (long long)selectAllCount;
 - (_Bool)updateWithSqlString:(id)arg1 where:(id)arg2;
 - (_Bool)update:(id)arg1 where:(id)arg2;

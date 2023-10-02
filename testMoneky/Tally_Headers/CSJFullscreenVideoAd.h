@@ -33,7 +33,6 @@
 - (_Bool)isMemberOfClass:(Class)arg1;
 - (_Bool)isKindOfClass:(Class)arg1;
 @property(readonly, copy, nonatomic) NSDictionary *mediaExt;
-@property(readonly, nonatomic, getter=isAdValid) _Bool adValid;
 - (unsigned long long)fullscreenVideoAdType;
 - (void)safeDelegate_fullscreenVideoAdCallback:(id)arg1 withType:(unsigned long long)arg2;
 - (void)safeDelegate_fullscreenVideoAdDidClickSkip:(id)arg1;
@@ -62,7 +61,6 @@
 - (void)nativeExpressFullscreenVideoAdDidLoad:(id)arg1;
 - (void)handleMopubSuccessLoadVideo:(id)arg1 isPre:(_Bool)arg2;
 - (id)biddingToken;
-- (void)setMopubAdMarkUp:(id)arg1;
 - (void)setAdMarkup:(id)arg1;
 - (void)loss:(id)arg1 lossReason:(id)arg2 winBidder:(id)arg3;
 - (void)win:(id)arg1;

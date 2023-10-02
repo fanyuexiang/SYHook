@@ -37,6 +37,7 @@
 - (void)drawRect:(struct CGRect)arg1;
 - (void)setup;
 - (id)initWithFrame:(struct CGRect)arg1;
+- (void)dealloc;
 
 @end
 

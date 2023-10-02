@@ -9,11 +9,18 @@
 #import "UIGestureRecognizerDelegate-Protocol.h"
 #import "UITextFieldDelegate-Protocol.h"
 
-@class CountdownButton, LoginPhoneCodeTextView, LoginPhonePwdTextView, NSString, RegisterAgreePrivacyView, UIButton, UITextField, WXLoginButton;
+@class CountdownButton, GLPhoneLoginActionsView, LoginPhoneCodeTextView, LoginPhonePwdTextView, NSString, RegisterAgreePrivacyPopupViewController, RegisterAgreePrivacyView, UIButton, UIPanGestureRecognizer, UITextField, UIView;
 
 @interface GLPhoneLoginController : UIViewController <UITextFieldDelegate, UIGestureRecognizerDelegate>
 {
     _Bool _agreementTipShow;
+    double _viewTop;
+    double _duration;
+    double _perDuration;
+    double _colorAlpha;
+    double _perColorAlpha;
+    UIView *_mainView;
+    UIView *_inputView;
     LoginPhoneCodeTextView *_phoneCodeView;
     UITextField *_codeTextField;
     CountdownButton *_codeCountdownBtn;
@@ -21,18 +28,23 @@
     UITextField *_pwdTextField;
     UIButton *_pwdSecureBtn;
     UIButton *_loginBtn;
-    UIButton *_findPwdBtn;
+    GLPhoneLoginActionsView *_actionsView;
     RegisterAgreePrivacyView *_privacyView;
-    WXLoginButton *_wxLoginBtn;
+    RegisterAgreePrivacyPopupViewController *_privacyPopupCtr;
+    UIPanGestureRecognizer *_panGesture;
+    UIButton *_topBtn;
     long long _loginType;
+    struct CGPoint _currentPoint;
 }
 
 - (void).cxx_destruct;
 @property(nonatomic) long long loginType; // @synthesize loginType=_loginType;
-@property(retain, nonatomic) WXLoginButton *wxLoginBtn; // @synthesize wxLoginBtn=_wxLoginBtn;
+@property(retain, nonatomic) UIButton *topBtn; // @synthesize topBtn=_topBtn;
+@property(retain, nonatomic) UIPanGestureRecognizer *panGesture; // @synthesize panGesture=_panGesture;
 @property(nonatomic) _Bool agreementTipShow; // @synthesize agreementTipShow=_agreementTipShow;
+@property(nonatomic) __weak RegisterAgreePrivacyPopupViewController *privacyPopupCtr; // @synthesize privacyPopupCtr=_privacyPopupCtr;
 @property(retain, nonatomic) RegisterAgreePrivacyView *privacyView; // @synthesize privacyView=_privacyView;
-@property(retain, nonatomic) UIButton *findPwdBtn; // @synthesize findPwdBtn=_findPwdBtn;
+@property(retain, nonatomic) GLPhoneLoginActionsView *actionsView; // @synthesize actionsView=_actionsView;
 @property(retain, nonatomic) UIButton *loginBtn; // @synthesize loginBtn=_loginBtn;
 @property(nonatomic) __weak UIButton *pwdSecureBtn; // @synthesize pwdSecureBtn=_pwdSecureBtn;
 @property(nonatomic) __weak UITextField *pwdTextField; // @synthesize pwdTextField=_pwdTextField;
@@ -40,24 +52,36 @@
 @property(nonatomic) __weak CountdownButton *codeCountdownBtn; // @synthesize codeCountdownBtn=_codeCountdownBtn;
 @property(nonatomic) __weak UITextField *codeTextField; // @synthesize codeTextField=_codeTextField;
 @property(retain, nonatomic) LoginPhoneCodeTextView *phoneCodeView; // @synthesize phoneCodeView=_phoneCodeView;
+@property(retain, nonatomic) UIView *inputView; // @synthesize inputView=_inputView;
+@property(retain, nonatomic) UIView *mainView; // @synthesize mainView=_mainView;
+@property(nonatomic) struct CGPoint currentPoint; // @synthesize currentPoint=_currentPoint;
+@property(nonatomic) double perColorAlpha; // @synthesize perColorAlpha=_perColorAlpha;
+@property(nonatomic) double colorAlpha; // @synthesize colorAlpha=_colorAlpha;
+@property(nonatomic) double perDuration; // @synthesize perDuration=_perDuration;
+@property(nonatomic) double duration; // @synthesize duration=_duration;
+@property(nonatomic) double viewTop; // @synthesize viewTop=_viewTop;
+- (void)dismiss:(_Bool)arg1 finishBlock:(CDUnknownBlockType)arg2;
+- (void)show:(_Bool)arg1;
 - (_Bool)gestureRecognizer:(id)arg1 shouldReceiveTouch:(id)arg2;
+- (_Bool)gestureRecognizer:(id)arg1 shouldRecognizeSimultaneouslyWithGestureRecognizer:(id)arg2;
+- (double)recalculateCloseAnimationDuration;
+- (double)recalculateShowAnimationDuration;
+- (void)dynamicChangeBackgroundColor;
+- (void)panEndAction;
+- (void)panGestureAction:(id)arg1;
 - (_Bool)textField:(id)arg1 shouldChangeCharactersInRange:(struct _NSRange)arg2 replacementString:(id)arg3;
 - (_Bool)textFieldShouldReturn:(id)arg1;
 - (void)textFieldTextDidChange:(id)arg1;
-- (void)closeActionAnimated:(_Bool)arg1;
 - (void)secureAction:(id)arg1;
 - (void)tapGestureAction;
 - (void)findPwdAction;
-- (void)registerAction;
-- (void)switchLoginAction;
 - (void)codeLogin;
 - (void)requestVerCode:(id)arg1;
-- (void)wxLoginAction;
 - (void)showFindPwdTip:(id)arg1;
 - (void)pwdLogin;
-- (void)moreLogin;
 - (void)loginAction;
-- (void)registerTipShow;
+- (void)closeAction;
+- (void)registerTipShow:(SEL)arg1 Obj:(id)arg2;
 - (void)switchPhoneLotinType:(long long)arg1;
 - (void)showPhonePwdView:(_Bool)arg1;
 - (void)showPhoneCodeView:(_Bool)arg1;

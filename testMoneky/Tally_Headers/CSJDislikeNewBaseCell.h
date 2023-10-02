@@ -10,7 +10,7 @@
 {
 }
 
-- (void)refreshWithDislikeWordsViewModel:(id)arg1;
+- (void)MIT_WinX2:(id)arg1;
 
 @end
 

@@ -25,6 +25,8 @@
 @property(copy, nonatomic) NSString *lossDescription; // @synthesize lossDescription=_lossDescription;
 @property(nonatomic) long long winnerPrice; // @synthesize winnerPrice=_winnerPrice;
 @property(nonatomic) _Bool win; // @synthesize win=_win;
+- (_Bool)isMemberOfClass:(Class)arg1;
+- (_Bool)isKindOfClass:(Class)arg1;
 
 @end
 

@@ -12,17 +12,17 @@
 
 @interface CSJPlayerTimeObserverModel : NSObject <BUVideoPlayerTimeDelegate>
 {
-    _Bool _haveSeek;
+    _Bool _Ext_WhenIOS;
     BUPlayer *_player;
     CSJAdInfoViewModel *_infoViewModel;
 }
 
 - (void).cxx_destruct;
-@property(nonatomic) _Bool haveSeek; // @synthesize haveSeek=_haveSeek;
+@property(nonatomic) _Bool Ext_WhenIOS; // @synthesize Ext_WhenIOS=_Ext_WhenIOS;
 @property(retain, nonatomic) CSJAdInfoViewModel *infoViewModel; // @synthesize infoViewModel=_infoViewModel;
 @property(retain, nonatomic) BUPlayer *player; // @synthesize player=_player;
-- (void)_update_playerView_gaosi;
-- (void)executeDynamicJsonTypeLogic;
+- (void)End_LeviEnd;
+- (void)Dc_AppAd;
 - (void)player:(id)arg1 second:(double)arg2;
 
 // Remaining properties

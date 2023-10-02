@@ -11,6 +11,7 @@
 @interface ABUPrivacyConfig : NSObject
 {
     NSMutableDictionary *_privacyMap;
+    CDUnknownBlockType _didUpdate;
 }
 
 + (id)privacyConfig;
@@ -18,6 +19,7 @@
 + (void)setPrivacyWithKey:(id)arg1 andValue:(id)arg2;
 + (id)sharedInstance;
 - (void).cxx_destruct;
+@property(copy, nonatomic) CDUnknownBlockType didUpdate; // @synthesize didUpdate=_didUpdate;
 @property(retain, nonatomic) NSMutableDictionary *privacyMap; // @synthesize privacyMap=_privacyMap;
 
 @end

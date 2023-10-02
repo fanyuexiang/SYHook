@@ -10,21 +10,21 @@
 
 @interface CSJAdCallActionManager : NSObject
 {
-    CSJAdCallListenModel *_listenInfoModel;
-    CTCallCenter *_callCenter;
+    CSJAdCallListenModel *_Info_NoteBy;
+    CTCallCenter *_Sql_AdIDIdfv;
 }
 
 + (id)sharedManager;
 - (void).cxx_destruct;
-@property(retain, nonatomic) CTCallCenter *callCenter; // @synthesize callCenter=_callCenter;
-@property(retain, nonatomic) CSJAdCallListenModel *listenInfoModel; // @synthesize listenInfoModel=_listenInfoModel;
-- (void)trackCallAdLabel:(id)arg1;
-- (void)callStatus:(id)arg1 WithIsWeb:(_Bool)arg2;
-- (void)callAdModel:(id)arg1;
-- (void)listenCall:(id)arg1 source:(id)arg2;
-- (void)startCallListener;
-- (_Bool)handelActionWithModel:(id)arg1 WithIsWebPage:(_Bool)arg2 context:(id)arg3;
-- (void)handelActionWithModel:(id)arg1 context:(id)arg2;
+@property(retain, nonatomic) CTCallCenter *Sql_AdIDIdfv; // @synthesize Sql_AdIDIdfv=_Sql_AdIDIdfv;
+@property(retain, nonatomic) CSJAdCallListenModel *Info_NoteBy; // @synthesize Info_NoteBy=_Info_NoteBy;
+- (void)Win_TextStmt:(id)arg1;
+- (void)Org_SdkBlue:(id)arg1 WithIsWeb:(_Bool)arg2;
+- (void)Fail_NoteMs:(id)arg1;
+- (void)All_NULLBy:(id)arg1 source:(id)arg2;
+- (void)Self_TsAll;
+- (_Bool)Org_StdRush:(id)arg1 WithIsWebPage:(_Bool)arg2 context:(id)arg3;
+- (void)Org_StdRush:(id)arg1 context:(id)arg2;
 
 @end
 

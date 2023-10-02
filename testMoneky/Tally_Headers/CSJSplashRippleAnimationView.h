@@ -12,18 +12,18 @@
 
 @interface CSJSplashRippleAnimationView : UIView <CAAnimationDelegate>
 {
-    CAGradientLayer *_rippleGradientLayer;
-    CAShapeLayer *_rippleShapeLayer;
+    CAGradientLayer *_At_SELLeft;
+    CAShapeLayer *_MIT_HppCase;
     CSJAnimationConfiguration *_animationConfiguration;
 }
 
 - (void).cxx_destruct;
 @property(retain, nonatomic) CSJAnimationConfiguration *animationConfiguration; // @synthesize animationConfiguration=_animationConfiguration;
-@property(retain, nonatomic) CAShapeLayer *rippleShapeLayer; // @synthesize rippleShapeLayer=_rippleShapeLayer;
-@property(retain, nonatomic) CAGradientLayer *rippleGradientLayer; // @synthesize rippleGradientLayer=_rippleGradientLayer;
+@property(retain, nonatomic) CAShapeLayer *MIT_HppCase; // @synthesize MIT_HppCase=_MIT_HppCase;
+@property(retain, nonatomic) CAGradientLayer *At_SELLeft; // @synthesize At_SELLeft=_At_SELLeft;
 - (void)layoutSubviews;
-- (id)drawPathWithRadius:(double)arg1;
-- (void)startRippleAnimation;
+- (id)Blue_valMeta:(double)arg1;
+- (void)Slot_Root_log;
 - (void)setup;
 - (id)initWithConfiguration:(id)arg1;
 

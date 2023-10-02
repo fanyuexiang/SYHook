@@ -10,13 +10,16 @@
 {
     _Bool _assetOn;
     long long _defaultaid;
+    long long _defaultIncomeaid;
 }
 
 + (id)sharedManager;
+@property(nonatomic) long long defaultIncomeaid; // @synthesize defaultIncomeaid=_defaultIncomeaid;
 @property(nonatomic) long long defaultaid; // @synthesize defaultaid=_defaultaid;
 @property(nonatomic) _Bool assetOn; // @synthesize assetOn=_assetOn;
 - (void)uploadData;
 - (void)uploadFunSet:(long long)arg1 with:(long long)arg2;
+- (void)uploadSetIncomeaid;
 - (void)uploadSetaid;
 - (void)uploadSetOn;
 - (void)requestFuntionSet;

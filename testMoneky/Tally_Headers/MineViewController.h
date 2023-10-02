@@ -61,6 +61,7 @@
 - (void)setupNetworkConfig;
 - (void)viewDidLoad;
 - (void)parseParameters:(id)arg1;
+- (void)goAccountSecurityCenter;
 - (void)goRating;
 - (void)goFeedback;
 - (void)goHelp;
@@ -85,6 +86,7 @@
 - (void)goMineVIP;
 - (void)goPersonInfo;
 - (void)goSigninShare;
+- (id)accountSecurityCenterLabel;
 - (_Bool)refreshInviteFriends:(id)arg1 btn:(id)arg2;
 - (void)refreshSectionData;
 - (id)setupSection4;

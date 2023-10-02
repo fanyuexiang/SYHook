@@ -11,22 +11,22 @@
 
 @interface BUTNCServiceManager : NSObject
 {
-    NSMutableDictionary *_registerMap;
+    NSMutableDictionary *_Lds_OnRoot;
     NSObject<OS_dispatch_semaphore> *_semaphore;
 }
 
-+ (void)refreshTNCDomainsWithAppKey:(id)arg1;
-+ (id)TNCUrlWithBaseUrl:(id)arg1 forRequest:(id)arg2;
-+ (void)unregisterTNCServiceWithAppKey:(id)arg1;
-+ (void)registerTNCServiceWithAppKey:(id)arg1 tncDomains:(id)arg2 tncPath:(id)arg3 requestParam:(CDUnknownBlockType)arg4;
++ (void)Http_FmIt:(id)arg1;
++ (id)An_VoidStmt:(id)arg1 forRequest:(id)arg2;
++ (void)Bool_TapCall:(id)arg1;
++ (void)User_JsonYou:(id)arg1 Up_x_A0Sum:(id)arg2 Data_UserLazy:(id)arg3 requestParam:(CDUnknownBlockType)arg4;
 + (id)sharedInstance;
 - (void).cxx_destruct;
 @property(retain, nonatomic) NSObject<OS_dispatch_semaphore> *semaphore; // @synthesize semaphore=_semaphore;
-@property(retain, nonatomic) NSMutableDictionary *registerMap; // @synthesize registerMap=_registerMap;
-- (void)_refreshTNCDomainsWithAppKey:(id)arg1;
-- (id)_TNCUrlWithBaseUrl:(id)arg1 forRequest:(id)arg2;
-- (void)_unregisterTNCServiceWithAppKey:(id)arg1;
-- (void)_registerTNCServiceWithAppKey:(id)arg1 tncDomains:(id)arg2 tncPath:(id)arg3 requestParam:(CDUnknownBlockType)arg4;
+@property(retain, nonatomic) NSMutableDictionary *Lds_OnRoot; // @synthesize Lds_OnRoot=_Lds_OnRoot;
+- (void)Ft_RushAdd:(id)arg1;
+- (id)Com_WillInt:(id)arg1 forRequest:(id)arg2;
+- (void)Data_LoadDocs:(id)arg1;
+- (void)Zone_URLOf:(id)arg1 Up_x_A0Sum:(id)arg2 Data_UserLazy:(id)arg3 requestParam:(CDUnknownBlockType)arg4;
 - (id)init;
 
 @end

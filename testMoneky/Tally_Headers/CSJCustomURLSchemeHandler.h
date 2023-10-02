@@ -16,7 +16,6 @@
 
 - (void)webView:(id)arg1 stopURLSchemeTask:(id)arg2;
 - (void)webView:(id)arg1 startURLSchemeTask:(id)arg2;
-- (id)init;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

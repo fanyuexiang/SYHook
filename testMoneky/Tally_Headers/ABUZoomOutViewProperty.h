@@ -16,6 +16,8 @@
 @property(nonatomic) long long addOccasionType; // @synthesize addOccasionType=_addOccasionType;
 @property(nonatomic) _Bool hasAnimation; // @synthesize hasAnimation=_hasAnimation;
 @property(nonatomic) struct CGSize size; // @synthesize size=_size;
+- (_Bool)isMemberOfClass:(Class)arg1;
+- (_Bool)isKindOfClass:(Class)arg1;
 
 @end
 

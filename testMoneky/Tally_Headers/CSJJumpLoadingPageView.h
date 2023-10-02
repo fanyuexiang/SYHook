@@ -11,7 +11,7 @@
 @interface CSJJumpLoadingPageView : CSJBaseLoadingPageView
 {
     _Bool _isPortrait;
-    UIView *_layersContainerView;
+    UIView *_Is_TimeBody;
     NSArray *_animationLayers;
     UILabel *_loadingLabel;
     CSJNumerAnimationLabel *_progressLabel;
@@ -23,9 +23,9 @@
 @property(retain, nonatomic) CSJNumerAnimationLabel *progressLabel; // @synthesize progressLabel=_progressLabel;
 @property(retain, nonatomic) UILabel *loadingLabel; // @synthesize loadingLabel=_loadingLabel;
 @property(copy, nonatomic) NSArray *animationLayers; // @synthesize animationLayers=_animationLayers;
-@property(retain, nonatomic) UIView *layersContainerView; // @synthesize layersContainerView=_layersContainerView;
+@property(retain, nonatomic) UIView *Is_TimeBody; // @synthesize Is_TimeBody=_Is_TimeBody;
 - (_Bool)isPortrait;
-- (void)p_addCorners:(unsigned long long)arg1 withView:(id)arg2;
+- (void)Diff_GetMask:(unsigned long long)arg1 withView:(id)arg2;
 - (void)startLoading;
 - (void)setIsPortrait:(_Bool)arg1;
 - (void)layoutSubviews;

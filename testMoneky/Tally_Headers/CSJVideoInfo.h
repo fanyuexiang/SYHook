@@ -20,7 +20,7 @@
     NSString *_coverUrl;
     NSString *_resolution;
     double _size;
-    long long _videoDuration;
+    double _videoDuration;
     NSString *_videoUrl;
     NSURL *_videoLocalURL;
     double _playedSeconds;
@@ -44,13 +44,14 @@
 @property(nonatomic) double playedSeconds; // @synthesize playedSeconds=_playedSeconds;
 @property(retain, nonatomic) NSURL *videoLocalURL; // @synthesize videoLocalURL=_videoLocalURL;
 @property(copy, nonatomic) NSString *videoUrl; // @synthesize videoUrl=_videoUrl;
-@property(nonatomic) long long videoDuration; // @synthesize videoDuration=_videoDuration;
+@property(nonatomic) double videoDuration; // @synthesize videoDuration=_videoDuration;
 @property(nonatomic) double size; // @synthesize size=_size;
 @property(copy, nonatomic) NSString *resolution; // @synthesize resolution=_resolution;
 @property(copy, nonatomic) NSString *coverUrl; // @synthesize coverUrl=_coverUrl;
 @property(nonatomic) long long coverWidth; // @synthesize coverWidth=_coverWidth;
 @property(nonatomic) long long coverHeight; // @synthesize coverHeight=_coverHeight;
 @property(nonatomic) unsigned long long encodeType; // @synthesize encodeType=_encodeType;
+- (unsigned long long)direction;
 - (id)dictionaryValue;
 - (id)initWithCoder:(id)arg1;
 - (void)encodeWithCoder:(id)arg1;

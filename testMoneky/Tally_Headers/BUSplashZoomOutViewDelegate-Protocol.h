@@ -6,13 +6,6 @@
 
 #import "NSObject-Protocol.h"
 
-@class UIView;
-@protocol ABU_BUSplashZoomOutView;
-
 @protocol BUSplashZoomOutViewDelegate <NSObject>
-- (void)splashZoomOutViewAdDidCloseOtherController:(UIView<ABU_BUSplashZoomOutView> *)arg1 interactionType:(int)arg2;
-- (void)splashZoomOutViewAdDidAutoDimiss:(UIView<ABU_BUSplashZoomOutView> *)arg1;
-- (void)splashZoomOutViewAdDidClose:(UIView<ABU_BUSplashZoomOutView> *)arg1;
-- (void)splashZoomOutViewAdDidClick:(UIView<ABU_BUSplashZoomOutView> *)arg1;
 @end
 

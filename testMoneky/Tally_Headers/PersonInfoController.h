@@ -15,25 +15,34 @@
 
 @interface PersonInfoController : UIViewController <UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 {
-    UITableView *_tableView;
     _Bool _hideLogout;
     _Bool _autoShowModifyNick;
+    UITableView *_tableView;
     SAImagePickerManager *_imagePicker;
     _TtC5Tally15AppLoginManager *_appleLoginManager;
+    _TtC5Tally15AppLoginManager *_appleChangeBindManager;
 }
 
 - (void).cxx_destruct;
+@property(retain, nonatomic) _TtC5Tally15AppLoginManager *appleChangeBindManager; // @synthesize appleChangeBindManager=_appleChangeBindManager;
 @property(retain, nonatomic) _TtC5Tally15AppLoginManager *appleLoginManager; // @synthesize appleLoginManager=_appleLoginManager;
 @property(retain, nonatomic) SAImagePickerManager *imagePicker; // @synthesize imagePicker=_imagePicker;
+@property(retain, nonatomic) UITableView *tableView; // @synthesize tableView=_tableView;
 @property(nonatomic) _Bool autoShowModifyNick; // @synthesize autoShowModifyNick=_autoShowModifyNick;
 @property(nonatomic) _Bool hideLogout; // @synthesize hideLogout=_hideLogout;
-- (void)dealloc;
 - (void)imagePickerControllerDidCancel:(id)arg1;
 - (void)navigationController:(id)arg1 didShowViewController:(id)arg2 animated:(_Bool)arg3;
 - (void)navigationController:(id)arg1 willShowViewController:(id)arg2 animated:(_Bool)arg3;
 - (void)imagePickerController:(id)arg1 didFinishPickingMediaWithInfo:(id)arg2;
 - (void)modifyHeaderWithImage:(id)arg1;
 - (void)goImagePicker:(long long)arg1;
+- (void)changeBindAppleNetwork;
+- (void)changeBindApple;
+- (void)bindApple;
+- (void)changeBindWXNetwork;
+- (void)changeBindWX;
+- (void)unbindWXNetwork;
+- (void)unbindWX;
 - (void)bindWX;
 - (void)modifyUserInfo:(id)arg1 finish:(CDUnknownBlockType)arg2;
 - (void)showModifyNick:(_Bool)arg1;
@@ -52,6 +61,7 @@
 - (void)userInfoDidChange;
 - (void)viewWillAppear:(_Bool)arg1;
 - (void)viewDidLoad;
+- (void)dealloc;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

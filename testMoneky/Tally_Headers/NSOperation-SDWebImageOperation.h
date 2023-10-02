@@ -13,6 +13,7 @@
 @interface NSOperation (SDWebImageOperation) <SDWebImageOperation>
 
 // Remaining properties
+@property(readonly, nonatomic, getter=isCancelled) _Bool cancelled;
 @property(readonly, copy) NSString *debugDescription;
 @property(readonly, copy) NSString *description;
 @property(readonly) unsigned long long hash;

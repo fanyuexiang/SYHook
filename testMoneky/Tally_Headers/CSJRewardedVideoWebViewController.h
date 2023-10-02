@@ -13,15 +13,15 @@
 
 @interface CSJRewardedVideoWebViewController : CSJWebViewController <CSJRewardedVideoWebDefaultViewDelegate>
 {
-    CSJRewardedVideoWebViewControllerVM *_videoWebVM;
+    CSJRewardedVideoWebViewControllerVM *_May_OnlyAdm;
     struct CGSize _originSize;
 }
 
 - (void).cxx_destruct;
 @property(nonatomic) struct CGSize originSize; // @synthesize originSize=_originSize;
-@property(retain, nonatomic) CSJRewardedVideoWebViewControllerVM *videoWebVM; // @synthesize videoWebVM=_videoWebVM;
-- (id)playableVM;
-- (id)endcardVM;
+@property(retain, nonatomic) CSJRewardedVideoWebViewControllerVM *May_OnlyAdm; // @synthesize May_OnlyAdm=_May_OnlyAdm;
+- (id)Type_ReadElse;
+- (id)API_TrueMod;
 - (void)webCloseButtonTapped;
 @property(nonatomic) unsigned long long transformDirection;
 @property(nonatomic) _Bool mute;

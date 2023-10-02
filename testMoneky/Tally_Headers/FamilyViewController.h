@@ -30,6 +30,7 @@
 - (void)sk_resetFamilyNavigationBarWithTheme:(id)arg1;
 - (void)sk_resetFamilyNavigationBarWithTheme;
 - (void)sk_resetFamilyNavigationBarWithDefault;
+- (id)setupWCCustomRightNavigationItem;
 - (id)miniProgramsName;
 - (void)sk_miniProgramsAddWidgetAction;
 - (void)sk_miniProgramsShareAction:(id)arg1;

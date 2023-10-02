@@ -8,26 +8,34 @@
 
 #import "NSCopying-Protocol.h"
 
-@class NSDictionary, NSString;
+@class NSDictionary, NSMutableDictionary, NSString;
 
 @interface ABUUserConfig : NSObject <NSCopying>
 {
+    _Bool _allowUploadDeviceInfo;
     _Bool _logEnable;
     _Bool _testMode;
     long long _themeStatus;
     NSDictionary *_extraDeviceMap;
     NSString *_advanceSDKConfigPath;
     NSString *_customIDFA;
+    NSMutableDictionary *_extra;
 }
 
 - (void).cxx_destruct;
+@property(retain, nonatomic) NSMutableDictionary *extra; // @synthesize extra=_extra;
 @property(copy, nonatomic) NSString *customIDFA; // @synthesize customIDFA=_customIDFA;
 @property(copy, nonatomic) NSString *advanceSDKConfigPath; // @synthesize advanceSDKConfigPath=_advanceSDKConfigPath;
 @property(nonatomic) _Bool testMode; // @synthesize testMode=_testMode;
 @property(copy, nonatomic) NSDictionary *extraDeviceMap; // @synthesize extraDeviceMap=_extraDeviceMap;
 @property(nonatomic) long long themeStatus; // @synthesize themeStatus=_themeStatus;
 @property(nonatomic) _Bool logEnable; // @synthesize logEnable=_logEnable;
+@property(nonatomic) _Bool allowUploadDeviceInfo; // @synthesize allowUploadDeviceInfo=_allowUploadDeviceInfo;
+@property(readonly, copy, nonatomic) NSDictionary *extraData;
+- (void)setExtraData:(id)arg1 forKey:(id)arg2;
 - (id)copyWithZone:(struct _NSZone *)arg1;
+- (_Bool)isMemberOfClass:(Class)arg1;
+- (_Bool)isKindOfClass:(Class)arg1;
 
 @end
 

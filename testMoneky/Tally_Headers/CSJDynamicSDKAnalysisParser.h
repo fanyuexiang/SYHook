@@ -6,12 +6,12 @@
 
 #import <objc/NSObject.h>
 
-@class CSJDynamicNativeViewModel, CSJDynamicSDKAnalysisRenderCanvas, CSJDynamicSDKCustomComponentManager, NSError;
+@class CSJDynamicSDKAnalysisRenderCanvas, CSJDynamicSDKCustomComponentManager, CSJDynamicViewGlobalModel, NSError;
 
 @interface CSJDynamicSDKAnalysisParser : NSObject
 {
+    CSJDynamicViewGlobalModel *_globalModel;
     NSError *_error;
-    CSJDynamicNativeViewModel *_nativeViewModel;
     CSJDynamicSDKAnalysisRenderCanvas *_canvas;
     CSJDynamicSDKCustomComponentManager *_customComponentManager;
 }
@@ -19,10 +19,10 @@
 - (void).cxx_destruct;
 @property(retain, nonatomic) CSJDynamicSDKCustomComponentManager *customComponentManager; // @synthesize customComponentManager=_customComponentManager;
 @property(retain, nonatomic) CSJDynamicSDKAnalysisRenderCanvas *canvas; // @synthesize canvas=_canvas;
-@property(retain, nonatomic) CSJDynamicNativeViewModel *nativeViewModel; // @synthesize nativeViewModel=_nativeViewModel;
 @property(retain, nonatomic) NSError *error; // @synthesize error=_error;
-- (id)h5_getLayoutInfo_dicitionary:(id)arg1 infoViewModel:(id)arg2 defaultDict:(id)arg3;
-- (id)init;
+@property(retain, nonatomic) CSJDynamicViewGlobalModel *globalModel; // @synthesize globalModel=_globalModel;
+- (id)h5_getLayoutInfo_withDefaultDict:(id)arg1;
+- (id)initWithGlobalModel:(id)arg1;
 
 @end
 

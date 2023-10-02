@@ -11,19 +11,19 @@
 
 @interface CSJAdCallListenModel : NSObject
 {
-    _Bool _isWebCall;
-    _Bool _toListen;
+    _Bool _isId_R2Bool;
+    _Bool _Name_XzjCase;
     id <CSJAd> _adModel;
     NSString *_position;
-    NSDate *_dailTime;
-    NSNumber *_dailActionType;
+    NSDate *_For_XzjWill;
+    NSNumber *_Objc_LeftNot;
 }
 
 - (void).cxx_destruct;
-@property(nonatomic) _Bool toListen; // @synthesize toListen=_toListen;
-@property(nonatomic) _Bool isWebCall; // @synthesize isWebCall=_isWebCall;
-@property(retain, nonatomic) NSNumber *dailActionType; // @synthesize dailActionType=_dailActionType;
-@property(retain, nonatomic) NSDate *dailTime; // @synthesize dailTime=_dailTime;
+@property(nonatomic) _Bool Name_XzjCase; // @synthesize Name_XzjCase=_Name_XzjCase;
+@property(nonatomic) _Bool isId_R2Bool; // @synthesize isId_R2Bool=_isId_R2Bool;
+@property(retain, nonatomic) NSNumber *Objc_LeftNot; // @synthesize Objc_LeftNot=_Objc_LeftNot;
+@property(retain, nonatomic) NSDate *For_XzjWill; // @synthesize For_XzjWill=_For_XzjWill;
 @property(copy, nonatomic) NSString *position; // @synthesize position=_position;
 @property(retain, nonatomic) id <CSJAd> adModel; // @synthesize adModel=_adModel;
 - (id)init;

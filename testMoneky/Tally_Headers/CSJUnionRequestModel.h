@@ -13,7 +13,7 @@
 @interface CSJUnionRequestModel : CSJRequestModel <CSJToDictionary>
 {
     NSString *_requestID;
-    NSString *_adSDKVersion;
+    NSString *_Fail_InitHost;
     NSString *_userID;
     NSString *_did;
     CSJUser *_user;
@@ -24,36 +24,36 @@
     NSString *_ip;
     NSString *_ipv4;
     NSString *_ipv6;
-    NSMutableArray *_adslotsAry;
+    NSMutableArray *_Init_StdYou;
     NSNumber *_req_type;
     NSNumber *_ts;
     NSString *_req_sign;
     NSArray *_source_temai_product_ids;
-    CSJABTest *_abTest;
+    CSJABTest *_X__REOBF__;
     NSArray *_network_id_list;
     NSString *_preSessions;
     NSString *_playAgainRit;
     CSJAdSlot *_slot;
     NSNumber *_code_group_id;
-    NSString *_extra_data;
+    NSString *_Ad_AdIDR2;
     NSString *_material_keys;
 }
 
-+ (id)unionRequestModel:(id)arg1 slotParams:(id)arg2 reqType:(long long)arg3;
++ (id)AdId_TsType:(id)arg1 IOS_TheArea:(id)arg2 ADX_SelBody:(long long)arg3;
 - (void).cxx_destruct;
 @property(copy, nonatomic) NSString *material_keys; // @synthesize material_keys=_material_keys;
-@property(copy, nonatomic) NSString *extra_data; // @synthesize extra_data=_extra_data;
+@property(copy, nonatomic) NSString *Ad_AdIDR2; // @synthesize Ad_AdIDR2=_Ad_AdIDR2;
 @property(retain, nonatomic) NSNumber *code_group_id; // @synthesize code_group_id=_code_group_id;
 @property(nonatomic) __weak CSJAdSlot *slot; // @synthesize slot=_slot;
 @property(copy, nonatomic) NSString *playAgainRit; // @synthesize playAgainRit=_playAgainRit;
 @property(copy, nonatomic) NSString *preSessions; // @synthesize preSessions=_preSessions;
 @property(copy, nonatomic) NSArray *network_id_list; // @synthesize network_id_list=_network_id_list;
-@property(retain, nonatomic) CSJABTest *abTest; // @synthesize abTest=_abTest;
+@property(retain, nonatomic) CSJABTest *X__REOBF__; // @synthesize X__REOBF__=_X__REOBF__;
 @property(copy, nonatomic) NSArray *source_temai_product_ids; // @synthesize source_temai_product_ids=_source_temai_product_ids;
 @property(copy, nonatomic) NSString *req_sign; // @synthesize req_sign=_req_sign;
 @property(retain, nonatomic) NSNumber *ts; // @synthesize ts=_ts;
 @property(retain, nonatomic) NSNumber *req_type; // @synthesize req_type=_req_type;
-@property(retain, nonatomic) NSMutableArray *adslotsAry; // @synthesize adslotsAry=_adslotsAry;
+@property(retain, nonatomic) NSMutableArray *Init_StdYou; // @synthesize Init_StdYou=_Init_StdYou;
 @property(copy, nonatomic) NSString *ipv6; // @synthesize ipv6=_ipv6;
 @property(copy, nonatomic) NSString *ipv4; // @synthesize ipv4=_ipv4;
 @property(copy, nonatomic) NSString *ip; // @synthesize ip=_ip;
@@ -64,9 +64,9 @@
 @property(retain, nonatomic) CSJUser *user; // @synthesize user=_user;
 @property(copy, nonatomic) NSString *did; // @synthesize did=_did;
 @property(copy, nonatomic) NSString *userID; // @synthesize userID=_userID;
-@property(copy, nonatomic) NSString *adSDKVersion; // @synthesize adSDKVersion=_adSDKVersion;
+@property(copy, nonatomic) NSString *Fail_InitHost; // @synthesize Fail_InitHost=_Fail_InitHost;
 @property(copy, nonatomic) NSString *requestID; // @synthesize requestID=_requestID;
-- (id)_mergedJSONStringWithJSONString:(id)arg1 coverJSONString:(id)arg2;
+- (id)Enum_StmtSlot:(id)arg1 coverJSONString:(id)arg2;
 - (id)dictionaryValue;
 
 // Remaining properties

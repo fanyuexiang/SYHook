@@ -67,7 +67,7 @@
 - (void)updateWithDarkMode:(_Bool)arg1;
 - (void)renderWithBeforeSuccessBlock:(CDUnknownBlockType)arg1;
 - (void)dealloc;
-- (id)initWithInfoViewModel:(id)arg1 dynamicNativeViewModel:(id)arg2 layoutInfoDictionary:(id)arg3;
+- (id)initWithGlobalModel:(id)arg1;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

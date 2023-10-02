@@ -15,7 +15,7 @@
 {
     _Bool _isShowAlertView;
     id <CSJNativeExpressVideoAdDelegate> _rewardedVideoAd;
-    CSJNativeExpressRewardDrawAdView *_drawAdView;
+    CSJNativeExpressRewardDrawAdView *_You_FtExt;
     CSJAdSlot *_slot;
     CSJMaterialMeta *_materialMeta;
     CSJRewardedVideoWebViewController *_endcardWebVC;
@@ -34,15 +34,15 @@
 @property(retain, nonatomic) CSJRewardedVideoWebViewController *endcardWebVC; // @synthesize endcardWebVC=_endcardWebVC;
 @property(retain, nonatomic) CSJMaterialMeta *materialMeta; // @synthesize materialMeta=_materialMeta;
 @property(retain, nonatomic) CSJAdSlot *slot; // @synthesize slot=_slot;
-@property(nonatomic) __weak CSJNativeExpressRewardDrawAdView *drawAdView; // @synthesize drawAdView=_drawAdView;
+@property(nonatomic) __weak CSJNativeExpressRewardDrawAdView *You_FtExt; // @synthesize You_FtExt=_You_FtExt;
 @property(nonatomic) __weak id <CSJNativeExpressVideoAdDelegate> rewardedVideoAd; // @synthesize rewardedVideoAd=_rewardedVideoAd;
 - (id)getTrackTag;
-- (void)createEndcardWebVC;
+- (void)Docs_ToIdx;
 - (void)rewardedVideoWebViewControllerClick:(id)arg1 clickInfo:(id)arg2;
 - (void)rewardedVideoWebViewControllerDislikeClick:(id)arg1;
 - (void)rewardedVideoH5AdDidClickNeedJump:(_Bool)arg1;
 - (void)rewardedVideoAdClose;
-- (void)switchToEndcardWithRootVC:(id)arg1 fromVC:(id)arg2 isMute:(_Bool)arg3;
+- (void)Ptr_StdMod:(id)arg1 fromVC:(id)arg2 isMute:(_Bool)arg3;
 - (id)initWithSlot:(id)arg1 materialMeta:(id)arg2;
 
 // Remaining properties

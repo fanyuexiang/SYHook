@@ -6,24 +6,30 @@
 
 #import <objc/NSObject.h>
 
-@class BU_AFHTTPSessionManager, BU_AFJSONResponseSerializer, NSIndexSet, NSMutableDictionary;
-@protocol OS_dispatch_queue;
+#import "NSURLSessionTaskDelegate-Protocol.h"
 
-@interface BUNetworkAgent : NSObject
+@class NSMutableDictionary, NSString;
+@protocol BUADJsonResponseSerializerProtocol, BUADRequestProtocol, BUADServiceNetProtocol, OS_dispatch_queue;
+
+@interface BUNetworkAgent : NSObject <NSURLSessionTaskDelegate>
 {
-    BU_AFHTTPSessionManager *_manager;
-    BU_AFJSONResponseSerializer *_jsonResponseSerializer;
     NSMutableDictionary *_requestsRecord;
     NSObject<OS_dispatch_queue> *_processingQueue;
     struct _opaque_pthread_mutex_t _lock;
-    NSIndexSet *_allStatusCodes;
+    id <BUADServiceNetProtocol> _netProtocolImp;
+    id <BUADJsonResponseSerializerProtocol> _jsonResponseSerializer;
+    id <BUADRequestProtocol> _httpRequestManager;
 }
 
 + (void)openNetWorkDebug;
 + (id)sharedAgent;
 - (void).cxx_destruct;
-- (id)dataTaskWithHTTPMethod:(id)arg1 requestSerializer:(id)arg2 URLString:(id)arg3 httpBody:(id)arg4 parameters:(id)arg5 constructingBodyWithBlock:(CDUnknownBlockType)arg6 error:(id *)arg7;
-- (id)dataTaskWithHTTPMethod:(id)arg1 requestSerializer:(id)arg2 URLString:(id)arg3 parameters:(id)arg4 error:(id *)arg5;
+@property(retain, nonatomic) id <BUADRequestProtocol> httpRequestManager; // @synthesize httpRequestManager=_httpRequestManager;
+@property(retain, nonatomic) id <BUADJsonResponseSerializerProtocol> jsonResponseSerializer; // @synthesize jsonResponseSerializer=_jsonResponseSerializer;
+@property(retain, nonatomic) id <BUADServiceNetProtocol> netProtocolImp; // @synthesize netProtocolImp=_netProtocolImp;
+- (void)URLSession:(id)arg1 task:(id)arg2 didFinishCollectingMetrics:(id)arg3;
+- (id)dataTaskWithHTTPMethod:(id)arg1 requestSerializer:(id)arg2 URLString:(id)arg3 httpBody:(id)arg4 parameters:(id)arg5 useHTTP3:(_Bool)arg6 error:(id *)arg7;
+- (id)dataTaskWithHTTPMethod:(id)arg1 requestSerializer:(id)arg2 URLString:(id)arg3 parameters:(id)arg4 useHTTP3:(_Bool)arg5 error:(id *)arg6;
 - (id)buildRequestUrl:(id)arg1;
 - (void)removeRequestFromRecord:(id)arg1;
 - (void)addRequestToRecord:(id)arg1;
@@ -38,8 +44,13 @@
 - (void)cancelRequest:(id)arg1;
 - (void)addRequest:(id)arg1;
 - (id)sessionTaskForRequest:(id)arg1 error:(id *)arg2;
-- (id)jsonResponseSerializer;
 - (id)init;
+
+// Remaining properties
+@property(readonly, copy) NSString *debugDescription;
+@property(readonly, copy) NSString *description;
+@property(readonly) unsigned long long hash;
+@property(readonly) Class superclass;
 
 @end
 

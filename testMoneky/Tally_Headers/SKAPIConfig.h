@@ -44,6 +44,7 @@
 @property(nonatomic) _Bool loadingPublicConfig; // @synthesize loadingPublicConfig=_loadingPublicConfig;
 @property(nonatomic) double validTime; // @synthesize validTime=_validTime;
 @property(nonatomic) double requestTime; // @synthesize requestTime=_requestTime;
+- (void)saveUserActiveCount:(id)arg1;
 - (_Bool)userConfigWithAPINeedRequest:(long long)arg1;
 - (double)userConfigSynctms;
 - (_Bool)saveUserConfigWithAPI:(long long)arg1 allSyncTms:(id)arg2;

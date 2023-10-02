@@ -11,7 +11,7 @@
 }
 
 + (id)sharedManager;
-- (_Bool)handleActionWithModel:(id)arg1;
+- (_Bool)Cta_UIReq:(id)arg1;
 
 @end
 

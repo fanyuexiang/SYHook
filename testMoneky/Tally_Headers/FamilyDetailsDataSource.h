@@ -19,7 +19,6 @@
 @property(nonatomic) double expend; // @synthesize expend=_expend;
 @property(nonatomic) double income; // @synthesize income=_income;
 @property(copy, nonatomic) NSString *date; // @synthesize date=_date;
-- (void)queryMonthData:(CDUnknownBlockType)arg1;
 - (id)init;
 
 @end

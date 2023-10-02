@@ -10,10 +10,10 @@
 {
 }
 
-- (void)layoutSquareProtrait;
+- (void)When_FmAll;
 - (void)layoutSubviews;
 - (void)setup;
-- (id)initWithMaterial:(id)arg1 adSlot:(id)arg2 imageStyle:(unsigned long long)arg3;
+- (id)initWithMaterial:(id)arg1 adSlot:(id)arg2 Docs_TypeX2:(unsigned long long)arg3;
 
 @end
 

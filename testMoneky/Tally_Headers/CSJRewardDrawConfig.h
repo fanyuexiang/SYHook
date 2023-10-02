@@ -12,8 +12,12 @@
 {
     unsigned long long _max_draw_playtime;
     unsigned long long _draw_rewarded_playtime;
+    long long _skip_btn_left_style;
+    long long _skip_btn_right_style;
 }
 
+@property(nonatomic) long long skip_btn_right_style; // @synthesize skip_btn_right_style=_skip_btn_right_style;
+@property(nonatomic) long long skip_btn_left_style; // @synthesize skip_btn_left_style=_skip_btn_left_style;
 @property(nonatomic) unsigned long long draw_rewarded_playtime; // @synthesize draw_rewarded_playtime=_draw_rewarded_playtime;
 @property(nonatomic) unsigned long long max_draw_playtime; // @synthesize max_draw_playtime=_max_draw_playtime;
 - (id)initWithCoder:(id)arg1;

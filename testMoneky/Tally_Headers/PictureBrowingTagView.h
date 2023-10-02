@@ -6,11 +6,10 @@
 
 #import <UIKit/UIView.h>
 
-@class CMTagModel, UILabel;
+@class UILabel;
 
 @interface PictureBrowingTagView : UIView
 {
-    CMTagModel *_tagModel;
     UIView *_bgView;
     UIView *_graybackView;
     UILabel *_nameLabel;
@@ -22,10 +21,9 @@
 @property(retain, nonatomic) UILabel *nameLabel; // @synthesize nameLabel=_nameLabel;
 @property(retain, nonatomic) UIView *graybackView; // @synthesize graybackView=_graybackView;
 @property(retain, nonatomic) UIView *bgView; // @synthesize bgView=_bgView;
-@property(retain, nonatomic) CMTagModel *tagModel; // @synthesize tagModel=_tagModel;
 - (void)adjustFrame;
 - (void)setupUI;
-- (id)initWithFrame:(struct CGRect)arg1 withInfo:(id)arg2;
+- (id)initWithFrame:(struct CGRect)arg1;
 
 @end
 

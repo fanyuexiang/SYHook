@@ -6,7 +6,7 @@
 
 #import "HMDBUCrashModel.h"
 
-@class HMDBUCrashHeaderInfo, HMDBUCrashMetaData, HMDBUCrashProcessState, HMDBUCrashRuntimeInfo, HMDBUCrashStorage, HMDBUCrashThreadInfo, NSArray, NSDictionary, NSMutableString, NSString;
+@class HMDBUCrashHeaderInfo, HMDBUCrashMetaData, HMDBUCrashProcessState, HMDBUCrashRuntimeInfo, HMDBUCrashStorage, HMDBUCrashThreadInfo, NSArray, NSDate, NSDictionary, NSMutableString, NSString;
 
 @interface HMDBUCrashInfo : HMDBUCrashModel
 {
@@ -15,7 +15,6 @@
     _Bool _isCorrupted;
     _Bool _fileIOError;
     _Bool _isInvalid;
-    NSArray *_regions;
     NSArray *_images;
     HMDBUCrashMetaData *_meta;
     HMDBUCrashHeaderInfo *_headerInfo;
@@ -28,21 +27,19 @@
     NSDictionary *_dynamicInfo;
     NSDictionary *_extraDynamicInfo;
     HMDBUCrashRuntimeInfo *_runtimeInfo;
-    NSArray *_registerAnalysis;
-    NSArray *_stackAnalysis;
     NSString *_sdklog;
     NSString *_gameScriptStack;
+    NSDate *_exceptionFileModificationDate;
 }
 
 - (void).cxx_destruct;
+@property(retain, nonatomic) NSDate *exceptionFileModificationDate; // @synthesize exceptionFileModificationDate=_exceptionFileModificationDate;
 @property(copy, nonatomic) NSString *gameScriptStack; // @synthesize gameScriptStack=_gameScriptStack;
 @property(nonatomic) _Bool isInvalid; // @synthesize isInvalid=_isInvalid;
 @property(copy, nonatomic) NSString *sdklog; // @synthesize sdklog=_sdklog;
 @property(nonatomic) _Bool fileIOError; // @synthesize fileIOError=_fileIOError;
 @property(nonatomic) _Bool isCorrupted; // @synthesize isCorrupted=_isCorrupted;
 @property(nonatomic) _Bool isEnvAbnormal; // @synthesize isEnvAbnormal=_isEnvAbnormal;
-@property(copy, nonatomic) NSArray *stackAnalysis; // @synthesize stackAnalysis=_stackAnalysis;
-@property(copy, nonatomic) NSArray *registerAnalysis; // @synthesize registerAnalysis=_registerAnalysis;
 @property(retain, nonatomic) HMDBUCrashRuntimeInfo *runtimeInfo; // @synthesize runtimeInfo=_runtimeInfo;
 @property(copy, nonatomic) NSDictionary *extraDynamicInfo; // @synthesize extraDynamicInfo=_extraDynamicInfo;
 @property(copy, nonatomic) NSDictionary *dynamicInfo; // @synthesize dynamicInfo=_dynamicInfo;
@@ -55,7 +52,6 @@
 @property(retain, nonatomic) HMDBUCrashHeaderInfo *headerInfo; // @synthesize headerInfo=_headerInfo;
 @property(retain, nonatomic) HMDBUCrashMetaData *meta; // @synthesize meta=_meta;
 @property(copy, nonatomic) NSArray *images; // @synthesize images=_images;
-@property(copy, nonatomic) NSArray *regions; // @synthesize regions=_regions;
 - (void)tag:(id)arg1 format:(id)arg2 args:(char *)arg3;
 - (void)error:(id)arg1;
 - (void)warn:(id)arg1;

@@ -10,6 +10,7 @@
 
 @interface AssetDetailTransferCell : UITableViewCell
 {
+    UIView *_conView;
     UIImageView *_iconImgView;
     UIView *_titleView;
     UILabel *_titleLab;
@@ -29,6 +30,7 @@
 @property(retain, nonatomic) UILabel *titleLab; // @synthesize titleLab=_titleLab;
 @property(retain, nonatomic) UIView *titleView; // @synthesize titleView=_titleView;
 @property(retain, nonatomic) UIImageView *iconImgView; // @synthesize iconImgView=_iconImgView;
+@property(retain, nonatomic) UIView *conView; // @synthesize conView=_conView;
 - (void)reloadData;
 - (void)clearData;
 - (void)setupViews;

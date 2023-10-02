@@ -10,6 +10,7 @@
 
 @interface CSJRewardedAgianAlertView : UIView
 {
+    CDUnknownBlockType _anotherBlk;
     CDUnknownBlockType _confirm;
     CDUnknownBlockType _cancel;
     UIView *_containerView;
@@ -17,9 +18,15 @@
     UILabel *_titleLable;
     UIButton *_confirmBtn;
     UIButton *_cancelBtn;
+    UIButton *_anotherBtn;
+    UIView *_lineView;
+    long long _style;
 }
 
 - (void).cxx_destruct;
+@property(nonatomic) long long style; // @synthesize style=_style;
+@property(retain, nonatomic) UIView *lineView; // @synthesize lineView=_lineView;
+@property(retain, nonatomic) UIButton *anotherBtn; // @synthesize anotherBtn=_anotherBtn;
 @property(retain, nonatomic) UIButton *cancelBtn; // @synthesize cancelBtn=_cancelBtn;
 @property(retain, nonatomic) UIButton *confirmBtn; // @synthesize confirmBtn=_confirmBtn;
 @property(retain, nonatomic) UILabel *titleLable; // @synthesize titleLable=_titleLable;
@@ -27,14 +34,17 @@
 @property(retain, nonatomic) UIView *containerView; // @synthesize containerView=_containerView;
 @property(copy, nonatomic) CDUnknownBlockType cancel; // @synthesize cancel=_cancel;
 @property(copy, nonatomic) CDUnknownBlockType confirm; // @synthesize confirm=_confirm;
+@property(copy, nonatomic) CDUnknownBlockType anotherBlk; // @synthesize anotherBlk=_anotherBlk;
 - (void)updateTextOfMessage:(id)arg1;
 - (void)updateTextOfTitle:(id)arg1;
 - (void)dealloc;
 - (void)disappear;
 - (void)showInView:(id)arg1;
+- (void)clickAnotherBtn;
 - (void)clickCancelBtn;
 - (void)clickConfirmBtn;
 - (void)creatSubViews;
+- (id)initWithFrame:(struct CGRect)arg1 confirm:(CDUnknownBlockType)arg2 cancel:(CDUnknownBlockType)arg3 style:(long long)arg4;
 - (id)initWithFrame:(struct CGRect)arg1 confirm:(CDUnknownBlockType)arg2 cancel:(CDUnknownBlockType)arg3;
 
 @end

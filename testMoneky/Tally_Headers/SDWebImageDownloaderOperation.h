@@ -8,7 +8,7 @@
 
 #import "SDWebImageDownloaderOperation-Protocol.h"
 
-@class NSData, NSDictionary, NSError, NSMutableArray, NSMutableData, NSOperationQueue, NSString, NSURLCredential, NSURLRequest, NSURLResponse, NSURLSession, NSURLSessionTask, NSURLSessionTaskMetrics;
+@class NSData, NSDictionary, NSError, NSIndexSet, NSMapTable, NSMutableArray, NSMutableData, NSOperationQueue, NSSet, NSString, NSURLCredential, NSURLRequest, NSURLResponse, NSURLSession, NSURLSessionTask, NSURLSessionTaskMetrics;
 @protocol SDWebImageDownloaderDecryptor, SDWebImageDownloaderResponseModifier;
 
 @interface SDWebImageDownloaderOperation : NSOperation <SDWebImageDownloaderOperation>
@@ -21,9 +21,11 @@
     NSURLSessionTaskMetrics *_metrics;
     NSURLCredential *_credential;
     double _minimumProgressInterval;
+    NSIndexSet *_acceptableStatusCodes;
+    NSSet *_acceptableContentTypes;
     unsigned long long _options;
     NSDictionary *_context;
-    NSMutableArray *_callbackBlocks;
+    NSMutableArray *_callbackTokens;
     NSMutableData *_imageData;
     NSData *_cachedData;
     unsigned long long _expectedSize;
@@ -35,12 +37,14 @@
     NSURLSession *_unownedSession;
     NSURLSession *_ownedSession;
     NSOperationQueue *_coderQueue;
+    NSMapTable *_imageMap;
     unsigned long long _backgroundTaskId;
 }
 
 + (unsigned long long)imageOptionsFromDownloaderOptions:(unsigned long long)arg1;
 - (void).cxx_destruct;
 @property(nonatomic) unsigned long long backgroundTaskId; // @synthesize backgroundTaskId=_backgroundTaskId;
+@property(retain, nonatomic) NSMapTable *imageMap; // @synthesize imageMap=_imageMap;
 @property(retain, nonatomic) NSOperationQueue *coderQueue; // @synthesize coderQueue=_coderQueue;
 @property(retain, nonatomic) NSURLSession *ownedSession; // @synthesize ownedSession=_ownedSession;
 @property(nonatomic) __weak NSURLSession *unownedSession; // @synthesize unownedSession=_unownedSession;
@@ -52,9 +56,11 @@
 @property(nonatomic) unsigned long long expectedSize; // @synthesize expectedSize=_expectedSize;
 @property(copy, nonatomic) NSData *cachedData; // @synthesize cachedData=_cachedData;
 @property(retain, nonatomic) NSMutableData *imageData; // @synthesize imageData=_imageData;
-@property(retain, nonatomic) NSMutableArray *callbackBlocks; // @synthesize callbackBlocks=_callbackBlocks;
+@property(retain, nonatomic) NSMutableArray *callbackTokens; // @synthesize callbackTokens=_callbackTokens;
 @property(copy, nonatomic) NSDictionary *context; // @synthesize context=_context;
 @property(nonatomic) unsigned long long options; // @synthesize options=_options;
+@property(copy, nonatomic) NSSet *acceptableContentTypes; // @synthesize acceptableContentTypes=_acceptableContentTypes;
+@property(copy, nonatomic) NSIndexSet *acceptableStatusCodes; // @synthesize acceptableStatusCodes=_acceptableStatusCodes;
 @property(nonatomic) double minimumProgressInterval; // @synthesize minimumProgressInterval=_minimumProgressInterval;
 @property(retain, nonatomic) NSURLCredential *credential; // @synthesize credential=_credential;
 @property(retain, nonatomic) NSURLSessionTaskMetrics *metrics; // @synthesize metrics=_metrics;
@@ -63,6 +69,7 @@
 @property(readonly, nonatomic) NSURLRequest *request; // @synthesize request=_request;
 @property(nonatomic, getter=isFinished) _Bool finished; // @synthesize finished=_finished;
 @property(nonatomic, getter=isExecuting) _Bool executing; // @synthesize executing=_executing;
+- (void)callCompletionBlockWithToken:(id)arg1 image:(id)arg2 imageData:(id)arg3 error:(id)arg4 finished:(_Bool)arg5;
 - (void)callCompletionBlocksWithImage:(id)arg1 imageData:(id)arg2 error:(id)arg3 finished:(_Bool)arg4;
 - (void)callCompletionBlocksWithError:(id)arg1;
 - (_Bool)shouldContinueWhenAppEntersBackground;
@@ -72,14 +79,14 @@
 - (void)URLSession:(id)arg1 dataTask:(id)arg2 willCacheResponse:(id)arg3 completionHandler:(CDUnknownBlockType)arg4;
 - (void)URLSession:(id)arg1 dataTask:(id)arg2 didReceiveData:(id)arg3;
 - (void)URLSession:(id)arg1 dataTask:(id)arg2 didReceiveResponse:(id)arg3 completionHandler:(CDUnknownBlockType)arg4;
-- (_Bool)isConcurrent;
+- (_Bool)isAsynchronous;
 - (void)reset;
 - (void)done;
 - (void)cancelInternal;
 - (void)cancel;
 - (void)start;
 - (_Bool)cancel:(id)arg1;
-- (id)callbacksForKey:(id)arg1;
+- (id)addHandlersForProgress:(CDUnknownBlockType)arg1 completed:(CDUnknownBlockType)arg2 decodeOptions:(id)arg3;
 - (id)addHandlersForProgress:(CDUnknownBlockType)arg1 completed:(CDUnknownBlockType)arg2;
 - (id)initWithRequest:(id)arg1 inSession:(id)arg2 options:(unsigned long long)arg3 context:(id)arg4;
 - (id)initWithRequest:(id)arg1 inSession:(id)arg2 options:(unsigned long long)arg3;

@@ -8,27 +8,35 @@
 
 #import "UISearchBarDelegate-Protocol.h"
 #import "UISearchControllerDelegate-Protocol.h"
-#import "UISearchResultsUpdating-Protocol.h"
+#import "UITextFieldDelegate-Protocol.h"
 
-@class FamilySearchTableView, NSString, UISearchBar;
+@class FamilySearchTableView, NSString, SearchHeaderView, SearchTallyChooseView, UIImageView, UITextField, UIView;
 
-@interface FamilySearchViewController : FamilyViewController <UISearchResultsUpdating, UISearchBarDelegate, UISearchControllerDelegate>
+@interface FamilySearchViewController : FamilyViewController <UITextFieldDelegate, UISearchBarDelegate, UISearchControllerDelegate>
 {
-    UISearchBar *_searchBar;
+    UITextField *_seachtextfield;
     _Bool _shouldShowSearchResults;
-    FamilySearchTableView *_tableView;
     _Bool _shouldSearch;
     NSString *_searchString;
+    UIImageView *_chooseimgView;
     NSString *_labelsString;
+    UIView *_filerbgView;
+    SearchTallyChooseView *_chooseView;
+    SearchHeaderView *_searchHeaderView;
+    FamilySearchTableView *_tableView;
 }
 
 - (void).cxx_destruct;
+@property(retain, nonatomic) FamilySearchTableView *tableView; // @synthesize tableView=_tableView;
+@property(retain, nonatomic) SearchHeaderView *searchHeaderView; // @synthesize searchHeaderView=_searchHeaderView;
+@property(retain, nonatomic) SearchTallyChooseView *chooseView; // @synthesize chooseView=_chooseView;
+@property(retain, nonatomic) UIView *filerbgView; // @synthesize filerbgView=_filerbgView;
 @property(retain, nonatomic) NSString *labelsString; // @synthesize labelsString=_labelsString;
-- (void)updateSearchResultsForSearchController:(id)arg1;
-- (void)searchBar:(id)arg1 textDidChange:(id)arg2;
-- (void)searchBarSearchButtonClicked:(id)arg1;
-- (void)searchBarCancelButtonClicked:(id)arg1;
-- (void)searchBarTextDidBeginEditing:(id)arg1;
+- (void)searchWithKeyWord:(id)arg1;
+- (void)chooseTap;
+- (void)keyboardWillHide:(id)arg1;
+- (void)textFieldChanged:(id)arg1;
+- (_Bool)textFieldShouldBeginEditing:(id)arg1;
 - (void)viewWillDisappear:(_Bool)arg1;
 - (void)viewDidAppear:(_Bool)arg1;
 - (void)viewWillAppear:(_Bool)arg1;

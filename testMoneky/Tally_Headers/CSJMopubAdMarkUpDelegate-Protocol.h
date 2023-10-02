@@ -12,11 +12,9 @@
 
 @optional
 + (NSString *)getBiddingToken:(NSString *)arg1;
-+ (NSString *)mopubBiddingToken;
 + (NSDictionary *)AdTypeWithAdMarkUp:(NSString *)arg1;
 + (NSDictionary *)AdTypeWithRit:(NSString *)arg1 error:(id *)arg2;
 - (NSString *)biddingToken;
-- (void)setMopubAdMarkUp:(NSString *)arg1;
 - (void)setAdMarkup:(NSString *)arg1;
 @end
 

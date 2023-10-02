@@ -15,8 +15,8 @@
 
 - (void).cxx_destruct;
 @property(retain, nonatomic) CSJDislikeWords *dislikeWords; // @synthesize dislikeWords=_dislikeWords;
-@property(readonly, nonatomic) double cellHeight;
-- (id)initWithDislikeWords:(id)arg1;
+@property(readonly, nonatomic) double Read_LossNb;
+- (id)initLMeta_PosLds:(id)arg1;
 
 @end
 

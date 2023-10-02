@@ -8,9 +8,11 @@
 
 @interface CSJETLogRequest : CSJAdNetworkRequest
 {
+    _Bool _isV3Data;
 }
 
-+ (id)generatedHeaderField;
+@property(nonatomic) _Bool isV3Data; // @synthesize isV3Data=_isV3Data;
+- (id)Stmt_IdTap;
 - (id)requestHeaderFieldValueDictionary;
 
 @end

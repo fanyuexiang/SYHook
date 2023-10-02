@@ -18,6 +18,7 @@
 }
 
 + (id)imageWithTintColor:(id)arg1 color:(id)arg2;
++ (id)baseAssetsThemeImageWithImageT:(id)arg1 imageM:(id)arg2 color:(id)arg3;
 + (id)assetsThemeImageWithImageName:(id)arg1 color:(id)arg2;
 + (id)assetsThemeImageWithImage:(id)arg1 color:(id)arg2;
 + (id)assetsThemeImage:(id)arg1 color:(id)arg2;

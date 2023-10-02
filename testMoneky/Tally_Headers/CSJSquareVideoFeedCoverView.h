@@ -15,11 +15,11 @@
 
 - (void).cxx_destruct;
 @property(retain, nonatomic) CSJNativeAdRelatedView *nativeAdRelatedView; // @synthesize nativeAdRelatedView=_nativeAdRelatedView;
-- (double)playerTotalTime;
-- (double)playerCurrentTime;
+- (double)Of_RectDoes;
+- (double)Http_CodeSdk;
 - (void)pbu_override_buildViewData;
 - (void)pbu_override_buildView;
-- (double)heightWidthRate;
+- (double)CCPA_ExtR2;
 
 @end
 

@@ -14,6 +14,7 @@
 + (void)startWithSyncCompletionHandler:(CDUnknownBlockType)arg1;
 + (void)startWithAsyncCompletionHandler:(CDUnknownBlockType)arg1;
 + (id)sharedInstance;
++ (Class)mediation;
 - (void).cxx_destruct;
 @property(retain, nonatomic) BUAdSDKManager *iteration; // @synthesize iteration=_iteration;
 

@@ -13,16 +13,20 @@
     NSString *_csj_IP;
     NSString *_csj_IPv4;
     NSString *_csj_IPv6;
+    NSString *_csj_wifi_bssid;
 }
 
 - (void).cxx_destruct;
+@property(copy) NSString *csj_wifi_bssid; // @synthesize csj_wifi_bssid=_csj_wifi_bssid;
 @property(copy) NSString *csj_IPv6; // @synthesize csj_IPv6=_csj_IPv6;
 @property(copy) NSString *csj_IPv4; // @synthesize csj_IPv4=_csj_IPv4;
 @property(copy) NSString *csj_IP; // @synthesize csj_IP=_csj_IP;
 - (id)applogNetInfoCustom;
+- (id)wifiBSSIDInfoStr;
 - (id)ipv6InfoStr;
 - (id)ipv4InfoStr;
 - (id)ipInfoStr;
+- (void)updateWithWiFiBSSID:(id)arg1;
 - (void)updateWithIPv6:(id)arg1;
 - (void)updateWithIPv4:(id)arg1;
 - (void)updateWithIP:(id)arg1;

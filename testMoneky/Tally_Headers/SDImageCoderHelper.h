@@ -10,18 +10,26 @@
 {
 }
 
-+ (_Bool)shouldScaleDownImage:(id)arg1 limitBytes:(unsigned long long)arg2;
-+ (_Bool)shouldDecodeImage:(id)arg1;
++ (_Bool)shouldScaleDownImagePixelSize:(struct CGSize)arg1 limitBytes:(unsigned long long)arg2;
++ (_Bool)shouldDecodeImage:(id)arg1 policy:(unsigned long long)arg2;
 + (unsigned int)exifOrientationFromImageOrientation:(long long)arg1;
 + (long long)imageOrientationFromEXIFOrientation:(unsigned int)arg1;
 + (void)setDefaultScaleDownLimitBytes:(unsigned long long)arg1;
 + (unsigned long long)defaultScaleDownLimitBytes;
++ (void)setDefaultDecodeSolution:(unsigned long long)arg1;
++ (unsigned long long)defaultDecodeSolution;
++ (id)decodedAndScaledDownImageWithImage:(id)arg1 limitBytes:(unsigned long long)arg2 policy:(unsigned long long)arg3;
 + (id)decodedAndScaledDownImageWithImage:(id)arg1 limitBytes:(unsigned long long)arg2;
++ (id)decodedImageWithImage:(id)arg1 policy:(unsigned long long)arg2;
 + (id)decodedImageWithImage:(id)arg1;
++ (struct CGSize)scaledSizeWithImageSize:(struct CGSize)arg1 limitBytes:(unsigned long long)arg2 bytesPerPixel:(unsigned long long)arg3 frameCount:(unsigned long long)arg4;
++ (struct CGSize)scaledSizeWithImageSize:(struct CGSize)arg1 scaleSize:(struct CGSize)arg2 preserveAspectRatio:(_Bool)arg3 shouldScaleUp:(_Bool)arg4;
 + (struct CGImage *)CGImageCreateScaled:(struct CGImage *)arg1 size:(struct CGSize)arg2;
 + (struct CGImage *)CGImageCreateDecoded:(struct CGImage *)arg1 orientation:(unsigned int)arg2;
 + (struct CGImage *)CGImageCreateDecoded:(struct CGImage *)arg1;
 + (_Bool)CGImageContainsAlpha:(struct CGImage *)arg1;
++ (_Bool)CGImageIsHardwareSupported:(struct CGImage *)arg1;
++ (struct SDImagePixelFormat)preferredPixelFormat:(_Bool)arg1;
 + (struct CGColorSpace *)colorSpaceGetDeviceRGB;
 + (id)framesFromAnimatedImage:(id)arg1;
 + (id)animatedImageWithFrames:(id)arg1;

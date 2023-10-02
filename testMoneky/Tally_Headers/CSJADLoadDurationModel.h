@@ -18,6 +18,8 @@
     double _SDKReciveNetworkResponesTime;
     double _serverProcessingDuration;
     double _SDKEndNetworkResponesSerializeTime;
+    long long _reqBodyLength;
+    long long _resBodyLength;
     double _SDKBeginResourceRequestTime;
     double _SDKReciveResourceResponesTime;
     double _SDKEndResourceCacheTime;
@@ -25,6 +27,7 @@
     NSString *_resourceImageResolution;
     NSDictionary *_resourceImageHTTPHeader;
     double _SDKBeginResourceCacheQueryTime;
+    NSDictionary *_metricData;
     double _callbackToAPPTime;
     double _SDKBeginLoadTemplateTime;
     double _SDKEndLoadTemplateTime;
@@ -38,6 +41,7 @@
 @property(nonatomic) double SDKEndLoadTemplateTime; // @synthesize SDKEndLoadTemplateTime=_SDKEndLoadTemplateTime;
 @property(nonatomic) double SDKBeginLoadTemplateTime; // @synthesize SDKBeginLoadTemplateTime=_SDKBeginLoadTemplateTime;
 @property(nonatomic) double callbackToAPPTime; // @synthesize callbackToAPPTime=_callbackToAPPTime;
+@property(copy, nonatomic) NSDictionary *metricData; // @synthesize metricData=_metricData;
 @property(nonatomic) double SDKBeginResourceCacheQueryTime; // @synthesize SDKBeginResourceCacheQueryTime=_SDKBeginResourceCacheQueryTime;
 @property(retain, nonatomic) NSDictionary *resourceImageHTTPHeader; // @synthesize resourceImageHTTPHeader=_resourceImageHTTPHeader;
 @property(copy, nonatomic) NSString *resourceImageResolution; // @synthesize resourceImageResolution=_resourceImageResolution;
@@ -46,6 +50,8 @@
 @property(nonatomic) double SDKReciveResourceResponesTime; // @synthesize SDKReciveResourceResponesTime=_SDKReciveResourceResponesTime;
 @property(nonatomic) double SDKBeginResourceRequestTime; // @synthesize SDKBeginResourceRequestTime=_SDKBeginResourceRequestTime;
 @property(nonatomic) _Bool isResourceFromCache; // @synthesize isResourceFromCache=_isResourceFromCache;
+@property(nonatomic) long long resBodyLength; // @synthesize resBodyLength=_resBodyLength;
+@property(nonatomic) long long reqBodyLength; // @synthesize reqBodyLength=_reqBodyLength;
 @property(nonatomic) double SDKEndNetworkResponesSerializeTime; // @synthesize SDKEndNetworkResponesSerializeTime=_SDKEndNetworkResponesSerializeTime;
 @property(nonatomic) double serverProcessingDuration; // @synthesize serverProcessingDuration=_serverProcessingDuration;
 @property(nonatomic) double SDKReciveNetworkResponesTime; // @synthesize SDKReciveNetworkResponesTime=_SDKReciveNetworkResponesTime;

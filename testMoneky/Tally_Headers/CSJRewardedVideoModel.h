@@ -4,12 +4,13 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
 
-#import <objc/NSObject.h>
+#import "CSJAdBaseObject.h"
 
 @class NSArray, NSString;
 
-@interface CSJRewardedVideoModel : NSObject
+@interface CSJRewardedVideoModel : CSJAdBaseObject
 {
+    _Bool _isServerVerify;
     float _rewardPropose;
     NSString *_userId;
     NSString *_extra;
@@ -17,9 +18,12 @@
     long long _rewardAmount;
     long long _rewardType;
     NSArray *_advancedRewardTypes;
+    long long _Duan_ZoneDc;
 }
 
 - (void).cxx_destruct;
+@property(nonatomic) long long Duan_ZoneDc; // @synthesize Duan_ZoneDc=_Duan_ZoneDc;
+@property(nonatomic) _Bool isServerVerify; // @synthesize isServerVerify=_isServerVerify;
 @property(copy, nonatomic) NSArray *advancedRewardTypes; // @synthesize advancedRewardTypes=_advancedRewardTypes;
 @property(nonatomic) float rewardPropose; // @synthesize rewardPropose=_rewardPropose;
 @property(nonatomic) long long rewardType; // @synthesize rewardType=_rewardType;

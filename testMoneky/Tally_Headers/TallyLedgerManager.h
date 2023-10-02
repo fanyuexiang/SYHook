@@ -24,6 +24,8 @@
 + (void)updateModelWithDictionary:(id)arg1 updateInfo:(id)arg2;
 + (id)modelWithDictionary:(id)arg1;
 + (void)compareAndUpdateAll:(id)arg1 localData:(id)arg2 updateWidget:(_Bool)arg3 finsh:(CDUnknownBlockType)arg4;
++ (void)requestTallyLedgerListWithConfig;
++ (void)requestTallyLedgerList;
 + (long long)tallyLedgerWithMyJoinedNumbers;
 + (long long)tallyLedgerMemberRightWithBookId:(id)arg1;
 + (long long)tallyLedgerMemberRightWithBook:(id)arg1;

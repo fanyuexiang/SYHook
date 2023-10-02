@@ -13,7 +13,6 @@
     _Bool _needLastCrash;
     HMDBUCrashInfo *_latestCrashInfo;
     NSDictionary *_latestPostData;
-    _Bool _needSymbolicate;
     _Bool _needEncrypt;
     double _launchCrashThreshold;
     HMDBUCrashReportInfo *_crashReport;
@@ -23,8 +22,6 @@
 @property(retain, nonatomic) HMDBUCrashReportInfo *crashReport; // @synthesize crashReport=_crashReport;
 @property(nonatomic) double launchCrashThreshold; // @synthesize launchCrashThreshold=_launchCrashThreshold;
 @property(nonatomic) _Bool needEncrypt; // @synthesize needEncrypt=_needEncrypt;
-@property(nonatomic) _Bool needSymbolicate; // @synthesize needSymbolicate=_needSymbolicate;
-- (id)parseDynamicInfo:(id)arg1;
 - (id)postDataWithCrashInfo:(id)arg1;
 - (id)crashDetail:(id)arg1;
 - (id)regionDicts:(id)arg1;

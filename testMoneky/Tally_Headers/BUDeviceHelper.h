@@ -10,6 +10,7 @@
 {
 }
 
++ (id)bu_device_state;
 + (id)systemVersion;
 + (unsigned long long)trackingAuthorizationStatus;
 + (float)battery_remaining_pct;
@@ -20,6 +21,8 @@
 + (id)bu_uuid;
 + (id)bu_idfvString;
 + (_Bool)bu_isJailBroken;
++ (id)getDeviceModel;
++ (_Bool)no5GSupportIPhone;
 + (id)bu_buildVersionNumber;
 + (id)bu_platformString;
 + (_Bool)lowEndMode;

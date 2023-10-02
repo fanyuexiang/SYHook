@@ -9,7 +9,7 @@
 #import "UITableViewDataSource-Protocol.h"
 #import "UITableViewDelegate-Protocol.h"
 
-@class FCXPieChartView, NSFetchRequest, NSMutableArray, NSString, UILabel, UIViewController;
+@class FCXPieChartView, NSFetchRequest, NSMutableArray, NSString, UILabel, UIView, UIViewController;
 
 @interface ChartTableView : UITableView <UITableViewDelegate, UITableViewDataSource>
 {
@@ -26,11 +26,13 @@
     UILabel *_dateRangeTipLab;
     FCXPieChartView *_pieView;
     UILabel *_typeLabel;
+    UIView *_pieintervalline;
     NSString *_previousDate;
 }
 
 - (void).cxx_destruct;
 @property(copy, nonatomic) NSString *previousDate; // @synthesize previousDate=_previousDate;
+@property(nonatomic) __weak UIView *pieintervalline; // @synthesize pieintervalline=_pieintervalline;
 @property(nonatomic) __weak UILabel *typeLabel; // @synthesize typeLabel=_typeLabel;
 @property(nonatomic) _Bool isPie; // @synthesize isPie=_isPie;
 @property(retain, nonatomic) FCXPieChartView *pieView; // @synthesize pieView=_pieView;

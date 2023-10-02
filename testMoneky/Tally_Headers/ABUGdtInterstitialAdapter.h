@@ -6,14 +6,14 @@
 
 #import <objc/NSObject.h>
 
-#import "ABUCustomInterstitialAdapter-Protocol.h"
 #import "ABUGDT_GDTExpressInterstitialAdDelegate-Protocol.h"
 #import "ABUGDT_GDTUnifiedInterstitialAdDelegate-Protocol.h"
+#import "BUMCustomInterstitialAdapter-Protocol.h"
 
 @class NSString;
-@protocol ABUCustomConfigAdapter, ABUCustomInterstitialAdapterBridge, ABUGDT_GDTExpressInterstitialAd, ABUGDT_GDTUnifiedInterstitialAd;
+@protocol ABUGDT_GDTExpressInterstitialAd, ABUGDT_GDTUnifiedInterstitialAd, BUMCustomConfigAdapter, BUMCustomInterstitialAdapterBridge;
 
-@interface ABUGdtInterstitialAdapter : NSObject <ABUGDT_GDTUnifiedInterstitialAdDelegate, ABUGDT_GDTExpressInterstitialAdDelegate, ABUCustomInterstitialAdapter>
+@interface ABUGdtInterstitialAdapter : NSObject <ABUGDT_GDTUnifiedInterstitialAdDelegate, ABUGDT_GDTExpressInterstitialAdDelegate, BUMCustomInterstitialAdapter>
 {
     NSObject<ABUGDT_GDTUnifiedInterstitialAd> *_interstitialAd;
     NSObject<ABUGDT_GDTExpressInterstitialAd> *_expressIfiedInterstitialAd;
@@ -73,8 +73,8 @@
 - (_Bool)enablePreloadWhenCurrentIsDisplay;
 
 // Remaining properties
-@property(nonatomic) __weak id <ABUCustomInterstitialAdapterBridge> bridge;
-@property(retain, nonatomic) id <ABUCustomConfigAdapter> configAdapter;
+@property(nonatomic) __weak id <BUMCustomInterstitialAdapterBridge> bridge;
+@property(retain, nonatomic) id <BUMCustomConfigAdapter> configAdapter;
 @property(readonly, copy) NSString *debugDescription;
 @property(readonly, copy) NSString *description;
 @property(readonly) unsigned long long hash;

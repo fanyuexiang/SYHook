@@ -6,7 +6,7 @@
 
 #import <objc/NSObject.h>
 
-@class NSDate, NSDictionary, NSString;
+@class NSArray, NSDate, NSDictionary, NSString;
 
 @interface BaiduMobProbeManager : NSObject
 {
@@ -16,10 +16,14 @@
     NSString *_iadex;
     NSString *_needSniff;
     NSDictionary *_pkgList;
+    NSArray *_schemeList1;
+    NSArray *_schemeList2;
 }
 
 + (id)sharedInstance;
 - (void).cxx_destruct;
+@property(retain) NSArray *schemeList2; // @synthesize schemeList2=_schemeList2;
+@property(retain) NSArray *schemeList1; // @synthesize schemeList1=_schemeList1;
 @property _Bool isUpdating; // @synthesize isUpdating=_isUpdating;
 @property(retain, nonatomic) NSDictionary *pkgList; // @synthesize pkgList=_pkgList;
 @property(retain, nonatomic) NSString *needSniff; // @synthesize needSniff=_needSniff;
@@ -29,7 +33,9 @@
 - (void)dealloc;
 - (void)handleCloud:(id)arg1;
 - (void)loadIAD;
+- (void)updateApoWithScheme:(id)arg1 deepLink:(id)arg2 success:(_Bool)arg3;
 - (void)saveIAD:(unsigned long long)arg1 index:(unsigned long long)arg2 completed:(_Bool)arg3;
+- (void)configSchemeList;
 - (void)updateIAD;
 - (_Bool)needUpdateIAD;
 - (id)getIADEX;

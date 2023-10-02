@@ -4,25 +4,15 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
 
-#import <objc/NSObject.h>
+#import "CSJRemoteEngineManager.h"
 
-@class CSJTemplateModel, NSLock, NSMutableDictionary, NSString;
-@protocol OS_dispatch_queue;
+@class NSLock, NSMutableDictionary;
 
-@interface CSJDynamicLayoutManager : NSObject
+@interface CSJDynamicLayoutManager : CSJRemoteEngineManager
 {
     NSLock *_templateDataLock;
     NSMutableDictionary *_slotTemplateDataDictionary;
     NSMutableDictionary *_templateDataDictionary;
-    CSJTemplateModel *_onlineTemplateModel;
-    CSJTemplateModel *_templateModel;
-    NSString *_templateDirectory;
-    NSMutableDictionary *_loadingTemplateSuccessBlockDict;
-    NSLock *_successBlockLock;
-    NSLock *_templateResourceFileLock;
-    NSObject<OS_dispatch_queue> *_ioSerialQueue;
-    NSObject<OS_dispatch_queue> *_downloadConcurrentQueue;
-    NSObject<OS_dispatch_queue> *_logSerialQueue;
 }
 
 + (id)sharedInstance;
@@ -30,21 +20,12 @@
 + (id)pbu_templatePersistence;
 + (void)deleteAllLocalData;
 - (void).cxx_destruct;
-@property(retain, nonatomic) NSObject<OS_dispatch_queue> *logSerialQueue; // @synthesize logSerialQueue=_logSerialQueue;
-@property(retain, nonatomic) NSObject<OS_dispatch_queue> *downloadConcurrentQueue; // @synthesize downloadConcurrentQueue=_downloadConcurrentQueue;
-@property(retain, nonatomic) NSObject<OS_dispatch_queue> *ioSerialQueue; // @synthesize ioSerialQueue=_ioSerialQueue;
-@property(retain, nonatomic) NSLock *templateResourceFileLock; // @synthesize templateResourceFileLock=_templateResourceFileLock;
-@property(retain, nonatomic) NSLock *successBlockLock; // @synthesize successBlockLock=_successBlockLock;
-@property(retain, nonatomic) NSMutableDictionary *loadingTemplateSuccessBlockDict; // @synthesize loadingTemplateSuccessBlockDict=_loadingTemplateSuccessBlockDict;
-@property(copy, nonatomic) NSString *templateDirectory; // @synthesize templateDirectory=_templateDirectory;
-@property(retain) CSJTemplateModel *templateModel; // @synthesize templateModel=_templateModel;
-@property(retain, nonatomic) CSJTemplateModel *onlineTemplateModel; // @synthesize onlineTemplateModel=_onlineTemplateModel;
 @property(retain, nonatomic) NSMutableDictionary *templateDataDictionary; // @synthesize templateDataDictionary=_templateDataDictionary;
 @property(retain, nonatomic) NSMutableDictionary *slotTemplateDataDictionary; // @synthesize slotTemplateDataDictionary=_slotTemplateDataDictionary;
 @property(retain, nonatomic) NSLock *templateDataLock; // @synthesize templateDataLock=_templateDataLock;
 - (id)init;
 - (void)pbu_logWithSubType:(id)arg1 format:(id)arg2;
-- (void)pbu_saveTemplateDataWithLatestTemplateDataId:(id)arg1;
+- (void)pbu_saveTemplateDataWithLatestTemplateDataModel:(id)arg1;
 - (void)pbu_saveTemplate;
 - (void)pbu_readTempDataFromDisk;
 - (void)pbu_readTemplateFromDisk;
@@ -53,13 +34,13 @@
 - (void)pbu_addWithURL:(id)arg1 successBlock:(CDUnknownBlockType)arg2;
 - (_Bool)pbu_isDownloadWithURL:(id)arg1;
 - (void)pbu_printWithTemplateDataArray:(id)arg1 prefix:(id)arg2;
-- (void)pbu_checkTemplateDataCountWithLatestTemplateDataId:(id)arg1;
+- (void)pbu_checkTemplateDataCountWithLatestTemplateDataModel:(id)arg1;
 - (void)pbu_downloadTemplateDataWithModel:(id)arg1 successBlock:(CDUnknownBlockType)arg2;
-- (_Bool)pbu_needToDownloadWithNewVersion:(id)arg1 useOnlineInfo:(_Bool)arg2;
 - (void)pbu_replaceTemplateDataWithSlotId:(id)arg1 templateDataModel:(id)arg2;
 - (id)cacheExistTemplateDataWithSlotId:(id)arg1;
 - (void)fetchTemplateDataWithSlotId:(id)arg1 model:(id)arg2 completionBlock:(CDUnknownBlockType)arg3;
-- (id)templateDataModelWithId:(id)arg1;
+- (id)templateDataModelWithTemplateDataModel:(id)arg1;
+- (_Bool)pbu_needToDownloadWithNewVersion:(id)arg1 useOnlineInfo:(_Bool)arg2;
 - (void)pbu_templateRegisterPrefixWithTemplateModel:(id)arg1;
 - (void)pbu_deleteUselessTemplateResourceFileWithLocalURLArray:(id)arg1;
 - (void)pbu_downloadTemplateResourceWithURL:(id)arg1 complete:(CDUnknownBlockType)arg2;

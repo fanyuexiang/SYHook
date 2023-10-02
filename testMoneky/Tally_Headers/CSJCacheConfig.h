@@ -11,11 +11,11 @@
 }
 
 + (id)defaultConfig;
-- (unsigned long long)getBUSDimageCacheMaxMemoryCost;
-- (unsigned long long)getBUSDimageCacheMaxMemoryCount;
-- (void)setUpBUSDimageCacheMaxMemoryCost;
-- (void)setUpBUSDimageCacheMaxMemoryCount;
-- (void)destroyConfig;
+- (unsigned long long)Ret_SetAdd;
+- (unsigned long long)Skip_WithObj;
+- (void)setLog_MustFor;
+- (void)setLoss_SelfPods;
+- (void)Note_CellXzj;
 
 @end
 

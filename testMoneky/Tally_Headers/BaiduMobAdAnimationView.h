@@ -38,6 +38,7 @@
 + (id)animationWithFilePath:(id)arg1;
 + (id)animationFromJSON:(id)arg1 inBundle:(id)arg2;
 + (id)animationFromJSON:(id)arg1;
++ (id)animationWithName:(id)arg1 inBundle:(id)arg2 withImage:(id)arg3;
 + (id)animationNamed:(id)arg1 inBundle:(id)arg2;
 + (id)animationNamed:(id)arg1;
 - (void).cxx_destruct;

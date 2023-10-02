@@ -16,18 +16,18 @@
 
 - (void).cxx_destruct;
 @property(retain, nonatomic) CSJExpressRewardFullScreenVM *viewModel; // @synthesize viewModel=_viewModel;
-@property(copy, nonatomic) CDUnknownBlockType purePlayableClickBlock;
+@property(copy, nonatomic) CDUnknownBlockType Ua_MayName;
 @property(retain, nonatomic) CSJAdSlot *adSlot;
 @property(nonatomic) _Bool isRewardedVideo;
 @property(nonatomic) __weak id <CSJNativeExpressVideoAdDelegate> rewardedVideoAd;
-- (id)reallyMaterialMeta;
+- (id)Stop_SizeIcon;
 - (long long)preferredInterfaceOrientationForPresentation;
 - (unsigned long long)supportedInterfaceOrientations;
 - (_Bool)shouldAutorotate;
 - (_Bool)prefersStatusBarHidden;
 - (void)viewWillLayoutSubviews;
 - (void)viewDidLoad;
-- (id)initWithNativeExpressAdView:(id)arg1 purePlayableNativeAd:(id)arg2;
+- (id)initLKey_ReadTap:(id)arg1 purePlayableNativeAd:(id)arg2;
 
 @end
 

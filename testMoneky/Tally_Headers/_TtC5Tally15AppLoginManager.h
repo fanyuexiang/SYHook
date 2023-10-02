@@ -13,6 +13,7 @@
     // Error parsing type: , name: handlerSuccess
     // Error parsing type: , name: handlerFailure
     // Error parsing type: , name: handlerFailureReason
+    // Error parsing type: , name: handlerFailureCode
     // Error parsing type: , name: networkRequesting
     // Error parsing type: , name: performType
 }
@@ -21,9 +22,11 @@
 - (id)init;
 - (void)authorizationController:(id)arg1 didCompleteWithAuthorization:(id)arg2;
 - (void)authorizationController:(id)arg1 didCompleteWithError:(id)arg2;
+- (void)changeBindActionWithSuccess:(CDUnknownBlockType)arg1 failure:(CDUnknownBlockType)arg2;
 - (void)bindActionWithSuccess:(CDUnknownBlockType)arg1 failure:(CDUnknownBlockType)arg2;
 - (void)loginActionWithSuccess:(CDUnknownBlockType)arg1 failure:(CDUnknownBlockType)arg2;
 @property(nonatomic, copy) CDUnknownBlockType networkRequesting;
+@property(nonatomic, copy) CDUnknownBlockType handlerFailureCode;
 @property(nonatomic, copy) CDUnknownBlockType handlerFailureReason;
 @property(nonatomic, copy) CDUnknownBlockType handlerFailure;
 @property(nonatomic, copy) CDUnknownBlockType handlerSuccess;

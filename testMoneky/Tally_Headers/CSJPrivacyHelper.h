@@ -10,7 +10,7 @@
 {
 }
 
-+ (id)downNumber:(double)arg1;
++ (id)Cell_KeyLen:(double)arg1;
 + (id)longitude;
 + (id)latitude;
 

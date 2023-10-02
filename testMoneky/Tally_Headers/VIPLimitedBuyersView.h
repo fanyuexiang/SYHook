@@ -12,12 +12,12 @@
 
 @interface VIPLimitedBuyersView : UIView <UIScrollViewDelegate>
 {
+    _Bool _title_color;
     _Bool _isShow;
     _Bool _isScrolling;
     NSMutableArray *_dates;
     UIScrollView *_loopScrollView;
     NSMutableArray *_views;
-    long long _year;
     NSTimer *_timer;
     double _nextY;
     double _maxY;
@@ -32,8 +32,8 @@
 @property(nonatomic) double maxY; // @synthesize maxY=_maxY;
 @property(nonatomic) double nextY; // @synthesize nextY=_nextY;
 @property(retain, nonatomic) NSTimer *timer; // @synthesize timer=_timer;
-@property(nonatomic) long long year; // @synthesize year=_year;
 @property(nonatomic) _Bool isShow; // @synthesize isShow=_isShow;
+@property(nonatomic) _Bool title_color; // @synthesize title_color=_title_color;
 @property(retain, nonatomic) NSMutableArray *views; // @synthesize views=_views;
 @property(retain, nonatomic) UIScrollView *loopScrollView; // @synthesize loopScrollView=_loopScrollView;
 @property(retain, nonatomic) NSMutableArray *dates; // @synthesize dates=_dates;

@@ -8,49 +8,47 @@
 
 #import "CSJDislikeNewInputViewDelegate-Protocol.h"
 #import "CSJDislikeNewOptionalCellDelegate-Protocol.h"
-#import "CSJDislikePersonalPromptsDelegate-Protocol.h"
 #import "UITableViewDataSource-Protocol.h"
 #import "UITableViewDelegate-Protocol.h"
 
-@class CSJDislikeNewInputView, CSJDislikePersonalPromptsView, CSJMaterialMeta, NSArray, NSString, UIImageView, UITableView, UIView;
+@class CSJDislikeNewInputView, CSJMaterialMeta, NSArray, NSString, UIImageView, UITableView, UIView;
 
-@interface CSJDislikeNewViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, CSJDislikeNewOptionalCellDelegate, CSJDislikeNewInputViewDelegate, CSJDislikePersonalPromptsDelegate>
+@interface CSJDislikeNewViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, CSJDislikeNewOptionalCellDelegate, CSJDislikeNewInputViewDelegate>
 {
     CDUnknownBlockType _dislikeResultBlock;
     CDUnknownBlockType _cancelBlock;
-    NSArray *_dislikeWordsViewModelArray;
+    CDUnknownBlockType _dismissCompletionBlock;
+    NSArray *_Ads_IconLock;
     UIView *_backgroundView;
     UITableView *_tableView;
-    UIImageView *_arrowImageView;
-    double _totalCellHeight;
-    CSJDislikePersonalPromptsView *_promptsView;
+    UIImageView *_MIT_CtaXzj;
+    double _You_CharOut;
     CSJDislikeNewInputView *_dislikeNewInputView;
     CSJMaterialMeta *_meta;
-    long long _lastDeviceOrientation;
+    long long _A2_HashTmp;
     struct CGRect _startFrame;
 }
 
 - (void).cxx_destruct;
-@property(nonatomic) long long lastDeviceOrientation; // @synthesize lastDeviceOrientation=_lastDeviceOrientation;
+@property(nonatomic) long long A2_HashTmp; // @synthesize A2_HashTmp=_A2_HashTmp;
 @property(retain, nonatomic) CSJMaterialMeta *meta; // @synthesize meta=_meta;
 @property(nonatomic) struct CGRect startFrame; // @synthesize startFrame=_startFrame;
 @property(retain, nonatomic) CSJDislikeNewInputView *dislikeNewInputView; // @synthesize dislikeNewInputView=_dislikeNewInputView;
-@property(retain, nonatomic) CSJDislikePersonalPromptsView *promptsView; // @synthesize promptsView=_promptsView;
-@property(nonatomic) double totalCellHeight; // @synthesize totalCellHeight=_totalCellHeight;
-@property(retain, nonatomic) UIImageView *arrowImageView; // @synthesize arrowImageView=_arrowImageView;
+@property(nonatomic) double You_CharOut; // @synthesize You_CharOut=_You_CharOut;
+@property(retain, nonatomic) UIImageView *MIT_CtaXzj; // @synthesize MIT_CtaXzj=_MIT_CtaXzj;
 @property(retain, nonatomic) UITableView *tableView; // @synthesize tableView=_tableView;
 @property(retain, nonatomic) UIView *backgroundView; // @synthesize backgroundView=_backgroundView;
-@property(copy, nonatomic) NSArray *dislikeWordsViewModelArray; // @synthesize dislikeWordsViewModelArray=_dislikeWordsViewModelArray;
+@property(copy, nonatomic) NSArray *Ads_IconLock; // @synthesize Ads_IconLock=_Ads_IconLock;
+@property(copy, nonatomic) CDUnknownBlockType dismissCompletionBlock; // @synthesize dismissCompletionBlock=_dismissCompletionBlock;
 @property(copy, nonatomic) CDUnknownBlockType cancelBlock; // @synthesize cancelBlock=_cancelBlock;
 @property(copy, nonatomic) CDUnknownBlockType dislikeResultBlock; // @synthesize dislikeResultBlock=_dislikeResultBlock;
 - (void)close;
-- (void)submitWithText:(id)arg1;
-- (void)submitWithDislikeWords:(id)arg1;
-- (void)layoutSubviewsWithSize:(struct CGSize)arg1;
-- (void)dislikePersonalPromptsDidSelected:(id)arg1;
+- (void)Ms_DiffIv:(id)arg1;
+- (void)YES_Md5Hash:(id)arg1;
+- (void)Nil_DicIs:(struct CGSize)arg1;
 - (void)keyboardDidHideInDislikeNewInputView:(id)arg1;
 - (void)keyboardWillHideInDislikeNewInputView:(id)arg1;
-- (void)keyboardDidShowInDislikeNewInputView:(id)arg1;
+- (void)Iv_MetaStr:(id)arg1;
 - (void)keyboardWillShowInDislikeNewInputView:(id)arg1;
 - (void)dislikeNewInputView:(id)arg1 inputText:(id)arg2;
 - (id)containerViewInDislikeNewInputView:(id)arg1;
@@ -63,8 +61,7 @@
 - (id)tableView:(id)arg1 viewForHeaderInSection:(long long)arg2;
 - (double)tableView:(id)arg1 heightForRowAtIndexPath:(id)arg2;
 - (void)tableView:(id)arg1 didSelectRowAtIndexPath:(id)arg2;
-- (double)personalizationPromptsH;
-- (void)dislikeNewInputViewAction:(id)arg1;
+- (void)Path_EnumLine:(id)arg1;
 - (void)backgroundViewAction:(id)arg1;
 - (unsigned long long)supportedInterfaceOrientations;
 - (_Bool)shouldAutorotate;
@@ -74,7 +71,7 @@
 - (void)viewDidAppear:(_Bool)arg1;
 - (void)viewDidLoad;
 - (void)dealloc;
-- (id)initDislikeWithMaterial:(id)arg1 startFrame:(struct CGRect)arg2;
+- (id)initLRect_ComOs:(id)arg1 startFrame:(struct CGRect)arg2;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

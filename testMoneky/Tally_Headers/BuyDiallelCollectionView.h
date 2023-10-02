@@ -20,6 +20,7 @@
     double _moveUpAdjustHeight;
     AFHTTPSessionManager *_sessionManager;
     UIView *_gradientView;
+    long long _platformType;
     NSMutableArray *_dataArray;
     NSString *_eventLabel;
     UIButton *_topBtn;
@@ -44,6 +45,7 @@
 @property(nonatomic) __weak UIButton *topBtn; // @synthesize topBtn=_topBtn;
 @property(copy, nonatomic) NSString *eventLabel; // @synthesize eventLabel=_eventLabel;
 @property(retain, nonatomic) NSMutableArray *dataArray; // @synthesize dataArray=_dataArray;
+@property(nonatomic) long long platformType; // @synthesize platformType=_platformType;
 - (void)layoutSubviews;
 - (void)addGradientView;
 - (void)handleRequestWithResponseObject:(id)arg1 error:(id)arg2 isRefresh:(_Bool)arg3 refreshView:(id)arg4;

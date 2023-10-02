@@ -22,7 +22,7 @@
     CSJStarView *_starView;
     UILabel *_scoreLabel;
     UITapGestureRecognizer *_tapGesture;
-    UITapGestureRecognizer *_subviewsTapGesture;
+    UITapGestureRecognizer *_Len_ItemCall;
     NSString *_clickTypeString;
     long long _starCount;
 }
@@ -30,7 +30,7 @@
 - (void).cxx_destruct;
 @property(nonatomic) long long starCount; // @synthesize starCount=_starCount;
 @property(copy, nonatomic) NSString *clickTypeString; // @synthesize clickTypeString=_clickTypeString;
-@property(retain, nonatomic) UITapGestureRecognizer *subviewsTapGesture; // @synthesize subviewsTapGesture=_subviewsTapGesture;
+@property(retain, nonatomic) UITapGestureRecognizer *Len_ItemCall; // @synthesize Len_ItemCall=_Len_ItemCall;
 @property(retain, nonatomic) UITapGestureRecognizer *tapGesture; // @synthesize tapGesture=_tapGesture;
 @property(retain, nonatomic) UILabel *scoreLabel; // @synthesize scoreLabel=_scoreLabel;
 @property(retain, nonatomic) CSJStarView *starView; // @synthesize starView=_starView;
@@ -43,7 +43,7 @@
 - (id)c_xyDict;
 - (void)subViewsTapped:(id)arg1;
 - (void)maskTapped:(id)arg1;
-- (void)addGesture;
+- (void)Or_AdmMain;
 - (void)buildUpView;
 - (_Bool)gestureRecognizer:(id)arg1 shouldReceiveTouch:(id)arg2;
 - (void)layoutSubviews;

@@ -10,7 +10,7 @@
 #import "UIScrollViewDelegate-Protocol.h"
 #import "UIViewControllerTransitioningDelegate-Protocol.h"
 
-@class BUWebViewProgressView, CSJAdSlot, CSJDislikeContext, CSJWKWebViewClient, CSJWebViewControllerViewModel, NSDictionary, NSString, UISwipeGestureRecognizer;
+@class BUWebViewProgressView, CSJASlotContext, CSJAdSlot, CSJDislikeContext, CSJWKWebViewClient, CSJWebViewControllerViewModel, NSDictionary, NSString, UISwipeGestureRecognizer;
 
 @interface CSJWebViewController : UIViewController <UIScrollViewDelegate, CSJWKWebViewClientResponseDelegate, UIViewControllerTransitioningDelegate>
 {
@@ -61,6 +61,7 @@
 @property(copy, nonatomic) CDUnknownBlockType CloseBlock;
 @property(copy, nonatomic) NSString *webTitle;
 @property(retain, nonatomic) CSJWKWebViewClient *webView;
+@property(nonatomic) __weak CSJASlotContext *context;
 @property(retain, nonatomic) CSJAdSlot *adSlot;
 - (long long)preferredInterfaceOrientationForPresentation;
 - (unsigned long long)supportedInterfaceOrientations;

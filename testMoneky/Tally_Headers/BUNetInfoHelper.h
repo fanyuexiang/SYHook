@@ -10,6 +10,7 @@
 {
 }
 
++ (id)bu_getWiFiBSSID;
 + (_Bool)isValidateIPV6:(id)arg1;
 + (_Bool)isValidateIP:(id)arg1;
 + (id)bu_getIPv6Address:(id)arg1;

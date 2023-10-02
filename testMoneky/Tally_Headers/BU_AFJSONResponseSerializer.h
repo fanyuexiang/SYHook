@@ -6,7 +6,11 @@
 
 #import "BU_AFHTTPResponseSerializer.h"
 
-@interface BU_AFJSONResponseSerializer : BU_AFHTTPResponseSerializer
+#import "BUADJsonResponseSerializerProtocol-Protocol.h"
+
+@class NSIndexSet, NSString;
+
+@interface BU_AFJSONResponseSerializer : BU_AFHTTPResponseSerializer <BUADJsonResponseSerializerProtocol>
 {
     _Bool _removesKeysWithNullValues;
     unsigned long long _readingOptions;
@@ -21,6 +25,13 @@
 - (id)initWithCoder:(id)arg1;
 - (id)responseObjectForResponse:(id)arg1 data:(id)arg2 error:(id *)arg3;
 - (id)init;
+
+// Remaining properties
+@property(copy, nonatomic) NSIndexSet *acceptableStatusCodes;
+@property(readonly, copy) NSString *debugDescription;
+@property(readonly, copy) NSString *description;
+@property(readonly) unsigned long long hash;
+@property(readonly) Class superclass;
 
 @end
 

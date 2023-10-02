@@ -6,19 +6,16 @@
 
 #import <Foundation/NSOperation.h>
 
-@class NSObject;
-@protocol OS_dispatch_semaphore;
-
 @interface SDImageCachesManagerOperation : NSOperation
 {
-    NSObject<OS_dispatch_semaphore> *_pendingCountLock;
+    struct os_unfair_lock_s _pendingCountLock;
+    int _pendingCountLock_deprecated;
     _Bool _executing;
     _Bool _finished;
     _Bool _cancelled;
     unsigned long long _pendingCount;
 }
 
-- (void).cxx_destruct;
 - (_Bool)isCancelled;
 - (_Bool)isFinished;
 - (_Bool)isExecuting;

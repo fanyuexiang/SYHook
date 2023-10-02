@@ -6,14 +6,14 @@
 
 #import <objc/NSObject.h>
 
-#import "ABUCustomRewardedVideoAdapter-Protocol.h"
 #import "ABUGDT_GDTNativeExpressRewardVideoAdDelegate-Protocol.h"
 #import "ABUGDT_GDTRewardVideoAdDelegate-Protocol.h"
+#import "BUMCustomRewardedVideoAdapter-Protocol.h"
 
 @class NSDictionary, NSString;
-@protocol ABUCustomConfigAdapter, ABUCustomRewardedVideoAdapterBridge, ABUGDT_GDTNativeExpressRewardVideoAd, ABUGDT_GDTRewardVideoAd;
+@protocol ABUGDT_GDTNativeExpressRewardVideoAd, ABUGDT_GDTRewardVideoAd, BUMCustomConfigAdapter, BUMCustomRewardedVideoAdapterBridge;
 
-@interface ABUGdtRewardedVideoAdapter : NSObject <ABUGDT_GDTRewardVideoAdDelegate, ABUGDT_GDTNativeExpressRewardVideoAdDelegate, ABUCustomRewardedVideoAdapter>
+@interface ABUGdtRewardedVideoAdapter : NSObject <ABUGDT_GDTRewardVideoAdDelegate, ABUGDT_GDTNativeExpressRewardVideoAdDelegate, BUMCustomRewardedVideoAdapter>
 {
     _Bool _hasGoneRewardCallback;
     NSObject<ABUGDT_GDTRewardVideoAd> *_rewardedAd;
@@ -54,8 +54,8 @@
 - (_Bool)enablePreloadWhenCurrentIsDisplay;
 
 // Remaining properties
-@property(nonatomic) __weak id <ABUCustomRewardedVideoAdapterBridge> bridge;
-@property(retain, nonatomic) id <ABUCustomConfigAdapter> configAdapter;
+@property(nonatomic) __weak id <BUMCustomRewardedVideoAdapterBridge> bridge;
+@property(retain, nonatomic) id <BUMCustomConfigAdapter> configAdapter;
 @property(readonly, copy) NSString *debugDescription;
 @property(readonly, copy) NSString *description;
 @property(readonly, copy, nonatomic) NSDictionary *extroInfoMap;

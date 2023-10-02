@@ -12,7 +12,7 @@
 
 - (void)pbu_override_buildViewData;
 - (void)pbu_override_buildView;
-- (double)heightWidthRate;
+- (double)CCPA_ExtR2;
 
 @end
 

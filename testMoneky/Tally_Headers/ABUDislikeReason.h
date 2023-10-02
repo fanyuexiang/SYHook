@@ -6,9 +6,11 @@
 
 #import <objc/NSObject.h>
 
+#import "BUDislikeWords_MProtocol-Protocol.h"
+
 @class NSArray, NSString;
 
-@interface ABUDislikeReason : NSObject
+@interface ABUDislikeReason : NSObject <BUDislikeWords_MProtocol>
 {
     _Bool _isSelected;
     NSString *_ID;
@@ -22,6 +24,17 @@
 @property(readonly, copy, nonatomic) NSString *name; // @synthesize name=_name;
 @property(readonly, copy, nonatomic) NSString *ID; // @synthesize ID=_ID;
 - (id)initWithID:(id)arg1 name:(id)arg2 subReasons:(id)arg3;
+- (id)initWithDictionary:(id)arg1 error:(id *)arg2;
+@property(readonly, copy, nonatomic) NSArray *options;
+@property(readonly, copy, nonatomic) NSString *dislikeID;
+- (_Bool)isMemberOfClass:(Class)arg1;
+- (_Bool)isKindOfClass:(Class)arg1;
+
+// Remaining properties
+@property(readonly, copy) NSString *debugDescription;
+@property(readonly, copy) NSString *description;
+@property(readonly) unsigned long long hash;
+@property(readonly) Class superclass;
 
 @end
 

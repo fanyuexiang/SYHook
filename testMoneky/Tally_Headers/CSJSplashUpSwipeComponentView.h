@@ -15,14 +15,16 @@
     UIImageView *_handImageView;
     UIImageView *_lineImageView;
     UIView *_panView;
+    _Bool _Stop_rhsLds;
 }
 
 - (void).cxx_destruct;
 - (void)_onPanGR:(id)arg1;
 - (void)_setupPropertyWithAnimation:(id)arg1;
-- (void)_setupUI;
+- (void)Cn_ObjDocs;
 - (void)startSplashBottomAnimation;
 - (struct CGRect)splashBottomFrameWithContainerFrame:(struct CGRect)arg1;
+- (void)Lds_InitMeta;
 - (void)layoutSubviews;
 - (id)initWithComponentConfiguration:(id)arg1;
 

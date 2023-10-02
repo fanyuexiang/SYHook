@@ -10,7 +10,7 @@
 #import "ABUBiddingParamHelper-Protocol.h"
 #import "ABUMediationWaterfall-Protocol.h"
 
-@class ABUAdLoadConfig, ABUAdLoader, ABUMediaSlotConfigGroup, ABUMediationSlotConfig, ABUWaterfallAdManager, NSArray, NSDictionary, NSLock, NSMutableArray, NSMutableDictionary, NSString;
+@class ABUAdLoadConfig, ABUAdLoader, ABUMediaSlotConfigGroup, ABUMediationSlotConfig, ABUMediationWaterfallExtra, ABUWaterfallAdManager, NSArray, NSDictionary, NSLock, NSMutableArray, NSMutableDictionary, NSString;
 @protocol ABUMediationWaterfallDelegate, ABUServerBiddingManager, OS_dispatch_queue;
 
 @interface ABUMediationWaterfallIMP : NSObject <ABUAdLoaderDelegate, ABUBiddingParamHelper, ABUMediationWaterfall>
@@ -23,6 +23,8 @@
     _Bool _hasReportMediationFill;
     _Bool _hasLoadFail;
     _Bool _backup;
+    _Bool _hasCallbackSuccessOrFail;
+    _Bool _isTotalLoadFailRequestExp;
     int _logType;
     id adBridge;
     NSDictionary *_mediaSlotConfigs;
@@ -51,12 +53,25 @@
     NSArray *_loadFailInfosForTracker;
     NSString *_adReuseIdentifier;
     ABUWaterfallAdManager *_adManager;
+    double _totalBackgroundTimeInLoadingModel;
+    double _backgroundStartTimestamp;
+    ABUMediationWaterfallExtra *_preloadExtra;
+    unsigned long long _reqEndReason;
+    NSArray *_sortedMediaConfigs;
 }
 
 + (void)_pushMediationWaterfall:(id)arg1;
 + (id)_popMediationWaterfallWithMediationRitID:(id)arg1 andReuseIdentifier:(id)arg2;
++ (id)_getMediationWaterfallWithMediationRitID:(id)arg1 andReuseIdentifier:(id)arg2;
 + (id)preloadMediationWaterfalls;
 - (void).cxx_destruct;
+@property(copy, nonatomic) NSArray *sortedMediaConfigs; // @synthesize sortedMediaConfigs=_sortedMediaConfigs;
+@property(nonatomic) unsigned long long reqEndReason; // @synthesize reqEndReason=_reqEndReason;
+@property(retain, nonatomic) ABUMediationWaterfallExtra *preloadExtra; // @synthesize preloadExtra=_preloadExtra;
+@property(nonatomic) _Bool isTotalLoadFailRequestExp; // @synthesize isTotalLoadFailRequestExp=_isTotalLoadFailRequestExp;
+@property(nonatomic) _Bool hasCallbackSuccessOrFail; // @synthesize hasCallbackSuccessOrFail=_hasCallbackSuccessOrFail;
+@property(nonatomic) double backgroundStartTimestamp; // @synthesize backgroundStartTimestamp=_backgroundStartTimestamp;
+@property(nonatomic) double totalBackgroundTimeInLoadingModel; // @synthesize totalBackgroundTimeInLoadingModel=_totalBackgroundTimeInLoadingModel;
 @property(retain, nonatomic) ABUWaterfallAdManager *adManager; // @synthesize adManager=_adManager;
 @property(nonatomic, getter=isBackup) _Bool backup; // @synthesize backup=_backup;
 @property(copy, nonatomic) NSString *adReuseIdentifier; // @synthesize adReuseIdentifier=_adReuseIdentifier;
@@ -88,7 +103,7 @@
 @property(readonly, nonatomic) ABUAdLoader *cbAdLoader; // @synthesize cbAdLoader=_cbAdLoader;
 @property(readonly, nonatomic) ABUAdLoader *sbAdLoader; // @synthesize sbAdLoader=_sbAdLoader;
 @property(readonly, copy, nonatomic) NSArray *pnAdLoaders; // @synthesize pnAdLoaders=_pnAdLoaders;
-@property(readonly, nonatomic) ABUMediaSlotConfigGroup *configGroup; // @synthesize configGroup=_configGroup;
+@property(retain, nonatomic) ABUMediaSlotConfigGroup *configGroup; // @synthesize configGroup=_configGroup;
 @property(readonly, copy, nonatomic) NSDictionary *mediaSlotConfigs; // @synthesize mediaSlotConfigs=_mediaSlotConfigs;
 @property(nonatomic) __weak id adBridge; // @synthesize adBridge;
 - (void)_trackBiddingInfoInvalidWithClientBiddingInfo:(id)arg1;
@@ -112,9 +127,13 @@
 - (void)_trackStartBiddingRequest;
 - (void)_trackCacheCannotUseWithInfo:(id)arg1;
 - (void)trackMediationVideoCached;
+- (id)posStateNumForAuto;
 - (void)_trackMediationRequestEndWithAdCount:(unsigned long long)arg1;
 - (long long)primeritReqType;
 - (void)_trackMediationFillWithSlotConfig:(id)arg1 andAdCount:(unsigned long long)arg2;
+- (double)serverbiddingHoldTimeout;
+- (double)layerTimeout;
+- (double)totalTimeout;
 - (id)fillFailMessages;
 - (_Bool)_existWorkingLoaders;
 - (id)_adLoaderWithAdType:(long long)arg1;
@@ -126,8 +145,10 @@
 - (id)loader:(id)arg1 willLoadMediaAdWithSlotConfig:(id)arg2 andParam:(id)arg3 loadParam:(id)arg4;
 - (void)loader:(id)arg1 didLoadFinishWithParam:(id)arg2 timeout:(_Bool)arg3;
 - (id)messageCodeFromString:(id)arg1;
+- (double)curWfBestAdEcpmOrError:(id *)arg1;
 - (void)loader:(id)arg1 didLoadMediaAdFailedWithError:(id)arg2 slotConfig:(id)arg3 andParam:(id)arg4 mediaExt:(id)arg5;
 - (void)loader:(id)arg1 didLoadMediaAdWithPacakge:(id)arg2 withSlotConfig:(id)arg3 andParam:(id)arg4;
+- (_Bool)isLoadViaMediation;
 - (void)_enumPackage:(id)arg1 withBlock:(CDUnknownBlockType)arg2;
 - (_Bool)_didLowThanFloorPriceWithPackage:(id)arg1;
 - (void)didWaitingExchangeResultWithParams:(id)arg1 resumeHandler:(CDUnknownBlockType)arg2;
@@ -141,11 +162,18 @@
 - (_Bool)isClientBiddingDone;
 - (_Bool)isServerBiddingDone;
 - (_Bool)_checkLoadDoneAndNotify:(long long)arg1;
+- (void)trackCallbackPackageWithPackages:(id)arg1 ritLayerIndexMap:(id)arg2 ritLayerCountMap:(id)arg3;
+- (id)callbackAdStorageIfNeeded;
 - (id)_popMediaConfigsWaitingLoadIfNeededWithNormal:(_Bool)arg1 andParams:(id *)arg2;
 - (id)_lookupMediaConfigsWaitingLoad:(_Bool *)arg1;
+- (_Bool)_isPAndNLoading;
 - (_Bool)_allAdLoadFinish;
+- (void)updateServerBiddingEcpms:(id)arg1;
 - (void)_serverBiddingDidFinishWithError:(id)arg1;
 - (void)_dealBiddingWithResult:(id)arg1 orError:(id)arg2;
+- (_Bool)hasAllEnd;
+- (void)dealWaterfallLoadWithAutoDetail:(id)arg1 andSBSuccess:(_Bool)arg2;
+- (_Bool)inAutoDetail;
 - (_Bool)_startServerBiddingRequestWithParams:(id)arg1;
 - (void)_startLoadAdsInNormalLayersWithBlock:(CDUnknownBlockType)arg1;
 - (void)_startLoadAdsInPrivilegeLayersWithBlock:(CDUnknownBlockType)arg1;
@@ -154,9 +182,13 @@
 - (_Bool)_startLoadLayerWithConfig:(id)arg1 usingLoader:(id)arg2;
 @property(readonly, copy, nonatomic) NSString *linkID;
 - (_Bool)preloadCacheHandleWithNeedTrackList:(id *)arg1 adCount:(unsigned long long *)arg2;
+- (id)checkExistPreloadCacheHandleWithNeedTrackList:(id *)arg1 adCount:(unsigned long long *)arg2;
 - (_Bool)_enableUsePreloadCache;
 - (void)_startClientBiddingAdLoad;
+- (double)curBestEcpm;
+- (_Bool)needExtraReqForPreloadWithEcpm:(double *)arg1;
 - (void)startWaterfallRequestWithParams:(id)arg1 adReuseIdentifier:(id)arg2;
+- (id)checkPreloadWithParams:(id)arg1 adReuseIdentifier:(id)arg2 errorType:(long long *)arg3;
 - (void)updateStatus:(long long)arg1;
 - (void)_updateMediaRequestStatusWithSlotID:(id)arg1 andStatus:(long long)arg2 whenCurrentStatus:(long long)arg3;
 - (void)_updateMediaRequestStatusWithSlotID:(id)arg1 andStatus:(long long)arg2;

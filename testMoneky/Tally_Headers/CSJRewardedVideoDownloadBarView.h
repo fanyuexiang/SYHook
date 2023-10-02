@@ -14,27 +14,27 @@
 @interface CSJRewardedVideoDownloadBarView : UIView <UIGestureRecognizerDelegate>
 {
     _Bool _isPortrait;
-    _Bool _isNewStyle;
+    _Bool _isMap_WinDiff;
     id <CSJRewardedVideoDownloadBarDelegate> _delegate;
     CSJMaterialMeta *_materialMeta;
     CSJAdSlot *_slot;
     UIImageView *_iconImageView;
     UILabel *_titleLabel;
-    UILabel *_evaluationLabel;
+    UILabel *_Ua_Ios_pos;
     UIButton *_downloadButton;
     UILabel *_scoreLabel;
     CSJStarView *_starView;
-    unsigned long long _downloadBarStyle;
+    unsigned long long _Js_PodsURL;
 }
 
 - (void).cxx_destruct;
-@property(nonatomic) unsigned long long downloadBarStyle; // @synthesize downloadBarStyle=_downloadBarStyle;
-@property(nonatomic) _Bool isNewStyle; // @synthesize isNewStyle=_isNewStyle;
+@property(nonatomic) unsigned long long Js_PodsURL; // @synthesize Js_PodsURL=_Js_PodsURL;
+@property(nonatomic) _Bool isMap_WinDiff; // @synthesize isMap_WinDiff=_isMap_WinDiff;
 @property(nonatomic) _Bool isPortrait; // @synthesize isPortrait=_isPortrait;
 @property(retain, nonatomic) CSJStarView *starView; // @synthesize starView=_starView;
 @property(retain, nonatomic) UILabel *scoreLabel; // @synthesize scoreLabel=_scoreLabel;
 @property(retain, nonatomic) UIButton *downloadButton; // @synthesize downloadButton=_downloadButton;
-@property(retain, nonatomic) UILabel *evaluationLabel; // @synthesize evaluationLabel=_evaluationLabel;
+@property(retain, nonatomic) UILabel *Ua_Ios_pos; // @synthesize Ua_Ios_pos=_Ua_Ios_pos;
 @property(retain, nonatomic) UILabel *titleLabel; // @synthesize titleLabel=_titleLabel;
 @property(retain, nonatomic) UIImageView *iconImageView; // @synthesize iconImageView=_iconImageView;
 @property(retain, nonatomic) CSJAdSlot *slot; // @synthesize slot=_slot;
@@ -44,13 +44,13 @@
 - (id)buttonText;
 - (void)downloadTapped;
 - (void)downloadButtonTapped;
-- (void)layoutNewWithDescStyle;
-- (void)layoutOldStyle;
-- (void)layoutNewStyle;
+- (void)Key_RitFail;
+- (void)API_TODOIs;
+- (void)Self_IOSCarl;
 - (void)layoutSubviews;
-- (void)addGesture;
+- (void)Or_AdmMain;
 - (void)buildUpView;
-- (id)initDownloadBarWith:(id)arg1 slot:(id)arg2 barStyle:(unsigned long long)arg3;
+- (id)initLApp_WinRit:(id)arg1 slot:(id)arg2 barStyle:(unsigned long long)arg3;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

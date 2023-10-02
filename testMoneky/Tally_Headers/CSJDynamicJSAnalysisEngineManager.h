@@ -25,10 +25,6 @@
 @property(retain, nonatomic) NSURLSessionDownloadTask *downloadTask; // @synthesize downloadTask=_downloadTask;
 @property(retain, nonatomic) JSContext *jsContext; // @synthesize jsContext=_jsContext;
 - (id)init;
-- (void)endDynamic;
-- (void)insertLayoutUnitMessage:(id)arg1;
-- (void)startDynamic2;
-- (void)startDynamic1;
 - (id)pbu_currentJSContext;
 - (id)pbu_jsStringWithSource:(id *)arg1;
 - (void)pbu_clearJSContext;

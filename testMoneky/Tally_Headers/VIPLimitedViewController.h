@@ -6,44 +6,77 @@
 
 #import <UIKit/UIViewController.h>
 
-@class NSMutableDictionary, NSString, UIButton, UILabel, UIScrollView, VIPLimitedBuyersView, VIPLimitedCountDown;
+#import "UIScrollViewDelegate-Protocol.h"
 
-@interface VIPLimitedViewController : UIViewController
+@class NSArray, NSMutableDictionary, NSString, UIButton, UIColor, UILabel, UIScrollView, UIView, VIPLimitedBuyersView, VIPLimitedCountDown;
+
+@interface VIPLimitedViewController : UIViewController <UIScrollViewDelegate>
 {
-    UIButton *_btn1;
-    UILabel *_pricetimelabel1;
-    UILabel *_pricelabel1;
-    UIButton *_btn2;
-    UILabel *_pricetimelabel2;
-    UILabel *_pricelabel2;
-    long long _chooseType;
+    double _maxMoveHeight;
+    UIView *_navView;
+    UILabel *_navTitleLabel;
+    UIButton *_rightBtn;
+    UIButton *_leftBtn;
+    UIView *_priceView;
+    UIView *_rightsView;
+    UIView *_rightMoreView;
+    UIButton *_rightMoreBtn;
+    UIScrollView *_imageScroll;
+    NSArray *_rightarrayTemp;
+    UIView *_commentView;
+    UIView *_feedbackView;
+    UIView *_ruleView;
     VIPLimitedBuyersView *_buyersView;
     VIPLimitedCountDown *_countdown;
+    long long _priceindex;
+    UILabel *_priceLabel;
+    UILabel *_originalpriceLabel;
+    UIColor *_color1;
+    UIColor *_color2;
+    UILabel *_pricedetaildesc;
+    _Bool _title_color;
     NSString *_sourceString;
     long long _viewType;
     double _ruleStarty;
+    NSString *_activityString;
     NSMutableDictionary *_dataDic;
     UIScrollView *_contentScroll;
     UILabel *_millisecondLabel;
     UILabel *_secondLabel;
     UILabel *_minitueLabel;
+    long long _statusBarStyle;
 }
 
 - (void).cxx_destruct;
+@property(nonatomic) long long statusBarStyle; // @synthesize statusBarStyle=_statusBarStyle;
 @property(retain, nonatomic) UILabel *minitueLabel; // @synthesize minitueLabel=_minitueLabel;
 @property(retain, nonatomic) UILabel *secondLabel; // @synthesize secondLabel=_secondLabel;
 @property(retain, nonatomic) UILabel *millisecondLabel; // @synthesize millisecondLabel=_millisecondLabel;
 @property(retain, nonatomic) UIScrollView *contentScroll; // @synthesize contentScroll=_contentScroll;
 @property(retain, nonatomic) NSMutableDictionary *dataDic; // @synthesize dataDic=_dataDic;
+@property(retain, nonatomic) NSString *activityString; // @synthesize activityString=_activityString;
 @property(nonatomic) double ruleStarty; // @synthesize ruleStarty=_ruleStarty;
 @property(nonatomic) long long viewType; // @synthesize viewType=_viewType;
 @property(retain, nonatomic) NSString *sourceString; // @synthesize sourceString=_sourceString;
 - (void)buyEvent;
-- (void)priceChoose:(id)arg1;
+- (void)buyClick;
 - (void)vipdetail;
 - (void)showHasComplete:(long long)arg1;
+- (void)adjustPrice;
 - (void)setupBottomView;
 - (void)setupBuyuserList;
+- (void)setContentRuleView:(double)arg1;
+- (void)feedbackMrore;
+- (void)setContentFeedbackView:(double)arg1;
+- (void)setContentCommentView:(double)arg1;
+- (void)setContentImageView:(double)arg1;
+- (void)rightMrore;
+- (void)setContentRightsView:(double)arg1;
+- (void)priceClick:(id)arg1;
+- (void)onePricesUI;
+- (void)twoPricesUI;
+- (void)threePricesUI;
+- (void)setContentPriceView:(double)arg1;
 - (void)setupBuyUI;
 - (void)requestData;
 - (void)viewWillDisappear:(_Bool)arg1;
@@ -51,8 +84,12 @@
 - (void)restorePurchases;
 - (void)closeEvent;
 - (void)viewDidLoad;
-- (void)jumpToRule;
-- (void)setupReturnUI;
+
+// Remaining properties
+@property(readonly, copy) NSString *debugDescription;
+@property(readonly, copy) NSString *description;
+@property(readonly) unsigned long long hash;
+@property(readonly) Class superclass;
 
 @end
 

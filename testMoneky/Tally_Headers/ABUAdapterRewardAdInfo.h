@@ -32,6 +32,8 @@
 @property(copy, nonatomic) NSString *rewardName; // @synthesize rewardName=_rewardName;
 @property(copy, nonatomic) NSString *rewardId; // @synthesize rewardId=_rewardId;
 - (_Bool)verifyByGroMoreS2S;
+- (_Bool)isMemberOfClass:(Class)arg1;
+- (_Bool)isKindOfClass:(Class)arg1;
 
 @end
 

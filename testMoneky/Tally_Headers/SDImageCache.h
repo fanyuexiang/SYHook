@@ -22,6 +22,9 @@
 }
 
 + (unsigned long long)imageOptionsFromCacheOptions:(unsigned long long)arg1;
++ (id)userCacheDirectory;
++ (void)setDefaultDiskCacheDirectory:(id)arg1;
++ (id)defaultDiskCacheDirectory;
 + (id)sharedImageCache;
 - (void).cxx_destruct;
 @property(retain, nonatomic) NSObject<OS_dispatch_queue> *ioQueue; // @synthesize ioQueue=_ioQueue;
@@ -48,8 +51,8 @@
 - (id)queryCacheOperationForKey:(id)arg1 options:(unsigned long long)arg2 context:(id)arg3 done:(CDUnknownBlockType)arg4;
 - (id)queryCacheOperationForKey:(id)arg1 options:(unsigned long long)arg2 done:(CDUnknownBlockType)arg3;
 - (id)queryCacheOperationForKey:(id)arg1 done:(CDUnknownBlockType)arg2;
+- (void)_unarchiveObjectWithImage:(id)arg1 forKey:(id)arg2;
 - (id)diskImageForKey:(id)arg1 data:(id)arg2 options:(unsigned long long)arg3 context:(id)arg4;
-- (id)diskImageForKey:(id)arg1 data:(id)arg2;
 - (id)diskImageForKey:(id)arg1;
 - (id)diskImageDataBySearchingAllPathsForKey:(id)arg1;
 - (id)imageFromCacheForKey:(id)arg1 options:(unsigned long long)arg2 context:(id)arg3;
@@ -65,12 +68,13 @@
 - (void)_storeImageDataToDisk:(id)arg1 forKey:(id)arg2;
 - (void)storeImageDataToDisk:(id)arg1 forKey:(id)arg2;
 - (void)storeImageToMemory:(id)arg1 forKey:(id)arg2;
-- (void)storeImage:(id)arg1 imageData:(id)arg2 forKey:(id)arg3 toMemory:(_Bool)arg4 toDisk:(_Bool)arg5 completion:(CDUnknownBlockType)arg6;
+- (void)_archivedDataWithImage:(id)arg1 forKey:(id)arg2;
+- (void)storeImage:(id)arg1 imageData:(id)arg2 forKey:(id)arg3 options:(unsigned long long)arg4 context:(id)arg5 cacheType:(long long)arg6 completion:(CDUnknownBlockType)arg7;
 - (void)storeImage:(id)arg1 imageData:(id)arg2 forKey:(id)arg3 toDisk:(_Bool)arg4 completion:(CDUnknownBlockType)arg5;
+- (void)storeImageData:(id)arg1 forKey:(id)arg2 completion:(CDUnknownBlockType)arg3;
 - (void)storeImage:(id)arg1 forKey:(id)arg2 toDisk:(_Bool)arg3 completion:(CDUnknownBlockType)arg4;
 - (void)storeImage:(id)arg1 forKey:(id)arg2 completion:(CDUnknownBlockType)arg3;
 - (void)migrateDiskCacheDirectory;
-- (id)userCacheDirectory;
 - (id)cachePathForKey:(id)arg1;
 - (void)dealloc;
 - (id)initWithNamespace:(id)arg1 diskCacheDirectory:(id)arg2 config:(id)arg3;

@@ -6,7 +6,7 @@
 
 #import <objc/NSObject.h>
 
-@class BaiduMobAdImageDownloadQueue, BaiduMobAdRendererHelper, BaiduMobAdSkipButtonView, BaiduMobAdSplashActionView, BaiduMobAdSplashAtmosphereView, BaiduMobAdSplashShakeView, BaiduMobAdSplashSlideView, BaiduMobAdSplashTwistView, BaiduMobAdVideoProgressView, NSString, NSTimer, UIButton, UIColor, UILabel, UIView;
+@class BaiduMobAdImageDownloadQueue, BaiduMobAdMultipleInteractionsView, BaiduMobAdRendererHelper, BaiduMobAdSkipButtonView, BaiduMobAdSplashActionView, BaiduMobAdSplashAtmosphereView, BaiduMobAdSplashShakeView, BaiduMobAdSplashSlideView, BaiduMobAdSplashTwistView, BaiduMobAdVideoProgressView, NSString, NSTimer, UIButton, UIColor, UIImage, UILabel, UIView;
 
 @interface BaiduMobAdRenderer : NSObject
 {
@@ -40,7 +40,8 @@
     BaiduMobAdSplashShakeView *_splashShakeView;
     BaiduMobAdSplashTwistView *_splashTwistView;
     BaiduMobAdSplashSlideView *_slideView;
-    BaiduMobAdSplashAtmosphereView *_atmosphereView;
+    BaiduMobAdMultipleInteractionsView *_splashMultipleInteraction;
+    BaiduMobAdSplashAtmosphereView *_splashAtmosphereView;
     double _shakeImageViewSize;
     double _twistImageViewSize;
     UIColor *_twistMaskColor;
@@ -49,6 +50,7 @@
     UIButton *_imageAdButton;
     UIButton *_imageBaiduIconButton;
     NSString *_area;
+    UIImage *_firstFrameImage;
     NSString *_splashActionViewColor;
     NSString *_colorModel;
 }
@@ -59,6 +61,7 @@
 @property(nonatomic) _Bool successColorFetch; // @synthesize successColorFetch=_successColorFetch;
 @property(nonatomic) _Bool isEnableColorGradientLayer; // @synthesize isEnableColorGradientLayer=_isEnableColorGradientLayer;
 @property(retain, nonatomic) NSString *splashActionViewColor; // @synthesize splashActionViewColor=_splashActionViewColor;
+@property(retain, nonatomic) UIImage *firstFrameImage; // @synthesize firstFrameImage=_firstFrameImage;
 @property(retain, nonatomic) NSString *area; // @synthesize area=_area;
 @property(retain, nonatomic) UIButton *imageBaiduIconButton; // @synthesize imageBaiduIconButton=_imageBaiduIconButton;
 @property(retain, nonatomic) UIButton *imageAdButton; // @synthesize imageAdButton=_imageAdButton;
@@ -68,7 +71,8 @@
 @property(retain, nonatomic) UIColor *twistMaskColor; // @synthesize twistMaskColor=_twistMaskColor;
 @property(nonatomic) double twistImageViewSize; // @synthesize twistImageViewSize=_twistImageViewSize;
 @property(nonatomic) double shakeImageViewSize; // @synthesize shakeImageViewSize=_shakeImageViewSize;
-@property(retain, nonatomic) BaiduMobAdSplashAtmosphereView *atmosphereView; // @synthesize atmosphereView=_atmosphereView;
+@property(retain, nonatomic) BaiduMobAdSplashAtmosphereView *splashAtmosphereView; // @synthesize splashAtmosphereView=_splashAtmosphereView;
+@property(retain, nonatomic) BaiduMobAdMultipleInteractionsView *splashMultipleInteraction; // @synthesize splashMultipleInteraction=_splashMultipleInteraction;
 @property(retain, nonatomic) BaiduMobAdSplashSlideView *slideView; // @synthesize slideView=_slideView;
 @property(retain, nonatomic) BaiduMobAdSplashTwistView *splashTwistView; // @synthesize splashTwistView=_splashTwistView;
 @property(retain, nonatomic) BaiduMobAdSplashShakeView *splashShakeView; // @synthesize splashShakeView=_splashShakeView;
@@ -93,6 +97,9 @@
 @property(nonatomic) double rendererWidth; // @synthesize rendererWidth=_rendererWidth;
 @property(retain, nonatomic) UIView *rendererBaseView; // @synthesize rendererBaseView=_rendererBaseView;
 @property(retain, nonatomic) BaiduMobAdRendererHelper *rendererHelper; // @synthesize rendererHelper=_rendererHelper;
+- (void)splashCardViewClick;
+- (void)addSplashMultipleInteractionsViewWithCompletion:(CDUnknownBlockType)arg1;
+- (void)destoryActionView;
 - (void)stopSplashVideo;
 - (void)sendVideoEvent:(int)arg1 currentPlayingTime:(double)arg2 startPlayTime:(double)arg3 reason:(id)arg4;
 - (void)sendVideoEvent:(int)arg1 currentTime:(double)arg2;
@@ -106,6 +113,7 @@
 - (void)resetShakeViewConfig;
 - (void)clearnShakeView;
 - (void)sendSplashFocus:(id)arg1 type:(int)arg2;
+- (void)sendMultipleInteractionLog:(id)arg1 componentType:(id)arg2;
 - (void)sendShakeViewLog:(id)arg1;
 - (void)sendImageSplashSmartColorFetchLog:(id)arg1 clickType:(id)arg2;
 - (void)addSplashTwistViewWithCompletion:(CDUnknownBlockType)arg1;
@@ -117,6 +125,7 @@
 - (void)resizeAdLogoType:(int)arg1 targetView:(id)arg2;
 - (void)cloudResizeLogoRecommendWithView:(id)arg1;
 - (void)addLogoRecommendOnTargetView:(id)arg1 frame:(struct CGRect)arg2;
+- (void)addDSPOnTargetView:(id)arg1;
 - (void)addSkipTarget:(id)arg1 action:(SEL)arg2 forControlEvents:(unsigned long long)arg3;
 - (void)cloudResizeSkipButton;
 - (void)addSkipButton;

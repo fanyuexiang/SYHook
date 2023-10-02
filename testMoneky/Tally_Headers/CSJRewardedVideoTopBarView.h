@@ -13,10 +13,10 @@
 
 @interface CSJRewardedVideoTopBarView : UIView <UIGestureRecognizerDelegate>
 {
-    _Bool _forceShowSkip;
+    _Bool _Idfa_StmtId;
     _Bool _isRewardedVideo;
     id <CSJRewardedVideoTopBarDelegate> _delegate;
-    long long _currentSecond;
+    long long _X2_SDKSlot;
     CSJURitSettingModel *_ritModel;
     CSJMaterialMeta *_materialMeta;
     long long _style;
@@ -24,13 +24,15 @@
     UIButton *_closeButton;
     UIButton *_silentButton;
     UILabel *_leftSeconds;
-    NSArray *_closeButtonWidthContraint;
+    NSArray *_Open_OutIOS;
     long long _closeButtonStyle;
+    long long __log_OpenDate;
 }
 
 - (void).cxx_destruct;
+@property(nonatomic) long long _log_OpenDate; // @synthesize _log_OpenDate=__log_OpenDate;
 @property(nonatomic) long long closeButtonStyle; // @synthesize closeButtonStyle=_closeButtonStyle;
-@property(copy, nonatomic) NSArray *closeButtonWidthContraint; // @synthesize closeButtonWidthContraint=_closeButtonWidthContraint;
+@property(copy, nonatomic) NSArray *Open_OutIOS; // @synthesize Open_OutIOS=_Open_OutIOS;
 @property(retain, nonatomic) UILabel *leftSeconds; // @synthesize leftSeconds=_leftSeconds;
 @property(retain, nonatomic) UIButton *silentButton; // @synthesize silentButton=_silentButton;
 @property(retain, nonatomic) UIButton *closeButton; // @synthesize closeButton=_closeButton;
@@ -39,41 +41,48 @@
 @property(retain, nonatomic) CSJMaterialMeta *materialMeta; // @synthesize materialMeta=_materialMeta;
 @property(retain, nonatomic) CSJURitSettingModel *ritModel; // @synthesize ritModel=_ritModel;
 @property(nonatomic) _Bool isRewardedVideo; // @synthesize isRewardedVideo=_isRewardedVideo;
-@property(nonatomic) _Bool forceShowSkip; // @synthesize forceShowSkip=_forceShowSkip;
-@property(nonatomic) long long currentSecond; // @synthesize currentSecond=_currentSecond;
+@property(nonatomic) _Bool Idfa_StmtId; // @synthesize Idfa_StmtId=_Idfa_StmtId;
+@property(nonatomic) long long X2_SDKSlot; // @synthesize X2_SDKSlot=_X2_SDKSlot;
 @property(nonatomic) __weak id <CSJRewardedVideoTopBarDelegate> delegate; // @synthesize delegate=_delegate;
 - (void)addAccessibilityIdentifier;
 - (id)c_xyDict;
 - (void)layoutSubviews;
-- (double)getCloseButtonWidthWithStr:(id)arg1;
-- (void)updateDislikeButton_frame;
-- (void)updateDislikeButton_CountdownAndCanbeTurnedOffAfter;
-- (void)updateDislikeButton_CanbeTurnedOffAfter;
-- (void)updateDislikeButton_CountdownAndSkip;
-- (void)updateDislikeButton_Countdown;
-- (void)updateDislikeButton_Skip;
-- (void)updateIntersititalImage;
-- (void)updateCloseButtonTextWithStr:(id)arg1;
-- (void)updateCloseButtonForNormalWithSecond:(long long)arg1 totalDuration:(long long)arg2;
-- (void)updateCloseButtonForDislikeWithSecond:(long long)arg1 totalDuration:(long long)arg2;
-- (void)updateCountButtonWithSecond:(long long)arg1 totalDuration:(long long)arg2;
-- (void)updateSilentButtonStatus:(long long)arg1;
+- (double)Be_AdIdInt:(id)arg1;
+- (double)End_AKeyMsg:(id)arg1;
+- (void)Been_M_PIFail;
+- (void)X2_HttpCls;
+- (void)Vli_XzjIdx;
+- (void)Did_TheCode;
+- (void)Can_MayCase;
+- (void)Tv_Row_len;
+- (void)showCloseButton;
+- (void)Y2_OnDoes;
+- (void)_cmd_HttpBy:(id)arg1;
+- (void)Dc_SumNow;
+- (void)Out_R0Char:(long long)arg1 closeTime:(long long)arg2;
+- (void)Blue_HostFtc:(long long)arg1 Y1_T5Docs:(long long)arg2;
+- (void)ID_UIYES:(long long)arg1 Y1_T5Docs:(long long)arg2;
+- (void)Duan_TextR0:(long long)arg1 closeTime:(long long)arg2;
+- (void)updateRewardLeftSeconds:(long long)arg1;
+- (void)If_Bu_yPath:(long long)arg1 Y1_T5Docs:(long long)arg2;
+- (void)Init_AKeyMask:(long long)arg1;
 - (void)closeButtonTapped:(id)arg1;
 - (void)silentButtonTapped:(id)arg1;
 - (void)dislikeButtonTapped:(id)arg1;
 - (void)videoBarTapped;
-- (long long)fullScreenSkipDelaySecond;
-- (long long)rewardSkipDelaySecond;
-- (_Bool)fullScreenShowSkipCountdown;
-- (void)addGesture;
-- (void)addFullScreenImageConstraints;
-- (void)buildUpViewsForFullScreenImageShowDislike:(_Bool)arg1;
-- (void)buidupViewsForDislike;
-- (void)buidupViewsForFullScreenNormal;
-- (void)buidupViewsForRewardNormal;
-- (double)sizeScaleRatio;
+- (long long)Ts_Objc_val;
+- (long long)A0_InfoVoid;
+- (_Bool)For_ElseWin;
+- (void)Or_AdmMain;
+- (void)Json_NowR1;
+- (void)AdId_OutStop;
+- (void)Hash_SDKSql:(_Bool)arg1;
+- (void)This_LoadList;
+- (void)That_APIRan;
+- (void)Left_GetObj;
+- (double)File_UrlVar;
 - (void)buildUpView;
-- (void)p_initializeData;
+- (void)_dir_TagFtc;
 - (id)initWithFrame:(struct CGRect)arg1 isRewardedVideo:(_Bool)arg2 style:(long long)arg3 ritModel:(id)arg4 materialMeta:(id)arg5;
 
 // Remaining properties

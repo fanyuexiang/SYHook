@@ -11,11 +11,16 @@
 @interface SKVIPManager : NSObject
 {
     NSMutableArray *_vipRights;
+    NSMutableArray *_expVipRights;
 }
 
 + (id)share;
 - (void).cxx_destruct;
+@property(retain, nonatomic) NSMutableArray *expVipRights; // @synthesize expVipRights=_expVipRights;
 @property(retain, nonatomic) NSMutableArray *vipRights; // @synthesize vipRights=_vipRights;
+- (id)expVipRight:(long long)arg1;
+- (long long)expVipRightIndex:(long long)arg1;
+- (long long)expVipRightsCount;
 - (id)vipRight:(long long)arg1;
 - (long long)vipRightIndex:(long long)arg1;
 - (long long)vipRightsCount;

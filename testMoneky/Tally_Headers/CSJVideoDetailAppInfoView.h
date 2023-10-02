@@ -26,10 +26,10 @@
 @property(retain, nonatomic) UILabel *adTitleLabel; // @synthesize adTitleLabel=_adTitleLabel;
 @property(retain, nonatomic) UIImageView *adAppIconImageView; // @synthesize adAppIconImageView=_adAppIconImageView;
 @property(nonatomic) __weak id <CSJVideoDetailAppInfoViewDelegate> delegate; // @synthesize delegate=_delegate;
-- (id)c_xyDict_secWithTapView:(id)arg1;
+- (id)Res_IdDocs:(id)arg1;
 - (void)adAction:(id)arg1;
 - (void)layoutSubviews;
-- (void)setupSubViews;
+- (void)Str_PosHpp;
 - (id)initWithMaterial:(id)arg1;
 
 @end

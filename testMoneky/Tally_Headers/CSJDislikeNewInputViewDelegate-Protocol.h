@@ -11,7 +11,7 @@
 @protocol CSJDislikeNewInputViewDelegate <NSObject>
 - (void)keyboardDidHideInDislikeNewInputView:(CSJDislikeNewInputView *)arg1;
 - (void)keyboardWillHideInDislikeNewInputView:(CSJDislikeNewInputView *)arg1;
-- (void)keyboardDidShowInDislikeNewInputView:(CSJDislikeNewInputView *)arg1;
+- (void)Iv_MetaStr:(CSJDislikeNewInputView *)arg1;
 - (void)keyboardWillShowInDislikeNewInputView:(CSJDislikeNewInputView *)arg1;
 - (void)dislikeNewInputView:(CSJDislikeNewInputView *)arg1 inputText:(NSString *)arg2;
 - (UIView *)containerViewInDislikeNewInputView:(CSJDislikeNewInputView *)arg1;

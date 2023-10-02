@@ -6,11 +6,12 @@
 
 #import <UIKit/UIButton.h>
 
-@class BUTimer, NSDate;
+@class BUTimer, NSDate, NSString;
 
 @interface CSJSkipButton : UIButton
 {
     CDUnknownBlockType _timeOut;
+    NSString *_skipText;
     BUTimer *_timer;
     NSDate *_beginTimeStamp;
     double _countdownTimeInterval;
@@ -20,6 +21,7 @@
 @property(nonatomic) double countdownTimeInterval; // @synthesize countdownTimeInterval=_countdownTimeInterval;
 @property(retain, nonatomic) NSDate *beginTimeStamp; // @synthesize beginTimeStamp=_beginTimeStamp;
 @property(retain, nonatomic) BUTimer *timer; // @synthesize timer=_timer;
+@property(copy, nonatomic) NSString *skipText; // @synthesize skipText=_skipText;
 @property(copy, nonatomic) CDUnknownBlockType timeOut; // @synthesize timeOut=_timeOut;
 - (void)stopCoutDown;
 - (void)updateText:(double)arg1;
@@ -27,6 +29,8 @@
 - (void)resumeCoutDown;
 - (void)pauseCoutDown;
 - (void)beginCountDown:(double)arg1;
+- (id)skipString;
+- (void)setSkipString:(id)arg1;
 - (id)initWithFrame:(struct CGRect)arg1;
 
 @end

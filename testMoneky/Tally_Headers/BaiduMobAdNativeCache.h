@@ -34,15 +34,17 @@
 - (void)removeAllDataFromCache;
 - (void)storeData:(id)arg1 forKey:(id)arg2 andCacheType:(int)arg3;
 - (void)storeData:(id)arg1 forKey:(id)arg2;
-- (void)loadImageForURLString:(id)arg1 andImageView:(id)arg2;
+- (void)cacheMaterialForKey:(id)arg1;
+- (void)loadImageForURLString:(id)arg1 andImageView:(id)arg2 completion:(CDUnknownBlockType)arg3;
 - (id)retrieveDataForKey:(id)arg1 andCacheType:(int)arg2;
 - (id)retrieveDataForKey:(id)arg1;
-- (_Bool)cachedDataExistsForKey:(id)arg1 andCacheType:(int)arg2;
-- (_Bool)cachedDataExistsForKey:(id)arg1;
+- (_Bool)isCachedDataExistsForKey:(id)arg1 andCacheType:(int)arg2;
+- (_Bool)isCachedDataExistsForKey:(id)arg1;
+- (int)getMaterialType:(id)arg1;
 - (void)setInMemoryCacheEnabled:(_Bool)arg1;
-- (id)cacheFilePathForKey:(id)arg1 FilePath:(id)arg2;
-- (id)cacheFilePathForKey:(id)arg1 andCacheType:(int)arg2;
-- (id)cacheFilePathForKey:(id)arg1;
+- (id)getCacheFilePathForKey:(id)arg1 FilePath:(id)arg2;
+- (id)getCacheFilePathForKey:(id)arg1 andCacheType:(int)arg2;
+- (id)getCacheFilePathForKey:(id)arg1;
 - (void)dealloc;
 - (id)init;
 

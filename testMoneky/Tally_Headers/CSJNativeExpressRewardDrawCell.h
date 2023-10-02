@@ -10,7 +10,7 @@
 {
 }
 
-- (void)renderWithAdView:(id)arg1;
+- (void)_log_CopyAPI:(id)arg1;
 - (id)initWithStyle:(long long)arg1 reuseIdentifier:(id)arg2;
 
 @end

@@ -10,7 +10,7 @@
 {
 }
 
-+ (id)biddingPersistenceWithSlot:(id)arg1 type:(long long)arg2;
++ (id)In_UseAll:(id)arg1 type:(long long)arg2;
 
 @end
 

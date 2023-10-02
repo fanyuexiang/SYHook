@@ -19,8 +19,8 @@
 - (void).cxx_destruct;
 @property(retain, nonatomic) CSJADLoadSplashContext *splashContext; // @synthesize splashContext=_splashContext;
 @property(retain, nonatomic) CSJADLoadDurationModel *loadDurationModel; // @synthesize loadDurationModel=_loadDurationModel;
-@property(retain, nonatomic) CSJMaterialMeta *material; // @synthesize material=_material;
-@property(retain, nonatomic) CSJAdSlot *slot; // @synthesize slot=_slot;
+@property(nonatomic) __weak CSJMaterialMeta *material; // @synthesize material=_material;
+@property(nonatomic) __weak CSJAdSlot *slot; // @synthesize slot=_slot;
 
 @end
 

@@ -10,10 +10,10 @@
 {
 }
 
-+ (void)getMRelatedMaterialMetaWithSlot:(id)arg1 materialMeta:(id)arg2 resultBlock:(CDUnknownBlockType)arg3;
-- (void)getMRelatedMaterialMeta;
-- (void)vmLoadData;
-- (id)initViewModelWithExpressAdView:(id)arg1 nativeAd:(id)arg2 rootViewController:(id)arg3;
++ (void)Pos__WillAKey:(id)arg1 materialMeta:(id)arg2 resultBlock:(CDUnknownBlockType)arg3;
+- (void)Js_PosChar;
+- (void)X1_PosKey;
+- (id)initLA0_LongTmp:(id)arg1 nativeAd:(id)arg2 rootViewController:(id)arg3;
 
 @end
 

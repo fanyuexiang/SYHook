@@ -7,12 +7,13 @@
 #import <UIKit/UIView.h>
 
 #import "BaiduMobAdComponentDelegate-Protocol.h"
+#import "BaiduMobAdComponentLottieDelegate-Protocol.h"
 #import "BaiduMobAdNativeAdDelegate-Protocol.h"
 
 @class BaiduMobAdComponentLottieView, BaiduMobAdNativeAdObject, BaiduMobAdNativeProfessionalComponent, NSString;
 @protocol BaiduMobAdNativeSlideViewDelegate;
 
-@interface BaiduMobAdNativeSlideView : UIView <BaiduMobAdComponentDelegate, BaiduMobAdNativeAdDelegate>
+@interface BaiduMobAdNativeSlideView : UIView <BaiduMobAdComponentDelegate, BaiduMobAdNativeAdDelegate, BaiduMobAdComponentLottieDelegate>
 {
     _Bool _firstRender;
     int _repeat;
@@ -29,9 +30,11 @@
 @property(retain, nonatomic) BaiduMobAdNativeAdObject *adObject; // @synthesize adObject=_adObject;
 @property(retain, nonatomic) BaiduMobAdComponentLottieView *slideLottieView; // @synthesize slideLottieView=_slideLottieView;
 @property(nonatomic) __weak id <BaiduMobAdNativeSlideViewDelegate> delegate; // @synthesize delegate=_delegate;
+- (void)nativeComponentLottieSendFinish:(_Bool)arg1 view:(id)arg2 viewName:(id)arg3 special:(id)arg4;
 - (void)nativeComponentClick:(long long)arg1 clickView:(id)arg2 viewName:(id)arg3 special:(id)arg4 component:(id)arg5;
 - (void)nativeComponentCreateSuccess:(id)arg1 viewName:(id)arg2 special:(id)arg3 component:(id)arg4;
 - (void)destorySlideView;
+- (void)slideViewClick;
 - (void)startSlideAnimation;
 - (id)initWithFrame:(struct CGRect)arg1 repeat:(int)arg2 animationWidth:(double)arg3 animationHeight:(double)arg4 adObject:(id)arg5;
 

@@ -15,12 +15,16 @@
 
 - (void).cxx_destruct;
 @property(retain, nonatomic) NSArray *dataArray; // @synthesize dataArray=_dataArray;
-- (id)periodTextField;
 - (id)endTimeTextField;
-- (id)beginTimeTextField;
+- (id)periodTextField;
 - (id)remarkTextField;
 - (id)amountTextField;
+- (id)beginTimeTextField;
+- (id)labelTextField;
+- (id)accountTextField;
 - (id)typeTextField;
+- (id)data7;
+- (id)data6;
 - (id)data5;
 - (id)data4;
 - (id)data3;

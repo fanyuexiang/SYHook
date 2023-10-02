@@ -36,6 +36,7 @@
 - (void)addTallyAction;
 - (void)setupAddButton;
 - (void)setupListView;
+- (void)viewWillAppear:(_Bool)arg1;
 - (void)viewDidLoad;
 
 // Remaining properties

@@ -6,32 +6,40 @@
 
 #import <objc/NSObject.h>
 
-@class ABUMediationSlotConfig, NSArray;
+@class ABUMediationSlotConfig, ABUUValueRule, NSArray, NSDictionary;
 
 @interface ABUMediaSlotConfigGroup : NSObject
 {
-    NSArray *_normalConfigs;
+    NSArray *_normalConfigsFull;
     NSArray *_serverBiddingConfigs;
     NSArray *_clientBiddingConfigs;
     NSArray *_privilegeConfigs;
-    long long _normalConfigsCount;
+    long long _normalConfigsFullCount;
     long long _privilegeConfigsCount;
     ABUMediationSlotConfig *_slotConfig;
+    NSDictionary *_infoForUV3;
+    ABUUValueRule *_rule;
+    double _bestEcpmOfNm;
 }
 
 - (void).cxx_destruct;
+@property(nonatomic) double bestEcpmOfNm; // @synthesize bestEcpmOfNm=_bestEcpmOfNm;
+@property(retain, nonatomic) ABUUValueRule *rule; // @synthesize rule=_rule;
+@property(copy, nonatomic) NSDictionary *infoForUV3; // @synthesize infoForUV3=_infoForUV3;
 @property(retain, nonatomic) ABUMediationSlotConfig *slotConfig; // @synthesize slotConfig=_slotConfig;
 @property(nonatomic) long long privilegeConfigsCount; // @synthesize privilegeConfigsCount=_privilegeConfigsCount;
-@property(nonatomic) long long normalConfigsCount; // @synthesize normalConfigsCount=_normalConfigsCount;
+@property(nonatomic) long long normalConfigsFullCount; // @synthesize normalConfigsFullCount=_normalConfigsFullCount;
 @property(copy, nonatomic) NSArray *privilegeConfigs; // @synthesize privilegeConfigs=_privilegeConfigs;
 @property(copy, nonatomic) NSArray *clientBiddingConfigs; // @synthesize clientBiddingConfigs=_clientBiddingConfigs;
 @property(copy, nonatomic) NSArray *serverBiddingConfigs; // @synthesize serverBiddingConfigs=_serverBiddingConfigs;
-@property(copy, nonatomic) NSArray *normalConfigs; // @synthesize normalConfigs=_normalConfigs;
+@property(copy, nonatomic) NSArray *normalConfigsFull; // @synthesize normalConfigsFull=_normalConfigsFull;
 @property(readonly, nonatomic) long long needLoadCountInPN;
+- (double)bestEcpmOfNormal;
 - (void)_parseConfigsInParallelType3WithConfigs:(id)arg1;
 - (void)_parseConfigsInParallelType0WithConfigs:(id)arg1;
 - (void)_parseMediationSlotConfig:(id)arg1 Configs:(id)arg2;
 - (id)initWithMediationSlotConfig:(id)arg1 configs:(id)arg2;
+- (id)uvalueGroup;
 
 @end
 

@@ -6,7 +6,6 @@
 
 #import <objc/NSObject.h>
 
-#import "ABUCustomBannerAdapter-Protocol.h"
 #import "ABUGDT_GDTMediaViewDelegate-Protocol.h"
 #import "ABUGDT_GDTNativeExpressAdDelegate-Protocol.h"
 #import "ABUGDT_GDTNativeExpressProAdManagerDelegate-Protocol.h"
@@ -14,11 +13,12 @@
 #import "ABUGDT_GDTUnifiedBannerViewDelegate-Protocol.h"
 #import "ABUGDT_GDTUnifiedNativeAdDelegate-Protocol.h"
 #import "ABUGDT_GDTUnifiedNativeAdViewDelegate-Protocol.h"
+#import "BUMCustomBannerAdapter-Protocol.h"
 
-@class ABUMediatedNativeAd, NSDictionary, NSString, UIView;
-@protocol ABUCustomBannerAdapterBridge, ABUCustomConfigAdapter, ABUGDT_GDTNativeExpressAd, ABUGDT_GDTNativeExpressProAdManager, ABUGDT_GDTUnifiedBannerView, ABUGDT_GDTUnifiedNativeAd, ABUGDT_GDTUnifiedNativeAdView, ABUGDT_GDTVideoConfig;
+@class BUMMediatedNativeAd, NSDictionary, NSString, UIView;
+@protocol ABUGDT_GDTNativeExpressAd, ABUGDT_GDTNativeExpressProAdManager, ABUGDT_GDTUnifiedBannerView, ABUGDT_GDTUnifiedNativeAd, ABUGDT_GDTUnifiedNativeAdView, ABUGDT_GDTVideoConfig, BUMCustomBannerAdapterBridge, BUMCustomConfigAdapter;
 
-@interface ABUGdtBannerAdapter : NSObject <ABUGDT_GDTUnifiedBannerViewDelegate, ABUGDT_GDTUnifiedNativeAdDelegate, ABUGDT_GDTUnifiedNativeAdViewDelegate, ABUGDT_GDTNativeExpressAdDelegate, ABUGDT_GDTNativeExpressProAdManagerDelegate, ABUGDT_GDTNativeExpressProAdViewDelegate, ABUGDT_GDTMediaViewDelegate, ABUCustomBannerAdapter>
+@interface ABUGdtBannerAdapter : NSObject <ABUGDT_GDTUnifiedBannerViewDelegate, ABUGDT_GDTUnifiedNativeAdDelegate, ABUGDT_GDTUnifiedNativeAdViewDelegate, ABUGDT_GDTNativeExpressAdDelegate, ABUGDT_GDTNativeExpressProAdManagerDelegate, ABUGDT_GDTNativeExpressProAdViewDelegate, ABUGDT_GDTMediaViewDelegate, BUMCustomBannerAdapter>
 {
     long long _biddingType;
     long long _adSubType;
@@ -26,7 +26,7 @@
     UIView *_nativeAdView;
     NSDictionary *_ext;
     UIView<ABUGDT_GDTUnifiedNativeAdView> *_unifiedNativeAdView;
-    ABUMediatedNativeAd *_mediatedNativeAd;
+    BUMMediatedNativeAd *_mediatedNativeAd;
     NSObject<ABUGDT_GDTUnifiedNativeAd> *_nativeAd;
     NSObject<ABUGDT_GDTNativeExpressAd> *_expressNativeAd;
     NSObject<ABUGDT_GDTNativeExpressProAdManager> *_expressProAdManager;
@@ -38,7 +38,7 @@
 @property(retain, nonatomic) NSObject<ABUGDT_GDTNativeExpressProAdManager> *expressProAdManager; // @synthesize expressProAdManager=_expressProAdManager;
 @property(retain, nonatomic) NSObject<ABUGDT_GDTNativeExpressAd> *expressNativeAd; // @synthesize expressNativeAd=_expressNativeAd;
 @property(retain, nonatomic) NSObject<ABUGDT_GDTUnifiedNativeAd> *nativeAd; // @synthesize nativeAd=_nativeAd;
-@property(retain, nonatomic) ABUMediatedNativeAd *mediatedNativeAd; // @synthesize mediatedNativeAd=_mediatedNativeAd;
+@property(retain, nonatomic) BUMMediatedNativeAd *mediatedNativeAd; // @synthesize mediatedNativeAd=_mediatedNativeAd;
 @property(retain, nonatomic) UIView<ABUGDT_GDTUnifiedNativeAdView> *unifiedNativeAdView; // @synthesize unifiedNativeAdView=_unifiedNativeAdView;
 @property(retain, nonatomic) NSDictionary *ext; // @synthesize ext=_ext;
 @property(retain, nonatomic) UIView *nativeAdView; // @synthesize nativeAdView=_nativeAdView;
@@ -110,8 +110,8 @@
 - (_Bool)enablePreloadWhenCurrentIsDisplay;
 
 // Remaining properties
-@property(nonatomic) __weak id <ABUCustomBannerAdapterBridge> bridge;
-@property(retain, nonatomic) id <ABUCustomConfigAdapter> configAdapter;
+@property(nonatomic) __weak id <BUMCustomBannerAdapterBridge> bridge;
+@property(retain, nonatomic) id <BUMCustomConfigAdapter> configAdapter;
 @property(readonly, copy) NSString *debugDescription;
 @property(readonly, copy) NSString *description;
 @property(readonly) unsigned long long hash;

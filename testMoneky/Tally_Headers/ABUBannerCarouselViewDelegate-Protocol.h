@@ -10,7 +10,6 @@
 @protocol ABUBannerAdDelegate;
 
 @protocol ABUBannerCarouselViewDelegate <NSObject>
-- (long long)refreshInterval:(ABUBannerCarouselView *)arg1;
 - (id <ABUBannerAdDelegate>)realBannerAdDelegate:(ABUBannerCarouselView *)arg1;
 - (void)bannerCarouselViewDidShowBannerAd:(ABUBannerAd *)arg1;
 - (ABUBannerAd * (^)(void))bannerAdBuilder:(ABUBannerCarouselView *)arg1;

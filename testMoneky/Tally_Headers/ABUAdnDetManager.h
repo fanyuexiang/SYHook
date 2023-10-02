@@ -6,7 +6,7 @@
 
 #import <objc/NSObject.h>
 
-@class NSDictionary, NSMutableDictionary;
+@class NSDictionary, NSLock, NSMutableDictionary;
 
 @interface ABUAdnDetManager : NSObject
 {
@@ -14,18 +14,21 @@
     double _sampleRatio;
     NSMutableDictionary *_rcdDict;
     NSDictionary *_adnDetFeDict;
+    NSLock *_adnDetFeDictLock;
 }
 
 + (id)sharedInstance;
 - (void).cxx_destruct;
+@property(retain, nonatomic) NSLock *adnDetFeDictLock; // @synthesize adnDetFeDictLock=_adnDetFeDictLock;
 @property(copy, nonatomic) NSDictionary *adnDetFeDict; // @synthesize adnDetFeDict=_adnDetFeDict;
 @property(retain, nonatomic) NSMutableDictionary *rcdDict; // @synthesize rcdDict=_rcdDict;
-@property(nonatomic) _Bool isNeedDet; // @synthesize isNeedDet=_isNeedDet;
+@property _Bool isNeedDet; // @synthesize isNeedDet=_isNeedDet;
 @property(nonatomic) double sampleRatio; // @synthesize sampleRatio=_sampleRatio;
 - (id)_detResultWithAdp:(id)arg1;
 - (id)detResultWithAdnSlotId:(id)arg1;
 - (void)detWithAdp:(id)arg1 andAdnSlotId:(id)arg2;
 - (void)setAdnDnFe:(id)arg1;
+- (id)init;
 
 @end
 

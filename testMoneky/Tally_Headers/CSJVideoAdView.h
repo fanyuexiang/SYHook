@@ -6,13 +6,13 @@
 
 #import "CSJAdBaseView.h"
 
-#import "BUVideoPlayerDelegate-Protocol.h"
+#import "CSJPlayerDelegate-Protocol.h"
 #import "CSJVideoEngine-Protocol.h"
 
-@class BUAudioSessionHandler, BUPlayer, BUReachability, BUTimer, CSJAdSlot, CSJDislikeContext, CSJDrawVideoFinishView, CSJMaterialMeta, CSJPlayerTimeObserverModel, CSJVideoAdTracker, NSArray, NSString, UIButton, UITapGestureRecognizer, UIView, UIViewController;
+@class BUAudioSessionHandler, BUReachability, BUTimer, CSJAdSlot, CSJDislikeContext, CSJDrawVideoFinishView, CSJMaterialMeta, CSJPlayer, CSJPlayerTimeObserverModel, CSJVideoAdTracker, NSArray, NSNumber, NSString, UIButton, UITapGestureRecognizer, UIView, UIViewController;
 @protocol CSJNormalVideoFinishViewProtocol, CSJVideoAdViewDelegate;
 
-@interface CSJVideoAdView : CSJAdBaseView <BUVideoPlayerDelegate, CSJVideoEngine>
+@interface CSJVideoAdView : CSJAdBaseView <CSJPlayerDelegate, CSJVideoEngine>
 {
     _Bool _drawVideoClickEnable;
     _Bool _supportAutoPlay;
@@ -24,6 +24,7 @@
     _Bool _last_paused;
     _Bool _drawVideo_tapPaused;
     _Bool _customPlayImage;
+    _Bool _rewardCountFinish;
     _Bool _isCustomVideo;
     _Bool _shouldPause;
     id <CSJVideoAdViewDelegate> _delegate;
@@ -37,7 +38,7 @@
     CSJDrawVideoFinishView *_drawfinishView;
     unsigned long long _customPlayerType;
     BUTimer *_autoPlayTimer;
-    BUPlayer *_player;
+    CSJPlayer *_player;
     BUReachability *_reachability;
     long long _drawVideoPlayCount;
     CSJDislikeContext *_dislikeContext;
@@ -45,6 +46,12 @@
     CSJVideoAdTracker *_videoTracker;
     BUAudioSessionHandler *_sessionHandler;
     CSJPlayerTimeObserverModel *_playerTimeObserverModel;
+    double _totalPlayedTime;
+    long long _playTimes;
+    double _rewardCountDown;
+    NSNumber *_initalRewardCountDown;
+    UIView *_bgView;
+    unsigned long long _breakType;
     CSJAdSlot *_adslot;
     long long _drawVideoType;
     long long _videoAutoPlayType;
@@ -59,6 +66,13 @@
 @property(nonatomic) long long drawVideoType; // @synthesize drawVideoType=_drawVideoType;
 @property(nonatomic) _Bool isCustomVideo; // @synthesize isCustomVideo=_isCustomVideo;
 @property(retain, nonatomic) CSJAdSlot *adslot; // @synthesize adslot=_adslot;
+@property(nonatomic) unsigned long long breakType; // @synthesize breakType=_breakType;
+@property(retain, nonatomic) UIView *bgView; // @synthesize bgView=_bgView;
+@property(retain, nonatomic) NSNumber *initalRewardCountDown; // @synthesize initalRewardCountDown=_initalRewardCountDown;
+@property(nonatomic) double rewardCountDown; // @synthesize rewardCountDown=_rewardCountDown;
+@property(nonatomic) _Bool rewardCountFinish; // @synthesize rewardCountFinish=_rewardCountFinish;
+@property(nonatomic) long long playTimes; // @synthesize playTimes=_playTimes;
+@property(nonatomic) double totalPlayedTime; // @synthesize totalPlayedTime=_totalPlayedTime;
 @property(retain, nonatomic) CSJPlayerTimeObserverModel *playerTimeObserverModel; // @synthesize playerTimeObserverModel=_playerTimeObserverModel;
 @property(retain, nonatomic) BUAudioSessionHandler *sessionHandler; // @synthesize sessionHandler=_sessionHandler;
 @property(retain, nonatomic) CSJVideoAdTracker *videoTracker; // @synthesize videoTracker=_videoTracker;
@@ -71,7 +85,7 @@
 @property(nonatomic) _Bool codeExecuted; // @synthesize codeExecuted=_codeExecuted;
 @property(nonatomic) _Bool isVideoCompletion; // @synthesize isVideoCompletion=_isVideoCompletion;
 @property(retain, nonatomic) BUReachability *reachability; // @synthesize reachability=_reachability;
-@property(retain, nonatomic) BUPlayer *player; // @synthesize player=_player;
+@property(retain, nonatomic) CSJPlayer *player; // @synthesize player=_player;
 @property(retain, nonatomic) BUTimer *autoPlayTimer; // @synthesize autoPlayTimer=_autoPlayTimer;
 @property(nonatomic) unsigned long long customPlayerType; // @synthesize customPlayerType=_customPlayerType;
 @property(nonatomic) _Bool muteSwitch; // @synthesize muteSwitch=_muteSwitch;
@@ -96,6 +110,11 @@
 - (_Bool)_conformsToProtocolAction;
 - (void)enableControlAndGesture;
 - (_Bool)getAutoPlayVideoSwitch;
+- (void)onLivePlayedSeconds:(long long)arg1;
+- (void)onLiveStreamError:(id)arg1;
+- (void)onLiveStreamShowTimeFinish;
+- (void)onLiveStreamStateUpdate:(long long)arg1;
+- (void)onLiveStreamRenderStart;
 - (id)getTrackTag;
 - (void)reportLabel:(id)arg1 adExtraDataType:(long long)arg2;
 - (void)videoDetailPageReportLabel:(id)arg1 adExtraDataType:(long long)arg2;
@@ -117,8 +136,11 @@
 - (void)tapPlayforDrawVideo;
 - (void)hideNonWifiPromptView:(id)arg1;
 - (_Bool)videoPlayerPlaying;
+- (void)setPlayerControlElement:(long long)arg1;
 - (void)setMute:(_Bool)arg1;
 - (double)currentPlayTime;
+- (long long)state;
+- (void)stopWithType:(unsigned long long)arg1;
 - (void)pause;
 - (void)play;
 - (void)audioSessionHandleWithMute:(_Bool)arg1;

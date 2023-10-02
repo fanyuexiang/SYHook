@@ -15,6 +15,7 @@
 
 - (void).cxx_destruct;
 @property(retain, nonatomic) BUDislike *iteration; // @synthesize iteration=_iteration;
+- (void)didSelectedFilterWordWithReason:(id)arg1;
 - (id)initWithNativeAd:(id)arg1;
 
 // Remaining properties

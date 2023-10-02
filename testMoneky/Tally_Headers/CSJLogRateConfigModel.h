@@ -14,9 +14,11 @@
 {
     float _globalRate;
     float _classPropertyRate;
+    float _getBiddingToken;
 }
 
 + (id)fromDictionary:(id)arg1;
+@property(nonatomic) float getBiddingToken; // @synthesize getBiddingToken=_getBiddingToken;
 @property(nonatomic) float classPropertyRate; // @synthesize classPropertyRate=_classPropertyRate;
 @property(nonatomic) float globalRate; // @synthesize globalRate=_globalRate;
 - (id)toDictionary;

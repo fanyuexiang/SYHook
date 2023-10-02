@@ -26,9 +26,21 @@
     NSString *_amount;
     NSString *_iconName;
     NSString *_serverID;
+    NSNumber *_asset_id;
+    long long _label_id;
+    long long _cid;
+    long long _cr;
+    long long _every;
+    NSString *_sv;
 }
 
 - (void).cxx_destruct;
+@property(copy, nonatomic) NSString *sv; // @synthesize sv=_sv;
+@property(nonatomic) long long every; // @synthesize every=_every;
+@property(nonatomic) long long cr; // @synthesize cr=_cr;
+@property(nonatomic) long long cid; // @synthesize cid=_cid;
+@property(nonatomic) long long label_id; // @synthesize label_id=_label_id;
+@property(copy, nonatomic) NSNumber *asset_id; // @synthesize asset_id=_asset_id;
 @property(copy, nonatomic) NSString *serverID; // @synthesize serverID=_serverID;
 @property(copy, nonatomic) NSString *iconName; // @synthesize iconName=_iconName;
 @property(copy, nonatomic) NSString *amount; // @synthesize amount=_amount;
@@ -45,6 +57,7 @@
 @property(nonatomic) long long cyclePeriod; // @synthesize cyclePeriod=_cyclePeriod;
 @property(copy, nonatomic) NSString *cycleListStr; // @synthesize cycleListStr=_cycleListStr;
 @property(retain, nonatomic) NSMutableAttributedString *titleAttributed; // @synthesize titleAttributed=_titleAttributed;
+- (id)customPeriodTip:(id)arg1;
 - (void)updateInfo:(id)arg1 tallyType:(long long)arg2;
 - (id)initWithDateFormat:(id)arg1 data:(id)arg2;
 

@@ -14,6 +14,7 @@
     UIButton *_lastSelectedBtn;
     NSString *_typeID;
     UIScrollView *_scrollView;
+    _Bool _justRemark;
     CDUnknownBlockType _didSelectedRemarkBlock;
     UIColor *_titleColor;
     long long _bookid;
@@ -21,6 +22,7 @@
 
 + (id)recommendRemarkForTypeID:(id)arg1;
 - (void).cxx_destruct;
+@property(nonatomic) _Bool justRemark; // @synthesize justRemark=_justRemark;
 @property(nonatomic) long long bookid; // @synthesize bookid=_bookid;
 @property(retain, nonatomic) UIColor *titleColor; // @synthesize titleColor=_titleColor;
 @property(copy, nonatomic) CDUnknownBlockType didSelectedRemarkBlock; // @synthesize didSelectedRemarkBlock=_didSelectedRemarkBlock;

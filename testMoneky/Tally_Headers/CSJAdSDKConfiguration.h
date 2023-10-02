@@ -17,8 +17,6 @@
 - (id)forwardingTargetForSelector:(SEL)arg1;
 
 // Remaining properties
-@property(retain, nonatomic) NSNumber *CCPA; // @dynamic CCPA;
-@property(retain, nonatomic) NSNumber *GDPR; // @dynamic GDPR;
 @property(nonatomic) _Bool SDKDEBUG; // @dynamic SDKDEBUG;
 @property(copy) NSString *abSDKVersion; // @dynamic abSDKVersion;
 @property(copy) NSString *abvidString; // @dynamic abvidString;
@@ -28,21 +26,16 @@
 @property(copy, nonatomic) NSString *appID; // @dynamic appID;
 @property(retain, nonatomic) UIImage *appLogoImage; // @dynamic appLogoImage;
 @property(nonatomic) unsigned long long audioSessionType; // @dynamic audioSessionType;
-@property(retain, nonatomic) NSNumber *coppa; // @dynamic coppa;
 @property(copy, nonatomic) NSString *customIdfa; // @dynamic customIdfa;
 @property(retain, nonatomic) NSNumber *debugLog; // @dynamic debugLog;
 @property(copy, nonatomic) NSArray *inherentUserData; // @dynamic inherentUserData;
-@property(nonatomic) long long logLevel; // @dynamic logLevel;
 @property(retain, nonatomic) id <CSJAdSDKPrivacyProvider> privacyProvider; // @dynamic privacyProvider;
 @property(copy, nonatomic) NSString *secretKey; // @dynamic secretKey;
-@property(retain, nonatomic) NSNumber *serverCoppa; // @dynamic serverCoppa;
-@property(retain, nonatomic) NSNumber *serverGDPR; // @dynamic serverGDPR;
-@property(nonatomic) unsigned long long territory; // @dynamic territory;
-@property(copy, nonatomic) NSString *territoryCSJappID; // @dynamic territoryCSJappID;
 @property(retain, nonatomic) NSNumber *themeStatus; // @dynamic themeStatus;
 @property(nonatomic) _Bool unityDeveloper; // @dynamic unityDeveloper;
 @property(copy, nonatomic) NSString *unityEVString; // @dynamic unityEVString;
 @property(copy, nonatomic) NSString *unitySetString; // @dynamic unitySetString;
+@property(nonatomic) _Bool useMediation; // @dynamic useMediation;
 @property(copy, nonatomic) NSString *userExtData; // @dynamic userExtData;
 @property(nonatomic) long long webViewOfflineType; // @dynamic webViewOfflineType;
 

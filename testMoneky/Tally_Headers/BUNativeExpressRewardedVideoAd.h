@@ -9,8 +9,8 @@
 #import "BUAdClientBiddingProtocol-Protocol.h"
 #import "BUMopubAdMarkUpDelegate-Protocol.h"
 
-@class BURewardedVideoModel, NSDictionary, NSString, UIView;
-@protocol BUNativeExpressRewardedVideoAdDelegate;
+@class BUDictionary, BURewardedVideoModel, NSObject, NSString, UIView;
+@protocol BUExpressRewardedVideoAdMediationProtocol, BUNativeExpressRewardedVideoAdDelegate;
 
 @interface BUNativeExpressRewardedVideoAd : BUInterfaceBaseObject <BUMopubAdMarkUpDelegate, BUAdClientBiddingProtocol>
 {
@@ -23,7 +23,6 @@
 @property(nonatomic) __weak id <BUNativeExpressRewardedVideoAdDelegate> delegate; // @synthesize delegate=_delegate;
 - (void)nativeExpressRewardedVideoAdDidCloseOtherController:(id)arg1 interactionType:(long long)arg2;
 - (void)nativeExpressRewardedVideoAdServerRewardDidFail:(id)arg1 error:(id)arg2;
-- (void)nativeExpressRewardedVideoAdServerRewardDidFail:(id)arg1;
 - (void)nativeExpressRewardedVideoAdServerRewardDidSucceed:(id)arg1 verify:(_Bool)arg2;
 - (void)nativeExpressRewardedVideoAdDidPlayFinish:(id)arg1 didFailWithError:(id)arg2;
 - (void)nativeExpressRewardedVideoAdDidClickSkip:(id)arg1;
@@ -40,16 +39,17 @@
 - (void)nativeExpressRewardedVideoAdDidLoad:(id)arg1;
 - (id)initWithSlot:(id)arg1 rewardedVideoModel:(id)arg2;
 - (id)initWithSlotID:(id)arg1 rewardedVideoModel:(id)arg2;
+- (void)nativeExpressRewardedVideoAdDidShowFailed:(id)arg1 error:(id)arg2;
+@property(readonly, nonatomic) NSObject<BUExpressRewardedVideoAdMediationProtocol> *mediation;
 
 // Remaining properties
-@property(readonly, nonatomic, getter=isAdValid) _Bool adValid; // @dynamic adValid;
 @property(readonly, copy) NSString *debugDescription;
 @property(readonly, copy) NSString *description;
 @property(readonly, nonatomic) double expireTimestamp; // @dynamic expireTimestamp;
 @property(retain, nonatomic) UIView *expressAdView; // @dynamic expressAdView;
 @property(readonly) unsigned long long hash;
 @property(readonly, nonatomic) _Bool materialMetaIsFromPreload; // @dynamic materialMetaIsFromPreload;
-@property(readonly, copy, nonatomic) NSDictionary *mediaExt; // @dynamic mediaExt;
+@property(readonly, copy, nonatomic) BUDictionary *mediaExt; // @dynamic mediaExt;
 @property(nonatomic) __weak id <BUNativeExpressRewardedVideoAdDelegate> rewardPlayAgainInteractionDelegate; // @dynamic rewardPlayAgainInteractionDelegate;
 @property(retain, nonatomic) BURewardedVideoModel *rewardedVideoModel; // @dynamic rewardedVideoModel;
 @property(readonly) Class superclass;

@@ -6,7 +6,7 @@
 
 #import "NSObject-Protocol.h"
 
-@class BUPlayer, NSDictionary, NSError;
+@class CSJPlayer, NSDictionary, NSError;
 
 @protocol CSJNativeExpressRewardedVideoAdViewDelegate <NSObject>
 
@@ -17,7 +17,7 @@
 - (void)nativeExpressRewardedVideoPushPlayableLandingPage;
 - (void)dismissCurrentViewControllerIsSkip:(_Bool)arg1;
 - (void)switchToWebViewController:(_Bool)arg1;
-- (void)nativeExpressRewardedVideoDidPlayFinish:(BUPlayer *)arg1 error:(NSError *)arg2;
-- (void)nativeExpressRewardedVideoDidPlayRewardTime:(BUPlayer *)arg1;
+- (void)nativeExpressRewardedVideoDidPlayFinish:(CSJPlayer *)arg1 error:(NSError *)arg2;
+- (void)nativeExpressRewardedVideoDidPlayRewardTime:(CSJPlayer *)arg1;
 @end
 

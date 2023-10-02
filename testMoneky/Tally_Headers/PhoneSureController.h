@@ -9,21 +9,25 @@
 #import "UIGestureRecognizerDelegate-Protocol.h"
 #import "UITextFieldDelegate-Protocol.h"
 
-@class LoginPhoneTextView, NSString, RegisterAgreePrivacyView, UIButton, UITextField;
+@class LoginPhoneTextView, NSString, RegisterAgreePrivacyPopupViewController, RegisterAgreePrivacyView, UIButton, UITextField;
 
 @interface PhoneSureController : UIViewController <UITextFieldDelegate, UIGestureRecognizerDelegate>
 {
     UIButton *_nextBtn;
     _Bool _agreementTipShow;
+    _Bool _autoShowedTF;
     long long _action;
     NSString *_phone;
     LoginPhoneTextView *_phoneView;
     UITextField *_phoneTextField;
     RegisterAgreePrivacyView *_privacyView;
+    RegisterAgreePrivacyPopupViewController *_privacyPopupCtr;
 }
 
 - (void).cxx_destruct;
+@property(nonatomic) _Bool autoShowedTF; // @synthesize autoShowedTF=_autoShowedTF;
 @property(nonatomic) _Bool agreementTipShow; // @synthesize agreementTipShow=_agreementTipShow;
+@property(nonatomic) __weak RegisterAgreePrivacyPopupViewController *privacyPopupCtr; // @synthesize privacyPopupCtr=_privacyPopupCtr;
 @property(retain, nonatomic) RegisterAgreePrivacyView *privacyView; // @synthesize privacyView=_privacyView;
 @property(nonatomic) __weak UITextField *phoneTextField; // @synthesize phoneTextField=_phoneTextField;
 @property(retain, nonatomic) LoginPhoneTextView *phoneView; // @synthesize phoneView=_phoneView;
@@ -37,9 +41,10 @@
 - (void)verificationPhone;
 - (void)nextAction;
 - (void)tapAction;
-- (void)registerTipShow;
+- (void)registerTipShow:(SEL)arg1 Obj:(id)arg2;
 - (void)goAgreement;
 - (void)viewDidLoad;
+- (void)viewDidAppear:(_Bool)arg1;
 - (void)viewWillAppear:(_Bool)arg1;
 - (void)dealloc;
 

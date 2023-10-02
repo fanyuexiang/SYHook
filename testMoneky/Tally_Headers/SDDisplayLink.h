@@ -12,12 +12,16 @@
 {
     id _target;
     SEL _selector;
+    double _previousFireTime;
+    double _nextFireTime;
     CADisplayLink *_displayLink;
 }
 
 + (id)displayLinkWithTarget:(id)arg1 selector:(SEL)arg2;
 - (void).cxx_destruct;
 @property(retain, nonatomic) CADisplayLink *displayLink; // @synthesize displayLink=_displayLink;
+@property(nonatomic) double nextFireTime; // @synthesize nextFireTime=_nextFireTime;
+@property(nonatomic) double previousFireTime; // @synthesize previousFireTime=_previousFireTime;
 @property(readonly, nonatomic) SEL selector; // @synthesize selector=_selector;
 @property(readonly, nonatomic) __weak id target; // @synthesize target=_target;
 - (void)displayLinkDidRefresh:(id)arg1;

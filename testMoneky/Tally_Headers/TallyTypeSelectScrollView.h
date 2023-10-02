@@ -18,6 +18,7 @@
     TypeButton *_addBtn;
     _Bool _hideSettingBtn;
     _Bool _isFromFamily;
+    _Bool _unlockSuccessed;
     long long _tallyType;
     CDUnknownBlockType _didSelectedType;
     NTallyModel *_editModel;
@@ -29,6 +30,7 @@
 }
 
 - (void).cxx_destruct;
+@property(nonatomic) _Bool unlockSuccessed; // @synthesize unlockSuccessed=_unlockSuccessed;
 @property(nonatomic) long long selectcid; // @synthesize selectcid=_selectcid;
 @property(copy, nonatomic) NSString *removeTypeID; // @synthesize removeTypeID=_removeTypeID;
 @property(nonatomic) _Bool isFromFamily; // @synthesize isFromFamily=_isFromFamily;

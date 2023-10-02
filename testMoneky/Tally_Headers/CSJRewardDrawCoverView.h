@@ -19,7 +19,7 @@
 - (void).cxx_destruct;
 @property(retain, nonatomic) CSJRewardedVideoDownloadBarView *downloadView; // @synthesize downloadView=_downloadView;
 @property(retain, nonatomic) UIView *playerView; // @synthesize playerView=_playerView;
-- (id)playerViewContainerView;
+- (id)Loss_OfCom;
 - (void)downloadButtonTapped:(id)arg1 extraDic:(id)arg2;
 - (void)downloadBarTapped:(id)arg1 extraDic:(id)arg2;
 - (void)pbu_override_buildView;

@@ -6,18 +6,17 @@
 
 #import <objc/NSObject.h>
 
-#import "ABUMediatedNativeAdData-Protocol.h"
+#import "BUMMediatedNativeAdData-Protocol.h"
 
-@class ABUImage, NSArray, NSDictionary, NSString;
-@protocol ABUCsj_BUMaterialMeta;
+@class BUMImage, BUMaterialMeta, NSArray, NSDictionary, NSString;
 
-@interface ABUCsjNativeAdData : NSObject <ABUMediatedNativeAdData>
+@interface ABUCsjNativeAdData : NSObject <BUMMediatedNativeAdData>
 {
-    id <ABUCsj_BUMaterialMeta> _data;
+    BUMaterialMeta *_data;
 }
 
 - (void).cxx_destruct;
-@property(retain, nonatomic) id <ABUCsj_BUMaterialMeta> data; // @synthesize data=_data;
+@property(retain, nonatomic) BUMaterialMeta *data; // @synthesize data=_data;
 - (id)_convertReasonFromBUDislikeWords:(id)arg1;
 @property(readonly, copy, nonatomic) NSArray *dislikeReasons;
 @property(readonly, copy, nonatomic) NSString *brandName;
@@ -35,8 +34,8 @@
 @property(readonly, copy, nonatomic) NSString *source;
 @property(readonly, copy, nonatomic) NSString *adDescription;
 @property(readonly, copy, nonatomic) NSString *adTitle;
-@property(readonly, nonatomic) ABUImage *adLogo;
-@property(readonly, nonatomic) ABUImage *icon;
+@property(readonly, nonatomic) BUMImage *adLogo;
+@property(readonly, nonatomic) BUMImage *icon;
 @property(readonly, copy, nonatomic) NSArray *imageList;
 @property(readonly, nonatomic) long long callToType;
 - (id)initWithAd:(id)arg1;

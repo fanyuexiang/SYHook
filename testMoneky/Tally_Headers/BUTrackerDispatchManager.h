@@ -12,11 +12,14 @@
 
 + (id)sharedInstance;
 - (id)init;
-- (void)eventData:(id)arg1 clockType:(long long)arg2 trackType:(long long)arg3;
-- (void)stats_eventData:(id)arg1 clockType:(long long)arg2;
-- (void)stats_eventData:(id)arg1;
-- (void)applog_eventData:(id)arg1 clockType:(long long)arg2;
-- (void)applog_eventData:(id)arg1;
+- (void)___urlDecodeIfNeedWithMutDict:(id)arg1 key:(id)arg2;
+- (id)___params_urlDecodeIfNeedWithParmas:(id)arg1;
+- (void)__appendToDict:(id)arg1 appendKey:(id)arg2 appendInfo:(id)arg3;
+- (id)__paramsAppendUniversalInfoFromStatusWithOriginParams:(id)arg1;
+- (id)__paramsAppendUniversalInfoFromApplogWithOriginParams:(id)arg1;
+- (void)ADX_VoidOut:(id)arg1 trackType:(long long)arg2;
+- (void)If_IconAn:(id)arg1;
+- (void)Dic_LossHash:(id)arg1;
 - (void)setup;
 
 @end

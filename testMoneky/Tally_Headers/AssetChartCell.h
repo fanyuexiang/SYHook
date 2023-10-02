@@ -6,12 +6,12 @@
 
 #import <UIKit/UITableViewCell.h>
 
-@class AssetChartModel, CBAttributedLabel, UIImageView, UILabel, UIView;
+@class AssetChartModel, UIImageView, UILabel, UIView;
 
 @interface AssetChartCell : UITableViewCell
 {
     UIImageView *_imgView;
-    CBAttributedLabel *_assetLabel;
+    UILabel *_assetLabel;
     UILabel *_amountLabel;
     UIView *_progressView;
     UILabel *_remarkLabel;
@@ -20,6 +20,7 @@
 
 - (void).cxx_destruct;
 @property(retain, nonatomic) AssetChartModel *model; // @synthesize model=_model;
+- (id)assetLabelTextValue:(id)arg1 percentValue:(id)arg2;
 - (id)initWithStyle:(long long)arg1 reuseIdentifier:(id)arg2;
 
 @end

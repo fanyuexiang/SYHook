@@ -10,6 +10,8 @@
 
 @interface CSJTemplateDataModel : NSObject
 {
+    long long _type;
+    long long _scene;
     NSString *_templateDataId;
     NSString *_url;
     NSString *_version;
@@ -17,9 +19,11 @@
     NSString *_md5;
     double _createDateTimeInterval;
     double _modifyDateTimeInterval;
+    double _networkTimeout;
 }
 
 - (void).cxx_destruct;
+@property(nonatomic) double networkTimeout; // @synthesize networkTimeout=_networkTimeout;
 @property(nonatomic) double modifyDateTimeInterval; // @synthesize modifyDateTimeInterval=_modifyDateTimeInterval;
 @property(nonatomic) double createDateTimeInterval; // @synthesize createDateTimeInterval=_createDateTimeInterval;
 @property(copy, nonatomic) NSString *md5; // @synthesize md5=_md5;
@@ -27,13 +31,18 @@
 @property(copy, nonatomic) NSString *version; // @synthesize version=_version;
 @property(copy, nonatomic) NSString *url; // @synthesize url=_url;
 @property(copy, nonatomic) NSString *templateDataId; // @synthesize templateDataId=_templateDataId;
+@property(nonatomic) long long scene; // @synthesize scene=_scene;
+@property(nonatomic) long long type; // @synthesize type=_type;
 - (id)dictionaryValue;
 - (id)init;
 - (id)initWithDicitonary:(id)arg1;
 - (void)updateModifyDateTime;
 - (void)updateCreateDateTime;
+- (double)realNetworkTimeout;
+- (id)modelKey;
 - (_Bool)haveDataCache;
 - (_Bool)haveURLCache;
+- (_Bool)isDynamicType;
 
 @end
 

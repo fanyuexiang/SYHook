@@ -6,13 +6,15 @@
 
 #import <UIKit/UIView.h>
 
-@class UIButton, UILabel, UIWindow;
+@class UIButton, UIImageView, UILabel, UIWindow;
 
 @interface CSJRewardAlertView : UIView
 {
+    _Bool _didRemoveSKOverlay;
     CDUnknownBlockType _confirm;
     CDUnknownBlockType _cancel;
     UIView *_containerView;
+    UIImageView *_iconImg;
     UILabel *_titleLable;
     UIButton *_confirmBtn;
     UIButton *_cancelBtn;
@@ -20,21 +22,21 @@
 }
 
 - (void).cxx_destruct;
+@property(nonatomic) _Bool didRemoveSKOverlay; // @synthesize didRemoveSKOverlay=_didRemoveSKOverlay;
 @property(retain, nonatomic) UIWindow *bgWindow; // @synthesize bgWindow=_bgWindow;
 @property(retain, nonatomic) UIButton *cancelBtn; // @synthesize cancelBtn=_cancelBtn;
 @property(retain, nonatomic) UIButton *confirmBtn; // @synthesize confirmBtn=_confirmBtn;
 @property(retain, nonatomic) UILabel *titleLable; // @synthesize titleLable=_titleLable;
+@property(retain, nonatomic) UIImageView *iconImg; // @synthesize iconImg=_iconImg;
 @property(retain, nonatomic) UIView *containerView; // @synthesize containerView=_containerView;
 @property(copy, nonatomic) CDUnknownBlockType cancel; // @synthesize cancel=_cancel;
 @property(copy, nonatomic) CDUnknownBlockType confirm; // @synthesize confirm=_confirm;
-- (void)updateTextOfCancel:(id)arg1;
-- (void)updateTextOfConfirm:(id)arg1;
+- (void)Char_NowBy:(id)arg1;
+- (void)Std_CopyR0:(id)arg1;
+- (void)If_MayExt:(id)arg1;
 - (void)updateTextOfTitle:(id)arg1;
-- (void)updateTextOfTitleLabelByKey:(id)arg1;
-- (void)updateTextOfCancelButtonByKey:(id)arg1;
-- (void)dealloc;
 - (void)disappear;
-- (void)showInWindow;
+- (void)Ios_LogoJs;
 - (void)showInView:(id)arg1;
 - (void)clickCancelBtn;
 - (void)clickConfirmBtn;

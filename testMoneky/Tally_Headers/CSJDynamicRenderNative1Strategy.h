@@ -10,11 +10,11 @@
 {
 }
 
-- (id)logKeyName;
+- (id)Use_HttpIos;
 - (long long)renderType;
-- (id)layoutDebugInfoKey;
-- (long long)timeoutErrorCode;
-- (long long)dynamicEngineVersion;
+- (id)Rect_IdfaShow;
+- (long long)Tmp_FtcMute;
+- (long long)NO_HttpCls;
 - (id)dynamic_render_success;
 - (id)dynamic_render_error;
 - (id)dynamic_render_start;

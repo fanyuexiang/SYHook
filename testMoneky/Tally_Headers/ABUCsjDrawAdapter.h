@@ -6,20 +6,19 @@
 
 #import <objc/NSObject.h>
 
-#import "ABUCsj_BUNativeAdDelegate-Protocol.h"
-#import "ABUCsj_BUNativeExpressAdViewDelegate-Protocol.h"
-#import "ABUCsj_BUVideoAdViewDelegate-Protocol.h"
-#import "ABUCustomDrawAdapter-Protocol.h"
-#import "ABU_BUNativeAdsManagerDelegate-Protocol.h"
-#import "ABU_BUNativeExpressAdViewDelegate-Protocol.h"
+#import "BUMCustomDrawAdapter-Protocol.h"
+#import "BUNativeAdDelegate-Protocol.h"
+#import "BUNativeAdsManagerDelegate-Protocol.h"
+#import "BUNativeExpressAdViewDelegate-Protocol.h"
+#import "BUVideoAdViewDelegate-Protocol.h"
 
-@class NSArray, NSMutableDictionary, NSString;
-@protocol ABUCustomConfigAdapter, ABUCustomDrawAdapterBridge, ABU_BUNativeAdsManager, ABU_BUNativeExpressAdManager;
+@class BUNativeAdsManager, BUNativeExpressAdManager, NSArray, NSMutableDictionary, NSString;
+@protocol BUMCustomConfigAdapter, BUMCustomDrawAdapterBridge;
 
-@interface ABUCsjDrawAdapter : NSObject <ABU_BUNativeAdsManagerDelegate, ABU_BUNativeExpressAdViewDelegate, ABUCsj_BUNativeAdDelegate, ABUCsj_BUNativeExpressAdViewDelegate, ABUCsj_BUVideoAdViewDelegate, ABUCustomDrawAdapter>
+@interface ABUCsjDrawAdapter : NSObject <BUNativeAdsManagerDelegate, BUNativeExpressAdViewDelegate, BUNativeAdDelegate, BUVideoAdViewDelegate, BUMCustomDrawAdapter>
 {
-    id <ABU_BUNativeExpressAdManager> _expressAdManager;
-    id <ABU_BUNativeAdsManager> _adManager;
+    BUNativeExpressAdManager *_expressAdManager;
+    BUNativeAdsManager *_adManager;
     NSArray *_dislikeWords;
     NSMutableDictionary *_nativeAdMap;
     NSMutableDictionary *_dislikeReportors;
@@ -29,8 +28,8 @@
 @property(retain, nonatomic) NSMutableDictionary *dislikeReportors; // @synthesize dislikeReportors=_dislikeReportors;
 @property(retain, nonatomic) NSMutableDictionary *nativeAdMap; // @synthesize nativeAdMap=_nativeAdMap;
 @property(copy, nonatomic) NSArray *dislikeWords; // @synthesize dislikeWords=_dislikeWords;
-@property(retain, nonatomic) id <ABU_BUNativeAdsManager> adManager; // @synthesize adManager=_adManager;
-@property(retain, nonatomic) id <ABU_BUNativeExpressAdManager> expressAdManager; // @synthesize expressAdManager=_expressAdManager;
+@property(retain, nonatomic) BUNativeAdsManager *adManager; // @synthesize adManager=_adManager;
+@property(retain, nonatomic) BUNativeExpressAdManager *expressAdManager; // @synthesize expressAdManager=_expressAdManager;
 - (_Bool)conformsToProtocol:(id)arg1;
 - (void)videoAdViewDidCloseOtherController:(id)arg1 interactionType:(long long)arg2;
 - (void)videoAdViewFinishViewDidClick:(id)arg1;
@@ -62,6 +61,7 @@
 - (void)_convertDislikeWordsFromDislikeWords:(id)arg1 to:(id)arg2;
 - (id)_convertDislikeWordsFromReasons:(id)arg1 source:(id)arg2;
 - (void)reportDislikeAd:(id)arg1 withReasons:(id)arg2;
+- (void)unregisterClickableViewsForDrawAd:(id)arg1;
 - (void)registerContainerView:(id)arg1 andClickableViews:(id)arg2 forDrawAd:(id)arg3;
 - (void)setRootViewController:(id)arg1 forExpressAdView:(id)arg2;
 - (void)setRootViewController:(id)arg1 forDrawAd:(id)arg2;
@@ -72,8 +72,8 @@
 - (void)loadDrawAdWithSlotID:(id)arg1 andSize:(struct CGSize)arg2 andParameter:(id)arg3;
 
 // Remaining properties
-@property(nonatomic) __weak id <ABUCustomDrawAdapterBridge> bridge;
-@property(retain, nonatomic) id <ABUCustomConfigAdapter> configAdapter;
+@property(nonatomic) __weak id <BUMCustomDrawAdapterBridge> bridge;
+@property(retain, nonatomic) id <BUMCustomConfigAdapter> configAdapter;
 @property(readonly, copy) NSString *debugDescription;
 @property(readonly, copy) NSString *description;
 @property(readonly) unsigned long long hash;

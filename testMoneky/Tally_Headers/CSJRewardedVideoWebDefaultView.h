@@ -43,13 +43,13 @@
 - (void)logoImageViewAction;
 - (void)downloadButtonTapped;
 - (id)buttonText;
-- (void)endCardClickEvent;
+- (void)Ran_GDPRTmp;
 - (void)buildUpView;
-- (void)layoutInterstitialStyle;
-- (double)scaleRatio;
-- (void)layoutFullScreenStyle;
+- (void)ID_Md5Cell;
+- (double)Weak_CharLoss;
+- (void)URL_Y1Sum;
 - (void)layoutSubviews;
-- (id)initViewWithSlot:(id)arg1 ad:(id)arg2;
+- (id)initLIpv4_IdfaPos:(id)arg1 ad:(id)arg2;
 
 @end
 

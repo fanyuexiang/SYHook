@@ -6,9 +6,13 @@
 
 #import <objc/NSObject.h>
 
-@class CSJAdSlot, CSJMaterialMeta, CSJURitSettingModel, NSError, NSString;
+#import "CSJShakeTriggerDataSource-Protocol.h"
+#import "CSJShakeTriggerDelegate-Protocol.h"
 
-@interface CSJAdInfoViewModel : NSObject
+@class CSJAdSlot, CSJMaterialMeta, CSJURitSettingModel, CSJUgenViewModel, NSError, NSString;
+@protocol CSJShakeTriggerDelegate;
+
+@interface CSJAdInfoViewModel : NSObject <CSJShakeTriggerDataSource, CSJShakeTriggerDelegate>
 {
     CSJAdSlot *_slot;
     CSJMaterialMeta *_materialMeta;
@@ -16,11 +20,13 @@
     NSError *_fetchError;
     NSString *_tplPlug;
     NSString *_diffTplPlug;
+    CSJUgenViewModel *_ugenViewModel;
     CSJURitSettingModel *_ritSettingModel;
 }
 
 - (void).cxx_destruct;
 @property(retain, nonatomic) CSJURitSettingModel *ritSettingModel; // @synthesize ritSettingModel=_ritSettingModel;
+@property(retain, nonatomic) CSJUgenViewModel *ugenViewModel; // @synthesize ugenViewModel=_ugenViewModel;
 @property(copy, nonatomic) NSString *diffTplPlug; // @synthesize diffTplPlug=_diffTplPlug;
 @property(copy, nonatomic) NSString *tplPlug; // @synthesize tplPlug=_tplPlug;
 @property(retain, nonatomic) NSError *fetchError; // @synthesize fetchError=_fetchError;
@@ -40,7 +46,7 @@
 - (double)renderDelayTimeSecond;
 - (id)creativeDicForDynamicRender;
 - (_Bool)supportNativeDynamicRender;
-- (_Bool)fullScreenSkipChangeToClose;
+- (id)templateDataModel;
 - (_Bool)needToGetTemplateDataInfo;
 - (long long)backupRenderControl;
 - (long long)renderSequence;
@@ -48,6 +54,17 @@
 - (id)templateRenderSetting;
 - (id)currentRitSettingModel;
 - (id)initWithSlot:(id)arg1 materialMeta:(id)arg2 source:(long long)arg3;
+- (id)shakeTriggerScene;
+- (long long)calculationMethod;
+- (double)shakeAmplitude;
+@property(nonatomic) _Bool validShakeTrigger;
+@property(nonatomic) __weak id <CSJShakeTriggerDelegate> shakeTriggerDelegate;
+
+// Remaining properties
+@property(readonly, copy) NSString *debugDescription;
+@property(readonly, copy) NSString *description;
+@property(readonly) unsigned long long hash;
+@property(readonly) Class superclass;
 
 @end
 

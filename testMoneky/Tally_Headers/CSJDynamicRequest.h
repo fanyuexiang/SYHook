@@ -8,9 +8,11 @@
 
 @interface CSJDynamicRequest : CSJAdNetworkRequest
 {
+    double _networkTimeout;
 }
 
-+ (id)requestWithURL:(id)arg1 method:(long long)arg2 parameter:(id)arg3 completionWithSuccess:(CDUnknownBlockType)arg4 failure:(CDUnknownBlockType)arg5;
++ (id)requestWithURL:(id)arg1 method:(long long)arg2 networkTimeout:(double)arg3 parameter:(id)arg4 completionWithSuccess:(CDUnknownBlockType)arg5 failure:(CDUnknownBlockType)arg6;
+@property(nonatomic) double networkTimeout; // @synthesize networkTimeout=_networkTimeout;
 - (unsigned long long)bu_requestCachePolicy;
 - (double)requestTimeoutInterval;
 

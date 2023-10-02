@@ -15,6 +15,7 @@
     UIView *_responseView;
     long long _clickViewSource;
     long long _clickAreaCategory;
+    long long _convertActionType;
     long long _downTime;
     long long _upTime;
     struct CGPoint _downPoint;
@@ -28,6 +29,7 @@
 @property(nonatomic) struct CGPoint reportDownPoint; // @synthesize reportDownPoint=_reportDownPoint;
 @property(nonatomic) long long upTime; // @synthesize upTime=_upTime;
 @property(nonatomic) long long downTime; // @synthesize downTime=_downTime;
+@property(nonatomic) long long convertActionType; // @synthesize convertActionType=_convertActionType;
 @property(nonatomic) long long clickAreaCategory; // @synthesize clickAreaCategory=_clickAreaCategory;
 @property(nonatomic) _Bool removeOpenPlayableLandingPage; // @synthesize removeOpenPlayableLandingPage=_removeOpenPlayableLandingPage;
 @property(nonatomic) _Bool openPlayableLandingPage; // @synthesize openPlayableLandingPage=_openPlayableLandingPage;

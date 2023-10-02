@@ -8,7 +8,8 @@
 
 #import "NSCoding-Protocol.h"
 
-@class NSString;
+@class NSObject, NSString;
+@protocol BUImageMediationProtocol;
 
 @interface BUImage : BUInterfaceBaseObject <NSCoding>
 {
@@ -18,6 +19,7 @@
 - (void).cxx_destruct;
 @property(retain, nonatomic) BUImage *iteration; // @synthesize iteration=_iteration;
 - (id)initWithDictionary:(id)arg1;
+@property(readonly, nonatomic) NSObject<BUImageMediationProtocol> *mediation;
 
 // Remaining properties
 @property(nonatomic) float duration; // @dynamic duration;

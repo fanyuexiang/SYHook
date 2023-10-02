@@ -10,7 +10,7 @@
 {
 }
 
-- (void)pbu_fillData_scaleStarViewWithTimeScale:(double)arg1;
+- (void)From_Y1Http:(double)arg1;
 - (void)pbu_override_buildViewData;
 - (void)pbu_override_buildView;
 

@@ -65,7 +65,7 @@
 - (id)_getTotalSpace;
 - (id)_getFreeSpace;
 - (id)_getIDFA;
-- (id)init;
+- (id)initWithUserAllow:(_Bool)arg1 idfaEnable:(_Bool)arg2;
 
 @end
 

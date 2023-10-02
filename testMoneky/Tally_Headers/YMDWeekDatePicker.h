@@ -35,6 +35,7 @@
 - (void)selectCurrentDate;
 - (void)show;
 - (void)cb_getDayWeek;
+- (void)moveToSelectDate;
 - (void)adjustCurrentSelectStateByDate:(id)arg1;
 - (void)setupYearMonthDayWeek;
 

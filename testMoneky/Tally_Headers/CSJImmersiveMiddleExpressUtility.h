@@ -13,19 +13,18 @@
     CSJNativeExpressAdView *_expressAdView;
     CSJNativeAd *_nativeAd;
     NSDictionary *_relatedMaterialMetaJSON;
-    NSMutableDictionary *_relatedAdAppID;
+    NSMutableDictionary *_Cn_DescCCPA;
 }
 
 - (void).cxx_destruct;
-@property(retain, nonatomic) NSMutableDictionary *relatedAdAppID; // @synthesize relatedAdAppID=_relatedAdAppID;
+@property(retain, nonatomic) NSMutableDictionary *Cn_DescCCPA; // @synthesize Cn_DescCCPA=_Cn_DescCCPA;
 @property(copy, nonatomic) NSDictionary *relatedMaterialMetaJSON; // @synthesize relatedMaterialMetaJSON=_relatedMaterialMetaJSON;
 @property(retain, nonatomic) CSJNativeAd *nativeAd; // @synthesize nativeAd=_nativeAd;
 @property(retain, nonatomic) CSJNativeExpressAdView *expressAdView; // @synthesize expressAdView=_expressAdView;
-- (void)async_handleRelateMaterWith:(id)arg1 materialMetasJson:(id)arg2;
-- (void)bu_getRelatedMaterialMeta;
-- (id)pbu_middle_templateDataModelWithNativeAd:(id)arg1;
-- (void)bu_immersiveMiddleExpressViewWithAd:(id)arg1 renderComplete:(CDUnknownBlockType)arg2;
-- (void)bu_fetch_middleTemplateDataWithNativeAd:(id)arg1;
+- (void)Sum_LeviMute:(id)arg1 materialMetasJson:(id)arg2;
+- (void)Stop_LdsThe;
+- (void)Dict_IOSOrg:(id)arg1 renderComplete:(CDUnknownBlockType)arg2;
+- (void)Show_AppFail:(id)arg1;
 
 @end
 

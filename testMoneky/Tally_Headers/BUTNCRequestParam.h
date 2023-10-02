@@ -13,15 +13,15 @@
 @interface BUTNCRequestParam : NSObject <BUDictionarify>
 {
     NSString *_version;
-    NSString *_deviceDid;
-    NSString *_ssAppID;
+    NSString *_Y1_AreMs;
+    NSString *_R0_PlayAdId;
     long long _interval;
 }
 
 - (void).cxx_destruct;
 @property(nonatomic) long long interval; // @synthesize interval=_interval;
-@property(copy, nonatomic) NSString *ssAppID; // @synthesize ssAppID=_ssAppID;
-@property(copy, nonatomic) NSString *deviceDid; // @synthesize deviceDid=_deviceDid;
+@property(copy, nonatomic) NSString *R0_PlayAdId; // @synthesize R0_PlayAdId=_R0_PlayAdId;
+@property(copy, nonatomic) NSString *Y1_AreMs; // @synthesize Y1_AreMs=_Y1_AreMs;
 @property(copy, nonatomic) NSString *version; // @synthesize version=_version;
 - (id)toDictionary;
 

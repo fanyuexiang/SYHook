@@ -6,20 +6,19 @@
 
 #import <objc/NSObject.h>
 
-#import "ABUCsj_BUNativeAdDelegate-Protocol.h"
-#import "ABUCsj_BUNativeExpressAdViewDelegate-Protocol.h"
-#import "ABUCsj_BUVideoAdViewDelegate-Protocol.h"
-#import "ABUCustomNativeAdapter-Protocol.h"
-#import "ABU_BUNativeAdsManagerDelegate-Protocol.h"
-#import "ABU_BUNativeExpressAdViewDelegate-Protocol.h"
+#import "BUMCustomNativeAdapter-Protocol.h"
+#import "BUNativeAdDelegate-Protocol.h"
+#import "BUNativeAdsManagerDelegate-Protocol.h"
+#import "BUNativeExpressAdViewDelegate-Protocol.h"
+#import "BUVideoAdViewDelegate-Protocol.h"
 
-@class NSArray, NSMutableDictionary, NSString;
-@protocol ABUCustomConfigAdapter, ABUCustomNativeAdapterBridge, ABU_BUNativeAdsManager, ABU_BUNativeExpressAdManager;
+@class BUNativeAdsManager, BUNativeExpressAdManager, NSArray, NSMutableDictionary, NSString;
+@protocol BUMCustomConfigAdapter, BUMCustomNativeAdapterBridge;
 
-@interface ABUCsjNativeAdapter : NSObject <ABU_BUNativeAdsManagerDelegate, ABU_BUNativeExpressAdViewDelegate, ABUCsj_BUNativeAdDelegate, ABUCsj_BUNativeExpressAdViewDelegate, ABUCsj_BUVideoAdViewDelegate, ABUCustomNativeAdapter>
+@interface ABUCsjNativeAdapter : NSObject <BUNativeAdsManagerDelegate, BUNativeExpressAdViewDelegate, BUNativeAdDelegate, BUVideoAdViewDelegate, BUMCustomNativeAdapter>
 {
-    id <ABU_BUNativeExpressAdManager> _expressAdManager;
-    id <ABU_BUNativeAdsManager> _adManager;
+    BUNativeExpressAdManager *_expressAdManager;
+    BUNativeAdsManager *_adManager;
     NSArray *_dislikeWords;
     NSMutableDictionary *_nativeAdMap;
     NSMutableDictionary *_dislikeReportors;
@@ -29,13 +28,14 @@
 @property(retain, nonatomic) NSMutableDictionary *dislikeReportors; // @synthesize dislikeReportors=_dislikeReportors;
 @property(retain, nonatomic) NSMutableDictionary *nativeAdMap; // @synthesize nativeAdMap=_nativeAdMap;
 @property(copy, nonatomic) NSArray *dislikeWords; // @synthesize dislikeWords=_dislikeWords;
-@property(retain, nonatomic) id <ABU_BUNativeAdsManager> adManager; // @synthesize adManager=_adManager;
-@property(retain, nonatomic) id <ABU_BUNativeExpressAdManager> expressAdManager; // @synthesize expressAdManager=_expressAdManager;
+@property(retain, nonatomic) BUNativeAdsManager *adManager; // @synthesize adManager=_adManager;
+@property(retain, nonatomic) BUNativeExpressAdManager *expressAdManager; // @synthesize expressAdManager=_expressAdManager;
 - (_Bool)conformsToProtocol:(id)arg1;
 - (void)videoAdViewDidCloseOtherController:(id)arg1 interactionType:(long long)arg2;
 - (void)videoAdViewFinishViewDidClick:(id)arg1;
 - (void)videoAdViewDidClick:(id)arg1;
 - (void)playerDidPlayFinish:(id)arg1;
+- (void)videoAdView:(id)arg1 rewardDidCountDown:(long long)arg2;
 - (void)videoAdView:(id)arg1 stateDidChanged:(long long)arg2;
 - (void)playerReadyToPlay:(id)arg1;
 - (void)videoAdView:(id)arg1 didLoadFailWithError:(id)arg2;
@@ -65,6 +65,7 @@
 - (void)_convertDislikeWordsFromDislikeWords:(id)arg1 to:(id)arg2;
 - (id)_convertDislikeWordsFromReasons:(id)arg1 source:(id)arg2;
 - (void)reportDislikeAd:(id)arg1 withReasons:(id)arg2;
+- (void)unregisterClickableViewsForNativeAd:(id)arg1;
 - (void)registerContainerView:(id)arg1 andClickableViews:(id)arg2 forNativeAd:(id)arg3;
 - (void)setRootViewController:(id)arg1 forExpressAdView:(id)arg2;
 - (void)setRootViewController:(id)arg1 forNativeAd:(id)arg2;
@@ -74,8 +75,8 @@
 - (void)loadNativeAdWithSlotID:(id)arg1 andSize:(struct CGSize)arg2 imageSize:(struct CGSize)arg3 parameter:(id)arg4;
 
 // Remaining properties
-@property(nonatomic) __weak id <ABUCustomNativeAdapterBridge> bridge;
-@property(retain, nonatomic) id <ABUCustomConfigAdapter> configAdapter;
+@property(nonatomic) __weak id <BUMCustomNativeAdapterBridge> bridge;
+@property(retain, nonatomic) id <BUMCustomConfigAdapter> configAdapter;
 @property(readonly, copy) NSString *debugDescription;
 @property(readonly, copy) NSString *description;
 @property(readonly) unsigned long long hash;

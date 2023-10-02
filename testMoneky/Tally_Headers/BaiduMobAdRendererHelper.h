@@ -73,8 +73,9 @@
 - (void)sendShowLog;
 - (void)sendCPUShowLog;
 - (id)apoUrl:(id)arg1;
-- (void)interNativeAdClick:(id)arg1 isDownloadDirect:(_Bool)arg2;
+- (void)interNativeAdClick:(id)arg1 isDownloadDirect:(_Bool)arg2 parameter:(id)arg3;
 - (void)nativeCPUClick:(id)arg1 info:(id)arg2;
+- (void)nativeAdClick:(id)arg1 andParameter:(id)arg2;
 - (void)nativeAdClick:(id)arg1;
 - (void)nativeAdClickDownloadDirect:(id)arg1;
 

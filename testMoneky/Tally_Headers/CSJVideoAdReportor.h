@@ -8,12 +8,13 @@
 
 #import "CSJVideoAdReportor-Protocol.h"
 
-@class CSJMaterialMeta, CSJVideoAdTracker, NSString;
+@class CSJAdSlot, CSJMaterialMeta, CSJVideoAdTracker, NSString;
 
 @interface CSJVideoAdReportor : NSObject <CSJVideoAdReportor>
 {
     NSString *_slotId;
     CSJMaterialMeta *_materialMeta;
+    CSJAdSlot *_adSlot;
     long long _drawVideoType;
     double _duration;
     double _currentTimeStamp;
@@ -25,6 +26,7 @@
 @property(nonatomic) double currentTimeStamp; // @synthesize currentTimeStamp=_currentTimeStamp;
 @property(nonatomic) double duration; // @synthesize duration=_duration;
 @property(nonatomic) long long drawVideoType; // @synthesize drawVideoType=_drawVideoType;
+@property(retain, nonatomic) CSJAdSlot *adSlot; // @synthesize adSlot=_adSlot;
 @property(retain, nonatomic) CSJMaterialMeta *materialMeta; // @synthesize materialMeta=_materialMeta;
 @property(copy, nonatomic) NSString *slotId; // @synthesize slotId=_slotId;
 - (id)trackTag;

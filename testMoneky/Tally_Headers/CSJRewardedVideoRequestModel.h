@@ -18,27 +18,27 @@
     NSString *_sdkVersion;
     NSString *_userAgent;
     NSDictionary *_extra;
-    NSString *_mediaExtra;
+    NSString *_Logo_Md5If;
     CSJRewardedVideoModel *_rewardedVideoModel;
     double _videoDuration;
     long long _duration;
-    long long _playStartTs;
-    long long _playEndTs;
+    long long _Copy_RanLd;
+    long long _Ms_NilTm;
     long long _rewardType;
     NSString *_userId;
-    NSString *_transId;
+    NSString *_Ftc_SelfUa;
 }
 
 - (void).cxx_destruct;
-@property(copy, nonatomic) NSString *transId; // @synthesize transId=_transId;
+@property(copy, nonatomic) NSString *Ftc_SelfUa; // @synthesize Ftc_SelfUa=_Ftc_SelfUa;
 @property(copy, nonatomic) NSString *userId; // @synthesize userId=_userId;
 @property(nonatomic) long long rewardType; // @synthesize rewardType=_rewardType;
-@property(nonatomic) long long playEndTs; // @synthesize playEndTs=_playEndTs;
-@property(nonatomic) long long playStartTs; // @synthesize playStartTs=_playStartTs;
+@property(nonatomic) long long Ms_NilTm; // @synthesize Ms_NilTm=_Ms_NilTm;
+@property(nonatomic) long long Copy_RanLd; // @synthesize Copy_RanLd=_Copy_RanLd;
 @property(nonatomic) long long duration; // @synthesize duration=_duration;
 @property(nonatomic) double videoDuration; // @synthesize videoDuration=_videoDuration;
 @property(retain, nonatomic) CSJRewardedVideoModel *rewardedVideoModel; // @synthesize rewardedVideoModel=_rewardedVideoModel;
-@property(retain, nonatomic) NSString *mediaExtra; // @synthesize mediaExtra=_mediaExtra;
+@property(retain, nonatomic) NSString *Logo_Md5If; // @synthesize Logo_Md5If=_Logo_Md5If;
 @property(retain, nonatomic) NSDictionary *extra; // @synthesize extra=_extra;
 @property(copy, nonatomic) NSString *userAgent; // @synthesize userAgent=_userAgent;
 @property(copy, nonatomic) NSString *sdkVersion; // @synthesize sdkVersion=_sdkVersion;
@@ -46,7 +46,7 @@
 @property(nonatomic) long long rewardAmount; // @synthesize rewardAmount=_rewardAmount;
 @property(copy, nonatomic) NSString *rewardName; // @synthesize rewardName=_rewardName;
 - (id)dictionaryValue;
-- (id)initWithRewardedVideoModel:(id)arg1 extInfo:(id)arg2 extraDic:(id)arg3;
+- (id)initLInfo_Y2Note:(id)arg1 extInfo:(id)arg2 extraDic:(id)arg3;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

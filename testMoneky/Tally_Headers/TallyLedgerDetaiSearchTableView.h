@@ -15,6 +15,7 @@
     _Bool _noSection;
     _Bool _noLabel;
     _Bool _isSearch;
+    _Bool _isFilter;
     NSFetchedResultsController *_fetchedResultsController;
     long long _sortType;
     long long _tallyType;
@@ -26,6 +27,7 @@
 
 - (void).cxx_destruct;
 @property(copy, nonatomic) CDUnknownBlockType dataChangedBlock; // @synthesize dataChangedBlock=_dataChangedBlock;
+@property(nonatomic) _Bool isFilter; // @synthesize isFilter=_isFilter;
 @property(nonatomic) _Bool isSearch; // @synthesize isSearch=_isSearch;
 @property(nonatomic) _Bool noLabel; // @synthesize noLabel=_noLabel;
 @property(nonatomic) long long cid; // @synthesize cid=_cid;
@@ -35,6 +37,7 @@
 @property(nonatomic) long long sortType; // @synthesize sortType=_sortType;
 @property(nonatomic) _Bool noSection; // @synthesize noSection=_noSection;
 - (void)setFetchedResultsController:(id)arg1;
+- (void)searchTextWith:(id)arg1 type:(long long)arg2 tallytype:(long long)arg3 starttime:(id)arg4 endtime:(id)arg5;
 - (void)updateAmount;
 - (void)deleteAction:(id)arg1;
 - (void)tableView:(id)arg1 didSelectRowAtIndexPath:(id)arg2;

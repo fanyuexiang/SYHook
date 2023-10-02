@@ -25,11 +25,11 @@
 
 - (void).cxx_destruct;
 @property(nonatomic) _Bool didSetADM; // @synthesize didSetADM=_didSetADM;
-@property(retain, nonatomic) CSJNativeExpressAdConverter *nativeExpressAdConverter; // @synthesize nativeExpressAdConverter=_nativeExpressAdConverter;
+@property(retain) CSJNativeExpressAdConverter *nativeExpressAdConverter; // @synthesize nativeExpressAdConverter=_nativeExpressAdConverter;
 @property(retain, nonatomic) NSMutableArray *adData; // @synthesize adData=_adData;
 @property(nonatomic) __weak id <CSJNativeExpressAdViewDelegate> nativeExpressAdViewDelegate; // @synthesize nativeExpressAdViewDelegate=_nativeExpressAdViewDelegate;
 @property(nonatomic) __weak id <CSJNativeAdsManagerDelegate> delegate; // @synthesize delegate=_delegate;
-@property(copy, nonatomic) NSArray *data; // @synthesize data=_data;
+@property(copy) NSArray *data; // @synthesize data=_data;
 @property(retain, nonatomic) CSJAdSlot *adslot; // @synthesize adslot=_adslot;
 - (_Bool)isMemberOfClass:(Class)arg1;
 - (_Bool)isKindOfClass:(Class)arg1;
@@ -42,19 +42,15 @@
 - (void)safeDelegate_nativeAdsManagerSuccessToLoad:(id)arg1 nativeAds:(id)arg2 isMopub:(_Bool)arg3;
 - (void)reportReceiveUnionPlatformMaterialsTimeTracker;
 - (id)assemblyNativeADWithMaterials:(id)arg1 auctionPrice:(id)arg2;
-- (id)assemblyNativeADWithMaterials:(id)arg1;
-- (void)pbu_handleAdmMaterial:(id)arg1 successLoadVideo:(CDUnknownBlockType)arg2;
 - (_Bool)pbu_markupAsyncPackageAdm:(id)arg1 successLoadVideo:(CDUnknownBlockType)arg2 success:(CDUnknownBlockType)arg3 failure:(CDUnknownBlockType)arg4;
 - (_Bool)pbu_markupPreFetchAdm:(id)arg1 successLoadVideo:(CDUnknownBlockType)arg2 success:(CDUnknownBlockType)arg3 failure:(CDUnknownBlockType)arg4;
 - (_Bool)pbu_markupPreCacheAdm:(id)arg1 successLoadVideo:(CDUnknownBlockType)arg2 success:(CDUnknownBlockType)arg3 failure:(CDUnknownBlockType)arg4;
+- (void)new_pbu_markupAdm:(id)arg1 successLoadVideo:(CDUnknownBlockType)arg2 success:(CDUnknownBlockType)arg3 failure:(CDUnknownBlockType)arg4;
 - (void)pbu_markupAdm:(id)arg1 successLoadVideo:(CDUnknownBlockType)arg2 success:(CDUnknownBlockType)arg3 failure:(CDUnknownBlockType)arg4;
 - (void)setMopubAdMarkUp:(id)arg1 successLoadVideo:(CDUnknownBlockType)arg2;
 - (id)biddingToken;
-- (void)setMopubAdMarkUp:(id)arg1;
 - (void)setAdMarkup:(id)arg1;
-- (void)preloadImages;
-- (void)preLoadMiddlePage;
-- (void)preLoadVideoData;
+- (void)preLoadTask;
 - (void)fetchAdDataWithTimes:(long long)arg1;
 - (void)preLoadMiddlePageWithAd:(id)arg1;
 - (void)loadAdDataWithCount:(long long)arg1 invokeByPublisher:(_Bool)arg2;

@@ -12,27 +12,28 @@
 {
     _Bool _isRewardedVideo;
     unsigned long long _transformDirection;
-    CSJNativeExpressRewardedVideoAdView *_rewardExpressAdView;
+    CSJNativeExpressRewardedVideoAdView *_Rit_BodyLoss;
 }
 
 - (void).cxx_destruct;
-@property(retain, nonatomic) CSJNativeExpressRewardedVideoAdView *rewardExpressAdView; // @synthesize rewardExpressAdView=_rewardExpressAdView;
+@property(retain, nonatomic) CSJNativeExpressRewardedVideoAdView *Rit_BodyLoss; // @synthesize Rit_BodyLoss=_Rit_BodyLoss;
 @property(nonatomic) _Bool isRewardedVideo; // @synthesize isRewardedVideo=_isRewardedVideo;
 @property(nonatomic) unsigned long long transformDirection; // @synthesize transformDirection=_transformDirection;
 - (void)storeKitDidClose:(id)arg1;
 - (void)storeKitWillOpen:(id)arg1;
-- (void)preloadAppStore;
+- (void)Ran_JsonRead;
 - (void)addNotification;
-- (void)buidupViews;
+- (void)Res_BodyAds;
 - (long long)preferredInterfaceOrientationForPresentation;
 - (unsigned long long)supportedInterfaceOrientations;
 - (_Bool)shouldAutorotate;
 - (void)viewDidDisappear:(_Bool)arg1;
 - (void)viewWillDisappear:(_Bool)arg1;
 - (void)viewWillLayoutSubviews;
+- (void)viewDidAppear:(_Bool)arg1;
 - (void)viewWillAppear:(_Bool)arg1;
 - (void)viewDidLoad;
-- (id)initWithNativeExpressAdView:(id)arg1;
+- (id)initLKey_ReadTap:(id)arg1;
 
 @end
 

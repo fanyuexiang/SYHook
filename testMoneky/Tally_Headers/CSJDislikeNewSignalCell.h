@@ -18,10 +18,10 @@
 @property(retain, nonatomic) UIView *sepView; // @synthesize sepView=_sepView;
 @property(retain, nonatomic) UILabel *wordLabel; // @synthesize wordLabel=_wordLabel;
 - (void)layoutSubviews;
-- (void)refreshWithDislikeWordsViewModel:(id)arg1;
+- (void)MIT_WinX2:(id)arg1;
 - (void)traitCollectionDidChange:(id)arg1;
-- (void)setDarkStyle;
-- (void)setLightStyle;
+- (void)setHash_MapLazy;
+- (void)setBu_y_DictLd;
 - (id)initWithStyle:(long long)arg1 reuseIdentifier:(id)arg2;
 
 @end

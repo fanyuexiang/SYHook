@@ -9,19 +9,19 @@
 #import "ABUBaidu_BaiduMobAdNativeAdDelegate-Protocol.h"
 #import "ABUBaidu_BaiduMobAdNativeInterationDelegate-Protocol.h"
 #import "ABUBaidu_BaiduMobAdViewDelegate-Protocol.h"
-#import "ABUCustomBannerAdapter-Protocol.h"
+#import "BUMCustomBannerAdapter-Protocol.h"
 
-@class ABUMediatedNativeAd, NSDictionary, NSString, UIView;
-@protocol ABUBaidu_BaiduMobAdNative, ABUBaidu_BaiduMobAdView, ABUCustomBannerAdapterBridge, ABUCustomConfigAdapter;
+@class BUMMediatedNativeAd, NSDictionary, NSString, UIView;
+@protocol ABUBaidu_BaiduMobAdNative, ABUBaidu_BaiduMobAdView, BUMCustomBannerAdapterBridge, BUMCustomConfigAdapter;
 
-@interface ABUBaiduBannerAdapter : NSObject <ABUBaidu_BaiduMobAdViewDelegate, ABUBaidu_BaiduMobAdNativeAdDelegate, ABUBaidu_BaiduMobAdNativeInterationDelegate, ABUCustomBannerAdapter>
+@interface ABUBaiduBannerAdapter : NSObject <ABUBaidu_BaiduMobAdViewDelegate, ABUBaidu_BaiduMobAdNativeAdDelegate, ABUBaidu_BaiduMobAdNativeInterationDelegate, BUMCustomBannerAdapter>
 {
     _Bool _didLoadSuccess;
     long long _adSubType;
     UIView<ABUBaidu_BaiduMobAdView> *_bannerView;
     UIView *_nativeAdView;
     NSObject<ABUBaidu_BaiduMobAdNative> *_nativeAd;
-    ABUMediatedNativeAd *_ad;
+    BUMMediatedNativeAd *_ad;
     NSDictionary *_parameters;
     long long _biddingType;
     double _lastFeedBackTime;
@@ -31,7 +31,7 @@
 @property(nonatomic) double lastFeedBackTime; // @synthesize lastFeedBackTime=_lastFeedBackTime;
 @property(nonatomic) long long biddingType; // @synthesize biddingType=_biddingType;
 @property(copy, nonatomic) NSDictionary *parameters; // @synthesize parameters=_parameters;
-@property(retain, nonatomic) ABUMediatedNativeAd *ad; // @synthesize ad=_ad;
+@property(retain, nonatomic) BUMMediatedNativeAd *ad; // @synthesize ad=_ad;
 @property(retain, nonatomic) NSObject<ABUBaidu_BaiduMobAdNative> *nativeAd; // @synthesize nativeAd=_nativeAd;
 @property(retain, nonatomic) UIView *nativeAdView; // @synthesize nativeAdView=_nativeAdView;
 @property(nonatomic) _Bool didLoadSuccess; // @synthesize didLoadSuccess=_didLoadSuccess;
@@ -74,8 +74,8 @@
 - (_Bool)enablePreloadWhenCurrentIsDisplay;
 
 // Remaining properties
-@property(nonatomic) __weak id <ABUCustomBannerAdapterBridge> bridge;
-@property(retain, nonatomic) id <ABUCustomConfigAdapter> configAdapter;
+@property(nonatomic) __weak id <BUMCustomBannerAdapterBridge> bridge;
+@property(retain, nonatomic) id <BUMCustomConfigAdapter> configAdapter;
 @property(readonly, copy) NSString *debugDescription;
 @property(readonly, copy) NSString *description;
 @property(readonly) unsigned long long hash;

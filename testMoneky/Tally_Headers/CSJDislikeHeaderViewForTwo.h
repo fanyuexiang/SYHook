@@ -10,8 +10,8 @@
 
 @interface CSJDislikeHeaderViewForTwo : UIView
 {
-    CDUnknownBlockType _dislikeBack;
-    UIImageView *_backImg;
+    CDUnknownBlockType _Out_Up_xMust;
+    UIImageView *_Stop_AdIdMd5;
     UIButton *_backButton;
     UILabel *_titleLable;
 }
@@ -19,8 +19,8 @@
 - (void).cxx_destruct;
 @property(retain, nonatomic) UILabel *titleLable; // @synthesize titleLable=_titleLable;
 @property(retain, nonatomic) UIButton *backButton; // @synthesize backButton=_backButton;
-@property(retain, nonatomic) UIImageView *backImg; // @synthesize backImg=_backImg;
-@property(copy, nonatomic) CDUnknownBlockType dislikeBack; // @synthesize dislikeBack=_dislikeBack;
+@property(retain, nonatomic) UIImageView *Stop_AdIdMd5; // @synthesize Stop_AdIdMd5=_Stop_AdIdMd5;
+@property(copy, nonatomic) CDUnknownBlockType Out_Up_xMust; // @synthesize Out_Up_xMust=_Out_Up_xMust;
 - (void)tapBack;
 - (id)initWithFrame:(struct CGRect)arg1;
 

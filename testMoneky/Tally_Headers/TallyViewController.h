@@ -11,7 +11,7 @@
 #import "UIScrollViewDelegate-Protocol.h"
 #import "UITextFieldDelegate-Protocol.h"
 
-@class AmountIndentLabel, CBBillDatePicker, KeyboardView, LabelsTextField, NSData, NSDictionary, NSNumber, NSString, NTallyModel, RecommendRemarkView, SAImagePickerManager, TallyLabelChooseView, TallyTypeSelectScrollView, UIButton, UILabel, UIScrollView, UIView;
+@class AmountIndentLabel, CBBillDatePicker, KeyboardView, LabelsTextField, NSData, NSDictionary, NSNumber, NSString, NTallyModel, RecommendRemarkView, SAImagePickerManager, TTTallyTemplateModel, TallyLabelChooseView, TallyTypeSelectScrollView, UIButton, UILabel, UIScrollView, UIView;
 
 @interface TallyViewController : UIViewController <UITextFieldDelegate, UIScrollViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 {
@@ -45,6 +45,8 @@
     long long _action;
     CDUnknownBlockType _addBudgetFinishHandle;
     long long _budgetType;
+    long long _selectcid;
+    TTTallyTemplateModel *_tallyTemplate;
     CBBillDatePicker *_datePicker;
     UIView *_keyboardCoverView;
     UIView *_recommendCoverView;
@@ -55,12 +57,16 @@
     UIButton *_haslabelsremarkbtn;
     NSString *_labelsString;
     NSNumber *_aid;
+    NSNumber *_incomeaid;
     UIButton *_accountBtn;
+    NTallyModel *_createdTallyModel;
 }
 
 + (double)tmpTransitionCode_Nav_StatusBar_Height;
 - (void).cxx_destruct;
+@property(nonatomic) __weak NTallyModel *createdTallyModel; // @synthesize createdTallyModel=_createdTallyModel;
 @property(retain, nonatomic) UIButton *accountBtn; // @synthesize accountBtn=_accountBtn;
+@property(retain, nonatomic) NSNumber *incomeaid; // @synthesize incomeaid=_incomeaid;
 @property(retain, nonatomic) NSNumber *aid; // @synthesize aid=_aid;
 @property(retain, nonatomic) NSString *labelsString; // @synthesize labelsString=_labelsString;
 @property(retain, nonatomic) UIButton *haslabelsremarkbtn; // @synthesize haslabelsremarkbtn=_haslabelsremarkbtn;
@@ -71,6 +77,8 @@
 @property(retain, nonatomic) UIView *recommendCoverView; // @synthesize recommendCoverView=_recommendCoverView;
 @property(retain, nonatomic) UIView *keyboardCoverView; // @synthesize keyboardCoverView=_keyboardCoverView;
 @property(retain, nonatomic) CBBillDatePicker *datePicker; // @synthesize datePicker=_datePicker;
+@property(retain, nonatomic) TTTallyTemplateModel *tallyTemplate; // @synthesize tallyTemplate=_tallyTemplate;
+@property(nonatomic) long long selectcid; // @synthesize selectcid=_selectcid;
 @property(nonatomic) long long budgetType; // @synthesize budgetType=_budgetType;
 @property(nonatomic) _Bool isFromFamily; // @synthesize isFromFamily=_isFromFamily;
 @property(copy, nonatomic) CDUnknownBlockType addBudgetFinishHandle; // @synthesize addBudgetFinishHandle=_addBudgetFinishHandle;
@@ -84,6 +92,9 @@
 @property(copy, nonatomic) NSString *date; // @synthesize date=_date;
 @property(retain, nonatomic) NTallyModel *editModel; // @synthesize editModel=_editModel;
 @property(nonatomic) _Bool isNeedTallyTypeSetting; // @synthesize isNeedTallyTypeSetting=_isNeedTallyTypeSetting;
+- (void)pushTallyDetailController;
+- (void)resetBaseInfo;
+- (void)showVIP:(long long)arg1;
 - (void)accountShowOnDidChanged;
 - (void)accountDefaultChange;
 - (void)clickAccountBtn;

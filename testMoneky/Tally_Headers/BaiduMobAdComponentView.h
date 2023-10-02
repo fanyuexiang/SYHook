@@ -6,9 +6,11 @@
 
 #import <UIKit/UIView.h>
 
-@class BaiduMobAdComponentModel;
+#import "BaiduMobAdComponentLottieDelegate-Protocol.h"
 
-@interface BaiduMobAdComponentView : UIView
+@class BaiduMobAdComponentModel, NSString;
+
+@interface BaiduMobAdComponentView : UIView <BaiduMobAdComponentLottieDelegate>
 {
     BaiduMobAdComponentModel *_model;
     UIView *_foregroundMaskView;
@@ -17,6 +19,8 @@
 - (void).cxx_destruct;
 @property(retain, nonatomic) UIView *foregroundMaskView; // @synthesize foregroundMaskView=_foregroundMaskView;
 @property(retain, nonatomic) BaiduMobAdComponentModel *model; // @synthesize model=_model;
+- (void)nativeComponentLottieSendFinish:(_Bool)arg1 view:(id)arg2 viewName:(id)arg3 special:(id)arg4;
+- (void)nativeComponentLottieSendClickView:(id)arg1 viewName:(id)arg2 special:(id)arg3;
 - (void)hiddenForegroundView;
 - (void)createForegroundView;
 - (void)successCreatComponentView:(id)arg1 model:(id)arg2;
@@ -25,6 +29,12 @@
 - (void)removeGradientLayer;
 - (_Bool)isEnableGradientColor;
 - (id)initWithFrame:(struct CGRect)arg1 superView:(id)arg2 model:(id)arg3;
+
+// Remaining properties
+@property(readonly, copy) NSString *debugDescription;
+@property(readonly, copy) NSString *description;
+@property(readonly) unsigned long long hash;
+@property(readonly) Class superclass;
 
 @end
 

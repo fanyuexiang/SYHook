@@ -14,20 +14,20 @@
     _Bool _executing;
     _Bool _finished;
     id <BURaptorTrackerNetworkOperationDelegate> _delegate;
-    long long _sendIndex;
-    NSArray *_modelArray;
+    long long _Mark_posName;
+    NSArray *_Play_PlayPos_;
 }
 
 - (void).cxx_destruct;
-@property(copy, nonatomic) NSArray *modelArray; // @synthesize modelArray=_modelArray;
-@property(nonatomic) long long sendIndex; // @synthesize sendIndex=_sendIndex;
+@property(copy, nonatomic) NSArray *Play_PlayPos_; // @synthesize Play_PlayPos_=_Play_PlayPos_;
+@property(nonatomic) long long Mark_posName; // @synthesize Mark_posName=_Mark_posName;
 @property(nonatomic) __weak id <BURaptorTrackerNetworkOperationDelegate> delegate; // @synthesize delegate=_delegate;
 @property(nonatomic, getter=isFinished) _Bool finished; // @synthesize finished=_finished;
 @property(nonatomic, getter=isExecuting) _Bool executing; // @synthesize executing=_executing;
-- (void)safeDelegate_operation:(id)arg1 sendWithModelArray:(id)arg2 completionHandler:(CDUnknownBlockType)arg3;
+- (void)Ms_dirY1:(id)arg1 sendWithModelArray:(id)arg2 completionHandler:(CDUnknownBlockType)arg3;
 - (_Bool)isConcurrent;
 - (void)start;
-- (id)initWithModelArray:(id)arg1;
+- (id)initLInt_MustJs:(id)arg1;
 
 @end
 

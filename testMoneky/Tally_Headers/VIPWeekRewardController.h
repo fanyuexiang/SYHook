@@ -10,7 +10,7 @@
 #import "GDTRewardedVideoAdDelegate-Protocol.h"
 #import "UIScrollViewDelegate-Protocol.h"
 
-@class BURewardedVideoAd, GDTRewardVideoAd, NSString, UIScrollView, UIView, VIPWeekRewardDataSource, VIPWeekRewardHeadView, VIPWeekRewardNaviBarView, VIPWeekRewardTaskItemsView, VIPWeekRewardViewManager;
+@class BURewardedVideoAd, GDTRewardVideoAd, NSString, UIScrollView, UIView, VIPWeekExpVIPExchangeView, VIPWeekRewardDataSource, VIPWeekRewardHeadView, VIPWeekRewardNaviBarView, VIPWeekRewardTaskItemsView, VIPWeekRewardViewManager;
 
 @interface VIPWeekRewardController : UIViewController <BURewardedVideoAdDelegate, GDTRewardedVideoAdDelegate, UIScrollViewDelegate>
 {
@@ -23,11 +23,13 @@
     VIPWeekRewardHeadView *_headView;
     VIPWeekRewardTaskItemsView *_itemsView;
     UIView *_loadFailedView;
+    VIPWeekExpVIPExchangeView *_expVIPExchangeView;
     double _moveMaxHeight;
 }
 
 - (void).cxx_destruct;
 @property(nonatomic) double moveMaxHeight; // @synthesize moveMaxHeight=_moveMaxHeight;
+@property(nonatomic) __weak VIPWeekExpVIPExchangeView *expVIPExchangeView; // @synthesize expVIPExchangeView=_expVIPExchangeView;
 @property(retain, nonatomic) UIView *loadFailedView; // @synthesize loadFailedView=_loadFailedView;
 @property(retain, nonatomic) VIPWeekRewardTaskItemsView *itemsView; // @synthesize itemsView=_itemsView;
 @property(retain, nonatomic) VIPWeekRewardHeadView *headView; // @synthesize headView=_headView;
@@ -37,6 +39,7 @@
 @property(nonatomic) _Bool rewardSuccess; // @synthesize rewardSuccess=_rewardSuccess;
 @property(retain, nonatomic) VIPWeekRewardViewManager *viewManager; // @synthesize viewManager=_viewManager;
 @property(retain, nonatomic) VIPWeekRewardDataSource *dataSource; // @synthesize dataSource=_dataSource;
+- (void)vipExchangeAction;
 - (void)vipRightsAction;
 - (void)closeRewardVideoAd:(id)arg1;
 - (void)updateDataWithRewardVideoAdPlayFinished;
@@ -63,6 +66,7 @@
 - (void)rewardedVideoAdVideoDidLoad:(id)arg1;
 - (void)rewardedVideoAd:(id)arg1 didFailWithError:(id)arg2;
 - (void)rewardedVideoAdDidLoad:(id)arg1;
+- (void)requestBUAd_RewardVideoNext:(id)arg1;
 - (void)requestBUAd_RewardVideo:(id)arg1;
 @property(retain, nonatomic) BURewardedVideoAd *rewardVideoBUAd;
 - (void)gdt_rewardVideoAdDidPlayFinish:(id)arg1;

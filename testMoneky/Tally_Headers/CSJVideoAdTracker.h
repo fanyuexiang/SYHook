@@ -6,7 +6,7 @@
 
 #import <objc/NSObject.h>
 
-@class CSJMaterialMeta, NSDictionary, NSNumber, NSString;
+@class CSJAdSlot, CSJMaterialMeta, NSDictionary, NSNumber, NSString;
 
 @interface CSJVideoAdTracker : NSObject
 {
@@ -21,8 +21,9 @@
     CDUnknownBlockType _tagBlcok;
     CDUnknownBlockType _timeBlock;
     CDUnknownBlockType _metaBlock;
+    CDUnknownBlockType _slotBlock;
     NSString *_video_session_id;
-    unsigned long long _video_startLoad_timestamp;
+    double _video_startLoad_timestamp;
     unsigned long long _video_buffer_duration;
     unsigned long long _video_buffer_times;
     double _video_buffer_begin_timestamp;
@@ -41,9 +42,10 @@
 @property(nonatomic) double video_buffer_begin_timestamp; // @synthesize video_buffer_begin_timestamp=_video_buffer_begin_timestamp;
 @property(nonatomic) unsigned long long video_buffer_times; // @synthesize video_buffer_times=_video_buffer_times;
 @property(nonatomic) unsigned long long video_buffer_duration; // @synthesize video_buffer_duration=_video_buffer_duration;
-@property(nonatomic) unsigned long long video_startLoad_timestamp; // @synthesize video_startLoad_timestamp=_video_startLoad_timestamp;
+@property(nonatomic) double video_startLoad_timestamp; // @synthesize video_startLoad_timestamp=_video_startLoad_timestamp;
 @property(copy, nonatomic) NSString *video_session_id; // @synthesize video_session_id=_video_session_id;
 @property(nonatomic) _Bool customPlayer; // @synthesize customPlayer=_customPlayer;
+@property(copy, nonatomic) CDUnknownBlockType slotBlock; // @synthesize slotBlock=_slotBlock;
 @property(copy, nonatomic) CDUnknownBlockType metaBlock; // @synthesize metaBlock=_metaBlock;
 @property(copy, nonatomic) CDUnknownBlockType timeBlock; // @synthesize timeBlock=_timeBlock;
 @property(copy, nonatomic) CDUnknownBlockType tagBlcok; // @synthesize tagBlcok=_tagBlcok;
@@ -53,8 +55,17 @@
 @property(readonly, copy, nonatomic) NSString *video_resolution; // @synthesize video_resolution=_video_resolution;
 @property(readonly, copy, nonatomic) NSString *video_play_url; // @synthesize video_play_url=_video_play_url;
 @property(readonly, nonatomic) unsigned long long video_play_type; // @synthesize video_play_type=_video_play_type;
+- (id)p_customPalyerLabel:(id)arg1;
+- (void)reportLivePlayResume;
+- (void)reportLivePlayPause;
+- (void)reportLivePlayClose:(unsigned long long)arg1;
+- (void)reportLivePlayError:(id)arg1;
+- (void)reportLiveFirstRender;
+- (void)reportLiveStartPlay;
+- (void)reportLiveCoverImageRender:(_Bool)arg1 duration:(long long)arg2;
 - (void)reportVideoPlayBuffer;
 - (void)reportVideoPlayOver;
+- (void)reportVideoWithPlayerBreakType:(unsigned long long)arg1 tag:(id)arg2 meta:(id)arg3;
 - (void)reportVideoWithPlayerBreakType:(unsigned long long)arg1;
 - (void)reportVideoEndCard:(long long)arg1 hasPlayed:(_Bool)arg2;
 - (void)reportVideoError:(id)arg1;
@@ -69,7 +80,8 @@
 - (void)reportVideoStartPlay;
 - (void)configVideoInfoWithDecodeMode:(unsigned long long)arg1 h265VideoInfo:(id)arg2 h264VideoInfo:(id)arg3 customPlayer:(_Bool)arg4;
 - (void)configVideoInfoWithDecodeMode:(unsigned long long)arg1 h265VideoInfo:(id)arg2 h264VideoInfo:(id)arg3;
-- (id)initWithVideoTagBlock:(CDUnknownBlockType)arg1 playTimeBlock:(CDUnknownBlockType)arg2 metaBlock:(CDUnknownBlockType)arg3;
+- (id)initWithVideoTagBlock:(CDUnknownBlockType)arg1 playTimeBlock:(CDUnknownBlockType)arg2 metaBlock:(CDUnknownBlockType)arg3 slotBlock:(CDUnknownBlockType)arg4;
+@property(readonly, nonatomic) CSJAdSlot *adSlot;
 @property(readonly, nonatomic) CSJMaterialMeta *meta;
 @property(readonly, nonatomic) unsigned long long video_cache_size;
 @property(readonly, nonatomic) NSDictionary *video_buffer_duration_parameters;

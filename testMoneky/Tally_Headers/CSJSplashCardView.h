@@ -11,6 +11,7 @@
 
 @interface CSJSplashCardView : UIView
 {
+    _Bool _canShake;
     UIViewController *_rootViewController;
     CSJSplashViewModel *_viewModel;
     CSJSplashCardModel *_splashCardModel;
@@ -24,17 +25,22 @@
     UILabel *_sourceLabel;
     UILabel *_detailLabel;
     UIButton *_jumpButton;
+    UIButton *_shakeButton;
     UIButton *_closeBtn;
     BUTimer *_closeTimer;
     UIImageView *_CSJLogoImageView;
+    long long _convertActionType;
     id <CSJSplashCardViewDelegate> _delegate;
 }
 
 - (void).cxx_destruct;
 @property(nonatomic) __weak id <CSJSplashCardViewDelegate> delegate; // @synthesize delegate=_delegate;
+@property(nonatomic) long long convertActionType; // @synthesize convertActionType=_convertActionType;
+@property(nonatomic) _Bool canShake; // @synthesize canShake=_canShake;
 @property(retain, nonatomic) UIImageView *CSJLogoImageView; // @synthesize CSJLogoImageView=_CSJLogoImageView;
 @property(retain, nonatomic) BUTimer *closeTimer; // @synthesize closeTimer=_closeTimer;
 @property(retain, nonatomic) UIButton *closeBtn; // @synthesize closeBtn=_closeBtn;
+@property(retain, nonatomic) UIButton *shakeButton; // @synthesize shakeButton=_shakeButton;
 @property(retain, nonatomic) UIButton *jumpButton; // @synthesize jumpButton=_jumpButton;
 @property(retain, nonatomic) UILabel *detailLabel; // @synthesize detailLabel=_detailLabel;
 @property(retain, nonatomic) UILabel *sourceLabel; // @synthesize sourceLabel=_sourceLabel;
@@ -48,12 +54,15 @@
 @property(retain, nonatomic) CSJSplashCardModel *splashCardModel; // @synthesize splashCardModel=_splashCardModel;
 @property(retain, nonatomic) CSJSplashViewModel *viewModel; // @synthesize viewModel=_viewModel;
 @property(nonatomic) __weak UIViewController *rootViewController; // @synthesize rootViewController=_rootViewController;
-- (void)_cardClickTrackWithType:(long long)arg1;
-- (void)_cardCloseTrackWithType:(long long)arg1;
+- (id)c_xyDict;
+- (void)_cardClickTrackWithType:(long long)arg1 extraData:(id)arg2;
+- (void)_cardCloseTrackWithType:(long long)arg1 extraData:(id)arg2;
+- (void)p_startAccelerometer;
+- (void)p_stopAccelerometer;
 - (void)_dismiss;
-- (void)_splashCardViewDidAutoDimiss;
-- (void)_splashCardViewDidClose;
-- (void)_splashCardViewDidClick;
+- (void)_splashCardViewDidAutoDimissWithExtraData:(id)arg1;
+- (void)_splashCardViewDidCloseWithExtraData:(id)arg1;
+- (void)_splashCardViewDidClickWithExtraData:(id)arg1;
 - (void)_appDidEnterBackground;
 - (void)_appWillBecomeActive;
 - (void)_resumeTimer;
@@ -62,17 +71,18 @@
 - (void)_addTimer;
 - (void)_didDislike;
 - (void)_autoDidmiss;
-- (void)_didClose;
+- (void)_didClose:(id)arg1;
 - (void)_tapCSJLogo;
-- (void)_whiteOverDidClick;
-- (void)_titleDidClick;
-- (void)_sourceDidClick;
-- (void)_logoDidClick;
-- (void)_imageDidClick;
-- (void)_btnDidClick;
+- (void)_whiteOverDidClick:(id)arg1;
+- (void)_titleDidClick:(id)arg1;
+- (void)_sourceDidClick:(id)arg1;
+- (void)_logoDidClick:(id)arg1;
+- (void)_imageDidClick:(id)arg1;
+- (void)_btnDidClick:(id)arg1;
 - (void)_updateLayoutsInRootView:(id)arg1;
 - (void)_setupSubViews;
 - (void)showSplashCardInRootVC:(id)arg1;
+- (void)dealloc;
 - (id)initWithViewModel:(id)arg1;
 
 @end

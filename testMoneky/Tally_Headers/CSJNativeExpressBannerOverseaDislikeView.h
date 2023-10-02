@@ -11,18 +11,18 @@
 
 @interface CSJNativeExpressBannerOverseaDislikeView : UIView
 {
-    _Bool _isSmallBanner;
+    _Bool _isGdp_ViewEnd;
     id <CSJNativeExpressBannerOverseaDislikeViewDelegate> _delegate;
-    UIImageView *_backgroundImageView;
-    UILabel *_closeLabel;
+    UIImageView *_Date_IntPos_;
+    UILabel *_Msg_AdR1;
     UIImageView *_iconImageView;
 }
 
 - (void).cxx_destruct;
-@property(nonatomic) _Bool isSmallBanner; // @synthesize isSmallBanner=_isSmallBanner;
+@property(nonatomic) _Bool isGdp_ViewEnd; // @synthesize isGdp_ViewEnd=_isGdp_ViewEnd;
 @property(retain, nonatomic) UIImageView *iconImageView; // @synthesize iconImageView=_iconImageView;
-@property(retain, nonatomic) UILabel *closeLabel; // @synthesize closeLabel=_closeLabel;
-@property(retain, nonatomic) UIImageView *backgroundImageView; // @synthesize backgroundImageView=_backgroundImageView;
+@property(retain, nonatomic) UILabel *Msg_AdR1; // @synthesize Msg_AdR1=_Msg_AdR1;
+@property(retain, nonatomic) UIImageView *Date_IntPos_; // @synthesize Date_IntPos_=_Date_IntPos_;
 @property(nonatomic) __weak id <CSJNativeExpressBannerOverseaDislikeViewDelegate> delegate; // @synthesize delegate=_delegate;
 - (void)layoutSubviews;
 - (void)gotoLogoWebViewVoid;

@@ -20,12 +20,17 @@
     NSDictionary *_userCustomInfoForSegment;
     NSString *_userCustomInfoStringForSegment;
     CDUnknownBlockType _userSetCompletionHandler;
+    NSString *_startAppID;
+    double _initTimestamp;
 }
 
++ (void)abTest_ifUseNewSdkinitWithOldA:(CDUnknownBlockType)arg1 newB:(CDUnknownBlockType)arg2;
 + (long long)getSDKInitTimestamp;
 + (id)getCustomUserInfoJsonForSegment;
 + (id)getCustomUserInfoDicForSegment;
 + (id)getUserInfoDicForSegment;
++ (long long)getAdTypeWithRitId:(id)arg1;
++ (_Bool)isValidRitId:(id)arg1;
 + (id)_configObservers;
 + (void)notifyConfigObservers;
 + (void)addConfigLoadSuccessObserver:(id)arg1 withAction:(CDUnknownBlockType)arg2;
@@ -47,12 +52,15 @@
 + (id)msdkSessionID;
 + (id)appID;
 + (void)setAppID:(id)arg1;
-+ (void)setupSDKWithAppId:(id)arg1 config:(CDUnknownBlockType)arg2 asyncCompletionHandler:(CDUnknownBlockType)arg3;
-+ (void)setupSDKWithAppId:(id)arg1 config:(CDUnknownBlockType)arg2;
++ (void)initSDKWithAppId:(id)arg1 config:(CDUnknownBlockType)arg2 asyncCompletionHandler:(CDUnknownBlockType)arg3;
++ (void)initSDKWithAppId:(id)arg1 config:(CDUnknownBlockType)arg2;
++ (void)setup;
 + (id)SDKVersion;
 + (id)ssAppID;
 + (void)load;
 - (void).cxx_destruct;
+@property(nonatomic) double initTimestamp; // @synthesize initTimestamp=_initTimestamp;
+@property(copy, nonatomic) NSString *startAppID; // @synthesize startAppID=_startAppID;
 @property(copy, nonatomic) CDUnknownBlockType userSetCompletionHandler; // @synthesize userSetCompletionHandler=_userSetCompletionHandler;
 @property(copy, nonatomic) NSString *userCustomInfoStringForSegment; // @synthesize userCustomInfoStringForSegment=_userCustomInfoStringForSegment;
 @property(copy, nonatomic) NSDictionary *userCustomInfoForSegment; // @synthesize userCustomInfoForSegment=_userCustomInfoForSegment;
@@ -83,10 +91,11 @@
 - (void)configDidInitialize;
 - (void)_setupAdnSDKsWithConfigs:(id)arg1 complete:(CDUnknownBlockType)arg2;
 - (void)_appWillEnterForeground:(id)arg1;
+- (void)setupRewardAgainShowCount;
 - (void)setupNotifications;
 - (_Bool)setupAdnSDKWithConfigSYNC:(id)arg1;
 - (void)setupAdnSDKWithConfig:(id)arg1 complete:(CDUnknownBlockType)arg2;
-- (void)setupLogConfig;
+- (void)setupLogConfigViaConfig;
 - (void)setupTrackerConfig;
 - (void)_updateRulesWithConfig:(id)arg1;
 - (void)setupAdActionManager;

@@ -19,9 +19,6 @@
 @property(retain, nonatomic) CSJNativeAd *nativeAd; // @synthesize nativeAd=_nativeAd;
 - (_Bool)isMemberOfClass:(Class)arg1;
 - (_Bool)isKindOfClass:(Class)arg1;
-- (void)dislikeDidLoadPersonalizationPromptsURL:(id)arg1;
-- (void)dislikeDidSelectedPersonalizationPrompts:(id)arg1;
-- (void)dislikeDidShowPersonalizationPrompts:(id)arg1;
 - (void)dislikeDidSubmitFeedback:(id)arg1;
 - (void)dislikeDidSelected:(id)arg1;
 - (id)initWithNativeAd:(id)arg1;

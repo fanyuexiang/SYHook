@@ -6,50 +6,52 @@
 
 #import <objc/NSObject.h>
 
-@class BUReachability, BUThreadSafeMutableArray, NSOperationQueue;
+@class BUReachability, BUThreadSafeMutableArray, NSOperationQueue, NSURLSessionDownloadTask;
 
 @interface CSJRewardedVideoPreloader : NSObject
 {
-    _Bool _isQueueLoading;
-    _Bool _isWaiting;
+    _Bool _isIf_ReadFor;
+    _Bool _isMask_DicStr;
     BUReachability *_reachability;
-    BUThreadSafeMutableArray *_cachesArr;
-    BUThreadSafeMutableArray *_splashCachesArr;
-    NSOperationQueue *_rewardQueue;
+    BUThreadSafeMutableArray *_New_IosAPI;
+    BUThreadSafeMutableArray *_Wiki_OfPos_;
+    NSOperationQueue *_Noti_rhsUrl;
+    NSURLSessionDownloadTask *_Len_RanWill;
 }
 
 + (id)sharedPreloader;
 - (void).cxx_destruct;
-@property(nonatomic) _Bool isWaiting; // @synthesize isWaiting=_isWaiting;
-@property(nonatomic) _Bool isQueueLoading; // @synthesize isQueueLoading=_isQueueLoading;
-@property(retain, nonatomic) NSOperationQueue *rewardQueue; // @synthesize rewardQueue=_rewardQueue;
-@property(retain, nonatomic) BUThreadSafeMutableArray *splashCachesArr; // @synthesize splashCachesArr=_splashCachesArr;
-@property(retain, nonatomic) BUThreadSafeMutableArray *cachesArr; // @synthesize cachesArr=_cachesArr;
+@property(retain) NSURLSessionDownloadTask *Len_RanWill; // @synthesize Len_RanWill=_Len_RanWill;
+@property(nonatomic) _Bool isMask_DicStr; // @synthesize isMask_DicStr=_isMask_DicStr;
+@property(nonatomic) _Bool isIf_ReadFor; // @synthesize isIf_ReadFor=_isIf_ReadFor;
+@property(retain, nonatomic) NSOperationQueue *Noti_rhsUrl; // @synthesize Noti_rhsUrl=_Noti_rhsUrl;
+@property(retain, nonatomic) BUThreadSafeMutableArray *Wiki_OfPos_; // @synthesize Wiki_OfPos_=_Wiki_OfPos_;
+@property(retain, nonatomic) BUThreadSafeMutableArray *New_IosAPI; // @synthesize New_IosAPI=_New_IosAPI;
 @property(retain, nonatomic) BUReachability *reachability; // @synthesize reachability=_reachability;
-- (void)suspendedLoadingQueue;
-- (void)resumeLoadingQueue;
-- (id)cachedBrandVideoLocalURLWithUrl:(id)arg1 fileHash:(id)arg2;
-- (id)cachedVideoLocalURLWithUrl:(id)arg1 fileHash:(id)arg2 adSlotAdType:(long long)arg3;
-- (id)fileNameWithVideoUrl:(id)arg1 fileHash:(id)arg2;
-- (id)filePathWithUrl:(id)arg1 fileHash:(id)arg2 adSlotAdType:(long long)arg3;
-- (id)cacheVideoRootFileWithAdSlotAdType:(long long)arg1;
-- (long long)limitPreloadCountWithAdType:(long long)arg1;
-- (long long)maxPreloadCountWithAdType:(long long)arg1;
-- (void)addCachedVideoUrl:(id)arg1 fileHash:(id)arg2 adSlotAdType:(long long)arg3;
-- (void)deleteLocalVideoWithAdSlotAdType:(long long)arg1;
-- (void)finishDownloadSpeedTrackerWithUrl:(id)arg1 loadSize:(long long)arg2 error:(id)arg3;
-- (_Bool)shouldPreloadVideoWithRit:(id)arg1 adSlotAdType:(long long)arg2;
-- (void)removeOldCacheFileWithPath:(id)arg1;
-- (void)removeOldCacheFile;
-- (id)_brandVideouCacheRootPath;
-- (id)_brandVideoCachedFileNameWithUrl:(id)arg1 fileHash:(id)arg2 effectiveTime:(double)arg3 expirationTime:(double)arg4;
-- (id)_brandVideoCachePath;
+- (void)Nb_MarkDiff;
+- (void)End_ReadMd5;
+- (id)Levi_LeviBool:(id)arg1 fileHash:(id)arg2;
+- (id)IOS_MarkTrue:(id)arg1 fileHash:(id)arg2 adSlotAdType:(long long)arg3;
+- (id)Cls_R2Js:(id)arg1 fileHash:(id)arg2;
+- (id)Mask_IsLong:(id)arg1 fileHash:(id)arg2 adSlotAdType:(long long)arg3;
+- (id)Path_AtR2:(long long)arg1;
+- (long long)X1_P1Set:(long long)arg1;
+- (long long)Be_SqlMIT:(long long)arg1;
+- (void)Desc_DataTry:(id)arg1 fileHash:(id)arg2 adSlotAdType:(long long)arg3;
+- (void)Weak_RectRect:(long long)arg1;
+- (void)All_GetOf:(id)arg1 loadSize:(long long)arg2 error:(id)arg3;
+- (_Bool)Mask_NetIOS:(id)arg1 adSlotAdType:(long long)arg2;
+- (void)The_AreRush:(id)arg1;
+- (void)Cell_RectTemp;
+- (id)Lds_WillY1;
+- (id)Fabs_ComDiff:(id)arg1 fileHash:(id)arg2 effectiveTime:(double)arg3 expirationTime:(double)arg4;
+- (id)Lds_VcStmt;
 - (void)connectionChanged:(id)arg1;
-- (void)_startDownloadWithDownloadTask:(id)arg1 materialMeta:(id)arg2 url:(id)arg3 adSlotAdType:(long long)arg4;
-- (void)_loadBrandVideoFileWithMaterial:(id)arg1 urlStr:(id)arg2 fileHash:(id)arg3 effectiveTime:(double)arg4 expirationTime:(double)arg5 loadSize:(long long)arg6 adSlotAdType:(long long)arg7 success:(CDUnknownBlockType)arg8 failure:(CDUnknownBlockType)arg9;
-- (void)preloadVideoFileWithMaterial:(id)arg1 adSlotAdType:(long long)arg2 success:(CDUnknownBlockType)arg3 failure:(CDUnknownBlockType)arg4;
-- (void)preloadBrandVideoFileWithMaterial:(id)arg1 videoModel:(id)arg2 adSlotAdType:(long long)arg3 success:(CDUnknownBlockType)arg4 failure:(CDUnknownBlockType)arg5;
-- (void)loadBrandVideoFileWithMaterial:(id)arg1 adSlotAdType:(long long)arg2 success:(CDUnknownBlockType)arg3 failure:(CDUnknownBlockType)arg4;
+- (void)View_CopyURL:(id)arg1 materialMeta:(id)arg2 url:(id)arg3 adSlotAdType:(long long)arg4;
+- (void)T5_LdsIt:(id)arg1 urlStr:(id)arg2 fileHash:(id)arg3 effectiveTime:(double)arg4 expirationTime:(double)arg5 loadSize:(long long)arg6 adSlotAdType:(long long)arg7 success:(CDUnknownBlockType)arg8 failure:(CDUnknownBlockType)arg9;
+- (void)Root_AdsOnly:(id)arg1 adSlotAdType:(long long)arg2 success:(CDUnknownBlockType)arg3 failure:(CDUnknownBlockType)arg4;
+- (void)App_AppRow:(id)arg1 videoModel:(id)arg2 adSlotAdType:(long long)arg3 success:(CDUnknownBlockType)arg4 failure:(CDUnknownBlockType)arg5;
+- (void)ADX_DidHost:(id)arg1 adSlotAdType:(long long)arg2 success:(CDUnknownBlockType)arg3 failure:(CDUnknownBlockType)arg4;
 - (void)dealloc;
 - (id)init;
 

@@ -22,12 +22,6 @@
 + (id)dictionaryProperty;
 + (id)imageUTType;
 + (long long)imageFormat;
-+ (_Bool)canEncodeToHEIFFormat;
-+ (_Bool)canEncodeToHEICFormat;
-+ (_Bool)canEncodeToFormat:(long long)arg1;
-+ (_Bool)canDecodeFromHEIFFormat;
-+ (_Bool)canDecodeFromHEICFormat;
-+ (_Bool)canDecodeFromFormat:(long long)arg1;
 + (id)sharedCoder;
 + (void)initialize;
 - (_Bool)canEncodeToFormat:(long long)arg1;

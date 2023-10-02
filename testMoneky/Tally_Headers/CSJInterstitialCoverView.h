@@ -13,17 +13,17 @@
 
 @interface CSJInterstitialCoverView : CSJCoverView <CSJVideoAdViewDelegate>
 {
-    _Bool _haveVideoView;
-    id <CSJInterstitialCoverViewDelegate> _interstitialDelegate;
+    _Bool _Push_Map_val;
+    id <CSJInterstitialCoverViewDelegate> _Ms_dirIdfv;
     CSJNativeAdRelatedView *_nativeAdRelatedView;
 }
 
 - (void).cxx_destruct;
 @property(retain, nonatomic) CSJNativeAdRelatedView *nativeAdRelatedView; // @synthesize nativeAdRelatedView=_nativeAdRelatedView;
-@property(nonatomic) _Bool haveVideoView; // @synthesize haveVideoView=_haveVideoView;
-@property(nonatomic) id <CSJInterstitialCoverViewDelegate> interstitialDelegate; // @synthesize interstitialDelegate=_interstitialDelegate;
-- (double)playerTotalTime;
-- (double)playerCurrentTime;
+@property(nonatomic) _Bool Push_Map_val; // @synthesize Push_Map_val=_Push_Map_val;
+@property(nonatomic) id <CSJInterstitialCoverViewDelegate> Ms_dirIdfv; // @synthesize Ms_dirIdfv=_Ms_dirIdfv;
+- (double)Of_RectDoes;
+- (double)Http_CodeSdk;
 - (void)pbu_override_buildViewData;
 - (void)pbu_override_buildView;
 - (void)videoAdViewDidCloseOtherController:(id)arg1 interactionType:(long long)arg2;
@@ -34,7 +34,7 @@
 - (void)videoAdView:(id)arg1 stateDidChanged:(long long)arg2;
 - (void)videoAdView:(id)arg1 didLoadFailWithError:(id)arg2;
 - (void)interstitialVideoDidClick:(id)arg1;
-- (void)addVideoViewIfNeed;
+- (void)Is_CharLong;
 - (void)dealloc;
 
 // Remaining properties

@@ -99,8 +99,9 @@
 - (void)internal_presentLpControllerWithNavigationController:(id)arg1 withParam:(id)arg2;
 - (_Bool)innerDoActionDL:(id)arg1 withParam:(id)arg2;
 - (_Bool)innerDoActionLP:(id)arg1 withParam:(id)arg2;
-- (void)sendAPOLogScheme:(id)arg1 isInstall:(_Bool)arg2 canOpen:(_Bool)arg3 isCancel:(int)arg4 ulkSuccess:(_Bool)arg5 universalLink:(id)arg6 universalScheme:(id)arg7 apoType:(id)arg8 wxApoData:(id)arg9;
+- (void)sendAPOLogScheme:(id)arg1 isInstall:(_Bool)arg2 canOpen:(_Bool)arg3 isCancel:(int)arg4 ulkSuccess:(_Bool)arg5 universalLink:(id)arg6 universalScheme:(id)arg7 apoType:(id)arg8 wxApoData:(id)arg9 actionType:(int)arg10;
 - (_Bool)innerDoActionAPO:(id)arg1 withParam:(id)arg2;
+- (void)innerDoActionAPOBeforeDL:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)fallbackApoFallbackUrl:(id)arg1 fallbackAct:(long long)arg2 page:(id)arg3 ulkUrl:(id)arg4 inNavigator:(id)arg5;
 - (_Bool)innerDoAction:(id)arg1 withParam:(id)arg2;
 - (void)didFinish:(id)arg1 error:(_Bool)arg2;

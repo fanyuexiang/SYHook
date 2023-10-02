@@ -6,15 +6,17 @@
 
 #import <objc/NSObject.h>
 
-@class ABUBaseAd;
+@class ABUBaseAd, ABUPreloadExtra;
 
 @interface ABUPreloader : NSObject
 {
+    ABUPreloadExtra *_extra;
     ABUBaseAd *_adManager;
 }
 
 - (void).cxx_destruct;
 @property(retain, nonatomic) ABUBaseAd *adManager; // @synthesize adManager=_adManager;
+@property(retain, nonatomic) ABUPreloadExtra *extra; // @synthesize extra=_extra;
 - (void)loadAdWithConfig:(id)arg1 andComplete:(CDUnknownBlockType)arg2;
 - (id)initWithAdManager:(id)arg1 andType:(long long)arg2;
 

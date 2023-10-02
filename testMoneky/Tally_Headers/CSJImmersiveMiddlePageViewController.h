@@ -12,30 +12,30 @@
 
 @interface CSJImmersiveMiddlePageViewController : UIViewController <CSJImmersiveMiddleExpressDelegate>
 {
-    _Bool _renderImmersiveTemplateSuccesss;
-    _Bool _middlePageViewDidAppear;
+    _Bool _Int_AtLong;
+    _Bool _URL_Ts_dir;
     CDUnknownBlockType _CloseBlock;
     CSJNativeAd *_nativeAd;
-    CSJImmersiveMiddleExpressUtility *_middleExpressManager;
+    CSJImmersiveMiddleExpressUtility *_MIT_IntOut;
     CSJNativeExpressAdView *_expressAdView;
 }
 
 - (void).cxx_destruct;
-@property(nonatomic) _Bool middlePageViewDidAppear; // @synthesize middlePageViewDidAppear=_middlePageViewDidAppear;
-@property(nonatomic) _Bool renderImmersiveTemplateSuccesss; // @synthesize renderImmersiveTemplateSuccesss=_renderImmersiveTemplateSuccesss;
+@property(nonatomic) _Bool URL_Ts_dir; // @synthesize URL_Ts_dir=_URL_Ts_dir;
+@property(nonatomic) _Bool Int_AtLong; // @synthesize Int_AtLong=_Int_AtLong;
 @property(retain, nonatomic) CSJNativeExpressAdView *expressAdView; // @synthesize expressAdView=_expressAdView;
-@property(retain, nonatomic) CSJImmersiveMiddleExpressUtility *middleExpressManager; // @synthesize middleExpressManager=_middleExpressManager;
+@property(retain, nonatomic) CSJImmersiveMiddleExpressUtility *MIT_IntOut; // @synthesize MIT_IntOut=_MIT_IntOut;
 @property(retain, nonatomic) CSJNativeAd *nativeAd; // @synthesize nativeAd=_nativeAd;
 @property(copy, nonatomic) CDUnknownBlockType CloseBlock; // @synthesize CloseBlock=_CloseBlock;
 - (void)nativeExpressView:(id)arg1 creativeClickWithMaterial:(id)arg2;
 - (void)nativeExpressViewImmersiveMiddlePageBack:(id)arg1;
-- (void)gotDetailPageWith:(id)arg1;
-- (void)showStoreProductWithAppID:(id)arg1;
-- (void)middlePageVideoDetailBackup;
-- (void)middleRenderFailBackup;
-- (void)closeVideoDetailView;
-- (void)middleRenderSuccess:(id)arg1;
-- (void)showImmersiveMiddlePage;
+- (void)Loss_Hash_log:(id)arg1;
+- (void)File_X2R0:(id)arg1;
+- (void)Lock_ItTry;
+- (void)Req_LazyInt;
+- (void)Ad_DataCls;
+- (void)Weak_RetCan:(id)arg1;
+- (void)Http_PtrWill;
 - (void)viewWillLayoutSubviews;
 - (long long)preferredInterfaceOrientationForPresentation;
 - (unsigned long long)supportedInterfaceOrientations;
@@ -43,7 +43,7 @@
 - (_Bool)prefersStatusBarHidden;
 - (void)viewDidAppear:(_Bool)arg1;
 - (void)viewDidLoad;
-- (id)initImmersiveMiddlePageWith:(id)arg1;
+- (id)initLBy_MuteText:(id)arg1;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

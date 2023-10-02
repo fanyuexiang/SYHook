@@ -60,6 +60,7 @@
     NSString *_lotteryslotid;
 }
 
++ (long long)skPlatformColumns;
 + (id)sharedConfig;
 - (void).cxx_destruct;
 @property(nonatomic) _Bool createMeituanQRCode; // @synthesize createMeituanQRCode=_createMeituanQRCode;
@@ -113,6 +114,7 @@
 - (id)token;
 - (id)CouponSectionHeaderPlatformTypePath;
 - (void)saveSectionHeaderPlatformTypeArray:(id)arg1;
+- (long long)skPlatformRows;
 - (id)CouponPlatformTypePath;
 - (void)savePlatformTypeArray:(id)arg1;
 - (void)clearCurrentUserInfo;

@@ -81,6 +81,7 @@
 - (void)addContentView:(double)arg1;
 - (void)addCategorySelectViewToSuperView:(id)arg1;
 - (void)addSectionHeaderViewWithOffsetY:(double)arg1;
+- (void)refreshTopPlatformContentUILayout;
 - (void)refreshTopPlatformContent;
 - (void)handleRequestWithResponseObject:(id)arg1 error:(id)arg2 isRefresh:(_Bool)arg3 refreshView:(id)arg4;
 - (void)requestRecommendList:(id)arg1 isRefresh:(_Bool)arg2;

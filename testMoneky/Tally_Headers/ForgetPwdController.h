@@ -31,7 +31,6 @@
 - (void)appleLoginAction;
 - (void)backAction;
 - (id)addTipLabel:(id)arg1 fontSize:(double)arg2 y:(double)arg3;
-- (void)phoneLoginAction;
 - (void)closeAction;
 - (void)logoutAction;
 - (void)wxLogin;

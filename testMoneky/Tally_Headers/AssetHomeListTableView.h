@@ -16,9 +16,6 @@
     NSString *_assetID;
     AssetHomeController *_controller;
     UINavigationController *_navigationController;
-    CDUnknownBlockType _scrollBlock;
-    CDUnknownBlockType _reloadDataBlock;
-    CDUnknownBlockType _deleteSuccessBlock;
     NSMutableArray *_dataArray;
     UIView *_headerView;
     CBAttributedLabel *_netAssetLabel;
@@ -42,9 +39,6 @@
 @property(retain, nonatomic) CBAttributedLabel *netAssetLabel; // @synthesize netAssetLabel=_netAssetLabel;
 @property(retain, nonatomic) UIView *headerView; // @synthesize headerView=_headerView;
 @property(retain, nonatomic) NSMutableArray *dataArray; // @synthesize dataArray=_dataArray;
-@property(copy, nonatomic) CDUnknownBlockType deleteSuccessBlock; // @synthesize deleteSuccessBlock=_deleteSuccessBlock;
-@property(copy, nonatomic) CDUnknownBlockType reloadDataBlock; // @synthesize reloadDataBlock=_reloadDataBlock;
-@property(copy, nonatomic) CDUnknownBlockType scrollBlock; // @synthesize scrollBlock=_scrollBlock;
 @property(nonatomic) __weak UINavigationController *navigationController; // @synthesize navigationController=_navigationController;
 @property(nonatomic) __weak AssetHomeController *controller; // @synthesize controller=_controller;
 - (void)loadAssetHomeCacheData;

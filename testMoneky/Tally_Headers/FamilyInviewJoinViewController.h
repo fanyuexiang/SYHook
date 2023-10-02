@@ -44,6 +44,7 @@
 - (void)startCountdown;
 - (void)endBackgroundTask;
 - (void)applicationDidEnterBackground;
+- (void)JumpAfterJoinSuccessAction;
 - (void)joinAction;
 - (void)wxAction;
 - (void)copyAction;

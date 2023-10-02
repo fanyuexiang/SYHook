@@ -8,8 +8,7 @@
 
 #import "SDWebImageOperation-Protocol.h"
 
-@class NSArray, NSPointerArray, NSString, SDWebImagePrefetcher;
-@protocol OS_dispatch_semaphore;
+@class NSArray, NSDictionary, NSPointerArray, NSString, SDWebImagePrefetcher;
 
 @interface SDWebImagePrefetchToken : NSObject <SDWebImageOperation>
 {
@@ -17,12 +16,16 @@
     // Error parsing type: AQ, name: _finishedCount
     // Error parsing type: {atomic_flag="_Value"AB}, name: _isAllFinished
     unsigned long long _totalCount;
-    NSObject<OS_dispatch_semaphore> *_prefetchOperationsLock;
-    NSObject<OS_dispatch_semaphore> *_loadOperationsLock;
+    struct os_unfair_lock_s _prefetchOperationsLock;
+    int _prefetchOperationsLock_deprecated;
+    struct os_unfair_lock_s _loadOperationsLock;
+    int _loadOperationsLock_deprecated;
     NSArray *_urls;
     NSPointerArray *_loadOperations;
     NSPointerArray *_prefetchOperations;
     SDWebImagePrefetcher *_prefetcher;
+    unsigned long long _options;
+    NSDictionary *_context;
     CDUnknownBlockType _completionBlock;
     CDUnknownBlockType _progressBlock;
 }
@@ -30,6 +33,8 @@
 - (void).cxx_destruct;
 @property(copy, nonatomic) CDUnknownBlockType progressBlock; // @synthesize progressBlock=_progressBlock;
 @property(copy, nonatomic) CDUnknownBlockType completionBlock; // @synthesize completionBlock=_completionBlock;
+@property(copy, nonatomic) NSDictionary *context; // @synthesize context=_context;
+@property(nonatomic) unsigned long long options; // @synthesize options=_options;
 @property(nonatomic) __weak SDWebImagePrefetcher *prefetcher; // @synthesize prefetcher=_prefetcher;
 @property(retain, nonatomic) NSPointerArray *prefetchOperations; // @synthesize prefetchOperations=_prefetchOperations;
 @property(retain, nonatomic) NSPointerArray *loadOperations; // @synthesize loadOperations=_loadOperations;
@@ -38,6 +43,7 @@
 - (id)init;
 
 // Remaining properties
+@property(readonly, nonatomic, getter=isCancelled) _Bool cancelled;
 @property(readonly, copy) NSString *debugDescription;
 @property(readonly, copy) NSString *description;
 @property(readonly) unsigned long long hash;

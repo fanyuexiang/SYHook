@@ -10,6 +10,9 @@
 {
 }
 
++ (void)pbu_couponResponseHandlerWithInfoViewModel:(id)arg1 request:(id)arg2 completion:(CDUnknownBlockType)arg3;
++ (void)pbu_requestWithInfoViewModel:(id)arg1 completion:(CDUnknownBlockType)arg2;
++ (void)takeCouponWithInfoViewModel:(id)arg1 completion:(CDUnknownBlockType)arg2;
 + (void)_requestWithMaterial:(id)arg1 slot:(id)arg2 retry:(_Bool)arg3;
 + (void)appleCouponWithMaterial:(id)arg1 slot:(id)arg2 completion:(CDUnknownBlockType)arg3;
 

@@ -18,12 +18,6 @@
 - (void)wxApi_safeRemoveObject:(id)arg1;
 - (void)wxApi_safeAddObject:(id)arg1;
 - (void)wvAddNullable:(id)arg1;
-- (void)abu_unshiftWithArray:(id)arg1;
-- (void)abu_pushWithArray:(id)arg1;
-- (void)abu_unshift:(id)arg1;
-- (id)abu_shift;
-- (void)abu_push:(id)arg1;
-- (id)abu_pop;
 - (void)bu_removeObjectAtIndexSafely:(unsigned long long)arg1;
 - (id)bu_objectAtIndexSafely:(unsigned long long)arg1;
 - (void)bu_safeRemoveObject:(id)arg1;
@@ -31,8 +25,22 @@
 - (void)bu_safeInsertObject:(id)arg1 atIndex:(unsigned long long)arg2;
 - (void)bu_safeAddNilObject;
 - (void)bu_safeAddObject:(id)arg1;
-- (void)hmdbu_removeObjectAtIndex:(unsigned long long)arg1;
-- (void)hmdbu_insertObject:(id)arg1 atIndex:(unsigned long long)arg2;
-- (void)hmdbu_addObject:(id)arg1;
+- (id)el_top;
+- (void)el_addLast:(id)arg1;
+- (void)el_addFirst:(id)arg1;
+- (id)el_pollLast;
+- (id)el_pollFirst;
+- (void)el_push:(id)arg1;
+- (id)el_pop;
+- (void)hmdBU_addObjects:(id)arg1;
+- (void)hmdBU_removeObjectAtIndex:(unsigned long long)arg1;
+- (void)hmdBU_insertObject:(id)arg1 atIndex:(unsigned long long)arg2;
+- (void)hmdBU_addObject:(id)arg1;
+- (void)abu_unshiftWithArray:(id)arg1;
+- (void)abu_pushWithArray:(id)arg1;
+- (void)abu_unshift:(id)arg1;
+- (id)abu_shift;
+- (void)abu_push:(id)arg1;
+- (id)abu_pop;
 @end
 

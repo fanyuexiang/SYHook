@@ -6,10 +6,11 @@
 
 #import <objc/NSObject.h>
 
-@class NSData, NSError, NSHTTPURLResponse, NSString, NSURLRequest, NSURLSessionTask;
+@class NSData, NSDictionary, NSError, NSHTTPURLResponse, NSString, NSURLRequest, NSURLSessionTask, NSURLSessionTaskMetrics;
 
 @interface BUBaseRequest : NSObject
 {
+    _Bool _assumesHTTP3Capable;
     NSURLSessionTask *_requestTask;
     NSData *_responseData;
     id _responseJSONObject;
@@ -20,14 +21,18 @@
     NSData *_httpBody;
     CDUnknownBlockType _successCompletionBlock;
     CDUnknownBlockType _failureCompletionBlock;
+    NSDictionary *_metricData;
+    NSURLSessionTaskMetrics *_taskMetrics;
     CDUnknownBlockType _constructingBodyBlock;
     long long _requestPriority;
 }
 
-+ (void)test;
 - (void).cxx_destruct;
 @property(nonatomic) long long requestPriority; // @synthesize requestPriority=_requestPriority;
 @property(copy, nonatomic) CDUnknownBlockType constructingBodyBlock; // @synthesize constructingBodyBlock=_constructingBodyBlock;
+@property(retain, nonatomic) NSURLSessionTaskMetrics *taskMetrics; // @synthesize taskMetrics=_taskMetrics;
+@property(copy, nonatomic) NSDictionary *metricData; // @synthesize metricData=_metricData;
+@property(nonatomic) _Bool assumesHTTP3Capable; // @synthesize assumesHTTP3Capable=_assumesHTTP3Capable;
 @property(copy, nonatomic) CDUnknownBlockType failureCompletionBlock; // @synthesize failureCompletionBlock=_failureCompletionBlock;
 @property(copy, nonatomic) CDUnknownBlockType successCompletionBlock; // @synthesize successCompletionBlock=_successCompletionBlock;
 @property(retain, nonatomic) NSData *httpBody; // @synthesize httpBody=_httpBody;
@@ -38,6 +43,7 @@
 @property(retain, nonatomic) id responseJSONObject; // @synthesize responseJSONObject=_responseJSONObject;
 @property(retain, nonatomic) NSData *responseData; // @synthesize responseData=_responseData;
 @property(retain, nonatomic) NSURLSessionTask *requestTask; // @synthesize requestTask=_requestTask;
+- (void)handleMetric:(id)arg1;
 - (_Bool)useCDN;
 - (_Bool)allowsCellularAccess;
 - (id)requestArgument;

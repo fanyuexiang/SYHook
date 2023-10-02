@@ -37,6 +37,7 @@
 - (_Bool)validWCMiniappOpenSDKRegisterInfo;
 - (_Bool)validWCMiniappOpenSDK;
 - (_Bool)validWCMiniappLink;
+- (_Bool)preferTwoJumpWithOpenSDK;
 - (_Bool)preferOpenSDKAction;
 - (_Bool)preferSchemeLinkAction;
 - (id)wcMiniappSourceURL;

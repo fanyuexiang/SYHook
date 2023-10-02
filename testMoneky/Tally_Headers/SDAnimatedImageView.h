@@ -14,6 +14,7 @@
     NSString *_runLoopMode;
     unsigned long long _maxBufferSize;
     double _playbackRate;
+    unsigned long long _playbackMode;
     _Bool _shouldCustomLoopCount;
     _Bool _shouldIncrementalLoad;
     _Bool _clearBufferWhenStopped;
@@ -21,17 +22,16 @@
     _Bool _autoPlayAnimatedImage;
     _Bool _shouldAnimate;
     _Bool _isProgressive;
+    SDAnimatedImagePlayer *_player;
     UIImage *_currentFrame;
     unsigned long long _currentFrameIndex;
     unsigned long long _currentLoopCount;
-    SDAnimatedImagePlayer *_player;
     CALayer *_imageViewLayer;
 }
 
 + (id)defaultRunLoopMode;
 - (void).cxx_destruct;
 @property(retain, nonatomic) CALayer *imageViewLayer; // @synthesize imageViewLayer=_imageViewLayer;
-@property(retain, nonatomic) SDAnimatedImagePlayer *player; // @synthesize player=_player;
 @property(nonatomic) _Bool isProgressive; // @synthesize isProgressive=_isProgressive;
 @property(nonatomic) _Bool shouldAnimate; // @synthesize shouldAnimate=_shouldAnimate;
 @property(nonatomic) _Bool autoPlayAnimatedImage; // @synthesize autoPlayAnimatedImage=_autoPlayAnimatedImage;
@@ -42,6 +42,7 @@
 @property(nonatomic) unsigned long long currentLoopCount; // @synthesize currentLoopCount=_currentLoopCount;
 @property(nonatomic) unsigned long long currentFrameIndex; // @synthesize currentFrameIndex=_currentFrameIndex;
 @property(retain, nonatomic) UIImage *currentFrame; // @synthesize currentFrame=_currentFrame;
+@property(retain, nonatomic) SDAnimatedImagePlayer *player; // @synthesize player=_player;
 - (void)displayLayer:(id)arg1;
 - (id)progressiveAnimatedCoderForImage:(id)arg1;
 - (void)updateIsProgressiveWithImage:(id)arg1;
@@ -56,6 +57,7 @@
 - (void)setAlpha:(double)arg1;
 - (void)didMoveToWindow;
 - (void)didMoveToSuperview;
+@property(nonatomic) unsigned long long playbackMode;
 @property(nonatomic) double playbackRate;
 @property(nonatomic) unsigned long long maxBufferSize;
 @property(copy, nonatomic) NSString *runLoopMode;

@@ -6,29 +6,29 @@
 
 #import <objc/NSObject.h>
 
-#import "ABUCsj_BUNativeExpressRewardedVideoAdDelegate-Protocol.h"
-#import "ABUCsj_BURewardedVideoAdDelegate-Protocol.h"
-#import "ABUCustomRewardedVideoAdapter-Protocol.h"
+#import "BUMCustomRewardedVideoAdapter-Protocol.h"
+#import "BUNativeExpressRewardedVideoAdDelegate-Protocol.h"
+#import "BURewardedVideoAdDelegate-Protocol.h"
 
-@class ABUCsj_RewardVideoAgainDelegate, NSDictionary, NSMutableDictionary, NSString;
-@protocol ABUCsj_BUNativeExpressRewardedVideoAd, ABUCsj_BURewardedVideoAd, ABUCustomConfigAdapter, ABUCustomRewardedVideoAdapterBridge;
+@class BUNativeExpressRewardedVideoAd, BURewardedVideoAd, NSDictionary, NSMutableDictionary, NSString, RewardVideoAgainDelegate;
+@protocol BUMCustomConfigAdapter, BUMCustomRewardedVideoAdapterBridge;
 
-@interface ABUCsjRewardedVideoAdapter : NSObject <ABUCsj_BURewardedVideoAdDelegate, ABUCsj_BUNativeExpressRewardedVideoAdDelegate, ABUCustomRewardedVideoAdapter>
+@interface ABUCsjRewardedVideoAdapter : NSObject <BURewardedVideoAdDelegate, BUNativeExpressRewardedVideoAdDelegate, BUMCustomRewardedVideoAdapter>
 {
     _Bool _hasVideoDownLoad;
     NSDictionary *extroInfoMap;
-    id <ABUCsj_BURewardedVideoAd> _rvAd;
-    id <ABUCsj_BUNativeExpressRewardedVideoAd> _expressRvAd;
-    ABUCsj_RewardVideoAgainDelegate *_rewardVideoAgainDelegate;
+    BURewardedVideoAd *_rvAd;
+    BUNativeExpressRewardedVideoAd *_expressRvAd;
+    RewardVideoAgainDelegate *_rewardVideoAgainDelegate;
     NSMutableDictionary *_pangleExtroInfoMap;
 }
 
 - (void).cxx_destruct;
 @property(retain, nonatomic) NSMutableDictionary *pangleExtroInfoMap; // @synthesize pangleExtroInfoMap=_pangleExtroInfoMap;
-@property(retain, nonatomic) ABUCsj_RewardVideoAgainDelegate *rewardVideoAgainDelegate; // @synthesize rewardVideoAgainDelegate=_rewardVideoAgainDelegate;
+@property(retain, nonatomic) RewardVideoAgainDelegate *rewardVideoAgainDelegate; // @synthesize rewardVideoAgainDelegate=_rewardVideoAgainDelegate;
 @property(nonatomic) _Bool hasVideoDownLoad; // @synthesize hasVideoDownLoad=_hasVideoDownLoad;
-@property(readonly, nonatomic) id <ABUCsj_BUNativeExpressRewardedVideoAd> expressRvAd; // @synthesize expressRvAd=_expressRvAd;
-@property(readonly, nonatomic) id <ABUCsj_BURewardedVideoAd> rvAd; // @synthesize rvAd=_rvAd;
+@property(readonly, nonatomic) BUNativeExpressRewardedVideoAd *expressRvAd; // @synthesize expressRvAd=_expressRvAd;
+@property(readonly, nonatomic) BURewardedVideoAd *rvAd; // @synthesize rvAd=_rvAd;
 - (void)_fillInfo:(id)arg1 rewardedVideoModel:(id)arg2;
 - (void)rewardedVideoAdDidClickSkip:(id)arg1;
 - (void)rewardedVideoAdServerRewardDidSucceed:(id)arg1 verify:(_Bool)arg2;
@@ -61,8 +61,8 @@
 - (void)loadRewardedVideoAdWithSlotID:(id)arg1 andParameter:(id)arg2;
 
 // Remaining properties
-@property(nonatomic) __weak id <ABUCustomRewardedVideoAdapterBridge> bridge;
-@property(retain, nonatomic) id <ABUCustomConfigAdapter> configAdapter;
+@property(nonatomic) __weak id <BUMCustomRewardedVideoAdapterBridge> bridge;
+@property(retain, nonatomic) id <BUMCustomConfigAdapter> configAdapter;
 @property(readonly, copy) NSString *debugDescription;
 @property(readonly, copy) NSString *description;
 @property(readonly) unsigned long long hash;

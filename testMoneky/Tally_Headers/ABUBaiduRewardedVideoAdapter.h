@@ -7,12 +7,12 @@
 #import <objc/NSObject.h>
 
 #import "ABUBaidu_BaiduMobAdRewardVideoDelegate-Protocol.h"
-#import "ABUCustomRewardedVideoAdapter-Protocol.h"
+#import "BUMCustomRewardedVideoAdapter-Protocol.h"
 
 @class NSDictionary, NSString;
-@protocol ABUBaidu_BaiduMobAdRewardVideo, ABUCustomConfigAdapter, ABUCustomRewardedVideoAdapterBridge;
+@protocol ABUBaidu_BaiduMobAdRewardVideo, BUMCustomConfigAdapter, BUMCustomRewardedVideoAdapterBridge;
 
-@interface ABUBaiduRewardedVideoAdapter : NSObject <ABUBaidu_BaiduMobAdRewardVideoDelegate, ABUCustomRewardedVideoAdapter>
+@interface ABUBaiduRewardedVideoAdapter : NSObject <ABUBaidu_BaiduMobAdRewardVideoDelegate, BUMCustomRewardedVideoAdapter>
 {
     _Bool _hasRewardEarned;
     NSObject<ABUBaidu_BaiduMobAdRewardVideo> *_rewardedAd;
@@ -43,8 +43,8 @@
 - (_Bool)enablePreloadWhenCurrentIsDisplay;
 
 // Remaining properties
-@property(nonatomic) __weak id <ABUCustomRewardedVideoAdapterBridge> bridge;
-@property(retain, nonatomic) id <ABUCustomConfigAdapter> configAdapter;
+@property(nonatomic) __weak id <BUMCustomRewardedVideoAdapterBridge> bridge;
+@property(retain, nonatomic) id <BUMCustomConfigAdapter> configAdapter;
 @property(readonly, copy) NSString *debugDescription;
 @property(readonly, copy) NSString *description;
 @property(readonly, copy, nonatomic) NSDictionary *extroInfoMap;

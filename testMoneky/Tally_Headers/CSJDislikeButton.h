@@ -12,8 +12,8 @@
 
 - (_Bool)pointInside:(struct CGPoint)arg1 withEvent:(id)arg2;
 - (void)traitCollectionDidChange:(id)arg1;
-- (void)updateLightStyle;
-- (void)updateDarkStyle;
+- (void)Msg_EnumBu_y;
+- (void)Code_Bu_xBool;
 
 @end
 

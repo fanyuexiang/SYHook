@@ -44,6 +44,8 @@
 - (void)updateRitInfoWithPackage:(id)arg1 withAd:(id)arg2;
 - (id)initWithShowPackage:(id)arg1 withAd:(id)arg2;
 - (id)initWithAdPackage:(id)arg1 withAd:(id)arg2 withLoadPrice:(id)arg3;
+- (_Bool)isMemberOfClass:(Class)arg1;
+- (_Bool)isKindOfClass:(Class)arg1;
 
 @end
 

@@ -21,6 +21,8 @@
 - (id)imageInfoModel;
 - (_Bool)isSplashAd;
 - (long long)timingPolicy;
+- (_Bool)supportImageLottie;
+- (_Bool)supportBgImrUrl;
 - (_Bool)supportInteraction;
 - (_Bool)supportCalcuColor;
 - (_Bool)supportBgGradient;

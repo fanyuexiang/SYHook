@@ -10,11 +10,11 @@
 
 @interface CSJSplashBottomNormalView : CSJSplashBottomBaseComponentView
 {
-    UIImageView *_rightArrow;
+    UIImageView *_Fail_YouBody;
 }
 
 - (void).cxx_destruct;
-@property(retain, nonatomic) UIImageView *rightArrow; // @synthesize rightArrow=_rightArrow;
+@property(retain, nonatomic) UIImageView *Fail_YouBody; // @synthesize Fail_YouBody=_Fail_YouBody;
 - (struct CGRect)splashBottomFrameWithContainerFrame:(struct CGRect)arg1;
 - (void)buildUpView;
 - (void)layoutSubviews;

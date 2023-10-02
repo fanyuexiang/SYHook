@@ -10,19 +10,19 @@
 
 @interface CSJDynamicRenderTimeOutControlServer : NSObject
 {
-    _Bool _hasRenderFinish;
+    _Bool _Only_DateY1;
     double _delayTime;
     double _timeout;
     BUTimer *_renderTimer;
 }
 
 - (void).cxx_destruct;
-@property(nonatomic) _Bool hasRenderFinish; // @synthesize hasRenderFinish=_hasRenderFinish;
+@property(nonatomic) _Bool Only_DateY1; // @synthesize Only_DateY1=_Only_DateY1;
 @property(retain, nonatomic) BUTimer *renderTimer; // @synthesize renderTimer=_renderTimer;
 @property(nonatomic) double timeout; // @synthesize timeout=_timeout;
 @property(nonatomic) double delayTime; // @synthesize delayTime=_delayTime;
-- (void)delayRender:(CDUnknownBlockType)arg1;
-- (void)startRenderWithDelayTime:(double)arg1 delayRender:(CDUnknownBlockType)arg2;
+- (void)Api_P1You:(CDUnknownBlockType)arg1;
+- (void)Pos_VcTap:(double)arg1 Api_P1You:(CDUnknownBlockType)arg2;
 
 @end
 

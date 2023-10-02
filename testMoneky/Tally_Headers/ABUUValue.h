@@ -18,6 +18,7 @@
 + (_Bool)supportsSecureCoding;
 - (void).cxx_destruct;
 @property(retain, nonatomic) NSMutableArray *userValues; // @synthesize userValues=_userValues;
+- (void)updateValue:(double)arg1 withJsMode:(unsigned long long)arg2;
 - (id)initWithCoder:(id)arg1;
 - (void)encodeWithCoder:(id)arg1;
 - (double)sumUValuesWithEcpmTTL:(long long)arg1;

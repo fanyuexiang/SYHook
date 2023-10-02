@@ -10,10 +10,12 @@
 {
     _Bool _isMockDownloadCallback;
     _Bool _isShowAgain;
+    _Bool _didDownloadVideo;
     double _startRequestTimeInterval;
     long long _ritReqType;
 }
 
+@property(nonatomic) _Bool didDownloadVideo; // @synthesize didDownloadVideo=_didDownloadVideo;
 @property(nonatomic) _Bool isShowAgain; // @synthesize isShowAgain=_isShowAgain;
 @property(nonatomic) _Bool isMockDownloadCallback; // @synthesize isMockDownloadCallback=_isMockDownloadCallback;
 @property(nonatomic) long long ritReqType; // @synthesize ritReqType=_ritReqType;

@@ -12,6 +12,9 @@
 + (_Bool)gdt_isGIFWithData:(id)arg1;
 + (float)gdt_frameDurationAtIndex:(unsigned long long)arg1 source:(struct CGImageSource *)arg2;
 + (id)gdt_animatedGIFWithData:(id)arg1;
++ (void)setupCacheMap;
++ (void)abum_downloadImageWithURL:(id)arg1 complete:(CDUnknownBlockType)arg2;
++ (void)abum_preloadImageWithURL:(id)arg1;
 - (void)cancelRequest;
 - (void)setImage:(id)arg1 isFromCache:(_Bool)arg2;
 - (void)GDTfunctionl9KSCa:(id)arg1 holder:(id)arg2;
@@ -49,6 +52,20 @@
 - (void)sd_setImageWithURL:(id)arg1 placeholderImage:(id)arg2 options:(unsigned long long)arg3;
 - (void)sd_setImageWithURL:(id)arg1 placeholderImage:(id)arg2;
 - (void)sd_setImageWithURL:(id)arg1;
+- (void)csj_setImageWithURL:(id)arg1 completed:(CDUnknownBlockType)arg2;
+- (id)bu_clipImage:(id)arg1 toSize:(struct CGSize)arg2 isScaleToMax:(_Bool)arg3;
+- (void)bu_cancelRequest;
+- (void)bu_setImage:(id)arg1 isFromCache:(_Bool)arg2;
+- (void)bu_downloadWithReqeust:(id)arg1 holder:(id)arg2;
+- (void)setBUImageWithURLString:(id)arg1 placeholder:(id)arg2 completion:(CDUnknownBlockType)arg3;
+- (void)setBUImageWithURLString:(id)arg1 placeholderImageName:(id)arg2 completion:(CDUnknownBlockType)arg3;
+- (void)setBUImageWithURLString:(id)arg1 placeholder:(id)arg2;
+- (void)setBUImageWithURLString:(id)arg1 placeholderImageName:(id)arg2;
+@property(nonatomic) _Bool bu_shouldAutoClipImageToViewSize;
+@property(nonatomic) unsigned long long bu_attemptToReloadTimesForFailedURL;
+@property(retain, nonatomic) BU_ZFImageDownloader *bu_imageDownloader;
+@property(copy, nonatomic) CDUnknownBlockType bu_completion;
+- (void)dealloc;
 - (void)sdBu_setHighlightedImageWithURL:(id)arg1 options:(unsigned long long)arg2 context:(id)arg3 progress:(CDUnknownBlockType)arg4 completed:(CDUnknownBlockType)arg5;
 - (void)sdBu_setHighlightedImageWithURL:(id)arg1 options:(unsigned long long)arg2 progress:(CDUnknownBlockType)arg3 completed:(CDUnknownBlockType)arg4;
 - (void)sdBu_setHighlightedImageWithURL:(id)arg1 options:(unsigned long long)arg2 completed:(CDUnknownBlockType)arg3;
@@ -65,18 +82,7 @@
 - (void)sdBu_setImageWithURL:(id)arg1 placeholderImage:(id)arg2 options:(unsigned long long)arg3;
 - (void)sdBu_setImageWithURL:(id)arg1 placeholderImage:(id)arg2;
 - (void)sdBu_setImageWithURL:(id)arg1;
-- (id)bu_clipImage:(id)arg1 toSize:(struct CGSize)arg2 isScaleToMax:(_Bool)arg3;
-- (void)bu_cancelRequest;
-- (void)bu_setImage:(id)arg1 isFromCache:(_Bool)arg2;
-- (void)bu_downloadWithReqeust:(id)arg1 holder:(id)arg2;
-- (void)setBUImageWithURLString:(id)arg1 placeholder:(id)arg2 completion:(CDUnknownBlockType)arg3;
-- (void)setBUImageWithURLString:(id)arg1 placeholderImageName:(id)arg2 completion:(CDUnknownBlockType)arg3;
-- (void)setBUImageWithURLString:(id)arg1 placeholder:(id)arg2;
-- (void)setBUImageWithURLString:(id)arg1 placeholderImageName:(id)arg2;
-@property(nonatomic) _Bool bu_shouldAutoClipImageToViewSize;
-@property(nonatomic) unsigned long long bu_attemptToReloadTimesForFailedURL;
-@property(retain, nonatomic) BU_ZFImageDownloader *bu_imageDownloader;
-@property(copy, nonatomic) CDUnknownBlockType bu_completion;
-- (void)dealloc;
+- (void)_abum_setImageWithURL:(id)arg1 placeholderImage:(id)arg2;
+- (void)abum_setImageWithURL:(id)arg1 placeholderImage:(id)arg2;
 @end
 

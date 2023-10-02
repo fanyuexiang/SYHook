@@ -34,7 +34,7 @@
 }
 
 - (void).cxx_destruct;
-@property(retain, nonatomic) UIViewController *currentShowInVC; // @synthesize currentShowInVC=_currentShowInVC;
+@property(nonatomic) __weak UIViewController *currentShowInVC; // @synthesize currentShowInVC=_currentShowInVC;
 @property(nonatomic) _Bool isShakeViewDestory; // @synthesize isShakeViewDestory=_isShakeViewDestory;
 @property(nonatomic) _Bool isPauseShakeTrigger; // @synthesize isPauseShakeTrigger=_isPauseShakeTrigger;
 @property(nonatomic) _Bool isStartedShake; // @synthesize isStartedShake=_isStartedShake;

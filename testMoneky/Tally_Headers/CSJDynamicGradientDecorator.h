@@ -15,6 +15,8 @@
 
 - (void).cxx_destruct;
 @property(retain, nonatomic) CAGradientLayer *gradientLayer; // @synthesize gradientLayer=_gradientLayer;
+- (id)pbu_gradientColorArrayWithRgbaGradientValue:(id)arg1;
+- (id)pbu_gradientColorArrayWithHexGradientArray:(id)arg1;
 - (void)render;
 
 @end

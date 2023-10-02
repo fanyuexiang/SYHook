@@ -12,6 +12,9 @@
 
 + (id)lastPathComponent;
 + (id)rootPathComponent;
++ (id)libraryPathFromSubDirectory:(id)arg1;
++ (id)directoryPathFromSubDirectory:(id)arg1;
++ (id)oldDataFilePath;
 + (id)dataFilePath;
 + (id)jsonObject;
 + (_Bool)saveJsonObject:(id)arg1;

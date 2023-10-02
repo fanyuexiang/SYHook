@@ -22,12 +22,11 @@
 + (id)jdsDataFromBase64String:(id)arg1;
 + (id)wv_dataWithBase64EncodedString:(id)arg1;
 + (id)wvDataWithBase64EncodedString:(id)arg1;
-+ (id)dataWithBase64EncodedString:(id)arg1;
 + (id)bu_dataWithBase64EncodedString:(id)arg1;
-+ (id)bu_dataWithContentsOfStream:(id)arg1 initialCapacity:(unsigned long long)arg2 error:(id *)arg3;
 + (long long)sdBu_imageFormatFromUTType:(struct __CFString *)arg1;
 + (const struct __CFString *)sdBu_UTTypeFromImageFormat:(long long)arg1;
 + (long long)sdBu_imageFormatForImageData:(id)arg1;
++ (id)abu_dataWithBase64EncodedString:(id)arg1;
 - (id)CRC16String;
 - (id)MYAES256DecryptWithKey:(id)arg1;
 - (id)MYAES256EncryptWithKey:(id)arg1 iv:(id)arg2;
@@ -62,16 +61,10 @@
 - (id)wvObjectFromJSONData;
 - (id)tbsdkMd5ForData;
 - (id)tbsdkMd5ForString;
-- (id)base64EncodedString;
-- (id)base64EncodedStringWithWrapWidth:(unsigned long long)arg1;
-- (id)abu_eb_dataByGZipCompressingAtLevel:(int)arg1 windowSize:(int)arg2 memoryLevel:(int)arg3 strategy:(int)arg4 error:(id *)arg5;
-- (id)abu_eb_dataByGZipCompressingWithError:(id *)arg1;
+- (id)csj_hexString;
+- (id)csj_base64RFC4648;
 - (id)bu_base64EncodedString;
 - (id)bu_base64EncodedStringWithWrapWidth:(unsigned long long)arg1;
-- (id)_hexString;
-- (id)bu_base64RFC4648;
-- (id)xorE;
-- (id)xorD;
 - (id)eb_dataByGZipCompressingAtLevel:(int)arg1 windowSize:(int)arg2 memoryLevel:(int)arg3 strategy:(int)arg4 error:(id *)arg5;
 - (id)eb_dataByGZipCompressingWithError:(id *)arg1;
 - (id)HMDBUAES128Operation:(unsigned int)arg1 key:(id)arg2 iv:(id)arg3;
@@ -79,10 +72,14 @@
 - (id)HMDBUAES128EncryptedDataWithKey:(id)arg1 iv:(id)arg2;
 - (id)HMDBUAES128DecryptedDataWithKey:(id)arg1;
 - (id)HMDBUAES128EncryptedDataWithKey:(id)arg1;
-- (id)gzipDeflate;
-- (id)hmdbu_jsonMutableObject:(id *)arg1;
-- (id)hmdbu_jsonObject:(id *)arg1;
-- (id)hmdbu_jsonMutableObject;
-- (id)hmdbu_jsonObject;
+- (id)hmdBU_gzipDeflate;
+- (id)hmdBU_jsonMutableObject:(id *)arg1;
+- (id)hmdBU_jsonObject:(id *)arg1;
+- (id)hmdBU_jsonMutableObject;
+- (id)hmdBU_jsonObject;
+- (id)abu_base64EncodedString;
+- (id)abu_base64EncodedStringWithWrapWidth:(unsigned long long)arg1;
+- (id)abu_eb_dataByGZipCompressingAtLevel:(int)arg1 windowSize:(int)arg2 memoryLevel:(int)arg3 strategy:(int)arg4 error:(id *)arg5;
+- (id)abu_eb_dataByGZipCompressingWithError:(id *)arg1;
 @end
 

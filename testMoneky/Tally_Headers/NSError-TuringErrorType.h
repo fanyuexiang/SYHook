@@ -12,12 +12,6 @@
 + (_Bool)wpk_clearError:(id *)arg1;
 + (_Bool)wpk_fillError:(id *)arg1 withDomain:(id)arg2 code:(long long)arg3 description:(id)arg4;
 + (id)wpk_errorWithDomain:(id)arg1 code:(long long)arg2 description:(id)arg3;
-+ (id)abu_errorWithCode:(long long)arg1 userInfo:(id)arg2;
-+ (id)abu_errorWithCode:(long long)arg1 message:(id)arg2;
-+ (id)_abu_messageWithCode:(long long)arg1;
-+ (id)abu_errorWithCode:(long long)arg1;
-+ (id)abu_errorWithDomain:(id)arg1 code:(long long)arg2 reason:(id)arg3;
-+ (id)ies_errorWithCode:(long long)arg1 description:(id)arg2;
 + (id)csj_errorDictionary;
 + (id)csj_errorWithError:(id)arg1 mergedError:(id)arg2;
 + (id)csj_pbu_errorWithCode:(long long)arg1 msg:(id)arg2 defaultErrorCode:(long long)arg3;
@@ -28,6 +22,11 @@
 + (id)csj_errorWithNetworkError:(id)arg1;
 + (id)csj_splashFileCacheError;
 + (id)csj_dynamicUserInfoWithError:(id)arg1;
++ (id)abu_errorWithCode:(long long)arg1 userInfo:(id)arg2;
++ (id)abu_errorWithCode:(long long)arg1 message:(id)arg2;
++ (id)_abu_messageWithCode:(long long)arg1;
++ (id)abu_errorWithCode:(long long)arg1;
++ (id)abu_errorWithDomain:(id)arg1 code:(long long)arg2 reason:(id)arg3;
 - (_Bool)isAlreadyPostToServer;
 - (_Bool)isValuableForReposting;
 - (long long)wvErrorKind;

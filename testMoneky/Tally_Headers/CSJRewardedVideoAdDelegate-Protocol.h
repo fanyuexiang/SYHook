@@ -14,7 +14,6 @@
 - (void)rewardedVideoAdCallback:(CSJRewardedVideoAd *)arg1 withType:(unsigned long long)arg2;
 - (void)rewardedVideoAdDidClickSkip:(CSJRewardedVideoAd *)arg1;
 - (void)rewardedVideoAdServerRewardDidFail:(CSJRewardedVideoAd *)arg1 error:(NSError *)arg2;
-- (void)rewardedVideoAdServerRewardDidFail:(CSJRewardedVideoAd *)arg1;
 - (void)rewardedVideoAdServerRewardDidSucceed:(CSJRewardedVideoAd *)arg1 verify:(_Bool)arg2;
 - (void)rewardedVideoAdDidPlayFinish:(CSJRewardedVideoAd *)arg1 didFailWithError:(NSError *)arg2;
 - (void)rewardedVideoAdDidClick:(CSJRewardedVideoAd *)arg1;

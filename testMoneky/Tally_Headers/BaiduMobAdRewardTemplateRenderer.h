@@ -7,13 +7,14 @@
 #import "BaiduMobAdRewardVideoRenderer.h"
 
 #import "BaiduMobAdComponentDelegate-Protocol.h"
+#import "BaiduMobAdInteractiveBackCardComponentDelegate-Protocol.h"
+#import "BaiduMobAdInteractiveFrontCardComponentDelegate-Protocol.h"
 #import "IBaiduMobAdRenderEventDelegate-Protocol.h"
 
-@class NSString, NSTimer, UIImageView, UILabel, UIView;
+@class BaiduMobAdInteractiveBackCardComponent, BaiduMobAdInteractiveFrontCardComponent, NSString, NSTimer, UIImageView, UILabel, UIView;
 
-@interface BaiduMobAdRewardTemplateRenderer : BaiduMobAdRewardVideoRenderer <BaiduMobAdComponentDelegate, IBaiduMobAdRenderEventDelegate>
+@interface BaiduMobAdRewardTemplateRenderer : BaiduMobAdRewardVideoRenderer <BaiduMobAdComponentDelegate, IBaiduMobAdRenderEventDelegate, BaiduMobAdInteractiveBackCardComponentDelegate, BaiduMobAdInteractiveFrontCardComponentDelegate>
 {
-    _Bool _isTriggeredAutoClick;
     _Bool _isFlipCardClicked;
     int _shakeDelayTime;
     int _shakeDurationTime;
@@ -28,6 +29,8 @@
     UIView *_retainDialog;
     UIView *_closeDialog;
     UILabel *_retainDialogRewardLabel;
+    BaiduMobAdInteractiveFrontCardComponent *_interactiveFrontCardView;
+    BaiduMobAdInteractiveBackCardComponent *_interactiveBackCardView;
     UIView *_nativeTailView;
     UIView *_nativeTailViewElemanet;
     UIView *_nativeTailViewMask;
@@ -40,6 +43,8 @@
 @property(retain, nonatomic) UIView *nativeTailViewMask; // @synthesize nativeTailViewMask=_nativeTailViewMask;
 @property(retain, nonatomic) UIView *nativeTailViewElemanet; // @synthesize nativeTailViewElemanet=_nativeTailViewElemanet;
 @property(retain, nonatomic) UIView *nativeTailView; // @synthesize nativeTailView=_nativeTailView;
+@property(retain, nonatomic) BaiduMobAdInteractiveBackCardComponent *interactiveBackCardView; // @synthesize interactiveBackCardView=_interactiveBackCardView;
+@property(retain, nonatomic) BaiduMobAdInteractiveFrontCardComponent *interactiveFrontCardView; // @synthesize interactiveFrontCardView=_interactiveFrontCardView;
 @property(nonatomic) _Bool isFlipCardClicked; // @synthesize isFlipCardClicked=_isFlipCardClicked;
 @property(retain, nonatomic) UILabel *retainDialogRewardLabel; // @synthesize retainDialogRewardLabel=_retainDialogRewardLabel;
 @property(retain, nonatomic) UIView *closeDialog; // @synthesize closeDialog=_closeDialog;
@@ -49,15 +54,19 @@
 @property(retain, nonatomic) NSString *finalJSONString; // @synthesize finalJSONString=_finalJSONString;
 @property(nonatomic) int skipType; // @synthesize skipType=_skipType;
 @property(nonatomic) float delayClickTime; // @synthesize delayClickTime=_delayClickTime;
-@property(nonatomic) _Bool isTriggeredAutoClick; // @synthesize isTriggeredAutoClick=_isTriggeredAutoClick;
 @property(nonatomic) int autoClick; // @synthesize autoClick=_autoClick;
 @property(nonatomic) int delayClickType; // @synthesize delayClickType=_delayClickType;
 @property(nonatomic) int shakeDurationTime; // @synthesize shakeDurationTime=_shakeDurationTime;
 @property(nonatomic) int shakeDelayTime; // @synthesize shakeDelayTime=_shakeDelayTime;
 - (id)getExpressJSONWithKey:(id)arg1;
+- (void)nativeInteractiveBackCardComponentClose:(id)arg1 viewId:(id)arg2 viewName:(id)arg3;
+- (void)nativeInteractiveFrontCardComponentShowed:(id)arg1 viewId:(id)arg2 viewName:(id)arg3;
+- (void)nativeInteractiveFrontCardComponentClose:(id)arg1 viewId:(id)arg2 viewName:(id)arg3;
+- (void)nativeInteractiveFrontCardComponentClick:(id)arg1 viewId:(id)arg2 viewName:(id)arg3;
 - (void)nativeComponentSendEventWithComponent:(id)arg1 senderViewId:(id)arg2 senderViewName:(id)arg3 eventView:(id)arg4 event:(id)arg5;
 - (void)showNativeTailView;
 - (_Bool)checkIsContaintNativeTailView;
+- (void)skipBringFront;
 - (void)nativeComponentEvent:(id)arg1 component:(id)arg2;
 - (void)nativeComponentClick:(long long)arg1 clickView:(id)arg2 viewName:(id)arg3 special:(id)arg4 component:(id)arg5;
 - (void)nativeComponentCreateSuccess:(id)arg1 viewName:(id)arg2 special:(id)arg3 component:(id)arg4;
@@ -66,7 +75,8 @@
 - (void)willEnterForeground;
 - (void)didEnterBackground;
 - (void)hiddenDialog;
-- (void)videoAdClick;
+- (void)handleClick:(id)arg1;
+- (void)handleClick;
 - (void)layoutDisplayArea;
 - (void)showTailFrame;
 - (void)setSkipButtonAnimation;

@@ -6,10 +6,15 @@
 
 #import "ABUCanvasView.h"
 
-@class ABUAdPackage, ABUDrawAdsManager, ABUVideoAdReporter, NSString, UIView, UIViewController;
-@protocol ABUDrawAdVideoDelegate, ABUDrawAdViewDelegate;
+#import "ABUDrawAdVideoDelegate-Protocol.h"
+#import "ABUDrawAdViewDelegate-Protocol.h"
+#import "BUNativeAdMediationProtocol-Protocol.h"
+#import "BUNativeAd_MProtocol-Protocol.h"
 
-@interface ABUDrawAdView : ABUCanvasView
+@class ABUAdPackage, ABUDrawAdsManager, BUAdSlot, BUMCanvasView, BUMVideoAdReporter, BUMaterialMeta, NSObject, NSString, UIView, UIViewController;
+@protocol ABUDrawAdVideoDelegate, ABUDrawAdViewDelegate, BUMNativeAdDelegate, BUNativeAdMediationProtocol;
+
+@interface ABUDrawAdView : ABUCanvasView <BUNativeAd_MProtocol, BUNativeAdMediationProtocol, ABUDrawAdViewDelegate, ABUDrawAdVideoDelegate>
 {
     UIViewController *_rootViewController;
     _Bool _didMoveToSuperView;
@@ -38,7 +43,7 @@
 - (void)adViewDidShow;
 - (void)expressViewDidFinishRender;
 - (void)willMoveToSuperview:(id)arg1;
-- (_Bool)isReady;
+@property(readonly, nonatomic) _Bool isReady;
 - (id)getMediaExtraInfo;
 - (id)extraData;
 - (id)getCurrentBestEcpmInfo;
@@ -59,7 +64,7 @@
 - (void)render;
 - (id)initWithExpressView:(id)arg1;
 - (id)initWithAdPackage:(id)arg1;
-@property(readonly, nonatomic) ABUVideoAdReporter *videoAdReporter;
+@property(readonly, nonatomic) BUMVideoAdReporter *videoAdReporter;
 - (id)mediaView;
 - (id)adLogoView;
 - (id)dislikeBtn;
@@ -70,6 +75,42 @@
 - (id)descLabel;
 - (id)titleLabel;
 - (_Bool)hasSupportActionBtn;
+- (id)biddingToken;
+- (void)setMopubAdMarkUp:(id)arg1;
+- (void)setAdMarkup:(id)arg1;
+- (void)loss:(id)arg1 lossReason:(id)arg2 winBidder:(id)arg3;
+- (void)win:(id)arg1;
+- (void)setPrice:(id)arg1;
+- (void)drawAdVideoDidPlayFinish:(id)arg1;
+- (void)drawAdVideoDidClick:(id)arg1;
+- (void)drawAdVideo:(id)arg1 stateDidChanged:(long long)arg2;
+- (void)drawAdViewWillDismissFullScreenModal:(id)arg1;
+- (void)drawAdViewWillPresentFullScreenModal:(id)arg1;
+- (void)drawAdDidClick:(id)arg1 withView:(id)arg2;
+- (void)drawAdView:(id)arg1 stateDidChanged:(long long)arg2;
+- (void)drawAdDidBecomeVisible:(id)arg1;
+- (void)drawAdDidClosed:(id)arg1 closeReason:(id)arg2;
+- (void)drawAdExpressViewDidClosed:(id)arg1 closeReason:(id)arg2;
+- (void)drawAdExpressViewRenderFail:(id)arg1 error:(id)arg2;
+- (void)drawAdExpressViewRenderSuccess:(id)arg1;
+@property(readonly, nonatomic) BUMCanvasView *canvasView;
+@property(readonly, nonatomic) NSObject<BUNativeAdMediationProtocol> *mediation;
+- (id)getAdCreativeToken;
+- (void)loadAdData;
+- (void)unregisterView;
+- (void)registerContainer:(id)arg1 withClickableViews:(id)arg2;
+- (id)initWithSlot:(id)arg1;
+@property(retain, nonatomic) BUAdSlot *adslot;
+@property(nonatomic) __weak id <BUMNativeAdDelegate> incoming_delegate;
+- (_Bool)isMemberOfClass:(Class)arg1;
+- (_Bool)isKindOfClass:(Class)arg1;
+
+// Remaining properties
+@property(readonly) BUMaterialMeta *data;
+@property(readonly, copy) NSString *debugDescription;
+@property(readonly, copy) NSString *description;
+@property(readonly) unsigned long long hash;
+@property(readonly) Class superclass;
 
 @end
 

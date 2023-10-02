@@ -15,13 +15,12 @@
 
 - (void).cxx_destruct;
 @property(nonatomic) __weak FamilyDetailsController *controller; // @synthesize controller=_controller;
-- (void)goVIPAction;
 - (void)goCloseAction;
 - (void)goSetupAction;
 - (void)goSearchAction;
 - (void)goCalendarAction;
 - (void)goBudgetAction;
-- (void)goChartAction;
+- (void)goBillAction;
 
 @end
 

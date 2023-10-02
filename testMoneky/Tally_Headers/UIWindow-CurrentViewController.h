@@ -12,6 +12,9 @@
 + (id)gdt_currentViewController;
 + (struct CGSize)bu_windowSize;
 + (id)bu_mainWindow;
++ (struct UIEdgeInsets)csj_windowSafeAreaEdgeInsets;
++ (struct CGSize)ugen_windowSize;
++ (id)ugen_mainWindow;
 @property(retain, nonatomic) NSPointerArray *apmStack;
 - (id)abu_topViewController;
 @end

@@ -10,6 +10,7 @@
 
 @interface BaiduMobAdComponentModel : NSObject
 {
+    _Bool _isTransparent;
     _Bool _doNotRender;
     _Bool _isMuteButtonSelected;
     _Bool _enableSpecialFunction;
@@ -30,6 +31,8 @@
     _Bool _isH5Render;
     _Bool _isNeedVerification;
     _Bool _isNeedBreakMarketingLabel;
+    _Bool _isScaleToAndorid;
+    _Bool _isScaleToSafeArea;
     int _gravity;
     int _userInteractionEnabled;
     int _actType;
@@ -43,10 +46,13 @@
     NSString *_right;
     NSString *_center;
     NSArray *_margins;
+    NSArray *_safeMargins;
     double _w;
     double _h;
     double _w_rate;
     double _h_rate;
+    NSString *_match_width;
+    NSString *_align_bottom;
     NSString *_src;
     NSString *_click;
     NSString *_scale_type;
@@ -136,6 +142,11 @@
     NSString *_auto_play;
     NSString *_mute;
     NSString *_transparent;
+    NSString *_slideEnable;
+    NSString *_slideDir;
+    NSString *_slideCheck;
+    NSString *_slideAngle;
+    NSString *_slideClick;
     NSArray *_animation_arr;
     NSMutableArray *_subViews;
     NSArray *_lottieModels;
@@ -159,13 +170,18 @@
     double _componentOriginMinY;
     double _componentOriginMaxX;
     double _componentOriginMinX;
+    double _safeAreaScale;
     struct CGRect _viewFrame;
+    struct CGRect _alignBottomFrame;
     struct CGRect _superViewFrame;
 }
 
 + (id)modelWithComponentModel:(id)arg1;
 + (id)modelWithDictionary:(id)arg1 adjustJsonDic:(id)arg2 adjustWithAdInstance:(id)arg3;
 - (void).cxx_destruct;
+@property(nonatomic) _Bool isScaleToSafeArea; // @synthesize isScaleToSafeArea=_isScaleToSafeArea;
+@property(nonatomic) double safeAreaScale; // @synthesize safeAreaScale=_safeAreaScale;
+@property(nonatomic) _Bool isScaleToAndorid; // @synthesize isScaleToAndorid=_isScaleToAndorid;
 @property(nonatomic) _Bool isNeedBreakMarketingLabel; // @synthesize isNeedBreakMarketingLabel=_isNeedBreakMarketingLabel;
 @property(nonatomic) _Bool isNeedVerification; // @synthesize isNeedVerification=_isNeedVerification;
 @property(nonatomic) _Bool isH5Render; // @synthesize isH5Render=_isH5Render;
@@ -197,6 +213,7 @@
 @property(nonatomic) _Bool isNeedSizeToFit; // @synthesize isNeedSizeToFit=_isNeedSizeToFit;
 @property(nonatomic) _Bool useCTAAnimation; // @synthesize useCTAAnimation=_useCTAAnimation;
 @property(nonatomic) struct CGRect superViewFrame; // @synthesize superViewFrame=_superViewFrame;
+@property(nonatomic) struct CGRect alignBottomFrame; // @synthesize alignBottomFrame=_alignBottomFrame;
 @property(nonatomic) struct CGRect viewFrame; // @synthesize viewFrame=_viewFrame;
 @property(nonatomic) double viewRectH; // @synthesize viewRectH=_viewRectH;
 @property(nonatomic) double viewRectW; // @synthesize viewRectW=_viewRectW;
@@ -213,6 +230,12 @@
 @property(retain, nonatomic) NSArray *lottieModels; // @synthesize lottieModels=_lottieModels;
 @property(retain, nonatomic) NSMutableArray *subViews; // @synthesize subViews=_subViews;
 @property(retain, nonatomic) NSArray *animation_arr; // @synthesize animation_arr=_animation_arr;
+@property(nonatomic) _Bool isTransparent; // @synthesize isTransparent=_isTransparent;
+@property(retain, nonatomic) NSString *slideClick; // @synthesize slideClick=_slideClick;
+@property(retain, nonatomic) NSString *slideAngle; // @synthesize slideAngle=_slideAngle;
+@property(retain, nonatomic) NSString *slideCheck; // @synthesize slideCheck=_slideCheck;
+@property(retain, nonatomic) NSString *slideDir; // @synthesize slideDir=_slideDir;
+@property(retain, nonatomic) NSString *slideEnable; // @synthesize slideEnable=_slideEnable;
 @property(retain, nonatomic) NSString *transparent; // @synthesize transparent=_transparent;
 @property(retain, nonatomic) NSString *mute; // @synthesize mute=_mute;
 @property(retain, nonatomic) NSString *auto_play; // @synthesize auto_play=_auto_play;
@@ -302,10 +325,13 @@
 @property(retain, nonatomic) NSString *scale_type; // @synthesize scale_type=_scale_type;
 @property(retain, nonatomic) NSString *click; // @synthesize click=_click;
 @property(retain, nonatomic) NSString *src; // @synthesize src=_src;
+@property(retain, nonatomic) NSString *align_bottom; // @synthesize align_bottom=_align_bottom;
+@property(retain, nonatomic) NSString *match_width; // @synthesize match_width=_match_width;
 @property(nonatomic) double h_rate; // @synthesize h_rate=_h_rate;
 @property(nonatomic) double w_rate; // @synthesize w_rate=_w_rate;
 @property(nonatomic) double h; // @synthesize h=_h;
 @property(nonatomic) double w; // @synthesize w=_w;
+@property(retain, nonatomic) NSArray *safeMargins; // @synthesize safeMargins=_safeMargins;
 @property(retain, nonatomic) NSArray *margins; // @synthesize margins=_margins;
 @property(retain, nonatomic) NSString *center; // @synthesize center=_center;
 @property(retain, nonatomic) NSString *right; // @synthesize right=_right;

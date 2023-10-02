@@ -9,40 +9,43 @@
 #import "SKAdInterstitialAdDelegate-Protocol.h"
 #import "SKStoreProductViewControllerDelegate-Protocol.h"
 
-@class LOTAnimationView, NSDictionary, NSString, SKAdInterstitialAd, UIView;
+@class LOTAnimationView, NSMutableDictionary, NSString, SKAdInterstitialAd, UIView;
 
 @interface VIPPopupManager : NSObject <SKStoreProductViewControllerDelegate, SKAdInterstitialAdDelegate>
 {
-    NSDictionary *_dataDic;
+    NSMutableDictionary *_dataDic;
     UIView *_popupView;
     LOTAnimationView *_btnAnimationView;
+    _Bool _activeCountChnaged;
     _Bool _canShow;
+    NSString *_activityString;
     SKAdInterstitialAd *_adObject;
+    NSString *_entry_id;
 }
 
-+ (void)saveadcount;
-+ (void)uploadEvent:(id)arg1 withEvent:(id)arg2;
++ (id)activityInfoWith:(id)arg1;
++ (void)requestActivityList;
 + (void)clear;
 + (id)getActivityDateInfo;
 + (id)getActivityEndDate;
 + (id)getActivityName;
 + (id)getActivityFilePath;
 - (void).cxx_destruct;
+@property(retain, nonatomic) NSString *entry_id; // @synthesize entry_id=_entry_id;
 @property(retain, nonatomic) SKAdInterstitialAd *adObject; // @synthesize adObject=_adObject;
+@property(retain, nonatomic) NSString *activityString; // @synthesize activityString=_activityString;
+@property(nonatomic) _Bool activeCountChnaged; // @synthesize activeCountChnaged=_activeCountChnaged;
 @property(nonatomic) _Bool canShow; // @synthesize canShow=_canShow;
-- (void)skAdInterstitialAd:(id)arg1 event:(long long)arg2;
-- (void)datecloseSelf;
-- (void)datebuyEvent:(id)arg1;
-- (void)showdatePopup:(id)arg1 with:(id)arg2;
-- (void)showDateVIP:(id)arg1;
 - (void)productViewControllerDidFinish:(id)arg1;
-- (void)shwoKnowledgDetailView;
-- (void)closeSelf;
-- (void)buyEvent;
-- (void)popupUI:(id)arg1;
+- (void)datecloseSelf;
+- (void)datebuyEvent;
+- (void)showPopupWithImage:(id)arg1;
+- (void)showBannerActivityView;
 - (void)showPopup;
 - (void)canShowPopup;
-- (void)requestPopupInfo;
+- (void)privatCongfigSucCanShow:(id)arg1;
+- (void)judgeShowPopup;
+- (void)userAccountChanged;
 - (id)init;
 
 // Remaining properties

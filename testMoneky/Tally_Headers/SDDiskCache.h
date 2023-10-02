@@ -27,6 +27,7 @@
 - (unsigned long long)totalSize;
 - (id)cachePathForKey:(id)arg1;
 - (void)removeExpiredData;
+- (void)createDirectory;
 - (void)removeAllData;
 - (void)removeDataForKey:(id)arg1;
 - (void)setExtendedData:(id)arg1 forKey:(id)arg2;

@@ -6,24 +6,24 @@
 
 #import <objc/NSObject.h>
 
-#import "ABUCsj_BUFullscreenVideoAdDelegate-Protocol.h"
-#import "ABUCsj_BUNativeExpressFullscreenVideoAdDelegate-Protocol.h"
-#import "ABUCustomFullscreenVideoAdapter-Protocol.h"
+#import "BUFullscreenVideoAdDelegate-Protocol.h"
+#import "BUMCustomFullscreenVideoAdapter-Protocol.h"
+#import "BUNativeExpressFullscreenVideoAdDelegate-Protocol.h"
 
-@class NSString;
-@protocol ABUCsj_BUFullscreenVideoAd, ABUCsj_BUNativeExpressFullscreenVideoAd, ABUCustomConfigAdapter, ABUCustomFullscreenVideoAdapterBridge;
+@class BUFullscreenVideoAd, BUNativeExpressFullscreenVideoAd, NSString;
+@protocol BUMCustomConfigAdapter, BUMCustomFullscreenVideoAdapterBridge;
 
-@interface ABUCsjFullscreenVideoAdapter : NSObject <ABUCsj_BUFullscreenVideoAdDelegate, ABUCsj_BUNativeExpressFullscreenVideoAdDelegate, ABUCustomFullscreenVideoAdapter>
+@interface ABUCsjFullscreenVideoAdapter : NSObject <BUFullscreenVideoAdDelegate, BUNativeExpressFullscreenVideoAdDelegate, BUMCustomFullscreenVideoAdapter>
 {
     _Bool _hasVideoDownLoad;
-    id <ABUCsj_BUFullscreenVideoAd> _fvAd;
-    id <ABUCsj_BUNativeExpressFullscreenVideoAd> _expressFvAd;
+    BUFullscreenVideoAd *_fvAd;
+    BUNativeExpressFullscreenVideoAd *_expressFvAd;
 }
 
 - (void).cxx_destruct;
 @property(nonatomic) _Bool hasVideoDownLoad; // @synthesize hasVideoDownLoad=_hasVideoDownLoad;
-@property(retain, nonatomic) id <ABUCsj_BUNativeExpressFullscreenVideoAd> expressFvAd; // @synthesize expressFvAd=_expressFvAd;
-@property(retain, nonatomic) id <ABUCsj_BUFullscreenVideoAd> fvAd; // @synthesize fvAd=_fvAd;
+@property(retain, nonatomic) BUNativeExpressFullscreenVideoAd *expressFvAd; // @synthesize expressFvAd=_expressFvAd;
+@property(retain, nonatomic) BUFullscreenVideoAd *fvAd; // @synthesize fvAd=_fvAd;
 - (void)nativeExpressFullscreenVideoAdDidCloseOtherController:(id)arg1 interactionType:(long long)arg2;
 - (void)nativeExpressFullscreenVideoAdCallback:(id)arg1 withType:(long long)arg2;
 - (void)nativeExpressFullscreenVideoAdDidPlayFinish:(id)arg1 didFailWithError:(id)arg2;
@@ -58,8 +58,8 @@
 - (void)loadFullscreenVideoAdWithSlotID:(id)arg1 andParameter:(id)arg2;
 
 // Remaining properties
-@property(nonatomic) __weak id <ABUCustomFullscreenVideoAdapterBridge> bridge;
-@property(retain, nonatomic) id <ABUCustomConfigAdapter> configAdapter;
+@property(nonatomic) __weak id <BUMCustomFullscreenVideoAdapterBridge> bridge;
+@property(retain, nonatomic) id <BUMCustomConfigAdapter> configAdapter;
 @property(readonly, copy) NSString *debugDescription;
 @property(readonly, copy) NSString *description;
 @property(readonly) unsigned long long hash;

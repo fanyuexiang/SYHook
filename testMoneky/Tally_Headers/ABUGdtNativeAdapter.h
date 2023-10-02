@@ -6,18 +6,18 @@
 
 #import <objc/NSObject.h>
 
-#import "ABUCustomNativeAdapter-Protocol.h"
 #import "ABUGDT_GDTMediaViewDelegate-Protocol.h"
 #import "ABUGDT_GDTNativeExpressAdDelegate-Protocol.h"
 #import "ABUGDT_GDTNativeExpressProAdManagerDelegate-Protocol.h"
 #import "ABUGDT_GDTNativeExpressProAdViewDelegate-Protocol.h"
 #import "ABUGDT_GDTUnifiedNativeAdDelegate-Protocol.h"
 #import "ABUGDT_GDTUnifiedNativeAdViewDelegate-Protocol.h"
+#import "BUMCustomNativeAdapter-Protocol.h"
 
 @class NSMutableDictionary, NSString;
-@protocol ABUCustomConfigAdapter, ABUCustomNativeAdapterBridge, ABUGDT_GDTNativeExpressAd, ABUGDT_GDTNativeExpressProAdManager, ABUGDT_GDTUnifiedNativeAd, ABUGDT_GDTVideoConfig;
+@protocol ABUGDT_GDTNativeExpressAd, ABUGDT_GDTNativeExpressProAdManager, ABUGDT_GDTUnifiedNativeAd, ABUGDT_GDTVideoConfig, BUMCustomConfigAdapter, BUMCustomNativeAdapterBridge;
 
-@interface ABUGdtNativeAdapter : NSObject <ABUGDT_GDTUnifiedNativeAdDelegate, ABUGDT_GDTUnifiedNativeAdViewDelegate, ABUGDT_GDTNativeExpressAdDelegate, ABUGDT_GDTNativeExpressProAdManagerDelegate, ABUGDT_GDTNativeExpressProAdViewDelegate, ABUGDT_GDTMediaViewDelegate, ABUCustomNativeAdapter>
+@interface ABUGdtNativeAdapter : NSObject <ABUGDT_GDTUnifiedNativeAdDelegate, ABUGDT_GDTUnifiedNativeAdViewDelegate, ABUGDT_GDTNativeExpressAdDelegate, ABUGDT_GDTNativeExpressProAdManagerDelegate, ABUGDT_GDTNativeExpressProAdViewDelegate, ABUGDT_GDTMediaViewDelegate, BUMCustomNativeAdapter>
 {
     _Bool _needDismiss;
     NSObject<ABUGDT_GDTUnifiedNativeAd> *_nativeAd;
@@ -94,8 +94,8 @@
 - (_Bool)enablePreloadWhenCurrentIsDisplay;
 
 // Remaining properties
-@property(nonatomic) __weak id <ABUCustomNativeAdapterBridge> bridge;
-@property(retain, nonatomic) id <ABUCustomConfigAdapter> configAdapter;
+@property(nonatomic) __weak id <BUMCustomNativeAdapterBridge> bridge;
+@property(retain, nonatomic) id <BUMCustomConfigAdapter> configAdapter;
 @property(readonly, copy) NSString *debugDescription;
 @property(readonly, copy) NSString *description;
 @property(readonly) unsigned long long hash;

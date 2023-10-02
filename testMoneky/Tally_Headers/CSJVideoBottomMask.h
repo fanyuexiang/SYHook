@@ -27,7 +27,7 @@
 - (id)c_xyDict;
 - (void)subViewsTapped;
 - (void)maskTapped;
-- (void)addGesture;
+- (void)Or_AdmMain;
 - (void)buildUpView;
 - (void)layoutSubviews;
 - (id)initWithMaterialMeta:(id)arg1 slot:(id)arg2;

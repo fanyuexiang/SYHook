@@ -9,17 +9,18 @@
 #import "SDImageCoder-Protocol.h"
 
 @class NSArray, NSMutableArray, NSString;
-@protocol OS_dispatch_semaphore;
 
 @interface SDImageCodersManager : NSObject <SDImageCoder>
 {
+    struct os_unfair_lock_s _codersLock;
+    int _codersLock_deprecated;
     NSMutableArray *_imageCoders;
-    NSObject<OS_dispatch_semaphore> *_codersLock;
 }
 
 + (id)sharedManager;
 - (void).cxx_destruct;
-@property(retain, nonatomic) NSObject<OS_dispatch_semaphore> *codersLock; // @synthesize codersLock=_codersLock;
+@property(retain, nonatomic) NSMutableArray *imageCoders; // @synthesize imageCoders=_imageCoders;
+- (id)encodedDataWithFrames:(id)arg1 loopCount:(unsigned long long)arg2 format:(long long)arg3 options:(id)arg4;
 - (id)encodedDataWithImage:(id)arg1 format:(long long)arg2 options:(id)arg3;
 - (id)decodedImageWithData:(id)arg1 options:(id)arg2;
 - (_Bool)canEncodeToFormat:(long long)arg1;

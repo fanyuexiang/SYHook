@@ -6,7 +6,7 @@
 
 #import <UIKit/UITableViewCell.h>
 
-@class CBAttributedLabel, ChartModel, SKThemeBaseView, UIImageView, UILabel;
+@class CBAttributedLabel, ChartModel, SKThemeBaseView, UIImageView, UILabel, UIView;
 
 @interface FamilyChartCell : UITableViewCell
 {
@@ -16,11 +16,13 @@
     UILabel *_amountLabel;
     UILabel *_progressView;
     UIImageView *_increaseImageView;
+    UIView *_lineView;
     ChartModel *_model;
 }
 
 - (void).cxx_destruct;
 @property(retain, nonatomic) ChartModel *model; // @synthesize model=_model;
+@property(retain, nonatomic) UIView *lineView; // @synthesize lineView=_lineView;
 - (void)reloadThemeViewImage:(id)arg1;
 - (id)themeImage:(id)arg1;
 - (id)themeView;

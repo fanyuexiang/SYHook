@@ -11,15 +11,15 @@
 @interface BUTNCServiceConfig : NSObject
 {
     NSString *_appKey;
-    NSString *_tncPath;
-    NSArray *_tncDomains;
-    CDUnknownBlockType _tncRequestParam;
+    NSString *_Data_UserLazy;
+    NSArray *_Up_x_A0Sum;
+    CDUnknownBlockType _Char_TimeFor;
 }
 
 - (void).cxx_destruct;
-@property(copy, nonatomic) CDUnknownBlockType tncRequestParam; // @synthesize tncRequestParam=_tncRequestParam;
-@property(copy, nonatomic) NSArray *tncDomains; // @synthesize tncDomains=_tncDomains;
-@property(copy, nonatomic) NSString *tncPath; // @synthesize tncPath=_tncPath;
+@property(copy, nonatomic) CDUnknownBlockType Char_TimeFor; // @synthesize Char_TimeFor=_Char_TimeFor;
+@property(copy, nonatomic) NSArray *Up_x_A0Sum; // @synthesize Up_x_A0Sum=_Up_x_A0Sum;
+@property(copy, nonatomic) NSString *Data_UserLazy; // @synthesize Data_UserLazy=_Data_UserLazy;
 @property(copy, nonatomic) NSString *appKey; // @synthesize appKey=_appKey;
 
 @end

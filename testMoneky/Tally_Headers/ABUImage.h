@@ -24,6 +24,8 @@
 @property(copy, nonatomic) NSURL *imageURL; // @synthesize imageURL=_imageURL;
 @property(copy, nonatomic) UIImage *image; // @synthesize image=_image;
 - (id)init;
+- (_Bool)isMemberOfClass:(Class)arg1;
+- (_Bool)isKindOfClass:(Class)arg1;
 
 @end
 

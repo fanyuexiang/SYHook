@@ -20,16 +20,16 @@
 @property(retain, nonatomic) NSMutableArray *nativeExpressAdViewArray; // @synthesize nativeExpressAdViewArray=_nativeExpressAdViewArray;
 @property(retain, nonatomic) CSJAdSlot *adSlot; // @synthesize adSlot=_adSlot;
 @property(nonatomic) __weak id <CSJNativeExpressAdConverterDelegate> delegate; // @synthesize delegate=_delegate;
-- (void)safeDelegate_nativeExpressAdConverter:(id)arg1 nativeExpressAdViewArray:(id)arg2;
-- (id)safeDelegate_expressAdViewDismissDelegateInNativeExpressAdConverter:(id)arg1;
-- (id)safeDelegate_expressAdViewDelegateInNativeExpressAdConverter:(id)arg1;
-- (void)pbu_preloadImagesWithNativeAd:(id)arg1;
-- (id)pbu_templateDataModelWithNativeAd:(id)arg1;
-- (id)pbu_nativeExpressAdViewWithNativeAd:(id)arg1;
-- (void)pbu_fetchTemplateDataWithNativeAd:(id)arg1 group:(id)arg2;
-- (void)pbu_adjustSlotViewSizeIfNeedWithNativeAd:(id)arg1;
-- (void)convertWithNativeAdArray:(id)arg1;
-- (id)initWithAdSlot:(id)arg1;
+- (void)Show_MaskShow:(id)arg1 nativeExpressAdViewArray:(id)arg2;
+- (id)Stmt_IfObj:(id)arg1;
+- (id)Dc_NOPods:(id)arg1;
+- (void)Duan_IntAKey:(id)arg1;
+- (id)Hash_IDItem:(id)arg1;
+- (void)Sel_IOSTs:(id)arg1 group:(id)arg2;
+- (void)Get_GDPRBlue:(id)arg1;
+- (void)ID_IfLog:(id)arg1;
+- (void)X2_AnBool:(id)arg1;
+- (id)initLHash_SlotDo:(id)arg1;
 
 @end
 

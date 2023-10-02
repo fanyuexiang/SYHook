@@ -12,7 +12,6 @@
 
 @interface ABUMediaSlotConfig : NSObject <ABUMediaSlotConfigInfo>
 {
-    _Bool _ifReuseAds;
     _Bool _ifIsReady;
     _Bool _ifPreRequest;
     NSString *_adnName;
@@ -25,6 +24,7 @@
     long long _loadSort;
     long long _showSort;
     double _adExpiredTime;
+    long long _ifReuseAds;
     long long _originType;
     NSString *_customerAdapterJson;
     NSDictionary *_multilevelSlotCpm;
@@ -48,7 +48,7 @@
 @property(readonly, nonatomic) _Bool ifPreRequest; // @synthesize ifPreRequest=_ifPreRequest;
 @property(readonly, nonatomic) _Bool ifIsReady; // @synthesize ifIsReady=_ifIsReady;
 @property(readonly, nonatomic) long long originType; // @synthesize originType=_originType;
-@property(readonly, nonatomic) _Bool ifReuseAds; // @synthesize ifReuseAds=_ifReuseAds;
+@property(readonly, nonatomic) long long ifReuseAds; // @synthesize ifReuseAds=_ifReuseAds;
 @property(readonly, nonatomic) double adExpiredTime; // @synthesize adExpiredTime=_adExpiredTime;
 @property(readonly, nonatomic) long long showSort; // @synthesize showSort=_showSort;
 @property(readonly, nonatomic) long long loadSort; // @synthesize loadSort=_loadSort;

@@ -10,15 +10,31 @@
 
 @interface HeimdallrBUEmbedConfig : NSObject
 {
-    NSString *_sdkID;
+    struct _opaque_pthread_rwlock_t _filterLock;
+    struct _opaque_pthread_rwlock_t _sdkIDLock;
     NSDictionary *_filter;
+    NSString *_sdkID;
     NSArray *_addressRanges;
+    NSString *_uploadAid;
+    NSString *_deviceID;
+    NSString *_sdkVersion;
+    NSString *_hostAppID;
+    NSArray *_libNames;
 }
 
++ (id)defaultConfig;
 - (void).cxx_destruct;
-@property(retain, nonatomic) NSArray *addressRanges; // @synthesize addressRanges=_addressRanges;
+@property(retain) NSArray *libNames; // @synthesize libNames=_libNames;
+@property(copy) NSString *hostAppID; // @synthesize hostAppID=_hostAppID;
+@property(copy) NSString *sdkVersion; // @synthesize sdkVersion=_sdkVersion;
+@property(copy) NSString *deviceID; // @synthesize deviceID=_deviceID;
+@property(copy) NSString *uploadAid; // @synthesize uploadAid=_uploadAid;
+@property(retain) NSArray *addressRanges; // @synthesize addressRanges=_addressRanges;
+- (void)removeCustomFilterKey:(id)arg1;
+- (void)setCustomFilterValue:(id)arg1 forKey:(id)arg2;
 @property(retain, nonatomic) NSDictionary *filter; // @synthesize filter=_filter;
-@property(copy, nonatomic) NSString *sdkID; // @synthesize sdkID=_sdkID;
+@property(copy) NSString *sdkID; // @synthesize sdkID=_sdkID;
+- (id)init;
 
 @end
 

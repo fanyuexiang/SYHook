@@ -20,6 +20,12 @@
     _Bool _playeEnd;
     _Bool _fullScreen;
     _Bool _shouldAutoRotate;
+    _Bool _showPlayeBtn;
+    _Bool _showTopImageView;
+    _Bool _showBottomImageView;
+    _Bool _showBottomProgressView;
+    _Bool _showActivity;
+    _Bool _showRepeatBtn;
     UIView *_maskView;
     UILabel *_titleLabel;
     UIButton *_startBtn;
@@ -55,6 +61,12 @@
 }
 
 - (void).cxx_destruct;
+@property(nonatomic) _Bool showRepeatBtn; // @synthesize showRepeatBtn=_showRepeatBtn;
+@property(nonatomic) _Bool showActivity; // @synthesize showActivity=_showActivity;
+@property(nonatomic) _Bool showBottomProgressView; // @synthesize showBottomProgressView=_showBottomProgressView;
+@property(nonatomic) _Bool showBottomImageView; // @synthesize showBottomImageView=_showBottomImageView;
+@property(nonatomic) _Bool showTopImageView; // @synthesize showTopImageView=_showTopImageView;
+@property(nonatomic) _Bool showPlayeBtn; // @synthesize showPlayeBtn=_showPlayeBtn;
 @property(retain, nonatomic) NSDictionary *contentLocalizedStrings; // @synthesize contentLocalizedStrings=_contentLocalizedStrings;
 @property(retain, nonatomic) NSDictionary *contentViewImages; // @synthesize contentViewImages=_contentViewImages;
 @property(retain, nonatomic) NSBundle *resourceBundle; // @synthesize resourceBundle=_resourceBundle;

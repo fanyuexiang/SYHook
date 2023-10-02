@@ -10,17 +10,17 @@
 {
 }
 
-+ (void)removeMaterialWithMaterialMeta:(id)arg1 adSlot:(id)arg2;
-+ (void)preLoadMaterialsWith:(id)arg1 slot:(id)arg2;
-+ (void)biddingGetMaterialWithSlot:(id)arg1 adm:(id)arg2 success:(CDUnknownBlockType)arg3 failure:(CDUnknownBlockType)arg4;
-+ (void)biddingPreCacheMaterialWithSlot:(id)arg1 success:(CDUnknownBlockType)arg2 failure:(CDUnknownBlockType)arg3;
-+ (void)biddingPreFetchMaterialWithSlot:(id)arg1 requestID:(id)arg2 success:(CDUnknownBlockType)arg3 failure:(CDUnknownBlockType)arg4;
-+ (id)getBiddingPreFetchMaterialWithAdmCreatives:(id)arg1 slot:(id)arg2;
-+ (id)getBiddingPreFetchMaterialWithKey:(id)arg1 slot:(id)arg2 type:(long long)arg3;
-+ (id)getBiddingPreCacheInfoWithSlot:(id)arg1 error:(id *)arg2;
-+ (id)getBiddingPreCacheMaterialWithSlot:(id)arg1 error:(id *)arg2;
-+ (id)biddingPersistenceWithSlot:(id)arg1 type:(long long)arg2;
-+ (_Bool)invalidDecrypyAdm:(id)arg1;
++ (void)Main_IdfvShow:(id)arg1 adSlot:(id)arg2;
++ (void)Com_SelfNew:(id)arg1 slot:(id)arg2;
++ (void)Lazy_SqlR1:(id)arg1 adm:(id)arg2 success:(CDUnknownBlockType)arg3 failure:(CDUnknownBlockType)arg4;
++ (void)Be_UaMs:(id)arg1 success:(CDUnknownBlockType)arg2 failure:(CDUnknownBlockType)arg3;
++ (void)Ms_JsonVc:(id)arg1 requestID:(id)arg2 success:(CDUnknownBlockType)arg3 failure:(CDUnknownBlockType)arg4;
++ (id)Weak_TextPlay:(id)arg1 slot:(id)arg2;
++ (id)Org_LeftShow:(id)arg1 slot:(id)arg2 type:(long long)arg3;
++ (id)Com_LeftURL:(id)arg1 error:(id *)arg2;
++ (id)Path_ThisID:(id)arg1 error:(id *)arg2;
++ (id)In_UseAll:(id)arg1 type:(long long)arg2;
++ (_Bool)Blue_HttpText:(id)arg1;
 + (id)allocWithZone:(struct _NSZone *)arg1;
 + (id)manager;
 - (id)mutableCopy;

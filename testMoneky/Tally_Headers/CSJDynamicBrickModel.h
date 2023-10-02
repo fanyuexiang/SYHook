@@ -11,6 +11,7 @@
 @interface CSJDynamicBrickModel : NSObject
 {
     NSDictionary *_originDictionary;
+    NSString *_originType;
     NSString *_type;
     NSString *_dataString;
     NSArray *_dataArray;
@@ -34,10 +35,14 @@
 @property(copy, nonatomic) NSArray *dataArray; // @synthesize dataArray=_dataArray;
 @property(copy, nonatomic) NSString *dataString; // @synthesize dataString=_dataString;
 @property(copy, nonatomic) NSString *type; // @synthesize type=_type;
+@property(copy, nonatomic) NSString *originType; // @synthesize originType=_originType;
 @property(copy, nonatomic) NSDictionary *originDictionary; // @synthesize originDictionary=_originDictionary;
 - (id)dictionaryValueNotIncludeValues;
 - (id)getBrickData;
 - (id)dictionaryValue;
+- (long long)fromJS_convertAreaType:(id)arg1;
+- (void)fromJS_updateAreaType;
+- (long long)qa_clickAreaType;
 - (long long)dynamicBrickLogoType;
 - (id)initWithDictionary:(id)arg1;
 

@@ -11,16 +11,16 @@
 @interface CSJClogConfigModel : NSObject <NSCoding>
 {
     _Bool _isOpen;
-    int _logLevel;
-    unsigned long long _expireDays;
+    long long _logLevel;
+    unsigned long long _Msg_TapUser;
     unsigned long long _maxSize;
-    long long _privacyLevel;
+    long long _Set_MaySave;
 }
 
-@property(nonatomic) long long privacyLevel; // @synthesize privacyLevel=_privacyLevel;
+@property(nonatomic) long long Set_MaySave; // @synthesize Set_MaySave=_Set_MaySave;
 @property(nonatomic) unsigned long long maxSize; // @synthesize maxSize=_maxSize;
-@property(nonatomic) unsigned long long expireDays; // @synthesize expireDays=_expireDays;
-@property(nonatomic) int logLevel; // @synthesize logLevel=_logLevel;
+@property(nonatomic) unsigned long long Msg_TapUser; // @synthesize Msg_TapUser=_Msg_TapUser;
+@property(nonatomic) long long logLevel; // @synthesize logLevel=_logLevel;
 @property(nonatomic) _Bool isOpen; // @synthesize isOpen=_isOpen;
 - (id)initWithCoder:(id)arg1;
 - (void)encodeWithCoder:(id)arg1;

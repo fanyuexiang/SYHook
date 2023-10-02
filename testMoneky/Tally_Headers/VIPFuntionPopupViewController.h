@@ -28,6 +28,10 @@
     long long _priceindex;
     NSString *_enterSourceString;
     VIPActivityCountdownView *_vipactivitycountdownView;
+    UIView *_agreementView0;
+    UIView *_agreementView1;
+    _Bool _isagree;
+    UIImageView *_agreeicon;
     NSArray *_vipArray;
     long long _showType;
     CDUnknownBlockType _buyVIPHandler;
@@ -41,10 +45,12 @@
 @property(copy, nonatomic) CDUnknownBlockType buyVIPHandler; // @synthesize buyVIPHandler=_buyVIPHandler;
 @property(nonatomic) long long showType; // @synthesize showType=_showType;
 @property(retain, nonatomic) NSArray *vipArray; // @synthesize vipArray=_vipArray;
+- (void)showAutoVIPTip;
 - (void)requestVIPModel;
 - (void)abPopupClickBuyVIP;
 - (void)adjustBuyButton:(long long)arg1;
 - (void)agreementAction:(id)arg1;
+- (void)clickAgreeIcon;
 - (void)setContentBuyBtn;
 - (void)priceClick:(id)arg1;
 - (void)setContentPriceView:(double)arg1;

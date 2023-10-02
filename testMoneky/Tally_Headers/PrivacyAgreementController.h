@@ -11,9 +11,11 @@
 @interface PrivacyAgreementController : UIViewController
 {
     UIView *_bgView;
+    _Bool _noNeedSecondView;
 }
 
 - (void).cxx_destruct;
+@property(nonatomic) _Bool noNeedSecondView; // @synthesize noNeedSecondView=_noNeedSecondView;
 - (void)quitAction;
 - (void)setupSecondView;
 - (void)rightBtnAction;

@@ -6,31 +6,48 @@
 
 #import <UIKit/UITableViewCell.h>
 
-@class AssetAccountRecordModel, UIImageView, UILabel, UIView;
+@class AssetAccountRecordModel, AssetDetailRecordTipView, UIButton, UIImageView, UILabel, UIView;
 
 @interface AssetDetailRecordCell : UITableViewCell
 {
     _Bool _minus;
+    _Bool _showTipGuideView;
+    _Bool _showTipGuideBtn;
+    AssetDetailRecordTipView *_tipView;
+    UIView *_conView;
     UIImageView *_iconImgView;
     UIView *_titleView;
     UILabel *_titleLab;
+    UIButton *_titleGuideBtn;
+    UIImageView *_titleGuideBtnDownImgView;
     UILabel *_subtitleLab;
     UILabel *_amountLab;
     UIView *_lineView;
+    CDUnknownBlockType _closeTipGuideViewBlock;
+    CDUnknownBlockType _showTipGuideViewBlock;
     AssetAccountRecordModel *_model;
 }
 
 - (void).cxx_destruct;
+@property(nonatomic) _Bool showTipGuideBtn; // @synthesize showTipGuideBtn=_showTipGuideBtn;
+@property(nonatomic) _Bool showTipGuideView; // @synthesize showTipGuideView=_showTipGuideView;
 @property(retain, nonatomic) AssetAccountRecordModel *model; // @synthesize model=_model;
 @property(nonatomic) _Bool minus; // @synthesize minus=_minus;
+@property(copy, nonatomic) CDUnknownBlockType showTipGuideViewBlock; // @synthesize showTipGuideViewBlock=_showTipGuideViewBlock;
+@property(copy, nonatomic) CDUnknownBlockType closeTipGuideViewBlock; // @synthesize closeTipGuideViewBlock=_closeTipGuideViewBlock;
 @property(retain, nonatomic) UIView *lineView; // @synthesize lineView=_lineView;
 @property(retain, nonatomic) UILabel *amountLab; // @synthesize amountLab=_amountLab;
 @property(retain, nonatomic) UILabel *subtitleLab; // @synthesize subtitleLab=_subtitleLab;
+@property(retain, nonatomic) UIImageView *titleGuideBtnDownImgView; // @synthesize titleGuideBtnDownImgView=_titleGuideBtnDownImgView;
+@property(retain, nonatomic) UIButton *titleGuideBtn; // @synthesize titleGuideBtn=_titleGuideBtn;
 @property(retain, nonatomic) UILabel *titleLab; // @synthesize titleLab=_titleLab;
 @property(retain, nonatomic) UIView *titleView; // @synthesize titleView=_titleView;
 @property(retain, nonatomic) UIImageView *iconImgView; // @synthesize iconImgView=_iconImgView;
+@property(retain, nonatomic) UIView *conView; // @synthesize conView=_conView;
+@property(retain, nonatomic) AssetDetailRecordTipView *tipView; // @synthesize tipView=_tipView;
 - (void)reloadData;
 - (void)clearData;
+- (void)showTipGuideAction;
 - (void)setupViews;
 - (void)setSelected:(_Bool)arg1 animated:(_Bool)arg2;
 - (void)awakeFromNib;

@@ -10,7 +10,7 @@
 
 @interface CSJUnionResponseModel : CSJResponseModel
 {
-    NSArray *_creativesAry;
+    NSArray *_Y1_AllShow;
     NSString *_did;
     NSString *_message;
     long long _reason;
@@ -19,14 +19,18 @@
 }
 
 + (id)host_appid;
++ (void)Call_OpenOnly:(id)arg1 finishBlock:(CDUnknownBlockType)arg2;
 - (void).cxx_destruct;
 @property(copy, nonatomic) NSString *desc; // @synthesize desc=_desc;
 @property(retain, nonatomic) NSString *errorMsg; // @synthesize errorMsg=_errorMsg;
 @property(nonatomic) long long reason; // @synthesize reason=_reason;
 @property(copy, nonatomic) NSString *message; // @synthesize message=_message;
 @property(copy, nonatomic) NSString *did; // @synthesize did=_did;
-@property(copy, nonatomic) NSArray *creativesAry; // @synthesize creativesAry=_creativesAry;
+@property(copy) NSArray *Y1_AllShow; // @synthesize Y1_AllShow=_Y1_AllShow;
+- (void)_pos_NOFt;
+- (void)This_IsFail;
 - (void)trackEvent:(id)arg1 params:(id)arg2;
+- (void)Org_LazyY1:(id)arg1;
 - (void)setupDataWithDictionary:(id)arg1;
 - (id)initWithDictionary:(id)arg1 error:(id *)arg2;
 

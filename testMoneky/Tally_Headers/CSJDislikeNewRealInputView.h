@@ -13,39 +13,39 @@
 @interface CSJDislikeNewRealInputView : UIView <UITextViewDelegate>
 {
     CDUnknownBlockType _cancelBlock;
-    CDUnknownBlockType _submitBlock;
-    UIView *_headerView;
-    UIButton *_cancelButton;
+    CDUnknownBlockType _Push_MsgDic;
+    UIView *_Key_It_rhs;
+    UIButton *_Objc_NilPtr;
     UILabel *_titleLabel;
-    UIButton *_submitButton;
+    UIButton *_Ad_YouIs;
     UIView *_lineView;
     UITextView *_textView;
-    UILabel *_placeholderLabel;
+    UILabel *_Rit_X2View;
     UILabel *_countLabel;
-    UIColor *_normalTextColor;
-    UIColor *_normalButtonColor;
-    UIColor *_disableButtonColor;
-    UIColor *_lineColor;
+    UIColor *_Icon_StopIpv4;
+    UIColor *_Ads_IDAdm;
+    UIColor *__cmd_OutAre;
+    UIColor *_BOOL_ThatOnly;
     long long _maxInputLength;
 }
 
 - (void).cxx_destruct;
 @property(nonatomic) long long maxInputLength; // @synthesize maxInputLength=_maxInputLength;
-@property(retain, nonatomic) UIColor *lineColor; // @synthesize lineColor=_lineColor;
-@property(retain, nonatomic) UIColor *disableButtonColor; // @synthesize disableButtonColor=_disableButtonColor;
-@property(retain, nonatomic) UIColor *normalButtonColor; // @synthesize normalButtonColor=_normalButtonColor;
-@property(retain, nonatomic) UIColor *normalTextColor; // @synthesize normalTextColor=_normalTextColor;
+@property(retain, nonatomic) UIColor *BOOL_ThatOnly; // @synthesize BOOL_ThatOnly=_BOOL_ThatOnly;
+@property(retain, nonatomic) UIColor *_cmd_OutAre; // @synthesize _cmd_OutAre=__cmd_OutAre;
+@property(retain, nonatomic) UIColor *Ads_IDAdm; // @synthesize Ads_IDAdm=_Ads_IDAdm;
+@property(retain, nonatomic) UIColor *Icon_StopIpv4; // @synthesize Icon_StopIpv4=_Icon_StopIpv4;
 @property(retain, nonatomic) UILabel *countLabel; // @synthesize countLabel=_countLabel;
-@property(retain, nonatomic) UILabel *placeholderLabel; // @synthesize placeholderLabel=_placeholderLabel;
+@property(retain, nonatomic) UILabel *Rit_X2View; // @synthesize Rit_X2View=_Rit_X2View;
 @property(retain, nonatomic) UITextView *textView; // @synthesize textView=_textView;
 @property(retain, nonatomic) UIView *lineView; // @synthesize lineView=_lineView;
-@property(retain, nonatomic) UIButton *submitButton; // @synthesize submitButton=_submitButton;
+@property(retain, nonatomic) UIButton *Ad_YouIs; // @synthesize Ad_YouIs=_Ad_YouIs;
 @property(retain, nonatomic) UILabel *titleLabel; // @synthesize titleLabel=_titleLabel;
-@property(retain, nonatomic) UIButton *cancelButton; // @synthesize cancelButton=_cancelButton;
-@property(retain, nonatomic) UIView *headerView; // @synthesize headerView=_headerView;
-@property(copy, nonatomic) CDUnknownBlockType submitBlock; // @synthesize submitBlock=_submitBlock;
+@property(retain, nonatomic) UIButton *Objc_NilPtr; // @synthesize Objc_NilPtr=_Objc_NilPtr;
+@property(retain, nonatomic) UIView *Key_It_rhs; // @synthesize Key_It_rhs=_Key_It_rhs;
+@property(copy, nonatomic) CDUnknownBlockType Push_MsgDic; // @synthesize Push_MsgDic=_Push_MsgDic;
 @property(copy, nonatomic) CDUnknownBlockType cancelBlock; // @synthesize cancelBlock=_cancelBlock;
-- (id)disableEmoji:(id)arg1;
+- (id)CCPA_VliApp:(id)arg1;
 - (void)textViewDidChange:(id)arg1;
 - (_Bool)textView:(id)arg1 shouldChangeTextInRange:(struct _NSRange)arg2 replacementText:(id)arg3;
 - (void)submitButtonTouchUpInside:(id)arg1;

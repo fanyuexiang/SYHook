@@ -10,9 +10,9 @@
 {
 }
 
-- (id)logKeyName;
+- (id)Use_HttpIos;
 - (long long)renderType;
-- (void)render_really;
+- (void)Ft_AdInfo;
 - (void)render;
 
 @end

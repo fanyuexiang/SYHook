@@ -4,7 +4,7 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
 
-#import <objc/NSObject.h>
+#import "CSJAdBaseObject.h"
 
 #import "CSJAdClientBiddingProtocol-Protocol.h"
 #import "CSJMopubAdMarkUpDelegate-Protocol.h"
@@ -13,9 +13,9 @@
 #import "CSJSplashZoomOutViewDelegate-Protocol.h"
 
 @class CSJSplashCardView, CSJSplashView, CSJSplashViewModel, CSJSplashZoomOutView, NSDictionary, NSString, UIView, UIViewController;
-@protocol CSJSplashAdDelegate, CSJSplashCardDelegate, CSJSplashZoomOutDelegate;
+@protocol CSJSplashAdDelegate, CSJSplashCardDelegate, CSJSplashLoadDurationDelegate, CSJSplashZoomOutDelegate;
 
-@interface CSJSplashAd : NSObject <CSJSplashViewDelegate, CSJSplashCardViewDelegate, CSJSplashZoomOutViewDelegate, CSJMopubAdMarkUpDelegate, CSJAdClientBiddingProtocol>
+@interface CSJSplashAd : CSJAdBaseObject <CSJSplashViewDelegate, CSJSplashCardViewDelegate, CSJSplashZoomOutViewDelegate, CSJMopubAdMarkUpDelegate, CSJAdClientBiddingProtocol>
 {
     _Bool _supportZoomOutView;
     _Bool _supportCardView;
@@ -24,9 +24,11 @@
     _Bool _isLoading;
     _Bool _didSetADM;
     _Bool _viewControllerDidClosed;
+    _Bool _viewDidClosed;
     id <CSJSplashAdDelegate> _delegate;
     id <CSJSplashCardDelegate> _cardDelegate;
     id <CSJSplashZoomOutDelegate> _zoomOutDelegate;
+    id <CSJSplashLoadDurationDelegate> _loadDurationDelegate;
     NSString *_slotID;
     UIViewController *_splashRootViewController;
     CSJSplashView *_splashView;
@@ -38,6 +40,7 @@
 }
 
 - (void).cxx_destruct;
+@property(nonatomic) _Bool viewDidClosed; // @synthesize viewDidClosed=_viewDidClosed;
 @property(nonatomic) _Bool viewControllerDidClosed; // @synthesize viewControllerDidClosed=_viewControllerDidClosed;
 @property(nonatomic) _Bool didSetADM; // @synthesize didSetADM=_didSetADM;
 @property(nonatomic) _Bool isLoading; // @synthesize isLoading=_isLoading;
@@ -53,6 +56,7 @@
 @property(readonly, copy, nonatomic) NSString *slotID; // @synthesize slotID=_slotID;
 @property(nonatomic) _Bool supportCardView; // @synthesize supportCardView=_supportCardView;
 @property(nonatomic) _Bool supportZoomOutView; // @synthesize supportZoomOutView=_supportZoomOutView;
+@property(nonatomic) __weak id <CSJSplashLoadDurationDelegate> loadDurationDelegate; // @synthesize loadDurationDelegate=_loadDurationDelegate;
 @property(nonatomic) __weak id <CSJSplashZoomOutDelegate> zoomOutDelegate; // @synthesize zoomOutDelegate=_zoomOutDelegate;
 @property(nonatomic) __weak id <CSJSplashCardDelegate> cardDelegate; // @synthesize cardDelegate=_cardDelegate;
 @property(nonatomic) __weak id <CSJSplashAdDelegate> delegate; // @synthesize delegate=_delegate;
@@ -60,7 +64,7 @@
 - (_Bool)p_checkIfLoadSplashCard;
 - (void)p_splashAdViewControllerDidCloseDelegate;
 - (void)p_splashAdViewDidCloseDelegate:(long long)arg1;
-- (void)p_sdkWillOpenURL:(id)arg1;
+- (void)p_sdkDidOpenURL:(id)arg1;
 - (void)p_adViewDidCloseOtherController:(id)arg1;
 - (void)p_reset;
 - (void)p_removeZoomOutView;
@@ -73,12 +77,12 @@
 - (void)win:(id)arg1;
 - (void)setPrice:(id)arg1;
 - (id)biddingToken;
-- (void)setMopubAdMarkUp:(id)arg1;
 - (void)setAdMarkup:(id)arg1;
 - (void)splashZoomOutViewAdDidClose:(id)arg1;
 - (void)splashZoomOutViewAdDidClick:(id)arg1;
 - (void)splashCardViewAdDidClose:(id)arg1;
 - (void)splashCardViewAdDidClick:(id)arg1;
+- (void)splashAdLoadTimeWithDuration:(long long)arg1 extraData:(id)arg2 error:(id)arg3 timeOut:(_Bool)arg4;
 - (void)splashViewFinishPlayDidPlayFinish:(id)arg1 didFailWithError:(id)arg2;
 - (void)splashDidClick:(id)arg1;
 - (void)splashDidClose:(id)arg1 closeType:(long long)arg2;

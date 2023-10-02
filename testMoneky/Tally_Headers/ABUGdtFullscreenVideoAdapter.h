@@ -6,14 +6,14 @@
 
 #import <objc/NSObject.h>
 
-#import "ABUCustomFullscreenVideoAdapter-Protocol.h"
 #import "ABUGDT_GDTExpressInterstitialAdDelegate-Protocol.h"
 #import "ABUGDT_GDTUnifiedInterstitialAdDelegate-Protocol.h"
+#import "BUMCustomFullscreenVideoAdapter-Protocol.h"
 
 @class NSString;
-@protocol ABUCustomConfigAdapter, ABUCustomFullscreenVideoAdapterBridge, ABUGDT_GDTExpressInterstitialAd, ABUGDT_GDTUnifiedInterstitialAd;
+@protocol ABUGDT_GDTExpressInterstitialAd, ABUGDT_GDTUnifiedInterstitialAd, BUMCustomConfigAdapter, BUMCustomFullscreenVideoAdapterBridge;
 
-@interface ABUGdtFullscreenVideoAdapter : NSObject <ABUGDT_GDTUnifiedInterstitialAdDelegate, ABUGDT_GDTExpressInterstitialAdDelegate, ABUCustomFullscreenVideoAdapter>
+@interface ABUGdtFullscreenVideoAdapter : NSObject <ABUGDT_GDTUnifiedInterstitialAdDelegate, ABUGDT_GDTExpressInterstitialAdDelegate, BUMCustomFullscreenVideoAdapter>
 {
     NSObject<ABUGDT_GDTUnifiedInterstitialAd> *_fullscreenAd;
     NSObject<ABUGDT_GDTExpressInterstitialAd> *_expressFullscreenAd;
@@ -75,8 +75,8 @@
 - (_Bool)enablePreloadWhenCurrentIsDisplay;
 
 // Remaining properties
-@property(nonatomic) __weak id <ABUCustomFullscreenVideoAdapterBridge> bridge;
-@property(retain, nonatomic) id <ABUCustomConfigAdapter> configAdapter;
+@property(nonatomic) __weak id <BUMCustomFullscreenVideoAdapterBridge> bridge;
+@property(retain, nonatomic) id <BUMCustomConfigAdapter> configAdapter;
 @property(readonly, copy) NSString *debugDescription;
 @property(readonly, copy) NSString *description;
 @property(readonly) unsigned long long hash;

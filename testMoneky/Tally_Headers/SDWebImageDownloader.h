@@ -11,10 +11,14 @@
 #import "SDImageLoader-Protocol.h"
 
 @class NSMutableDictionary, NSOperationQueue, NSString, NSURLSession, NSURLSessionConfiguration, SDWebImageDownloaderConfig;
-@protocol OS_dispatch_semaphore, SDWebImageDownloaderDecryptor, SDWebImageDownloaderRequestModifier, SDWebImageDownloaderResponseModifier;
+@protocol SDWebImageDownloaderDecryptor, SDWebImageDownloaderRequestModifier, SDWebImageDownloaderResponseModifier;
 
 @interface SDWebImageDownloader : NSObject <SDImageLoader, NSURLSessionTaskDelegate, NSURLSessionDataDelegate>
 {
+    struct os_unfair_lock_s _HTTPHeadersLock;
+    int _HTTPHeadersLock_deprecated;
+    struct os_unfair_lock_s _operationsLock;
+    int _operationsLock_deprecated;
     SDWebImageDownloaderConfig *_config;
     id <SDWebImageDownloaderRequestModifier> _requestModifier;
     id <SDWebImageDownloaderResponseModifier> _responseModifier;
@@ -22,17 +26,14 @@
     NSOperationQueue *_downloadQueue;
     NSMutableDictionary *_URLOperations;
     NSMutableDictionary *_HTTPHeaders;
-    NSObject<OS_dispatch_semaphore> *_HTTPHeadersLock;
-    NSObject<OS_dispatch_semaphore> *_operationsLock;
     NSURLSession *_session;
 }
 
++ (unsigned long long)imageOptionsFromDownloaderOptions:(unsigned long long)arg1;
 + (id)sharedDownloader;
 + (void)initialize;
 - (void).cxx_destruct;
 @property(retain, nonatomic) NSURLSession *session; // @synthesize session=_session;
-@property(retain, nonatomic) NSObject<OS_dispatch_semaphore> *operationsLock; // @synthesize operationsLock=_operationsLock;
-@property(retain, nonatomic) NSObject<OS_dispatch_semaphore> *HTTPHeadersLock; // @synthesize HTTPHeadersLock=_HTTPHeadersLock;
 @property(retain, nonatomic) NSMutableDictionary *HTTPHeaders; // @synthesize HTTPHeaders=_HTTPHeaders;
 @property(retain, nonatomic) NSMutableDictionary *URLOperations; // @synthesize URLOperations=_URLOperations;
 @property(retain, nonatomic) NSOperationQueue *downloadQueue; // @synthesize downloadQueue=_downloadQueue;
@@ -63,8 +64,10 @@
 - (void)dealloc;
 - (id)initWithConfig:(id)arg1;
 - (id)init;
+- (_Bool)shouldBlockFailedURLWithURL:(id)arg1 error:(id)arg2 options:(unsigned long long)arg3 context:(id)arg4;
 - (_Bool)shouldBlockFailedURLWithURL:(id)arg1 error:(id)arg2;
 - (id)requestImageWithURL:(id)arg1 options:(unsigned long long)arg2 context:(id)arg3 progress:(CDUnknownBlockType)arg4 completed:(CDUnknownBlockType)arg5;
+- (_Bool)canRequestImageForURL:(id)arg1 options:(unsigned long long)arg2 context:(id)arg3;
 - (_Bool)canRequestImageForURL:(id)arg1;
 
 // Remaining properties

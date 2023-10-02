@@ -6,33 +6,25 @@
 
 #import <objc/NSObject.h>
 
-#import "HMDBUURLBackgrounSessionManagerDelegate-Protocol.h"
-
-@class HMDBUURLBackgrounSessionManager, NSMutableSet, NSString;
+@class NSMutableSet, NSString;
 @protocol OS_dispatch_queue;
 
-@interface HMDBUCrashUploader : NSObject <HMDBUURLBackgrounSessionManagerDelegate>
+@interface HMDBUCrashUploader : NSObject
 {
-    _Bool _isBackgroundSessionInvalid;
     NSObject<OS_dispatch_queue> *_uploadQueue;
-    HMDBUURLBackgrounSessionManager *_backgroundSessionManager;
     NSMutableSet *_uploadingFileNames;
     NSMutableSet *_previousUploadFileNames;
     NSString *_crashPath;
+    double _lastCrashTimestamp;
 }
 
 - (void).cxx_destruct;
+@property(nonatomic) double lastCrashTimestamp; // @synthesize lastCrashTimestamp=_lastCrashTimestamp;
 @property(copy, nonatomic) NSString *crashPath; // @synthesize crashPath=_crashPath;
 @property(retain, nonatomic) NSMutableSet *previousUploadFileNames; // @synthesize previousUploadFileNames=_previousUploadFileNames;
 @property(retain, nonatomic) NSMutableSet *uploadingFileNames; // @synthesize uploadingFileNames=_uploadingFileNames;
-@property(nonatomic) _Bool isBackgroundSessionInvalid; // @synthesize isBackgroundSessionInvalid=_isBackgroundSessionInvalid;
-@property(retain, nonatomic) HMDBUURLBackgrounSessionManager *backgroundSessionManager; // @synthesize backgroundSessionManager=_backgroundSessionManager;
 @property(retain, nonatomic) NSObject<OS_dispatch_queue> *uploadQueue; // @synthesize uploadQueue=_uploadQueue;
-- (void)applicationDidEnterBackground:(id)arg1;
 - (void)applicationWillEnterForeground:(id)arg1;
-- (void)URLSession:(id)arg1 didBecomeInvalidWithError:(id)arg2;
-- (void)URLSession:(id)arg1 task:(id)arg2 didCompleteWithResponseObject:(id)arg3 error:(id)arg4;
-- (void)createBackgroundSessionManagerIfNeed;
 - (void)handleCrashlogUpload:(id)arg1 didCompleteWithResponseObject:(id)arg2 error:(id)arg3 isBackgroundSession:(_Bool)arg4;
 - (void)handleCrashlogUpload:(id)arg1 didCompleteWithResponseObject:(id)arg2 error:(id)arg3;
 - (void)_uploadCrashLogForPath:(id)arg1;
@@ -41,15 +33,9 @@
 - (void)asyncUploadCrashLogIfNeeded;
 - (void)syncUploadCrashLogIfNeeded;
 - (void)uploadCrashLogIfNeeded;
-- (id)initWithPath:(id)arg1;
 - (id)init;
+- (id)initWithPath:(id)arg1;
 - (void)dealloc;
-
-// Remaining properties
-@property(readonly, copy) NSString *debugDescription;
-@property(readonly, copy) NSString *description;
-@property(readonly) unsigned long long hash;
-@property(readonly) Class superclass;
 
 @end
 

@@ -6,12 +6,12 @@
 
 #import <objc/NSObject.h>
 
-#import "ABUMediatedNativeAdViewCreator-Protocol.h"
+#import "BUMMediatedNativeAdViewCreator-Protocol.h"
 
 @class NSString, UIButton, UIImageView, UILabel, UIView;
 @protocol ABUGDT_GDTUnifiedNativeAdView;
 
-@interface ABUGDTNativeAdViewCreator : NSObject <ABUMediatedNativeAdViewCreator>
+@interface ABUGDTNativeAdViewCreator : NSObject <BUMMediatedNativeAdViewCreator>
 {
     UIView<ABUGDT_GDTUnifiedNativeAdView> *_adView;
 }

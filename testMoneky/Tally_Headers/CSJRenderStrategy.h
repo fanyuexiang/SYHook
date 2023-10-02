@@ -10,43 +10,43 @@
 
 @interface CSJRenderStrategy : NSObject
 {
-    _Bool _haveRenderResult;
+    _Bool _Docs_ShowBu_y;
     CSJRenderEngineViewModel *_renderEngineViewModel;
     UIView *_containerView;
+    CSJDynamicRenderTimeOutControlServer *_Ads_StmtAt;
     CSJRenderResultModel *_renderResultModel;
-    CSJDynamicRenderTimeOutControlServer *_timeOutControlServer;
     id _delegate;
 }
 
 - (void).cxx_destruct;
 @property(nonatomic) __weak id delegate; // @synthesize delegate=_delegate;
-@property(retain, nonatomic) CSJDynamicRenderTimeOutControlServer *timeOutControlServer; // @synthesize timeOutControlServer=_timeOutControlServer;
-@property(nonatomic) _Bool haveRenderResult; // @synthesize haveRenderResult=_haveRenderResult;
 @property(retain, nonatomic) CSJRenderResultModel *renderResultModel; // @synthesize renderResultModel=_renderResultModel;
+@property(retain, nonatomic) CSJDynamicRenderTimeOutControlServer *Ads_StmtAt; // @synthesize Ads_StmtAt=_Ads_StmtAt;
+@property(nonatomic) _Bool Docs_ShowBu_y; // @synthesize Docs_ShowBu_y=_Docs_ShowBu_y;
 @property(nonatomic) __weak UIView *containerView; // @synthesize containerView=_containerView;
 @property(retain, nonatomic) CSJRenderEngineViewModel *renderEngineViewModel; // @synthesize renderEngineViewModel=_renderEngineViewModel;
-- (id)logKeyName;
-- (void)reportRenderSuccessWithInfo:(id)arg1;
+- (id)Use_HttpIos;
+- (void)Cta_NeedFm:(id)arg1;
 - (long long)renderType;
-- (void)safeDelegate_renderStrategy:(id)arg1 report_webview_time_trackWithParams:(id)arg2;
-- (void)safeDelegate_renderStrategy:(id)arg1 interceptArray:(id)arg2;
-- (id)safeDelegate_renderStrategy:(id)arg1 renderInteractionModel:(id)arg2 clickExtraInfo:(id)arg3;
-- (id)safeDelegate_nativeAdInRenderStrategy:(id)arg1;
-- (void)safeDelegate_renderStrategy:(id)arg1 logWithMsg:(id)arg2 isInternal:(_Bool)arg3;
-- (void)safeDelegate_renderStrategy:(id)arg1 successView:(id)arg2 error:(id)arg3;
-- (long long)playerTotalTime;
-- (double)playerCurrentTime;
-- (void)refreshWKWebViewIfNeed;
-- (void)sendShowToast:(id)arg1;
-- (void)sendShowSkipInLiveScene:(_Bool)arg1;
-- (void)sendPlayableStateChange:(_Bool)arg1 reduceDuration:(long long)arg2;
-- (void)reportMaterialMetaIfNeedWithRelatedMaterialMetaJson:(id)arg1;
-- (void)reportShowEventIfNeed;
-- (void)detectBlankIfNeed;
-- (void)updateWithThemeStatus:(long long)arg1;
-- (void)invokeWebEvent:(id)arg1 data:(id)arg2;
+- (void)Body_PosShow:(id)arg1 report_webview_time_trackWithParams:(id)arg2;
+- (void)Body_PosShow:(id)arg1 interceptArray:(id)arg2;
+- (id)Body_PosShow:(id)arg1 renderInteractionModel:(id)arg2 clickExtraInfo:(id)arg3;
+- (id)Root_ReadIos:(id)arg1;
+- (void)Body_PosShow:(id)arg1 logWithMsg:(id)arg2 isInternal:(_Bool)arg3;
+- (void)Body_PosShow:(id)arg1 successView:(id)arg2 error:(id)arg3;
+- (long long)Of_RectDoes;
+- (double)Http_CodeSdk;
+- (void)Stop_CodeTop;
+- (void)Out_MaskNb:(id)arg1;
+- (void)Wiki_AryTry:(_Bool)arg1;
+- (void)From_ObjADX:(_Bool)arg1 reduceDuration:(long long)arg2;
+- (void)On_DicRead:(id)arg1;
+- (void)Lock_AllUse;
+- (void)Used_StrBeen;
+- (void)Init_OrVar:(long long)arg1;
+- (void)It_Y1CCPA:(id)arg1 data:(id)arg2;
 - (void)render;
-- (id)initWithRenderEngineViewModel:(id)arg1 containerView:(id)arg2;
+- (id)initLR1_FabsA1:(id)arg1 containerView:(id)arg2;
 
 @end
 

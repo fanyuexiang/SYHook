@@ -21,9 +21,9 @@
 + (id)packageEvents:(id)arg1;
 + (id)eventWithType:(id)arg1 andBaseParam:(id)arg2;
 + (id)eventWithType:(id)arg1 eventID:(id)arg2 andBaseParam:(id)arg3;
-+ (id)primaryKey;
-+ (id)tableName;
-+ (id)databaseName;
++ (id)abu_primaryKey;
++ (id)abu_tableName;
++ (id)abu_databaseName;
 + (double)timeIntervalOfDaysBeforeToday:(long long)arg1;
 + (void)removeEventsBeforeDays:(long long)arg1 complete:(CDUnknownBlockType)arg2;
 + (void)removeEvents:(id)arg1 complete:(CDUnknownBlockType)arg2;

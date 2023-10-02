@@ -17,6 +17,7 @@
 
 - (void).cxx_destruct;
 @property(retain, nonatomic) NSMutableArray *dataArray; // @synthesize dataArray=_dataArray;
+- (void)setupABData;
 - (id)titleSubtitleString:(id)arg1 subTitle:(id)arg2;
 - (id)sectionLast;
 - (id)sectionSix;

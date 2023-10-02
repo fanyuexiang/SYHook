@@ -56,6 +56,7 @@
 - (void)loadAdDataWithCount:(unsigned long long)arg1;
 - (void)loadAdData;
 @property(nonatomic) __weak UIViewController *rootViewController;
+- (void)dealloc;
 - (id)initWithAdUnitID:(id)arg1 adSize:(struct CGSize)arg2;
 
 // Remaining properties

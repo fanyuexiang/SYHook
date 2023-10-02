@@ -13,5 +13,6 @@
 @optional
 - (void)nativeComponentLottieSendClickView:(UIView *)arg1 viewName:(NSString *)arg2 special:(NSString *)arg3;
 - (void)nativeComponentLottieSendFinish:(_Bool)arg1 view:(UIView *)arg2 viewName:(NSString *)arg3 special:(NSString *)arg4;
+- (void)nativeComponentLottieSendStartWithView:(UIView *)arg1 viewName:(NSString *)arg2 special:(NSString *)arg3;
 @end
 

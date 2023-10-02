@@ -6,9 +6,11 @@
 
 #import <UIKit/UIViewController.h>
 
-@class NSDictionary, NSMutableDictionary, UIScrollView;
+#import "BURewardedVideoAdDelegate-Protocol.h"
 
-@interface PointCardDetailViewController : UIViewController
+@class NSDictionary, NSMutableDictionary, NSString, UIScrollView;
+
+@interface PointCardDetailViewController : UIViewController <BURewardedVideoAdDelegate>
 {
     NSMutableDictionary *_dataDic;
     UIScrollView *_contentScroll;
@@ -17,6 +19,9 @@
     NSDictionary *_dicInfo;
 }
 
++ (id)exchangeButtonAction;
++ (_Bool)recordTimesWithPointsToExperienceVIP:(id)arg1 productid:(id)arg2;
++ (_Bool)verifyTimesWithPointsToExperienceVIP:(id)arg1 productid:(id)arg2;
 - (void).cxx_destruct;
 @property(retain, nonatomic) NSDictionary *dicInfo; // @synthesize dicInfo=_dicInfo;
 @property(nonatomic) long long prop_id; // @synthesize prop_id=_prop_id;
@@ -28,11 +33,31 @@
 - (void)vipexchangeSign;
 - (void)vipexchangeSignClick;
 - (void)exchangeRequest;
+- (void)exchangeEventPopView;
 - (void)exchangeEvent;
 - (void)setupData:(id)arg1;
 - (void)requestDetailData;
 - (void)viewWillAppear:(_Bool)arg1;
 - (void)viewDidLoad;
+- (void)rewardedVideoAdDidClose:(id)arg1;
+- (void)rewardedVideoAdServerRewardDidFail:(id)arg1 error:(id)arg2;
+- (void)rewardedVideoAdServerRewardDidSucceed:(id)arg1 verify:(_Bool)arg2;
+- (void)rewardedVideoAd:(id)arg1 didFailWithError:(id)arg2;
+- (void)rewardedVideoAdDidLoad:(id)arg1;
+- (void)requestAdVideoWithBUNext:(id)arg1;
+- (void)requestAdVideoWithBU:(id)arg1;
+- (void)setRewardSuccess:(_Bool)arg1;
+- (_Bool)rewardSuccess;
+- (void)setRuleidBUAd:(id)arg1;
+- (id)ruleidBUAd;
+- (void)setRewardVideoBUAd:(id)arg1;
+- (id)rewardVideoBUAd;
+
+// Remaining properties
+@property(readonly, copy) NSString *debugDescription;
+@property(readonly, copy) NSString *description;
+@property(readonly) unsigned long long hash;
+@property(readonly) Class superclass;
 
 @end
 

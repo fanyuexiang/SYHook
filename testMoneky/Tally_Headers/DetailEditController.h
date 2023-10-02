@@ -9,11 +9,10 @@
 #import "UITableViewDataSource-Protocol.h"
 #import "UITableViewDelegate-Protocol.h"
 
-@class NSArray, NSString, NTallyModel, SKThemeBaseView, UIImage, UILabel, UITableView, UIView;
+@class NSMutableArray, NSMutableDictionary, NSString, NTallyModel, SKThemeBaseView, UIImage, UILabel, UITableView, UIView;
 
 @interface DetailEditController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 {
-    NSArray *_titleArray;
     UILabel *_typeLabel;
     UIImage *_remarkimage;
     struct CGSize _remarkimagesize;
@@ -23,9 +22,13 @@
     NTallyModel *_editModel;
     SKThemeBaseView *_themeView;
     UITableView *_tableView;
+    NSMutableArray *_titleArray;
+    NSMutableDictionary *_titleKeys;
 }
 
 - (void).cxx_destruct;
+@property(retain, nonatomic) NSMutableDictionary *titleKeys; // @synthesize titleKeys=_titleKeys;
+@property(retain, nonatomic) NSMutableArray *titleArray; // @synthesize titleArray=_titleArray;
 @property(retain, nonatomic) UITableView *tableView; // @synthesize tableView=_tableView;
 @property(retain, nonatomic) SKThemeBaseView *themeView; // @synthesize themeView=_themeView;
 @property(retain, nonatomic) NTallyModel *editModel; // @synthesize editModel=_editModel;
@@ -49,6 +52,8 @@
 - (void)setupNaviView;
 - (void)refreshData;
 - (void)tallyDataEditNotification:(id)arg1;
+- (void)responseNotification:(id)arg1;
+- (void)reloadTitleArray;
 - (void)viewWillAppear:(_Bool)arg1;
 - (void)viewDidLoad;
 - (void)shareAction;

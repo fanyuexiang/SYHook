@@ -13,5 +13,9 @@
 - (_Bool)shouldBlockFailedURLWithURL:(NSURL *)arg1 error:(NSError *)arg2;
 - (id <SDWebImageOperation>)requestImageWithURL:(NSURL *)arg1 options:(unsigned long long)arg2 context:(NSDictionary *)arg3 progress:(void (^)(long long, long long, NSURL *))arg4 completed:(void (^)(UIImage *, NSData *, NSError *, _Bool))arg5;
 - (_Bool)canRequestImageForURL:(NSURL *)arg1;
+
+@optional
+- (_Bool)shouldBlockFailedURLWithURL:(NSURL *)arg1 error:(NSError *)arg2 options:(unsigned long long)arg3 context:(NSDictionary *)arg4;
+- (_Bool)canRequestImageForURL:(NSURL *)arg1 options:(unsigned long long)arg2 context:(NSDictionary *)arg3;
 @end
 

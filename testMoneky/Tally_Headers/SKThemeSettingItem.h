@@ -31,6 +31,7 @@
     long long _colorType;
 }
 
++ (id)defGrayTheme;
 + (id)defTheme;
 - (void).cxx_destruct;
 @property(nonatomic) _Bool used; // @synthesize used=_used;
@@ -61,6 +62,7 @@
 - (id)reget_chartColor;
 - (id)reget_navBarTextColor;
 - (id)reget_navBarColor;
+- (id)reverseColorimageName:(id)arg1;
 - (id)colorimageName:(id)arg1;
 
 // Remaining properties

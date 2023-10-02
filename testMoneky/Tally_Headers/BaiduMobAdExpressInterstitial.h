@@ -30,6 +30,7 @@
 @property(retain, nonatomic) BaiduMobAdFeedRequestParameters *requestParameters; // @synthesize requestParameters=_requestParameters;
 @property(copy, nonatomic) NSString *publisherId; // @synthesize publisherId=_publisherId;
 @property(nonatomic) __weak id <BaiduMobAdExpressIntDelegate> delegate; // @synthesize delegate=_delegate;
+- (id)getAdDataForKey:(id)arg1;
 - (void)showFromViewController:(id)arg1;
 - (void)show;
 - (void)callbackAdFailCode:(id)arg1 msg:(id)arg2;

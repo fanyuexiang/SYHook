@@ -102,6 +102,7 @@
     NSString *_region_click;
     NSString *_custom_style;
     NSString *_tit_c;
+    NSString *_advertiserUrl;
     NSString *_useWKWebview;
     NSString *_native_component;
     NSString *_video_lp_type;
@@ -185,6 +186,7 @@
 @property(retain, nonatomic) NSString *video_lp_type; // @synthesize video_lp_type=_video_lp_type;
 @property(retain, nonatomic) NSString *native_component; // @synthesize native_component=_native_component;
 @property(retain, nonatomic) NSString *useWKWebview; // @synthesize useWKWebview=_useWKWebview;
+@property(copy, nonatomic) NSString *advertiserUrl; // @synthesize advertiserUrl=_advertiserUrl;
 @property(copy, nonatomic) NSString *tit_c; // @synthesize tit_c=_tit_c;
 @property(copy, nonatomic) NSString *custom_style; // @synthesize custom_style=_custom_style;
 @property(copy, nonatomic) NSString *region_click; // @synthesize region_click=_region_click;

@@ -8,8 +8,8 @@
 
 #import "BUMopubAdMarkUpDelegate-Protocol.h"
 
-@class BUAdSlot, NSArray, NSString;
-@protocol BUNativeAdsManagerDelegate, BUNativeExpressAdViewDelegate;
+@class BUAdSlot, NSArray, NSObject, NSString;
+@protocol BUNativeAdsManagerDelegate, BUNativeAdsManagerMediationProtocol, BUNativeExpressAdViewDelegate;
 
 @interface BUNativeAdsManager : BUInterfaceBaseObject <BUMopubAdMarkUpDelegate>
 {
@@ -24,6 +24,9 @@
 - (void)nativeAdsManagerSuccessToLoad:(id)arg1 nativeAds:(id)arg2;
 - (id)init;
 - (id)initWithSlot:(id)arg1;
+- (void)nativeAdsManagerDidFinishLoadAdnAd:(id)arg1 nativeAd:(id)arg2 error:(id)arg3;
+- (void)nativeAdsManager:(id)arg1 didWaitingBiddingResultWithParameters:(id)arg2 andResumeHandler:(CDUnknownBlockType)arg3;
+@property(readonly, nonatomic) NSObject<BUNativeAdsManagerMediationProtocol> *mediation;
 
 // Remaining properties
 @property(nonatomic) struct CGSize adSize; // @dynamic adSize;

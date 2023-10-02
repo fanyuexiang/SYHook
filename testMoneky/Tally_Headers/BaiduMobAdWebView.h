@@ -8,12 +8,13 @@
 
 #import "UIScrollViewDelegate-Protocol.h"
 #import "WKNavigationDelegate-Protocol.h"
+#import "WKScriptMessageHandler-Protocol.h"
 #import "WKUIDelegate-Protocol.h"
 
 @class NSString, WKWebView;
 @protocol BaiduMobAdWebViewDelegate;
 
-@interface BaiduMobAdWebView : UIView <WKUIDelegate, WKNavigationDelegate, UIScrollViewDelegate>
+@interface BaiduMobAdWebView : UIView <WKScriptMessageHandler, WKUIDelegate, WKNavigationDelegate, UIScrollViewDelegate>
 {
     WKWebView *_webview;
     id <BaiduMobAdWebViewDelegate> _delegate;
@@ -22,6 +23,7 @@
 - (void).cxx_destruct;
 @property(nonatomic) __weak id <BaiduMobAdWebViewDelegate> delegate; // @synthesize delegate=_delegate;
 @property(retain, nonatomic) WKWebView *webview; // @synthesize webview=_webview;
+- (void)userContentController:(id)arg1 didReceiveScriptMessage:(id)arg2;
 - (void)scrollViewDidScroll:(id)arg1;
 - (void)webView:(id)arg1 didFinishNavigation:(id)arg2;
 - (void)webView:(id)arg1 didFailNavigation:(id)arg2 withError:(id)arg3;

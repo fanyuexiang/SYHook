@@ -9,8 +9,8 @@
 #import "BUAdClientBiddingProtocol-Protocol.h"
 #import "BUMopubAdMarkUpDelegate-Protocol.h"
 
-@class BUAdSlot, BUMaterialMeta, NSString, UIViewController;
-@protocol BUNativeAdDelegate;
+@class BUAdSlot, BUMaterialMeta, NSObject, NSString, UIViewController;
+@protocol BUNativeAdDelegate, BUNativeAdMediationProtocol;
 
 @interface BUNativeAd : BUInterfaceBaseObject <BUMopubAdMarkUpDelegate, BUAdClientBiddingProtocol>
 {
@@ -31,6 +31,15 @@
 - (void)nativeAdDidLoad:(id)arg1;
 - (id)initWithSlot:(id)arg1;
 - (id)init;
+- (void)nativeAdVideo:(id)arg1 rewardDidCountDown:(long long)arg2;
+- (void)nativeAdShakeViewDidDismiss:(id)arg1;
+- (void)nativeAdVideoDidPlayFinish:(id)arg1;
+- (void)nativeAdVideoDidClick:(id)arg1;
+- (void)nativeAdVideo:(id)arg1 stateDidChanged:(long long)arg2;
+- (void)nativeAdExpressViewRenderFail:(id)arg1 error:(id)arg2;
+- (void)nativeAdExpressViewRenderSuccess:(id)arg1;
+- (void)nativeAdWillPresentFullScreenModal:(id)arg1;
+@property(readonly, nonatomic) NSObject<BUNativeAdMediationProtocol> *mediation;
 
 // Remaining properties
 @property(retain, nonatomic) BUAdSlot *adslot; // @dynamic adslot;

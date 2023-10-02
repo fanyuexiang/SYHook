@@ -19,8 +19,10 @@
     double _animationScaleY;
     double _animationTranslateX;
     double _animationTranslateY;
+    double _animationBounceHeight;
     NSString *_animationRippleBackgroundColor;
     NSString *_animationTimeFunction;
+    NSString *_animationFillMode;
     double _animationDelay;
     long long _animationIterationCount;
     NSString *_animationDirection;
@@ -40,8 +42,10 @@
 @property(copy, nonatomic) NSString *animationDirection; // @synthesize animationDirection=_animationDirection;
 @property(nonatomic) long long animationIterationCount; // @synthesize animationIterationCount=_animationIterationCount;
 @property(nonatomic) double animationDelay; // @synthesize animationDelay=_animationDelay;
+@property(copy, nonatomic) NSString *animationFillMode; // @synthesize animationFillMode=_animationFillMode;
 @property(copy, nonatomic) NSString *animationTimeFunction; // @synthesize animationTimeFunction=_animationTimeFunction;
 @property(copy, nonatomic) NSString *animationRippleBackgroundColor; // @synthesize animationRippleBackgroundColor=_animationRippleBackgroundColor;
+@property(nonatomic) double animationBounceHeight; // @synthesize animationBounceHeight=_animationBounceHeight;
 @property(nonatomic) double animationTranslateY; // @synthesize animationTranslateY=_animationTranslateY;
 @property(nonatomic) double animationTranslateX; // @synthesize animationTranslateX=_animationTranslateX;
 @property(nonatomic) double animationScaleY; // @synthesize animationScaleY=_animationScaleY;
@@ -52,6 +56,7 @@
 @property(copy, nonatomic) NSString *animationType; // @synthesize animationType=_animationType;
 @property(copy, nonatomic) NSDictionary *originDictionary; // @synthesize originDictionary=_originDictionary;
 - (id)dictionaryValue;
+- (id)fillMode;
 - (id)timingFunction;
 - (long long)dynamicAnimationScaleDirection;
 - (long long)dynamicAnimationDirection;

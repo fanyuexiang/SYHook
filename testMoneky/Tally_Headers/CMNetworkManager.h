@@ -12,12 +12,6 @@
 
 + (void)requestUngetPointsCount;
 + (void)requestUnreadMessageCount;
-+ (void)requestCMPraiseInfoWithIndex:(id)arg1 key:(id)arg2 path:(id)arg3;
-+ (void)requestPraiseDataWithKey:(id)arg1 path:(id)arg2;
-+ (void)requestCommentPraiseInfo;
-+ (void)requestPostPraiseInfo;
-+ (void)fetchDefaultTopic:(CDUnknownBlockType)arg1;
-+ (void)requestDefaultTopic:(CDUnknownBlockType)arg1;
 
 @end
 

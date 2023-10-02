@@ -10,20 +10,21 @@
 {
 }
 
-+ (void)gotoDetailPage:(id)arg1 context:(id)arg2 isSplash:(_Bool)arg3;
-+ (void)gotoSplashDetailPage:(id)arg1 context:(id)arg2;
-+ (void)gotoDetailPage:(id)arg1 context:(id)arg2;
++ (void)Json_ShowAds:(id)arg1 context:(id)arg2 isSplash:(_Bool)arg3;
++ (void)Can_HasThis:(id)arg1 context:(id)arg2;
++ (void)Json_ShowAds:(id)arg1 context:(id)arg2;
 + (id)sharedManager;
-- (void)pbu_preProccessWithModel:(id)arg1 context:(id)arg2 completion:(CDUnknownBlockType)arg3;
-- (void)pbu_reportClickUrlWithData:(id)arg1;
-- (void)bu_openPolicy:(id)arg1 context:(id)arg2;
-- (void)bu_handleVideoAdActionWithModel:(id)arg1 context:(id)arg2;
-- (void)bu_handleSafariActionWithModel:(id)arg1 context:(id)arg2;
-- (void)bu_handleWebPageActionWithModel:(id)arg1 context:(id)arg2;
-- (void)bu_handelCallActionWithModel:(id)arg1 withIsWebPage:(_Bool)arg2 context:(id)arg3;
-- (void)bu_splashHandleWebPageActionWithModel:(id)arg1 context:(id)arg2;
-- (void)bu_handelCallActionWithModel:(id)arg1 context:(id)arg2;
-- (void)bu_handleAppActionWithModel:(id)arg1 context:(id)arg2 withDownloadActionType:(CDUnknownBlockType)arg3 withSucessCallBack:(CDUnknownBlockType)arg4 withFailedCallback:(CDUnknownBlockType)arg5;
+- (void)Does_OrgNow:(id)arg1 context:(id)arg2 completion:(CDUnknownBlockType)arg3;
+- (void)M_PI_PathMain:(id)arg1;
+- (void)Skip_Bu_xMsg:(id)arg1 context:(id)arg2;
+- (void)Msg_A2With:(id)arg1 context:(id)arg2;
+- (void)Lazy_CellLevi:(id)arg1 context:(id)arg2;
+- (void)Now_OsKey:(id)arg1 context:(id)arg2;
+- (void)Copy_SelfCta:(id)arg1 context:(id)arg2;
+- (void)Will_valMate:(id)arg1 withIsWebPage:(_Bool)arg2 context:(id)arg3;
+- (void)Read_Read_log:(id)arg1 context:(id)arg2;
+- (void)Will_valMate:(id)arg1 context:(id)arg2;
+- (void)ADX_ItemMIT:(id)arg1 context:(id)arg2 withDownloadActionType:(CDUnknownBlockType)arg3 withSucessCallBack:(CDUnknownBlockType)arg4 withFailedCallback:(CDUnknownBlockType)arg5;
 
 @end
 

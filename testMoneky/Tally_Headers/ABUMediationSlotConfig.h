@@ -18,7 +18,11 @@
     long long _ritType;
     long long _lookTime;
     double _layerTimeOut;
+    double _layerTimeRate;
     double _totalTimeOut;
+    double _totalTimeRate;
+    double _reqInterval;
+    double _biddingTimeout;
     double _cacheTimeOut;
     double _timeMin;
     long long _waterfallId;
@@ -41,9 +45,25 @@
     long long _rewardStartTime;
     long long _adCount;
     long long _isAdPrime;
+    long long _groupType;
+    long long _rewardAgainStyleId;
+    long long _isRewardAgain;
+    long long _rewardAgainMaxCount;
+    double _rewardAgainEcpm;
+    long long _rewardAgainMaxCountOneHour;
+    double _rewardAgainInterval;
+    double _rewardAgainRange;
 }
 
 - (void).cxx_destruct;
+@property(readonly, nonatomic) double rewardAgainRange; // @synthesize rewardAgainRange=_rewardAgainRange;
+@property(readonly, nonatomic) double rewardAgainInterval; // @synthesize rewardAgainInterval=_rewardAgainInterval;
+@property(readonly, nonatomic) long long rewardAgainMaxCountOneHour; // @synthesize rewardAgainMaxCountOneHour=_rewardAgainMaxCountOneHour;
+@property(readonly, nonatomic) double rewardAgainEcpm; // @synthesize rewardAgainEcpm=_rewardAgainEcpm;
+@property(readonly, nonatomic) long long rewardAgainMaxCount; // @synthesize rewardAgainMaxCount=_rewardAgainMaxCount;
+@property(readonly, nonatomic) long long isRewardAgain; // @synthesize isRewardAgain=_isRewardAgain;
+@property(readonly, nonatomic) long long rewardAgainStyleId; // @synthesize rewardAgainStyleId=_rewardAgainStyleId;
+@property(readonly, nonatomic) long long groupType; // @synthesize groupType=_groupType;
 @property(readonly, nonatomic) long long isAdPrime; // @synthesize isAdPrime=_isAdPrime;
 @property(nonatomic) long long adCount; // @synthesize adCount=_adCount;
 @property(nonatomic) long long rewardStartTime; // @synthesize rewardStartTime=_rewardStartTime;
@@ -68,11 +88,16 @@
 @property(readonly, nonatomic) long long waterfallId; // @synthesize waterfallId=_waterfallId;
 @property(readonly, nonatomic) double timeMin; // @synthesize timeMin=_timeMin;
 @property(readonly, nonatomic) double cacheTimeOut; // @synthesize cacheTimeOut=_cacheTimeOut;
+@property(readonly, nonatomic) double biddingTimeout; // @synthesize biddingTimeout=_biddingTimeout;
+@property(readonly, nonatomic) double reqInterval; // @synthesize reqInterval=_reqInterval;
+@property(readonly, nonatomic) double totalTimeRate; // @synthesize totalTimeRate=_totalTimeRate;
 @property(readonly, nonatomic) double totalTimeOut; // @synthesize totalTimeOut=_totalTimeOut;
+@property(readonly, nonatomic) double layerTimeRate; // @synthesize layerTimeRate=_layerTimeRate;
 @property(readonly, nonatomic) double layerTimeOut; // @synthesize layerTimeOut=_layerTimeOut;
 @property(readonly, nonatomic) long long lookTime; // @synthesize lookTime=_lookTime;
 @property(readonly, nonatomic) long long ritType; // @synthesize ritType=_ritType;
 @property(readonly, copy, nonatomic) NSString *ritId; // @synthesize ritId=_ritId;
+- (double)check:(double)arg1 WithMin:(double)arg2 andMax:(double)arg3 andDefault:(double)arg4;
 - (id)initWithDictionary:(id)arg1;
 - (id)initWithSplashMediationRit:(id)arg1;
 - (id)init;

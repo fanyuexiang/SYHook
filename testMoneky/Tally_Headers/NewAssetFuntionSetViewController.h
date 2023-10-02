@@ -15,8 +15,12 @@
     UIImageView *_defaultAccountIcon;
     UILabel *_defaultAccountLabel;
     UILabel *_defaultAccountSymLael;
+    UIImageView *_defaultIncomeAccountIcon;
+    UILabel *_defaultIncomeAccountLabel;
+    UILabel *_defaultIncomeAccountSymLael;
     UIView *_assetfunMask0;
     UIView *_assetfunMask1;
+    UIView *_assetfunMask2;
     CDUnknownBlockType _closeHandle;
 }
 
@@ -24,6 +28,7 @@
 @property(copy, nonatomic) CDUnknownBlockType closeHandle; // @synthesize closeHandle=_closeHandle;
 - (void)helpAction;
 - (void)refreshDefaultAccountUI;
+- (void)showChooseIncomeDefault;
 - (void)showChooseDefault;
 - (void)gotoAssetListShow;
 - (void)assetSwitchClick:(id)arg1;

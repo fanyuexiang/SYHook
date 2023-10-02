@@ -22,6 +22,10 @@
     UIImageView *_balanceView;
     long long _priceindex;
     NSString *_enterSourceString;
+    UIView *_agreementView0;
+    UIView *_agreementView1;
+    _Bool _isagree;
+    UIImageView *_agreeicon;
     NSArray *_vipArray;
     CDUnknownBlockType _paymentSuccessHandle;
     NSString *_eventID;
@@ -35,11 +39,13 @@
 @property(copy, nonatomic) NSString *eventID; // @synthesize eventID=_eventID;
 @property(copy, nonatomic) CDUnknownBlockType paymentSuccessHandle; // @synthesize paymentSuccessHandle=_paymentSuccessHandle;
 @property(retain, nonatomic) NSArray *vipArray; // @synthesize vipArray=_vipArray;
+- (void)showAutoVIPTip;
 - (void)ABbuyVIP:(id)arg1;
 - (void)requestVIPModel;
 - (void)abPopupClickBuyVIP;
 - (void)adjustBuyButton:(long long)arg1;
 - (void)agreementAction:(id)arg1;
+- (void)clickAgreeIcon;
 - (void)setContentBuyBtn;
 - (void)priceClick:(id)arg1;
 - (void)setContentPriceView:(double)arg1;

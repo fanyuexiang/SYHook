@@ -24,6 +24,7 @@
 - (NSString *)splashBottomViewBtnBackgroundDestColor;
 - (double)splashBottomViewClickTextFontSize;
 - (double)splashBottomViewClickTopTextFontSize;
+- (NSString *)splashButtonClickText;
 - (NSString *)splashBottomViewClickText;
 - (NSString *)splashBottomViewTopClickText;
 @end

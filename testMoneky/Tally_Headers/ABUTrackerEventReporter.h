@@ -7,22 +7,19 @@
 #import <objc/NSObject.h>
 
 @class ABUTrackerHelper;
+@protocol OS_dispatch_queue;
 
 @interface ABUTrackerEventReporter : NSObject
 {
-    CDUnknownBlockType _bindBuilder;
     ABUTrackerHelper *_helper;
+    NSObject<OS_dispatch_queue> *_reportQueue;
 }
 
 + (id)_reuseEventSet;
-+ (id)_bindBuilderMap;
-+ (id)_bindObjectTable;
-+ (void)_clearMapIfNeeded;
-+ (id)reporterBindedObject:(id)arg1;
-+ (void)bindToObject:(id)arg1 withParamBuilder:(CDUnknownBlockType)arg2;
++ (id)reporter;
 - (void).cxx_destruct;
+@property(retain, nonatomic) NSObject<OS_dispatch_queue> *reportQueue; // @synthesize reportQueue=_reportQueue;
 @property(retain, nonatomic) ABUTrackerHelper *helper; // @synthesize helper=_helper;
-@property(copy, nonatomic) CDUnknownBlockType bindBuilder; // @synthesize bindBuilder=_bindBuilder;
 - (void)_reportEvent:(id)arg1;
 - (void)_addToReusePool;
 - (void)_prepareToReuse;

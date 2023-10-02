@@ -12,30 +12,20 @@
 {
     NSMutableDictionary *_uvalues;
     NSMutableDictionary *_uvaluesForPreload;
-    long long _ecpmTTL;
 }
 
-+ (id)sharedInstance;
++ (id)ruleList;
++ (void)updateDynamicRules:(id)arg1;
++ (void)updateLabelGroupInfos:(id)arg1;
++ (void)addUValue:(id)arg1 withRitType:(long long)arg2 andPrimeRit:(id)arg3;
 + (void)updateEcpmTTL:(long long)arg1;
 + (void)resetUValuesWithMode:(long long)arg1;
 + (void)addUValue:(id)arg1 withRitType:(long long)arg2 andMode:(long long)arg3;
 + (void)addUValue:(id)arg1 withRitType:(long long)arg2;
 + (id)uvaluesForConfigWithMode:(long long)arg1;
 - (void).cxx_destruct;
-@property(nonatomic) long long ecpmTTL; // @synthesize ecpmTTL=_ecpmTTL;
 @property(retain, nonatomic) NSMutableDictionary *uvaluesForPreload; // @synthesize uvaluesForPreload=_uvaluesForPreload;
 @property(retain, nonatomic) NSMutableDictionary *uvalues; // @synthesize uvalues=_uvalues;
-- (void)removeAll;
-- (void)removeUValuesFromDisk;
-- (void)unarchiveUValuesFromDisk;
-- (void)archiveUValuesToDisk;
-- (void)resetUValuesForPreload;
-- (void)resetUValues;
-- (void)_addUvalue:(id)arg1 forRitType:(long long)arg2 andMode:(long long)arg3;
-- (void)addUValue:(id)arg1 withRitType:(long long)arg2 withMode:(long long)arg3;
-- (void)resetUValuesWithMode:(long long)arg1;
-- (id)uvaluesForConfigWithMode:(long long)arg1;
-- (id)init;
 
 @end
 

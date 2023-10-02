@@ -6,18 +6,18 @@
 
 #import <objc/NSObject.h>
 
-#import "ABUCustomDrawAdapter-Protocol.h"
 #import "ABUGDT_GDTMediaViewDelegate-Protocol.h"
 #import "ABUGDT_GDTNativeExpressAdDelegate-Protocol.h"
 #import "ABUGDT_GDTNativeExpressProAdManagerDelegate-Protocol.h"
 #import "ABUGDT_GDTNativeExpressProAdViewDelegate-Protocol.h"
 #import "ABUGDT_GDTUnifiedNativeAdDelegate-Protocol.h"
 #import "ABUGDT_GDTUnifiedNativeAdViewDelegate-Protocol.h"
+#import "BUMCustomDrawAdapter-Protocol.h"
 
 @class NSMutableDictionary, NSString;
-@protocol ABUCustomConfigAdapter, ABUCustomDrawAdapterBridge, ABUGDT_GDTNativeExpressAd, ABUGDT_GDTNativeExpressProAdManager, ABUGDT_GDTUnifiedNativeAd, ABUGDT_GDTVideoConfig;
+@protocol ABUGDT_GDTNativeExpressAd, ABUGDT_GDTNativeExpressProAdManager, ABUGDT_GDTUnifiedNativeAd, ABUGDT_GDTVideoConfig, BUMCustomConfigAdapter, BUMCustomDrawAdapterBridge;
 
-@interface ABUGdtDrawAdapter : NSObject <ABUGDT_GDTUnifiedNativeAdDelegate, ABUGDT_GDTUnifiedNativeAdViewDelegate, ABUGDT_GDTNativeExpressAdDelegate, ABUGDT_GDTNativeExpressProAdManagerDelegate, ABUGDT_GDTNativeExpressProAdViewDelegate, ABUGDT_GDTMediaViewDelegate, ABUCustomDrawAdapter>
+@interface ABUGdtDrawAdapter : NSObject <ABUGDT_GDTUnifiedNativeAdDelegate, ABUGDT_GDTUnifiedNativeAdViewDelegate, ABUGDT_GDTNativeExpressAdDelegate, ABUGDT_GDTNativeExpressProAdManagerDelegate, ABUGDT_GDTNativeExpressProAdViewDelegate, ABUGDT_GDTMediaViewDelegate, BUMCustomDrawAdapter>
 {
     NSObject<ABUGDT_GDTUnifiedNativeAd> *_nativeAd;
     NSObject<ABUGDT_GDTNativeExpressAd> *_expressNativeAd;
@@ -57,8 +57,8 @@
 - (_Bool)enablePreloadWhenCurrentIsDisplay;
 
 // Remaining properties
-@property(nonatomic) __weak id <ABUCustomDrawAdapterBridge> bridge;
-@property(retain, nonatomic) id <ABUCustomConfigAdapter> configAdapter;
+@property(nonatomic) __weak id <BUMCustomDrawAdapterBridge> bridge;
+@property(retain, nonatomic) id <BUMCustomConfigAdapter> configAdapter;
 @property(readonly, copy) NSString *debugDescription;
 @property(readonly, copy) NSString *description;
 @property(readonly) unsigned long long hash;

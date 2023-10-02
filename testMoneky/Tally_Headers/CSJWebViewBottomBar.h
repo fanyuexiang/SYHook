@@ -10,20 +10,20 @@
 
 @interface CSJWebViewBottomBar : UIView
 {
-    UIButton *_goBackButton;
-    UIButton *_goForwardButton;
-    UIButton *_reloadButton;
-    UIButton *_safariButton;
+    UIButton *_X1_ReadRead;
+    UIButton *_Been_MustIf;
+    UIButton *_And_LeftCase;
+    UIButton *_Been_HasPos_;
     UIView *_line;
 }
 
 - (void).cxx_destruct;
 @property(retain, nonatomic) UIView *line; // @synthesize line=_line;
-@property(retain, nonatomic) UIButton *safariButton; // @synthesize safariButton=_safariButton;
-@property(retain, nonatomic) UIButton *reloadButton; // @synthesize reloadButton=_reloadButton;
-@property(retain, nonatomic) UIButton *goForwardButton; // @synthesize goForwardButton=_goForwardButton;
-@property(retain, nonatomic) UIButton *goBackButton; // @synthesize goBackButton=_goBackButton;
-- (void)_setupUI;
+@property(retain, nonatomic) UIButton *Been_HasPos_; // @synthesize Been_HasPos_=_Been_HasPos_;
+@property(retain, nonatomic) UIButton *And_LeftCase; // @synthesize And_LeftCase=_And_LeftCase;
+@property(retain, nonatomic) UIButton *Been_MustIf; // @synthesize Been_MustIf=_Been_MustIf;
+@property(retain, nonatomic) UIButton *X1_ReadRead; // @synthesize X1_ReadRead=_X1_ReadRead;
+- (void)Cn_ObjDocs;
 - (void)layoutSubviews;
 - (id)initWithFrame:(struct CGRect)arg1;
 

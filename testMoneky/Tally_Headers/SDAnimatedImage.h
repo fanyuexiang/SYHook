@@ -52,6 +52,7 @@
 - (_Bool)sd_isVector;
 - (void)setSd_imageFormat:(long long)arg1;
 - (long long)sd_imageFormat;
+- (unsigned long long)sd_imageFrameCount;
 - (void)setSd_imageLoopCount:(unsigned long long)arg1;
 - (unsigned long long)sd_imageLoopCount;
 - (_Bool)sd_isAnimated;

@@ -52,6 +52,7 @@
 @property(retain, nonatomic) UILabel *minitueLabel; // @synthesize minitueLabel=_minitueLabel;
 @property(retain, nonatomic) UILabel *secondLabel; // @synthesize secondLabel=_secondLabel;
 @property(retain, nonatomic) UILabel *millisecondLabel; // @synthesize millisecondLabel=_millisecondLabel;
+@property(nonatomic) _Bool title_color; // @synthesize title_color=_title_color;
 @property(retain, nonatomic) UIScrollView *contentScroll; // @synthesize contentScroll=_contentScroll;
 @property(retain, nonatomic) NSMutableDictionary *dataDic; // @synthesize dataDic=_dataDic;
 @property(nonatomic) long long entry_id; // @synthesize entry_id=_entry_id;
@@ -81,6 +82,7 @@
 - (void)twoPricesUI;
 - (void)threePricesUI;
 - (void)setContentPriceView:(double)arg1;
+- (void)refreshTitleColor;
 - (void)setupBuyUI;
 - (void)requestData;
 - (void)viewWillDisappear:(_Bool)arg1;

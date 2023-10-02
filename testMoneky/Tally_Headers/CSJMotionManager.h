@@ -23,6 +23,7 @@
 - (id)stopTwistObserverWithWebView:(id)arg1;
 - (id)startTwistObserverWithThreshold:(long long)arg1 webView:(id)arg2;
 - (void)wobbleObserverCallBack;
+- (id)shakeScenceWithWebView:(id)arg1;
 - (id)stopWobbleObserverWithWebView:(id)arg1;
 - (id)startWobbleObserverWebView:(id)arg1 shakeAmplitude:(double)arg2 calculateSize:(long long)arg3;
 - (void)handleGyroObserverWithWebView:(id)arg1 model:(CDStruct_31142d93)arg2;

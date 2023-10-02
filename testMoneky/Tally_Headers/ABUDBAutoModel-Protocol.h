@@ -11,14 +11,14 @@
 @protocol ABUDBAutoModel <ABUDBModel>
 
 @optional
-+ (ABUDBSecurityTable *)table;
-+ (id)selectLastOneFromTable;
-+ (NSString *)primaryKey;
-+ (NSArray *)ignoreProperties;
-+ (NSString *)tableName;
-+ (NSString *)databaseName;
-- (ABUDBSecurityTable *)table;
-- (void)deleteFromTable;
-- (void)insertOrUpdateToTable;
++ (ABUDBSecurityTable *)abu_table;
++ (id)abu_selectLastOneFromTable;
++ (NSString *)abu_primaryKey;
++ (NSArray *)abu_ignoreProperties;
++ (NSString *)abu_tableName;
++ (NSString *)abu_databaseName;
+- (ABUDBSecurityTable *)abu_table;
+- (void)abu_deleteFromTable;
+- (void)abu_insertOrUpdateToTable;
 @end
 

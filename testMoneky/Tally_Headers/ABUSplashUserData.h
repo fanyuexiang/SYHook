@@ -21,6 +21,9 @@
 @property(copy, nonatomic) NSString *appID; // @synthesize appID=_appID;
 @property(copy, nonatomic) NSString *rit; // @synthesize rit=_rit;
 @property(copy, nonatomic) NSString *adnName; // @synthesize adnName=_adnName;
+- (id)initWithAdnName:(id)arg1 rit:(id)arg2 appID:(id)arg3 appKey:(id)arg4;
+- (_Bool)isMemberOfClass:(Class)arg1;
+- (_Bool)isKindOfClass:(Class)arg1;
 
 @end
 

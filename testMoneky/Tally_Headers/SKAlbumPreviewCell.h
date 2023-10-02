@@ -27,7 +27,6 @@
 @property(retain, nonatomic) UIScrollView *contentScroll; // @synthesize contentScroll=_contentScroll;
 - (void)hideAllTagView;
 - (void)removeSelfTagView:(id)arg1;
-- (void)addTag:(id)arg1;
 - (void)refreshTagViews:(id)arg1;
 - (void)setcontentImageWithImage:(id)arg1;
 - (void)setcontentImage:(id)arg1;

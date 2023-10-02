@@ -12,9 +12,11 @@
 
 @interface CSJALogExecutor : NSObject <BUCloudCommandProtocol>
 {
+    long long _logLevel;
 }
 
-+ (void)writeLog:(id)arg1 tag:(id)arg2 level:(long long)arg3;
++ (double)memoryUsedPercent;
++ (_Bool)writeLog:(id)arg1 fileName:(id)arg2;
 + (id)getDid;
 + (id)getALogDir:(id)arg1;
 + (_Bool)isDemoEnv;
@@ -22,8 +24,10 @@
 + (void)enableAlogAndCloudCommand;
 + (void)configCloudCommand;
 + (void)configALog;
++ (id)sharedInstance;
 + (id)createInstance;
 + (void)initialize;
+@property(nonatomic) long long logLevel; // @synthesize logLevel=_logLevel;
 - (void)uploadLogFiles:(id)arg1 commandModel:(id)arg2 originFilesCount:(long long)arg3 completion:(CDUnknownBlockType)arg4;
 - (void)excuteCommand:(id)arg1 completion:(CDUnknownBlockType)arg2;
 

@@ -21,13 +21,15 @@
     AssetDetailEditAmountContentView *_contentView;
     NSString *_amountVal;
     NSString *_titleVal;
+    NSString *_tipVal;
     NSString *_placeHolderVal;
     struct CGPoint _currentPoint;
 }
 
-+ (id)presentViewConroller:(id)arg1 title:(id)arg2 placeHolder:(id)arg3 amount:(id)arg4 theme:(id)arg5;
++ (id)presentViewConroller:(id)arg1 title:(id)arg2 tip:(id)arg3 placeHolder:(id)arg4 amount:(id)arg5 theme:(id)arg6;
 - (void).cxx_destruct;
 @property(copy, nonatomic) NSString *placeHolderVal; // @synthesize placeHolderVal=_placeHolderVal;
+@property(copy, nonatomic) NSString *tipVal; // @synthesize tipVal=_tipVal;
 @property(copy, nonatomic) NSString *titleVal; // @synthesize titleVal=_titleVal;
 @property(copy, nonatomic) NSString *amountVal; // @synthesize amountVal=_amountVal;
 @property(retain, nonatomic) AssetDetailEditAmountContentView *contentView; // @synthesize contentView=_contentView;

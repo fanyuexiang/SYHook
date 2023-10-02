@@ -18,6 +18,7 @@
     double _buDynamic_width;
     double _buDynamic_height;
     double _buDynamic_remainWidth;
+    NSString *_buDynamic_originId;
     NSString *_buDynamic_id;
     CSJDynamicBrickModel *_buDynamic_brick;
     NSString *_componentId;
@@ -42,6 +43,7 @@
 @property(copy, nonatomic) NSString *componentId; // @synthesize componentId=_componentId;
 @property(retain, nonatomic) CSJDynamicBrickModel *buDynamic_brick; // @synthesize buDynamic_brick=_buDynamic_brick;
 @property(copy, nonatomic) NSString *buDynamic_id; // @synthesize buDynamic_id=_buDynamic_id;
+@property(copy, nonatomic) NSString *buDynamic_originId; // @synthesize buDynamic_originId=_buDynamic_originId;
 @property(nonatomic) double buDynamic_remainWidth; // @synthesize buDynamic_remainWidth=_buDynamic_remainWidth;
 @property(nonatomic) double buDynamic_height; // @synthesize buDynamic_height=_buDynamic_height;
 @property(nonatomic) double buDynamic_width; // @synthesize buDynamic_width=_buDynamic_width;
@@ -51,14 +53,12 @@
 @property(copy, nonatomic) NSDictionary *originDictionary; // @synthesize originDictionary=_originDictionary;
 - (_Bool)is_root;
 - (_Bool)is_customComponentVesselBrick;
-- (void)printBaseInfoWithKey:(id)arg1;
-- (id)debugInfoWithParentType:(id)arg1;
-- (void)printBaseInfoWithKey:(id)arg1 parentType:(id)arg2;
 @property(readonly, nonatomic) NSArray *realChildArray;
 - (id)dictionaryValueNotIncludeValues;
 - (id)dictionaryValue;
 - (_Bool)widthCanBeFlex;
 - (_Bool)heightCanBeFlex;
+- (_Bool)_isNoDataBrick;
 - (_Bool)isNoDataBrick;
 - (_Bool)isFixed;
 - (_Bool)isAbsolute;
@@ -67,8 +67,8 @@
 - (void)_changeCustomComponentVesselToAppropriateIfNeed;
 - (void)_changeVideoImageBudgeToAppropriateIfNeed;
 - (void)updateValuesInfoWithDefaultDictionary:(id)arg1 creativeModel:(id)arg2;
-- (id)initWithDictionary:(id)arg1 parent:(id)arg2;
-- (id)initWithDictionary:(id)arg1;
+- (id)initForAnalysisWithDictionary:(id)arg1 parent:(id)arg2;
+- (id)initForRenderWithDictionary:(id)arg1;
 
 @end
 

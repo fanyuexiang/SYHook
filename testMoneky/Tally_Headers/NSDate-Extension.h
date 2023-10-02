@@ -23,7 +23,6 @@
 + (double)wvCurrentMilliseconds;
 + (double)wvcurrentTimeInterval;
 + (id)zeroOfDate;
-+ (id)hmdbu_accurateDate;
 - (long long)WPKUTCIntervalMS;
 - (id)wvStringWithRFC1123Format;
 - (id)wvStringWithISO8601Format;

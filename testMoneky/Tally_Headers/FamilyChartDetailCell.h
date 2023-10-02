@@ -6,7 +6,7 @@
 
 #import <UIKit/UITableViewCell.h>
 
-@class CBAttributedLabel, NTallyModel, SKThemeBaseView, UILabel;
+@class CBAttributedLabel, NTallyModel, SKThemeBaseView, UILabel, UIView;
 
 @interface FamilyChartDetailCell : UITableViewCell
 {
@@ -16,11 +16,13 @@
     UILabel *_amountLabel;
     UILabel *_progressView;
     NTallyModel *_model;
+    UIView *_lineView;
     SKThemeBaseView *_themeView;
 }
 
 - (void).cxx_destruct;
 @property(retain, nonatomic) SKThemeBaseView *themeView; // @synthesize themeView=_themeView;
+@property(retain, nonatomic) UIView *lineView; // @synthesize lineView=_lineView;
 - (void)reloadThemeViewImage:(id)arg1;
 - (id)themeImage:(id)arg1;
 - (void)updateTallyModel:(id)arg1 typeSumAmount:(double)arg2 maxAmount:(double)arg3;

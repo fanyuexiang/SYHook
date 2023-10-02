@@ -11,17 +11,17 @@
 @interface CSJStatsTracker : NSObject
 {
     long long _clockType;
-    NSString *_batchURLString;
+    NSString *_Str_FtcTrue;
     CSJTrackerProxy *_trackerProxy;
 }
 
-+ (id)sharedTracker;
++ (id)MARK_Fail_rhs;
 - (void).cxx_destruct;
 @property(retain, nonatomic) CSJTrackerProxy *trackerProxy; // @synthesize trackerProxy=_trackerProxy;
-@property(copy, nonatomic) NSString *batchURLString; // @synthesize batchURLString=_batchURLString;
+@property(copy, nonatomic) NSString *Str_FtcTrue; // @synthesize Str_FtcTrue=_Str_FtcTrue;
 @property(nonatomic) long long clockType; // @synthesize clockType=_clockType;
-- (void)eventData:(id)arg1 clockType:(long long)arg2;
-- (void)eventData:(id)arg1;
+- (void)ADX_VoidOut:(id)arg1 clockType:(long long)arg2;
+- (void)ADX_VoidOut:(id)arg1;
 
 @end
 

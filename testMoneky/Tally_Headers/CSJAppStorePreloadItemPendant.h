@@ -8,11 +8,11 @@
 
 @interface CSJAppStorePreloadItemPendant : NSObject
 {
-    CDUnknownBlockType _callBackBlock;
+    CDUnknownBlockType _Body_OfApp;
 }
 
 - (void).cxx_destruct;
-@property(copy, nonatomic) CDUnknownBlockType callBackBlock; // @synthesize callBackBlock=_callBackBlock;
+@property(copy, nonatomic) CDUnknownBlockType Body_OfApp; // @synthesize Body_OfApp=_Body_OfApp;
 - (void)dealloc;
 
 @end

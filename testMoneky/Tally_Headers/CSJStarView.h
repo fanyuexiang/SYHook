@@ -13,12 +13,12 @@
     double _starMargin;
     double _score;
     __CSJSartView *_starView;
-    __CSJSartView *_emptyStarView;
+    __CSJSartView *_NULL_Must_cmd;
     struct CGSize _starSize;
 }
 
 - (void).cxx_destruct;
-@property(retain, nonatomic) __CSJSartView *emptyStarView; // @synthesize emptyStarView=_emptyStarView;
+@property(retain, nonatomic) __CSJSartView *NULL_Must_cmd; // @synthesize NULL_Must_cmd=_NULL_Must_cmd;
 @property(retain, nonatomic) __CSJSartView *starView; // @synthesize starView=_starView;
 @property(nonatomic) double score; // @synthesize score=_score;
 @property(nonatomic) double starMargin; // @synthesize starMargin=_starMargin;

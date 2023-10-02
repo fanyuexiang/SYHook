@@ -18,12 +18,16 @@
     double _cornerRadius;
     NSString *_message;
     long long _alignment;
+    CDUnknownBlockType _showCompletion;
+    CDUnknownBlockType _dismissCompletion;
     struct CGSize _superViewSize;
     struct CGPoint _location;
     struct UIEdgeInsets _insets;
 }
 
 - (void).cxx_destruct;
+@property(copy, nonatomic) CDUnknownBlockType dismissCompletion; // @synthesize dismissCompletion=_dismissCompletion;
+@property(copy, nonatomic) CDUnknownBlockType showCompletion; // @synthesize showCompletion=_showCompletion;
 @property(nonatomic) struct CGPoint location; // @synthesize location=_location;
 @property(nonatomic) struct CGSize superViewSize; // @synthesize superViewSize=_superViewSize;
 @property(nonatomic) long long alignment; // @synthesize alignment=_alignment;

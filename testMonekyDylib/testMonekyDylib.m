@@ -15,7 +15,7 @@
 #import <MDCycriptManager.h>
 #import <AssetsLibrary/AssetsLibrary.h>
 #import <Photos/Photos.h>
-#import <DoraemonKit/DoraemonManager.h>
+//#import <DoraemonKit/DoraemonManager.h>
 
 CHConstructor{
     printf(INSERT_SUCCESS_WELCOME);
@@ -132,6 +132,12 @@ CHMethod0(BOOL, UserInfoManager, isVip) {
 CHDeclareClass(InviteFriendsPromotiosView)
 CHClassMethod1(void, InviteFriendsPromotiosView, showHome, id, arg1) {
     CHSuper1(InviteFriendsPromotiosView, showHome, arg1);
+}
+
+CHDeclareClass(SMMineViewModel)
+CHClassMethod0(id, SMMineViewModel, rac_getUserInfoData) {
+    id a = CHSuper0(SMMineViewModel, rac_getUserInfoData);
+    return a;
 }
 
 

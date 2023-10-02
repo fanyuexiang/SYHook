@@ -10,6 +10,7 @@
 {
 }
 
++ (void)printError:(id)arg1;
 + (void)printLog:(id)arg1;
 + (void)allowDebugLogUsingLogger:(CDUnknownBlockType)arg1;
 

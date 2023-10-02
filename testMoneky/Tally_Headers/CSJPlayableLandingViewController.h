@@ -17,6 +17,7 @@
 {
     _Bool _hadSwitchToWebviewVC;
     _Bool _isConverted;
+    _Bool _autoPlay;
     _Bool _mute;
     _Bool _hasShowed;
     _Bool _hideNativeBar;
@@ -26,7 +27,7 @@
     CDUnknownBlockType _ShowConfirmBlock;
     CSJRewardedVideoWebViewController *_playableWebVC;
     id <CSJPlayableLandingViewControllerDelegate> _delegate;
-    NSNumber *_currentPlayProgress;
+    NSNumber *_currentPlayTime;
     CSJPurePlayableLoadingViewController *_loadingWebView;
     UIViewController *_currentViewController;
     CSJURitSettingModel *_ritModel;
@@ -61,8 +62,9 @@
 @property(retain, nonatomic) CSJURitSettingModel *ritModel; // @synthesize ritModel=_ritModel;
 @property(retain, nonatomic) UIViewController *currentViewController; // @synthesize currentViewController=_currentViewController;
 @property(retain, nonatomic) CSJPurePlayableLoadingViewController *loadingWebView; // @synthesize loadingWebView=_loadingWebView;
+@property(nonatomic) _Bool autoPlay; // @synthesize autoPlay=_autoPlay;
 @property(nonatomic) _Bool isConverted; // @synthesize isConverted=_isConverted;
-@property(retain, nonatomic) NSNumber *currentPlayProgress; // @synthesize currentPlayProgress=_currentPlayProgress;
+@property(retain, nonatomic) NSNumber *currentPlayTime; // @synthesize currentPlayTime=_currentPlayTime;
 @property(nonatomic) __weak id <CSJPlayableLandingViewControllerDelegate> delegate; // @synthesize delegate=_delegate;
 @property(nonatomic) _Bool hadSwitchToWebviewVC; // @synthesize hadSwitchToWebviewVC=_hadSwitchToWebviewVC;
 @property(retain, nonatomic) CSJRewardedVideoWebViewController *playableWebVC; // @synthesize playableWebVC=_playableWebVC;
@@ -72,6 +74,7 @@
 @property(retain, nonatomic) CSJAdSlot *adSlot; // @synthesize adSlot=_adSlot;
 - (void)trackPurePlayableFinish;
 - (_Bool)nativePlayableDelayValid;
+- (void)updateFullLinkRewardCloseButton;
 - (void)updateCloseButtonCount;
 - (void)updateSlientBtnState:(_Bool)arg1;
 - (id)setingModelForRit;
@@ -89,7 +92,6 @@
 - (_Bool)isPlayableRenderFailed;
 - (void)purePlayableRemoveLoadingByTimeout;
 - (void)clickButtonTapFromPlayableLoading;
-- (void)setCurrentVideoProgress:(long long)arg1;
 - (void)sendPlayableReward;
 - (long long)currentVideoProgress;
 - (void)updateNativeTitleBar:(_Bool)arg1;

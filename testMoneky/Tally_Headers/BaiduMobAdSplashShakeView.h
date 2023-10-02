@@ -8,13 +8,15 @@
 
 #import "BaiduMobAdShakeFuncManagerDelegate-Protocol.h"
 
-@class BaiduMobAdShakeFuncManager, NSString, UIImageView, UILabel;
+@class BaiduMobAdComponentLottieManager, BaiduMobAdShakeFuncManager, NSString, UIImageView, UILabel;
 
 @interface BaiduMobAdSplashShakeView : UIView <BaiduMobAdShakeFuncManagerDelegate>
 {
     _Bool _isShakeClickCanBeResponse;
+    _Bool _isShakeLottie;
     _Bool _firstClick;
     _Bool _isNeedResetConfig;
+    _Bool _limitAdClick;
     double _intervalTime;
     double _detectionTimes;
     double _velocity;
@@ -32,10 +34,15 @@
     double _shakeImageViewSize;
     double _lastTriggerTime;
     BaiduMobAdShakeFuncManager *_shakeManager;
+    UIView *_shakeLottieView;
+    BaiduMobAdComponentLottieManager *_shakeLottieManager;
     struct CGRect _originFrame;
 }
 
 - (void).cxx_destruct;
+@property(nonatomic) _Bool limitAdClick; // @synthesize limitAdClick=_limitAdClick;
+@property(retain, nonatomic) BaiduMobAdComponentLottieManager *shakeLottieManager; // @synthesize shakeLottieManager=_shakeLottieManager;
+@property(retain, nonatomic) UIView *shakeLottieView; // @synthesize shakeLottieView=_shakeLottieView;
 @property(retain, nonatomic) BaiduMobAdShakeFuncManager *shakeManager; // @synthesize shakeManager=_shakeManager;
 @property(nonatomic) double lastTriggerTime; // @synthesize lastTriggerTime=_lastTriggerTime;
 @property(nonatomic) _Bool isNeedResetConfig; // @synthesize isNeedResetConfig=_isNeedResetConfig;
@@ -45,6 +52,7 @@
 @property(nonatomic) double textLabelHeigth; // @synthesize textLabelHeigth=_textLabelHeigth;
 @property(nonatomic) double scale; // @synthesize scale=_scale;
 @property(copy, nonatomic) CDUnknownBlockType clickBlock; // @synthesize clickBlock=_clickBlock;
+@property(nonatomic) _Bool isShakeLottie; // @synthesize isShakeLottie=_isShakeLottie;
 @property(nonatomic) _Bool isShakeClickCanBeResponse; // @synthesize isShakeClickCanBeResponse=_isShakeClickCanBeResponse;
 @property(retain, nonatomic) UIView *shadowView; // @synthesize shadowView=_shadowView;
 @property(retain, nonatomic) UILabel *noticeLabel; // @synthesize noticeLabel=_noticeLabel;
@@ -58,7 +66,6 @@
 @property(nonatomic) double detectionTimes; // @synthesize detectionTimes=_detectionTimes;
 @property(nonatomic) double intervalTime; // @synthesize intervalTime=_intervalTime;
 - (void)nativeShakeFuncMotion:(_Bool)arg1;
-- (void)dealloc;
 - (void)removeShakeView;
 - (void)reSize;
 - (void)willEnterForeground;
@@ -74,10 +81,11 @@
 - (void)setImageViewSize:(double)arg1;
 - (void)setupCardViewShakeViewUI:(struct CGRect)arg1 labelSize:(double)arg2;
 - (void)setupUI:(struct CGRect)arg1;
+- (void)setText:(id)arg1;
 - (id)initWithFrame:(struct CGRect)arg1;
 - (void)resizeLabelMarginWithIcon:(double)arg1;
 - (id)initWithFrame:(struct CGRect)arg1 labelSize:(double)arg2;
-- (id)initWithFrame:(struct CGRect)arg1 shakeImageSize:(double)arg2 labelScale:(double)arg3 needResetConfig:(_Bool)arg4 autoStart:(_Bool)arg5;
+- (id)initWithFrame:(struct CGRect)arg1 shakeImageSize:(double)arg2 labelScale:(double)arg3 needResetConfig:(_Bool)arg4 adInstance:(id)arg5 autoStart:(_Bool)arg6;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

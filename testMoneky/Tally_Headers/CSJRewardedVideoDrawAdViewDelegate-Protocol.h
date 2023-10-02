@@ -6,11 +6,15 @@
 
 #import "NSObject-Protocol.h"
 
-@class BUPlayer, CSJNativeExpressRewardDrawAdView, NSError;
+@class BUPlayer, CSJNativeExpressRewardDrawAdView, NSDictionary, NSError;
 
 @protocol CSJRewardedVideoDrawAdViewDelegate <NSObject>
+- (void)rewardDrawAdViewEnableScroll:(_Bool)arg1;
+- (NSDictionary *)rewardDrawAdViewReportGetAdExtraDic;
+- (void)rewardDrawAdViewInteractSkipDuration:(long long)arg1;
+- (void)rewardDrawAdViewShowNextAd;
 - (void)rewardDrawAdViewIsShowAlert:(_Bool)arg1 adView:(CSJNativeExpressRewardDrawAdView *)arg2;
-- (unsigned long long)rewardDrawAdViewGetRewardLeftTime;
+- (long long)rewardDrawAdViewGetRewardLeftTime;
 - (void)rewardDrawAdViewDidPlayFinish:(CSJNativeExpressRewardDrawAdView *)arg1 player:(BUPlayer *)arg2 error:(NSError *)arg3;
 - (void)rewardDrawAdViewDimissCurrentVC:(CSJNativeExpressRewardDrawAdView *)arg1;
 - (void)rewardDrawAdViewSwitchToEndcard:(CSJNativeExpressRewardDrawAdView *)arg1;

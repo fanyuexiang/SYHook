@@ -4,7 +4,7 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
 
-#import <objc/NSObject.h>
+#import "CSJAdBaseObject.h"
 
 #import "CSJAdClientBiddingProtocol-Protocol.h"
 #import "CSJMopubAdMarkUpDelegate-Protocol.h"
@@ -16,7 +16,7 @@
 @class CSJADViewTrackInfo, CSJAdSlot, CSJDislikeContext, CSJFullScreenTransitioningDelegate, CSJNativeAd, CSJNativeExpressAdManager, CSJNativeExpressRewardedVideoAdView, CSJRewardedVideoModel, NSDictionary, NSString, UIViewController;
 @protocol CSJNativeExpressFullscreenVideoAdDelegate;
 
-@interface CSJNativeExpressFullscreenVideoAd : NSObject <CSJNativeExpressAdViewDelegate, CSJNativeExpressVideoAdDelegate, CSJVideoAdDelegate, CSJNativeExpressAdViewDismissDelegate, CSJMopubAdMarkUpDelegate, CSJAdClientBiddingProtocol>
+@interface CSJNativeExpressFullscreenVideoAd : CSJAdBaseObject <CSJNativeExpressAdViewDelegate, CSJNativeExpressVideoAdDelegate, CSJVideoAdDelegate, CSJNativeExpressAdViewDismissDelegate, CSJMopubAdMarkUpDelegate, CSJAdClientBiddingProtocol>
 {
     _Bool isRewardedVideo;
     _Bool _materialMetaIsFromPreload;
@@ -25,8 +25,8 @@
     _Bool _triggerNativeAdDidLoadCallback;
     _Bool _triggerNativeAdDidDownloadCallback;
     id <CSJNativeExpressFullscreenVideoAdDelegate> _delegate;
-    CSJFullScreenTransitioningDelegate *_fullScreenTrasitionDelegate;
-    UIViewController *_rootPresentingVC;
+    CSJFullScreenTransitioningDelegate *_New_LoadBool;
+    UIViewController *_Rect_FtTo;
     double _expireTimestamp;
     CSJADViewTrackInfo *_trackInfo;
     CSJNativeExpressAdManager *_nativeExpressAdManager;
@@ -51,35 +51,39 @@
 @property(retain, nonatomic) CSJADViewTrackInfo *trackInfo; // @synthesize trackInfo=_trackInfo;
 @property(nonatomic) double expireTimestamp; // @synthesize expireTimestamp=_expireTimestamp;
 @property(nonatomic) _Bool materialMetaIsFromPreload; // @synthesize materialMetaIsFromPreload=_materialMetaIsFromPreload;
-@property(nonatomic) __weak UIViewController *rootPresentingVC; // @synthesize rootPresentingVC=_rootPresentingVC;
-@property(retain, nonatomic) CSJFullScreenTransitioningDelegate *fullScreenTrasitionDelegate; // @synthesize fullScreenTrasitionDelegate=_fullScreenTrasitionDelegate;
+@property(nonatomic) __weak UIViewController *Rect_FtTo; // @synthesize Rect_FtTo=_Rect_FtTo;
+@property(retain, nonatomic) CSJFullScreenTransitioningDelegate *New_LoadBool; // @synthesize New_LoadBool=_New_LoadBool;
 @property(nonatomic) __weak id <CSJNativeExpressFullscreenVideoAdDelegate> delegate; // @synthesize delegate=_delegate;
 @property(nonatomic) _Bool isRewardedVideo; // @synthesize isRewardedVideo;
 - (_Bool)isMemberOfClass:(Class)arg1;
 - (_Bool)isKindOfClass:(Class)arg1;
-- (void)p_adShowTimeLog;
-- (id)rootViewInfoDic;
-- (void)p_showLog:(id)arg1 adModel:(id)arg2 extraDic:(id)arg3;
-- (unsigned long long)nativeExpressVideoAdType;
+- (id)Call_T5Win;
+- (_Bool)Meta_CCPAOnly:(id)arg1;
+- (void)Code_DidPods;
+- (id)Gdp_InitPop;
+- (void)_dir_IDIdfa:(id)arg1 adModel:(id)arg2 extraDic:(id)arg3;
+- (void)Lock_WeakRan:(id)arg1;
+- (id)Ret_TimeRect:(id)arg1;
+- (unsigned long long)Stmt_FtcText;
 @property(readonly, copy, nonatomic) NSDictionary *mediaExt;
-@property(readonly, nonatomic, getter=isAdValid) _Bool adValid;
-- (void)safeDelegate_nativeExpressFullscreenVideoAdWillVisible;
-- (void)safeDelegate_nativeExpressFullscreenVideoAdDidCloseOtherControllerWithInteractionType:(long long)arg1;
-- (void)safeDelegate_nativeExpressFullscreenVideoAdViewRenderFailWithError:(id)arg1;
-- (void)safeDelegate_nativeExpressFullscreenVideoAdWithError:(id)arg1;
-- (void)safeDelegate_nativeExpressFullscreenVideoAdDidVisible;
-- (void)safeDelegate_nativeExpressFullscreenVideoAdDidClick;
-- (void)safeDelegate_nativeExpressFullscreenVideoAdDidClose;
-- (void)safeDelegate_nativeExpressFullscreenVideoAdWillClose;
-- (void)safeDelegate_nativeExpressFullscreenVideoAdDidPlayFinishWithError:(id)arg1;
-- (void)safeDelegate_nativeExpressFullscreenVideoAdDidClickSkip;
-- (void)safeDelegate_nativeExpressFullscreenVideoAdViewRenderSuccess;
-- (void)safeDelegate_nativeExpressFullscreenVideoAdDidDownLoadVideo;
-- (void)safeDelegate_nativeExpressFullscreenVideoAdCallback;
-- (void)safeDelegate_nativeExpressFullscreenVideoAdDidLoad;
+- (_Bool)isAdValid;
+- (void)This_BeInt;
+- (void)Json_XzjTm:(long long)arg1;
+- (void)M_PI_DoesObj:(id)arg1;
+- (void)_val_SlotFm:(id)arg1;
+- (void)Stmt_FabsEnd;
+- (void)Case_UserAdId;
+- (void)Stop_TmTv;
+- (void)Pos_UserMask;
+- (void)Read_IsUrl:(id)arg1;
+- (void)You_PodsFrom;
+- (void)Does_logTrue;
+- (void)The_MsRet;
+- (void)Noti_LazyInfo;
+- (void)Msg_NilApp;
 - (void)interstitialAdDidClose;
-- (void)interstitialAdWillClose;
-- (void)actionManager;
+- (void)And_UIWhen;
+- (void)Skip_RitKey;
 - (void)interstitialAdDidClick;
 - (void)didCloseOtherControllerWithInteractionType:(long long)arg1;
 - (void)videoAdDidClickSkip;
@@ -99,18 +103,17 @@
 - (void)nativeExpressAdViewRenderSuccess:(id)arg1;
 - (void)nativeExpressAdFailToLoad:(id)arg1 error:(id)arg2;
 - (void)nativeExpressAdSuccessToLoad:(id)arg1 views:(id)arg2;
-- (void)handleSuccessLoadForPurePlayableWithNativeAd:(id)arg1;
-- (_Bool)needUseNativeExpressVC;
+- (void)Call_AddOrg:(id)arg1;
+- (_Bool)Fabs_MetaTop;
 - (id)biddingToken;
-- (void)setMopubAdMarkUp:(id)arg1;
 - (void)setAdMarkup:(id)arg1;
 - (void)loss:(id)arg1 lossReason:(id)arg2 winBidder:(id)arg3;
 - (void)win:(id)arg1;
 - (void)setPrice:(id)arg1;
-- (void)purePlayableShow;
-- (void)showNewExpressWithRootViewController:(id)arg1 ritSceneStr:(id)arg2;
-- (void)showOldExpressWithRootViewController:(id)arg1 ritSceneStr:(id)arg2;
-- (void)showDataUpload;
+- (void)MIT_AnInit;
+- (void)Char_VliMark:(id)arg1 ritSceneStr:(id)arg2;
+- (void)Read_EnumStd:(id)arg1 ritSceneStr:(id)arg2;
+- (void)Stop_SetThe;
 - (double)getExpireTimestamp;
 - (_Bool)showAdFromRootViewController:(id)arg1 ritSceneDescribe:(id)arg2;
 - (_Bool)showAdFromRootViewController:(id)arg1;

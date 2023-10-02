@@ -10,6 +10,7 @@
 @protocol WKURLSchemeTask;
 
 @protocol CSJWebURLSchemeTaskHandler <NSObject>
+- (_Bool)bu_isValid;
 - (void)bu_stopURLSchemeTask;
 - (void)bu_startURLSchemeTask;
 - (id)initWithWebView:(WKWebView *)arg1 schemeTask:(id <WKURLSchemeTask>)arg2;

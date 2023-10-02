@@ -10,9 +10,9 @@
 {
 }
 
-- (void)getMRelatedMaterialMeta;
-- (void)vmLoadData;
-- (id)initViewModelWithMeta:(id)arg1 rootViewController:(id)arg2 slot:(id)arg3;
+- (void)Js_PosChar;
+- (void)X1_PosKey;
+- (id)initLAt_KeyTm:(id)arg1 rootViewController:(id)arg2 slot:(id)arg3;
 
 @end
 

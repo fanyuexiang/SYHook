@@ -6,12 +6,13 @@
 
 #import <objc/NSObject.h>
 
+#import "BUADRequestSerializerProtocol-Protocol.h"
 #import "BU_AFURLRequestSerialization-Protocol.h"
 
 @class NSDictionary, NSMutableDictionary, NSMutableSet, NSSet, NSString;
 @protocol OS_dispatch_queue;
 
-@interface BU_AFHTTPRequestSerializer : NSObject <BU_AFURLRequestSerialization>
+@interface BU_AFHTTPRequestSerializer : NSObject <BU_AFURLRequestSerialization, BUADRequestSerializerProtocol>
 {
     _Bool _allowsCellularAccess;
     _Bool _HTTPShouldHandleCookies;

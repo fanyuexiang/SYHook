@@ -16,10 +16,10 @@
     id <CSJSplashBottomViewInterface> _configuration;
 }
 
-+ (id)splashBottomViewInterfaceSafeAdapterWithConfiguration:(id)arg1;
++ (id)Up_x_WikiAdID:(id)arg1;
 - (void).cxx_destruct;
 @property(retain, nonatomic) id <CSJSplashBottomViewInterface> configuration; // @synthesize configuration=_configuration;
-- (void)assertWithSelector:(SEL)arg1;
+- (void)Fail_GDPROrg:(SEL)arg1;
 - (double)upSwipeThreshold;
 - (id)slideArea;
 - (long long)shakeValue;

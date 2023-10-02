@@ -6,9 +6,6 @@
 
 #import "NSObject-Protocol.h"
 
-@class NSArray;
-
 @protocol EBAppLogDelegateProtocol <NSObject>
-- (NSArray *)appRequestFieldsAllowed;
 @end
 

@@ -6,12 +6,15 @@
 
 #import "BaiduMobAdComponentView.h"
 
+#import "UIGestureRecognizerDelegate-Protocol.h"
+
 @class BaiduMobAdSlideGesturePanView, NSMutableDictionary, NSString, UIImageView, UIView;
 @protocol BaiduMobAdSlideComponentDelegate;
 
-@interface BaiduMobAdSlideComponent : BaiduMobAdComponentView
+@interface BaiduMobAdSlideComponent : BaiduMobAdComponentView <UIGestureRecognizerDelegate>
 {
     _Bool _isNeedResetAnimation;
+    _Bool _isTransparent;
     int _direction;
     NSMutableDictionary *_subviewDic;
     NSMutableDictionary *_subviewModelDic;
@@ -32,9 +35,24 @@
     double _heigthScale;
     double _widthScale;
     NSString *_limitSlideDirection;
+    NSString *_slideEnable;
+    NSString *_slideDir;
+    NSString *_slideCheck;
+    NSString *_slideAngle;
+    NSString *_slideClick;
+    struct CGPoint _startPoint;
+    struct CGPoint _endPoint;
 }
 
 - (void).cxx_destruct;
+@property(nonatomic) struct CGPoint endPoint; // @synthesize endPoint=_endPoint;
+@property(nonatomic) struct CGPoint startPoint; // @synthesize startPoint=_startPoint;
+@property(nonatomic) _Bool isTransparent; // @synthesize isTransparent=_isTransparent;
+@property(retain, nonatomic) NSString *slideClick; // @synthesize slideClick=_slideClick;
+@property(retain, nonatomic) NSString *slideAngle; // @synthesize slideAngle=_slideAngle;
+@property(retain, nonatomic) NSString *slideCheck; // @synthesize slideCheck=_slideCheck;
+@property(retain, nonatomic) NSString *slideDir; // @synthesize slideDir=_slideDir;
+@property(retain, nonatomic) NSString *slideEnable; // @synthesize slideEnable=_slideEnable;
 @property(retain, nonatomic) NSString *limitSlideDirection; // @synthesize limitSlideDirection=_limitSlideDirection;
 @property(nonatomic) double widthScale; // @synthesize widthScale=_widthScale;
 @property(nonatomic) double heigthScale; // @synthesize heigthScale=_heigthScale;
@@ -62,6 +80,10 @@
 - (void)didEnterBackground;
 - (void)willEnterForeground;
 - (void)addNotification;
+- (void)checkSlidePath;
+- (void)slideAction:(id)arg1;
+- (void)clickAction:(id)arg1;
+- (_Bool)gestureRecognizer:(id)arg1 shouldRecognizeSimultaneouslyWithGestureRecognizer:(id)arg2;
 - (void)resetAnimation;
 - (void)slideGuideAnimation;
 - (void)slideGestureAnimation;
@@ -70,6 +92,12 @@
 - (void)adjustSlideView;
 - (void)renderSlideComponent;
 - (id)initWithFrame:(struct CGRect)arg1 superView:(id)arg2 model:(id)arg3;
+
+// Remaining properties
+@property(readonly, copy) NSString *debugDescription;
+@property(readonly, copy) NSString *description;
+@property(readonly) unsigned long long hash;
+@property(readonly) Class superclass;
 
 @end
 

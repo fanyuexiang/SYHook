@@ -10,17 +10,17 @@
 
 @interface CSJRenderInteractionModel : NSObject
 {
-    long long _renderInteractionType;
-    CSJRenderClickEventModel *_renderClickEventModel;
+    long long _M_PI_GDPRRect;
+    CSJRenderClickEventModel *_Ran_DicLazy;
     NSDictionary *_js2NativeParams;
-    NSDictionary *_native2JSParams;
+    NSDictionary *_Hopo_URLArea;
 }
 
 - (void).cxx_destruct;
-@property(copy, nonatomic) NSDictionary *native2JSParams; // @synthesize native2JSParams=_native2JSParams;
+@property(copy, nonatomic) NSDictionary *Hopo_URLArea; // @synthesize Hopo_URLArea=_Hopo_URLArea;
 @property(copy, nonatomic) NSDictionary *js2NativeParams; // @synthesize js2NativeParams=_js2NativeParams;
-@property(retain, nonatomic) CSJRenderClickEventModel *renderClickEventModel; // @synthesize renderClickEventModel=_renderClickEventModel;
-@property(nonatomic) long long renderInteractionType; // @synthesize renderInteractionType=_renderInteractionType;
+@property(retain, nonatomic) CSJRenderClickEventModel *Ran_DicLazy; // @synthesize Ran_DicLazy=_Ran_DicLazy;
+@property(nonatomic) long long M_PI_GDPRRect; // @synthesize M_PI_GDPRRect=_M_PI_GDPRRect;
 
 @end
 

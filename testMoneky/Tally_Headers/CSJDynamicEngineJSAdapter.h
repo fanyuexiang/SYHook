@@ -17,7 +17,7 @@
 - (id)dynamic_sub_analysis_end;
 - (id)dynamic_sub_analysis_start;
 - (id)beginAnalysisUserInfo;
-- (id)layoutInfoWithOriginInfo:(id)arg1 infoViewModel:(id)arg2 userInfo:(id *)arg3 error:(id *)arg4;
+- (id)layoutInfoWithUserInfo:(id *)arg1 error:(id *)arg2;
 
 @end
 

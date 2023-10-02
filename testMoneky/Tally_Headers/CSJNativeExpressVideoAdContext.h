@@ -10,20 +10,22 @@
 
 @interface CSJNativeExpressVideoAdContext : NSObject
 {
+    _Bool _useBackupAlert;
     CSJAdSlot *_slot;
     CSJMaterialMeta *_materialMeta;
     id _sender;
-    CDUnknownBlockType _skipBlock;
-    NSString *_rewardAlertTitle;
-    NSString *_rewardAlertConfirm;
-    NSString *_rewardAlertCancel;
+    CDUnknownBlockType _This_UrlWiki;
+    NSString *_Hpp_DidSDK;
+    NSString *_Get_IfHas;
+    NSString *_Dc_TmpUser;
 }
 
 - (void).cxx_destruct;
-@property(copy, nonatomic) NSString *rewardAlertCancel; // @synthesize rewardAlertCancel=_rewardAlertCancel;
-@property(copy, nonatomic) NSString *rewardAlertConfirm; // @synthesize rewardAlertConfirm=_rewardAlertConfirm;
-@property(copy, nonatomic) NSString *rewardAlertTitle; // @synthesize rewardAlertTitle=_rewardAlertTitle;
-@property(copy, nonatomic) CDUnknownBlockType skipBlock; // @synthesize skipBlock=_skipBlock;
+@property(nonatomic) _Bool useBackupAlert; // @synthesize useBackupAlert=_useBackupAlert;
+@property(copy, nonatomic) NSString *Dc_TmpUser; // @synthesize Dc_TmpUser=_Dc_TmpUser;
+@property(copy, nonatomic) NSString *Get_IfHas; // @synthesize Get_IfHas=_Get_IfHas;
+@property(copy, nonatomic) NSString *Hpp_DidSDK; // @synthesize Hpp_DidSDK=_Hpp_DidSDK;
+@property(copy, nonatomic) CDUnknownBlockType This_UrlWiki; // @synthesize This_UrlWiki=_This_UrlWiki;
 @property(nonatomic) __weak id sender; // @synthesize sender=_sender;
 @property(retain, nonatomic) CSJMaterialMeta *materialMeta; // @synthesize materialMeta=_materialMeta;
 @property(retain, nonatomic) CSJAdSlot *slot; // @synthesize slot=_slot;

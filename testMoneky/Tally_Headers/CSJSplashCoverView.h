@@ -21,6 +21,7 @@
 @property(retain, nonatomic) UILabel *splashClickText; // @synthesize splashClickText=_splashClickText;
 - (void)dealloc;
 - (void)showBottomMaskWithAnimation;
+- (id)p_shakeScence;
 - (void)startAccelerometer;
 - (void)relayoutBottomMask;
 - (_Bool)needAddBottomMask;

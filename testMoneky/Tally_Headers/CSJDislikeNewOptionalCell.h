@@ -12,24 +12,24 @@
 @interface CSJDislikeNewOptionalCell : CSJDislikeNewBaseCell
 {
     id <CSJDislikeNewOptionalCellDelegate> _delegate;
-    CSJDislikeWordsViewModel *_dislikeWordsViewModel;
+    CSJDislikeWordsViewModel *_Url_DateFor;
     UILabel *_wordLabel;
-    UIView *_optionView;
+    UIView *_Push_XzjApp;
     UIView *_sepView;
 }
 
 - (void).cxx_destruct;
 @property(retain, nonatomic) UIView *sepView; // @synthesize sepView=_sepView;
-@property(retain, nonatomic) UIView *optionView; // @synthesize optionView=_optionView;
+@property(retain, nonatomic) UIView *Push_XzjApp; // @synthesize Push_XzjApp=_Push_XzjApp;
 @property(retain, nonatomic) UILabel *wordLabel; // @synthesize wordLabel=_wordLabel;
-@property(retain, nonatomic) CSJDislikeWordsViewModel *dislikeWordsViewModel; // @synthesize dislikeWordsViewModel=_dislikeWordsViewModel;
+@property(retain, nonatomic) CSJDislikeWordsViewModel *Url_DateFor; // @synthesize Url_DateFor=_Url_DateFor;
 @property(nonatomic) __weak id <CSJDislikeNewOptionalCellDelegate> delegate; // @synthesize delegate=_delegate;
 - (void)itemLabelAction:(id)arg1;
 - (void)layoutSubviews;
-- (void)refreshWithDislikeWordsViewModel:(id)arg1;
+- (void)MIT_WinX2:(id)arg1;
 - (void)traitCollectionDidChange:(id)arg1;
-- (void)setDarkStyle;
-- (void)setLightStyle;
+- (void)setHash_MapLazy;
+- (void)setBu_y_DictLd;
 - (id)initWithStyle:(long long)arg1 reuseIdentifier:(id)arg2;
 
 @end

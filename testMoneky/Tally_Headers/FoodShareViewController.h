@@ -6,11 +6,12 @@
 
 #import "BuyMiniBaseViewController.h"
 
-@class CouponShareScrollView, NSMutableDictionary, NSString, UIImageView, UIView;
+@class CouponShareScrollView, NSMutableDictionary, NSString, UIImage, UIImageView, UIView;
 
 @interface FoodShareViewController : BuyMiniBaseViewController
 {
-    long long _type;
+    long long _fromType;
+    NSString *_backgroundImageUrl;
     NSString *_qrInfo;
     NSMutableDictionary *_dataDic;
     UIImageView *_shareBgView;
@@ -18,18 +19,24 @@
     UIImageView *_qrImageView;
     CouponShareScrollView *_scrollView;
     UIView *_sharewhiteView;
+    UIImage *_backgroundImage;
+    UIImage *_qrImage;
 }
 
 - (void).cxx_destruct;
+@property(retain, nonatomic) UIImage *qrImage; // @synthesize qrImage=_qrImage;
+@property(retain, nonatomic) UIImage *backgroundImage; // @synthesize backgroundImage=_backgroundImage;
 @property(retain, nonatomic) UIView *sharewhiteView; // @synthesize sharewhiteView=_sharewhiteView;
 @property(retain, nonatomic) CouponShareScrollView *scrollView; // @synthesize scrollView=_scrollView;
 @property(retain, nonatomic) UIImageView *qrImageView; // @synthesize qrImageView=_qrImageView;
 @property(nonatomic) double transScale; // @synthesize transScale=_transScale;
 @property(retain, nonatomic) UIImageView *shareBgView; // @synthesize shareBgView=_shareBgView;
 @property(retain, nonatomic) NSMutableDictionary *dataDic; // @synthesize dataDic=_dataDic;
-@property(retain, nonatomic) NSString *qrInfo; // @synthesize qrInfo=_qrInfo;
-@property(nonatomic) long long type; // @synthesize type=_type;
-- (id)generateQRCode:(id)arg1 width:(double)arg2;
+@property(copy, nonatomic) NSString *qrInfo; // @synthesize qrInfo=_qrInfo;
+@property(copy, nonatomic) NSString *backgroundImageUrl; // @synthesize backgroundImageUrl=_backgroundImageUrl;
+@property(nonatomic) long long fromType; // @synthesize fromType=_fromType;
+- (void)loadQRImageURL;
+- (void)loadBackgroundImageURL;
 - (void)setupUI;
 - (void)dismissAction;
 - (void)viewWillAppear:(_Bool)arg1;

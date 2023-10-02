@@ -10,7 +10,7 @@
 #import "UICollectionViewDataSource-Protocol.h"
 #import "UICollectionViewDelegate-Protocol.h"
 
-@class BaiduMobAdGiftCountdownComponent, BaiduMobAdPageControl, NSArray, NSMutableArray, NSMutableDictionary, NSString, NSTimer, UICollectionView, UIImageView, UILabel, UIView;
+@class BaiduMobAdPageControl, NSArray, NSMutableArray, NSMutableDictionary, NSString, NSTimer, UICollectionView, UIImageView, UILabel, UIView;
 
 @interface BaiduMobAdRewardAtlasRender : BaiduMobAdRewardTemplateRenderer <UICollectionViewDelegate, UICollectionViewDataSource, BaiduMobAdCycleViewCellDelegate>
 {
@@ -26,19 +26,19 @@
     UIView *_closeDialog;
     UIView *_pageControlView;
     UILabel *_retainDialogRewardLabel;
-    BaiduMobAdGiftCountdownComponent *_giftCountdownView;
     double _interval;
     NSString *_normal_color;
     NSString *_foreground_color;
     double _rewardRemainTime;
+    double _countDownAnimProgress;
 }
 
 - (void).cxx_destruct;
+@property(nonatomic) double countDownAnimProgress; // @synthesize countDownAnimProgress=_countDownAnimProgress;
 @property(nonatomic) double rewardRemainTime; // @synthesize rewardRemainTime=_rewardRemainTime;
 @property(retain, nonatomic) NSString *foreground_color; // @synthesize foreground_color=_foreground_color;
 @property(retain, nonatomic) NSString *normal_color; // @synthesize normal_color=_normal_color;
 @property(nonatomic) double interval; // @synthesize interval=_interval;
-@property(retain, nonatomic) BaiduMobAdGiftCountdownComponent *giftCountdownView; // @synthesize giftCountdownView=_giftCountdownView;
 @property(retain, nonatomic) UILabel *retainDialogRewardLabel; // @synthesize retainDialogRewardLabel=_retainDialogRewardLabel;
 @property(retain, nonatomic) UIView *pageControlView; // @synthesize pageControlView=_pageControlView;
 @property(retain, nonatomic) UIView *closeDialog; // @synthesize closeDialog=_closeDialog;
@@ -71,6 +71,7 @@
 - (void)initCollectionView;
 - (void)initPageControlView;
 - (double)getRewardCountDurationTime;
+- (void)showSegmentRewardBubbleView;
 - (void)setRemainTime;
 - (void)setRewardTime;
 - (double)duration;

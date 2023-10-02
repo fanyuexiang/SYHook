@@ -25,11 +25,15 @@
     BaiduMobAdInstance *_adInstance;
     NSString *_arrowUrl;
     NSString *_fingerUrl;
+    NSString *_slideText;
+    NSString *_adTypeText;
     struct CGRect _slideViewFrame;
     struct CGRect _hotViewRect;
 }
 
 - (void).cxx_destruct;
+@property(retain, nonatomic) NSString *adTypeText; // @synthesize adTypeText=_adTypeText;
+@property(retain, nonatomic) NSString *slideText; // @synthesize slideText=_slideText;
 @property(nonatomic) _Bool isLimitSlideArea; // @synthesize isLimitSlideArea=_isLimitSlideArea;
 @property(nonatomic) _Bool useCustom; // @synthesize useCustom=_useCustom;
 @property(retain, nonatomic) NSString *fingerUrl; // @synthesize fingerUrl=_fingerUrl;

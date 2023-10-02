@@ -6,7 +6,11 @@
 
 #import "BU_AFHTTPRequestSerializer.h"
 
-@interface BU_AFJSONRequestSerializer : BU_AFHTTPRequestSerializer
+#import "BUADJsonRequestSerializerProtocol-Protocol.h"
+
+@class NSString;
+
+@interface BU_AFJSONRequestSerializer : BU_AFHTTPRequestSerializer <BUADJsonRequestSerializerProtocol>
 {
     unsigned long long _writingOptions;
 }
@@ -18,6 +22,15 @@
 - (void)encodeWithCoder:(id)arg1;
 - (id)initWithCoder:(id)arg1;
 - (id)requestBySerializingRequest:(id)arg1 withParameters:(id)arg2 error:(id *)arg3;
+
+// Remaining properties
+@property(nonatomic) _Bool allowsCellularAccess;
+@property(nonatomic) unsigned long long cachePolicy;
+@property(readonly, copy) NSString *debugDescription;
+@property(readonly, copy) NSString *description;
+@property(readonly) unsigned long long hash;
+@property(readonly) Class superclass;
+@property(nonatomic) double timeoutInterval;
 
 @end
 

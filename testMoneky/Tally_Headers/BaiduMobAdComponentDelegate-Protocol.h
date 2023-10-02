@@ -13,6 +13,7 @@
 @optional
 - (void)nativeComponentSendEventWithComponent:(BaiduMobAdNativeProfessionalComponent *)arg1 senderViewId:(NSString *)arg2 senderViewName:(NSString *)arg3 eventView:(UIView *)arg4 event:(NSString *)arg5;
 - (void)nativeComponentLottieAnimFinish:(BaiduMobAdNativeProfessionalComponent *)arg1 clickView:(UIView *)arg2 viewName:(NSString *)arg3 special:(NSString *)arg4 isFinish:(_Bool)arg5;
+- (void)nativeComponentLottieAnimStart:(BaiduMobAdNativeProfessionalComponent *)arg1 viewName:(NSString *)arg2 special:(NSString *)arg3;
 - (void)nativeComponentDislikeDismissWithComponent:(BaiduMobAdNativeProfessionalComponent *)arg1;
 - (void)nativeComponentDislikeShowedWithComponent:(BaiduMobAdNativeProfessionalComponent *)arg1;
 - (void)nativeComponentDislikeWithReason:(long long)arg1 component:(BaiduMobAdNativeProfessionalComponent *)arg2;

@@ -10,12 +10,14 @@
 
 @interface CSJExtlogRequest : CSJAdNetworkRequest
 {
-    NSString *_applogBaseUrl;
+    _Bool _isV3Data;
+    NSString *_TODO_IosTop;
 }
 
-+ (id)generatedHeaderField;
 - (void).cxx_destruct;
-@property(copy, nonatomic) NSString *applogBaseUrl; // @synthesize applogBaseUrl=_applogBaseUrl;
+@property(nonatomic) _Bool isV3Data; // @synthesize isV3Data=_isV3Data;
+@property(copy, nonatomic) NSString *TODO_IosTop; // @synthesize TODO_IosTop=_TODO_IosTop;
+- (id)Stmt_IdTap;
 - (id)requestHeaderFieldValueDictionary;
 - (id)baseUrl;
 

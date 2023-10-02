@@ -6,23 +6,28 @@
 
 #import "CSJSplashBottomBaseComponentView.h"
 
-@class CAGradientLayer, CSJSplashRippleAnimationView, UIImageView;
+@class CAGradientLayer, CSJLOTAnimationView, CSJSplashRippleAnimationView, UIImageView;
 
 @interface CSJDynamicInteractionSlide2_4View : CSJSplashBottomBaseComponentView
 {
+    _Bool _isSplash;
     UIImageView *_touchHandleImageView;
     CSJSplashRippleAnimationView *_rippleAnimationView;
     CAGradientLayer *_gradientTrailLayer;
+    CSJLOTAnimationView *_lotAnimationView;
 }
 
 - (void).cxx_destruct;
+@property(retain, nonatomic) CSJLOTAnimationView *lotAnimationView; // @synthesize lotAnimationView=_lotAnimationView;
+@property(nonatomic) _Bool isSplash; // @synthesize isSplash=_isSplash;
 @property(retain, nonatomic) CAGradientLayer *gradientTrailLayer; // @synthesize gradientTrailLayer=_gradientTrailLayer;
 @property(retain, nonatomic) CSJSplashRippleAnimationView *rippleAnimationView; // @synthesize rippleAnimationView=_rippleAnimationView;
 @property(retain, nonatomic) UIImageView *touchHandleImageView; // @synthesize touchHandleImageView=_touchHandleImageView;
 - (void)startSplashBottomAnimation;
 - (void)layoutSubviews;
+- (void)_pbu_addTipLabel;
 - (void)buildUpViewWith:(id)arg1;
-- (id)initWithComponentConfiguration:(id)arg1;
+- (id)initWithComponentConfiguration:(id)arg1 isSplash:(_Bool)arg2;
 
 @end
 

@@ -12,9 +12,11 @@
 {
     NSArray *_allAdInstances;
     int _n;
+    int _enc;
     NSDictionary *_adData;
     NSString *_errorCode;
     NSString *_errorMessage;
+    NSArray *_adArray;
     NSMutableArray *_adInstanceArray;
     NSDictionary *_baseResponse;
     NSMutableArray *_itemsArray;
@@ -26,6 +28,8 @@
 @property(retain, nonatomic) NSMutableArray *itemsArray; // @synthesize itemsArray=_itemsArray;
 @property(retain, nonatomic) NSDictionary *baseResponse; // @synthesize baseResponse=_baseResponse;
 @property(retain, nonatomic) NSMutableArray *adInstanceArray; // @synthesize adInstanceArray=_adInstanceArray;
+@property(retain, nonatomic) NSArray *adArray; // @synthesize adArray=_adArray;
+@property(nonatomic) int enc; // @synthesize enc=_enc;
 @property(nonatomic) int n; // @synthesize n=_n;
 @property(retain, nonatomic) NSString *errorMessage; // @synthesize errorMessage=_errorMessage;
 @property(retain, nonatomic) NSString *errorCode; // @synthesize errorCode=_errorCode;

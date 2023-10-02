@@ -6,7 +6,7 @@
 
 #import <objc/NSObject.h>
 
-@class ABUBiddingWaterfallModel, NSArray, NSString;
+@class ABUBiddingAutoExpDetail, ABUBiddingWaterfallModel, NSArray, NSString;
 
 @interface ABUBiddingResult : NSObject
 {
@@ -16,9 +16,11 @@
     NSArray *_invalidNonServerBiddingResults;
     ABUBiddingWaterfallModel *_waterfall;
     NSString *_serverBiddingExtra;
+    ABUBiddingAutoExpDetail *_autoDetail;
 }
 
 - (void).cxx_destruct;
+@property(readonly, nonatomic) ABUBiddingAutoExpDetail *autoDetail; // @synthesize autoDetail=_autoDetail;
 @property(readonly, copy, nonatomic) NSString *serverBiddingExtra; // @synthesize serverBiddingExtra=_serverBiddingExtra;
 @property(readonly, nonatomic) ABUBiddingWaterfallModel *waterfall; // @synthesize waterfall=_waterfall;
 @property(readonly, copy, nonatomic) NSArray *invalidNonServerBiddingResults; // @synthesize invalidNonServerBiddingResults=_invalidNonServerBiddingResults;

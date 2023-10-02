@@ -4,7 +4,7 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
 
-#import <objc/NSObject.h>
+#import "CSJAdBaseObject.h"
 
 #import "CSJAdClientBiddingProtocol-Protocol.h"
 #import "CSJMopubAdMarkUpDelegate-Protocol.h"
@@ -13,7 +13,7 @@
 @class CSJAdSlot, CSJNativeExpressRewardedVideoAd, CSJRewardedVideoModel, NSDictionary, NSString;
 @protocol CSJRewardedVideoAdDelegate;
 
-@interface CSJRewardedVideoAd : NSObject <CSJNativeExpressRewardedVideoAdDelegate, CSJMopubAdMarkUpDelegate, CSJAdClientBiddingProtocol>
+@interface CSJRewardedVideoAd : CSJAdBaseObject <CSJNativeExpressRewardedVideoAdDelegate, CSJMopubAdMarkUpDelegate, CSJAdClientBiddingProtocol>
 {
     _Bool _materialMetaIsFromPreload;
     _Bool _didSetADM;
@@ -36,22 +36,21 @@
 @property(retain, nonatomic) CSJRewardedVideoModel *rewardedVideoModel; // @synthesize rewardedVideoModel=_rewardedVideoModel;
 - (_Bool)isMemberOfClass:(Class)arg1;
 - (_Bool)isKindOfClass:(Class)arg1;
-- (unsigned long long)rewardedVideoAdType;
+- (unsigned long long)Vli_TextBody;
 @property(readonly, copy, nonatomic) NSDictionary *mediaExt;
-@property(readonly, nonatomic, getter=isAdValid) _Bool adValid;
-- (void)safeDelegate_rewardedVideoAdCallback:(id)arg1 withType:(unsigned long long)arg2;
-- (void)safeDelegate_rewardedVideoAdDidClickSkip:(id)arg1;
-- (void)safeDelegate_rewardedVideoAdServerRewardDidFail:(id)arg1 error:(id)arg2;
-- (void)safeDelegate_rewardedVideoAdServerRewardDidSucceed:(id)arg1 verify:(_Bool)arg2;
-- (void)safeDelegate_rewardedVideoAdDidPlayFinish:(id)arg1 didFailWithError:(id)arg2;
-- (void)safeDelegate_rewardedVideoAdDidClick:(id)arg1;
-- (void)safeDelegate_rewardedVideoAdDidClose:(id)arg1;
-- (void)safeDelegate_rewardedVideoAdWillClose:(id)arg1;
-- (void)safeDelegate_rewardedVideoAdDidVisible:(id)arg1;
-- (void)safeDelegate_rewardedVideoAdWillVisible:(id)arg1;
-- (void)safeDelegate_rewardedVideoAdVideoDidLoad:(id)arg1;
-- (void)safeDelegate_rewardedVideoAd:(id)arg1 didFailWithError:(id)arg2;
-- (void)safeDelegate_rewardedVideoAdDidLoad:(id)arg1;
+- (void)Wiki_AppCell:(id)arg1 withType:(unsigned long long)arg2;
+- (void)API_VcMAX:(id)arg1;
+- (void)May_R2Ft:(id)arg1 error:(id)arg2;
+- (void)For_UrlBOOL:(id)arg1 verify:(_Bool)arg2;
+- (void)Obj_BeenAdm:(id)arg1 didFailWithError:(id)arg2;
+- (void)Os_IdxHpp:(id)arg1;
+- (void)Str_TimeSet:(id)arg1;
+- (void)Noti_SelfEnd:(id)arg1;
+- (void)Pop_MAXStr:(id)arg1;
+- (void)Tm_HopoOn:(id)arg1;
+- (void)Use_MapSDK:(id)arg1;
+- (void)Else_PushCell:(id)arg1 didFailWithError:(id)arg2;
+- (void)Play_AdIdOnly:(id)arg1;
 - (void)nativeExpressRewardedVideoAdDidCloseOtherController:(id)arg1 interactionType:(long long)arg2;
 - (void)nativeExpressRewardedVideoAdServerRewardDidFail:(id)arg1 error:(id)arg2;
 - (void)nativeExpressRewardedVideoAdServerRewardDidSucceed:(id)arg1 verify:(_Bool)arg2;
@@ -69,9 +68,8 @@
 - (void)nativeExpressRewardedVideoAd:(id)arg1 didFailWithError:(id)arg2;
 - (void)nativeExpressRewardedVideoAdDidLoad:(id)arg1;
 - (void)handleMopubSuccessLoadVideo:(id)arg1 isPre:(_Bool)arg2;
-- (void)handleFailLoadMaterial:(id)arg1;
+- (void)Ld_TypeLazy:(id)arg1;
 - (id)biddingToken;
-- (void)setMopubAdMarkUp:(id)arg1;
 - (void)setAdMarkup:(id)arg1;
 - (void)loss:(id)arg1 lossReason:(id)arg2 winBidder:(id)arg3;
 - (void)win:(id)arg1;

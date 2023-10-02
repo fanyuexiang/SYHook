@@ -10,12 +10,12 @@
 #import "CSJRewardedVideoDisplayDelegate-Protocol.h"
 #import "CSJRewardedVideoWebViewDelegate-Protocol.h"
 
-@class BUTimer, CSJAdSlot, CSJDislikeContext, CSJMaterialMeta, CSJPlayableLandingViewController, CSJPurePlayableLoadingViewController, CSJRewardAgainEntranceTipsView, CSJRewardBrowseAlertView, CSJRewardedVideoAdViewController, CSJRewardedVideoDisplayViewController, CSJRewardedVideoWebViewController, CSJURitSettingModel, NSArray, NSString, UIButton, UILabel, UIViewController;
+@class BUTimer, CSJAdSlot, CSJDislikeContext, CSJMaterialMeta, CSJPlayableLandingViewController, CSJPurePlayableLoadingViewController, CSJRewardAgainEntranceTipsView, CSJRewardBrowseAlertView, CSJRewardedRetainAlertManager, CSJRewardedVideoAdViewController, CSJRewardedVideoDisplayViewController, CSJRewardedVideoWebViewController, CSJURitSettingModel, CSJUgenAggregationViewController, NSArray, NSString, UIButton, UILabel, UIViewController;
 @protocol CSJVideoAdDelegate><CSJInterstitialAdDelegate;
 
 @interface CSJRewardFullScreenBaseVM : NSObject <CSJRewardedVideoDisplayDelegate, CSJRewardedVideoAdDelegate, CSJRewardedVideoWebViewDelegate>
 {
-    _Bool _isChildLandscapeRotate;
+    _Bool _isVli_ExtCid;
     _Bool _isRotate;
     _Bool _supportPortraitLandscape;
     _Bool _mute;
@@ -30,6 +30,7 @@
     CSJRewardedVideoDisplayViewController *_rewardedVideoDisplayViewController;
     CSJRewardedVideoWebViewController *_endcardWebVC;
     CSJPlayableLandingViewController *_playableLandingVC;
+    CSJUgenAggregationViewController *_ugenAggregationVC;
     CSJPurePlayableLoadingViewController *_loadingWebView;
     CSJMaterialMeta *_materialMeta;
     CSJAdSlot *_slot;
@@ -53,12 +54,14 @@
     long long _closeTime;
     CSJRewardBrowseAlertView *_rewardBrowseEcomAlert;
     double _continuePlayProgress;
-    CSJRewardAgainEntranceTipsView *_rewardAgainTipsView;
+    CSJRewardAgainEntranceTipsView *_Idx_CharUse;
+    CSJRewardedRetainAlertManager *_alertManger;
 }
 
-+ (id)createViewModelWithMeta:(id)arg1 rootViewController:(id)arg2 slot:(id)arg3;
++ (id)YES_DiffRes:(id)arg1 rootViewController:(id)arg2 slot:(id)arg3;
 - (void).cxx_destruct;
-@property(retain, nonatomic) CSJRewardAgainEntranceTipsView *rewardAgainTipsView; // @synthesize rewardAgainTipsView=_rewardAgainTipsView;
+@property(retain, nonatomic) CSJRewardedRetainAlertManager *alertManger; // @synthesize alertManger=_alertManger;
+@property(retain, nonatomic) CSJRewardAgainEntranceTipsView *Idx_CharUse; // @synthesize Idx_CharUse=_Idx_CharUse;
 @property(nonatomic) double continuePlayProgress; // @synthesize continuePlayProgress=_continuePlayProgress;
 @property(retain, nonatomic) CSJRewardBrowseAlertView *rewardBrowseEcomAlert; // @synthesize rewardBrowseEcomAlert=_rewardBrowseEcomAlert;
 @property(nonatomic) _Bool playableRenderFailed; // @synthesize playableRenderFailed=_playableRenderFailed;
@@ -86,45 +89,48 @@
 @property(nonatomic) _Bool supportPortraitLandscape; // @synthesize supportPortraitLandscape=_supportPortraitLandscape;
 @property(nonatomic) unsigned long long videoOrientation; // @synthesize videoOrientation=_videoOrientation;
 @property(nonatomic) _Bool isRotate; // @synthesize isRotate=_isRotate;
-@property(nonatomic) _Bool isChildLandscapeRotate; // @synthesize isChildLandscapeRotate=_isChildLandscapeRotate;
+@property(nonatomic) _Bool isVli_ExtCid; // @synthesize isVli_ExtCid=_isVli_ExtCid;
 @property(copy, nonatomic) NSString *endTimestamp; // @synthesize endTimestamp=_endTimestamp;
 @property(copy, nonatomic) NSString *startTimestamp; // @synthesize startTimestamp=_startTimestamp;
 @property(retain, nonatomic) CSJAdSlot *slot; // @synthesize slot=_slot;
 @property(retain, nonatomic) CSJMaterialMeta *materialMeta; // @synthesize materialMeta=_materialMeta;
 @property(retain, nonatomic) CSJPurePlayableLoadingViewController *loadingWebView; // @synthesize loadingWebView=_loadingWebView;
+@property(retain, nonatomic) CSJUgenAggregationViewController *ugenAggregationVC; // @synthesize ugenAggregationVC=_ugenAggregationVC;
 @property(retain, nonatomic) CSJPlayableLandingViewController *playableLandingVC; // @synthesize playableLandingVC=_playableLandingVC;
 @property(retain, nonatomic) CSJRewardedVideoWebViewController *endcardWebVC; // @synthesize endcardWebVC=_endcardWebVC;
 @property(retain, nonatomic) CSJRewardedVideoDisplayViewController *rewardedVideoDisplayViewController; // @synthesize rewardedVideoDisplayViewController=_rewardedVideoDisplayViewController;
 @property(retain, nonatomic) id <CSJVideoAdDelegate><CSJInterstitialAdDelegate> rewardedVideoAd; // @synthesize rewardedVideoAd=_rewardedVideoAd;
 @property(retain, nonatomic) UIViewController *currentViewController; // @synthesize currentViewController=_currentViewController;
 - (void)updateTopBarDislikeButtonFrame;
-- (void)updateTopBarButtonFrame;
-- (void)updateSizeWithLabel:(id)arg1;
+- (void)Fabs_PushCta;
+- (void)This_BySize:(id)arg1;
 - (void)updateSizeWithButton:(id)arg1;
 - (void)dislikeButtonTapped:(id)arg1;
 - (void)silentButtonTapped:(id)arg1;
-- (void)rewardAgianMethod;
+- (void)API_MetaMARK;
 - (void)updateSlientBtnState:(_Bool)arg1;
-- (void)preloadPlayable;
-- (void)safeDelegate_didCloseOtherControllerWithInteractionType:(long long)arg1;
-- (void)safeDelegate_videoAdDidClickSkip;
+- (void)A1_EndMask;
+- (void)A1_ForFm:(long long)arg1;
+- (void)Nb_DictOnly;
 - (_Bool)supportLandscapeBySystemConfiguration;
-- (void)preloadAppStore;
+- (void)Ran_JsonRead;
 - (id)setingModelForRit;
-- (long long)getCloseTimeValue;
-- (long long)getDurationValue;
+- (long long)Obj_EnumRoot;
+- (long long)Dict_YouLoad;
 - (_Bool)getMuteType;
-- (void)confirmCloseWindow;
+- (void)Pop_SelfText;
 - (void)closeRewardBrowseTimeout;
 - (void)closeButtonTapped:(id)arg1;
-@property(readonly, nonatomic) CSJRewardedVideoWebViewController *currentWebVC;
+@property(readonly, nonatomic) CSJRewardedVideoWebViewController *Mod_RanUp_y;
 - (void)bu_didEnterBackgroundNotification:(id)arg1;
 - (void)bu_willEnterForegroundNotification:(id)arg1;
 - (void)addNotification;
-- (void)handlePurePlayableBar:(_Bool)arg1;
+- (void)Json_A1And;
+- (_Bool)Dc_PathP1;
+- (void)Used_R2Fm:(_Bool)arg1;
 - (void)updateNativeTitleBar:(_Bool)arg1;
-- (void)switchToEndcard;
-- (void)switchToPlayable;
+- (void)Sel_NotiRit;
+- (void)Set_UI_len;
 - (void)switchToWebViewMute:(_Bool)arg1;
 - (id)getTrackTag;
 - (void)openAppStore;
@@ -134,9 +140,9 @@
 - (void)playerDidPlayFinish:(id)arg1 error:(id)arg2;
 - (void)playerDidPlayedRewardTime:(id)arg1 duration:(double)arg2;
 - (void)playerReadyToPlay:(id)arg1;
-- (void)_updateRewardWithType:(long long)arg1 propose:(float)arg2;
-- (void)_updateAdvancedRewardType:(long long)arg1;
-- (void)sendVerifiedRewardWithDuration:(double)arg1 type:(long long)arg2;
+- (void)Msg_HasObj:(long long)arg1 propose:(float)arg2;
+- (void)_pos_NOA2:(long long)arg1;
+- (void)Item_RectSum:(double)arg1 type:(long long)arg2;
 - (void)showRewardBrowseEcomAlert:(id)arg1;
 - (void)fullScreenInsertitalAdDisplayViewDidClick;
 - (void)rewardedVideoWebViewControllerJumpEndcard:(id)arg1;
@@ -154,18 +160,18 @@
 - (void)bu_webviewLoadFinish:(id)arg1;
 - (void)rewardedVideoH5AdDidClickNeedJump:(_Bool)arg1;
 - (void)rewardedVideoAdClose;
-- (void)layoutRewardAgainTipsView;
-- (void)showRewardAgainTipsView;
-- (void)addRewardAgainTipsView;
-- (unsigned long long)vmSupportedInterfaceOrientations;
+- (void)Key_LossCell;
+- (void)YES_dirJson;
+- (void)With_IdStr;
+- (unsigned long long)Not_MITAds;
 - (void)storeKitDidClose:(id)arg1;
 - (void)storeKitWillOpen:(id)arg1;
-- (void)layoutInterstitialStyle;
+- (void)ID_Md5Cell;
 - (void)relayoutSubViews;
-- (void)vmLoadData;
+- (void)X1_PosKey;
 - (void)dealloc;
-- (void)initializeConfig;
-- (id)initViewModelWithMeta:(id)arg1 rootViewController:(id)arg2 slot:(id)arg3;
+- (void)Os_NetPods;
+- (id)initLAt_KeyTm:(id)arg1 rootViewController:(id)arg2 slot:(id)arg3;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

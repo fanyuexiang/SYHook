@@ -6,9 +6,12 @@
 
 #import <UIKit/UIView.h>
 
+#import "BUSplashCardView_MProtocol-Protocol.h"
+
+@class NSString, UIViewController;
 @protocol ABUSplashCardViewDelegate;
 
-@interface ABUSplashCardView : UIView
+@interface ABUSplashCardView : UIView <BUSplashCardView_MProtocol>
 {
     id <ABUSplashCardViewDelegate> _delegate;
     CDUnknownBlockType _showSplashCardInRootVC;
@@ -22,6 +25,15 @@
 - (void)showSplashCardInRootVC:(id)arg1;
 - (id)init;
 - (id)initWithCardView:(id)arg1;
+@property(readonly, nonatomic) __weak UIViewController *rootViewController;
+- (_Bool)isMemberOfClass:(Class)arg1;
+- (_Bool)isKindOfClass:(Class)arg1;
+
+// Remaining properties
+@property(readonly, copy) NSString *debugDescription;
+@property(readonly, copy) NSString *description;
+@property(readonly) unsigned long long hash;
+@property(readonly) Class superclass;
 
 @end
 

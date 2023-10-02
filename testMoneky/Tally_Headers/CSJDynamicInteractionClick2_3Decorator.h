@@ -22,7 +22,7 @@
 - (void)interactionViewDidShow;
 - (void)hiddenInteractionAnimaiton;
 - (void)showInteractionAnimation;
-- (void)clickAction;
+- (void)clickActionWithConverType:(long long)arg1;
 - (void)render;
 
 @end

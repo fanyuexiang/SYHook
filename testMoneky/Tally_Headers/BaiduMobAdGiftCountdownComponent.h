@@ -13,7 +13,6 @@
 
 @interface BaiduMobAdGiftCountdownComponent : UIView <BaiduMobAdComponentLottieDelegate>
 {
-    NSString *_countdownText;
     id <BaiduMobAdGiftCountdownComponentDelegate> _delegate;
     BaiduMobAdComponentLabel *_remainTimeLabel;
     double _animProgress;
@@ -25,9 +24,11 @@
     NSString *_startText;
     NSString *_endText;
     double _animSpeed;
+    NSString *_countdownText;
 }
 
 - (void).cxx_destruct;
+@property(retain, nonatomic) NSString *countdownText; // @synthesize countdownText=_countdownText;
 @property(nonatomic) double animSpeed; // @synthesize animSpeed=_animSpeed;
 @property(retain, nonatomic) NSString *endText; // @synthesize endText=_endText;
 @property(retain, nonatomic) NSString *startText; // @synthesize startText=_startText;
@@ -39,7 +40,6 @@
 @property(nonatomic) double animProgress; // @synthesize animProgress=_animProgress;
 @property(retain, nonatomic) BaiduMobAdComponentLabel *remainTimeLabel; // @synthesize remainTimeLabel=_remainTimeLabel;
 @property(nonatomic) __weak id <BaiduMobAdGiftCountdownComponentDelegate> delegate; // @synthesize delegate=_delegate;
-@property(retain, nonatomic) NSString *countdownText; // @synthesize countdownText=_countdownText;
 - (void)successCreatComponentView:(id)arg1 model:(id)arg2;
 - (void)renderComponentViewWithModel:(id)arg1 baseView:(id)arg2;
 - (void)creatComponentViewWithModel:(id)arg1 baseView:(id)arg2;

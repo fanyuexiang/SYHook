@@ -22,6 +22,7 @@
 - (id)assetModelForID:(id)arg1;
 - (void)finalizeInitializationWithFramerate:(id)arg1;
 - (void)buildAssetNamed:(id)arg1 withFramerate:(id)arg2;
+- (id)initWithJSON:(id)arg1 withAssetBundle:(id)arg2 withFramerate:(id)arg3 withImages:(id)arg4 useBundleImages:(_Bool)arg5;
 - (id)initWithJSON:(id)arg1 withAssetBundle:(id)arg2 withFramerate:(id)arg3 withImages:(id)arg4;
 - (id)initWithJSON:(id)arg1 withAssetBundle:(id)arg2 withFramerate:(id)arg3;
 

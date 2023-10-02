@@ -10,6 +10,7 @@
 
 @interface AssetDetailHeaderCell : UITableViewCell
 {
+    UIView *_conView;
     UILabel *_leftLabel;
     UILabel *_rightLabel;
     UIView *_lineView;
@@ -19,6 +20,7 @@
 @property(retain, nonatomic) UIView *lineView; // @synthesize lineView=_lineView;
 @property(retain, nonatomic) UILabel *rightLabel; // @synthesize rightLabel=_rightLabel;
 @property(retain, nonatomic) UILabel *leftLabel; // @synthesize leftLabel=_leftLabel;
+@property(retain, nonatomic) UIView *conView; // @synthesize conView=_conView;
 - (void)setSelected:(_Bool)arg1 animated:(_Bool)arg2;
 - (void)awakeFromNib;
 - (id)initWithStyle:(long long)arg1 reuseIdentifier:(id)arg2;

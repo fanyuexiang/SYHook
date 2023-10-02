@@ -20,8 +20,10 @@
     _Bool _finished;
     _Bool _preserveAspectRatio;
     struct CGSize _thumbnailSize;
+    _Bool _lazyDecode;
 }
 
++ (id)createBitmapPDFWithData:(id)arg1 pageNumber:(unsigned long long)arg2 targetSize:(struct CGSize)arg3 preserveAspectRatio:(_Bool)arg4;
 + (id)sharedCoder;
 - (id)encodedDataWithImage:(id)arg1 format:(long long)arg2 options:(id)arg3;
 - (_Bool)canEncodeToFormat:(long long)arg1;

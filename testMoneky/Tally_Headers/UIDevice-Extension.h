@@ -15,7 +15,6 @@
 + (id)getUniqueStrByUUID;
 + (id)wbsdk_getDevicePortrait;
 + (id)wbsdk_platform;
-+ (id)ies_machineModel;
 - (id)weibosdk_openUniqueIdentifier;
 @end
 

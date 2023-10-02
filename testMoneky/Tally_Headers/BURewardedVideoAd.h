@@ -9,8 +9,8 @@
 #import "BUAdClientBiddingProtocol-Protocol.h"
 #import "BUMopubAdMarkUpDelegate-Protocol.h"
 
-@class BURewardedVideoModel, NSDictionary, NSString;
-@protocol BURewardedVideoAdDelegate;
+@class BUDictionary, BURewardedVideoModel, NSObject, NSString;
+@protocol BURewardedVideoAdDelegate, BURewardedVideoAdMediationProtocol;
 
 @interface BURewardedVideoAd : BUInterfaceBaseObject <BUMopubAdMarkUpDelegate, BUAdClientBiddingProtocol>
 {
@@ -24,7 +24,6 @@
 - (void)rewardedVideoAdCallback:(id)arg1 withType:(unsigned long long)arg2;
 - (void)rewardedVideoAdDidClickSkip:(id)arg1;
 - (void)rewardedVideoAdServerRewardDidFail:(id)arg1 error:(id)arg2;
-- (void)rewardedVideoAdServerRewardDidFail:(id)arg1;
 - (void)rewardedVideoAdServerRewardDidSucceed:(id)arg1 verify:(_Bool)arg2;
 - (void)rewardedVideoAdDidPlayFinish:(id)arg1 didFailWithError:(id)arg2;
 - (void)rewardedVideoAdDidClick:(id)arg1;
@@ -37,15 +36,16 @@
 - (void)rewardedVideoAdDidLoad:(id)arg1;
 - (id)initWithSlot:(id)arg1 rewardedVideoModel:(id)arg2;
 - (id)initWithSlotID:(id)arg1 rewardedVideoModel:(id)arg2;
+- (void)rewardedVideoAdDidShowFailed:(id)arg1 error:(id)arg2;
+@property(readonly, nonatomic) NSObject<BURewardedVideoAdMediationProtocol> *mediation;
 
 // Remaining properties
-@property(readonly, nonatomic, getter=isAdValid) _Bool adValid; // @dynamic adValid;
 @property(readonly, copy) NSString *debugDescription;
 @property(readonly, copy) NSString *description;
 @property(readonly, nonatomic) double expireTimestamp; // @dynamic expireTimestamp;
 @property(readonly) unsigned long long hash;
 @property(readonly, nonatomic) _Bool materialMetaIsFromPreload; // @dynamic materialMetaIsFromPreload;
-@property(readonly, copy, nonatomic) NSDictionary *mediaExt; // @dynamic mediaExt;
+@property(readonly, copy, nonatomic) BUDictionary *mediaExt; // @dynamic mediaExt;
 @property(nonatomic) __weak id <BURewardedVideoAdDelegate> rewardPlayAgainInteractionDelegate; // @dynamic rewardPlayAgainInteractionDelegate;
 @property(retain, nonatomic) BURewardedVideoModel *rewardedVideoModel; // @dynamic rewardedVideoModel;
 @property(readonly) Class superclass;

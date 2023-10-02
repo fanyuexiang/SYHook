@@ -6,43 +6,30 @@
 
 #import <objc/NSObject.h>
 
-#import "HMDBUCrashKitDelegate-Protocol.h"
-#import "HMDBUExcludeModule-Protocol.h"
+@class NSString, RangersBUEmbedCrashDynamicDataProvider;
 
-@class HMDBUCrashDynamicDataProvider, NSString;
-
-@interface HMDBUEmbedCrashTracker : NSObject <HMDBUExcludeModule, HMDBUCrashKitDelegate>
+@interface HMDBUEmbedCrashTracker : NSObject
 {
     _Bool _finishDetection;
     _Bool _detected;
     _Bool _isRunning;
     NSString *_crashPath;
     double _launchThreshold;
-    HMDBUCrashDynamicDataProvider *_dynamicDataProvider;
+    RangersBUEmbedCrashDynamicDataProvider *_dynamicDataProvider;
 }
 
-+ (id)excludedModule;
 + (id)sharedTracker;
 - (void).cxx_destruct;
-@property(retain, nonatomic) HMDBUCrashDynamicDataProvider *dynamicDataProvider; // @synthesize dynamicDataProvider=_dynamicDataProvider;
+@property(retain, nonatomic) RangersBUEmbedCrashDynamicDataProvider *dynamicDataProvider; // @synthesize dynamicDataProvider=_dynamicDataProvider;
 @property _Bool isRunning; // @synthesize isRunning=_isRunning;
 @property(getter=isDetected) _Bool detected; // @synthesize detected=_detected;
 @property(getter=isFinishDetection) _Bool finishDetection; // @synthesize finishDetection=_finishDetection;
 @property(readonly, nonatomic) double launchThreshold; // @synthesize launchThreshold=_launchThreshold;
 @property(retain, nonatomic) NSString *crashPath; // @synthesize crashPath=_crashPath;
-- (void)crashKitDidDetectCrashForLastTime:(id)arg1;
-- (id)finishDetectionNotification;
-- (void)updateSIGPIPEState;
 - (void)start;
 - (void)notifyCrashDetect;
 - (id)init;
 - (void)dealloc;
-
-// Remaining properties
-@property(readonly, copy) NSString *debugDescription;
-@property(readonly, copy) NSString *description;
-@property(readonly) unsigned long long hash;
-@property(readonly) Class superclass;
 
 @end
 

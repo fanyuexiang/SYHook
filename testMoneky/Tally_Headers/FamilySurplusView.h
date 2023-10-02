@@ -6,12 +6,15 @@
 
 #import <UIKit/UIView.h>
 
-@class AdjustButton, CBAttributedLabel, CBBillDatePicker, FCXSegmentView, FamilySurplusController, FamilySurplusTableView, NSString, YYLabel;
+@class AdjustButton, CBAttributedLabel, CBBillDatePicker, DateManager, FCXSegmentView, FamilySurplusController, FamilySurplusTableView, NSString, UILabel, YYLabel;
 
 @interface FamilySurplusView : UIView
 {
     FCXSegmentView *_segmentView;
+    DateManager *_dateManager;
     CBAttributedLabel *_dateLabel;
+    UILabel *_topLabel;
+    _Bool _is_year;
     FamilySurplusController *_controller;
     NSString *_year;
     NSString *_maxDate;
@@ -26,9 +29,19 @@
     UIView *_headerView;
     UIView *_rowHeaderView;
     YYLabel *_footerMonthTipLab;
+    UILabel *_footerYearTipLab;
+    UILabel *_monthLabel;
+    UILabel *_titleLabel1;
+    UILabel *_titleLabel2;
+    UILabel *_titleLabel3;
 }
 
 - (void).cxx_destruct;
+@property(retain, nonatomic) UILabel *titleLabel3; // @synthesize titleLabel3=_titleLabel3;
+@property(retain, nonatomic) UILabel *titleLabel2; // @synthesize titleLabel2=_titleLabel2;
+@property(retain, nonatomic) UILabel *titleLabel1; // @synthesize titleLabel1=_titleLabel1;
+@property(retain, nonatomic) UILabel *monthLabel; // @synthesize monthLabel=_monthLabel;
+@property(retain, nonatomic) UILabel *footerYearTipLab; // @synthesize footerYearTipLab=_footerYearTipLab;
 @property(retain, nonatomic) YYLabel *footerMonthTipLab; // @synthesize footerMonthTipLab=_footerMonthTipLab;
 @property(retain, nonatomic) UIView *rowHeaderView; // @synthesize rowHeaderView=_rowHeaderView;
 @property(retain, nonatomic) UIView *headerView; // @synthesize headerView=_headerView;
@@ -42,6 +55,7 @@
 @property(copy, nonatomic) NSString *minDate; // @synthesize minDate=_minDate;
 @property(copy, nonatomic) NSString *maxDate; // @synthesize maxDate=_maxDate;
 @property(copy, nonatomic) NSString *year; // @synthesize year=_year;
+@property(nonatomic) _Bool is_year; // @synthesize is_year=_is_year;
 @property(nonatomic) __weak FamilySurplusController *controller; // @synthesize controller=_controller;
 - (void)calculateMaxDate_MinDateAction;
 - (void)dateAction:(id)arg1;

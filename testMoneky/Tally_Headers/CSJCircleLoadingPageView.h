@@ -12,8 +12,8 @@
 {
     _Bool _isPortrait;
     CDUnknownBlockType _adButtonClickBlock;
-    CALayer *_smallCircleLayer;
-    CALayer *_bigCircleLayer;
+    CALayer *_ID_AryWill;
+    CALayer *__val_Ipv4Levi;
     UILabel *_loadingLabel;
     CSJNumerAnimationLabel *_progressLabel;
     UILabel *_percentLabel;
@@ -23,12 +23,12 @@
 @property(retain, nonatomic) UILabel *percentLabel; // @synthesize percentLabel=_percentLabel;
 @property(retain, nonatomic) CSJNumerAnimationLabel *progressLabel; // @synthesize progressLabel=_progressLabel;
 @property(retain, nonatomic) UILabel *loadingLabel; // @synthesize loadingLabel=_loadingLabel;
-@property(retain, nonatomic) CALayer *bigCircleLayer; // @synthesize bigCircleLayer=_bigCircleLayer;
-@property(retain, nonatomic) CALayer *smallCircleLayer; // @synthesize smallCircleLayer=_smallCircleLayer;
+@property(retain, nonatomic) CALayer *_val_Ipv4Levi; // @synthesize _val_Ipv4Levi=__val_Ipv4Levi;
+@property(retain, nonatomic) CALayer *ID_AryWill; // @synthesize ID_AryWill=_ID_AryWill;
 - (void)setAdButtonClickBlock:(CDUnknownBlockType)arg1;
 - (CDUnknownBlockType)adButtonClickBlock;
 - (_Bool)isPortrait;
-- (id)p_createCircleLayer:(struct CGRect)arg1 color1:(id)arg2 color2:(id)arg3 lineWidth:(double)arg4;
+- (id)Cta_Md5Map:(struct CGRect)arg1 color1:(id)arg2 color2:(id)arg3 lineWidth:(double)arg4;
 - (void)startLoading;
 - (void)setIsPortrait:(_Bool)arg1;
 - (void)layoutSubviews;

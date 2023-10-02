@@ -183,8 +183,6 @@
 - (void)dealloc;
 - (_Bool)render;
 - (void)setlineSpacing:(double)arg1;
-- (void)safeMainQueueSetImage:(id)arg1 intoImageView:(id)arg2;
-- (void)loadImageForURL:(id)arg1 intoImageView:(id)arg2;
 - (void)loadImageForURLString:(id)arg1 intoImageView:(id)arg2;
 - (void)adButtonsResize;
 - (void)dislikeButtonClick;

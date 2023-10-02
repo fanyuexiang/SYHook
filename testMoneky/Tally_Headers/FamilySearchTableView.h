@@ -10,13 +10,18 @@
 
 @interface FamilySearchTableView : FamilyTallyListTableView
 {
+    _Bool _isFilter;
     NSFetchedResultsController *_fetchedResultsController;
     NSString *_labelsString;
+    CDUnknownBlockType _dataChangedBlock;
 }
 
 - (void).cxx_destruct;
+@property(copy, nonatomic) CDUnknownBlockType dataChangedBlock; // @synthesize dataChangedBlock=_dataChangedBlock;
+@property(nonatomic) _Bool isFilter; // @synthesize isFilter=_isFilter;
 @property(retain, nonatomic) NSString *labelsString; // @synthesize labelsString=_labelsString;
 - (void)setFetchedResultsController:(id)arg1;
+- (void)searchTextWith:(id)arg1 type:(long long)arg2 tallytype:(long long)arg3 starttime:(id)arg4 endtime:(id)arg5;
 - (void)updateAmount;
 - (long long)numberOfSectionsInTableView:(id)arg1;
 - (id)fetchedResultsController;

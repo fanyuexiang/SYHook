@@ -15,15 +15,18 @@
     NSMutableDictionary *_adStorage;
     CDUnknownBlockType _monitor;
     NSMutableArray *_uselessAdRequestIDs;
+    NSMutableArray *_waitingReleasePackagePool;
 }
 
 + (id)sharedManager;
 - (void).cxx_destruct;
+@property(retain, nonatomic) NSMutableArray *waitingReleasePackagePool; // @synthesize waitingReleasePackagePool=_waitingReleasePackagePool;
 @property(retain, nonatomic) NSMutableArray *uselessAdRequestIDs; // @synthesize uselessAdRequestIDs=_uselessAdRequestIDs;
 @property(copy, nonatomic) CDUnknownBlockType monitor; // @synthesize monitor=_monitor;
 @property(retain, nonatomic) NSMutableDictionary *adStorage; // @synthesize adStorage=_adStorage;
+- (void)addAdPackageToWaitingReleasePool:(id)arg1;
 - (void)popAdsWithPackageList:(id)arg1 reason:(id)arg2;
-- (void)clearAdListWithRequestIDs:(id)arg1;
+- (void)clearWaitingReleaseAdListAndAdsWithRequestIDs:(id)arg1;
 - (void)clearAdListForMemoryWarning;
 - (void)clearUselessAdList;
 - (void)addUselessRequestID:(id)arg1;

@@ -35,6 +35,7 @@
 @property(nonatomic) _Bool isAutoRenew; // @synthesize isAutoRenew=_isAutoRenew;
 @property(nonatomic) __weak UIViewController *controller; // @synthesize controller=_controller;
 @property(copy, nonatomic) NSString *orderID; // @synthesize orderID=_orderID;
+- (void)uploadError:(long long)arg1 index:(long long)arg2 error:(id)arg3;
 - (void)dealloc;
 - (_Bool)paymentQueue:(id)arg1 shouldAddStorePayment:(id)arg2 forProduct:(id)arg3;
 - (void)paymentQueue:(id)arg1 restoreCompletedTransactionsFailedWithError:(id)arg2;

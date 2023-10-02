@@ -32,7 +32,10 @@
 - (id)_getViewFromCreatorWithSelector:(SEL)arg1;
 - (void)setFrame:(struct CGRect)arg1;
 @property(readonly, nonatomic) _Bool hasSupportActionBtn;
+- (void)unregisterClickableViews;
 - (void)registerClickableViews:(id)arg1;
+- (_Bool)isMemberOfClass:(Class)arg1;
+- (_Bool)isKindOfClass:(Class)arg1;
 
 @end
 

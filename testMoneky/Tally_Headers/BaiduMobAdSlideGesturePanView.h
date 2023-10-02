@@ -18,9 +18,12 @@
     _Bool _isEnableTriggerAd;
     _Bool _isFirstIntoHotView;
     _Bool _isFirstSlideCorrect;
+    _Bool _isSlideCycle;
     UIColor *_strokeColor;
+    double _slideRadius;
     CDUnknownBlockType _clickBlock;
     UIBezierPath *_drawPath;
+    UIView *_clickView;
     struct CGPoint _previousPoint;
     struct CGPoint _startPoint;
     struct CGRect _slideViewRect;
@@ -28,6 +31,8 @@
 }
 
 - (void).cxx_destruct;
+@property(retain, nonatomic) UIView *clickView; // @synthesize clickView=_clickView;
+@property(nonatomic) _Bool isSlideCycle; // @synthesize isSlideCycle=_isSlideCycle;
 @property(nonatomic) _Bool isFirstSlideCorrect; // @synthesize isFirstSlideCorrect=_isFirstSlideCorrect;
 @property(nonatomic) _Bool isFirstIntoHotView; // @synthesize isFirstIntoHotView=_isFirstIntoHotView;
 @property(nonatomic) _Bool isEnableTriggerAd; // @synthesize isEnableTriggerAd=_isEnableTriggerAd;
@@ -39,6 +44,7 @@
 @property(nonatomic) struct CGRect clickViewRect; // @synthesize clickViewRect=_clickViewRect;
 @property(nonatomic) struct CGRect slideViewRect; // @synthesize slideViewRect=_slideViewRect;
 @property(copy, nonatomic) CDUnknownBlockType clickBlock; // @synthesize clickBlock=_clickBlock;
+@property(nonatomic) double slideRadius; // @synthesize slideRadius=_slideRadius;
 @property(retain, nonatomic) UIColor *strokeColor; // @synthesize strokeColor=_strokeColor;
 @property(nonatomic) _Bool isNeedLegalAdjustment; // @synthesize isNeedLegalAdjustment=_isNeedLegalAdjustment;
 @property(nonatomic) _Bool isEnableFullViewClick; // @synthesize isEnableFullViewClick=_isEnableFullViewClick;
@@ -53,6 +59,8 @@
 - (void)addPanGesture;
 - (void)resetConfig;
 - (void)clickAdsCompletionBlock:(CDUnknownBlockType)arg1;
+- (void)addTargetClickView:(id)arg1;
+- (id)initWithFrame:(struct CGRect)arg1 slideRect:(struct CGRect)arg2 isCycleSlide:(_Bool)arg3;
 - (id)initWithFrame:(struct CGRect)arg1 slideViewRect:(struct CGRect)arg2 clickViewReck:(struct CGRect)arg3 isSlideRight:(_Bool)arg4 isEnableFullViewClick:(_Bool)arg5;
 - (id)initWithFrame:(struct CGRect)arg1 hotViewRect:(struct CGRect)arg2 isSlideRight:(_Bool)arg3 isEnableFullViewClick:(_Bool)arg4;
 

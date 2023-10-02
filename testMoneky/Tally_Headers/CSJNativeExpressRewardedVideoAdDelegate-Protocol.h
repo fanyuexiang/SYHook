@@ -13,7 +13,6 @@
 @optional
 - (void)nativeExpressRewardedVideoAdDidCloseOtherController:(CSJNativeExpressRewardedVideoAd *)arg1 interactionType:(long long)arg2;
 - (void)nativeExpressRewardedVideoAdServerRewardDidFail:(CSJNativeExpressRewardedVideoAd *)arg1 error:(NSError *)arg2;
-- (void)nativeExpressRewardedVideoAdServerRewardDidFail:(CSJNativeExpressRewardedVideoAd *)arg1;
 - (void)nativeExpressRewardedVideoAdServerRewardDidSucceed:(CSJNativeExpressRewardedVideoAd *)arg1 verify:(_Bool)arg2;
 - (void)nativeExpressRewardedVideoAdDidPlayFinish:(CSJNativeExpressRewardedVideoAd *)arg1 didFailWithError:(NSError *)arg2;
 - (void)nativeExpressRewardedVideoAdDidClickSkip:(CSJNativeExpressRewardedVideoAd *)arg1;

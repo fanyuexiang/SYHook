@@ -8,7 +8,7 @@
 
 #import "NSFetchedResultsControllerDelegate-Protocol.h"
 
-@class NSFetchedResultsController, NSString, UIView;
+@class NSFetchedResultsController, NSMutableArray, NSNumber, NSString, UIView;
 
 @interface FamilyChartDetailTableView : FamilyChartTableView <NSFetchedResultsControllerDelegate>
 {
@@ -21,9 +21,17 @@
     long long _sortType;
     NSFetchedResultsController *_fetchedResultsController;
     UIView *_sortView;
+    NSNumber *_cID;
+    NSString *_cName;
+    NSString *_cIconName;
+    NSMutableArray *_tallyMembers;
 }
 
 - (void).cxx_destruct;
+@property(retain, nonatomic) NSMutableArray *tallyMembers; // @synthesize tallyMembers=_tallyMembers;
+@property(copy, nonatomic) NSString *cIconName; // @synthesize cIconName=_cIconName;
+@property(copy, nonatomic) NSString *cName; // @synthesize cName=_cName;
+@property(retain, nonatomic) NSNumber *cID; // @synthesize cID=_cID;
 @property(nonatomic) __weak UIView *sortView; // @synthesize sortView=_sortView;
 @property(retain, nonatomic) NSFetchedResultsController *fetchedResultsController; // @synthesize fetchedResultsController=_fetchedResultsController;
 @property(nonatomic) long long sortType; // @synthesize sortType=_sortType;
@@ -36,6 +44,7 @@
 - (long long)dateType;
 - (void)setTallyType:(long long)arg1;
 - (long long)tallyType;
+- (void)loadTallyMembersData;
 - (void)dealloc;
 - (void)controllerDidChangeContent:(id)arg1;
 - (void)tallyDataChange:(id)arg1;
@@ -44,8 +53,12 @@
 - (id)controller;
 - (void)tableView:(id)arg1 didSelectRowAtIndexPath:(id)arg2;
 - (id)tableView:(id)arg1 cellForRowAtIndexPath:(id)arg2;
+- (id)tableView:(id)arg1 viewForHeaderInSection:(long long)arg2;
 - (long long)tableView:(id)arg1 numberOfRowsInSection:(long long)arg2;
 - (long long)numberOfSectionsInTableView:(id)arg1;
+- (double)tableView:(id)arg1 heightForFooterInSection:(long long)arg2;
+- (double)tableView:(id)arg1 estimatedHeightForHeaderInSection:(long long)arg2;
+- (void)tableView:(id)arg1 willDisplayCell:(id)arg2 forRowAtIndexPath:(id)arg3;
 - (void)setup;
 
 // Remaining properties

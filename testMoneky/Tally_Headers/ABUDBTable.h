@@ -18,7 +18,7 @@
 - (void).cxx_destruct;
 @property(copy, nonatomic) NSString *path; // @synthesize path=_path;
 @property(copy, nonatomic) NSString *tableName; // @synthesize tableName=_tableName;
-- (_Bool)_clostDB;
+- (_Bool)_closeDB;
 - (_Bool)_openDB;
 - (id)_limit:(CDStruct_1ef3fb1f)arg1;
 - (id)_orderBy:(CDStruct_5982b7c1)arg1;

@@ -10,7 +10,7 @@
 {
 }
 
-- (id)logKeyName;
+- (id)Use_HttpIos;
 - (long long)renderType;
 
 @end

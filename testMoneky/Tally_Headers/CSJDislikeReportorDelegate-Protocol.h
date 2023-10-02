@@ -6,14 +6,11 @@
 
 #import "NSObject-Protocol.h"
 
-@class CSJPersonalizationPrompts, NSArray, NSString;
+@class NSArray, NSString;
 
 @protocol CSJDislikeReportorDelegate <NSObject>
 
 @optional
-- (void)dislikeDidLoadPersonalizationPromptsURL:(CSJPersonalizationPrompts *)arg1;
-- (void)dislikeDidSelectedPersonalizationPrompts:(CSJPersonalizationPrompts *)arg1;
-- (void)dislikeDidShowPersonalizationPrompts:(CSJPersonalizationPrompts *)arg1;
 - (void)dislikeDidSubmitFeedback:(NSString *)arg1;
 - (void)dislikeDidSelected:(NSArray *)arg1;
 @end

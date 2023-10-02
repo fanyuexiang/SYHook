@@ -12,15 +12,21 @@
 {
     long long _areaType;
     NSString *_clickAreaType;
+    NSString *_clickAreaId;
     NSDictionary *_clickInfo;
+    NSDictionary *_rectInfo;
     long long _userBehaviorType;
     long long _clickAreaCategory;
+    long long _convertActionType;
 }
 
 - (void).cxx_destruct;
+@property(nonatomic) long long convertActionType; // @synthesize convertActionType=_convertActionType;
 @property(nonatomic) long long clickAreaCategory; // @synthesize clickAreaCategory=_clickAreaCategory;
 @property(nonatomic) long long userBehaviorType; // @synthesize userBehaviorType=_userBehaviorType;
+@property(copy, nonatomic) NSDictionary *rectInfo; // @synthesize rectInfo=_rectInfo;
 @property(copy, nonatomic) NSDictionary *clickInfo; // @synthesize clickInfo=_clickInfo;
+@property(copy, nonatomic) NSString *clickAreaId; // @synthesize clickAreaId=_clickAreaId;
 @property(copy, nonatomic) NSString *clickAreaType; // @synthesize clickAreaType=_clickAreaType;
 @property(nonatomic) long long areaType; // @synthesize areaType=_areaType;
 - (id)initWithDictionary:(id)arg1;

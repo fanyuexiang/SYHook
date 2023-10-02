@@ -8,7 +8,7 @@
 
 #import "NSCopying-Protocol.h"
 
-@class NSString, NSURLCredential, NSURLSessionConfiguration;
+@class NSIndexSet, NSSet, NSString, NSURLCredential, NSURLSessionConfiguration;
 
 @interface SDWebImageDownloaderConfig : NSObject <NSCopying>
 {
@@ -21,10 +21,14 @@
     NSURLCredential *_urlCredential;
     NSString *_username;
     NSString *_password;
+    NSIndexSet *_acceptableStatusCodes;
+    NSSet *_acceptableContentTypes;
 }
 
 + (id)defaultDownloaderConfig;
 - (void).cxx_destruct;
+@property(copy, nonatomic) NSSet *acceptableContentTypes; // @synthesize acceptableContentTypes=_acceptableContentTypes;
+@property(copy, nonatomic) NSIndexSet *acceptableStatusCodes; // @synthesize acceptableStatusCodes=_acceptableStatusCodes;
 @property(copy, nonatomic) NSString *password; // @synthesize password=_password;
 @property(copy, nonatomic) NSString *username; // @synthesize username=_username;
 @property(copy, nonatomic) NSURLCredential *urlCredential; // @synthesize urlCredential=_urlCredential;

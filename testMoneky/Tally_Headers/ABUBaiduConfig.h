@@ -6,11 +6,11 @@
 
 #import <objc/NSObject.h>
 
-#import "ABUCustomConfigAdapter-Protocol.h"
+#import "BUMCustomConfigAdapter-Protocol.h"
 
 @class NSString;
 
-@interface ABUBaiduConfig : NSObject <ABUCustomConfigAdapter>
+@interface ABUBaiduConfig : NSObject <BUMCustomConfigAdapter>
 {
     NSString *_appId;
 }

@@ -6,13 +6,23 @@
 
 #import "NSObject-Protocol.h"
 
-@class NSObject, NSString;
-@protocol ABUBaidu_BaiduMobAdSplash;
+@class NSObject, NSString, UIColor, UIViewController;
+@protocol ABUBaidu_BaiduMobAdSplash, ABUBaidu_BaiduMobAdSplashCardViewDelegate, ABUBaidu_BaiduMobAdSplashFocusZoomOutViewDelegate;
 
 @protocol ABUBaidu_BaiduMobAdSplashDelegate <NSObject>
 - (NSString *)publisherId;
 
 @optional
+@property(readonly, nonatomic) _Bool hasZoomOutView;
+@property(readonly, nonatomic) _Bool hasCardView;
+@property(nonatomic) __weak id <ABUBaidu_BaiduMobAdSplashFocusZoomOutViewDelegate> zoomOutDelegate;
+@property(nonatomic) __weak id <ABUBaidu_BaiduMobAdSplashCardViewDelegate> cardDelegate;
+@property(retain, nonatomic) UIColor *twistMaskColor;
+@property(nonatomic) double twistImageViewSize;
+@property(nonatomic) double shakeImageViewSize;
+- (void)showSplashViewInViewController:(UIViewController *)arg1;
+- (void)showZoomOutViewInViewController:(UIViewController *)arg1;
+- (void)showCardViewInViewController:(UIViewController *)arg1;
 - (void)splashAdLoadFail:(NSObject<ABUBaidu_BaiduMobAdSplash> *)arg1;
 - (void)splashAdLoadSuccess:(NSObject<ABUBaidu_BaiduMobAdSplash> *)arg1;
 - (void)splashDidReady:(NSObject<ABUBaidu_BaiduMobAdSplash> *)arg1 AndAdType:(NSString *)arg2 VideoDuration:(long long)arg3;

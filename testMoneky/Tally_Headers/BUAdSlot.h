@@ -6,7 +6,7 @@
 
 #import "BUInterfaceBaseObject.h"
 
-@class BUSize, NSDictionary, NSMutableArray, NSString;
+@class BUAdSlotMediation, BUSize, NSDictionary, NSMutableArray, NSString;
 
 @interface BUAdSlot : BUInterfaceBaseObject
 {
@@ -16,6 +16,7 @@
 - (void).cxx_destruct;
 @property(retain, nonatomic) BUAdSlot *iteration; // @synthesize iteration=_iteration;
 - (id)init;
+@property(readonly, nonatomic) BUAdSlotMediation *mediation;
 
 // Remaining properties
 @property(nonatomic) long long AdType; // @dynamic AdType;
@@ -24,11 +25,10 @@
 @property(nonatomic) struct CGSize adSize; // @dynamic adSize;
 @property(nonatomic) long long adloadSeq; // @dynamic adloadSeq;
 @property(copy, nonatomic) NSDictionary *ext; // @dynamic ext;
+@property(nonatomic) _Bool groupLoadMore; // @dynamic groupLoadMore;
 @property(retain, nonatomic) BUSize *iconSize; // @dynamic iconSize;
 @property(retain, nonatomic) BUSize *imgSize; // @dynamic imgSize;
 @property(retain, nonatomic) NSMutableArray *imgSizeArray; // @dynamic imgSizeArray;
-@property(nonatomic) _Bool isOriginAd; // @dynamic isOriginAd;
-@property(nonatomic) _Bool isSupportDeepLink; // @dynamic isSupportDeepLink;
 @property(nonatomic) long long position; // @dynamic position;
 @property(copy, nonatomic) NSString *previewAdID; // @dynamic previewAdID;
 @property(copy, nonatomic) NSString *previewCreativeID; // @dynamic previewCreativeID;

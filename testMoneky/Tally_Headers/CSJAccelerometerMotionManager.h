@@ -6,37 +6,31 @@
 
 #import <objc/NSObject.h>
 
-@class CMMotionManager, NSMapTable, NSOperationQueue;
+@class NSMapTable, NSMutableDictionary, NSOperationQueue;
 
 @interface CSJAccelerometerMotionManager : NSObject
 {
     _Bool _triggerFromWeb;
-    CDUnknownBlockType _acceleroMotionAction;
     long long _calculationMethod;
     double _amplitude;
-    CMMotionManager *_motionManager;
     NSMapTable *_managerContainer;
     NSOperationQueue *_updatesQueue;
+    NSMutableDictionary *_triggerFromWebInfo;
 }
 
 + (id)sharedInstance;
 - (void).cxx_destruct;
+@property(retain, nonatomic) NSMutableDictionary *triggerFromWebInfo; // @synthesize triggerFromWebInfo=_triggerFromWebInfo;
+@property(nonatomic) _Bool triggerFromWeb; // @synthesize triggerFromWeb=_triggerFromWeb;
 @property(retain, nonatomic) NSOperationQueue *updatesQueue; // @synthesize updatesQueue=_updatesQueue;
 @property(retain, nonatomic) NSMapTable *managerContainer; // @synthesize managerContainer=_managerContainer;
-@property(retain, nonatomic) CMMotionManager *motionManager; // @synthesize motionManager=_motionManager;
 @property(nonatomic) double amplitude; // @synthesize amplitude=_amplitude;
 @property(nonatomic) long long calculationMethod; // @synthesize calculationMethod=_calculationMethod;
-@property(nonatomic) _Bool triggerFromWeb; // @synthesize triggerFromWeb=_triggerFromWeb;
-@property(copy, nonatomic) CDUnknownBlockType acceleroMotionAction; // @synthesize acceleroMotionAction=_acceleroMotionAction;
-- (void)dealloc;
+- (_Bool)triggerFromWebWithScence:(id)arg1;
 - (_Bool)accelerometerActiveWithScence:(id)arg1;
-@property(readonly, nonatomic) _Bool accelerometerActive;
-- (void)outputAccelertionData:(CDStruct_31142d93)arg1 amplitude:(double)arg2 calculateMethod:(long long)arg3 acceleroMotionAction:(CDUnknownBlockType)arg4;
 - (void)outputAccelertionData:(CDStruct_31142d93)arg1 amplitude:(double)arg2 scence:(id)arg3 calculateMethod:(long long)arg4 acceleroMotionAction:(CDUnknownBlockType)arg5;
 - (void)stopAccelerometerWithScence:(id)arg1;
-- (void)startAccelerometerWithAmplitude:(double)arg1 scence:(id)arg2 calculateMethod:(long long)arg3 acceleroMotionAction:(CDUnknownBlockType)arg4;
-- (void)stopAccelerometer;
-- (void)startAccelerometerWithAmplitude:(double)arg1 triggerFromWeb:(_Bool)arg2;
+- (void)startAccelerometerWithAmplitude:(double)arg1 triggerFromWeb:(_Bool)arg2 scence:(id)arg3 calculateMethod:(long long)arg4 acceleroMotionAction:(CDUnknownBlockType)arg5;
 - (id)init;
 
 @end

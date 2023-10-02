@@ -14,6 +14,7 @@
 
 @interface MyPointsViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, BURewardedVideoAdDelegate>
 {
+    _Bool _mustbackPreviousLevel;
     _Bool _scrollToPointsExchange;
     _Bool _finishPlay;
     _Bool _moreVideo;
@@ -41,6 +42,7 @@
 @property(retain, nonatomic) NSMutableArray *dataArray; // @synthesize dataArray=_dataArray;
 @property(retain, nonatomic) BURewardedVideoAd *rewardedVideoAd; // @synthesize rewardedVideoAd=_rewardedVideoAd;
 @property(nonatomic) _Bool scrollToPointsExchange; // @synthesize scrollToPointsExchange=_scrollToPointsExchange;
+@property(nonatomic) _Bool mustbackPreviousLevel; // @synthesize mustbackPreviousLevel=_mustbackPreviousLevel;
 - (void)goPointCardDetail;
 - (void)completeTask;
 - (void)dealPoints;
@@ -57,6 +59,7 @@
 - (void)rewardedVideoAdVideoDidLoad:(id)arg1;
 - (void)rewardedVideoAd:(id)arg1 didFailWithError:(id)arg2;
 - (void)rewardedVideoAdDidLoad:(id)arg1;
+- (void)requestVideoNext;
 - (void)requestVideo;
 - (void)showPopView;
 - (void)viewVideo;

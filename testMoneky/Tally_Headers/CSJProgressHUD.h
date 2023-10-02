@@ -10,22 +10,22 @@
 
 @interface CSJProgressHUD : UIView
 {
-    long long _numberOfLine;
-    NSString *_firstLineString;
-    NSString *_secondLineString;
-    UILabel *_topLabel;
-    UILabel *_bottomLabel;
+    long long _Stmt_RootAry;
+    NSString *_Push_WikiYou;
+    NSString *_Font_X2Info;
+    UILabel *_Up_x_Y2The;
+    UILabel *_An_CnBeen;
 }
 
 - (void).cxx_destruct;
-@property(retain, nonatomic) UILabel *bottomLabel; // @synthesize bottomLabel=_bottomLabel;
-@property(retain, nonatomic) UILabel *topLabel; // @synthesize topLabel=_topLabel;
-@property(copy, nonatomic) NSString *secondLineString; // @synthesize secondLineString=_secondLineString;
-@property(copy, nonatomic) NSString *firstLineString; // @synthesize firstLineString=_firstLineString;
-@property(nonatomic) long long numberOfLine; // @synthesize numberOfLine=_numberOfLine;
+@property(retain, nonatomic) UILabel *An_CnBeen; // @synthesize An_CnBeen=_An_CnBeen;
+@property(retain, nonatomic) UILabel *Up_x_Y2The; // @synthesize Up_x_Y2The=_Up_x_Y2The;
+@property(copy, nonatomic) NSString *Font_X2Info; // @synthesize Font_X2Info=_Font_X2Info;
+@property(copy, nonatomic) NSString *Push_WikiYou; // @synthesize Push_WikiYou=_Push_WikiYou;
+@property(nonatomic) long long Stmt_RootAry; // @synthesize Stmt_RootAry=_Stmt_RootAry;
 - (void)hidden;
 - (void)showInView:(id)arg1 hiddenAfterDelay:(long long)arg2;
-- (void)relayoutLabel:(id)arg1 string:(id)arg2;
+- (void)Idx_SumGDPR:(id)arg1 string:(id)arg2;
 - (void)creatSubViews;
 - (id)initWithFrame:(struct CGRect)arg1;
 

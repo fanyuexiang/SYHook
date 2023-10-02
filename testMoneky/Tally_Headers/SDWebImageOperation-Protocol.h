@@ -8,5 +8,8 @@
 
 @protocol SDWebImageOperation <NSObject>
 - (void)cancel;
+
+@optional
+@property(readonly, nonatomic, getter=isCancelled) _Bool cancelled;
 @end
 

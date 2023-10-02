@@ -6,7 +6,7 @@
 
 #import <UIKit/UIView.h>
 
-@class UIButton, UIImageView, UILabel;
+@class AdjustButton, UIButton, UIImageView, UILabel;
 
 @interface AssetDetailHeaderView : UIView
 {
@@ -21,14 +21,18 @@
     UILabel *_statusLab;
     UIButton *_editBtn;
     UILabel *_headerTitleLab;
+    AdjustButton *_dateBtn;
     CDUnknownBlockType _changeAmountBlock;
+    CDUnknownBlockType _clickDateBlock;
     struct UIEdgeInsets _edgeInsets;
 }
 
 + (double)regetAllHeight;
 - (void).cxx_destruct;
 @property(nonatomic) struct UIEdgeInsets edgeInsets; // @synthesize edgeInsets=_edgeInsets;
+@property(copy, nonatomic) CDUnknownBlockType clickDateBlock; // @synthesize clickDateBlock=_clickDateBlock;
 @property(copy, nonatomic) CDUnknownBlockType changeAmountBlock; // @synthesize changeAmountBlock=_changeAmountBlock;
+@property(retain, nonatomic) AdjustButton *dateBtn; // @synthesize dateBtn=_dateBtn;
 @property(retain, nonatomic) UILabel *headerTitleLab; // @synthesize headerTitleLab=_headerTitleLab;
 @property(retain, nonatomic) UIButton *editBtn; // @synthesize editBtn=_editBtn;
 @property(retain, nonatomic) UILabel *statusLab; // @synthesize statusLab=_statusLab;
@@ -42,6 +46,7 @@
 @property(retain, nonatomic) UIView *bgView; // @synthesize bgView=_bgView;
 - (void)reloadData;
 - (void)clearData;
+- (void)dateAction:(id)arg1;
 - (void)changeAmountAction;
 - (void)setupViews;
 - (id)initWithFrame:(struct CGRect)arg1;

@@ -17,7 +17,9 @@
 - (void).cxx_destruct;
 @property(nonatomic) _Bool needCloseWithAddFinished; // @synthesize needCloseWithAddFinished=_needCloseWithAddFinished;
 - (void)backAction;
+- (void)viewWillAppear:(_Bool)arg1;
 - (void)viewDidLoad;
+- (id)curThemeItem;
 
 @end
 

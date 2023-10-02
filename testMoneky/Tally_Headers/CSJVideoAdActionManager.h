@@ -11,7 +11,7 @@
 }
 
 + (id)sharedManager;
-- (_Bool)handleVideoAdActionWithModel:(id)arg1 context:(id)arg2;
+- (_Bool)Pop_ExtOf:(id)arg1 context:(id)arg2;
 
 @end
 

@@ -6,30 +6,64 @@
 
 #import <UIKit/UIViewController.h>
 
-@class GLWXLoginGuideController, RegisterAgreePrivacyView, WXLoginButton;
+#import "UIGestureRecognizerDelegate-Protocol.h"
 
-@interface GLWXLoginController : UIViewController
+@class GLWXLoginGuideController, NSString, RegisterAgreePrivacyPopupViewController, RegisterAgreePrivacyView, UIButton, UIPanGestureRecognizer, UIView, WXLoginButton;
+
+@interface GLWXLoginController : UIViewController <UIGestureRecognizerDelegate>
 {
     _Bool _agreementTipShow;
+    double _viewTop;
+    double _duration;
+    double _perDuration;
+    double _colorAlpha;
+    double _perColorAlpha;
+    UIButton *_topBtn;
+    UIView *_mainView;
     WXLoginButton *_wxLoginBtn;
     RegisterAgreePrivacyView *_privacyView;
+    RegisterAgreePrivacyPopupViewController *_privacyPopupCtr;
     GLWXLoginGuideController *_guideCtr;
+    UIPanGestureRecognizer *_panGesture;
+    struct CGPoint _currentPoint;
 }
 
 - (void).cxx_destruct;
+@property(retain, nonatomic) UIPanGestureRecognizer *panGesture; // @synthesize panGesture=_panGesture;
 @property(nonatomic) __weak GLWXLoginGuideController *guideCtr; // @synthesize guideCtr=_guideCtr;
 @property(nonatomic) _Bool agreementTipShow; // @synthesize agreementTipShow=_agreementTipShow;
+@property(nonatomic) __weak RegisterAgreePrivacyPopupViewController *privacyPopupCtr; // @synthesize privacyPopupCtr=_privacyPopupCtr;
 @property(retain, nonatomic) RegisterAgreePrivacyView *privacyView; // @synthesize privacyView=_privacyView;
 @property(retain, nonatomic) WXLoginButton *wxLoginBtn; // @synthesize wxLoginBtn=_wxLoginBtn;
+@property(retain, nonatomic) UIView *mainView; // @synthesize mainView=_mainView;
+@property(retain, nonatomic) UIButton *topBtn; // @synthesize topBtn=_topBtn;
+@property(nonatomic) struct CGPoint currentPoint; // @synthesize currentPoint=_currentPoint;
+@property(nonatomic) double perColorAlpha; // @synthesize perColorAlpha=_perColorAlpha;
+@property(nonatomic) double colorAlpha; // @synthesize colorAlpha=_colorAlpha;
+@property(nonatomic) double perDuration; // @synthesize perDuration=_perDuration;
+@property(nonatomic) double duration; // @synthesize duration=_duration;
+@property(nonatomic) double viewTop; // @synthesize viewTop=_viewTop;
+- (void)dismiss:(_Bool)arg1 finishBlock:(CDUnknownBlockType)arg2;
+- (void)show:(_Bool)arg1;
+- (_Bool)gestureRecognizer:(id)arg1 shouldRecognizeSimultaneouslyWithGestureRecognizer:(id)arg2;
+- (double)recalculateCloseAnimationDuration;
+- (double)recalculateShowAnimationDuration;
+- (void)dynamicChangeBackgroundColor;
+- (void)panEndAction;
+- (void)panGestureAction:(id)arg1;
 - (void)registerAction;
-- (void)phoneLoginAction;
-- (void)moreLogin;
 - (void)wxLogin:(id)arg1;
-- (void)closeActionAnimated:(_Bool)arg1;
-- (void)registerTipShow;
+- (void)closeAction;
+- (void)registerTipShow:(SEL)arg1 Obj:(id)arg2;
 - (void)setupContentView;
 - (void)viewDidLoad;
 - (void)dealloc;
+
+// Remaining properties
+@property(readonly, copy) NSString *debugDescription;
+@property(readonly, copy) NSString *description;
+@property(readonly) unsigned long long hash;
+@property(readonly) Class superclass;
 
 @end
 

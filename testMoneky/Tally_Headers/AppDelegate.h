@@ -6,23 +6,22 @@
 
 #import <UIKit/UIResponder.h>
 
-#import "ABUSplashAdDelegate-Protocol.h"
 #import "BUSplashAdDelegate-Protocol.h"
 #import "GDTSplashAdDelegate-Protocol.h"
 #import "UIApplicationDelegate-Protocol.h"
 #import "UNUserNotificationCenterDelegate-Protocol.h"
 
-@class ABUSplashAd, BUSplashAd, FCXGestureController, GDTSplashAd, NSDate, NSString, SKSplashSkipView, SplashCountdownButton, UIImageView, UITabBarController, UIView, UIWindow, VIPPopupManager;
+@class BUSplashAd, FCXGestureController, GDTSplashAd, NSDate, NSMutableArray, NSString, SKSplashSkipView, SplashCountdownButton, UIImageView, UITabBarController, UIView, UIWindow, VIPPopupManager;
 
-@interface AppDelegate : UIResponder <GDTSplashAdDelegate, BUSplashAdDelegate, ABUSplashAdDelegate, UNUserNotificationCenterDelegate, UIApplicationDelegate>
+@interface AppDelegate : UIResponder <GDTSplashAdDelegate, BUSplashAdDelegate, UNUserNotificationCenterDelegate, UIApplicationDelegate>
 {
+    NSDate *_gestureDate;
     _Bool _isShowSplash;
     _Bool _hasShowConvert;
     VIPPopupManager *_vipPopupManager;
     _Bool _isADClear;
     double _adResTime;
     _Bool isQuickType;
-    NSDate *_gestureDate;
     _Bool _isShowPwd;
     UIImageView *_topicon;
     _Bool _notShowS;
@@ -32,6 +31,7 @@
     _Bool _enterForegroundNeedShowSplashAd;
     UIWindow *_window;
     long long _networkStatus;
+    NSMutableArray *_adtestInfo;
     FCXGestureController *_gestureController;
 }
 
@@ -39,6 +39,8 @@
 + (void)swizzleInstanceMethodWithClass:(Class)arg1 originalSelector:(SEL)arg2 swizzledMethod:(SEL)arg3;
 - (void).cxx_destruct;
 @property(nonatomic) __weak FCXGestureController *gestureController; // @synthesize gestureController=_gestureController;
+@property(retain, nonatomic) VIPPopupManager *vipPopupManager; // @synthesize vipPopupManager=_vipPopupManager;
+@property(retain, nonatomic) NSMutableArray *adtestInfo; // @synthesize adtestInfo=_adtestInfo;
 @property(nonatomic) long long networkStatus; // @synthesize networkStatus=_networkStatus;
 @property(nonatomic) _Bool enterForegroundNeedShowSplashAd; // @synthesize enterForegroundNeedShowSplashAd=_enterForegroundNeedShowSplashAd;
 @property(nonatomic) _Bool enterForegroundFromHalfHour; // @synthesize enterForegroundFromHalfHour=_enterForegroundFromHalfHour;
@@ -55,6 +57,8 @@
 - (void)ADEnd:(_Bool)arg1;
 - (id)czTopViewController;
 - (void)jumptoVIP;
+- (_Bool)canHandleWidgetURLTallyTemplate:(id)arg1;
+- (_Bool)canHandleWidgetURLExpendIncome_MediumExpendIncomeSurplus:(id)arg1;
 - (void)application:(id)arg1 didReceiveLocalNotification:(id)arg2;
 - (_Bool)application:(id)arg1 openURL:(id)arg2 sourceApplication:(id)arg3 annotation:(id)arg4;
 - (_Bool)application:(id)arg1 openURL:(id)arg2 options:(id)arg3;
@@ -68,8 +72,8 @@
 - (void)applicationDidEnterBackground:(id)arg1;
 - (id)screenShot;
 - (void)applicationWillResignActive:(id)arg1;
-- (void)newTally:(long long)arg1 shortcutInfo:(id)arg2;
-- (void)goTally:(long long)arg1 shortcutInfo:(id)arg2;
+- (void)newTally:(long long)arg1 shortcutInfo:(id)arg2 showTallyDetail:(_Bool)arg3;
+- (void)goTally:(long long)arg1 shortcutInfo:(id)arg2 showTallyDetail:(_Bool)arg3;
 - (void)application:(id)arg1 performActionForShortcutItem:(id)arg2 completionHandler:(CDUnknownBlockType)arg3;
 - (void)application:(id)arg1 didReceiveRemoteNotification:(id)arg2;
 - (void)userNotificationCenter:(id)arg1 didReceiveNotificationResponse:(id)arg2 withCompletionHandler:(CDUnknownBlockType)arg3;
@@ -97,14 +101,13 @@
 - (void)setupThirdSDK;
 - (void)setupConfigsWithSDKWebImage;
 - (void)handleNetworkRequest;
-- (void)splashAdDidClose:(id)arg1;
-- (void)splashAdDidShowFailed:(id)arg1 error:(id)arg2;
-- (void)splashAdWillVisible:(id)arg1;
-- (void)splashAd:(id)arg1 didFailWithError:(id)arg2;
-- (void)splashAdDidLoad:(id)arg1;
-- (void)setupGroMore:(id)arg1 withpid:(id)arg2;
+- (void)useMediationSettings;
+@property(nonatomic) _Bool requestGromoreFailed;
+@property(nonatomic) _Bool revealSuc;
+@property(nonatomic) long long adType;
+- (void)showRevealAD;
 @property(retain, nonatomic) NSDate *GroMoreStartTime;
-@property(retain, nonatomic) ABUSplashAd *abuSplash;
+@property(retain, nonatomic) BUSplashAd *abuSplash;
 - (void)hiddenStatusBar;
 - (void)recoveryStatusBarLastState;
 @property(nonatomic) _Bool lastStatusBarHidden;
@@ -125,7 +128,9 @@
 - (void)splashAdRenderFail:(id)arg1 error:(id)arg2;
 - (void)splashAdLoadFail:(id)arg1 error:(id)arg2;
 - (void)jumptoADAction;
+- (void)showBuAD:(id)arg1;
 - (void)splashAdLoadSuccess:(id)arg1;
+- (void)addABUSplashAD:(id)arg1 withpid:(id)arg2;
 - (void)addBuSplashAD:(id)arg1 withpid:(id)arg2;
 @property(retain, nonatomic) BUSplashAd *buSplash;
 - (void)splashAdDidDismissFullScreenModal:(id)arg1;
@@ -135,6 +140,8 @@
 - (void)splashAdClicked:(id)arg1;
 - (void)splashAdFailToPresent:(id)arg1 withError:(id)arg2;
 - (void)splashAdSuccessPresentScreen:(id)arg1;
+- (void)splashAdDidLoad:(id)arg1;
+- (void)showGDTSplash;
 - (void)setupGDTS:(id)arg1 withpid:(id)arg2;
 @property(retain, nonatomic) GDTSplashAd *gdtSplash;
 @property(retain, nonatomic) SKSplashSkipView *skipView;
@@ -147,6 +154,13 @@
 - (void)fcx_applicationWillEnterForeground:(id)arg1;
 - (void)fcx_applicationDidEnterBackground:(id)arg1;
 - (_Bool)fcx_application:(id)arg1 didFinishLaunchingWithOptions:(id)arg2;
+- (id)goTallyTemplateList:(id)arg1;
+- (void)handleWidgetURLTallyTemplateViewController:(CDUnknownBlockType)arg1;
+- (void)handleWidgetURLTallyTemplateWithTallyEditNext:(id)arg1;
+- (void)handleWidgetURLTallyTemplateWithTallyEdit:(id)arg1;
+- (void)handleWidgetURLTallyTemplateWithTallyNext:(id)arg1;
+- (void)handleWidgetURLTallyTemplateWithTally:(id)arg1;
+- (void)handleWidgetURLTallyTemplateWithList;
 - (id)handle_showGestureController:(id)arg1 autoShowFinger:(_Bool)arg2;
 - (void)handle_changeTabBarControllerSelectIndex:(long long)arg1 finishHandle:(CDUnknownBlockType)arg2;
 - (void)handleFamillyBills_changeTabBarControllerSelectIndex:(long long)arg1 finishHandle:(CDUnknownBlockType)arg2;

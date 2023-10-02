@@ -35,7 +35,6 @@
 @property(copy, nonatomic) CDUnknownBlockType closeBlock; // @synthesize closeBlock=_closeBlock;
 - (void)showToastView:(id)arg1;
 - (void)copyLink:(id)arg1;
-- (void)webViewDidFinishLoad:(id)arg1;
 - (void)webViewWebContentProcessDidTerminate:(id)arg1;
 - (void)goback:(id)arg1;
 - (void)createNavigationItems;
@@ -44,7 +43,6 @@
 - (unsigned long long)supportedInterfaceOrientations;
 - (_Bool)shouldAutorotate;
 - (void)viewWillLayoutSubviews;
-- (void)viewWillAppear:(_Bool)arg1;
 - (void)viewDidLoad;
 - (id)initWithSize:(struct CGSize)arg1;
 - (id)initWithMaterialMeta:(id)arg1;

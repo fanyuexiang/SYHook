@@ -14,25 +14,25 @@
 @interface CSJDynamicRenderNativeStrategy : CSJDynamicRenderStrategy <CSJDynamicViewDelegate, CSJDynamicEngineDelegate>
 {
     CSJDynamicView *_dynamicView;
-    CSJDynamicEngine *_dynamicEngine;
+    CSJDynamicEngine *_Vc_IdCopy;
     BUTimer *_renderTimer;
 }
 
 - (void).cxx_destruct;
 @property(retain, nonatomic) BUTimer *renderTimer; // @synthesize renderTimer=_renderTimer;
-@property(retain, nonatomic) CSJDynamicEngine *dynamicEngine; // @synthesize dynamicEngine=_dynamicEngine;
+@property(retain, nonatomic) CSJDynamicEngine *Vc_IdCopy; // @synthesize Vc_IdCopy=_Vc_IdCopy;
 @property(retain, nonatomic) CSJDynamicView *dynamicView; // @synthesize dynamicView=_dynamicView;
-- (id)logKeyName;
+- (id)Use_HttpIos;
 - (long long)renderType;
-- (void)sendShowToast:(id)arg1;
-- (id)layoutDebugInfoKey;
-- (long long)timeoutErrorCode;
-- (long long)dynamicEngineVersion;
+- (void)Out_MaskNb:(id)arg1;
+- (id)Rect_IdfaShow;
+- (long long)Tmp_FtcMute;
+- (long long)NO_HttpCls;
 - (id)dynamic_render_success;
 - (id)dynamic_render_error;
 - (id)dynamic_render_start;
 - (double)timeout;
-- (void)pbu_renderEndWithSuccessView:(id)arg1 error:(id)arg2;
+- (void)Font_GDPRX1:(id)arg1 error:(id)arg2;
 - (void)dynamicView_show_SKOverlay;
 - (void)dynamicView_interstitial_webview_close;
 - (void)dynamicView_openPrivacy;
@@ -43,17 +43,18 @@
 - (void)dynamicView_renderDidFinishWithParams:(id)arg1;
 - (void)dynamicView_adAnalysisDataWithParams:(id)arg1;
 - (void)dynamicView_clickEventWithParams:(id)arg1;
+- (void)It_Y1CCPA:(id)arg1 data:(id)arg2;
 - (void)endRenderInDynamicEngine:(id)arg1 error:(id)arg2;
 - (void)middleRenderInDynamicEngine:(id)arg1 dynamicView:(id)arg2 error:(id)arg3;
 - (void)beginRenderInDynamicEngine:(id)arg1;
-- (void)endParseInDynamicEngine:(id)arg1 layoutInfo:(id)arg2 error:(id)arg3;
+- (void)endParseInDynamicEngine:(id)arg1 error:(id)arg2;
 - (void)beginParseInDynamicEngine:(id)arg1;
 - (double)timeOut;
 - (void)renderTimerAction;
-- (void)stopRenderTimer;
-- (void)startRenderTimerWithTimeInterval:(double)arg1;
-- (void)updateWithThemeStatus:(long long)arg1;
-- (void)executeRender;
+- (void)Id_OrgGet;
+- (void)Url_WhenMust:(double)arg1;
+- (void)Init_OrVar:(long long)arg1;
+- (void)When_IdfvItem;
 - (void)render;
 
 // Remaining properties

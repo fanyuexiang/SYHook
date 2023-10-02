@@ -6,18 +6,23 @@
 
 #import <objc/NSObject.h>
 
-@class ATAddController;
+@class ATAddController, NSDictionary;
 
 @interface ATAction : NSObject
 {
     _Bool _selectedEndTime;
     ATAddController *_controller;
+    NSDictionary *_customdic;
 }
 
 + (void)requestAutoTallyHomeData:(id)arg1 finish:(CDUnknownBlockType)arg2 failure:(CDUnknownBlockType)arg3;
 - (void).cxx_destruct;
+@property(retain, nonatomic) NSDictionary *customdic; // @synthesize customdic=_customdic;
 @property(nonatomic) _Bool selectedEndTime; // @synthesize selectedEndTime=_selectedEndTime;
 @property(nonatomic) __weak ATAddController *controller; // @synthesize controller=_controller;
+- (void)showCustomPeriod;
+- (void)goSelectLabel:(id)arg1;
+- (void)goSelectAccount:(id)arg1;
 - (void)networkDeleteDataWithServerID:(id)arg1 finish:(CDUnknownBlockType)arg2;
 - (void)deleteAutoTallyWithServerID:(id)arg1 finish:(CDUnknownBlockType)arg2;
 - (void)editAddDataInfo:(id)arg1;

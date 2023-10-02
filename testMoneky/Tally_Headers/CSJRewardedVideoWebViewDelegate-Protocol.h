@@ -15,7 +15,7 @@
 - (void)setCurrentVideoProgress:(long long)arg1;
 - (long long)currentVideoProgress;
 - (void)updateNativeTitleBar:(_Bool)arg1;
-- (void)rewardedVideoInteractiveSkip:(long long)arg1;
+- (void)Mask_LockTry:(long long)arg1;
 - (void)showRewardBrowseEcomAlert:(NSDictionary *)arg1;
 - (void)playableRenderFaild:(CSJRewardedVideoWebViewController *)arg1;
 - (void)rewardedVideoWebViewControllerOpenUrlWithParams:(NSDictionary *)arg1;

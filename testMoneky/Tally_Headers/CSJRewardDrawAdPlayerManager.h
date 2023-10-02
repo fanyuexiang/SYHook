@@ -10,16 +10,16 @@
 
 @interface CSJRewardDrawAdPlayerManager : NSObject
 {
-    NSMutableArray *_playersIdle;
-    NSMutableArray *_playersUsing;
+    NSMutableArray *_Desc_TODODo;
+    NSMutableArray *_Y1_DoPop;
 }
 
 + (id)sharedInstance;
 - (void).cxx_destruct;
-@property(retain, nonatomic) NSMutableArray *playersUsing; // @synthesize playersUsing=_playersUsing;
-@property(retain, nonatomic) NSMutableArray *playersIdle; // @synthesize playersIdle=_playersIdle;
-- (void)deallocAllPlayers;
-- (void)releasePlayer:(id)arg1;
+@property(retain, nonatomic) NSMutableArray *Y1_DoPop; // @synthesize Y1_DoPop=_Y1_DoPop;
+@property(retain, nonatomic) NSMutableArray *Desc_TODODo; // @synthesize Desc_TODODo=_Desc_TODODo;
+- (void)Root_JsY1;
+- (void)At_BeAds:(id)arg1;
 - (id)playerWithPlayerItem:(id)arg1;
 
 @end

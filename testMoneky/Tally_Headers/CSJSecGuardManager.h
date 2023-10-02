@@ -18,9 +18,9 @@
 
 + (id)sharedInstance;
 - (void).cxx_destruct;
-@property(retain, nonatomic) id SGMSafeGuardManager; // @synthesize SGMSafeGuardManager=_SGMSafeGuardManager;
-@property(copy, nonatomic) NSString *dc; // @synthesize dc=_dc;
-@property(copy, nonatomic) NSString *device_id; // @synthesize device_id=_device_id;
+@property(retain) id SGMSafeGuardManager; // @synthesize SGMSafeGuardManager=_SGMSafeGuardManager;
+@property(copy) NSString *dc; // @synthesize dc=_dc;
+@property(copy) NSString *device_id; // @synthesize device_id=_device_id;
 @property(nonatomic) _Bool initialized; // @synthesize initialized=_initialized;
 - (id)sgm_customInfoDic;
 - (id)sgm_installChannel;
@@ -35,6 +35,7 @@
 - (id)getMsDidToken;
 - (id)doHttpReqSignByUrl:(id)arg1 body:(id)arg2;
 - (id)bodyEncry:(id)arg1;
+- (void)reportForScene;
 - (void)sendWithDid:(id)arg1;
 - (void)setupSecSDK;
 - (id)init;

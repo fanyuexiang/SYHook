@@ -8,14 +8,15 @@
 
 #import "CSJAdClientBiddingProtocol-Protocol.h"
 #import "CSJMopubAdMarkUpDelegate-Protocol.h"
-#import "CSJNativeAdShakeTriggerDelegate-Protocol.h"
 #import "CSJNativeExpressAdConverterDelegate-Protocol.h"
 #import "CSJNativeExpressAdViewDelegate-Protocol.h"
+#import "CSJShakeTriggerDataSource-Protocol.h"
+#import "CSJShakeTriggerDelegate-Protocol.h"
 
 @class BUTimer, CSJAdClientBiddingHandle, CSJAdInfoViewModel, CSJAdSlot, CSJDislikeButton, CSJDislikeContext, CSJMaterialMeta, CSJNativeExpressAdConverter, CSJVideoAdView, CSJViewShowAreaTracker, NSArray, NSDate, NSHashTable, NSMapTable, NSMutableDictionary, NSPointerArray, NSString, UITapGestureRecognizer, UIView, UIViewController;
-@protocol CSJNativeAdDelegate, CSJNativeAdShakeTriggerDelegate, OS_dispatch_semaphore;
+@protocol CSJNativeAdDelegate, CSJShakeTriggerDelegate, OS_dispatch_semaphore;
 
-@interface CSJNativeAd : NSObject <CSJNativeExpressAdConverterDelegate, CSJNativeExpressAdViewDelegate, CSJNativeAdShakeTriggerDelegate, CSJMopubAdMarkUpDelegate, CSJAdClientBiddingProtocol>
+@interface CSJNativeAd : NSObject <CSJShakeTriggerDataSource, CSJShakeTriggerDelegate, CSJNativeExpressAdConverterDelegate, CSJNativeExpressAdViewDelegate, CSJMopubAdMarkUpDelegate, CSJAdClientBiddingProtocol>
 {
     _Bool _didSetADM;
     _Bool _trakerRepeat;
@@ -51,7 +52,6 @@
     long long _drawVideoType;
     CSJAdInfoViewModel *_infoViewModel;
     CSJAdClientBiddingHandle *_clientBiddingHandle;
-    id <CSJNativeAdShakeTriggerDelegate> _shakeTriggerDelegate;
     CDUnknownBlockType _showBlock;
     struct CGRect _containerOriginRect;
 }
@@ -59,13 +59,12 @@
 + (void)splitNativeAdArray:(id)arg1 inNormalRenderArray:(id)arg2 inDynamicRenderArray:(id)arg3;
 - (void).cxx_destruct;
 @property(copy, nonatomic) CDUnknownBlockType showBlock; // @synthesize showBlock=_showBlock;
-@property(nonatomic) __weak id <CSJNativeAdShakeTriggerDelegate> shakeTriggerDelegate; // @synthesize shakeTriggerDelegate=_shakeTriggerDelegate;
 @property(retain, nonatomic) CSJAdClientBiddingHandle *clientBiddingHandle; // @synthesize clientBiddingHandle=_clientBiddingHandle;
 @property(retain, nonatomic) CSJAdInfoViewModel *infoViewModel; // @synthesize infoViewModel=_infoViewModel;
 @property(nonatomic) _Bool isNativeExpress; // @synthesize isNativeExpress=_isNativeExpress;
 @property(nonatomic) long long drawVideoType; // @synthesize drawVideoType=_drawVideoType;
 @property(retain, nonatomic) NSMapTable *weakCache; // @synthesize weakCache=_weakCache;
-@property(retain, nonatomic) CSJVideoAdView *videoAdView; // @synthesize videoAdView=_videoAdView;
+@property(nonatomic) __weak CSJVideoAdView *videoAdView; // @synthesize videoAdView=_videoAdView;
 @property(retain, nonatomic) CSJDislikeButton *dislikeButton; // @synthesize dislikeButton=_dislikeButton;
 @property(nonatomic) double showTime; // @synthesize showTime=_showTime;
 @property(nonatomic) _Bool shouldResetShowTime; // @synthesize shouldResetShowTime=_shouldResetShowTime;
@@ -113,7 +112,7 @@
 - (void)safeDelegate_nativeAdDidBecomeVisible:(id)arg1;
 - (void)safeDelegate_nativeAd:(id)arg1 didFailWithError:(id)arg2;
 - (void)safeDelegate_nativeAdDidLoad:(id)arg1 view:(id)arg2;
-- (void)shakeTriggerWithNativieAd:(id)arg1;
+- (void)shakeTriggerWithDataSource:(id)arg1;
 - (void)nativeExpressAdViewDidCloseOtherController:(id)arg1 interactionType:(long long)arg2;
 - (void)nativeExpressAdViewWillPresentScreen:(id)arg1;
 - (void)nativeExpressAdView:(id)arg1 dislikeWithReason:(id)arg2;
@@ -134,7 +133,6 @@
 - (_Bool)pbu_markupPreFetchAdm:(id)arg1 success:(CDUnknownBlockType)arg2 failure:(CDUnknownBlockType)arg3;
 - (_Bool)pbu_markupPreCacheAdm:(id)arg1 success:(CDUnknownBlockType)arg2 failure:(CDUnknownBlockType)arg3;
 - (void)pbu_markupAdmWith:(id)arg1 success:(CDUnknownBlockType)arg2 failure:(CDUnknownBlockType)arg3;
-- (void)setMopubAdMarkUp:(id)arg1;
 - (void)setAdMarkup:(id)arg1;
 - (id)getAdCreativeToken;
 @property(retain) CSJMaterialMeta *data; // @synthesize data=_data;
@@ -183,6 +181,11 @@
 - (id)initWithSlot:(id)arg1;
 - (id)init;
 - (void)dealloc;
+- (id)shakeTriggerScene;
+- (long long)calculationMethod;
+@property(nonatomic) _Bool validShakeTrigger;
+- (double)shakeAmplitude;
+@property(nonatomic) __weak id <CSJShakeTriggerDelegate> shakeTriggerDelegate;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

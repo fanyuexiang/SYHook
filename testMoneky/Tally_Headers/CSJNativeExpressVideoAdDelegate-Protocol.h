@@ -6,13 +6,14 @@
 
 #import "NSObject-Protocol.h"
 
-@class NSError;
+@class CSJNativeExpressAdView, NSError;
 
 @protocol CSJNativeExpressVideoAdDelegate <NSObject>
 
 @optional
 - (void)nativeExpressVideoAdServerRewardDidFailWithError:(NSError *)arg1;
 - (void)nativeExpressVideoAdServerRewardDidSucceedVerify:(_Bool)arg1;
+- (void)nativeExpressAdViewDidCloseOtherController:(CSJNativeExpressAdView *)arg1 interactionType:(long long)arg2;
 - (void)nativeExpressVideoAdEndcardDidClose;
 - (void)nativeExpressVideoAdEndcardWillClose;
 - (void)nativeExpressVideoAdDidClickSkip;

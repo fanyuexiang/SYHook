@@ -6,10 +6,12 @@
 
 #import <UIKit/UIView.h>
 
-@class UIViewController;
+#import "BUSplashZoomOutView_MProtocol-Protocol.h"
+
+@class NSString, UIViewController;
 @protocol ABUZoomOutSplashAdDelegate;
 
-@interface ABUSplashZoomOutView : UIView
+@interface ABUSplashZoomOutView : UIView <BUSplashZoomOutView_MProtocol>
 {
     _Bool _hasAnimation;
     UIViewController *_rootViewController;
@@ -31,6 +33,15 @@
 - (void)setSuggestedSize:(struct CGSize)arg1;
 - (id)init;
 - (id)initWithZoomOutView:(id)arg1;
+@property(readonly, nonatomic) struct CGSize showSize;
+- (_Bool)isMemberOfClass:(Class)arg1;
+- (_Bool)isKindOfClass:(Class)arg1;
+
+// Remaining properties
+@property(readonly, copy) NSString *debugDescription;
+@property(readonly, copy) NSString *description;
+@property(readonly) unsigned long long hash;
+@property(readonly) Class superclass;
 
 @end
 

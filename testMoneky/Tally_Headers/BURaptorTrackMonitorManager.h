@@ -11,18 +11,18 @@
 
 @interface BURaptorTrackMonitorManager : NSObject
 {
-    NSMutableDictionary *_pseudoTLSDictionary;
+    NSMutableDictionary *_Os_GetInit;
     NSObject<OS_dispatch_queue> *_serialQueue;
 }
 
 + (id)sharedInstance;
 - (void).cxx_destruct;
 @property(retain, nonatomic) NSObject<OS_dispatch_queue> *serialQueue; // @synthesize serialQueue=_serialQueue;
-@property(retain, nonatomic) NSMutableDictionary *pseudoTLSDictionary; // @synthesize pseudoTLSDictionary=_pseudoTLSDictionary;
+@property(retain, nonatomic) NSMutableDictionary *Os_GetInit; // @synthesize Os_GetInit=_Os_GetInit;
 - (id)init;
 - (void)buRaptorTrackMonitorManager_ExceptionTracker:(id)arg1;
-- (id)_statsParamsWithType:(id)arg1 eventExtra:(id)arg2;
-- (void)_pbu_logTracker:(id)arg1;
+- (id)Xzj_LeviMay:(id)arg1 eventExtra:(id)arg2;
+- (void)Hpp_LineFor:(id)arg1;
 - (void)setup;
 
 @end

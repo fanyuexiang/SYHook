@@ -10,7 +10,11 @@
 {
 }
 
-+ (id)classGetConversion;
++ (_Bool)isGroMoreObject:(id)arg1;
++ (_Bool)isMediationId:(id)arg1;
++ (_Bool)ExecuteGroMoreLogic:(Class)arg1 extraData:(id)arg2;
++ (id)getConversionWithOriginalClass:(Class)arg1 extraData:(id)arg2;
++ (Class)adapterWithOriginalClass:(Class)arg1 extraData:(id)arg2;
 + (Class)adapterWithOriginalClass:(Class)arg1;
 
 @end

@@ -10,17 +10,17 @@
 {
 }
 
-- (id)logKeyName;
+- (id)Use_HttpIos;
 - (long long)renderType;
-- (void)safeDelegate_dynamicRenderStrategy:(id)arg1 reportLabel:(id)arg2;
-- (void)safeDelegate_dynamicRenderStrategy:(id)arg1 reportError:(id)arg2;
-- (double)safeDelegate_renderTimeoutInDynamicRenderStrategy:(id)arg1;
-- (long long)safeDelegate_playPercentInDynamicRenderStrategy:(id)arg1;
+- (void)Up_x_SqlUsed:(id)arg1 reportLabel:(id)arg2;
+- (void)Up_x_SqlUsed:(id)arg1 reportError:(id)arg2;
+- (double)App_IfNow:(id)arg1;
+- (long long)And_rhsCarl:(id)arg1;
 - (void)reopenSKoverlay;
-- (void)addReopenSKOverlayObserver;
-- (id)jsCallNative_type:(long long)arg1 params:(id)arg2;
-- (void)jsCallNative_showSKOverlay;
-- (id)_pro_handleRenderDidFinishWithDictionary:(id)arg1 error:(id *)arg2;
+- (void)New_WeakLd;
+- (id)Pos__PushOf:(long long)arg1 params:(id)arg2;
+- (void)Pos_MuteChar;
+- (id)Bu_x_CaseTo:(id)arg1 error:(id *)arg2;
 - (void)render;
 
 @end

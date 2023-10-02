@@ -14,7 +14,6 @@
 - (void)rewardedVideoAdCallback:(BURewardedVideoAd *)arg1 withType:(unsigned long long)arg2;
 - (void)rewardedVideoAdDidClickSkip:(BURewardedVideoAd *)arg1;
 - (void)rewardedVideoAdServerRewardDidFail:(BURewardedVideoAd *)arg1 error:(NSError *)arg2;
-- (void)rewardedVideoAdServerRewardDidFail:(BURewardedVideoAd *)arg1;
 - (void)rewardedVideoAdServerRewardDidSucceed:(BURewardedVideoAd *)arg1 verify:(_Bool)arg2;
 - (void)rewardedVideoAdDidPlayFinish:(BURewardedVideoAd *)arg1 didFailWithError:(NSError *)arg2;
 - (void)rewardedVideoAdDidClick:(BURewardedVideoAd *)arg1;

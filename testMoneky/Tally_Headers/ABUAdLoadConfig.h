@@ -6,7 +6,7 @@
 
 #import <objc/NSObject.h>
 
-@class ABUMediationSlotConfig, NSArray, NSString;
+@class ABUMediationSlotConfig, NSArray, NSDictionary, NSString;
 
 @interface ABUAdLoadConfig : NSObject
 {
@@ -14,9 +14,13 @@
     ABUMediationSlotConfig *_slotConfig;
     NSString *_linkID;
     long long _preloadType;
+    long long _loadTime;
+    NSDictionary *_filterExtra;
 }
 
 - (void).cxx_destruct;
+@property(copy, nonatomic) NSDictionary *filterExtra; // @synthesize filterExtra=_filterExtra;
+@property(readonly, nonatomic) long long loadTime; // @synthesize loadTime=_loadTime;
 @property(nonatomic) long long preloadType; // @synthesize preloadType=_preloadType;
 @property(readonly, copy, nonatomic) NSString *linkID; // @synthesize linkID=_linkID;
 @property(retain, nonatomic) ABUMediationSlotConfig *slotConfig; // @synthesize slotConfig=_slotConfig;
@@ -24,6 +28,7 @@
 - (void)updateLinkID:(id)arg1;
 @property(readonly, nonatomic) _Bool isPreloadCache;
 @property(readonly, nonatomic) _Bool isPreload;
+- (id)init;
 
 @end
 

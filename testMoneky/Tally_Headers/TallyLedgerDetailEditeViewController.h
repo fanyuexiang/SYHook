@@ -9,21 +9,24 @@
 #import "UITableViewDataSource-Protocol.h"
 #import "UITableViewDelegate-Protocol.h"
 
-@class NSArray, NSString, SKThemeBaseView, TallyLedgerModel, UIImage, UILabel, UITableView;
+@class NSMutableArray, NSMutableDictionary, NSString, SKThemeBaseView, TallyLedgerModel, UIImage, UILabel, UITableView;
 
 @interface TallyLedgerDetailEditeViewController : TallyLedgerViewController <UITableViewDelegate, UITableViewDataSource>
 {
     UITableView *_tableView;
-    NSArray *_titleArray;
     UILabel *_typeLabel;
     UIImage *_remarkimage;
     struct CGSize _remarkimagesize;
     NSString *_serveridTemp;
     TallyLedgerModel *_editModel;
     SKThemeBaseView *_themeView;
+    NSMutableArray *_titleArray;
+    NSMutableDictionary *_titleKeys;
 }
 
 - (void).cxx_destruct;
+@property(retain, nonatomic) NSMutableDictionary *titleKeys; // @synthesize titleKeys=_titleKeys;
+@property(retain, nonatomic) NSMutableArray *titleArray; // @synthesize titleArray=_titleArray;
 @property(retain, nonatomic) SKThemeBaseView *themeView; // @synthesize themeView=_themeView;
 @property(retain, nonatomic) TallyLedgerModel *editModel; // @synthesize editModel=_editModel;
 - (void)labelsClick;
@@ -45,6 +48,7 @@
 - (void)editAction;
 - (void)refreshData;
 - (void)tallyDataEditNotification:(id)arg1;
+- (void)reloadTitleArray;
 - (void)viewWillAppear:(_Bool)arg1;
 - (void)viewDidLoad;
 - (void)shareAction;

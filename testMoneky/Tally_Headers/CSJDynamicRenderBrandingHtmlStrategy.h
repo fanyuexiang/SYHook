@@ -14,31 +14,31 @@
 
 @interface CSJDynamicRenderBrandingHtmlStrategy : CSJRenderStrategy <BUWebViewDelegate, WKNavigationDelegate, UIGestureRecognizerDelegate>
 {
-    _Bool _isLoadFinished;
+    _Bool _isChar_IconNb;
     BUWKWebView *_webview;
     CSJDislikeButton *_dislikeButton;
     UIImageView *_logoImageView;
-    NSDictionary *_eventInfoDic;
+    NSDictionary *_Key_AreaCom;
 }
 
 - (void).cxx_destruct;
-@property(copy, nonatomic) NSDictionary *eventInfoDic; // @synthesize eventInfoDic=_eventInfoDic;
-@property(nonatomic) _Bool isLoadFinished; // @synthesize isLoadFinished=_isLoadFinished;
+@property(copy, nonatomic) NSDictionary *Key_AreaCom; // @synthesize Key_AreaCom=_Key_AreaCom;
+@property(nonatomic) _Bool isChar_IconNb; // @synthesize isChar_IconNb=_isChar_IconNb;
 @property(retain, nonatomic) UIImageView *logoImageView; // @synthesize logoImageView=_logoImageView;
 @property(retain, nonatomic) CSJDislikeButton *dislikeButton; // @synthesize dislikeButton=_dislikeButton;
 @property(retain, nonatomic) BUWKWebView *webview; // @synthesize webview=_webview;
 - (id)c_xyDict:(id)arg1;
-- (id)configWebviewWithFrame:(struct CGRect)arg1;
+- (id)Skip_A1Hpp:(struct CGRect)arg1;
 - (void)observeValueForKeyPath:(id)arg1 ofObject:(id)arg2 change:(id)arg3 context:(void *)arg4;
 - (long long)renderType;
 - (void)tapAdLogo;
 - (void)dislikeAction:(id)arg1;
-- (id)callNative_type:(long long)arg1 params:(id)arg2;
-- (void)sendBrandingBannerLoadFailedTracker;
-- (void)sendBrandingBannerClickTrackerWithEventDic:(id)arg1;
+- (id)Loss_IosMute:(long long)arg1 params:(id)arg2;
+- (void)Int_LogOf;
+- (void)Sdk_ResUrl:(id)arg1;
 - (void)tapGestureAction;
-- (void)handleSafariActionWithModel:(id)arg1;
-- (_Bool)checkValidRequestUrl:(id)arg1;
+- (void)At_LeftY2:(id)arg1;
+- (_Bool)As_NbMap:(id)arg1;
 - (_Bool)gestureRecognizerShouldBegin:(id)arg1;
 - (void)webView:(id)arg1 didFailNavigation:(id)arg2 withError:(id)arg3;
 - (void)webView:(id)arg1 didFinishNavigation:(id)arg2;
@@ -49,8 +49,8 @@
 - (void)webView:(id)arg1 decidePolicyForNavigationResponse:(id)arg2 decisionHandler:(CDUnknownBlockType)arg3;
 - (void)webView:(id)arg1 decidePolicyForNavigationAction:(id)arg2 decisionHandler:(CDUnknownBlockType)arg3;
 - (void)render;
-- (void)setupViewWithFrame:(struct CGRect)arg1;
-- (id)initWithRenderEngineViewModel:(id)arg1 containerView:(id)arg2;
+- (void)YES_ObjCopy:(struct CGRect)arg1;
+- (id)initLR1_FabsA1:(id)arg1 containerView:(id)arg2;
 - (void)dealloc;
 
 // Remaining properties

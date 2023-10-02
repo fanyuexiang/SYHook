@@ -11,7 +11,7 @@
 @interface CSJRenderEngineViewModel : NSObject
 {
     CSJAdInfoViewModel *_infoViewModel;
-    CSJFullLinkTrackInfo *_fullLinkTrackInfo;
+    CSJFullLinkTrackInfo *_Path_NotiNil;
     long long _renderIndex;
     CSJDynamicNativeViewModel *_dynamicNativeViewModel;
     struct CGSize _size;
@@ -21,13 +21,13 @@
 @property(nonatomic) struct CGSize size; // @synthesize size=_size;
 @property(retain, nonatomic) CSJDynamicNativeViewModel *dynamicNativeViewModel; // @synthesize dynamicNativeViewModel=_dynamicNativeViewModel;
 @property(nonatomic) long long renderIndex; // @synthesize renderIndex=_renderIndex;
-@property(retain, nonatomic) CSJFullLinkTrackInfo *fullLinkTrackInfo; // @synthesize fullLinkTrackInfo=_fullLinkTrackInfo;
+@property(retain, nonatomic) CSJFullLinkTrackInfo *Path_NotiNil; // @synthesize Path_NotiNil=_Path_NotiNil;
 @property(retain, nonatomic) CSJAdInfoViewModel *infoViewModel; // @synthesize infoViewModel=_infoViewModel;
-- (id)jsCallNative_appInfo;
+- (id)Root_VliInt;
 - (id)jsCallNative_adInfoWithValid:(_Bool *)arg1;
-- (id)jsCallNative_getTemplateInfoWithValid:(_Bool *)arg1;
+- (id)TODO_AsShow:(_Bool *)arg1;
 - (id)originInfoDictionary;
-- (void)addTrackInfoWithKey:(id)arg1 userInfo:(id)arg2;
+- (void)Note_SqlNew:(id)arg1 userInfo:(id)arg2;
 - (id)initWithInfoViewModel:(id)arg1 size:(struct CGSize)arg2 renderIndex:(long long)arg3;
 
 @end

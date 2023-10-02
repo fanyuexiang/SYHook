@@ -12,6 +12,6 @@
 - (void)didCloseOtherControllerWithInteractionType:(long long)arg1;
 - (void)interstitialAdDidClick;
 - (void)interstitialAdDidClose;
-- (void)interstitialAdWillClose;
+- (void)And_UIWhen;
 @end
 

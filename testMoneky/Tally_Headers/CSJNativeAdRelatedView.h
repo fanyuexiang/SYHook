@@ -25,7 +25,7 @@
 - (void).cxx_destruct;
 @property(retain, nonatomic) id <CSJDislikeReportorDelegate> dislikeReportor; // @synthesize dislikeReportor=_dislikeReportor;
 @property(nonatomic) __weak UIViewController *rootViewController; // @synthesize rootViewController=_rootViewController;
-@property(retain, nonatomic) CSJNativeAd *nativeAd; // @synthesize nativeAd=_nativeAd;
+@property(nonatomic) __weak CSJNativeAd *nativeAd; // @synthesize nativeAd=_nativeAd;
 @property(retain, nonatomic) CSJVideoAdView *videoAdView; // @synthesize videoAdView=_videoAdView;
 @property(retain, nonatomic) UIImageView *logoADImageView; // @synthesize logoADImageView=_logoADImageView;
 @property(retain, nonatomic) UIImageView *logoImageView; // @synthesize logoImageView=_logoImageView;

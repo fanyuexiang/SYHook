@@ -11,9 +11,9 @@
 }
 
 + (id)sharedManager;
-- (void)openBrowserModel:(id)arg1;
-- (void)openBUWebViewControllerURL:(id)arg1 model:(id)arg2 context:(id)arg3;
-- (_Bool)handleActionWithModel:(id)arg1 context:(id)arg2;
+- (void)MARK_UserMsg:(id)arg1;
+- (void)Levi_WithIdfv:(id)arg1 model:(id)arg2 context:(id)arg3;
+- (_Bool)Cta_UIReq:(id)arg1 context:(id)arg2;
 
 @end
 

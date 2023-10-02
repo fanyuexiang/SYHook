@@ -10,31 +10,31 @@
 
 @interface CSJNativeExpressRewardDrawProgressView : UIView
 {
-    unsigned long long _totalTime;
+    unsigned long long _Y2_dirCta;
     UIImageView *_tipsView;
-    UIView *_circleView;
+    UIView *_Void_WithMAX;
     UIImageView *_imageView;
     UILabel *_label;
-    CAShapeLayer *_progressLayer;
-    CAGradientLayer *_labelLayer;
+    CAShapeLayer *_X2_VarRan;
+    CAGradientLayer *_Var_SelfAnd;
 }
 
 - (void).cxx_destruct;
-@property(retain, nonatomic) CAGradientLayer *labelLayer; // @synthesize labelLayer=_labelLayer;
-@property(retain, nonatomic) CAShapeLayer *progressLayer; // @synthesize progressLayer=_progressLayer;
+@property(retain, nonatomic) CAGradientLayer *Var_SelfAnd; // @synthesize Var_SelfAnd=_Var_SelfAnd;
+@property(retain, nonatomic) CAShapeLayer *X2_VarRan; // @synthesize X2_VarRan=_X2_VarRan;
 @property(retain, nonatomic) UILabel *label; // @synthesize label=_label;
 @property(retain, nonatomic) UIImageView *imageView; // @synthesize imageView=_imageView;
-@property(retain, nonatomic) UIView *circleView; // @synthesize circleView=_circleView;
+@property(retain, nonatomic) UIView *Void_WithMAX; // @synthesize Void_WithMAX=_Void_WithMAX;
 @property(retain, nonatomic) UIImageView *tipsView; // @synthesize tipsView=_tipsView;
-@property(nonatomic) unsigned long long totalTime; // @synthesize totalTime=_totalTime;
+@property(nonatomic) unsigned long long Y2_dirCta; // @synthesize Y2_dirCta=_Y2_dirCta;
 - (void)updateProgress:(double)arg1;
-- (void)updateLabelText:(id)arg1;
-- (void)updateCountDown:(unsigned long long)arg1;
-- (void)refreshWhenRewardDidSend;
-- (void)addProgressLayer;
-- (void)addLabel;
-- (void)addImageView;
-- (void)addCircleView;
+- (void)Data_MsLevi:(id)arg1;
+- (void)You_PopTap:(unsigned long long)arg1;
+- (void)X1_MsName;
+- (void)App_ReadIcon;
+- (void)X2_CodeTop;
+- (void)Rect_R0Idfv;
+- (void)AdID_MetaCall;
 - (void)setupViews;
 - (id)initWithFrame:(struct CGRect)arg1;
 

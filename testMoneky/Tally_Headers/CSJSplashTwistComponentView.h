@@ -8,27 +8,33 @@
 
 #import "CAAnimationDelegate-Protocol.h"
 
-@class CAShapeLayer, CSJTwistMotionManager, NSString, UIImageView, UIView;
+@class CAShapeLayer, CSJTwistManager, NSString, UIImageView, UIView;
 
 @interface CSJSplashTwistComponentView : CSJSplashBottomBaseComponentView <CAAnimationDelegate>
 {
     UIView *_maskView;
-    UIImageView *_arrowEmptyImageView;
-    UIImageView *_arrowFillImageView;
-    CAShapeLayer *_arrowFillShapeLayer;
-    UIImageView *_phoneImageView;
-    CSJTwistMotionManager *_twistMotionManager;
+    UIImageView *_Data_FtcNew;
+    UIImageView *_SEL_Path_pos;
+    CAShapeLayer *_View_TrueSEL;
+    UIImageView *_Desc_SdkY1;
     unsigned long long _layoutType;
     double _twistRotationThreshold;
+    unsigned long long _Rit_MINYou;
+    CSJTwistManager *_Ad_MaskDoes;
+    long long _convertActionType;
 }
 
 - (void).cxx_destruct;
+@property(nonatomic) long long convertActionType; // @synthesize convertActionType=_convertActionType;
+@property(retain, nonatomic) CSJTwistManager *Ad_MaskDoes; // @synthesize Ad_MaskDoes=_Ad_MaskDoes;
+@property(nonatomic) unsigned long long Rit_MINYou; // @synthesize Rit_MINYou=_Rit_MINYou;
 @property(nonatomic) double twistRotationThreshold; // @synthesize twistRotationThreshold=_twistRotationThreshold;
+- (void)dealloc;
 - (void)_onTapGR;
-- (void)_runArrowFillAnimation;
-- (void)startTwistUpdates;
-- (void)_setupUI;
+- (void)May_TODOFabs;
+- (void)Cn_ObjDocs;
 - (void)animationDidStop:(id)arg1 finished:(_Bool)arg2;
+- (void)You_R0Will;
 - (void)startSplashBottomAnimation;
 - (struct CGRect)splashBottomFrameWithContainerFrame:(struct CGRect)arg1;
 - (void)layoutSubviews;

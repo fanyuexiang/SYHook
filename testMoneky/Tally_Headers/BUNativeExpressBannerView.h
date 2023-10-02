@@ -4,31 +4,36 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
 
-#import "BUInterfaceBaseView.h"
+#import <UIKit/UIView.h>
 
 #import "BUAdClientBiddingProtocol-Protocol.h"
 #import "BUMopubAdMarkUpDelegate-Protocol.h"
 
-@class NSDictionary, NSString;
-@protocol BUNativeExpressBannerViewDelegate;
+@class BUDictionary, NSObject, NSString;
+@protocol BUNativeExpressBannerViewDelegate, BUNativeExpressBannerViewMediationProtocol;
 
-@interface BUNativeExpressBannerView : BUInterfaceBaseView <BUMopubAdMarkUpDelegate, BUAdClientBiddingProtocol>
+@interface BUNativeExpressBannerView : UIView <BUMopubAdMarkUpDelegate, BUAdClientBiddingProtocol>
 {
     id <BUNativeExpressBannerViewDelegate> _delegate;
     long long _interval;
-    NSDictionary *_mediaExt;
+    BUDictionary *_mediaExt;
 }
 
 + (id)allocWithZone:(struct _NSZone *)arg1;
 - (void).cxx_destruct;
-@property(readonly, copy, nonatomic) NSDictionary *mediaExt; // @synthesize mediaExt=_mediaExt;
+@property(readonly, copy, nonatomic) BUDictionary *mediaExt; // @synthesize mediaExt=_mediaExt;
 @property(readonly, nonatomic) long long interval; // @synthesize interval=_interval;
 @property(nonatomic) __weak id <BUNativeExpressBannerViewDelegate> delegate; // @synthesize delegate=_delegate;
+- (id)initWithSlot:(id)arg1 rootViewController:(id)arg2 adSize:(struct CGSize)arg3 interval:(long long)arg4;
+- (id)initWithSlot:(id)arg1 rootViewController:(id)arg2 adSize:(struct CGSize)arg3;
+- (id)initWithSlotID:(id)arg1 rootViewController:(id)arg2 adSize:(struct CGSize)arg3 interval:(long long)arg4;
+- (id)initWithSlotID:(id)arg1 rootViewController:(id)arg2 adSize:(struct CGSize)arg3;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;
 @property(readonly, copy) NSString *description;
 @property(readonly) unsigned long long hash;
+@property(readonly, nonatomic) NSObject<BUNativeExpressBannerViewMediationProtocol> *mediation;
 @property(readonly) Class superclass;
 
 @end

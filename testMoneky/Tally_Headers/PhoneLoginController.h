@@ -9,7 +9,7 @@
 #import "UIGestureRecognizerDelegate-Protocol.h"
 #import "UITextFieldDelegate-Protocol.h"
 
-@class LoginPhonePwdTextView, LoginPhoneTextView, NSString, RegisterAgreePrivacyView, UIButton, UITextField, WXLoginButton, _TtC5Tally15AppLoginManager;
+@class LoginPhonePwdTextView, LoginPhoneTextView, NSString, RegisterAgreePrivacyPopupViewController, RegisterAgreePrivacyView, UIButton, UITextField, WXLoginButton, _TtC5Tally15AppLoginManager;
 
 @interface PhoneLoginController : UIViewController <UITextFieldDelegate, UIGestureRecognizerDelegate>
 {
@@ -25,10 +25,12 @@
     UITextField *_pwdTextField;
     UIButton *_pwdSecureBtn;
     RegisterAgreePrivacyView *_privacyView;
+    RegisterAgreePrivacyPopupViewController *_privacyPopupCtr;
 }
 
 - (void).cxx_destruct;
 @property(nonatomic) _Bool agreementTipShow; // @synthesize agreementTipShow=_agreementTipShow;
+@property(nonatomic) __weak RegisterAgreePrivacyPopupViewController *privacyPopupCtr; // @synthesize privacyPopupCtr=_privacyPopupCtr;
 @property(retain, nonatomic) RegisterAgreePrivacyView *privacyView; // @synthesize privacyView=_privacyView;
 @property(nonatomic) __weak UIButton *pwdSecureBtn; // @synthesize pwdSecureBtn=_pwdSecureBtn;
 @property(nonatomic) __weak UITextField *pwdTextField; // @synthesize pwdTextField=_pwdTextField;
@@ -44,8 +46,6 @@
 - (void)backAction;
 - (void)wxLogin;
 - (void)showFindPwdTip:(id)arg1;
-- (void)pushToNewWXLogin;
-- (void)pushToNewPhontLogin;
 - (void)phoneNetworkLogin:(id)arg1;
 - (void)phoneLoginAction;
 - (_Bool)textField:(id)arg1 shouldChangeCharactersInRange:(struct _NSRange)arg2 replacementString:(id)arg3;
@@ -55,7 +55,7 @@
 - (void)appleLoginAction;
 - (id)appleView:(struct CGRect)arg1;
 - (id)pwdAndRegisterView:(struct CGRect)arg1;
-- (void)registerTipShow;
+- (void)registerTipShow:(SEL)arg1 Obj:(id)arg2;
 - (void)viewDidLoad;
 
 // Remaining properties

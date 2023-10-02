@@ -10,8 +10,8 @@
 {
 }
 
-+ (id)pbu_preCacheLogExtWithModel:(id)arg1;
-+ (void)trackExtraValueWithTag:(id)arg1 label:(id)arg2 adModel:(id)arg3 extraDic:(id)arg4 adExtraDataDic:(id)arg5;
++ (id)Now_LeviFtc:(id)arg1;
++ (void)Net_IdfaObj:(id)arg1 label:(id)arg2 adModel:(id)arg3 extraDic:(id)arg4 adExtraDataDic:(id)arg5;
 + (void)trackWithTag:(id)arg1 label:(id)arg2 adModel:(id)arg3 extraDic:(id)arg4;
 
 @end

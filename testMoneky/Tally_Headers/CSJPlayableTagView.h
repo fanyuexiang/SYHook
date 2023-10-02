@@ -9,12 +9,12 @@
 @interface CSJPlayableTagView : UIView
 {
     double _length;
-    long long _currentTag;
+    long long _Hopo_LeviName;
 }
 
-@property(nonatomic) long long currentTag; // @synthesize currentTag=_currentTag;
+@property(nonatomic) long long Hopo_LeviName; // @synthesize Hopo_LeviName=_Hopo_LeviName;
 @property(nonatomic) double length; // @synthesize length=_length;
-- (_Bool)addTag:(id)arg1;
+- (_Bool)In_RitLock:(id)arg1;
 - (id)initWithFrame:(struct CGRect)arg1;
 
 @end

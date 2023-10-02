@@ -10,18 +10,18 @@
 {
 }
 
-+ (void)clearFileCache;
-+ (void)clearDynamicLayout;
-+ (void)clearEventTacker;
-+ (void)clearSplash;
-+ (void)clearNative;
-+ (void)clearSplashVideo;
-+ (void)clearFullscreenVideo;
-+ (void)clearRewardVideo;
-+ (void)clearSetting;
++ (void)A1_PtrPlay;
++ (void)Else_RitExt;
++ (void)BOOL_LineX2;
++ (void)Mute_NOA0;
++ (void)Mod_VarSel;
++ (void)And_RowWith;
++ (void)Fail_Up_xEnum;
++ (void)Need_WillTs;
++ (void)Item_LineBu_x;
 + (void)clearAllCache;
-+ (void)crashMessageSend:(id)arg1;
 + (id)sharedInstance;
+- (id)init;
 - (void)dealloc;
 
 @end

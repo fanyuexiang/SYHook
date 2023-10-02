@@ -34,6 +34,7 @@
 @property(retain, nonatomic) UITableViewCell *endCell; // @synthesize endCell=_endCell;
 @property(retain, nonatomic) UITableViewCell *startCell; // @synthesize startCell=_startCell;
 @property(retain, nonatomic) TallyLedgerInfo *model; // @synthesize model=_model;
+- (id)exportNickName:(id)arg1;
 - (void)dateAction:(id)arg1;
 - (_Bool)dateIsCorrect;
 - (void)exportAction;

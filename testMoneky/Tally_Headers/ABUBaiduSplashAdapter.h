@@ -7,12 +7,12 @@
 #import <objc/NSObject.h>
 
 #import "ABUBaidu_BaiduMobAdSplashDelegate-Protocol.h"
-#import "ABUCustomSplashAdapter-Protocol.h"
+#import "BUMCustomSplashAdapter-Protocol.h"
 
-@class NSString, UIView;
-@protocol ABUBaidu_BaiduMobAdSplash, ABUCustomConfigAdapter, ABUCustomSplashAdapterBridge><ABUCustomSplashAdapterZoomOutViewBridge><ABUCustomSplashAdapterCardViewBridge;
+@class NSString, UIColor, UIView;
+@protocol ABUBaidu_BaiduMobAdSplash, ABUBaidu_BaiduMobAdSplashCardViewDelegate, ABUBaidu_BaiduMobAdSplashFocusZoomOutViewDelegate, BUMCustomConfigAdapter, BUMCustomSplashAdapterBridge><BUMCustomSplashAdapterZoomOutViewBridge><BUMCustomSplashAdapterCardViewBridge;
 
-@interface ABUBaiduSplashAdapter : NSObject <ABUBaidu_BaiduMobAdSplashDelegate, ABUCustomSplashAdapter>
+@interface ABUBaiduSplashAdapter : NSObject <ABUBaidu_BaiduMobAdSplashDelegate, BUMCustomSplashAdapter>
 {
     NSObject<ABUBaidu_BaiduMobAdSplash> *_splashAd;
     UIView *_customBottomView;
@@ -45,13 +45,20 @@
 - (_Bool)enablePreloadWhenCurrentIsDisplay;
 
 // Remaining properties
-@property(nonatomic) __weak id <ABUCustomSplashAdapterBridge><ABUCustomSplashAdapterZoomOutViewBridge><ABUCustomSplashAdapterCardViewBridge> bridge;
-@property(retain, nonatomic) id <ABUCustomConfigAdapter> configAdapter;
+@property(nonatomic) __weak id <BUMCustomSplashAdapterBridge><BUMCustomSplashAdapterZoomOutViewBridge><BUMCustomSplashAdapterCardViewBridge> bridge;
+@property(nonatomic) __weak id <ABUBaidu_BaiduMobAdSplashCardViewDelegate> cardDelegate;
+@property(retain, nonatomic) id <BUMCustomConfigAdapter> configAdapter;
 @property(readonly, copy) NSString *debugDescription;
 @property(readonly, copy) NSString *description;
+@property(readonly, nonatomic) _Bool hasCardView;
+@property(readonly, nonatomic) _Bool hasZoomOutView;
 @property(readonly) unsigned long long hash;
 @property(nonatomic) _Bool isCustomAdapter;
+@property(nonatomic) double shakeImageViewSize;
 @property(readonly) Class superclass;
+@property(nonatomic) double twistImageViewSize;
+@property(retain, nonatomic) UIColor *twistMaskColor;
+@property(nonatomic) __weak id <ABUBaidu_BaiduMobAdSplashFocusZoomOutViewDelegate> zoomOutDelegate;
 
 @end
 

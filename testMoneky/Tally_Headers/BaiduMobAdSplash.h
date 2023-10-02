@@ -70,6 +70,7 @@
 @property(nonatomic) __weak id <BaiduMobAdSplashCardViewDelegate> cardDelegate; // @synthesize cardDelegate=_cardDelegate;
 @property(nonatomic) __weak id <BaiduMobAdSplashDelegate> delegate; // @synthesize delegate=_delegate;
 - (void)dealloc;
+- (id)getAdDataForKey:(id)arg1;
 - (void)stop;
 - (_Bool)isFullScreenMode;
 - (void)loadBiddingAd:(id)arg1;

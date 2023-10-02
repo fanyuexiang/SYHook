@@ -12,30 +12,33 @@
 
 @interface CSJAdClientBiddingHandle : NSObject <CSJAdClientBiddingProtocol>
 {
-    _Bool _isSendWin;
-    _Bool _isSendLoss;
-    CDUnknownBlockType _getMediaExtBlock;
-    NSNumber *_userAuctionPrice;
-    NSString *_winUrl;
-    NSString *_lossUrl;
-    NSString *_serverPrice;
+    _Bool _isJs_AreaLds;
+    _Bool _isCode_SelRead;
+    _Bool isGetURLInfo;
+    CDUnknownBlockType _Levi_valThe;
+    CDUnknownBlockType _Body_PopTs;
+    NSNumber *_Pods_StopApi;
+    NSString *_By_OrgMs;
+    NSString *_Load_Set_log;
+    NSString *_Fail_posSave;
     unsigned long long _biddingType;
 }
 
 - (void).cxx_destruct;
 @property(nonatomic) unsigned long long biddingType; // @synthesize biddingType=_biddingType;
-@property(copy, nonatomic) NSString *serverPrice; // @synthesize serverPrice=_serverPrice;
-@property(copy, nonatomic) NSString *lossUrl; // @synthesize lossUrl=_lossUrl;
-@property(copy, nonatomic) NSString *winUrl; // @synthesize winUrl=_winUrl;
-@property(copy, nonatomic) NSNumber *userAuctionPrice; // @synthesize userAuctionPrice=_userAuctionPrice;
-@property(copy, nonatomic) CDUnknownBlockType getMediaExtBlock; // @synthesize getMediaExtBlock=_getMediaExtBlock;
-- (_Bool)p_isClientBidding;
-- (void)p_getInfo;
-- (id)p_checkUrl:(id)arg1;
+@property(copy, nonatomic) NSString *Fail_posSave; // @synthesize Fail_posSave=_Fail_posSave;
+@property(copy, nonatomic) NSString *Load_Set_log; // @synthesize Load_Set_log=_Load_Set_log;
+@property(copy, nonatomic) NSString *By_OrgMs; // @synthesize By_OrgMs=_By_OrgMs;
+@property(copy, nonatomic) NSNumber *Pods_StopApi; // @synthesize Pods_StopApi=_Pods_StopApi;
+@property(copy, nonatomic) CDUnknownBlockType Body_PopTs; // @synthesize Body_PopTs=_Body_PopTs;
+@property(copy, nonatomic) CDUnknownBlockType Levi_valThe; // @synthesize Levi_valThe=_Levi_valThe;
+- (_Bool)Are_VarTap;
+- (void)Of_UsedInit;
+- (id)Lock_LogFile:(id)arg1;
 - (void)loss:(id)arg1 lossReason:(id)arg2 winBidder:(id)arg3;
 - (void)win:(id)arg1;
 - (void)setPrice:(id)arg1;
-- (id)getAuctionPrice;
+- (id)Lazy_You_val;
 - (id)init;
 
 // Remaining properties

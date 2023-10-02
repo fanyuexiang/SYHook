@@ -10,11 +10,14 @@
 @protocol SDWebImageOperation;
 
 @protocol SDImageCache <NSObject>
+- (void)storeImage:(UIImage *)arg1 imageData:(NSData *)arg2 forKey:(NSString *)arg3 cacheType:(long long)arg4 completion:(void (^)(void))arg5;
+- (id <SDWebImageOperation>)queryImageForKey:(NSString *)arg1 options:(unsigned long long)arg2 context:(NSDictionary *)arg3 completion:(void (^)(UIImage *, NSData *, long long))arg4;
+
+@optional
 - (void)clearWithCacheType:(long long)arg1 completion:(void (^)(void))arg2;
 - (void)containsImageForKey:(NSString *)arg1 cacheType:(long long)arg2 completion:(void (^)(long long))arg3;
 - (void)removeImageForKey:(NSString *)arg1 cacheType:(long long)arg2 completion:(void (^)(void))arg3;
-- (void)storeImage:(UIImage *)arg1 imageData:(NSData *)arg2 forKey:(NSString *)arg3 cacheType:(long long)arg4 completion:(void (^)(void))arg5;
+- (void)storeImage:(UIImage *)arg1 imageData:(NSData *)arg2 forKey:(NSString *)arg3 options:(unsigned long long)arg4 context:(NSDictionary *)arg5 cacheType:(long long)arg6 completion:(void (^)(void))arg7;
 - (id <SDWebImageOperation>)queryImageForKey:(NSString *)arg1 options:(unsigned long long)arg2 context:(NSDictionary *)arg3 cacheType:(long long)arg4 completion:(void (^)(UIImage *, NSData *, long long))arg5;
-- (id <SDWebImageOperation>)queryImageForKey:(NSString *)arg1 options:(unsigned long long)arg2 context:(NSDictionary *)arg3 completion:(void (^)(UIImage *, NSData *, long long))arg4;
 @end
 

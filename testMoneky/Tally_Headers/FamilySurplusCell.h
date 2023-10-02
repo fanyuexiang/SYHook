@@ -6,7 +6,7 @@
 
 #import <UIKit/UITableViewCell.h>
 
-@class CBAttributedLabel, SurplusModel, UILabel;
+@class CBAttributedLabel, SurplusModel, UIImageView, UILabel;
 
 @interface FamilySurplusCell : UITableViewCell
 {
@@ -14,6 +14,7 @@
     CBAttributedLabel *_expenditureLabel;
     CBAttributedLabel *_incomeLabel;
     CBAttributedLabel *_surplusLabel;
+    UIImageView *_arrowImageView;
     SurplusModel *_model;
 }
 

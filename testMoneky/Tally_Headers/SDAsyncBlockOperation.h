@@ -16,9 +16,11 @@
 + (id)blockOperationWithBlock:(CDUnknownBlockType)arg1;
 - (void).cxx_destruct;
 @property(copy, nonatomic) CDUnknownBlockType executionBlock; // @synthesize executionBlock=_executionBlock;
-@property(nonatomic, getter=isFinished) _Bool finished; // @synthesize finished=_finished;
-@property(nonatomic, getter=isExecuting) _Bool executing; // @synthesize executing=_executing;
-- (_Bool)isConcurrent;
+- (_Bool)isFinished;
+- (_Bool)isExecuting;
+- (_Bool)isAsynchronous;
+- (void)setExecuting:(_Bool)arg1;
+- (void)setFinished:(_Bool)arg1;
 - (void)complete;
 - (void)cancel;
 - (void)start;

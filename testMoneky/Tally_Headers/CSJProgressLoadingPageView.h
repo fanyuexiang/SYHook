@@ -17,23 +17,23 @@
     UILabel *_loadingLabel;
     CSJNumerAnimationLabel *_progressLabel;
     UILabel *_percentLabel;
-    CALayer *_totalLine;
-    UIView *_progressLine;
+    CALayer *_Rect_R0Loss;
+    UIView *_Mod_FontMap;
     CSJMaterialMeta *_materialMeta;
 }
 
 - (void).cxx_destruct;
 @property(retain, nonatomic) CSJMaterialMeta *materialMeta; // @synthesize materialMeta=_materialMeta;
 @property(nonatomic) _Bool hasIcon; // @synthesize hasIcon=_hasIcon;
-@property(retain, nonatomic) UIView *progressLine; // @synthesize progressLine=_progressLine;
-@property(retain, nonatomic) CALayer *totalLine; // @synthesize totalLine=_totalLine;
+@property(retain, nonatomic) UIView *Mod_FontMap; // @synthesize Mod_FontMap=_Mod_FontMap;
+@property(retain, nonatomic) CALayer *Rect_R0Loss; // @synthesize Rect_R0Loss=_Rect_R0Loss;
 @property(retain, nonatomic) UILabel *percentLabel; // @synthesize percentLabel=_percentLabel;
 @property(retain, nonatomic) CSJNumerAnimationLabel *progressLabel; // @synthesize progressLabel=_progressLabel;
 @property(retain, nonatomic) UILabel *loadingLabel; // @synthesize loadingLabel=_loadingLabel;
 @property(retain, nonatomic) UILabel *titleLabel; // @synthesize titleLabel=_titleLabel;
 @property(retain, nonatomic) UIImageView *iconImageView; // @synthesize iconImageView=_iconImageView;
 - (_Bool)isPortrait;
-- (void)p_updateTitleText;
+- (void)Levi_A2Y1;
 - (void)startLoading;
 - (void)setIsPortrait:(_Bool)arg1;
 - (void)layoutSubviews;

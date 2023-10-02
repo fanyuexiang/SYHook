@@ -12,7 +12,7 @@
 #import "WKScriptMessageHandler-Protocol.h"
 #import "WKUIDelegate-Protocol.h"
 
-@class BUTimer, BUWebViewProgressView, CSJAdSlot, CSJCustomNavigationBarView, CSJDislikeContext, CSJWKWebViewClient, CSJWebViewBottomBar, NSDate, NSDictionary, NSError, NSMutableArray, NSString, NSURL, UIView, UIViewController;
+@class BUTimer, BUWebViewProgressView, CSJASlotContext, CSJAdSlot, CSJCustomNavigationBarView, CSJDislikeContext, CSJWKWebViewClient, CSJWebViewBottomBar, NSDate, NSDictionary, NSError, NSMutableArray, NSString, NSURL, UIView, UIViewController;
 @protocol CSJAd;
 
 @interface CSJWebViewControllerViewModel : NSObject <WKScriptMessageHandler, UIViewControllerTransitioningDelegate, WKUIDelegate, CSJCustomNavigationBarDelegate, BUWebViewDelegate>
@@ -23,7 +23,10 @@
     _Bool _hasTerminateTrack;
     _Bool _isFromClick;
     _Bool _isBackground;
+    _Bool _isAppear;
     _Bool _observingHeartBeat;
+    _Bool _enableBrowseTimer;
+    _Bool _needRecoverFullLinkTimer;
     _Bool _hasEnterBackground;
     _Bool _needReportClick;
     CSJWKWebViewClient *_webView;
@@ -37,7 +40,9 @@
     CDUnknownBlockType _hasLoadLubanListPage;
     unsigned long long _landingPageType;
     unsigned long long _pageType;
+    CSJASlotContext *_context;
     CDUnknownBlockType _downloadDidCloseStoreController;
+    NSDictionary *_session_params;
     UIView *_view;
     UIViewController *_parentVC;
     CSJDislikeContext *_dislikeContext;
@@ -47,6 +52,8 @@
     CDUnknownBlockType _heartBeatCallback;
     BUTimer *_heartBeatTimer;
     UIView *_maskView;
+    BUTimer *_browseTimer;
+    long long _browseTime;
     CSJCustomNavigationBarView *_customNavigationView;
     CSJWebViewBottomBar *_bottomBar;
     BUWebViewProgressView *_progressView;
@@ -60,18 +67,25 @@
 @property(retain, nonatomic) CSJWebViewBottomBar *bottomBar; // @synthesize bottomBar=_bottomBar;
 @property(retain, nonatomic) CSJCustomNavigationBarView *customNavigationView; // @synthesize customNavigationView=_customNavigationView;
 @property(nonatomic) struct CGSize size; // @synthesize size=_size;
+@property(nonatomic) _Bool needRecoverFullLinkTimer; // @synthesize needRecoverFullLinkTimer=_needRecoverFullLinkTimer;
+@property(nonatomic) long long browseTime; // @synthesize browseTime=_browseTime;
+@property(retain, nonatomic) BUTimer *browseTimer; // @synthesize browseTimer=_browseTimer;
+@property(nonatomic) _Bool enableBrowseTimer; // @synthesize enableBrowseTimer=_enableBrowseTimer;
 @property(retain, nonatomic) UIView *maskView; // @synthesize maskView=_maskView;
 @property(nonatomic) _Bool observingHeartBeat; // @synthesize observingHeartBeat=_observingHeartBeat;
 @property(retain, nonatomic) BUTimer *heartBeatTimer; // @synthesize heartBeatTimer=_heartBeatTimer;
 @property(copy, nonatomic) CDUnknownBlockType heartBeatCallback; // @synthesize heartBeatCallback=_heartBeatCallback;
 @property(nonatomic) long long heartBeatOverTime; // @synthesize heartBeatOverTime=_heartBeatOverTime;
+@property(nonatomic) _Bool isAppear; // @synthesize isAppear=_isAppear;
 @property(nonatomic) _Bool isBackground; // @synthesize isBackground=_isBackground;
 @property(copy, nonatomic) NSString *stashLogExtra; // @synthesize stashLogExtra=_stashLogExtra;
 @property(copy, nonatomic) NSString *stashCid; // @synthesize stashCid=_stashCid;
 @property(retain, nonatomic) CSJDislikeContext *dislikeContext; // @synthesize dislikeContext=_dislikeContext;
 @property(nonatomic) __weak UIViewController *parentVC; // @synthesize parentVC=_parentVC;
 @property(nonatomic) __weak UIView *view; // @synthesize view=_view;
+@property(copy) NSDictionary *session_params; // @synthesize session_params=_session_params;
 @property(copy, nonatomic) CDUnknownBlockType downloadDidCloseStoreController; // @synthesize downloadDidCloseStoreController=_downloadDidCloseStoreController;
+@property(nonatomic) __weak CSJASlotContext *context; // @synthesize context=_context;
 @property(nonatomic) unsigned long long pageType; // @synthesize pageType=_pageType;
 @property(nonatomic) _Bool isFromClick; // @synthesize isFromClick=_isFromClick;
 @property(nonatomic) unsigned long long landingPageType; // @synthesize landingPageType=_landingPageType;
@@ -102,7 +116,6 @@
 - (id)trackTag;
 - (_Bool)shouldTrack;
 - (void)dislikeButtonTapped:(id)arg1;
-- (void)preloadEvent;
 - (void)addAccessibilityIdentifier;
 - (id)getTrackTag;
 - (void)customNavigationBarDidClickBackButton:(id)arg1;
@@ -115,7 +128,11 @@
 - (void)startNewHeartBeatTime;
 - (void)cancelObserveHeartBeat;
 - (void)observeHeartBeatWithOverTime:(long long)arg1 callback:(CDUnknownBlockType)arg2;
+- (void)onBrowseTimerUpdate;
+- (void)stopBrowseTimer;
+- (void)startBrowseTimer;
 - (void)registJSPerformance;
+- (void)scrollViewDidScroll:(id)arg1;
 - (void)handleTapWithInfo:(id)arg1;
 - (_Bool)handleTaptWith:(id)arg1;
 - (void)registJS_Tap;
@@ -169,8 +186,10 @@
 - (void)goClose:(id)arg1;
 - (void)goback:(id)arg1;
 - (void)bu_loadRequest:(id)arg1;
-- (void)openInternalStore;
-- (id)jsCallNative_download_app_ad;
+- (void)jsCallNative_commonConvertWithParams:(id)arg1;
+- (id)buJSB3_commonConvertWithViewModel:(id)arg1;
+- (void)openInternalStoreWithMaterial:(id)arg1;
+- (id)jsCallNative_download_app_adWithParams:(id)arg1;
 - (void)receiveH5HeartBeat:(id)arg1;
 - (id)buJSB3_heart_beatWithViewModel:(id)arg1;
 - (id)buJSB3_download_app_adWithViewModel:(id)arg1;
@@ -189,7 +208,7 @@
 - (id)buJSB3_sendLogWithViewModel:(id)arg1;
 - (id)jsCallNative_adInfo;
 - (id)buJSB3_adInfoWithViewModel:(id)arg1;
-- (void)jsCallNative_click_button;
+- (id)jsCallNative_click_button;
 - (id)buJSB3_click_buttonWithViewModel:(id)arg1;
 - (id)buJSB3_getATTStatusWithViewModel:(id)arg1;
 - (void)registerJSBridge3;
@@ -210,6 +229,10 @@
 - (id)buJSB3_getTeMaiAdsWithViewModel:(id)arg1;
 - (void)registerLubanJSBridgePlugin;
 - (void)configLubanInfoWithURL:(id)arg1;
+- (void)onRewardTimerOut;
+- (void)onRewardTimerUpdate:(long long)arg1;
+- (double)getRewardInterval;
+- (_Bool)enableBrowseForReward;
 @property(retain, nonatomic) NSError *loadFailError;
 @property(nonatomic) _Bool isLoadingAndClose;
 @property(nonatomic) _Bool isFirstLoad_start;

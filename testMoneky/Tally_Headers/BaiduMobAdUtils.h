@@ -10,9 +10,12 @@
 {
 }
 
++ (id)urlWithString:(id)arg1;
++ (id)imageResizeData:(id)arg1;
 + (id)coreBlurImage:(id)arg1 withBlurNumber:(double)arg2;
 + (id)imageResize:(id)arg1 andResizeTo:(struct CGSize)arg2;
 + (_Bool)stringMatchWith:(id)arg1 regular:(id)arg2;
++ (id)adActionText:(int)arg1 defaultText:(id)arg2;
 + (_Bool)checkIdsValidWithHexadecimal:(id)arg1 number:(id)arg2;
 + (id)parseJsonStringToArray:(id)arg1;
 + (id)parseJsonStringToDic:(id)arg1 andError:(id *)arg2;

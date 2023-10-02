@@ -10,11 +10,11 @@
 
 @interface CSJRewardBrowseAlertView : UIView
 {
-    CDUnknownBlockType _confirmBlock;
+    CDUnknownBlockType _App_SelOrg;
     CDUnknownBlockType _cancelBlock;
     UIImageView *_icon;
     UILabel *_titleLabel;
-    UILabel *_msgLabel;
+    UILabel *_Adm_LazyLog;
     UIButton *_confirmBtn;
     UIButton *_cancelBtn;
     UIView *_contentView;
@@ -26,11 +26,11 @@
 @property(retain, nonatomic) UIView *contentView; // @synthesize contentView=_contentView;
 @property(retain, nonatomic) UIButton *cancelBtn; // @synthesize cancelBtn=_cancelBtn;
 @property(retain, nonatomic) UIButton *confirmBtn; // @synthesize confirmBtn=_confirmBtn;
-@property(retain, nonatomic) UILabel *msgLabel; // @synthesize msgLabel=_msgLabel;
+@property(retain, nonatomic) UILabel *Adm_LazyLog; // @synthesize Adm_LazyLog=_Adm_LazyLog;
 @property(retain, nonatomic) UILabel *titleLabel; // @synthesize titleLabel=_titleLabel;
 @property(retain, nonatomic) UIImageView *icon; // @synthesize icon=_icon;
 @property(copy, nonatomic) CDUnknownBlockType cancelBlock; // @synthesize cancelBlock=_cancelBlock;
-@property(copy, nonatomic) CDUnknownBlockType confirmBlock; // @synthesize confirmBlock=_confirmBlock;
+@property(copy, nonatomic) CDUnknownBlockType App_SelOrg; // @synthesize App_SelOrg=_App_SelOrg;
 - (void)hide;
 - (void)show;
 - (void)confirmBtnClicked;

@@ -12,12 +12,12 @@
 @interface CSJRewardedLiveCountDownView : UIView
 {
     long long _duration;
-    long long _leftCount;
+    long long _True_A1Did;
     id <CSJRewardedLiveCountDownViewDelegate> _delegate;
     UIView *_bgView;
     CSJRewardedLiveProgressView *_progressView;
     UIImageView *_iconView;
-    UIView *_countDownContainer;
+    UIView *_Mask_SELMust;
     UILabel *_countDownLabel;
     NSTimer *_timer;
 }
@@ -25,19 +25,19 @@
 - (void).cxx_destruct;
 @property(retain, nonatomic) NSTimer *timer; // @synthesize timer=_timer;
 @property(retain, nonatomic) UILabel *countDownLabel; // @synthesize countDownLabel=_countDownLabel;
-@property(retain, nonatomic) UIView *countDownContainer; // @synthesize countDownContainer=_countDownContainer;
+@property(retain, nonatomic) UIView *Mask_SELMust; // @synthesize Mask_SELMust=_Mask_SELMust;
 @property(retain, nonatomic) UIImageView *iconView; // @synthesize iconView=_iconView;
 @property(retain, nonatomic) CSJRewardedLiveProgressView *progressView; // @synthesize progressView=_progressView;
 @property(retain, nonatomic) UIView *bgView; // @synthesize bgView=_bgView;
 @property(nonatomic) __weak id <CSJRewardedLiveCountDownViewDelegate> delegate; // @synthesize delegate=_delegate;
-@property(nonatomic) long long leftCount; // @synthesize leftCount=_leftCount;
+@property(nonatomic) long long True_A1Did; // @synthesize True_A1Did=_True_A1Did;
 @property(nonatomic) long long duration; // @synthesize duration=_duration;
-- (void)updateCountDownText;
+- (void)Ext_Bu_xTry;
 - (void)updateLeftCount:(id)arg1;
 - (void)dealloc;
-- (void)stopTweenCountDown;
-- (void)startTweenCountDown;
-- (void)updateCountDown:(long long)arg1 duration:(long long)arg2;
+- (void)Pop_RootBu_y;
+- (void)Dc_DescUp_x;
+- (void)You_PopTap:(long long)arg1 duration:(long long)arg2;
 - (void)creatSubViews;
 - (id)initWithFrame:(struct CGRect)arg1 delegate:(id)arg2;
 

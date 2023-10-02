@@ -10,22 +10,22 @@
 {
 }
 
-+ (id)groupAnimationWithConfiguration:(id)arg1;
-+ (id)baseAnimationWithConfiguration:(id)arg1;
-+ (id)keyFrameAnimationWithConfiguration:(id)arg1;
-+ (id)animationWithConfiguration:(id)arg1;
-+ (id)interactionUnlockAnimationWithConfiguration:(id)arg1;
-+ (id)interactionHandleZoomOutAnimationGroup;
-+ (id)interactionRippleTranslateGradientAnimationGroup;
-+ (id)interactionGradientTrailAnimationGroup;
-+ (id)splashControlRippleAnimationWithConfiguration:(id)arg1;
-+ (id)translationAnimationWithValues:(id)arg1;
-+ (id)opacityAnimationKeyframeWithValues:(id)arg1;
-+ (id)arrowAnimationGroupWithOpacity:(id)arg1 position:(id)arg2;
-+ (id)splashControlSweepAnimation;
-+ (id)splashControlDestColorAnimationFromValue:(id)arg1 toValue:(id)arg2;
-+ (id)splashControlShakeAnimation;
-+ (id)splashControlZoomAnimationWithDuration:(double)arg1 scale:(double)arg2;
++ (id)Play_OrNot:(id)arg1;
++ (id)Ios_WeakPath:(id)arg1;
++ (id)Rect_FileAdId:(id)arg1;
++ (id)Stop_DoesFile:(id)arg1;
++ (id)Duan_LeviY1:(id)arg1;
++ (id)_log_T5Has;
++ (id)Font_SlotMust;
++ (id)IOS_A2_pos;
++ (id)Loss_LineA0:(id)arg1;
++ (id)NULL_DoFont:(id)arg1;
++ (id)NO_IvID:(id)arg1;
++ (id)Int_CodeCta:(id)arg1 position:(id)arg2;
++ (id)Y2_MapX2;
++ (id)Var_A0Tap:(id)arg1 toValue:(id)arg2;
++ (id)May_RootLds;
++ (id)Sql_RectAd:(double)arg1 scale:(double)arg2;
 
 @end
 

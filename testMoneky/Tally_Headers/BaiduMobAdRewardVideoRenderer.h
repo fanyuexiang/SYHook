@@ -11,13 +11,15 @@
 #import "BaiduMobAdRewardBannerDelegate-Protocol.h"
 #import "IBaiduMobAdRenderEventDelegate-Protocol.h"
 
-@class BaiduMobAdAnimationManager, BaiduMobAdComponentLottieView, BaiduMobAdH5Renderer, BaiduMobAdImageDownloadQueue, BaiduMobAdInstance, BaiduMobAdNativeProfessionalComponent, BaiduMobAdRewardVideoBannerView, BaiduMobAdShakeComponent, NSMutableArray, NSString, UIButton, UIImage, UIImageView, UILabel, UIView, UIViewController;
+@class BaiduMobAdAnimationManager, BaiduMobAdComponentLottieView, BaiduMobAdDCViewComponent, BaiduMobAdH5Renderer, BaiduMobAdImageDownloadQueue, BaiduMobAdInstance, BaiduMobAdNativeProfessionalComponent, BaiduMobAdRewardTextCountDownComponent, BaiduMobAdRewardVideoBannerView, BaiduMobAdShakeComponent, NSMutableArray, NSString, UIButton, UIImage, UIImageView, UILabel, UIView, UIViewController;
 
 @interface BaiduMobAdRewardVideoRenderer : BaiduMobAdVideoRenderer <IBaiduMobAdRenderEventDelegate, BaiduMobAdActionComposerDelegate, BaiduMobAdH5PlayDelegate, BaiduMobAdRewardBannerDelegate>
 {
-    _Bool _succRewarded;
+    _Bool _isSkipFront;
     _Bool _isFrontCardAutoClick;
+    _Bool _isTriggeredAutoClick;
     _Bool _isAtmosShown;
+    _Bool _succRewarded;
     _Bool _isAnswerRight;
     _Bool _isInShowCloseButton;
     _Bool _isInShowLPWebView;
@@ -25,13 +27,16 @@
     _Bool _playComplete;
     _Bool _isUseRewardCountdown;
     _Bool _isEnableNativeComponet;
-    int _playState;
-    float _rewardTimeCount;
+    int _segmentReward;
+    int _currentRewardPage;
+    int _totalRewardPage;
     int _atmosphereDelayTime;
+    int _succRewardedCount;
     int _rewardTips;
     int _isUseSkipAlertView;
     NSString *_path;
     BaiduMobAdInstance *_adInstance;
+    unsigned long long _playState;
     CDUnknownBlockType _videoFinishPlayingBlock;
     CDUnknownBlockType _closeClickedBlock;
     CDUnknownBlockType _skipClickedBlock;
@@ -41,12 +46,25 @@
     UIView *_skipBtn;
     UIView *_closeBtn;
     UIButton *_volumeBtn;
-    NSString *_rewardTime;
     UILabel *_rewardLabel;
     BaiduMobAdShakeComponent *_renderShakeView;
     BaiduMobAdShakeComponent *_shakeView;
+    BaiduMobAdRewardTextCountDownComponent *_textCountDownView;
+    UIView *_giftSegmentRewardTipsView;
+    UIImageView *_giftSegmentRewardTipsIcon;
+    UILabel *_giftRewardTipsLabel;
+    BaiduMobAdComponentLottieView *_giftRegmentRewardTipsLottie;
+    UIView *_segmentRewardBubbleView;
+    UILabel *_segmentRewardBubbleText;
+    BaiduMobAdComponentLottieView *_giftCountdownView;
+    BaiduMobAdComponentLottieView *_countdownGiftView;
+    BaiduMobAdComponentLottieView *_countdownGiftProgressView;
+    BaiduMobAdDCViewComponent *_dcView;
+    BaiduMobAdComponentLottieView *_atmosphereView;
     double _succRewardTime;
     double _rewardCountDurationTime;
+    double _rewardTimeCount;
+    NSString *_rewardTime;
     UIButton *_playBtn;
     UIView *_tailFrameWebView;
     NSString *_tpId;
@@ -65,9 +83,11 @@
     BaiduMobAdH5Renderer *_tailFrameRender;
     BaiduMobAdH5Renderer *_bottomLPRender;
     BaiduMobAdH5Renderer *_playRender;
+    double _countDownAnimProgress;
 }
 
 - (void).cxx_destruct;
+@property(nonatomic) double countDownAnimProgress; // @synthesize countDownAnimProgress=_countDownAnimProgress;
 @property(nonatomic) _Bool isEnableNativeComponet; // @synthesize isEnableNativeComponet=_isEnableNativeComponet;
 @property(retain, nonatomic) BaiduMobAdH5Renderer *playRender; // @synthesize playRender=_playRender;
 @property(retain, nonatomic) BaiduMobAdH5Renderer *bottomLPRender; // @synthesize bottomLPRender=_bottomLPRender;
@@ -95,19 +115,37 @@
 @property(retain, nonatomic) UIButton *playBtn; // @synthesize playBtn=_playBtn;
 @property(nonatomic) _Bool isAnswerRight; // @synthesize isAnswerRight=_isAnswerRight;
 @property(nonatomic) int rewardTips; // @synthesize rewardTips=_rewardTips;
+@property(retain, nonatomic) NSString *rewardTime; // @synthesize rewardTime=_rewardTime;
+@property(nonatomic) int succRewardedCount; // @synthesize succRewardedCount=_succRewardedCount;
+@property(nonatomic) _Bool succRewarded; // @synthesize succRewarded=_succRewarded;
+@property(nonatomic) double rewardTimeCount; // @synthesize rewardTimeCount=_rewardTimeCount;
 @property(nonatomic) double rewardCountDurationTime; // @synthesize rewardCountDurationTime=_rewardCountDurationTime;
 @property(nonatomic) double succRewardTime; // @synthesize succRewardTime=_succRewardTime;
 @property(nonatomic) _Bool isAtmosShown; // @synthesize isAtmosShown=_isAtmosShown;
 @property(nonatomic) int atmosphereDelayTime; // @synthesize atmosphereDelayTime=_atmosphereDelayTime;
+@property(retain, nonatomic) BaiduMobAdComponentLottieView *atmosphereView; // @synthesize atmosphereView=_atmosphereView;
+@property(retain, nonatomic) BaiduMobAdDCViewComponent *dcView; // @synthesize dcView=_dcView;
+@property(retain, nonatomic) BaiduMobAdComponentLottieView *countdownGiftProgressView; // @synthesize countdownGiftProgressView=_countdownGiftProgressView;
+@property(retain, nonatomic) BaiduMobAdComponentLottieView *countdownGiftView; // @synthesize countdownGiftView=_countdownGiftView;
+@property(retain, nonatomic) BaiduMobAdComponentLottieView *giftCountdownView; // @synthesize giftCountdownView=_giftCountdownView;
+@property(retain, nonatomic) UILabel *segmentRewardBubbleText; // @synthesize segmentRewardBubbleText=_segmentRewardBubbleText;
+@property(retain, nonatomic) UIView *segmentRewardBubbleView; // @synthesize segmentRewardBubbleView=_segmentRewardBubbleView;
+@property(retain, nonatomic) BaiduMobAdComponentLottieView *giftRegmentRewardTipsLottie; // @synthesize giftRegmentRewardTipsLottie=_giftRegmentRewardTipsLottie;
+@property(retain, nonatomic) UILabel *giftRewardTipsLabel; // @synthesize giftRewardTipsLabel=_giftRewardTipsLabel;
+@property(retain, nonatomic) UIImageView *giftSegmentRewardTipsIcon; // @synthesize giftSegmentRewardTipsIcon=_giftSegmentRewardTipsIcon;
+@property(retain, nonatomic) UIView *giftSegmentRewardTipsView; // @synthesize giftSegmentRewardTipsView=_giftSegmentRewardTipsView;
+@property(retain, nonatomic) BaiduMobAdRewardTextCountDownComponent *textCountDownView; // @synthesize textCountDownView=_textCountDownView;
+@property(nonatomic) int totalRewardPage; // @synthesize totalRewardPage=_totalRewardPage;
+@property(nonatomic) int currentRewardPage; // @synthesize currentRewardPage=_currentRewardPage;
+@property(nonatomic) int segmentReward; // @synthesize segmentReward=_segmentReward;
+@property(nonatomic) _Bool isTriggeredAutoClick; // @synthesize isTriggeredAutoClick=_isTriggeredAutoClick;
 @property(nonatomic) _Bool isFrontCardAutoClick; // @synthesize isFrontCardAutoClick=_isFrontCardAutoClick;
 @property(retain, nonatomic) BaiduMobAdShakeComponent *shakeView; // @synthesize shakeView=_shakeView;
 @property(retain, nonatomic) BaiduMobAdShakeComponent *renderShakeView; // @synthesize renderShakeView=_renderShakeView;
 @property(retain, nonatomic) UILabel *rewardLabel; // @synthesize rewardLabel=_rewardLabel;
-@property(retain, nonatomic) NSString *rewardTime; // @synthesize rewardTime=_rewardTime;
-@property(nonatomic) float rewardTimeCount; // @synthesize rewardTimeCount=_rewardTimeCount;
-@property(nonatomic) _Bool succRewarded; // @synthesize succRewarded=_succRewarded;
 @property(retain, nonatomic) UIButton *volumeBtn; // @synthesize volumeBtn=_volumeBtn;
 @property(retain, nonatomic) UIView *closeBtn; // @synthesize closeBtn=_closeBtn;
+@property(nonatomic) _Bool isSkipFront; // @synthesize isSkipFront=_isSkipFront;
 @property(retain, nonatomic) UIView *skipBtn; // @synthesize skipBtn=_skipBtn;
 @property(nonatomic) __weak UIViewController *superVC; // @synthesize superVC=_superVC;
 @property(copy, nonatomic) CDUnknownBlockType rewardVideoSuccRewardBlock; // @synthesize rewardVideoSuccRewardBlock=_rewardVideoSuccRewardBlock;
@@ -115,7 +153,7 @@
 @property(copy, nonatomic) CDUnknownBlockType skipClickedBlock; // @synthesize skipClickedBlock=_skipClickedBlock;
 @property(copy, nonatomic) CDUnknownBlockType closeClickedBlock; // @synthesize closeClickedBlock=_closeClickedBlock;
 @property(copy, nonatomic) CDUnknownBlockType videoFinishPlayingBlock; // @synthesize videoFinishPlayingBlock=_videoFinishPlayingBlock;
-@property(nonatomic) int playState; // @synthesize playState=_playState;
+@property(nonatomic) unsigned long long playState; // @synthesize playState=_playState;
 @property(retain, nonatomic) BaiduMobAdInstance *adInstance; // @synthesize adInstance=_adInstance;
 @property(copy, nonatomic) NSString *path; // @synthesize path=_path;
 - (void)sendVideoPlayLogWithType:(id)arg1;
@@ -126,7 +164,6 @@
 - (void)rewardBannerViewClick:(long long)arg1 clickView:(id)arg2 withViewId:(id)arg3;
 - (void)dealloc;
 - (void)sendVideoLog:(id)arg1 reason:(id)arg2;
-- (void)getLogoImage;
 - (void)playbackFail:(id)arg1;
 - (void)cleanUp;
 - (void)hiddenTimeCountLabel;
@@ -166,6 +203,8 @@
 - (void)setSkipButtonAnimation;
 - (void)setLPViewAnimation;
 - (void)setSuccRewardVideoDuration;
+- (void)showSegmentRewardBubbleView;
+- (void)resetRewardEvent;
 - (void)setRemainTime;
 - (void)addProgressView;
 - (void)setupVideoBigCardStyle;
@@ -177,11 +216,11 @@
 - (void)pressImageBaiduIconButtonToShowWangmeng;
 - (void)addVideoCenterStyleButton;
 - (void)setupVideoCenterStyle;
-- (void)handleClick:(id)arg1;
 - (void)tailImageViewClick;
 - (void)loadImageForURL:(id)arg1 intoImageView:(id)arg2;
 - (void)setupVideoHorizontalMountingStyle;
-- (void)videoAdClick;
+- (void)handleClick:(id)arg1;
+- (void)handleClick;
 - (void)addRegionClick;
 - (void)setupUI;
 - (void)handleCloud;
@@ -191,7 +230,6 @@
 - (id)initWithAdRendererHelper:(id)arg1;
 
 // Remaining properties
-@property(retain, nonatomic) BaiduMobAdComponentLottieView *atmosphereView;
 @property(readonly, copy) NSString *debugDescription;
 @property(readonly, copy) NSString *description;
 @property(readonly) unsigned long long hash;

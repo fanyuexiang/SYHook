@@ -6,20 +6,16 @@
 
 #import "AssetBaseController.h"
 
-@class AssetHomeListTableView, UIView;
+@class AssetHomeListTableView;
 
 @interface AssetHomeController : AssetBaseController
 {
     _Bool _needRequest;
     AssetHomeListTableView *_tableView;
-    UIView *_headerBgView;
-    UIView *_footerBgView;
 }
 
 - (void).cxx_destruct;
 @property(nonatomic) _Bool needRequest; // @synthesize needRequest=_needRequest;
-@property(retain, nonatomic) UIView *footerBgView; // @synthesize footerBgView=_footerBgView;
-@property(retain, nonatomic) UIView *headerBgView; // @synthesize headerBgView=_headerBgView;
 @property(retain, nonatomic) AssetHomeListTableView *tableView; // @synthesize tableView=_tableView;
 - (void)responseNotification:(id)arg1;
 - (void)setupListView;

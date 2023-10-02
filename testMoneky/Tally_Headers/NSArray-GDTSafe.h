@@ -41,10 +41,6 @@
 - (id)wpk_objectForDeepKey:(id)arg1;
 - (id)wvJSONData;
 - (id)wvJSONString;
-- (id)abu_filter:(CDUnknownBlockType)arg1;
-- (id)abu_flatmap:(CDUnknownBlockType)arg1;
-- (id)abu_map:(CDUnknownBlockType)arg1;
-- (id)abu_toJsonString;
 - (id)bu_findWithIndexConditionBlock:(CDUnknownBlockType)arg1;
 - (id)bu_findWithConditionBlock:(CDUnknownBlockType)arg1;
 - (id)bu_reduceWithBlock:(CDUnknownBlockType)arg1 initial:(id)arg2;
@@ -59,13 +55,19 @@
 - (void)bu_forEachWithIndexBlock:(CDUnknownBlockType)arg1;
 - (void)bu_forEachWithBlock:(CDUnknownBlockType)arg1;
 - (id)bu_JSONRepresentation:(id *)arg1;
-- (id)hmdbu_jsonData:(id *)arg1;
-- (id)hmdbu_jsonData;
-- (id)hmdbu_jsonString:(id *)arg1;
-- (id)hmdbu_jsonString;
-- (_Bool)hmdbu_isValidJSONObject;
-- (id)hmdbu_objectAtIndex:(unsigned long long)arg1 class:(Class)arg2;
-- (id)hmdbu_objectAtIndex:(unsigned long long)arg1;
 - (id)csj_compactBundleMap:(CDUnknownBlockType)arg1;
+- (_Bool)el_isEmpty;
+- (id)hmdBU_jsonData:(id *)arg1;
+- (id)hmdBU_jsonData;
+- (id)hmdBU_jsonString:(id *)arg1;
+- (id)hmdBU_jsonString;
+- (_Bool)hmdBU_isValidJSONObject;
+- (void)hmdBU_enumerateObjectsUsingBlock:(CDUnknownBlockType)arg1 class:(Class)arg2;
+- (id)hmdBU_objectAtIndex:(unsigned long long)arg1 class:(Class)arg2;
+- (id)hmdBU_objectAtIndex:(unsigned long long)arg1;
+- (id)abu_filter:(CDUnknownBlockType)arg1;
+- (id)abu_flatmap:(CDUnknownBlockType)arg1;
+- (id)abu_map:(CDUnknownBlockType)arg1;
+- (id)abu_toJsonString;
 @end
 

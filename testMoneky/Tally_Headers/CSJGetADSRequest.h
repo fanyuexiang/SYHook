@@ -10,7 +10,7 @@
 {
 }
 
-- (id)pbu_dictionaryInNewSecSDK;
+- (id)True_UaMark;
 - (id)requestHeaderFieldValueDictionary;
 
 @end

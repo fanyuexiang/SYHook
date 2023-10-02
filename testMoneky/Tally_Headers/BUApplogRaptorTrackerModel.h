@@ -10,12 +10,13 @@
 {
 }
 
-- (id)eventExtraInfoKey;
+- (_Bool)Adm_DiffUse;
+- (id)Win_LdsWith;
 - (id)req_id;
-- (id)customDebugInfo;
-- (id)debugTrackerArray;
-- (id)realTimeTrackerArray;
-- (id)keyDictionayKey;
+- (id)Carl_YESSelf;
+- (id)Font_OsSdk;
+- (id)Rect_TimeBOOL;
+- (id)Msg_LineMARK;
 
 @end
 

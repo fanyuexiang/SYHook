@@ -6,18 +6,23 @@
 
 #import "CSJSplashBottomBaseComponentView.h"
 
-@class UIImageView, UIView;
+@class CSJAdInfoViewModel, UIImageView, UIView;
 
 @interface CSJSplashShakeComponentView : CSJSplashBottomBaseComponentView
 {
+    CSJAdInfoViewModel *_infoViewModel;
+    UIView *_New_DicObj;
+    UIImageView *_Hpp_CellIf;
     unsigned long long _layoutType;
-    UIView *_circleBackgroundView;
-    UIImageView *_shakeImageView;
 }
 
 - (void).cxx_destruct;
+@property(nonatomic) unsigned long long layoutType; // @synthesize layoutType=_layoutType;
+@property(retain, nonatomic) UIImageView *Hpp_CellIf; // @synthesize Hpp_CellIf=_Hpp_CellIf;
+@property(retain, nonatomic) UIView *New_DicObj; // @synthesize New_DicObj=_New_DicObj;
+@property(retain, nonatomic) CSJAdInfoViewModel *infoViewModel; // @synthesize infoViewModel=_infoViewModel;
 - (void)_onTapGR;
-- (void)_setupUI;
+- (void)Cn_ObjDocs;
 - (void)startSplashBottomAnimation;
 - (struct CGRect)splashBottomFrameWithContainerFrame:(struct CGRect)arg1;
 - (void)layoutSubviews;

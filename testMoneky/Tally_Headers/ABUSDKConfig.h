@@ -6,7 +6,7 @@
 
 #import <objc/NSObject.h>
 
-@class ABUSDKABTestConfig, ABUSDKCallStackConf, ABUSDKCommonConfig, ABUSDKMediationConfig, ABUSDKPoorNetworkConfig, NSArray, NSDictionary, NSLock, NSMutableDictionary, NSString;
+@class ABUSDKABTestConfig, ABUSDKCallStackConf, ABUSDKCommonConfig, ABUSDKMediationConfig, ABUSDKPoorNetworkConfig, NSArray, NSDictionary, NSLock, NSMutableArray, NSMutableDictionary, NSString;
 
 @interface ABUSDKConfig : NSObject
 {
@@ -24,8 +24,12 @@
     NSString *_url;
     NSString *_appLogUrl;
     ABUSDKCommonConfig *_commonConfig;
+    NSDictionary *_rewardAgainInfoMap;
+    NSDictionary *_isCallbackMap;
+    NSDictionary *_timeoutReqMap;
     long long _ifEnableLabel;
     long long _ecpmTTL;
+    unsigned long long _enableLabelReturn;
     ABUSDKMediationConfig *_mediationConfig;
     NSString *_transparentParams;
     NSDictionary *_moduleDisableControl;
@@ -42,11 +46,13 @@
     long long _ifTest;
     NSMutableDictionary *_mediaSlotConfigGroups;
     NSDictionary *_labelOutputs;
+    NSMutableArray *_uvalueGroupV2RitList;
     NSLock *_lock;
 }
 
 - (void).cxx_destruct;
 @property(retain, nonatomic) NSLock *lock; // @synthesize lock=_lock;
+@property(retain, nonatomic) NSMutableArray *uvalueGroupV2RitList; // @synthesize uvalueGroupV2RitList=_uvalueGroupV2RitList;
 @property(readonly, copy, nonatomic) NSDictionary *labelOutputs; // @synthesize labelOutputs=_labelOutputs;
 @property(retain, nonatomic) NSMutableDictionary *mediaSlotConfigGroups; // @synthesize mediaSlotConfigGroups=_mediaSlotConfigGroups;
 @property(nonatomic) long long ifTest; // @synthesize ifTest=_ifTest;
@@ -65,8 +71,12 @@
 @property(readonly, copy, nonatomic) NSDictionary *moduleDisableControl; // @synthesize moduleDisableControl=_moduleDisableControl;
 @property(readonly, copy, nonatomic) NSString *transparentParams; // @synthesize transparentParams=_transparentParams;
 @property(readonly, nonatomic) ABUSDKMediationConfig *mediationConfig; // @synthesize mediationConfig=_mediationConfig;
+@property(readonly, nonatomic) unsigned long long enableLabelReturn; // @synthesize enableLabelReturn=_enableLabelReturn;
 @property(readonly, nonatomic) long long ecpmTTL; // @synthesize ecpmTTL=_ecpmTTL;
 @property(readonly, nonatomic) long long ifEnableLabel; // @synthesize ifEnableLabel=_ifEnableLabel;
+@property(readonly, copy, nonatomic) NSDictionary *timeoutReqMap; // @synthesize timeoutReqMap=_timeoutReqMap;
+@property(readonly, copy, nonatomic) NSDictionary *isCallbackMap; // @synthesize isCallbackMap=_isCallbackMap;
+@property(readonly, copy, nonatomic) NSDictionary *rewardAgainInfoMap; // @synthesize rewardAgainInfoMap=_rewardAgainInfoMap;
 @property(readonly, nonatomic) ABUSDKCommonConfig *commonConfig; // @synthesize commonConfig=_commonConfig;
 @property(readonly, copy, nonatomic) NSString *appLogUrl; // @synthesize appLogUrl=_appLogUrl;
 @property(readonly, copy, nonatomic) NSString *url; // @synthesize url=_url;
@@ -79,10 +89,15 @@
 @property(readonly, copy, nonatomic) NSString *etag; // @synthesize etag=_etag;
 @property(readonly, nonatomic) long long maxAge; // @synthesize maxAge=_maxAge;
 @property(readonly, nonatomic) double saveTime; // @synthesize saveTime=_saveTime;
-- (id)adnRitConfigGroupWithMediationSlotConfig:(id)arg1;
+- (long long)isCallbackForRitType:(long long)arg1;
+- (long long)timeoutReqForRitType:(long long)arg1;
+- (void)parseRewardAgainWithDict:(id)arg1;
+- (id)adnRitConfigGroupWithMediationSlotConfig:(id)arg1 andLoadConfig:(id)arg2;
 - (id)adnRitIdsOfRitWithId:(id)arg1;
 - (id)_adnSDKConfigsWithDict:(id)arg1;
 - (id)uvaluesForOutputsForMode:(unsigned long long)arg1 withRitType:(long long)arg2;
+- (void)_parseDynamicRules:(id)arg1;
+- (void)_parseLabelGroupInfos:(id)arg1;
 - (id)_parseLabelOutputsFromDic:(id)arg1;
 - (id)_parseMediaSlotConfigsFromList:(id)arg1;
 - (void)_parseRitConfigsFromDict:(id)arg1;

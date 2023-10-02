@@ -6,19 +6,31 @@
 
 #import <UIKit/UIView.h>
 
-@class CBBillDatePicker, UIImageView, UILabel;
+@class CBBillDatePicker, NSString, SKThemeSettingItem, UIButton, UILabel;
 
 @interface SearchTallyChooseView : UIView
 {
-    UIImageView *_righticon;
-    _Bool _show;
+    UIButton *_currentTypeBtn;
+    UIButton *_currentTallyTypeBtn;
+    UIButton *_currentDateBtn;
+    UIView *_dateView;
     UILabel *_starttimeLabel;
     UILabel *_endtimeLabel;
     _Bool _ischooseStart;
-    long long _chooseType;
-    CDUnknownBlockType _selectedHandle;
+    UIButton *_resetBtn;
+    UIButton *_sureBtn;
+    _Bool _isClear;
+    UIView *_intervallineView;
+    _Bool _isshow;
+    long long _type;
+    long long _tallytype;
+    long long _datetype;
+    NSString *_startTimeString;
+    NSString *_endtTimeString;
+    SKThemeSettingItem *_curThemeItem;
     CDUnknownBlockType _dismissBlock;
-    CDUnknownBlockType _dateHandle;
+    CDUnknownBlockType _sureBlock;
+    CDUnknownBlockType _dismissStartBlock;
     UIView *_whitebgView;
     CBBillDatePicker *_datePicker;
 }
@@ -26,21 +38,35 @@
 - (void).cxx_destruct;
 @property(retain, nonatomic) CBBillDatePicker *datePicker; // @synthesize datePicker=_datePicker;
 @property(retain, nonatomic) UIView *whitebgView; // @synthesize whitebgView=_whitebgView;
-@property(copy, nonatomic) CDUnknownBlockType dateHandle; // @synthesize dateHandle=_dateHandle;
+@property(copy, nonatomic) CDUnknownBlockType dismissStartBlock; // @synthesize dismissStartBlock=_dismissStartBlock;
+@property(copy, nonatomic) CDUnknownBlockType sureBlock; // @synthesize sureBlock=_sureBlock;
 @property(copy, nonatomic) CDUnknownBlockType dismissBlock; // @synthesize dismissBlock=_dismissBlock;
-@property(copy, nonatomic) CDUnknownBlockType selectedHandle; // @synthesize selectedHandle=_selectedHandle;
-@property(nonatomic) long long chooseType; // @synthesize chooseType=_chooseType;
-- (void)sureBtnClick;
+@property(retain, nonatomic) SKThemeSettingItem *curThemeItem; // @synthesize curThemeItem=_curThemeItem;
+@property(retain, nonatomic) NSString *endtTimeString; // @synthesize endtTimeString=_endtTimeString;
+@property(retain, nonatomic) NSString *startTimeString; // @synthesize startTimeString=_startTimeString;
+@property(nonatomic) long long datetype; // @synthesize datetype=_datetype;
+@property(nonatomic) long long tallytype; // @synthesize tallytype=_tallytype;
+@property(nonatomic) long long type; // @synthesize type=_type;
+@property(nonatomic) _Bool isshow; // @synthesize isshow=_isshow;
+- (id)transferTime1:(id)arg1;
+- (id)transferTime:(id)arg1;
+- (void)resetLine:(long long)arg1 defaultindex:(long long)arg2 lineindex:(long long)arg3 currentBtnLine:(long long)arg4;
+- (void)clearSet;
+- (void)reset1;
+- (void)reset0;
 - (void)resetBtnClick;
+- (void)sureBtnClick;
 - (void)datebtn:(id)arg1;
 - (void)setupdateUI;
-- (void)btnClick:(id)arg1;
-- (void)setupView:(id)arg1 withdefault:(long long)arg2;
+- (void)datetypeAction:(id)arg1;
+- (void)tallytypeAction:(id)arg1;
+- (void)typeAction:(id)arg1;
+- (void)setupView:(long long)arg1;
 - (void)updateTimeString:(id)arg1 end:(id)arg2;
-- (void)setup:(long long)arg1 withdefault:(long long)arg2;
+- (void)setupUI;
 - (void)dismiss;
 - (void)show;
-- (id)initWithFrame:(struct CGRect)arg1 tallyType:(long long)arg2 defaultindex:(long long)arg3;
+- (id)initWithFrame:(struct CGRect)arg1 currentTheme:(id)arg2;
 
 @end
 

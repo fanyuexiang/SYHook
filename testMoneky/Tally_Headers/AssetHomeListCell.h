@@ -28,6 +28,7 @@
 @property(retain, nonatomic) UIView *normalBgView; // @synthesize normalBgView=_normalBgView;
 @property(retain, nonatomic) AssetItemModel *model; // @synthesize model=_model;
 - (void)clearData;
+- (id)textValue:(id)arg1;
 - (void)layoutSubviews;
 - (id)initWithStyle:(long long)arg1 reuseIdentifier:(id)arg2;
 

@@ -6,14 +6,11 @@
 
 #import "NSObject-Protocol.h"
 
-@class BUPersonalizationPrompts, NSArray, NSString;
+@class NSArray, NSString;
 
 @protocol BUDislikeReportorDelegate <NSObject>
 
 @optional
-- (void)dislikeDidLoadPersonalizationPromptsURL:(BUPersonalizationPrompts *)arg1;
-- (void)dislikeDidSelectedPersonalizationPrompts:(BUPersonalizationPrompts *)arg1;
-- (void)dislikeDidShowPersonalizationPrompts:(BUPersonalizationPrompts *)arg1;
 - (void)dislikeDidSubmitFeedback:(NSString *)arg1;
 - (void)dislikeDidSelected:(NSArray *)arg1;
 @end

@@ -9,22 +9,25 @@
 #import "BUAdClientBiddingProtocol-Protocol.h"
 #import "BUMopubAdMarkUpDelegate-Protocol.h"
 
-@class BUSplashCardView, BUSplashView, BUSplashZoomOutView, NSDictionary, NSString, UIView, UIViewController;
-@protocol BUSplashAdDelegate, BUSplashCardDelegate, BUSplashZoomOutDelegate;
+@class BUDictionary, BUSplashCardView, BUSplashView, BUSplashZoomOutView, NSObject, NSString, UIView, UIViewController;
+@protocol BUSplashAdDelegate, BUSplashAdMediationProtocol, BUSplashCardDelegate, BUSplashLoadDurationDelegate, BUSplashZoomOutDelegate;
 
 @interface BUSplashAd : BUInterfaceBaseObject <BUMopubAdMarkUpDelegate, BUAdClientBiddingProtocol>
 {
     id <BUSplashAdDelegate> _delegate;
     id <BUSplashCardDelegate> _cardDelegate;
     id <BUSplashZoomOutDelegate> _zoomOutDelegate;
+    id <BUSplashLoadDurationDelegate> _loadDurationDelegate;
     BUSplashAd *_iteration;
 }
 
 - (void).cxx_destruct;
 @property(retain, nonatomic) BUSplashAd *iteration; // @synthesize iteration=_iteration;
+@property(nonatomic) __weak id <BUSplashLoadDurationDelegate> loadDurationDelegate; // @synthesize loadDurationDelegate=_loadDurationDelegate;
 @property(nonatomic) __weak id <BUSplashZoomOutDelegate> zoomOutDelegate; // @synthesize zoomOutDelegate=_zoomOutDelegate;
 @property(nonatomic) __weak id <BUSplashCardDelegate> cardDelegate; // @synthesize cardDelegate=_cardDelegate;
 @property(nonatomic) __weak id <BUSplashAdDelegate> delegate; // @synthesize delegate=_delegate;
+- (void)splashAdLoadTime:(id)arg1 duration:(long long)arg2 extraData:(id)arg3 error:(id)arg4 timeOut:(_Bool)arg5;
 - (void)splashZoomOutViewDidClose:(id)arg1;
 - (void)splashZoomOutViewDidClick:(id)arg1;
 - (void)splashZoomOutReadyToShow:(id)arg1;
@@ -44,6 +47,9 @@
 - (void)splashAdLoadSuccess:(id)arg1;
 - (id)initWithSlotID:(id)arg1 adSize:(struct CGSize)arg2;
 - (id)initWithSlot:(id)arg1 adSize:(struct CGSize)arg2;
+- (void)splashAdWillPresentFullScreenModal:(id)arg1;
+- (void)splashAdDidShowFailed:(id)arg1 error:(id)arg2;
+@property(readonly, nonatomic) NSObject<BUSplashAdMediationProtocol> *mediation;
 
 // Remaining properties
 @property(readonly, nonatomic) BUSplashCardView *cardView; // @dynamic cardView;
@@ -51,7 +57,7 @@
 @property(readonly, copy) NSString *description;
 @property(readonly) unsigned long long hash;
 @property(nonatomic) _Bool hideSkipButton; // @dynamic hideSkipButton;
-@property(readonly, copy, nonatomic) NSDictionary *mediaExt; // @dynamic mediaExt;
+@property(readonly, copy, nonatomic) BUDictionary *mediaExt; // @dynamic mediaExt;
 @property(readonly, copy, nonatomic) NSString *slotID; // @dynamic slotID;
 @property(readonly, nonatomic) __weak UIViewController *splashRootViewController; // @dynamic splashRootViewController;
 @property(readonly, nonatomic) BUSplashView *splashView; // @dynamic splashView;

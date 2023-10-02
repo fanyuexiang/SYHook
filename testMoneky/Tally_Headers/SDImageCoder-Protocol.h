@@ -6,12 +6,15 @@
 
 #import "NSObject-Protocol.h"
 
-@class NSData, NSDictionary, UIImage;
+@class NSArray, NSData, NSDictionary, UIImage;
 
 @protocol SDImageCoder <NSObject>
 - (NSData *)encodedDataWithImage:(UIImage *)arg1 format:(long long)arg2 options:(NSDictionary *)arg3;
 - (_Bool)canEncodeToFormat:(long long)arg1;
 - (UIImage *)decodedImageWithData:(NSData *)arg1 options:(NSDictionary *)arg2;
 - (_Bool)canDecodeFromData:(NSData *)arg1;
+
+@optional
+- (NSData *)encodedDataWithFrames:(NSArray *)arg1 loopCount:(unsigned long long)arg2 format:(long long)arg3 options:(NSDictionary *)arg4;
 @end
 

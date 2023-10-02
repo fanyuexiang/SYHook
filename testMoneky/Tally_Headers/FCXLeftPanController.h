@@ -8,7 +8,7 @@
 
 #import "UIGestureRecognizerDelegate-Protocol.h"
 
-@class NSString, UIButton;
+@class NSString, TrialModelTabBarController, UIButton;
 
 @interface FCXLeftPanController : UIViewController <UIGestureRecognizerDelegate>
 {
@@ -16,14 +16,18 @@
     UIViewController *_leftController;
     UIViewController *_mainController;
     double _leftWidth;
+    TrialModelTabBarController *_tmt;
     UIButton *_coverBtn;
 }
 
 - (void).cxx_destruct;
 @property(retain, nonatomic) UIButton *coverBtn; // @synthesize coverBtn=_coverBtn;
+@property(retain, nonatomic) TrialModelTabBarController *tmt; // @synthesize tmt=_tmt;
 @property(nonatomic) double leftWidth; // @synthesize leftWidth=_leftWidth;
 @property(retain, nonatomic) UIViewController *mainController; // @synthesize mainController=_mainController;
 @property(retain, nonatomic) UIViewController *leftController; // @synthesize leftController=_leftController;
+- (void)changeToMain;
+- (void)trailModelClose;
 - (_Bool)gestureRecognizerShouldBegin:(id)arg1;
 - (void)panGestureAction:(id)arg1;
 - (void)showMain;

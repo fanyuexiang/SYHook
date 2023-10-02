@@ -8,5 +8,6 @@
 
 @interface UIFont (CSJAd)
 + (id)csj_PingFangFontOfSize:(double)arg1;
++ (id)Ugen_displayFontWithSize:(double)arg1 bold:(_Bool)arg2 itatic:(_Bool)arg3;
 @end
 

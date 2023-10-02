@@ -6,7 +6,7 @@
 
 #import <UIKit/UIViewController.h>
 
-@class RegisterAgreePrivacyView, UIButton, WXLoginButton, _TtC5Tally15AppLoginManager;
+@class RegisterAgreePrivacyPopupViewController, RegisterAgreePrivacyView, UIButton, WXLoginButton, _TtC5Tally15AppLoginManager;
 
 @interface LoginController : UIViewController
 {
@@ -18,19 +18,29 @@
     _Bool _isFirst;
     _Bool _agreementTipShow;
     CDUnknownBlockType _finish;
+    long long _loginActionType;
     long long _networkStatus;
     _TtC5Tally15AppLoginManager *_appleLoginManager;
     RegisterAgreePrivacyView *_privacyView;
+    RegisterAgreePrivacyPopupViewController *_privacyPopupCtr;
 }
 
 - (void).cxx_destruct;
 @property(nonatomic) _Bool agreementTipShow; // @synthesize agreementTipShow=_agreementTipShow;
+@property(nonatomic) __weak RegisterAgreePrivacyPopupViewController *privacyPopupCtr; // @synthesize privacyPopupCtr=_privacyPopupCtr;
 @property(retain, nonatomic) RegisterAgreePrivacyView *privacyView; // @synthesize privacyView=_privacyView;
 @property(retain, nonatomic) _TtC5Tally15AppLoginManager *appleLoginManager; // @synthesize appleLoginManager=_appleLoginManager;
 @property(nonatomic) long long networkStatus; // @synthesize networkStatus=_networkStatus;
+@property(nonatomic) long long loginActionType; // @synthesize loginActionType=_loginActionType;
 @property(copy, nonatomic) CDUnknownBlockType finish; // @synthesize finish=_finish;
 @property(nonatomic) _Bool isFirst; // @synthesize isFirst=_isFirst;
-- (void)dealloc;
+- (void)showPhoneLoginAction:(_Bool)arg1;
+- (void)showGLWXLoginAction:(_Bool)arg1;
+- (void)showGLPhoneLoginAction:(_Bool)arg1;
+- (void)showLastLoginActionType;
+- (void)closeNext:(_Bool)arg1;
+- (void)close:(_Bool)arg1;
+- (void)responseNotification:(id)arg1;
 - (void)wxLogin:(id)arg1;
 - (void)closeAction:(id)arg1;
 - (void)rightClose:(id)arg1;
@@ -38,12 +48,12 @@
 - (void)registerAction;
 - (void)phoneLoginAction;
 - (void)moreLogin;
-- (void)refreshView;
 - (void)checkNetworkStatus;
 - (void)appleLoginAction;
 - (void)showPrivacyyAgreement;
-- (void)registerTipShow;
+- (void)registerTipShow:(SEL)arg1 Obj:(id)arg2;
 - (void)viewDidLoad;
+- (void)dealloc;
 
 @end
 

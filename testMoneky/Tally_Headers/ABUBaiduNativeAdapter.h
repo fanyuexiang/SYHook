@@ -9,12 +9,13 @@
 #import "ABUBaidu_BaiduMobAdNativeAdDelegate-Protocol.h"
 #import "ABUBaidu_BaiduMobAdNativeInterationDelegate-Protocol.h"
 #import "ABUBaidu_BaiduMobAdNativeShakeViewDelegate-Protocol.h"
-#import "ABUCustomNativeAdapter-Protocol.h"
+#import "ABUBaidu_BaiduMobAdNativeVideoViewDelegate-Protocol.h"
+#import "BUMCustomNativeAdapter-Protocol.h"
 
 @class NSDictionary, NSMapTable, NSMutableDictionary, NSString;
-@protocol ABUBaidu_BaiduMobAdNative, ABUBaidu_BaiduMobAdVideoViewDelegate, ABUCustomConfigAdapter, ABUCustomNativeAdapterBridge;
+@protocol ABUBaidu_BaiduMobAdNative, ABUBaidu_BaiduMobAdVideoViewDelegate, BUMCustomConfigAdapter, BUMCustomNativeAdapterBridge;
 
-@interface ABUBaiduNativeAdapter : NSObject <ABUBaidu_BaiduMobAdNativeAdDelegate, ABUBaidu_BaiduMobAdNativeInterationDelegate, ABUBaidu_BaiduMobAdNativeShakeViewDelegate, ABUCustomNativeAdapter>
+@interface ABUBaiduNativeAdapter : NSObject <ABUBaidu_BaiduMobAdNativeAdDelegate, ABUBaidu_BaiduMobAdNativeInterationDelegate, ABUBaidu_BaiduMobAdNativeShakeViewDelegate, ABUBaidu_BaiduMobAdNativeVideoViewDelegate, BUMCustomNativeAdapter>
 {
     NSObject<ABUBaidu_BaiduMobAdNative> *_nativeAd;
     NSDictionary *_parameters;
@@ -33,6 +34,11 @@
 @property(retain, nonatomic) NSMutableDictionary *ads; // @synthesize ads=_ads;
 @property(copy, nonatomic) NSDictionary *parameters; // @synthesize parameters=_parameters;
 @property(retain, nonatomic) NSObject<ABUBaidu_BaiduMobAdNative> *nativeAd; // @synthesize nativeAd=_nativeAd;
+- (void)nativeVideoAdDidPause:(id)arg1;
+- (void)nativeVideoAdDidReplay:(id)arg1;
+- (void)nativeVideoAdDidStartPlaying:(id)arg1;
+- (void)nativeVideoAdDidComplete:(id)arg1;
+- (void)nativeVideoAdDidFailed:(id)arg1;
 - (void)nativeAdExpressSuccessRender:(id)arg1 nativeAd:(id)arg2;
 - (void)nativeVideoAdCacheFail:(id)arg1 withError:(int)arg2;
 - (void)nativeVideoAdCacheSuccess:(id)arg1;
@@ -73,8 +79,8 @@
 - (_Bool)enablePreloadWhenCurrentIsDisplay;
 
 // Remaining properties
-@property(nonatomic) __weak id <ABUCustomNativeAdapterBridge> bridge;
-@property(retain, nonatomic) id <ABUCustomConfigAdapter> configAdapter;
+@property(nonatomic) __weak id <BUMCustomNativeAdapterBridge> bridge;
+@property(retain, nonatomic) id <BUMCustomConfigAdapter> configAdapter;
 @property(readonly, copy) NSString *debugDescription;
 @property(nonatomic) __weak id <ABUBaidu_BaiduMobAdVideoViewDelegate> delegate;
 @property(readonly, copy) NSString *description;

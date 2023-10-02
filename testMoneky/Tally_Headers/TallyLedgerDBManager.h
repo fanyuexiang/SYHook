@@ -45,6 +45,8 @@
 - (void)addTallyModel:(id)arg1 images:(id)arg2 finish:(CDUnknownBlockType)arg3;
 - (void)userInfoDidChange;
 - (id)init;
+- (id)sortAllLabelRemark:(long long)arg1;
+- (id)remarkObjectArray:(long long)arg1;
 - (id)remarkArray:(long long)arg1;
 - (void)deleteRemark:(id)arg1 saveContext:(_Bool)arg2;
 - (void)saveRemark:(id)arg1 saveContext:(_Bool)arg2;

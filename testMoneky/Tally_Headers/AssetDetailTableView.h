@@ -10,11 +10,13 @@
 #import "UITableViewDataSource-Protocol.h"
 #import "UITableViewDelegate-Protocol.h"
 
-@class NSFetchedResultsController, NSMutableArray, NSString, UIViewController;
+@class NSFetchedResultsController, NSMutableArray, NSString, UIView, UIViewController;
 
 @interface AssetDetailTableView : UITableView <UITableViewDelegate, UITableViewDataSource, NSFetchedResultsControllerDelegate>
 {
     _Bool _minus;
+    _Bool _showedTipGuideView;
+    _Bool _fromAutoShowedTipGuideView;
     UIViewController *_controller;
     NSString *_date;
     NSString *_aid;
@@ -22,13 +24,20 @@
     CDUnknownBlockType _tallyDetailBlock;
     CDUnknownBlockType _assetDetailBlock;
     CDUnknownBlockType _transferDetailBlock;
+    UIView *_noDataFooterView;
     NSFetchedResultsController *_fetchedResultsController;
     NSMutableArray *_headerData;
+    NSString *_lastRecordModelTime;
 }
 
++ (id)regetCurrentLastAssetAccountRecordModel:(id)arg1;
 - (void).cxx_destruct;
+@property(copy, nonatomic) NSString *lastRecordModelTime; // @synthesize lastRecordModelTime=_lastRecordModelTime;
+@property(nonatomic) _Bool fromAutoShowedTipGuideView; // @synthesize fromAutoShowedTipGuideView=_fromAutoShowedTipGuideView;
+@property(nonatomic) _Bool showedTipGuideView; // @synthesize showedTipGuideView=_showedTipGuideView;
 @property(retain, nonatomic) NSMutableArray *headerData; // @synthesize headerData=_headerData;
 @property(retain, nonatomic) NSFetchedResultsController *fetchedResultsController; // @synthesize fetchedResultsController=_fetchedResultsController;
+@property(retain, nonatomic) UIView *noDataFooterView; // @synthesize noDataFooterView=_noDataFooterView;
 @property(copy, nonatomic) CDUnknownBlockType transferDetailBlock; // @synthesize transferDetailBlock=_transferDetailBlock;
 @property(copy, nonatomic) CDUnknownBlockType assetDetailBlock; // @synthesize assetDetailBlock=_assetDetailBlock;
 @property(copy, nonatomic) CDUnknownBlockType tallyDetailBlock; // @synthesize tallyDetailBlock=_tallyDetailBlock;
@@ -37,11 +46,14 @@
 @property(copy, nonatomic) NSString *aid; // @synthesize aid=_aid;
 @property(copy, nonatomic) NSString *date; // @synthesize date=_date;
 @property(nonatomic) __weak UIViewController *controller; // @synthesize controller=_controller;
+- (void)canAutoShowTipGuideView:(_Bool)arg1 needAdd:(_Bool)arg2;
+- (_Bool)canShowTipGuideBtn:(id)arg1;
+- (void)refreshScrollToIndexPath:(id)arg1;
 - (_Bool)hasData;
 - (_Bool)compareDateWithEqualYear:(id)arg1 toDate:(id)arg2;
 - (void)updateDataAction;
 - (void)updateAmountAction;
-- (void)firstRequest;
+- (void)firstRequest:(_Bool)arg1 needAdd:(_Bool)arg2;
 - (id)numberHandler;
 - (id)numberFormatter;
 - (void)controllerDidChangeContent:(id)arg1;
@@ -49,7 +61,7 @@
 - (id)datePredicate;
 - (void)tableView:(id)arg1 didSelectRowAtIndexPath:(id)arg2;
 - (id)tableView:(id)arg1 cellForRowAtIndexPath:(id)arg2;
-- (double)tableView:(id)arg1 heightForRowAtIndexPath:(id)arg2;
+- (double)tableView:(id)arg1 estimatedHeightForRowAtIndexPath:(id)arg2;
 - (long long)tableView:(id)arg1 numberOfRowsInSection:(long long)arg2;
 - (long long)numberOfSectionsInTableView:(id)arg1;
 - (void)tableView:(id)arg1 willDisplayCell:(id)arg2 forRowAtIndexPath:(id)arg3;

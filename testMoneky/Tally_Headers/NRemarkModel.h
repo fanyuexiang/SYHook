@@ -20,6 +20,7 @@
 @property(copy, nonatomic) NSNumber *sortID; // @dynamic sortID;
 @property(copy, nonatomic) NSString *sortName; // @dynamic sortName;
 @property(copy, nonatomic) NSString *time; // @dynamic time;
+@property(copy, nonatomic) NSNumber *type; // @dynamic type;
 @property(copy, nonatomic) NSString *typeID; // @dynamic typeID;
 @property(copy, nonatomic) NSString *userID; // @dynamic userID;
 

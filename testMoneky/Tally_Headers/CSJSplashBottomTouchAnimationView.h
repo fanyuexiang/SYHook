@@ -17,7 +17,7 @@
 - (void).cxx_destruct;
 @property(retain, nonatomic) CSJSplashRippleAnimationView *rippleAnimationView; // @synthesize rippleAnimationView=_rippleAnimationView;
 @property(retain, nonatomic) UIImageView *touchHandleImageView; // @synthesize touchHandleImageView=_touchHandleImageView;
-- (void)splashControlDestColorAnimation;
+- (void)Call_FailMsg;
 - (void)startSplashBottomAnimation;
 - (struct CGRect)splashBottomFrameWithContainerFrame:(struct CGRect)arg1;
 - (void)buildUpView;

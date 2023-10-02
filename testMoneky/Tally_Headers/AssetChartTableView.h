@@ -9,13 +9,13 @@
 #import "UITableViewDataSource-Protocol.h"
 #import "UITableViewDelegate-Protocol.h"
 
-@class AssetLineChartView, CBBillDatePicker, FCXPieChartView, NSMutableArray, NSMutableDictionary, NSString, UILabel;
+@class AssetFCXPieChartView, AssetLineChartView, CBBillDatePicker, NSMutableArray, NSMutableDictionary, NSString, UILabel, UIView;
 
 @interface AssetChartTableView : UITableView <UITableViewDelegate, UITableViewDataSource>
 {
     NSMutableArray *_dataArray;
     AssetLineChartView *_lineChartView;
-    FCXPieChartView *_pieChartView;
+    AssetFCXPieChartView *_pieChartView;
     UILabel *_rankLabel;
     long long _lastIndex;
     UILabel *_assetLabel;
@@ -23,9 +23,11 @@
     NSString *_year;
     long long _assetType;
     NSMutableDictionary *_alldata;
+    UIView *_lineChartShadowView;
 }
 
 - (void).cxx_destruct;
+@property(retain, nonatomic) UIView *lineChartShadowView; // @synthesize lineChartShadowView=_lineChartShadowView;
 @property(retain, nonatomic) NSMutableDictionary *alldata; // @synthesize alldata=_alldata;
 @property(nonatomic) long long assetType; // @synthesize assetType=_assetType;
 @property(copy, nonatomic) NSString *year; // @synthesize year=_year;
@@ -39,6 +41,7 @@
 - (id)tableView:(id)arg1 cellForRowAtIndexPath:(id)arg2;
 - (long long)tableView:(id)arg1 numberOfRowsInSection:(long long)arg2;
 - (void)tableView:(id)arg1 willDisplayCell:(id)arg2 forRowAtIndexPath:(id)arg3;
+- (id)netAsset:(struct CGRect)arg1 title:(id)arg2 value:(id)arg3;
 - (void)setupNetAsset:(id)arg1 with:(id)arg2;
 - (void)showChartData:(_Bool)arg1;
 - (void)requestChartData;

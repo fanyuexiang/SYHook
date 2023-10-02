@@ -7,22 +7,24 @@
 #import <objc/NSObject.h>
 
 @class CSJMaterialMeta, NSString;
-@protocol CSJNativeExpressVideoAdDelegate;
+@protocol CSJNativeExpressVideoAdDelegate><CSJVideoAdDelegate><CSJInterstitialAdDelegate;
 
 @interface CSJNativeExpressRewardDrawRewardSender : NSObject
 {
-    id <CSJNativeExpressVideoAdDelegate> _rewardedVideoAd;
+    id <CSJNativeExpressVideoAdDelegate><CSJVideoAdDelegate><CSJInterstitialAdDelegate> _rewardedVideoAd;
     CSJMaterialMeta *_materialMeta;
-    NSString *_playStartTS;
+    NSString *_Win_CharUa;
 }
 
 - (void).cxx_destruct;
-@property(copy, nonatomic) NSString *playStartTS; // @synthesize playStartTS=_playStartTS;
+@property(copy, nonatomic) NSString *Win_CharUa; // @synthesize Win_CharUa=_Win_CharUa;
 @property(retain, nonatomic) CSJMaterialMeta *materialMeta; // @synthesize materialMeta=_materialMeta;
-@property(nonatomic) __weak id <CSJNativeExpressVideoAdDelegate> rewardedVideoAd; // @synthesize rewardedVideoAd=_rewardedVideoAd;
-- (void)_updateRewardWithType:(long long)arg1 propose:(float)arg2;
-- (void)verifyRewardWithDurationTime:(double)arg1 type:(long long)arg2 success:(CDUnknownBlockType)arg3 fail:(CDUnknownBlockType)arg4;
-- (void)sendVerifiedRewardWithDuration:(double)arg1 type:(long long)arg2 meta:(id)arg3 settingModel:(id)arg4 playStartTS:(id)arg5 resultBlock:(CDUnknownBlockType)arg6;
+@property(nonatomic) __weak id <CSJNativeExpressVideoAdDelegate><CSJVideoAdDelegate><CSJInterstitialAdDelegate> rewardedVideoAd; // @synthesize rewardedVideoAd=_rewardedVideoAd;
+- (void)Msg_HasObj:(long long)arg1 propose:(float)arg2;
+- (void)Only_OsTap:(double)arg1 type:(long long)arg2 success:(CDUnknownBlockType)arg3 fail:(CDUnknownBlockType)arg4;
+- (void)Used_MuteNil:(id)arg1;
+- (void)Area_HostCase:(_Bool)arg1;
+- (void)Item_RectSum:(double)arg1 type:(long long)arg2 meta:(id)arg3 settingModel:(id)arg4 Win_CharUa:(id)arg5 resultBlock:(CDUnknownBlockType)arg6;
 - (id)initWithRewardedVideoAd:(id)arg1;
 
 @end

@@ -6,12 +6,12 @@
 
 #import <objc/NSObject.h>
 
-#import "ABUMediatedNativeAdData-Protocol.h"
+#import "BUMMediatedNativeAdData-Protocol.h"
 
-@class ABUImage, NSArray, NSDictionary, NSString;
+@class BUMImage, NSArray, NSDictionary, NSString;
 @protocol ABUGDT_GDTMaterialMeta;
 
-@interface ABUGDTNativeAdData : NSObject <ABUMediatedNativeAdData>
+@interface ABUGDTNativeAdData : NSObject <BUMMediatedNativeAdData>
 {
     NSObject<ABUGDT_GDTMaterialMeta> *_ad;
 }
@@ -32,13 +32,13 @@
 @property(readonly, copy, nonatomic) NSString *source;
 @property(readonly, copy, nonatomic) NSString *adDescription;
 @property(readonly, copy, nonatomic) NSString *adTitle;
-@property(readonly, nonatomic) ABUImage *icon;
+@property(readonly, nonatomic) BUMImage *icon;
 @property(readonly, copy, nonatomic) NSArray *imageList;
 @property(readonly, nonatomic) long long callToType;
 - (id)initWithAd:(id)arg1;
 
 // Remaining properties
-@property(readonly, nonatomic) ABUImage *adLogo;
+@property(readonly, nonatomic) BUMImage *adLogo;
 @property(readonly, copy) NSString *debugDescription;
 @property(readonly, copy) NSString *description;
 @property(readonly, copy, nonatomic) NSArray *dislikeReasons;

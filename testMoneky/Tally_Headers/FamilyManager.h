@@ -20,7 +20,6 @@
 + (id)colorImageName:(id)arg1 colorType:(long long)arg2;
 + (void)updateFamilyInfo:(id)arg1;
 + (id)presentViewConrollerWithWidget:(id)arg1 animated:(_Bool)arg2;
-+ (void)requestDataConroller:(id)arg1 result:(CDUnknownBlockType)arg2;
 + (id)presentViewConroller:(id)arg1;
 + (id)sharedManager;
 - (void).cxx_destruct;

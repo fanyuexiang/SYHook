@@ -22,6 +22,8 @@
     NSMutableDictionary *_typeIconDict;
 }
 
++ (id)queryTallyTypeWithTypeID:(id)arg1;
++ (id)queryTallyTypeWithCid:(id)arg1;
 + (id)sharedManager;
 - (void).cxx_destruct;
 @property(retain, nonatomic) NSMutableDictionary *typeIconDict; // @synthesize typeIconDict=_typeIconDict;

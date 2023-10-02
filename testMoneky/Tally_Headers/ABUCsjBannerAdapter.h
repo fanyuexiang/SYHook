@@ -6,39 +6,38 @@
 
 #import <objc/NSObject.h>
 
-#import "ABUCsj_BUNativeAdDelegate-Protocol.h"
-#import "ABUCsj_BUNativeExpressAdViewDelegate-Protocol.h"
-#import "ABUCsj_BUNativeExpressBannerViewDelegate-Protocol.h"
-#import "ABUCsj_BUVideoAdViewDelegate-Protocol.h"
-#import "ABUCustomBannerAdapter-Protocol.h"
-#import "ABU_BUNativeAdsManagerDelegate-Protocol.h"
-#import "ABU_BUNativeExpressAdViewDelegate-Protocol.h"
+#import "BUMCustomBannerAdapter-Protocol.h"
+#import "BUNativeAdDelegate-Protocol.h"
+#import "BUNativeAdsManagerDelegate-Protocol.h"
+#import "BUNativeExpressAdViewDelegate-Protocol.h"
+#import "BUNativeExpressBannerViewDelegate-Protocol.h"
+#import "BUVideoAdViewDelegate-Protocol.h"
 
-@class NSArray, NSDictionary, NSString, UIView;
-@protocol ABUCsj_BUNativeAd, ABUCsj_BUNativeExpressBannerView, ABUCustomBannerAdapterBridge, ABUCustomConfigAdapter, ABU_BUNativeAdsManager, ABU_BUNativeExpressAdManager;
+@class BUNativeAd, BUNativeAdsManager, BUNativeExpressAdManager, BUNativeExpressBannerView, NSArray, NSDictionary, NSString, UIView;
+@protocol BUMCustomBannerAdapterBridge, BUMCustomConfigAdapter;
 
-@interface ABUCsjBannerAdapter : NSObject <ABUCsj_BUNativeExpressBannerViewDelegate, ABU_BUNativeAdsManagerDelegate, ABU_BUNativeExpressAdViewDelegate, ABUCsj_BUNativeAdDelegate, ABUCsj_BUNativeExpressAdViewDelegate, ABUCsj_BUVideoAdViewDelegate, ABUCustomBannerAdapter>
+@interface ABUCsjBannerAdapter : NSObject <BUNativeExpressBannerViewDelegate, BUNativeAdsManagerDelegate, BUNativeExpressAdViewDelegate, BUNativeAdDelegate, BUVideoAdViewDelegate, BUMCustomBannerAdapter>
 {
     _Bool _isExpress;
     long long _adSubType;
     NSArray *_dislikeWords;
-    UIView<ABUCsj_BUNativeExpressBannerView> *_bannerView;
+    BUNativeExpressBannerView *_bannerView;
     UIView *_nativeAdView;
     NSDictionary *_ext;
-    id <ABU_BUNativeExpressAdManager> _expressAdManager;
-    id <ABU_BUNativeAdsManager> _adManager;
-    id <ABUCsj_BUNativeAd> _csj_BUNativeAd;
+    BUNativeExpressAdManager *_expressAdManager;
+    BUNativeAdsManager *_adManager;
+    BUNativeAd *_csj_BUNativeAd;
     struct CGSize _adSize;
 }
 
 - (void).cxx_destruct;
 @property(nonatomic) _Bool isExpress; // @synthesize isExpress=_isExpress;
-@property(retain, nonatomic) id <ABUCsj_BUNativeAd> csj_BUNativeAd; // @synthesize csj_BUNativeAd=_csj_BUNativeAd;
-@property(retain, nonatomic) id <ABU_BUNativeAdsManager> adManager; // @synthesize adManager=_adManager;
-@property(retain, nonatomic) id <ABU_BUNativeExpressAdManager> expressAdManager; // @synthesize expressAdManager=_expressAdManager;
+@property(retain, nonatomic) BUNativeAd *csj_BUNativeAd; // @synthesize csj_BUNativeAd=_csj_BUNativeAd;
+@property(retain, nonatomic) BUNativeAdsManager *adManager; // @synthesize adManager=_adManager;
+@property(retain, nonatomic) BUNativeExpressAdManager *expressAdManager; // @synthesize expressAdManager=_expressAdManager;
 @property(retain, nonatomic) NSDictionary *ext; // @synthesize ext=_ext;
 @property(retain, nonatomic) UIView *nativeAdView; // @synthesize nativeAdView=_nativeAdView;
-@property(retain, nonatomic) UIView<ABUCsj_BUNativeExpressBannerView> *bannerView; // @synthesize bannerView=_bannerView;
+@property(retain, nonatomic) BUNativeExpressBannerView *bannerView; // @synthesize bannerView=_bannerView;
 @property(nonatomic) struct CGSize adSize; // @synthesize adSize=_adSize;
 @property(copy, nonatomic) NSArray *dislikeWords; // @synthesize dislikeWords=_dislikeWords;
 @property(nonatomic) long long adSubType; // @synthesize adSubType=_adSubType;
@@ -81,6 +80,7 @@
 - (id)_transitionMediaExt:(id)arg1;
 - (void)_setupWithSlotID:(id)arg1 andSize:(struct CGSize)arg2 parameter:(id)arg3;
 - (void)_nativeAdSetupWithSlotID:(id)arg1 andSize:(struct CGSize)arg2 imageSize:(struct CGSize)arg3 parameter:(id)arg4;
+- (void)unregisterClickableViewsForNativeAd:(id)arg1;
 - (void)registerContainerView:(id)arg1 andClickableViews:(id)arg2 forNativeAd:(id)arg3;
 - (_Bool)enablePreloadWhenCurrentIsDisplay;
 - (CDStruct_2ec95fd7)mediatedAdStatus;
@@ -89,8 +89,8 @@
 - (void)loadBannerAdWithSlotID:(id)arg1 andSize:(struct CGSize)arg2 parameter:(id)arg3;
 
 // Remaining properties
-@property(nonatomic) __weak id <ABUCustomBannerAdapterBridge> bridge;
-@property(retain, nonatomic) id <ABUCustomConfigAdapter> configAdapter;
+@property(nonatomic) __weak id <BUMCustomBannerAdapterBridge> bridge;
+@property(retain, nonatomic) id <BUMCustomConfigAdapter> configAdapter;
 @property(readonly, copy) NSString *debugDescription;
 @property(readonly, copy) NSString *description;
 @property(readonly) unsigned long long hash;

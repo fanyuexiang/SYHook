@@ -6,16 +6,18 @@
 
 #import "AssetBaseController.h"
 
-@class AssetDetailHeaderView, AssetDetailTableView, AssetItemModel;
+@class AssetDetailHeaderView, AssetDetailTableView, AssetItemModel, NSString;
 
 @interface AssetDetailController : AssetBaseController
 {
     AssetItemModel *_accountModel;
     AssetDetailHeaderView *_headerView;
     AssetDetailTableView *_listTable;
+    NSString *_dateValue;
 }
 
 - (void).cxx_destruct;
+@property(copy, nonatomic) NSString *dateValue; // @synthesize dateValue=_dateValue;
 @property(retain, nonatomic) AssetDetailTableView *listTable; // @synthesize listTable=_listTable;
 @property(retain, nonatomic) AssetDetailHeaderView *headerView; // @synthesize headerView=_headerView;
 @property(retain, nonatomic) AssetItemModel *accountModel; // @synthesize accountModel=_accountModel;
@@ -26,6 +28,8 @@
 - (void)responseNotification:(id)arg1;
 - (void)reloadDataWithHeaderView;
 - (void)setupRecordView;
+- (void)showDatePickerAction:(id)arg1 month:(id)arg2;
+- (void)changeDateValueAction;
 - (void)viewWillAppear:(_Bool)arg1;
 - (void)viewDidLoad;
 - (void)dealloc;

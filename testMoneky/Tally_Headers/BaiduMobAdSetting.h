@@ -16,6 +16,7 @@
     _Bool _limitPersonAds;
     _Bool _limitPersonCPUs;
     _Bool _bdPermisson;
+    _Bool _bdFakePermisson;
     _Bool _closeShake;
     NSString *_WXAppId;
     NSString *_WXUniversalLink;
@@ -31,6 +32,7 @@
 - (void).cxx_destruct;
 @property(retain, nonatomic) NSString *publisherId; // @synthesize publisherId=_publisherId;
 @property(nonatomic) _Bool closeShake; // @synthesize closeShake=_closeShake;
+@property(nonatomic) _Bool bdFakePermisson; // @synthesize bdFakePermisson=_bdFakePermisson;
 @property(nonatomic) _Bool bdPermisson; // @synthesize bdPermisson=_bdPermisson;
 @property(nonatomic) _Bool limitPersonCPUs; // @synthesize limitPersonCPUs=_limitPersonCPUs;
 @property(nonatomic) _Bool limitPersonAds; // @synthesize limitPersonAds=_limitPersonAds;
@@ -41,6 +43,7 @@
 @property(retain, nonatomic) NSString *WXAppId; // @synthesize WXAppId=_WXAppId;
 @property _Bool trackCrash; // @synthesize trackCrash=_trackCrash;
 @property _Bool supportHttps; // @synthesize supportHttps=_supportHttps;
+- (id)getSDKVersion;
 - (void)setIsRegisterWXApi;
 - (_Bool)getIsRegisterWXApi;
 - (void)setWXAppId:(id)arg1 universalLink:(id)arg2;
@@ -52,7 +55,9 @@
 - (void)setLimitBaiduPersonalCPUs:(_Bool)arg1;
 - (_Bool)getLimitBaiduPersonalAds;
 - (void)setLimitBaiduPersonalAds:(_Bool)arg1;
+- (_Bool)getInnerBDPermission;
 - (_Bool)getBDPermission;
+- (void)setInnerBDPermissionEnable:(_Bool)arg1;
 - (void)setBDPermissionEnable:(_Bool)arg1;
 - (void)setDebugLogEnable:(_Bool)arg1;
 

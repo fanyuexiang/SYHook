@@ -13,29 +13,29 @@
 
 @interface CSJDislikeViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 {
-    CDUnknownBlockType _dislikeResult;
+    CDUnknownBlockType _Skip_Bu_xStop;
     CDUnknownBlockType _cancel;
     long long _position;
     NSArray *_filterWords;
-    NSArray *_topFilterWords;
+    NSArray *_Pop_posTrue;
     UITableView *_tableView;
-    UITapGestureRecognizer *_cancelTapGesture;
-    UIView *_backgorundView;
-    long long _showType;
+    UITapGestureRecognizer *__cmd_Bool_val;
+    UIView *_Stop_LeftUI;
+    long long _ID_UINoti;
 }
 
 - (void).cxx_destruct;
-@property(nonatomic) long long showType; // @synthesize showType=_showType;
-@property(retain, nonatomic) UIView *backgorundView; // @synthesize backgorundView=_backgorundView;
-@property(retain, nonatomic) UITapGestureRecognizer *cancelTapGesture; // @synthesize cancelTapGesture=_cancelTapGesture;
+@property(nonatomic) long long ID_UINoti; // @synthesize ID_UINoti=_ID_UINoti;
+@property(retain, nonatomic) UIView *Stop_LeftUI; // @synthesize Stop_LeftUI=_Stop_LeftUI;
+@property(retain, nonatomic) UITapGestureRecognizer *_cmd_Bool_val; // @synthesize _cmd_Bool_val=__cmd_Bool_val;
 @property(retain, nonatomic) UITableView *tableView; // @synthesize tableView=_tableView;
-@property(copy, nonatomic) NSArray *topFilterWords; // @synthesize topFilterWords=_topFilterWords;
+@property(copy, nonatomic) NSArray *Pop_posTrue; // @synthesize Pop_posTrue=_Pop_posTrue;
 @property(copy, nonatomic) NSArray *filterWords; // @synthesize filterWords=_filterWords;
 @property(nonatomic) long long position; // @synthesize position=_position;
 @property(copy, nonatomic) CDUnknownBlockType cancel; // @synthesize cancel=_cancel;
-@property(copy, nonatomic) CDUnknownBlockType dislikeResult; // @synthesize dislikeResult=_dislikeResult;
+@property(copy, nonatomic) CDUnknownBlockType Skip_Bu_xStop; // @synthesize Skip_Bu_xStop=_Skip_Bu_xStop;
 - (void)didReceiveMemoryWarning;
-- (void)pushSecondView:(id)arg1;
+- (void)Org_MetaYou:(id)arg1;
 - (void)tableView:(id)arg1 didSelectRowAtIndexPath:(id)arg2;
 - (id)tableView:(id)arg1 cellForRowAtIndexPath:(id)arg2;
 - (id)tableView:(id)arg1 viewForFooterInSection:(long long)arg2;
@@ -46,12 +46,12 @@
 - (long long)tableView:(id)arg1 numberOfRowsInSection:(long long)arg2;
 - (_Bool)shouldAutorotate;
 - (void)viewDidAppear:(_Bool)arg1;
-- (void)closeViewController;
+- (void)AKey_UseSDK;
 - (void)backgroundTapped:(id)arg1;
-- (void)layoutTableView;
+- (void)Duan_UseAs;
 - (void)buildupView;
 - (void)viewDidLoad;
-- (id)initViewControllerWithReasons:(id)arg1;
+- (id)initL_len_ObjcLoad:(id)arg1;
 - (void)dealloc;
 
 // Remaining properties

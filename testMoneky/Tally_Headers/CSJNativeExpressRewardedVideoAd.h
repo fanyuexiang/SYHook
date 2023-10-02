@@ -4,7 +4,7 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
 
-#import <objc/NSObject.h>
+#import "CSJAdBaseObject.h"
 
 #import "CSJAdClientBiddingProtocol-Protocol.h"
 #import "CSJInterstitialAdDelegate-Protocol.h"
@@ -16,12 +16,12 @@
 @class CSJADViewTrackInfo, CSJAdSlot, CSJDislikeContext, CSJNativeAd, CSJNativeExpressAdManager, CSJNativeExpressAdView, CSJRewardedVideoModel, NSArray, NSDictionary, NSString;
 @protocol CSJNativeExpressRewardedVideoAdDelegate, CSJRewardedVideoAdDelegate;
 
-@interface CSJNativeExpressRewardedVideoAd : NSObject <CSJNativeExpressAdViewDelegate, CSJNativeExpressVideoAdDelegate, CSJVideoAdDelegate, CSJInterstitialAdDelegate, CSJMopubAdMarkUpDelegate, CSJAdClientBiddingProtocol>
+@interface CSJNativeExpressRewardedVideoAd : CSJAdBaseObject <CSJNativeExpressAdViewDelegate, CSJNativeExpressVideoAdDelegate, CSJVideoAdDelegate, CSJInterstitialAdDelegate, CSJMopubAdMarkUpDelegate, CSJAdClientBiddingProtocol>
 {
     _Bool isRewardedVideo;
     _Bool _materialMetaIsFromPreload;
     _Bool _didSetADM;
-    _Bool _renderResultDidCallback;
+    _Bool _M_PI_StopCn;
     _Bool _isShow;
     _Bool _triggerNativeAdDidLoadCallback;
     _Bool _triggerNativeAdDidDownloadCallback;
@@ -34,25 +34,25 @@
     CSJAdSlot *_adSlot;
     CSJNativeAd *_purePlayableNativeAd;
     CSJNativeExpressAdView *_expressAdView;
-    NSArray *_expressAdViewArray;
+    NSArray *_New_CaseLogo;
     CSJDislikeContext *_dislikeContext;
     long long _realSlotRenderType;
-    id <CSJRewardedVideoAdDelegate> _normalRewardPlayAgainInteractionDelegate;
+    id <CSJRewardedVideoAdDelegate> _Hopo_SkipAdd;
 }
 
 - (void).cxx_destruct;
-@property(nonatomic) __weak id <CSJRewardedVideoAdDelegate> normalRewardPlayAgainInteractionDelegate; // @synthesize normalRewardPlayAgainInteractionDelegate=_normalRewardPlayAgainInteractionDelegate;
+@property(nonatomic) __weak id <CSJRewardedVideoAdDelegate> Hopo_SkipAdd; // @synthesize Hopo_SkipAdd=_Hopo_SkipAdd;
 @property(nonatomic) long long realSlotRenderType; // @synthesize realSlotRenderType=_realSlotRenderType;
 @property(nonatomic) _Bool triggerNativeAdDidDownloadCallback; // @synthesize triggerNativeAdDidDownloadCallback=_triggerNativeAdDidDownloadCallback;
 @property(nonatomic) _Bool triggerNativeAdDidLoadCallback; // @synthesize triggerNativeAdDidLoadCallback=_triggerNativeAdDidLoadCallback;
 @property(retain, nonatomic) CSJDislikeContext *dislikeContext; // @synthesize dislikeContext=_dislikeContext;
-@property(copy, nonatomic) NSArray *expressAdViewArray; // @synthesize expressAdViewArray=_expressAdViewArray;
+@property(copy, nonatomic) NSArray *New_CaseLogo; // @synthesize New_CaseLogo=_New_CaseLogo;
 @property(retain, nonatomic) CSJNativeExpressAdView *expressAdView; // @synthesize expressAdView=_expressAdView;
 @property(retain, nonatomic) CSJNativeAd *purePlayableNativeAd; // @synthesize purePlayableNativeAd=_purePlayableNativeAd;
 @property(nonatomic) _Bool isShow; // @synthesize isShow=_isShow;
 @property(retain, nonatomic) CSJAdSlot *adSlot; // @synthesize adSlot=_adSlot;
 @property(retain, nonatomic) CSJNativeExpressAdManager *nativeExpressAdManager; // @synthesize nativeExpressAdManager=_nativeExpressAdManager;
-@property(nonatomic) _Bool renderResultDidCallback; // @synthesize renderResultDidCallback=_renderResultDidCallback;
+@property(nonatomic) _Bool M_PI_StopCn; // @synthesize M_PI_StopCn=_M_PI_StopCn;
 @property(nonatomic) _Bool didSetADM; // @synthesize didSetADM=_didSetADM;
 @property(retain, nonatomic) CSJADViewTrackInfo *trackInfo; // @synthesize trackInfo=_trackInfo;
 @property(nonatomic) double expireTimestamp; // @synthesize expireTimestamp=_expireTimestamp;
@@ -63,27 +63,30 @@
 @property(nonatomic) _Bool isRewardedVideo; // @synthesize isRewardedVideo;
 - (_Bool)isMemberOfClass:(Class)arg1;
 - (_Bool)isKindOfClass:(Class)arg1;
-- (void)p_adShowTimeLog;
-- (id)rootViewInfoDic;
-- (void)p_showLog:(id)arg1 adModel:(id)arg2 extraDic:(id)arg3;
-- (unsigned long long)nativeExpressVideoAdType;
+- (id)Call_T5Win;
+- (_Bool)Meta_CCPAOnly:(id)arg1;
+- (void)Code_DidPods;
+- (id)Gdp_InitPop;
+- (void)_dir_IDIdfa:(id)arg1 adModel:(id)arg2 extraDic:(id)arg3;
+- (void)Lock_WeakRan:(id)arg1;
+- (unsigned long long)Stmt_FtcText;
 @property(readonly, copy, nonatomic) NSDictionary *mediaExt;
-@property(readonly, nonatomic, getter=isAdValid) _Bool adValid;
-- (void)safeDelegate_nativeExpressRewardedVideoAdWillVisible;
-- (void)safeDelegate_nativeExpressRewardedVideoAdServerRewardDidSucceedWithVerify:(_Bool)arg1;
-- (void)safeDelegate_nativeExpressRewardedVideoAdDidCloseOtherControllerWithInteractionType:(long long)arg1;
-- (void)safeDelegate_nativeExpressRewardedVideoAdViewRenderFailWithError:(id)arg1;
-- (void)safeDelegate_nativeExpressRewardedVideoAdWithError:(id)arg1;
-- (void)safeDelegate_nativeExpressRewardedVideoAdDidVisible;
-- (void)safeDelegate_nativeExpressRewardedVideoAdDidClick;
-- (void)safeDelegate_nativeExpressRewardedVideoAdDidClose;
-- (void)safeDelegate_nativeExpressRewardedVideoAdWillClose;
-- (void)safeDelegate_nativeExpressRewardedVideoAdDidPlayFinishWithError:(id)arg1;
-- (void)safeDelegate_nativeExpressRewardedVideoAdDidClickSkip;
-- (void)safeDelegate_nativeExpressRewardedVideoAdViewRenderSuccess;
-- (void)safeDelegate_nativeExpressRewardedVideoAdDidDownLoadVideo;
-- (void)safeDelegate_nativeExpressRewardedVideoAdCallback;
-- (void)safeDelegate_nativeExpressRewardedVideoAdDidLoad;
+- (_Bool)isAdValid;
+- (void)Root_cmdVc;
+- (void)Sql_ByOr:(_Bool)arg1;
+- (void)Pos_NilID:(long long)arg1;
+- (void)Dict_lenTime:(id)arg1;
+- (void)X2_TrueOrg:(id)arg1;
+- (void)Mate_FabsExt;
+- (void)Ext_NotWeak;
+- (void)Obj_StopWhen;
+- (void)Y2_DictBody;
+- (void)Rect_FtTap:(id)arg1;
+- (void)Sdk_TypeCCPA;
+- (void)Only_WeakLen;
+- (void)Gdp_MateAs;
+- (void)Hopo_OnlyAdm;
+- (void)Date_TmSel;
 - (void)didCloseOtherControllerWithInteractionType:(long long)arg1;
 - (void)videoAdDidClickSkip;
 - (void)videoAdDidPlayFinishWithError:(id)arg1;
@@ -104,20 +107,19 @@
 - (void)nativeExpressAdViewRenderSuccess:(id)arg1;
 - (void)nativeExpressAdFailToLoad:(id)arg1 error:(id)arg2;
 - (void)nativeExpressAdSuccessToLoad:(id)arg1 views:(id)arg2;
-- (void)handleSuccessLoadForPurePlayableWithNativeAd:(id)arg1;
-- (_Bool)needUseNativeExpressVC;
-- (void)purePlayableShow;
+- (void)Call_AddOrg:(id)arg1;
+- (_Bool)Fabs_MetaTop;
+- (void)MIT_AnInit;
 - (id)biddingToken;
-- (void)setMopubAdMarkUp:(id)arg1;
 - (void)setAdMarkup:(id)arg1;
 - (void)loss:(id)arg1 lossReason:(id)arg2 winBidder:(id)arg3;
 - (void)win:(id)arg1;
 - (void)setPrice:(id)arg1;
-- (void)showRewardDrawLandscapeWithRootViewController:(id)arg1;
-- (void)showRewardDrawWithParentViewController:(id)arg1;
-- (void)showNewExpressWithRootViewController:(id)arg1 ritSceneStr:(id)arg2;
-- (void)showOldExpressWithRootViewController:(id)arg1 ritSceneStr:(id)arg2;
-- (void)showDataUpload;
+- (void)CCPA_IconTemp:(id)arg1;
+- (void)Time_FileAt:(id)arg1;
+- (void)Char_VliMark:(id)arg1 ritSceneStr:(id)arg2;
+- (void)Read_EnumStd:(id)arg1 ritSceneStr:(id)arg2;
+- (void)Stop_SetThe;
 - (double)getExpireTimestamp;
 - (_Bool)showAdFromRootViewController:(id)arg1 ritScene:(long long)arg2 ritSceneDescribe:(id)arg3;
 - (_Bool)showAdFromRootViewController:(id)arg1;

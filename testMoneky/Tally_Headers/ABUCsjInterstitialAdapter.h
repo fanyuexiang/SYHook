@@ -6,39 +6,23 @@
 
 #import <objc/NSObject.h>
 
-#import "ABUCsj_BUNativeExpressInterstitialAdDelegate-Protocol.h"
-#import "ABUCustomInterstitialAdapter-Protocol.h"
+#import "BUMCustomInterstitialAdapter-Protocol.h"
 
 @class NSString;
-@protocol ABUCsj_BUNativeExpressInterstitialAd, ABUCustomConfigAdapter, ABUCustomInterstitialAdapterBridge;
+@protocol BUMCustomConfigAdapter, BUMCustomInterstitialAdapterBridge;
 
-@interface ABUCsjInterstitialAdapter : NSObject <ABUCsj_BUNativeExpressInterstitialAdDelegate, ABUCustomInterstitialAdapter>
+@interface ABUCsjInterstitialAdapter : NSObject <BUMCustomInterstitialAdapter>
 {
-    id <ABUCsj_BUNativeExpressInterstitialAd> _ad;
 }
 
-- (void).cxx_destruct;
-@property(retain, nonatomic) id <ABUCsj_BUNativeExpressInterstitialAd> ad; // @synthesize ad=_ad;
-- (void)nativeExpresInterstitialAdDidCloseOtherController:(id)arg1 interactionType:(long long)arg2;
-- (void)nativeExpresInterstitialAdDidClose:(id)arg1;
-- (void)nativeExpresInterstitialAdWillClose:(id)arg1;
-- (void)nativeExpresInterstitialAdDidClick:(id)arg1;
-- (void)nativeExpresInterstitialAdWillVisible:(id)arg1;
-- (void)nativeExpresInterstitialAdRenderFail:(id)arg1 error:(id)arg2;
-- (void)nativeExpresInterstitialAdRenderSuccess:(id)arg1;
-- (void)nativeExpresInterstitialAd:(id)arg1 didFailWithError:(id)arg2;
-- (void)nativeExpresInterstitialAdDidLoad:(id)arg1;
-- (id)_transitionMediaExt:(id)arg1;
-- (void)_setupWithWithSlotID:(id)arg1 andSize:(struct CGSize)arg2 parameter:(id)arg3;
-- (_Bool)enablePreloadWhenCurrentIsDisplay;
 - (CDStruct_2ec95fd7)mediatedAdStatus;
 - (_Bool)showAdFromRootViewController:(id)arg1 parameter:(id)arg2;
 - (id)serverBiddingTokenWithParams:(id)arg1 error:(id *)arg2;
 - (void)loadInterstitialAdWithSlotID:(id)arg1 andSize:(struct CGSize)arg2 parameter:(id)arg3;
 
 // Remaining properties
-@property(nonatomic) __weak id <ABUCustomInterstitialAdapterBridge> bridge;
-@property(retain, nonatomic) id <ABUCustomConfigAdapter> configAdapter;
+@property(nonatomic) __weak id <BUMCustomInterstitialAdapterBridge> bridge;
+@property(retain, nonatomic) id <BUMCustomConfigAdapter> configAdapter;
 @property(readonly, copy) NSString *debugDescription;
 @property(readonly, copy) NSString *description;
 @property(readonly) unsigned long long hash;

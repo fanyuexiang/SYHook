@@ -10,14 +10,10 @@
 {
 }
 
-+ (void)parseDynamicFile:(id)arg1 basePath:(id)arg2;
++ (void)parseExtraCrashInfoFile:(id)arg1 basePath:(id)arg2;
 + (void)parseExceptionFile:(id)arg1 basePath:(id)arg2;
 + (void)parseMetaFile:(id)arg1 basePath:(id)arg2;
 + (void)parseBinaryImageFile:(id)arg1 basePath:(id)arg2;
-+ (void)updateVMMap:(id)arg1 images:(id)arg2;
-+ (void)parseVMMapFile:(id)arg1 basePath:(id)arg2;
-+ (void)updateAddressAnalysis:(id)arg1 info:(id)arg2;
-+ (void)parseMemoryFile:(id)arg1 basePath:(id)arg2;
 + (id)loadCrashInfo:(id)arg1;
 
 @end

@@ -55,6 +55,7 @@
 - (id)preloadAdWithType:(long long)arg1;
 - (void)adLoadDidFailedWithError:(id)arg1;
 - (void)adLoadDidSuccess;
+- (void)dealloc;
 - (id)initWithAdUnitID:(id)arg1 rootViewController:(id)arg2 adSize:(struct CGSize)arg3;
 @property(nonatomic) _Bool startMutedIfCan;
 @property(nonatomic) struct CGSize imageOrVideoSize;

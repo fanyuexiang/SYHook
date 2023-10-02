@@ -72,8 +72,6 @@
 - (void)clickAd;
 - (_Bool)locationInVideo:(id)arg1;
 - (void)handleTapGesture:(id)arg1;
-- (void)safeMainQueueSetImage:(id)arg1 intoImageView:(id)arg2;
-- (void)loadImageForURL:(id)arg1 intoImageView:(id)arg2;
 - (void)loadImageForURLString:(id)arg1 intoImageView:(id)arg2;
 - (void)display:(id)arg1;
 - (void)loadAndDisplayNativeAdWithObject:(id)arg1 completion:(CDUnknownBlockType)arg2;

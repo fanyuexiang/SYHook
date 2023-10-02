@@ -13,8 +13,11 @@
 
 @interface FamilySurplusTableView : UITableView <UITableViewDelegate, UITableViewDataSource>
 {
+    _Bool _is_year;
     NSString *_date;
+    NSString *_maxYear;
     NSString *_maxDate;
+    NSString *_minYear;
     NSString *_minDate;
     CDUnknownBlockType _refreshDataBlock;
     CDUnknownBlockType _clickDataBlock;
@@ -25,11 +28,17 @@
 - (void).cxx_destruct;
 @property(retain, nonatomic) NSMutableArray *dataArray; // @synthesize dataArray=_dataArray;
 @property(retain, nonatomic) NSFetchRequest *fetchRequest; // @synthesize fetchRequest=_fetchRequest;
+@property(nonatomic) _Bool is_year; // @synthesize is_year=_is_year;
 @property(copy, nonatomic) CDUnknownBlockType clickDataBlock; // @synthesize clickDataBlock=_clickDataBlock;
 @property(copy, nonatomic) CDUnknownBlockType refreshDataBlock; // @synthesize refreshDataBlock=_refreshDataBlock;
 @property(copy, nonatomic) NSString *minDate; // @synthesize minDate=_minDate;
+@property(copy, nonatomic) NSString *minYear; // @synthesize minYear=_minYear;
 @property(copy, nonatomic) NSString *maxDate; // @synthesize maxDate=_maxDate;
+@property(copy, nonatomic) NSString *maxYear; // @synthesize maxYear=_maxYear;
 @property(copy, nonatomic) NSString *date; // @synthesize date=_date;
+- (void)gotoAssetDetail;
+- (void)showChooseDefault;
+- (void)queryYearData;
 - (void)queryDataNew;
 - (void)tableView:(id)arg1 didSelectRowAtIndexPath:(id)arg2;
 - (id)tableView:(id)arg1 cellForRowAtIndexPath:(id)arg2;

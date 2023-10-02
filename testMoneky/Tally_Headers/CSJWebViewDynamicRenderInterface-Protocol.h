@@ -9,9 +9,9 @@
 @protocol CSJWebViewDynamicRenderDelegate;
 
 @protocol CSJWebViewDynamicRenderInterface <NSObject>
-@property(nonatomic) __weak id <CSJWebViewDynamicRenderDelegate> implementation_delegate;
-- (double)implementation_timeOut;
-- (void)implementation_render_really;
-- (long long)implementation_renderIndex;
+@property(nonatomic) __weak id <CSJWebViewDynamicRenderDelegate> May_NOFtc;
+- (double)Nb_BeADX;
+- (void)Hash_A0Meta;
+- (long long)An_SelfGDPR;
 @end
 

@@ -17,17 +17,16 @@
 
 + (id)sdkVersion;
 + (id)host_appid;
-+ (id)host_secretKey;
 + (void)_signalAction;
 + (void)startAPMWithDid:(id)arg1 ignoreMSDK:(_Bool)arg2 host:(id)arg3;
-+ (void)startLogsdkWithDC:(id)arg1 did:(id)arg2 ignoreMSDK:(_Bool)arg3 host:(id)arg4 initCrashModule:(_Bool)arg5;
-+ (void)startCrashAndAppLogSDKWithDC:(id)arg1 did:(id)arg2 host:(id)arg3 initCrashModule:(_Bool)arg4;
++ (void)startLogsdkWithDC:(id)arg1 did:(id)arg2 ignoreMSDK:(_Bool)arg3 host:(id)arg4 To_PlayView:(_Bool)arg5;
++ (void)startCrashAndAppLogSDKWithDC:(id)arg1 did:(id)arg2 host:(id)arg3 To_PlayView:(_Bool)arg4;
 + (id)sharedInstance;
 - (void).cxx_destruct;
 @property(copy, nonatomic) NSString *applogDid; // @synthesize applogDid=_applogDid;
 @property(nonatomic) _Bool ignoreMSDK; // @synthesize ignoreMSDK=_ignoreMSDK;
 @property(copy, nonatomic) NSString *did; // @synthesize did=_did;
-- (void)setupCrashAndAppLogSDKWithHost:(id)arg1 initCrashModule:(_Bool)arg2;
+- (void)setupCrashAndAppLogSDKWithHost:(id)arg1 To_PlayView:(_Bool)arg2;
 - (id)init;
 
 @end

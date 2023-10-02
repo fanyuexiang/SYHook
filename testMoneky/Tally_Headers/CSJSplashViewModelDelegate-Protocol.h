@@ -6,9 +6,10 @@
 
 #import "NSObject-Protocol.h"
 
-@class NSError;
+@class NSDictionary, NSError;
 
 @protocol CSJSplashViewModelDelegate <NSObject>
+- (void)splashAdLoadTimeWithDuration:(long long)arg1 extraData:(NSDictionary *)arg2 error:(NSError *)arg3 timeOut:(_Bool)arg4;
 - (void)splashResourceLoadFailWithError:(NSError *)arg1;
 - (void)splashResourceLoadSuccess;
 @end

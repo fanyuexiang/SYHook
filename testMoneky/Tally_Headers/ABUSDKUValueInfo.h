@@ -27,6 +27,7 @@
 @property(readonly, copy, nonatomic) NSString *labelTimestamp; // @synthesize labelTimestamp=_labelTimestamp;
 @property(readonly, copy, nonatomic) NSString *labelName; // @synthesize labelName=_labelName;
 @property(readonly, nonatomic) long long ritType; // @synthesize ritType=_ritType;
+- (id)parseLabelToDic;
 - (id)initWithRitTypeStr:(id)arg1 andDict:(id)arg2;
 
 @end

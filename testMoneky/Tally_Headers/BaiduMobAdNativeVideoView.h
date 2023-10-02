@@ -23,9 +23,9 @@
     _Bool _isInShowLPWebView;
     _Bool _isWillShow;
     _Bool _hasSendAlsPlay;
+    _Bool _autoReplay;
     _Bool _isTriggeredAutoClick;
     _Bool _isVideoEnableClick;
-    _Bool _isFrontCardEnableClick;
     _Bool _isEnableToPlay;
     _Bool _isEnablePlayAndClick;
     _Bool _isRemoveTailFrame;
@@ -72,9 +72,9 @@
 @property(nonatomic) _Bool isRemoveTailFrame; // @synthesize isRemoveTailFrame=_isRemoveTailFrame;
 @property(nonatomic) _Bool isEnablePlayAndClick; // @synthesize isEnablePlayAndClick=_isEnablePlayAndClick;
 @property(nonatomic) _Bool isEnableToPlay; // @synthesize isEnableToPlay=_isEnableToPlay;
-@property(nonatomic) _Bool isFrontCardEnableClick; // @synthesize isFrontCardEnableClick=_isFrontCardEnableClick;
 @property(nonatomic) _Bool isVideoEnableClick; // @synthesize isVideoEnableClick=_isVideoEnableClick;
 @property(nonatomic) _Bool isTriggeredAutoClick; // @synthesize isTriggeredAutoClick=_isTriggeredAutoClick;
+@property(nonatomic) _Bool autoReplay; // @synthesize autoReplay=_autoReplay;
 @property(nonatomic) _Bool hasSendAlsPlay; // @synthesize hasSendAlsPlay=_hasSendAlsPlay;
 @property(nonatomic) double startPlayingTime; // @synthesize startPlayingTime=_startPlayingTime;
 @property(nonatomic) NSString *category; // @synthesize category=_category;
@@ -123,6 +123,7 @@
 - (void)sendVideoEvent:(int)arg1 currentTime:(double)arg2;
 - (void)updateValue:(id)arg1;
 - (void)addProgressObserver;
+- (void)adClick;
 - (void)videoAdClick;
 - (void)indicatorViewClick;
 - (void)btnReplayClick;
@@ -132,6 +133,7 @@
 - (_Bool)newWindowTransform;
 - (void)didChangeOrientation;
 - (void)handleClick;
+- (void)videoViewClick;
 - (void)setVideoMute:(_Bool)arg1;
 - (_Bool)isPlaying;
 - (void)playbackFail:(id)arg1;

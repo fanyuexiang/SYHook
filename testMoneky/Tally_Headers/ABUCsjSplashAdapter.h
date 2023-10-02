@@ -6,20 +6,14 @@
 
 #import <objc/NSObject.h>
 
-#import "ABUCustomSplashAdapter-Protocol.h"
-#import "BUNativeExpressSplashViewDelegate-Protocol.h"
-#import "BUSplashAdDelegate-Protocol.h"
-#import "BUSplashCardViewDelegate-Protocol.h"
-#import "BUSplashZoomOutViewDelegate-Protocol.h"
+#import "BUMCustomSplashAdapter-Protocol.h"
 
-@class ABUCsjNewSplashAdapterReplacer, NSString, UIView;
-@protocol ABUCsj_BUSplashAd, ABUCsj_BUSplashAdView, ABUCustomConfigAdapter, ABUCustomSplashAdapterBridge><ABUCustomSplashAdapterZoomOutViewBridge><ABUCustomSplashAdapterCardViewBridge, ABU_BUNativeExpressSplashView;
+@class ABUCsjNewSplashAdapterReplacer, BUSplashAd, NSString, UIView;
+@protocol BUMCustomConfigAdapter, BUMCustomSplashAdapterBridge><BUMCustomSplashAdapterZoomOutViewBridge><BUMCustomSplashAdapterCardViewBridge;
 
-@interface ABUCsjSplashAdapter : NSObject <BUSplashAdDelegate, BUNativeExpressSplashViewDelegate, BUSplashZoomOutViewDelegate, BUSplashCardViewDelegate, ABUCustomSplashAdapter>
+@interface ABUCsjSplashAdapter : NSObject <BUMCustomSplashAdapter>
 {
-    id <ABUCsj_BUSplashAdView> _splashAd;
-    id <ABU_BUNativeExpressSplashView> _expressSplashAd;
-    id <ABUCsj_BUSplashAd> _splashAdV2;
+    BUSplashAd *_splashAdV2;
     UIView *_bottomView;
     ABUCsjNewSplashAdapterReplacer *_splashReplacer;
 }
@@ -27,39 +21,10 @@
 - (void).cxx_destruct;
 @property(retain, nonatomic) ABUCsjNewSplashAdapterReplacer *splashReplacer; // @synthesize splashReplacer=_splashReplacer;
 @property(retain, nonatomic) UIView *bottomView; // @synthesize bottomView=_bottomView;
-@property(retain, nonatomic) id <ABUCsj_BUSplashAd> splashAdV2; // @synthesize splashAdV2=_splashAdV2;
-@property(retain, nonatomic) id <ABU_BUNativeExpressSplashView> expressSplashAd; // @synthesize expressSplashAd=_expressSplashAd;
-@property(retain, nonatomic) id <ABUCsj_BUSplashAdView> splashAd; // @synthesize splashAd=_splashAd;
-- (void)splashCardViewAdDidCloseOtherController:(id)arg1 interactionType:(int)arg2;
-- (void)splashCardViewAdDidAutoDimiss:(id)arg1;
-- (void)splashCardViewAdDidClose:(id)arg1;
-- (void)splashCardViewAdDidClick:(id)arg1;
-- (void)splashZoomOutViewAdDidCloseOtherController:(id)arg1 interactionType:(int)arg2;
-- (void)splashZoomOutViewAdDidAutoDimiss:(id)arg1;
-- (void)splashZoomOutViewAdDidClose:(id)arg1;
-- (void)splashZoomOutViewAdDidClick:(id)arg1;
-- (void)nativeExpressSplashViewDidCloseOtherController:(id)arg1 interactionType:(int)arg2;
-- (void)nativeExpressSplashViewFinishPlayDidPlayFinish:(id)arg1 didFailWithError:(id)arg2;
-- (void)nativeExpressSplashViewDidClose:(id)arg1;
-- (void)nativeExpressSplashViewCountdownToZero:(id)arg1;
-- (void)nativeExpressSplashViewDidClickSkip:(id)arg1;
-- (void)nativeExpressSplashViewDidClick:(id)arg1;
-- (void)nativeExpressSplashViewWillVisible:(id)arg1;
-- (void)nativeExpressSplashViewRenderFail:(id)arg1 error:(id)arg2;
-- (void)nativeExpressSplashViewRenderSuccess:(id)arg1;
-- (void)nativeExpressSplashView:(id)arg1 didFailWithError:(id)arg2;
-- (void)nativeExpressSplashViewDidLoad:(id)arg1;
-- (void)splashAdCountdownToZero:(id)arg1;
-- (void)splashAdDidClickSkip:(id)arg1;
-- (void)splashAdDidCloseOtherController:(id)arg1 interactionType:(int)arg2;
-- (void)splashAdWillClose:(id)arg1;
-- (void)splashAdDidClose:(id)arg1;
-- (void)splashAdDidClick:(id)arg1;
-- (void)splashAdWillVisible:(id)arg1;
-- (void)splashAd:(id)arg1 didFailWithError:(id)arg2;
-- (void)splashAdDidLoad:(id)arg1;
+@property(retain, nonatomic) BUSplashAd *splashAdV2; // @synthesize splashAdV2=_splashAdV2;
 - (void)showSplashCardInRootVC:(id)arg1 parameter:(id)arg2;
 - (id)transitionMediaExt:(id)arg1;
+- (void)dismissBottomView;
 - (void)dismissSplashAd;
 - (void)showSplashAdInWindow:(id)arg1 parameter:(id)arg2;
 - (void)_setupWithWithSlotID:(id)arg1 andParameter:(id)arg2;
@@ -69,8 +34,8 @@
 - (_Bool)enablePreloadWhenCurrentIsDisplay;
 
 // Remaining properties
-@property(nonatomic) __weak id <ABUCustomSplashAdapterBridge><ABUCustomSplashAdapterZoomOutViewBridge><ABUCustomSplashAdapterCardViewBridge> bridge;
-@property(retain, nonatomic) id <ABUCustomConfigAdapter> configAdapter;
+@property(nonatomic) __weak id <BUMCustomSplashAdapterBridge><BUMCustomSplashAdapterZoomOutViewBridge><BUMCustomSplashAdapterCardViewBridge> bridge;
+@property(retain, nonatomic) id <BUMCustomConfigAdapter> configAdapter;
 @property(readonly, copy) NSString *debugDescription;
 @property(readonly, copy) NSString *description;
 @property(readonly) unsigned long long hash;

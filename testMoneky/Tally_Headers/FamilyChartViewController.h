@@ -48,8 +48,7 @@
 @property(copy, nonatomic) NSString *typeName; // @synthesize typeName=_typeName;
 @property(nonatomic, getter=isChartDetail) _Bool chartDetail; // @synthesize chartDetail=_chartDetail;
 - (void)destroyNotification;
-- (void)tallyACMonthDayChangedNotification:(id)arg1;
-- (void)themeChangedNotification:(id)arg1;
+- (void)responseNotification:(id)arg1;
 - (void)registerNotification;
 - (void)refreshWithTheme;
 - (void)adjustSegmentControlSelectIndex:(long long)arg1;
@@ -60,7 +59,6 @@
 - (void)updateTallyTypeLabel;
 - (void)viewWillDisappear:(_Bool)arg1;
 - (void)viewWillAppear:(_Bool)arg1;
-- (void)refreshVipStatus;
 - (void)viewDidLoad;
 - (void)dealloc;
 

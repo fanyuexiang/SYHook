@@ -8,12 +8,12 @@
 
 #import "ABUBaidu_BaiduMobAdExpressInterstitialDelegate-Protocol.h"
 #import "ABUBaidu_BaiduMobAdInterstitialDelegate-Protocol.h"
-#import "ABUCustomInterstitialAdapter-Protocol.h"
+#import "BUMCustomInterstitialAdapter-Protocol.h"
 
 @class NSString;
-@protocol ABUBaidu_BaiduMobAdExpressInterstitial, ABUBaidu_BaiduMobAdInterstitial, ABUCustomConfigAdapter, ABUCustomInterstitialAdapterBridge;
+@protocol ABUBaidu_BaiduMobAdExpressInterstitial, ABUBaidu_BaiduMobAdInterstitial, BUMCustomConfigAdapter, BUMCustomInterstitialAdapterBridge;
 
-@interface ABUBaiduInterstitialAdapter : NSObject <ABUBaidu_BaiduMobAdInterstitialDelegate, ABUBaidu_BaiduMobAdExpressInterstitialDelegate, ABUCustomInterstitialAdapter>
+@interface ABUBaiduInterstitialAdapter : NSObject <ABUBaidu_BaiduMobAdInterstitialDelegate, ABUBaidu_BaiduMobAdExpressInterstitialDelegate, BUMCustomInterstitialAdapter>
 {
     _Bool _hasLoadFailed;
     NSObject<ABUBaidu_BaiduMobAdInterstitial> *_interstitialAd;
@@ -53,8 +53,8 @@
 - (_Bool)enablePreloadWhenCurrentIsDisplay;
 
 // Remaining properties
-@property(nonatomic) __weak id <ABUCustomInterstitialAdapterBridge> bridge;
-@property(retain, nonatomic) id <ABUCustomConfigAdapter> configAdapter;
+@property(nonatomic) __weak id <BUMCustomInterstitialAdapterBridge> bridge;
+@property(retain, nonatomic) id <BUMCustomConfigAdapter> configAdapter;
 @property(readonly, copy) NSString *debugDescription;
 @property(readonly, copy) NSString *description;
 @property(readonly) unsigned long long hash;

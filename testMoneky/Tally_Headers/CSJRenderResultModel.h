@@ -10,21 +10,21 @@
 
 @interface CSJRenderResultModel : NSObject
 {
-    _Bool _haveVideoInfo;
+    _Bool _Pos_IntRoot;
     double _maxRadius;
-    UIView *_playerViewContainerView;
-    struct CGSize _adViewSize;
-    struct CGRect _videoFrame;
-    CDStruct_ba12166d _videoCornerRadii;
+    UIView *_Loss_OfCom;
+    struct CGSize _If_MustWin;
+    struct CGRect _Adm_Dc_rhs;
+    CDStruct_ba12166d _App_Y1SDK;
 }
 
 - (void).cxx_destruct;
-@property(nonatomic) __weak UIView *playerViewContainerView; // @synthesize playerViewContainerView=_playerViewContainerView;
+@property(nonatomic) __weak UIView *Loss_OfCom; // @synthesize Loss_OfCom=_Loss_OfCom;
 @property(nonatomic) double maxRadius; // @synthesize maxRadius=_maxRadius;
-@property(nonatomic) CDStruct_ba12166d videoCornerRadii; // @synthesize videoCornerRadii=_videoCornerRadii;
-@property(nonatomic) struct CGRect videoFrame; // @synthesize videoFrame=_videoFrame;
-@property(nonatomic) _Bool haveVideoInfo; // @synthesize haveVideoInfo=_haveVideoInfo;
-@property(nonatomic) struct CGSize adViewSize; // @synthesize adViewSize=_adViewSize;
+@property(nonatomic) CDStruct_ba12166d App_Y1SDK; // @synthesize App_Y1SDK=_App_Y1SDK;
+@property(nonatomic) struct CGRect Adm_Dc_rhs; // @synthesize Adm_Dc_rhs=_Adm_Dc_rhs;
+@property(nonatomic) _Bool Pos_IntRoot; // @synthesize Pos_IntRoot=_Pos_IntRoot;
+@property(nonatomic) struct CGSize If_MustWin; // @synthesize If_MustWin=_If_MustWin;
 
 @end
 

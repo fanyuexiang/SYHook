@@ -10,10 +10,10 @@
 {
 }
 
-+ (id)persistenceInstanceWithSlot:(id)arg1 type:(long long)arg2;
-+ (id)persistenceOptionWithSlot:(id)arg1 type:(long long)arg2;
-+ (id)persistenceNameWithSlot:(id)arg1 type:(long long)arg2;
-+ (id)biddingPersistenceWithSlot:(id)arg1 type:(long long)arg2;
++ (id)Nb_OnMod:(id)arg1 type:(long long)arg2;
++ (id)Path_NewLong:(id)arg1 type:(long long)arg2;
++ (id)Skip_NameCom:(id)arg1 type:(long long)arg2;
++ (id)In_UseAll:(id)arg1 type:(long long)arg2;
 
 @end
 

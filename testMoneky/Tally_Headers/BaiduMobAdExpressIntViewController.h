@@ -9,15 +9,17 @@
 #import "BaiduMobAdActionComposerDelegate-Protocol.h"
 #import "BaiduMobAdComponentDelegate-Protocol.h"
 #import "BaiduMobAdMediaPlayerDelegate-Protocol.h"
+#import "BaiduMobAdWebViewDelegate-Protocol.h"
 
-@class BaiduMobAdInstance, BaiduMobAdMediaPlayer, BaiduMobAdNativeProfessionalComponent, BaiduMobAdRenderer, BaiduMobAdRendererHelper, BaiduMobAdShakeComponent, BaiduMobAdVideoProgressBar, NSDictionary, NSMutableArray, NSString, NSTimer, UIButton, UIImageView, UILabel, UIView;
+@class BaiduMobAdDCViewComponent, BaiduMobAdGiftPressComponent, BaiduMobAdInstance, BaiduMobAdMediaPlayer, BaiduMobAdNativeProfessionalComponent, BaiduMobAdRenderer, BaiduMobAdRendererHelper, BaiduMobAdShakeComponent, BaiduMobAdSlideComponent, BaiduMobAdVideoProgressBar, NSDictionary, NSMutableArray, NSString, NSTimer, UIButton, UIImageView, UILabel, UIView;
 @protocol BaiduMobAdExpressIntVCDelegate;
 
-@interface BaiduMobAdExpressIntViewController : UIViewController <BaiduMobAdMediaPlayerDelegate, BaiduMobAdActionComposerDelegate, BaiduMobAdComponentDelegate>
+@interface BaiduMobAdExpressIntViewController : UIViewController <BaiduMobAdMediaPlayerDelegate, BaiduMobAdActionComposerDelegate, BaiduMobAdComponentDelegate, BaiduMobAdWebViewDelegate>
 {
     _Bool _isInShowLP;
     _Bool _readyForReplay;
     _Bool _isShowedCountDown;
+    _Bool _isFront;
     _Bool _closeShake;
     _Bool _verticalDirection;
     _Bool _isClickSkip;
@@ -29,7 +31,11 @@
     _Bool _isNoticeViewDismissed;
     _Bool _spaceEnough;
     _Bool _isTriggeredAutoClick;
+    _Bool _isAdDestory;
     int _autoClick;
+    int _envelCardAnimNum;
+    int _somatosensoryAnimType;
+    int _closeViewLocationType;
     id <BaiduMobAdExpressIntVCDelegate> _delegate;
     unsigned long long _adSrc;
     BaiduMobAdRendererHelper *_adRenderHelper;
@@ -44,12 +50,22 @@
     BaiduMobAdNativeProfessionalComponent *_componentView;
     BaiduMobAdShakeComponent *_tailShakeView;
     BaiduMobAdShakeComponent *_frontShakeView;
+    BaiduMobAdSlideComponent *_frontSlideView;
+    BaiduMobAdGiftPressComponent *_frontEggView;
+    BaiduMobAdSlideComponent *_tailSlideView;
+    BaiduMobAdGiftPressComponent *_tailEggView;
+    BaiduMobAdDCViewComponent *_dcView;
+    NSTimer *_dcViewCountTimer;
+    BaiduMobAdShakeComponent *_coverShakeView;
     double _delayTime;
     NSString *_delayTimeStr;
     NSString *_isAlwaysShowClose;
     UIImageView *_closeImageView;
     UIImageView *_transPCloseImageView;
+    UILabel *_closeCountDownView;
+    double _closeCountDownTime;
     UIView *_tailCompnentView;
+    UIView *_advertiserView;
     BaiduMobAdVideoProgressBar *_progressView;
     NSTimer *_countTimer;
     NSMutableArray *_expressArray;
@@ -68,9 +84,31 @@
     UIView *_notiveView;
     NSString *_notiveViewShowTime;
     NSString *_distance;
+    UILabel *_evFrontLabel;
+    UILabel *_evTailLabel;
+    UIView *_evFrontShakeLabelContainer;
+    UIView *_evTailShakeLabelContainer;
+    UIView *_envelCardView;
+    UIImageView *_envelSlideView;
+    UIView *_somatosensoryView;
+    double _somatosensoryAnimDelayTime;
+    double _somatosensoryAnimCounts;
 }
 
 - (void).cxx_destruct;
+@property(nonatomic) _Bool isAdDestory; // @synthesize isAdDestory=_isAdDestory;
+@property(nonatomic) int closeViewLocationType; // @synthesize closeViewLocationType=_closeViewLocationType;
+@property(nonatomic) double somatosensoryAnimCounts; // @synthesize somatosensoryAnimCounts=_somatosensoryAnimCounts;
+@property(nonatomic) double somatosensoryAnimDelayTime; // @synthesize somatosensoryAnimDelayTime=_somatosensoryAnimDelayTime;
+@property(nonatomic) int somatosensoryAnimType; // @synthesize somatosensoryAnimType=_somatosensoryAnimType;
+@property(retain, nonatomic) UIView *somatosensoryView; // @synthesize somatosensoryView=_somatosensoryView;
+@property(nonatomic) int envelCardAnimNum; // @synthesize envelCardAnimNum=_envelCardAnimNum;
+@property(retain, nonatomic) UIImageView *envelSlideView; // @synthesize envelSlideView=_envelSlideView;
+@property(retain, nonatomic) UIView *envelCardView; // @synthesize envelCardView=_envelCardView;
+@property(retain, nonatomic) UIView *evTailShakeLabelContainer; // @synthesize evTailShakeLabelContainer=_evTailShakeLabelContainer;
+@property(retain, nonatomic) UIView *evFrontShakeLabelContainer; // @synthesize evFrontShakeLabelContainer=_evFrontShakeLabelContainer;
+@property(retain, nonatomic) UILabel *evTailLabel; // @synthesize evTailLabel=_evTailLabel;
+@property(retain, nonatomic) UILabel *evFrontLabel; // @synthesize evFrontLabel=_evFrontLabel;
 @property(nonatomic) _Bool isTriggeredAutoClick; // @synthesize isTriggeredAutoClick=_isTriggeredAutoClick;
 @property(nonatomic) int autoClick; // @synthesize autoClick=_autoClick;
 @property(nonatomic) _Bool spaceEnough; // @synthesize spaceEnough=_spaceEnough;
@@ -101,13 +139,24 @@
 @property(retain, nonatomic) BaiduMobAdVideoProgressBar *progressView; // @synthesize progressView=_progressView;
 @property(nonatomic) _Bool verticalDirection; // @synthesize verticalDirection=_verticalDirection;
 @property(nonatomic) _Bool closeShake; // @synthesize closeShake=_closeShake;
+@property(retain, nonatomic) UIView *advertiserView; // @synthesize advertiserView=_advertiserView;
 @property(retain, nonatomic) UIView *tailCompnentView; // @synthesize tailCompnentView=_tailCompnentView;
+@property(nonatomic) double closeCountDownTime; // @synthesize closeCountDownTime=_closeCountDownTime;
+@property(retain, nonatomic) UILabel *closeCountDownView; // @synthesize closeCountDownView=_closeCountDownView;
+@property(nonatomic) _Bool isFront; // @synthesize isFront=_isFront;
 @property(retain, nonatomic) UIImageView *transPCloseImageView; // @synthesize transPCloseImageView=_transPCloseImageView;
 @property(retain, nonatomic) UIImageView *closeImageView; // @synthesize closeImageView=_closeImageView;
 @property(retain, nonatomic) NSString *isAlwaysShowClose; // @synthesize isAlwaysShowClose=_isAlwaysShowClose;
 @property(retain, nonatomic) NSString *delayTimeStr; // @synthesize delayTimeStr=_delayTimeStr;
 @property(nonatomic) double delayTime; // @synthesize delayTime=_delayTime;
 @property(nonatomic) _Bool isShowedCountDown; // @synthesize isShowedCountDown=_isShowedCountDown;
+@property(retain, nonatomic) BaiduMobAdShakeComponent *coverShakeView; // @synthesize coverShakeView=_coverShakeView;
+@property(retain, nonatomic) NSTimer *dcViewCountTimer; // @synthesize dcViewCountTimer=_dcViewCountTimer;
+@property(retain, nonatomic) BaiduMobAdDCViewComponent *dcView; // @synthesize dcView=_dcView;
+@property(retain, nonatomic) BaiduMobAdGiftPressComponent *tailEggView; // @synthesize tailEggView=_tailEggView;
+@property(retain, nonatomic) BaiduMobAdSlideComponent *tailSlideView; // @synthesize tailSlideView=_tailSlideView;
+@property(retain, nonatomic) BaiduMobAdGiftPressComponent *frontEggView; // @synthesize frontEggView=_frontEggView;
+@property(retain, nonatomic) BaiduMobAdSlideComponent *frontSlideView; // @synthesize frontSlideView=_frontSlideView;
 @property(retain, nonatomic) BaiduMobAdShakeComponent *frontShakeView; // @synthesize frontShakeView=_frontShakeView;
 @property(retain, nonatomic) BaiduMobAdShakeComponent *tailShakeView; // @synthesize tailShakeView=_tailShakeView;
 @property(retain, nonatomic) BaiduMobAdNativeProfessionalComponent *componentView; // @synthesize componentView=_componentView;
@@ -124,19 +173,33 @@
 @property(retain, nonatomic) BaiduMobAdRendererHelper *adRenderHelper; // @synthesize adRenderHelper=_adRenderHelper;
 @property(nonatomic) unsigned long long adSrc; // @synthesize adSrc=_adSrc;
 @property(nonatomic) __weak id <BaiduMobAdExpressIntVCDelegate> delegate; // @synthesize delegate=_delegate;
+- (void)nativeComponentLottieAnimFinish:(id)arg1 clickView:(id)arg2 viewName:(id)arg3 special:(id)arg4 isFinish:(_Bool)arg5;
+- (void)nativeComponentLottieAnimStart:(id)arg1 viewName:(id)arg2 special:(id)arg3;
+- (void)bdWebView:(id)arg1 didClickWithMessage:(id)arg2;
+- (_Bool)bdWebView:(id)arg1 shouldStartLoadWithRequest:(id)arg2 navigationType:(long long)arg3;
 - (void)forcedWatchFinish;
+- (void)showCloseImage;
 - (id)getExpressJSONWithKey:(id)arg1;
 - (void)nativeComponentDislikeWithReason:(long long)arg1 component:(id)arg2;
 - (void)nativeComponentClick:(long long)arg1 clickView:(id)arg2 viewName:(id)arg3 special:(id)arg4 component:(id)arg5;
+- (void)envelCardAnim;
+- (void)startEnvelCardAnim;
+- (void)adjustForEnvelTemplate;
+- (void)dcViewContdownControl;
+- (void)dcViewControlMethod;
+- (void)startSomatosensoryAnim;
+- (void)addSomatosensoryAnim;
 - (void)nativeComponentEvent:(id)arg1 component:(id)arg2;
 - (void)dismissNoticeView;
 - (void)nativeComponentCreateSuccess:(id)arg1 viewName:(id)arg2 special:(id)arg3 component:(id)arg4;
 - (void)handleShakeEvent:(unsigned long long)arg1;
 - (void)didFinishWithResult:(id)arg1;
+- (void)sendExpressIntLogWithReason:(id)arg1 parameter:(id)arg2;
 - (void)sendExpressIntLogWithReason:(id)arg1;
 - (void)sendVideoEvent:(int)arg1 currentPlayingTime:(double)arg2 startPlayTime:(double)arg3 reason:(id)arg4;
 - (void)componentViewCreatFail;
 - (void)baiduLogoClick:(id)arg1;
+- (void)handleClickWithParameter:(id)arg1;
 - (void)handleClick;
 - (void)trackImpression;
 - (void)mediaPlayerDidPlaying:(id)arg1;
@@ -155,6 +218,8 @@
 - (void)pauseButtonClick:(id)arg1;
 - (void)hidePauseButton;
 - (void)showPauseButton;
+- (void)showFrontView;
+- (void)hideFrontView;
 - (void)showTailFrame;
 - (void)hideTailFrame;
 - (double)duration;
@@ -172,6 +237,7 @@
 - (void)initPauseButton;
 - (void)initTailFrame;
 - (void)initVideoView;
+- (void)initAdvertiser;
 - (void)initFailed;
 - (id)screenShot:(id)arg1;
 - (void)initBgBlur;

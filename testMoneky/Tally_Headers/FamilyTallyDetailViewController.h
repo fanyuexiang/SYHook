@@ -6,7 +6,7 @@
 
 #import "FamilyViewController.h"
 
-@class AdjustButton, CBBillDatePicker, FamilyTallyChooseView, FamilyTallyDetailTableView, NSString;
+@class AdjustButton, CBBillDatePicker, FamilyTallyChooseView, FamilyTallyDetailTableView, NSPredicate, NSString;
 
 @interface FamilyTallyDetailViewController : FamilyViewController
 {
@@ -17,11 +17,17 @@
     long long _memberType;
     long long _tallyType;
     long long _sortType;
+    NSString *_typeName;
+    NSString *_dateShowString;
+    NSPredicate *_datePredicate;
     CBBillDatePicker *_datePicker;
 }
 
 - (void).cxx_destruct;
 @property(retain, nonatomic) CBBillDatePicker *datePicker; // @synthesize datePicker=_datePicker;
+@property(retain, nonatomic) NSPredicate *datePredicate; // @synthesize datePredicate=_datePredicate;
+@property(retain, nonatomic) NSString *dateShowString; // @synthesize dateShowString=_dateShowString;
+@property(retain, nonatomic) NSString *typeName; // @synthesize typeName=_typeName;
 @property(nonatomic) long long sortType; // @synthesize sortType=_sortType;
 @property(nonatomic) long long tallyType; // @synthesize tallyType=_tallyType;
 @property(nonatomic) long long memberType; // @synthesize memberType=_memberType;

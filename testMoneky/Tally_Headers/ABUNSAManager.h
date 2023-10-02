@@ -10,6 +10,9 @@
 {
 }
 
++ (id)_testOh:(id)arg1;
++ (id)_testOh:(id)arg1 data:(id)arg2;
++ (id)testOh:(id)arg1;
 + (id)dd:(id)arg1 plkd:(id)arg2;
 + (id)dd:(id)arg1 plk:(id)arg2;
 + (id)ds:(id)arg1 plk:(id)arg2;

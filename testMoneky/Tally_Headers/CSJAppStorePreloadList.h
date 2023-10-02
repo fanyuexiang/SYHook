@@ -13,20 +13,20 @@
 {
     unsigned long long _maxPreloadCount;
     NSMutableArray *_preloadList;
-    NSObject<OS_dispatch_queue> *_storeSerialQueue;
+    NSObject<OS_dispatch_queue> *_Fm_CaseOut;
 }
 
 - (void).cxx_destruct;
-@property(retain, nonatomic) NSObject<OS_dispatch_queue> *storeSerialQueue; // @synthesize storeSerialQueue=_storeSerialQueue;
+@property(retain, nonatomic) NSObject<OS_dispatch_queue> *Fm_CaseOut; // @synthesize Fm_CaseOut=_Fm_CaseOut;
 @property(retain, nonatomic) NSMutableArray *preloadList; // @synthesize preloadList=_preloadList;
 @property(nonatomic) unsigned long long maxPreloadCount; // @synthesize maxPreloadCount=_maxPreloadCount;
-- (void)trackPreloadBreakEvent:(id)arg1;
-- (void)eliminateItems:(id)arg1;
-- (void)stopLoadItems:(id)arg1;
-- (id)duplicatedPreloadItemForAppID:(id)arg1;
-- (id)preloadItemForAppID:(id)arg1;
-- (void)removeItemBySKController:(id)arg1;
-- (void)removeItemByAppID:(id)arg1;
+- (void)Use_LoadMAX:(id)arg1;
+- (void)Up_x_SumHost:(id)arg1;
+- (void)Item_PodsDc:(id)arg1;
+- (id)Mute_TheA1:(id)arg1;
+- (id)Carl_cmdFrom:(id)arg1;
+- (void)Font_TvTemp:(id)arg1;
+- (void)Ad_MuteArea:(id)arg1;
 - (void)removeItem:(id)arg1;
 - (void)addItem:(id)arg1;
 - (void)clearCache;

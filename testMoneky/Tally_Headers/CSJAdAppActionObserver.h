@@ -10,19 +10,19 @@
 
 @interface CSJAdAppActionObserver : NSObject
 {
-    NSNotification *_openURLNoti;
+    NSNotification *_Cid_ToNow;
 }
 
 + (id)allocWithZone:(struct _NSZone *)arg1;
 + (id)shareInstance;
 - (void).cxx_destruct;
-@property(retain, nonatomic) NSNotification *openURLNoti; // @synthesize openURLNoti=_openURLNoti;
-- (void)uploadDuration:(id)arg1 type:(id)arg2 tag:(id)arg3 label:(id)arg4 adExtraData:(id)arg5;
+@property(retain, nonatomic) NSNotification *Cid_ToNow; // @synthesize Cid_ToNow=_Cid_ToNow;
+- (void)IOS_WeakIdfa:(id)arg1 type:(id)arg2 tag:(id)arg3 label:(id)arg4 adExtraData:(id)arg5;
 - (void)appStoreBackWithOpenURL:(id)arg1;
 - (void)appStoreWithOpenURL:(id)arg1;
 - (void)appStoreControllerDidDisappear:(id)arg1;
 - (void)appStoreWithSKStore:(id)arg1;
-- (void)addNoti;
+- (void)Adm_A0Only;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 
 @end

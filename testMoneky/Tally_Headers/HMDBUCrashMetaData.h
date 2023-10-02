@@ -10,6 +10,8 @@
 
 @interface HMDBUCrashMetaData : HMDBUCrashModel
 {
+    _Bool _isAppExtension;
+    _Bool _isMacARM;
     NSString *_arch;
     NSString *_deviceModel;
     NSString *_appVersion;
@@ -25,9 +27,13 @@
     unsigned long long _physicalMemory;
     NSString *_sdkVersion;
     NSString *_commitID;
+    NSString *_appExtensionType;
 }
 
 - (void).cxx_destruct;
+@property(nonatomic) _Bool isMacARM; // @synthesize isMacARM=_isMacARM;
+@property(copy, nonatomic) NSString *appExtensionType; // @synthesize appExtensionType=_appExtensionType;
+@property(nonatomic) _Bool isAppExtension; // @synthesize isAppExtension=_isAppExtension;
 @property(copy, nonatomic) NSString *commitID; // @synthesize commitID=_commitID;
 @property(copy, nonatomic) NSString *sdkVersion; // @synthesize sdkVersion=_sdkVersion;
 @property(nonatomic) unsigned long long physicalMemory; // @synthesize physicalMemory=_physicalMemory;

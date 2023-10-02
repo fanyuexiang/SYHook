@@ -139,6 +139,9 @@
 - (id)initWithExistPiperArray:(id)arg1 piperDelegate:(id)arg2 type:(unsigned long long)arg3;
 - (id)initWithExistPiperArray:(id)arg1 piperDelegate:(id)arg2;
 - (void)dealloc;
+- (void)csj_fireEvent:(id)arg1 params:(id)arg2;
+- (_Bool)csj_responseToJSBMethod:(id)arg1;
+- (id)csj_excuteJSBMethod:(id)arg1 params:(id)arg2;
 - (void)handleJSRunStuck;
 - (void)runTimer;
 - (_Bool)isPlayableURL;
@@ -238,9 +241,6 @@
 - (id)interceptDictWithStartTime:(double)arg1 url:(id)arg2 type:(id)arg3 isCache:(_Bool)arg4 extraDic:(id)arg5;
 - (void)setCurrentLogType:(id)arg1 extraDic:(id)arg2;
 - (void)trackEvent:(id)arg1 params:(id)arg2;
-- (void)csj_fireEvent:(id)arg1 params:(id)arg2;
-- (_Bool)csj_responseToJSBMethod:(id)arg1;
-- (id)csj_excuteJSBMethod:(id)arg1 params:(id)arg2;
 
 @end
 

@@ -18,6 +18,8 @@
 - (void).cxx_destruct;
 @property(nonatomic) __weak UIViewController *controller; // @synthesize controller=_controller;
 @property(copy, nonatomic) NSString *ska_label; // @synthesize ska_label=_ska_label;
+- (void)goTallyTemplate;
+- (void)goAdvance;
 - (void)tallyLedgerEntranceAction;
 - (void)goTallyTypeDatasMigration;
 - (void)tallyChartTypeDefShowAction;
@@ -29,6 +31,7 @@
 - (void)soundAndTouch;
 - (void)tallyLabelSettingAction;
 - (void)goFamilyBillsSetting;
+- (void)recordHistoryLoginListAction;
 - (void)createTallyImageDataAction;
 - (void)createTallyDataAction;
 - (void)noADAction;

@@ -8,11 +8,12 @@
 
 #import "BaiduMobAdShakeFuncManagerDelegate-Protocol.h"
 
-@class BaiduMobAdShakeFuncManager, CAShapeLayer, NSString, UIImageView, UILabel;
+@class BaiduMobAdComponentLottieManager, BaiduMobAdShakeFuncManager, CAShapeLayer, NSString, UIImageView, UILabel;
 
 @interface BaiduMobAdSplashTwistView : UIView <BaiduMobAdShakeFuncManagerDelegate>
 {
     _Bool _isShakeClickCanBeResponse;
+    _Bool _isTwistLottie;
     _Bool _firstClick;
     float _lineWidth;
     double _intervalTime;
@@ -36,9 +37,11 @@
     CAShapeLayer *_trackLayer;
     CAShapeLayer *_progressLayerLeft;
     CAShapeLayer *_progressLayerRight;
+    BaiduMobAdComponentLottieManager *_twistLottieManager;
 }
 
 - (void).cxx_destruct;
+@property(retain, nonatomic) BaiduMobAdComponentLottieManager *twistLottieManager; // @synthesize twistLottieManager=_twistLottieManager;
 @property(retain, nonatomic) CAShapeLayer *progressLayerRight; // @synthesize progressLayerRight=_progressLayerRight;
 @property(retain, nonatomic) CAShapeLayer *progressLayerLeft; // @synthesize progressLayerLeft=_progressLayerLeft;
 @property(retain, nonatomic) CAShapeLayer *trackLayer; // @synthesize trackLayer=_trackLayer;
@@ -50,6 +53,7 @@
 @property(nonatomic) double twistImageViewSize; // @synthesize twistImageViewSize=_twistImageViewSize;
 @property(nonatomic) double textLabelHeigth; // @synthesize textLabelHeigth=_textLabelHeigth;
 @property(copy, nonatomic) CDUnknownBlockType clickBlock; // @synthesize clickBlock=_clickBlock;
+@property(nonatomic) _Bool isTwistLottie; // @synthesize isTwistLottie=_isTwistLottie;
 @property(nonatomic) double twistStyle; // @synthesize twistStyle=_twistStyle;
 @property(nonatomic) double isTwistClick; // @synthesize isTwistClick=_isTwistClick;
 @property(retain, nonatomic) UIView *progressBarView; // @synthesize progressBarView=_progressBarView;
@@ -63,7 +67,7 @@
 @property(nonatomic) double velocity; // @synthesize velocity=_velocity;
 @property(nonatomic) double detectionTimes; // @synthesize detectionTimes=_detectionTimes;
 @property(nonatomic) double intervalTime; // @synthesize intervalTime=_intervalTime;
-- (void)nativeShakeStatus:(double)arg1;
+- (void)nativeShakeProgressRate:(double)arg1;
 - (void)nativeShakeFuncMotion:(_Bool)arg1;
 - (void)dealloc;
 - (void)removeTwistView;
@@ -82,7 +86,7 @@
 - (void)renew:(double)arg1;
 - (void)progressAnimation:(double)arg1;
 - (void)setProgressBarUI;
-- (id)initWithFrame:(struct CGRect)arg1 twistImageSize:(double)arg2 twistMaskColor:(id)arg3 click:(double)arg4;
+- (id)initWithFrame:(struct CGRect)arg1 twistImageSize:(double)arg2 twistMaskColor:(id)arg3 adInstance:(id)arg4;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

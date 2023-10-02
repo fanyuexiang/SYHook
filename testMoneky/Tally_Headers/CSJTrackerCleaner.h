@@ -11,26 +11,26 @@
 
 @interface CSJTrackerCleaner : NSObject
 {
-    NSObject<OS_dispatch_queue> *_sendingQueue;
-    NSString *_typeKey;
-    NSString *_willcleanNotification;
-    NSString *_didcleanNotification;
+    NSObject<OS_dispatch_queue> *_Text_FromSum;
+    NSString *_MIT_LockNoti;
+    NSString *_Note_Bu_yMute;
+    NSString *_Ran_A0Pos;
     CSJTrackerProxy *_trackerProxy;
-    NSString *_eventKey;
+    NSString *_Ft_YESHopo;
 }
 
 - (void).cxx_destruct;
-@property(copy, nonatomic) NSString *eventKey; // @synthesize eventKey=_eventKey;
+@property(copy, nonatomic) NSString *Ft_YESHopo; // @synthesize Ft_YESHopo=_Ft_YESHopo;
 @property(nonatomic) __weak CSJTrackerProxy *trackerProxy; // @synthesize trackerProxy=_trackerProxy;
-@property(copy, nonatomic) NSString *didcleanNotification; // @synthesize didcleanNotification=_didcleanNotification;
-@property(copy, nonatomic) NSString *willcleanNotification; // @synthesize willcleanNotification=_willcleanNotification;
-@property(copy, nonatomic) NSString *typeKey; // @synthesize typeKey=_typeKey;
-@property(readonly, nonatomic) NSObject<OS_dispatch_queue> *sendingQueue; // @synthesize sendingQueue=_sendingQueue;
-- (void)unpackTracks:(id)arg1 trackIDs:(id)arg2 result:(id)arg3 eventName:(id)arg4;
-- (void)cleanOutdatedTracks;
-- (void)_sendTracks:(id)arg1;
-- (void)startClean:(long long)arg1;
-- (id)initWithQueueName:(const char *)arg1 willcleanNotification:(id)arg2 didcleanNotification:(id)arg3 typeKey:(id)arg4 trackerProxy:(id)arg5 eventKey:(id)arg6;
+@property(copy, nonatomic) NSString *Ran_A0Pos; // @synthesize Ran_A0Pos=_Ran_A0Pos;
+@property(copy, nonatomic) NSString *Note_Bu_yMute; // @synthesize Note_Bu_yMute=_Note_Bu_yMute;
+@property(copy, nonatomic) NSString *MIT_LockNoti; // @synthesize MIT_LockNoti=_MIT_LockNoti;
+@property(readonly, nonatomic) NSObject<OS_dispatch_queue> *Text_FromSum; // @synthesize Text_FromSum=_Text_FromSum;
+- (void)Copy_X2Levi:(id)arg1 trackIDs:(id)arg2 result:(id)arg3 eventName:(id)arg4;
+- (void)If_SaveBeen;
+- (void)Need_TvIdx:(id)arg1;
+- (void)Tag_OnlyView:(long long)arg1;
+- (id)initLUse_R1User:(const char *)arg1 Note_Bu_yMute:(id)arg2 Ran_A0Pos:(id)arg3 MIT_LockNoti:(id)arg4 trackerProxy:(id)arg5 Ft_YESHopo:(id)arg6;
 
 @end
 

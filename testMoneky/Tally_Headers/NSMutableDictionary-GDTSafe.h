@@ -15,11 +15,14 @@
 - (void)wvRemoveObjectForKey:(id)arg1;
 - (void)wvAddNewEntriesFromDictionary:(id)arg1;
 - (void)wvCopyValueFrom:(id)arg1 withKey:(id)arg2;
+- (void)bu_setObject:(id)arg1 forKey:(id)arg2;
+- (void)csj_safe_addEntriesFromDictionary:(id)arg1;
+- (void)hmdBU_setCollection:(id)arg1 forKey:(id)arg2;
+- (void)hmdBU_setSafeObject:(id)arg1 forKey:(id)arg2;
+- (void)hmdBU_setObject:(id)arg1 forKey:(id)arg2;
+- (void)hmdBU_addEntriesFromDict:(id)arg1;
 - (void)abu_setNumber:(id)arg1 forKey:(id)arg2;
 - (void)abu_setString:(id)arg1 forKey:(id)arg2;
 - (void)abu_setObject:(id)arg1 forKey:(id)arg2;
-- (void)bu_setObject:(id)arg1 forKey:(id)arg2;
-- (void)hmdbu_setSafeObject:(id)arg1 forKey:(id)arg2;
-- (void)hmdbu_setObject:(id)arg1 forKey:(id)arg2;
 @end
 

@@ -65,6 +65,7 @@
     NSString *_budget;
     long long _vipDays;
     NSString *_vipPeriod;
+    NSDictionary *_affix;
     NSString *_lookVIPCalendarDate;
     long long _tokenAIndex;
     NSString *_appEmail;
@@ -81,6 +82,7 @@
 + (void)skinIDResetDefault;
 + (id)skinStyle;
 + (long long)skinID;
++ (id)regetRecordHistoryLoginList;
 + (_Bool)supportsSecureCoding;
 + (id)sharedUserInfoManager;
 - (void).cxx_destruct;
@@ -96,6 +98,7 @@
 @property(copy, nonatomic) NSString *appEmail; // @synthesize appEmail=_appEmail;
 @property(nonatomic) long long tokenAIndex; // @synthesize tokenAIndex=_tokenAIndex;
 @property(copy, nonatomic) NSString *lookVIPCalendarDate; // @synthesize lookVIPCalendarDate=_lookVIPCalendarDate;
+@property(copy, nonatomic) NSDictionary *affix; // @synthesize affix=_affix;
 @property(nonatomic, getter=isAutoRenew) _Bool autoRenew; // @synthesize autoRenew=_autoRenew;
 @property(copy, nonatomic) NSString *vipPeriod; // @synthesize vipPeriod=_vipPeriod;
 @property(nonatomic) long long vipDays; // @synthesize vipDays=_vipDays;
@@ -133,6 +136,14 @@
 @property(copy, nonatomic) NSString *wcToken; // @synthesize wcToken=_wcToken;
 @property(nonatomic) _Bool tokenExpired; // @synthesize tokenExpired=_tokenExpired;
 @property(retain, nonatomic) NSDictionary *lastLoginInfo; // @synthesize lastLoginInfo=_lastLoginInfo;
+@property(copy, nonatomic) NSString *adt;
+- (void)requestUploadEntranceSetting;
+- (void)requestSettingABTest;
+- (long long)settingType;
+- (long long)regetAccountRiskLevelType;
+- (id)emergencyContactsWithMail;
+- (id)emergencyContactsWithPhone;
+- (_Bool)hasEmergencyContacts;
 - (void)saveUserLoggedSuccess;
 - (_Bool)userLoggedSuccess;
 - (_Bool)updateUserActiveCount:(id)arg1 needPostNotification:(_Bool)arg2;
@@ -143,6 +154,7 @@
 - (void)requestUserBaseInfo:(CDUnknownBlockType)arg1;
 - (_Bool)updateUserVIPInfo:(id)arg1 needPostNotification:(_Bool)arg2;
 - (void)requestUserVIPInfoWithConfig;
+- (void)requestUserVIPInfoFinish:(CDUnknownBlockType)arg1;
 - (void)requestUserVIPInfo;
 - (_Bool)updateUserTallyStatis:(id)arg1 needPostNotification:(_Bool)arg2;
 - (void)requestTallyStatisWithConfig;
@@ -187,6 +199,7 @@
 @property(readonly, nonatomic, getter=isVip) _Bool vip;
 - (void)removeLastLoginInfo;
 - (void)saveLastLoginInfo;
+- (void)recordHistoryLoginList;
 - (void)networkLogout;
 @property(nonatomic) _Bool isLookVIPCalendar; // @synthesize isLookVIPCalendar=_isLookVIPCalendar;
 - (void)requestVIPActivityInfo;

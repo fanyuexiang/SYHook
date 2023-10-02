@@ -7,7 +7,7 @@
 #import "NSObject-Protocol.h"
 
 @protocol BaiduMobAdShakeFuncManagerDelegate <NSObject>
-- (void)nativeShakeStatus:(double)arg1;
+- (void)nativeShakeProgressRate:(double)arg1;
 - (void)nativeShakeFuncMotion:(_Bool)arg1;
 @end
 

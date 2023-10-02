@@ -96,7 +96,7 @@
 - (id)apoUrl:(id)arg1;
 - (void)prepareAction;
 - (void)setVolume:(float)arg1 withPlayer:(id)arg2;
-- (void)videoAdClick;
+- (void)handleClick;
 - (void)playClick:(id)arg1;
 - (void)playbackFail:(id)arg1;
 - (void)onPlaybackLikelyToKeepUpChange;

@@ -10,12 +10,12 @@
 {
 }
 
-+ (double)_showAreaInWindowWithView:(id)arg1;
++ (double)Noti_TagYou:(id)arg1;
 + (double)visibleAreaWithView:(id)arg1 superView:(id)arg2;
 + (double)visibleAreaWithView:(id)arg1;
-+ (_Bool)checkIfViewFullDisplayInScreen:(id)arg1;
++ (_Bool)User_UsedYou:(id)arg1;
 + (_Bool)checkIfViewInScreen:(id)arg1;
-+ (_Bool)validCheckInWithView:(id)arg1;
++ (_Bool)Show_WinApi:(id)arg1;
 
 @end
 

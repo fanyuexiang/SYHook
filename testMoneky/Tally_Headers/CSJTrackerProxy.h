@@ -10,34 +10,36 @@
 
 @interface CSJTrackerProxy : NSObject
 {
-    CSJTrackerCleaner *_trackerCleaner;
-    CSJTrackerStorage *_trackerStore;
-    CSJTrackerSender *_trackerSender;
-    CSJTrackerClock *_trackClock;
+    CSJTrackerCleaner *_Slot_Bu_yThat;
+    CSJTrackerStorage *_Idfv_SkipGet;
+    CSJTrackerSender *_Need_DicNot;
+    CSJTrackerClock *_Nil_CharY1;
     long long _trackerType;
     id _tracker;
     NSString *_sentNotification;
 }
 
-+ (_Bool)checkDeviceIdChanged;
-+ (_Bool)checkForceLanguageChanged;
-+ (id)trackHeaderParameters;
++ (_Bool)Docs_BlueNote;
++ (_Bool)Else_YESAd;
++ (id)Area_ThePtr:(_Bool)arg1;
++ (void)initialize;
 - (void).cxx_destruct;
 @property(copy, nonatomic) NSString *sentNotification; // @synthesize sentNotification=_sentNotification;
 @property(nonatomic) __weak id tracker; // @synthesize tracker=_tracker;
 @property(nonatomic) long long trackerType; // @synthesize trackerType=_trackerType;
-@property(retain, nonatomic) CSJTrackerClock *trackClock; // @synthesize trackClock=_trackClock;
-@property(retain, nonatomic) CSJTrackerSender *trackerSender; // @synthesize trackerSender=_trackerSender;
-@property(retain, nonatomic) CSJTrackerStorage *trackerStore; // @synthesize trackerStore=_trackerStore;
-@property(retain, nonatomic) CSJTrackerCleaner *trackerCleaner; // @synthesize trackerCleaner=_trackerCleaner;
-- (void)actualSendTrack:(id)arg1 V1TrackIDs:(id)arg2 postParams:(id)arg3;
-- (id)generatedPostParamsWithTrack:(id)arg1;
-- (void)finishSend;
-- (_Bool)startSendTrack:(id)arg1 v1TrackIDs:(id)arg2;
-- (void)startCleanFromType:(long long)arg1;
+@property(retain, nonatomic) CSJTrackerClock *Nil_CharY1; // @synthesize Nil_CharY1=_Nil_CharY1;
+@property(retain, nonatomic) CSJTrackerSender *Need_DicNot; // @synthesize Need_DicNot=_Need_DicNot;
+@property(retain, nonatomic) CSJTrackerStorage *Idfv_SkipGet; // @synthesize Idfv_SkipGet=_Idfv_SkipGet;
+@property(retain, nonatomic) CSJTrackerCleaner *Slot_Bu_yThat; // @synthesize Slot_Bu_yThat=_Slot_Bu_yThat;
+- (void)Stmt_InitYou:(id)arg1 V1TrackIDs:(id)arg2 postParams:(id)arg3;
+- (id)That_PushMsg:(id)arg1;
+- (_Bool)Ran_ElseExt:(id)arg1;
+- (void)User_IconLazy;
+- (_Bool)Pos_DoApp:(id)arg1 v1TrackIDs:(id)arg2;
+- (void)Res_BlueVar:(long long)arg1;
 - (id)saveData:(id)arg1;
-- (void)startHandleTrack:(id)arg1 clockType:(long long)arg2;
-- (id)initWithStoreName:(id)arg1 queueName:(const char *)arg2 willcleanNotification:(id)arg3 didcleanNotification:(id)arg4 sentNotification:(id)arg5 notificationTypeKey:(id)arg6 clockType:(long long)arg7 trackerType:(long long)arg8 eventKey:(id)arg9;
+- (void)Ary_GdpUp_x:(id)arg1 clockType:(long long)arg2;
+- (id)initLUsed_JsonAPI:(id)arg1 queueName:(const char *)arg2 Note_Bu_yMute:(id)arg3 Ran_A0Pos:(id)arg4 sentNotification:(id)arg5 notificationTypeKey:(id)arg6 clockType:(long long)arg7 trackerType:(long long)arg8 Ft_YESHopo:(id)arg9;
 - (void)dealloc;
 
 @end

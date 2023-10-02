@@ -6,7 +6,7 @@
 
 #import <objc/NSObject.h>
 
-@class CSJAdInfoViewModel, CSJDynamicNativeViewModel, NSDictionary, UIView;
+@class CSJAdInfoViewModel, CSJDynamicAbstractView, CSJDynamicNativeViewModel, NSDictionary, UIView;
 
 @interface CSJDynamicViewGlobalModel : NSObject
 {
@@ -14,17 +14,23 @@
     _Bool _needToInsertPlayerViewIntoRootView;
     CSJAdInfoViewModel *_infoViewModel;
     CSJDynamicNativeViewModel *_dynamicNativeViewModel;
+    NSDictionary *_originInfoDictionary;
     NSDictionary *_layoutInfoDictionary;
     UIView *_dislikeView;
     UIView *_rootView;
+    CSJDynamicAbstractView *_logoTextView;
+    long long _reduceTime;
 }
 
 - (void).cxx_destruct;
+@property(nonatomic) long long reduceTime; // @synthesize reduceTime=_reduceTime;
+@property(nonatomic) __weak CSJDynamicAbstractView *logoTextView; // @synthesize logoTextView=_logoTextView;
 @property(nonatomic) _Bool needToInsertPlayerViewIntoRootView; // @synthesize needToInsertPlayerViewIntoRootView=_needToInsertPlayerViewIntoRootView;
-@property(retain, nonatomic) UIView *rootView; // @synthesize rootView=_rootView;
+@property(nonatomic) __weak UIView *rootView; // @synthesize rootView=_rootView;
 @property(retain, nonatomic) UIView *dislikeView; // @synthesize dislikeView=_dislikeView;
 @property(nonatomic) _Bool openPlayableLandingPage; // @synthesize openPlayableLandingPage=_openPlayableLandingPage;
 @property(copy, nonatomic) NSDictionary *layoutInfoDictionary; // @synthesize layoutInfoDictionary=_layoutInfoDictionary;
+@property(copy, nonatomic) NSDictionary *originInfoDictionary; // @synthesize originInfoDictionary=_originInfoDictionary;
 @property(retain, nonatomic) CSJDynamicNativeViewModel *dynamicNativeViewModel; // @synthesize dynamicNativeViewModel=_dynamicNativeViewModel;
 @property(retain, nonatomic) CSJAdInfoViewModel *infoViewModel; // @synthesize infoViewModel=_infoViewModel;
 - (void)updateDisLikeViewIfNeed:(id)arg1;

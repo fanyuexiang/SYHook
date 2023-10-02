@@ -10,39 +10,39 @@
 
 @interface CSJRewardedLiveAlertView : UIView
 {
-    _Bool _autoJump;
-    NSAttributedString *_attrTitleText;
-    double _titleTextHeight;
+    _Bool _Get_TapDic;
+    NSAttributedString *_Rit_MAXUser;
+    double _Has_ShowNULL;
     long long _countDown;
     CDUnknownBlockType _completion;
     CDUnknownBlockType _confirm;
-    CDUnknownBlockType _refuse;
+    CDUnknownBlockType _Docs_JsHash;
     BUTimer *_timer;
     UIView *_containerView;
     UIImageView *_iconView;
     UILabel *_titleLabel;
     UIButton *_confirmBtn;
-    UIButton *_refuseBtn;
+    UIButton *_Cta_dirNote;
 }
 
 - (void).cxx_destruct;
-@property(retain, nonatomic) UIButton *refuseBtn; // @synthesize refuseBtn=_refuseBtn;
+@property(retain, nonatomic) UIButton *Cta_dirNote; // @synthesize Cta_dirNote=_Cta_dirNote;
 @property(retain, nonatomic) UIButton *confirmBtn; // @synthesize confirmBtn=_confirmBtn;
 @property(retain, nonatomic) UILabel *titleLabel; // @synthesize titleLabel=_titleLabel;
 @property(retain, nonatomic) UIImageView *iconView; // @synthesize iconView=_iconView;
 @property(retain, nonatomic) UIView *containerView; // @synthesize containerView=_containerView;
 @property(retain, nonatomic) BUTimer *timer; // @synthesize timer=_timer;
-@property(copy, nonatomic) CDUnknownBlockType refuse; // @synthesize refuse=_refuse;
+@property(copy, nonatomic) CDUnknownBlockType Docs_JsHash; // @synthesize Docs_JsHash=_Docs_JsHash;
 @property(copy, nonatomic) CDUnknownBlockType confirm; // @synthesize confirm=_confirm;
 @property(copy, nonatomic) CDUnknownBlockType completion; // @synthesize completion=_completion;
 @property(nonatomic) long long countDown; // @synthesize countDown=_countDown;
-@property(nonatomic) _Bool autoJump; // @synthesize autoJump=_autoJump;
-@property(nonatomic) double titleTextHeight; // @synthesize titleTextHeight=_titleTextHeight;
-@property(copy, nonatomic) NSAttributedString *attrTitleText; // @synthesize attrTitleText=_attrTitleText;
-- (void)updateRefuseText;
+@property(nonatomic) _Bool Get_TapDic; // @synthesize Get_TapDic=_Get_TapDic;
+@property(nonatomic) double Has_ShowNULL; // @synthesize Has_ShowNULL=_Has_ShowNULL;
+@property(copy, nonatomic) NSAttributedString *Rit_MAXUser; // @synthesize Rit_MAXUser=_Rit_MAXUser;
+- (void)R0_AryTap;
 - (void)updateLeftSeconds:(id)arg1;
 - (void)stopTimer;
-- (void)startTimer;
+- (void)Row_StmtView;
 - (void)onBecomeActive;
 - (void)onEnterBackground;
 - (void)dealloc;
@@ -51,7 +51,7 @@
 - (void)onRefuse;
 - (void)onConfirm;
 - (void)creatSubViews;
-- (id)initWithFrame:(struct CGRect)arg1 text:(id)arg2 duration:(long long)arg3 autoJump:(_Bool)arg4 completion:(CDUnknownBlockType)arg5;
+- (id)initWithFrame:(struct CGRect)arg1 text:(id)arg2 duration:(long long)arg3 Get_TapDic:(_Bool)arg4 completion:(CDUnknownBlockType)arg5;
 
 @end
 

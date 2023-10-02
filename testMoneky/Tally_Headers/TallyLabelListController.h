@@ -53,6 +53,7 @@
 - (void)backAction;
 - (void)resetNavigationBar;
 - (void)loadDataWithBookID:(id)arg1 tallyType:(long long)arg2 incomesType:(id)arg3 expendsType:(id)arg4;
+- (void)goLabelRecommendSet;
 - (void)viewWillAppear:(_Bool)arg1;
 - (void)viewDidLoad;
 - (void)dealloc;

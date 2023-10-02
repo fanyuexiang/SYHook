@@ -10,7 +10,7 @@
 {
 }
 
-- (Class)_getIterationImplementerClass:(id)arg1;
+- (Class)If_AsId:(id)arg1;
 - (Class)conversionWithOriginalInterfaceClass:(Class)arg1;
 
 @end

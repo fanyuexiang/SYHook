@@ -13,10 +13,10 @@
     CSJTrackerProxy *_trackerProxy;
 }
 
-+ (id)sharedTracker;
++ (id)MARK_Fail_rhs;
 - (void).cxx_destruct;
 @property(retain, nonatomic) CSJTrackerProxy *trackerProxy; // @synthesize trackerProxy=_trackerProxy;
-- (void)eventData:(id)arg1;
+- (void)ADX_VoidOut:(id)arg1;
 
 @end
 

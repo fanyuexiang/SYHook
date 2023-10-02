@@ -8,14 +8,16 @@
 
 @interface CSJAdNetworkRequest : BUNetworkRequest
 {
+    _Bool _isZone_A1Len;
 }
 
-+ (id)bu_base_URL;
-- (id)TNCServiceKey;
++ (id)All_NameList;
+@property(nonatomic) _Bool isZone_A1Len; // @synthesize isZone_A1Len=_isZone_A1Len;
+- (id)Read_VoidCom;
 - (CDUnknownBlockType)successCompletionBlock;
 - (CDUnknownBlockType)failureCompletionBlock;
 - (id)baseUrl;
-- (id)initWithUrl:(id)arg1 method:(long long)arg2 parameter:(id)arg3;
+- (id)initLRead_ListTrue:(id)arg1 method:(long long)arg2 parameter:(id)arg3;
 
 @end
 

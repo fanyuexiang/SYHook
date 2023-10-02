@@ -10,10 +10,10 @@
 {
 }
 
-- (id)eventExtraInfoKey;
-- (id)customDebugInfo;
-- (id)realTimeTrackerArray;
-- (id)keyDictionayKey;
+- (id)Win_LdsWith;
+- (id)Carl_YESSelf;
+- (id)Rect_TimeBOOL;
+- (id)Msg_LineMARK;
 
 @end
 

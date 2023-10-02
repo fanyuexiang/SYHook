@@ -4,14 +4,14 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
 
-#import "BUInterfaceBaseView.h"
+#import <UIKit/UIView.h>
 
 #import "BUVideoEngine-Protocol.h"
 
 @class BUMaterialMeta, NSString, UIViewController;
 @protocol BUVideoAdViewDelegate;
 
-@interface BUVideoAdView : BUInterfaceBaseView <BUVideoEngine>
+@interface BUVideoAdView : UIView <BUVideoEngine>
 {
     _Bool _drawVideoClickEnable;
     _Bool _supportAutoPlay;
@@ -28,6 +28,8 @@
 @property(nonatomic) _Bool drawVideoClickEnable; // @synthesize drawVideoClickEnable=_drawVideoClickEnable;
 @property(nonatomic) __weak UIViewController *rootViewController; // @synthesize rootViewController=_rootViewController;
 @property(nonatomic) __weak id <BUVideoAdViewDelegate> delegate; // @synthesize delegate=_delegate;
+- (id)init;
+- (id)initWithMaterial:(id)arg1;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

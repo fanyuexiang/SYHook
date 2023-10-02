@@ -26,6 +26,7 @@
     NSString *_cellReuserID;
     TallyDetailRefreshFooterView *_footerRefreshView;
     _Bool _canQuickEdit;
+    _Bool _isAddTally;
     long long _dataSectionType;
     NSFetchedResultsController *_fetchedResultsController;
     NSString *_date;
@@ -39,9 +40,12 @@
     double _noDataHeight;
     CDUnknownBlockType _dateChangedBlock;
     NSString *_currentDate;
+    NSString *_dateAddTally;
 }
 
 - (void).cxx_destruct;
+@property(copy, nonatomic) NSString *dateAddTally; // @synthesize dateAddTally=_dateAddTally;
+@property(nonatomic) _Bool isAddTally; // @synthesize isAddTally=_isAddTally;
 @property(copy, nonatomic) NSString *currentDate; // @synthesize currentDate=_currentDate;
 @property(copy, nonatomic) CDUnknownBlockType dateChangedBlock; // @synthesize dateChangedBlock=_dateChangedBlock;
 @property(nonatomic) _Bool canQuickEdit; // @synthesize canQuickEdit=_canQuickEdit;
@@ -56,6 +60,7 @@
 @property(copy, nonatomic) NSString *date; // @synthesize date=_date;
 @property(retain, nonatomic) NSFetchedResultsController *fetchedResultsController; // @synthesize fetchedResultsController=_fetchedResultsController;
 @property(nonatomic) long long dataSectionType; // @synthesize dataSectionType=_dataSectionType;
+- (void)addTallyScrollToIndexPath;
 - (void)recalculateDateWithMax_Min;
 - (void)iCloudUpdataAmount;
 - (void)updateAmount;

@@ -6,7 +6,7 @@
 
 #import <objc/NSObject.h>
 
-@class NSArray, NSNumber, NSString, UIImage;
+@class BUAdSDKConfigurationMediation, NSArray, NSNumber, NSString, UIImage;
 @protocol BUAdSDKPrivacyProvider;
 
 @interface BUAdSDKConfiguration : NSObject
@@ -14,17 +14,11 @@
     _Bool _allowModifyAudioSessionSetting;
     _Bool _unityDeveloper;
     _Bool _SDKDEBUG;
-    NSNumber *_serverCoppa;
     NSString *_userExtData;
-    unsigned long long _territory;
     NSString *_appID;
     NSString *_secretKey;
-    long long _logLevel;
     long long _ageGroup;
-    NSNumber *_coppa;
     long long _webViewOfflineType;
-    NSNumber *_GDPR;
-    NSNumber *_CCPA;
     NSNumber *_debugLog;
     NSNumber *_themeStatus;
     NSArray *_abvids;
@@ -32,28 +26,23 @@
     NSString *_customIdfa;
     id <BUAdSDKPrivacyProvider> _privacyProvider;
     UIImage *_appLogoImage;
-    NSNumber *_serverGDPR;
     NSString *_abvidString;
     NSArray *_inherentUserData;
     NSString *_unitySetString;
     NSString *_unityEVString;
     unsigned long long _audioSessionType;
-    NSString *_territoryCSJappID;
-    NSString *_territoryPAGappID;
 }
 
++ (_Bool)validWiFiBSSID;
 + (id)interfaceVersion;
 + (id)allocWithZone:(struct _NSZone *)arg1;
 + (id)configuration;
 - (void).cxx_destruct;
-@property(copy, nonatomic) NSString *territoryPAGappID; // @synthesize territoryPAGappID=_territoryPAGappID;
-@property(copy, nonatomic) NSString *territoryCSJappID; // @synthesize territoryCSJappID=_territoryCSJappID;
 @property(nonatomic) unsigned long long audioSessionType; // @synthesize audioSessionType=_audioSessionType;
 @property(copy, nonatomic) NSString *unityEVString; // @synthesize unityEVString=_unityEVString;
 @property(copy, nonatomic) NSString *unitySetString; // @synthesize unitySetString=_unitySetString;
 @property(retain, nonatomic) NSArray *inherentUserData; // @synthesize inherentUserData=_inherentUserData;
 @property(copy) NSString *abvidString; // @synthesize abvidString=_abvidString;
-@property(retain, nonatomic) NSNumber *serverGDPR; // @synthesize serverGDPR=_serverGDPR;
 @property(nonatomic) _Bool SDKDEBUG; // @synthesize SDKDEBUG=_SDKDEBUG;
 @property(retain, nonatomic) UIImage *appLogoImage; // @synthesize appLogoImage=_appLogoImage;
 @property(retain, nonatomic) id <BUAdSDKPrivacyProvider> privacyProvider; // @synthesize privacyProvider=_privacyProvider;
@@ -64,19 +53,15 @@
 @property(retain, nonatomic) NSArray *abvids; // @synthesize abvids=_abvids;
 @property(retain, nonatomic) NSNumber *themeStatus; // @synthesize themeStatus=_themeStatus;
 @property(retain, nonatomic) NSNumber *debugLog; // @synthesize debugLog=_debugLog;
-@property(retain, nonatomic) NSNumber *CCPA; // @synthesize CCPA=_CCPA;
-@property(retain, nonatomic) NSNumber *GDPR; // @synthesize GDPR=_GDPR;
 @property(nonatomic) long long webViewOfflineType; // @synthesize webViewOfflineType=_webViewOfflineType;
-@property(retain, nonatomic) NSNumber *coppa; // @synthesize coppa=_coppa;
 @property(nonatomic) long long ageGroup; // @synthesize ageGroup=_ageGroup;
-@property(nonatomic) long long logLevel; // @synthesize logLevel=_logLevel;
 @property(copy, nonatomic) NSString *secretKey; // @synthesize secretKey=_secretKey;
 @property(copy, nonatomic) NSString *appID; // @synthesize appID=_appID;
-@property(nonatomic) unsigned long long territory; // @synthesize territory=_territory;
 - (void)InitializeParamaters;
 @property(copy, nonatomic) NSString *userExtData; // @synthesize userExtData=_userExtData;
-@property(retain, nonatomic) NSNumber *serverCoppa; // @synthesize serverCoppa=_serverCoppa;
 - (id)copyWithZone:(struct _NSZone *)arg1;
+@property(readonly, nonatomic) BUAdSDKConfigurationMediation *mediation;
+@property(nonatomic) _Bool useMediation;
 
 @end
 

@@ -9,25 +9,25 @@
 @interface CSJAPIThrottling : NSObject
 {
     _Bool _enable;
-    _Bool _isThrottling;
+    _Bool _is_pos_R1Ad;
     _Bool _report;
     double _beginTime;
-    double _lastRequest;
+    double _Org_JsonBe;
     long long _times;
-    long long _maxTimes;
+    long long _A0_OsHost;
     double _timeDuration;
 }
 
 @property(nonatomic) double timeDuration; // @synthesize timeDuration=_timeDuration;
-@property(nonatomic) long long maxTimes; // @synthesize maxTimes=_maxTimes;
+@property(nonatomic) long long A0_OsHost; // @synthesize A0_OsHost=_A0_OsHost;
 @property(nonatomic) _Bool report; // @synthesize report=_report;
-@property(nonatomic) _Bool isThrottling; // @synthesize isThrottling=_isThrottling;
+@property(nonatomic) _Bool is_pos_R1Ad; // @synthesize is_pos_R1Ad=_is_pos_R1Ad;
 @property(nonatomic) long long times; // @synthesize times=_times;
-@property(nonatomic) double lastRequest; // @synthesize lastRequest=_lastRequest;
+@property(nonatomic) double Org_JsonBe; // @synthesize Org_JsonBe=_Org_JsonBe;
 @property(nonatomic) double beginTime; // @synthesize beginTime=_beginTime;
 @property(nonatomic) _Bool enable; // @synthesize enable=_enable;
-- (void)reportAPIStat:(id)arg1;
-- (_Bool)canMakeRequest;
+- (void)Idfv_IdVc:(id)arg1;
+- (_Bool)Only_ListView;
 
 @end
 

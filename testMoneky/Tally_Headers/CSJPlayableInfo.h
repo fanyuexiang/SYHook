@@ -24,13 +24,11 @@
     long long _playable_js_timeout;
     NSString *_originalPlayableUrl;
     long long _isPlayWithDownload;
-    NSString *_playable_vid;
     CSJVideoInfo *_videoInfo;
 }
 
 - (void).cxx_destruct;
 @property(retain, nonatomic) CSJVideoInfo *videoInfo; // @synthesize videoInfo=_videoInfo;
-@property(copy, nonatomic) NSString *playable_vid; // @synthesize playable_vid=_playable_vid;
 @property(nonatomic) _Bool is_play_with_watching; // @synthesize is_play_with_watching=_is_play_with_watching;
 @property(nonatomic) _Bool enablePreRender; // @synthesize enablePreRender=_enablePreRender;
 @property(nonatomic) long long isPlayWithDownload; // @synthesize isPlayWithDownload=_isPlayWithDownload;

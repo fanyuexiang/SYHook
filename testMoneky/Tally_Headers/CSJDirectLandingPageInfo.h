@@ -15,9 +15,13 @@
     NSString *_directLandingUrl;
     long long _displayDuration;
     long long _closeTime;
+    long long _show_type;
+    long long _page_type;
 }
 
 - (void).cxx_destruct;
+@property(nonatomic) long long page_type; // @synthesize page_type=_page_type;
+@property(nonatomic) long long show_type; // @synthesize show_type=_show_type;
 @property(nonatomic) long long closeTime; // @synthesize closeTime=_closeTime;
 @property(nonatomic) long long displayDuration; // @synthesize displayDuration=_displayDuration;
 @property(copy, nonatomic) NSString *directLandingUrl; // @synthesize directLandingUrl=_directLandingUrl;

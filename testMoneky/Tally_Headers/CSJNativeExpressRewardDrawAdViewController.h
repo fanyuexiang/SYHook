@@ -27,7 +27,7 @@
 - (_Bool)shouldAutorotate;
 - (_Bool)prefersStatusBarHidden;
 - (void)viewDidLoad;
-- (id)initWithExpressAdViews:(id)arg1 slot:(id)arg2 rewardedVideoAd:(id)arg3;
+- (id)initLFrom_ThatPath:(id)arg1 slot:(id)arg2 rewardedVideoAd:(id)arg3;
 
 @end
 

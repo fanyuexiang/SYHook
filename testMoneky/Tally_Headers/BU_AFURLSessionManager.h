@@ -14,7 +14,7 @@
 #import "NSURLSessionTaskDelegate-Protocol.h"
 
 @class BU_AFSecurityPolicy, NSArray, NSLock, NSMutableDictionary, NSOperationQueue, NSString, NSURLSession, NSURLSessionConfiguration;
-@protocol BU_AFURLResponseSerialization, OS_dispatch_group, OS_dispatch_queue;
+@protocol BU_AFURLResponseSerialization, NSURLSessionTaskDelegate, OS_dispatch_group, OS_dispatch_queue;
 
 @interface BU_AFURLSessionManager : NSObject <NSURLSessionDelegate, NSURLSessionTaskDelegate, NSURLSessionDataDelegate, NSURLSessionDownloadDelegate, NSSecureCoding, NSCopying>
 {
@@ -25,6 +25,7 @@
     BU_AFSecurityPolicy *_securityPolicy;
     NSObject<OS_dispatch_queue> *_completionQueue;
     NSObject<OS_dispatch_group> *_completionGroup;
+    id <NSURLSessionTaskDelegate> _delegate;
     NSURLSessionConfiguration *_sessionConfiguration;
     NSMutableDictionary *_mutableTaskDelegatesKeyedByTaskIdentifier;
     NSLock *_lock;
@@ -65,6 +66,7 @@
 @property(retain, nonatomic) NSLock *lock; // @synthesize lock=_lock;
 @property(retain, nonatomic) NSMutableDictionary *mutableTaskDelegatesKeyedByTaskIdentifier; // @synthesize mutableTaskDelegatesKeyedByTaskIdentifier=_mutableTaskDelegatesKeyedByTaskIdentifier;
 @property(retain, nonatomic) NSURLSessionConfiguration *sessionConfiguration; // @synthesize sessionConfiguration=_sessionConfiguration;
+@property(nonatomic) __weak id <NSURLSessionTaskDelegate> delegate; // @synthesize delegate=_delegate;
 @property(nonatomic) _Bool attemptsToRecreateUploadTasksForBackgroundSessions; // @synthesize attemptsToRecreateUploadTasksForBackgroundSessions=_attemptsToRecreateUploadTasksForBackgroundSessions;
 @property(retain, nonatomic) NSObject<OS_dispatch_group> *completionGroup; // @synthesize completionGroup=_completionGroup;
 @property(retain, nonatomic) NSObject<OS_dispatch_queue> *completionQueue; // @synthesize completionQueue=_completionQueue;
@@ -83,6 +85,7 @@
 - (void)URLSession:(id)arg1 dataTask:(id)arg2 didReceiveData:(id)arg3;
 - (void)URLSession:(id)arg1 dataTask:(id)arg2 didBecomeDownloadTask:(id)arg3;
 - (void)URLSession:(id)arg1 dataTask:(id)arg2 didReceiveResponse:(id)arg3 completionHandler:(CDUnknownBlockType)arg4;
+- (void)URLSession:(id)arg1 task:(id)arg2 didFinishCollectingMetrics:(id)arg3;
 - (void)URLSession:(id)arg1 task:(id)arg2 didCompleteWithError:(id)arg3;
 - (void)URLSession:(id)arg1 task:(id)arg2 didSendBodyData:(long long)arg3 totalBytesSent:(long long)arg4 totalBytesExpectedToSend:(long long)arg5;
 - (void)URLSession:(id)arg1 task:(id)arg2 needNewBodyStream:(CDUnknownBlockType)arg3;

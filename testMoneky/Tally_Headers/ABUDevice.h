@@ -14,6 +14,7 @@
     ABUDeviceLocation *_location;
     ABUApp *_app;
     ABUDeviceNetwork *_network;
+    NSDictionary *_userAllow;
     NSString *_deviceId;
     NSString *_publisherDid;
     NSString *_customIDFA;
@@ -23,7 +24,8 @@
     NSDictionary *_locationDictValue;
 }
 
-+ (void)initializeNetwork;
++ (void)initializeWithUserAllow:(id)arg1;
++ (void)updateUserAllow:(id)arg1;
 + (id)currentDevice;
 - (void).cxx_destruct;
 @property(copy) NSDictionary *locationDictValue; // @synthesize locationDictValue=_locationDictValue;
@@ -33,6 +35,7 @@
 @property(copy, nonatomic) NSString *customIDFA; // @synthesize customIDFA=_customIDFA;
 @property(copy, nonatomic) NSString *publisherDid; // @synthesize publisherDid=_publisherDid;
 @property(copy, nonatomic) NSString *deviceId; // @synthesize deviceId=_deviceId;
+@property(copy, nonatomic) NSDictionary *userAllow; // @synthesize userAllow=_userAllow;
 @property(readonly, nonatomic) ABUDeviceNetwork *network; // @synthesize network=_network;
 @property(readonly, nonatomic) ABUApp *app; // @synthesize app=_app;
 @property(readonly, nonatomic) ABUDeviceLocation *location; // @synthesize location=_location;
@@ -42,7 +45,8 @@
 - (void)_convertLocationDictionary:(_Bool)arg1;
 - (void)_convertNetworkDictionary:(_Bool)arg1;
 - (void)_setupBasicDictionary;
-- (id)init_;
+- (void)updateUserAllow:(id)arg1;
+- (id)initWithUserAllow:(id)arg1;
 - (id)init;
 @property(copy, nonatomic) NSString *caidPre;
 @property(copy, nonatomic) NSString *caid;

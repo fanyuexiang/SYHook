@@ -44,6 +44,8 @@
 @property(readonly, nonatomic) _Bool valid;
 - (id)initWithName:(id)arg1 andId:(id)arg2 andKey:(id)arg3 custom:(_Bool)arg4;
 - (id)init;
+- (_Bool)isMemberOfClass:(Class)arg1;
+- (_Bool)isKindOfClass:(Class)arg1;
 
 @end
 

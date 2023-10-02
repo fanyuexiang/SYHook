@@ -10,9 +10,9 @@
 {
 }
 
-- (void)buildInterstitialVerticalViewSquar;
-- (void)buildInterstitialVerticalViewRectangle;
-- (void)buildInterstitialVerticalView;
+- (void)Os_MsgSet;
+- (void)Desc_DictCopy;
+- (void)At_HopoApp;
 - (void)pbu_override_buildViewData;
 - (void)pbu_override_buildView;
 

@@ -6,36 +6,31 @@
 
 #import "FamilyViewController.h"
 
-@class FamilyDetailsDataSource, FamilyDetailsHandleEvent, FamilyDetailsHeaderView, FamilyDetailsTableView, FamilyWidgetGuideTipView, UIViewController;
+@class FamilyDetailsDataSource, FamilyDetailsHandleEvent, FamilyDetailsHeaderView, FamilyNewDetailTableView, FamilyWidgetGuideTipView;
 
 @interface FamilyDetailsController : FamilyViewController
 {
     FamilyDetailsHandleEvent *_handleEvent;
     FamilyDetailsDataSource *_dataSource;
-    UIViewController *_vipController;
     FamilyDetailsHeaderView *_headerView;
-    FamilyDetailsTableView *_tableView;
+    FamilyNewDetailTableView *_tableView;
     FamilyWidgetGuideTipView *_widgetGuideTipView;
 }
 
 - (void).cxx_destruct;
 @property(retain, nonatomic) FamilyWidgetGuideTipView *widgetGuideTipView; // @synthesize widgetGuideTipView=_widgetGuideTipView;
-@property(retain, nonatomic) FamilyDetailsTableView *tableView; // @synthesize tableView=_tableView;
+@property(retain, nonatomic) FamilyNewDetailTableView *tableView; // @synthesize tableView=_tableView;
 @property(retain, nonatomic) FamilyDetailsHeaderView *headerView; // @synthesize headerView=_headerView;
-@property(nonatomic) __weak UIViewController *vipController; // @synthesize vipController=_vipController;
 @property(retain, nonatomic) FamilyDetailsDataSource *dataSource; // @synthesize dataSource=_dataSource;
 @property(retain, nonatomic) FamilyDetailsHandleEvent *handleEvent; // @synthesize handleEvent=_handleEvent;
 - (void)paymentDidSuccessNotification:(id)arg1;
 - (void)extranceChangedNotification:(id)arg1;
-- (void)budgetChangedNotification:(id)arg1;
 - (void)nickNameChangedNotification:(id)arg1;
 - (void)startDateChangedNotification:(id)arg1;
 - (void)pullDataSuccessNotification:(id)arg1;
-- (void)closeNotification:(id)arg1;
 - (void)userInfoDidChange;
 - (void)themeChangedNotification:(id)arg1;
 - (void)showWidgetGuideTip;
-- (void)queryMonthData;
 - (void)viewWillDisappear:(_Bool)arg1;
 - (void)viewDidAppear:(_Bool)arg1;
 - (void)viewWillAppear:(_Bool)arg1;

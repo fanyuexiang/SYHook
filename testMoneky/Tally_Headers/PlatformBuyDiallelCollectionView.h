@@ -12,13 +12,11 @@
 {
     NSString *_listID;
     NSString *_urlPath;
-    long long _platformType;
     NSArray *_specialKeys;
 }
 
 - (void).cxx_destruct;
 @property(retain, nonatomic) NSArray *specialKeys; // @synthesize specialKeys=_specialKeys;
-@property(nonatomic) long long platformType; // @synthesize platformType=_platformType;
 @property(copy, nonatomic) NSString *urlPath; // @synthesize urlPath=_urlPath;
 - (id)collectionView:(id)arg1 cellForItemAtIndexPath:(id)arg2;
 - (void)requestGoodsList:(id)arg1 isRefresh:(_Bool)arg2;

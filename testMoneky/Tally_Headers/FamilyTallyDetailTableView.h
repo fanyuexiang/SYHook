@@ -15,9 +15,11 @@
 @interface FamilyTallyDetailTableView : UITableView <UITableViewDelegate, UITableViewDataSource, NSFetchedResultsControllerDelegate>
 {
     NSFetchedResultsController *_fetchedResultsController;
+    NSString *_typeName;
 }
 
 - (void).cxx_destruct;
+@property(retain, nonatomic) NSString *typeName; // @synthesize typeName=_typeName;
 @property(retain, nonatomic) NSFetchedResultsController *fetchedResultsController; // @synthesize fetchedResultsController=_fetchedResultsController;
 - (void)tableView:(id)arg1 didSelectRowAtIndexPath:(id)arg2;
 - (id)tableView:(id)arg1 cellForRowAtIndexPath:(id)arg2;

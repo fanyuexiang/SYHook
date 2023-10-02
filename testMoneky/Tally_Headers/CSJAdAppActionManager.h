@@ -11,14 +11,14 @@
 }
 
 + (id)sharedManager;
-- (long long)p_appstoreJumpTypeWithMaterial:(id)arg1;
-- (id)setupUserInfo:(id)arg1 tag:(id)arg2 needShowTime:(_Bool)arg3;
-- (void)openAppStoreActionTrackWithMaterial:(id)arg1 context:(id)arg2 notiName:(id)arg3 needShowTime:(_Bool)arg4;
-- (void)openAppStoreByOpenURLWithMaterial:(id)arg1 context:(id)arg2 openType:(long long)arg3;
-- (long long)openAppStoreTypeWithMaterial:(id)arg1;
-- (_Bool)openAppStoreWithMaterial:(id)arg1 rootViewController:(id)arg2 jumpType:(long long)arg3 context:(id)arg4 WithSucessCallBack:(CDUnknownBlockType)arg5 WithFailedCallback:(CDUnknownBlockType)arg6;
-- (_Bool)handleAppWithDownloadUrl:(id)arg1 WithSucessCallBack:(CDUnknownBlockType)arg2 WithFailedCallback:(CDUnknownBlockType)arg3;
-- (long long)handleActionWithModel:(id)arg1 WithSucessCallBack:(CDUnknownBlockType)arg2 WithFailedCallback:(CDUnknownBlockType)arg3 context:(id)arg4;
+- (long long)Var_NbLevi:(id)arg1;
+- (id)MIN_When_dir:(id)arg1 tag:(id)arg2 needShowTime:(_Bool)arg3;
+- (void)Does_HashAd:(id)arg1 context:(id)arg2 notiName:(id)arg3 needShowTime:(_Bool)arg4;
+- (void)Area_ForNb:(id)arg1 context:(id)arg2 openType:(long long)arg3;
+- (long long)Int_WeakA0:(id)arg1;
+- (_Bool)Dc_T5Left:(id)arg1 rootViewController:(id)arg2 jumpType:(long long)arg3 context:(id)arg4 WithSucessCallBack:(CDUnknownBlockType)arg5 WithFailedCallback:(CDUnknownBlockType)arg6;
+- (_Bool)Res_DoHas:(id)arg1 WithSucessCallBack:(CDUnknownBlockType)arg2 WithFailedCallback:(CDUnknownBlockType)arg3;
+- (long long)Cta_UIReq:(id)arg1 WithSucessCallBack:(CDUnknownBlockType)arg2 WithFailedCallback:(CDUnknownBlockType)arg3 context:(id)arg4;
 
 @end
 

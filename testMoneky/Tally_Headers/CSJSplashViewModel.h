@@ -73,7 +73,8 @@
 - (void)splashAdRenderTrackEnd;
 - (void)splashAdRenderTrackBegin;
 - (void)splashLoadImageTimeTrack;
-- (void)splashAdLoadTimeTrack;
+- (void)p_splashAdLoadWithError:(id)arg1 timeOut:(_Bool)arg2;
+- (void)splashAdLoadTimeTrackWithError:(id)arg1 timeOut:(_Bool)arg2;
 - (void)splashZoomOutShowTrackWithAdExtra:(id)arg1;
 - (void)splashZoomOutVideoShowTimeTrackWithAdExtra:(id)arg1;
 - (void)splashZoomOutCloseTrackWithExtra:(id)arg1;
@@ -83,6 +84,7 @@
 - (void)splashEnterForegroundTrackWithExtra:(id)arg1;
 - (void)splashEnterBackgroundTrackWithExtra:(id)arg1;
 - (void)splashAdSkipTrackWithExtra:(id)arg1;
+- (void)splashAdPlayDurationSumTrackWithExtra:(id)arg1;
 - (void)splashAdClickTrackWithExtra:(id)arg1;
 - (id)trackView:(id)arg1 isCache:(id)arg2;
 - (unsigned long long)getSplashZoomOutIconStatusWithMaterialMetaModel:(id)arg1;
@@ -110,7 +112,6 @@
 - (void)win:(id)arg1;
 - (void)setPrice:(id)arg1;
 - (id)biddingToken;
-- (void)setMopubAdMarkUp:(id)arg1;
 - (void)setAdMarkup:(id)arg1;
 
 // Remaining properties

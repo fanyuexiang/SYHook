@@ -6,10 +6,11 @@
 
 #import "NSObject-Protocol.h"
 
-@class CSJSplashView, NSError;
+@class CSJSplashView, NSDictionary, NSError;
 
 @protocol CSJSplashViewDelegate <NSObject>
 - (void)splashViewFinishPlayDidPlayFinish:(CSJSplashView *)arg1 didFailWithError:(NSError *)arg2;
+- (void)splashAdLoadTimeWithDuration:(long long)arg1 extraData:(NSDictionary *)arg2 error:(NSError *)arg3 timeOut:(_Bool)arg4;
 - (void)splashDidClick:(CSJSplashView *)arg1;
 - (void)splashDidClose:(CSJSplashView *)arg1 closeType:(long long)arg2;
 - (void)splashDidShow:(CSJSplashView *)arg1;

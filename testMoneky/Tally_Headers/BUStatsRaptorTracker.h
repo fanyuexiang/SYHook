@@ -11,13 +11,13 @@
 }
 
 + (id)sharedInstance;
-- (id)sentNotificationName;
-- (id)didCleanNotificationName;
-- (id)willCleanNotificationName;
-- (id)eventKey;
-- (Class)raptorModelClass;
-- (long long)raptorTrackerType;
-- (void)_pbu_inUnknown_sendWithPostDict:(id)arg1 completionHandler:(CDUnknownBlockType)arg2;
+- (id)Log_MsgBOOL;
+- (id)If_FmText;
+- (id)P1_OrAre;
+- (id)Ft_YESHopo;
+- (Class)By_PtrArea;
+- (long long)Y2_BOOLThe;
+- (void)Main_Y1Lazy:(id)arg1 completionHandler:(CDUnknownBlockType)arg2;
 
 @end
 

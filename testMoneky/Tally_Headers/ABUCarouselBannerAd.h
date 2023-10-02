@@ -28,7 +28,6 @@
 @property(retain, nonatomic) ABUBannerAd *_firstLoadAd;
 - (void)bannerCarouselViewDidShowBannerAd:(id)arg1;
 - (CDUnknownBlockType)bannerAdBuilder:(id)arg1;
-- (long long)refreshInterval:(id)arg1;
 - (id)realBannerAdDelegate:(id)arg1;
 - (void)bannerAdDidLoad:(id)arg1 bannerView:(id)arg2;
 - (void)bannerAd:(id)arg1 didLoadFailWithError:(id)arg2;

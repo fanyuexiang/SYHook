@@ -10,20 +10,20 @@
 {
 }
 
-+ (void)pbu_errorCode:(long long)arg1 error:(id *)arg2;
-+ (long long)pbu_checkNetworkResultWithCypher:(long long)arg1 message:(id)arg2 resultProxy:(id *)arg3;
-+ (_Bool)needEncrypt;
-+ (id)encryptData:(id)arg1 key:(id)arg2 iv:(id)arg3;
-+ (id)encryptJSONObject:(id)arg1 key:(id)arg2 iv:(id)arg3;
-+ (id)encryptString:(id)arg1 key:(id)arg2 iv:(id)arg3;
-+ (id)decryptSettingModel:(id)arg1 error:(id *)arg2;
-+ (id)decryptAdMarkUp:(id)arg1 error:(id *)arg2;
-+ (id)decryptRequestModel:(id)arg1 error:(id *)arg2;
-+ (id)encryptString:(id)arg1;
-+ (id)encryptRequestArray:(id)arg1;
-+ (id)encryptRequestDictionaryWithOutSign:(id)arg1;
-+ (id)encryptRequestDictionary:(id)arg1;
-+ (id)encryptRequestModel:(id)arg1 adslot:(id)arg2;
++ (void)Http_To_len:(long long)arg1 error:(id *)arg2;
++ (long long)Rush_StdName:(long long)arg1 message:(id)arg2 resultProxy:(id *)arg3;
++ (_Bool)Y1_PosFail;
++ (id)On_AreaAPI:(id)arg1 key:(id)arg2 iv:(id)arg3;
++ (id)Does_Md5Json:(id)arg1 key:(id)arg2 iv:(id)arg3;
++ (id)Levi_NeedVli:(id)arg1 key:(id)arg2 iv:(id)arg3;
++ (id)Nil_NOX1:(id)arg1 error:(id *)arg2;
++ (id)_dir_CellMask:(id)arg1 error:(id *)arg2;
++ (id)To_CnCopy:(id)arg1 error:(id *)arg2;
++ (id)Levi_NeedVli:(id)arg1;
++ (id)At_ResApi:(id)arg1;
++ (id)T5_YouTrue:(id)arg1;
++ (id)Date_Bu_xYou:(id)arg1;
++ (id)Lds_MAXMod:(id)arg1 adslot:(id)arg2;
 
 @end
 

@@ -19,6 +19,7 @@
 @property(copy, nonatomic) NSNumber *count; // @dynamic count;
 @property(copy, nonatomic) NSString *remark; // @dynamic remark;
 @property(copy, nonatomic) NSString *time; // @dynamic time;
+@property(copy, nonatomic) NSNumber *type; // @dynamic type;
 @property(copy, nonatomic) NSString *typeID; // @dynamic typeID;
 @property(copy, nonatomic) NSString *userID; // @dynamic userID;
 

@@ -49,6 +49,8 @@
 @property(copy, nonatomic) NSString *cID; // @synthesize cID=_cID;
 @property(nonatomic, getter=isChartDetail) _Bool chartDetail; // @synthesize chartDetail=_chartDetail;
 @property(nonatomic) _Bool isNeedTallyChartTypeSetting; // @synthesize isNeedTallyChartTypeSetting=_isNeedTallyChartTypeSetting;
+- (void)jumpTallyMemberSearchAction:(id)arg1 dateType:(long long)arg2 dateModel:(id)arg3;
+- (void)testdetailmember;
 - (void)destroyNotification;
 - (void)tallyACMonthDayChangedNotification:(id)arg1;
 - (void)themeChangedNotification:(id)arg1;

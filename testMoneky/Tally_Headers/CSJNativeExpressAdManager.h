@@ -4,7 +4,7 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
 
-#import <objc/NSObject.h>
+#import "CSJAdBaseObject.h"
 
 #import "CSJMopubAdMarkUpDelegate-Protocol.h"
 #import "CSJNativeAdsManagerDelegate-Protocol.h"
@@ -14,7 +14,7 @@
 @class CSJAdSlot, CSJNativeAdsManager, CSJNativeExpressAdConverter, NSArray, NSDictionary, NSMutableArray, NSString;
 @protocol CSJNativeExpressAdViewDelegate;
 
-@interface CSJNativeExpressAdManager : NSObject <CSJNativeAdsManagerDelegate, CSJNativeExpressAdViewDismissDelegate, CSJNativeExpressAdConverterDelegate, CSJMopubAdMarkUpDelegate>
+@interface CSJNativeExpressAdManager : CSJAdBaseObject <CSJNativeAdsManagerDelegate, CSJNativeExpressAdViewDismissDelegate, CSJNativeExpressAdConverterDelegate, CSJMopubAdMarkUpDelegate>
 {
     _Bool _isLoading;
     _Bool _didSetADM;
@@ -23,8 +23,8 @@
     CSJNativeAdsManager *_adManager;
     NSMutableArray *_nativeExpressAdViewArray;
     CSJNativeExpressAdConverter *_nativeExpressAdConverter;
-    CDUnknownBlockType _dismissBlock;
-    CDUnknownBlockType _videoCachedSuccess;
+    CDUnknownBlockType _Len_MARKFm;
+    CDUnknownBlockType _Gdp_Adm_cmd;
     double _tolerateTimeout;
     NSArray *_nativeAdDataArray;
     NSDictionary *_extraInfo;
@@ -34,8 +34,8 @@
 @property(retain, nonatomic) NSDictionary *extraInfo; // @synthesize extraInfo=_extraInfo;
 @property(retain, nonatomic) NSArray *nativeAdDataArray; // @synthesize nativeAdDataArray=_nativeAdDataArray;
 @property(nonatomic) double tolerateTimeout; // @synthesize tolerateTimeout=_tolerateTimeout;
-@property(copy, nonatomic) CDUnknownBlockType videoCachedSuccess; // @synthesize videoCachedSuccess=_videoCachedSuccess;
-@property(copy, nonatomic) CDUnknownBlockType dismissBlock; // @synthesize dismissBlock=_dismissBlock;
+@property(copy, nonatomic) CDUnknownBlockType Gdp_Adm_cmd; // @synthesize Gdp_Adm_cmd=_Gdp_Adm_cmd;
+@property(copy, nonatomic) CDUnknownBlockType Len_MARKFm; // @synthesize Len_MARKFm=_Len_MARKFm;
 @property(nonatomic) _Bool didSetADM; // @synthesize didSetADM=_didSetADM;
 @property(retain, nonatomic) CSJNativeExpressAdConverter *nativeExpressAdConverter; // @synthesize nativeExpressAdConverter=_nativeExpressAdConverter;
 @property(nonatomic) _Bool isLoading; // @synthesize isLoading=_isLoading;
@@ -48,24 +48,23 @@
 - (void)nativeExpressAdConverter:(id)arg1 nativeExpressAdViewArray:(id)arg2;
 - (id)expressAdViewDismissDelegateInNativeExpressAdConverter:(id)arg1;
 - (id)expressAdViewDelegateInNativeExpressAdConverter:(id)arg1;
-- (void)safeDelegate_nativeExpressAdFailToLoad:(id)arg1 error:(id)arg2;
+- (void)Item_rhs_len:(id)arg1 error:(id)arg2;
 - (void)safeDelegate_nativeExpressAdSuccessToLoad:(id)arg1 views:(id)arg2;
-- (void)handleCardView:(id)arg1 into:(id)arg2;
-- (void)handleGroupAdsFrom:(id)arg1 groupAds:(id)arg2 normalAds:(id)arg3;
-- (void)handleFailureLoadWithError:(id)arg1;
-- (void)handleHalfCardStyle:(id)arg1;
-- (void)handleSuccessLoadWithNativeAds:(id)arg1;
+- (void)True_AreCta:(id)arg1 into:(id)arg2;
+- (void)Dict_TempCarl:(id)arg1 groupAds:(id)arg2 normalAds:(id)arg3;
+- (void)Open_ByAdm:(id)arg1;
+- (void)Body_OnlyBy:(id)arg1;
+- (void)To_IfUsed:(id)arg1;
 - (void)nativeAdsManager:(id)arg1 didFailWithError:(id)arg2;
 - (void)nativeAdsManagerSuccessToLoad:(id)arg1 nativeAds:(id)arg2;
-- (void)setMopubAdMarkUp:(id)arg1;
 - (void)setAdMarkup:(id)arg1;
 - (id)biddingToken;
 - (void)setMopubAdMarkUp:(id)arg1 successLoadVideo:(CDUnknownBlockType)arg2;
-- (void)downLoadPlayableZipWithMaterial:(id)arg1;
-- (void)handleSuccessLoadForPurePlayable:(id)arg1;
+- (void)_len_DuanTODO:(id)arg1;
+- (void)MIN_TmReq:(id)arg1;
 - (void)nativeExpressAdViewDismiss:(id)arg1;
-- (void)_loadRewardedFullscreenAdEventAction:(id)arg1 preloadResultType:(long long)arg2;
-- (void)pbu_loadRewardedFullscreenAd;
+- (void)Meta_IDVoid:(id)arg1 preloadResultType:(long long)arg2;
+- (void)Fail_TrySEL;
 - (void)preLoadMiddlePageWithAd:(id)arg1;
 - (void)loadAdData;
 - (void)loadAdDataWithCount:(long long)arg1 invokeByPublisher:(_Bool)arg2;
@@ -74,7 +73,6 @@
 - (void)_initSetup;
 - (id)initWithSlot:(id)arg1 adSize:(struct CGSize)arg2;
 - (id)init;
-- (void)loadAd:(long long)arg1;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

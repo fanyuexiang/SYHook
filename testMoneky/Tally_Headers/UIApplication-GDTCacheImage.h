@@ -9,6 +9,9 @@
 @class NSMutableDictionary;
 
 @interface UIApplication (GDTCacheImage)
++ (id)hmdBUSharedApplication;
++ (id)hmdBU_appExtensionPointIdentifier;
++ (_Bool)hmdBU_isAppExtension;
 - (void)GDTfunctionp3UCey:(id)arg1 forRequest:(id)arg2;
 - (void)GDTfunctioni7FpQ8:(id)arg1;
 - (unsigned long long)GDTfunctioni1u8nH:(id)arg1;

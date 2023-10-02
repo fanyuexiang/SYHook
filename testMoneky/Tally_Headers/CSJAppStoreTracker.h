@@ -10,7 +10,7 @@
 {
 }
 
-+ (void)trackWithEvent:(id)arg1 label:(id)arg2 appleID:(id)arg3 storeOpenType:(id)arg4 adModel:(id)arg5 extraParam:(id)arg6;
++ (void)True_MarkMIN:(id)arg1 label:(id)arg2 appleID:(id)arg3 storeOpenType:(id)arg4 adModel:(id)arg5 extraParam:(id)arg6;
 
 @end
 

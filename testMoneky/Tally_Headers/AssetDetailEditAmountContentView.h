@@ -15,6 +15,7 @@
     UILabel *_titleLab;
     UIView *_nameTextView;
     UITextField *_nameTextField;
+    UILabel *_tipLab;
     UIButton *_saveBtn;
     SKThemeSettingItem *_curThemeItem;
     CDUnknownBlockType _closeBlock;
@@ -30,11 +31,13 @@
 @property(copy, nonatomic) CDUnknownBlockType closeBlock; // @synthesize closeBlock=_closeBlock;
 @property(retain, nonatomic) SKThemeSettingItem *curThemeItem; // @synthesize curThemeItem=_curThemeItem;
 @property(retain, nonatomic) UIButton *saveBtn; // @synthesize saveBtn=_saveBtn;
+@property(retain, nonatomic) UILabel *tipLab; // @synthesize tipLab=_tipLab;
 @property(retain, nonatomic) UITextField *nameTextField; // @synthesize nameTextField=_nameTextField;
 @property(retain, nonatomic) UIView *nameTextView; // @synthesize nameTextView=_nameTextView;
 @property(retain, nonatomic) UILabel *titleLab; // @synthesize titleLab=_titleLab;
 @property(retain, nonatomic) UIView *naviView; // @synthesize naviView=_naviView;
 @property(retain, nonatomic) UIButton *allBtn; // @synthesize allBtn=_allBtn;
+- (void)refreshViewWithLayout;
 - (void)saveBtnAction;
 - (void)closeBtnAction;
 - (void)allBtnAction;

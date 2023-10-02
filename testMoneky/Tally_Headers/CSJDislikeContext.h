@@ -10,34 +10,36 @@
 
 @interface CSJDislikeContext : NSObject
 {
-    _Bool _tapedDislike;
+    _Bool _Rect_ApiCarl;
     CSJMaterialMeta *_materialMeta;
     unsigned long long _source;
     CDUnknownBlockType _dislikeResultBlock;
     CDUnknownBlockType _cancelBlock;
-    CDUnknownBlockType _dislikeViewControllerPresentCompletionBlock;
-    CDUnknownBlockType _duplicateTapedDislike;
+    CDUnknownBlockType _Ts_PlayInit;
+    CDUnknownBlockType _Area_TapNote;
+    CDUnknownBlockType _dismissCompletionBlock;
     CSJDislikeNewViewController *_vc;
     struct CGRect _startFrame;
 }
 
 - (void).cxx_destruct;
 @property(retain, nonatomic) CSJDislikeNewViewController *vc; // @synthesize vc=_vc;
-@property(nonatomic) _Bool tapedDislike; // @synthesize tapedDislike=_tapedDislike;
-@property(copy, nonatomic) CDUnknownBlockType duplicateTapedDislike; // @synthesize duplicateTapedDislike=_duplicateTapedDislike;
-@property(copy, nonatomic) CDUnknownBlockType dislikeViewControllerPresentCompletionBlock; // @synthesize dislikeViewControllerPresentCompletionBlock=_dislikeViewControllerPresentCompletionBlock;
+@property(nonatomic) _Bool Rect_ApiCarl; // @synthesize Rect_ApiCarl=_Rect_ApiCarl;
+@property(copy, nonatomic) CDUnknownBlockType dismissCompletionBlock; // @synthesize dismissCompletionBlock=_dismissCompletionBlock;
+@property(copy, nonatomic) CDUnknownBlockType Area_TapNote; // @synthesize Area_TapNote=_Area_TapNote;
+@property(copy, nonatomic) CDUnknownBlockType Ts_PlayInit; // @synthesize Ts_PlayInit=_Ts_PlayInit;
 @property(copy, nonatomic) CDUnknownBlockType cancelBlock; // @synthesize cancelBlock=_cancelBlock;
 @property(copy, nonatomic) CDUnknownBlockType dislikeResultBlock; // @synthesize dislikeResultBlock=_dislikeResultBlock;
 @property(nonatomic) struct CGRect startFrame; // @synthesize startFrame=_startFrame;
 @property(nonatomic) unsigned long long source; // @synthesize source=_source;
 @property(retain, nonatomic) CSJMaterialMeta *materialMeta; // @synthesize materialMeta=_materialMeta;
-- (id)realPresentingViewControllerFromViewController:(id)arg1;
-- (void)_showOldFromViewController:(id)arg1 dislikeResultSuccessBlock:(CDUnknownBlockType)arg2;
-- (void)_showNewFromViewController:(id)arg1 dislikeResultSuccessBlock:(CDUnknownBlockType)arg2;
-- (void)_showFromViewController:(id)arg1 dislikeResultSuccessBlock:(CDUnknownBlockType)arg2;
+- (id)Ran_MainCase:(id)arg1;
+- (void)Sql_NULLP1:(id)arg1 dislikeResultSuccessBlock:(CDUnknownBlockType)arg2;
+- (void)Date_DataYou:(id)arg1 dislikeResultSuccessBlock:(CDUnknownBlockType)arg2;
+- (void)Adm_TsUser:(id)arg1 dislikeResultSuccessBlock:(CDUnknownBlockType)arg2;
 - (void)remove;
-- (void)showFromViewController:(id)arg1;
-- (void)showFromViewController:(id)arg1 inView:(id)arg2;
+- (void)R2_BeObjc:(id)arg1;
+- (void)R2_BeObjc:(id)arg1 inView:(id)arg2;
 - (id)init;
 
 @end

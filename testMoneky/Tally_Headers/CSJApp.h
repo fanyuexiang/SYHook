@@ -15,15 +15,18 @@
     NSString *_packageName;
     NSString *_version;
     unsigned long long _userfulOpenSDK;
+    NSString *_appScheme;
 }
 
 + (id)currentApp;
 - (void).cxx_destruct;
+@property(copy, nonatomic) NSString *appScheme; // @synthesize appScheme=_appScheme;
 @property(nonatomic) unsigned long long userfulOpenSDK; // @synthesize userfulOpenSDK=_userfulOpenSDK;
 @property(copy, nonatomic) NSString *version; // @synthesize version=_version;
 @property(copy, nonatomic) NSString *packageName; // @synthesize packageName=_packageName;
 @property(copy, nonatomic) NSString *name; // @synthesize name=_name;
 @property(copy, nonatomic) NSString *appID; // @synthesize appID=_appID;
+- (id)getAppScheme;
 - (void)loadCurrentAppInfo;
 - (id)dictionaryValue;
 - (id)init;

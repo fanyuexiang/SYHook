@@ -6,20 +6,25 @@
 
 #import "HMDBUCrashlogProcessor.h"
 
-@class NSDictionary;
+@class HMDBUCrashInfo, NSDictionary;
 
 @interface RangersBUCrashlogProcessor : HMDBUCrashlogProcessor
 {
-    unsigned long long _crashStartLine;
-    unsigned long long _crashEndLine;
+    _Bool _needLastCrash;
+    HMDBUCrashInfo *_latestCrashInfo;
+    NSDictionary *_latestPostData;
     NSDictionary *_reportApps;
 }
 
 - (void).cxx_destruct;
 @property(copy, nonatomic) NSDictionary *reportApps; // @synthesize reportApps=_reportApps;
-- (id)parseDynamicInfo:(id)arg1;
+- (id)parseDynamicInfo:(id)arg1 forAppID:(id)arg2;
+- (id)uploadAidWithDynamicInfo:(id)arg1 forAppID:(id)arg2;
 - (id)getCrashThread:(id)arg1;
 - (_Bool)shouldIgnorCrashInfo:(id)arg1;
+- (id)postDataWithCrashInfo:(id)arg1 forAppID:(id)arg2;
+- (_Bool)generateCrashlogWithInputDir:(id)arg1 outputPath:(id)arg2;
+- (void)startProcess:(_Bool)arg1;
 
 @end
 

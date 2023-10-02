@@ -17,6 +17,7 @@
     BuySearchResultView *_taobaoSearchView;
     BuySearchResultView *_jdSearchView;
     BuySearchResultView *_pddSearchView;
+    BuySearchResultView *_vipshopSearchView;
     BuySearchResultView *_currentSearchView;
     NSMutableArray *_searchTypeViewArray;
     _Bool _shouldSearch;

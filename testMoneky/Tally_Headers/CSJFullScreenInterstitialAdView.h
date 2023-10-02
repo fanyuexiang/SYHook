@@ -14,7 +14,7 @@
 
 @interface CSJFullScreenInterstitialAdView : UIView <CSJRewardedVideoDownloadBarDelegate, UIGestureRecognizerDelegate>
 {
-    id <CSJFullScreenInterstitialAdDelegate> _intersitialDelegate;
+    id <CSJFullScreenInterstitialAdDelegate> _Push_ADXR1;
     UIImageView *_adImageView;
     UIImageView *_adAppIconImageView;
     UILabel *_adTitleLabel;
@@ -24,23 +24,23 @@
     UIButton *_adDownloadButton;
     UIImageView *_logoImageView;
     UILabel *_ADXLabel;
-    CSJRewardedVideoDownloadBarView *_adDownloadBarView;
+    CSJRewardedVideoDownloadBarView *_This_OrAdID;
     CSJInterstitialCoverView *_interstitialCoverView;
-    unsigned long long _imageStyle;
+    unsigned long long _Docs_TypeX2;
     CSJMaterialMeta *_materialMeta;
     CSJAdSlot *_slot;
-    UITapGestureRecognizer *_adTapGesture;
+    UITapGestureRecognizer *_Lock_R2Gdp;
 }
 
-+ (unsigned long long)configureImageStyleWith:(id)arg1;
-+ (id)fullScreenInterstitialAdViewWithMaterial:(id)arg1 adSlot:(id)arg2;
++ (unsigned long long)With_LineItem:(id)arg1;
++ (id)AKey_MateRect:(id)arg1 adSlot:(id)arg2;
 - (void).cxx_destruct;
-@property(retain, nonatomic) UITapGestureRecognizer *adTapGesture; // @synthesize adTapGesture=_adTapGesture;
+@property(retain, nonatomic) UITapGestureRecognizer *Lock_R2Gdp; // @synthesize Lock_R2Gdp=_Lock_R2Gdp;
 @property(retain, nonatomic) CSJAdSlot *slot; // @synthesize slot=_slot;
 @property(retain, nonatomic) CSJMaterialMeta *materialMeta; // @synthesize materialMeta=_materialMeta;
-@property(nonatomic) unsigned long long imageStyle; // @synthesize imageStyle=_imageStyle;
+@property(nonatomic) unsigned long long Docs_TypeX2; // @synthesize Docs_TypeX2=_Docs_TypeX2;
 @property(retain, nonatomic) CSJInterstitialCoverView *interstitialCoverView; // @synthesize interstitialCoverView=_interstitialCoverView;
-@property(retain, nonatomic) CSJRewardedVideoDownloadBarView *adDownloadBarView; // @synthesize adDownloadBarView=_adDownloadBarView;
+@property(retain, nonatomic) CSJRewardedVideoDownloadBarView *This_OrAdID; // @synthesize This_OrAdID=_This_OrAdID;
 @property(retain, nonatomic) UILabel *ADXLabel; // @synthesize ADXLabel=_ADXLabel;
 @property(retain, nonatomic) UIImageView *logoImageView; // @synthesize logoImageView=_logoImageView;
 @property(retain, nonatomic) UIButton *adDownloadButton; // @synthesize adDownloadButton=_adDownloadButton;
@@ -50,10 +50,10 @@
 @property(retain, nonatomic) UILabel *adTitleLabel; // @synthesize adTitleLabel=_adTitleLabel;
 @property(retain, nonatomic) UIImageView *adAppIconImageView; // @synthesize adAppIconImageView=_adAppIconImageView;
 @property(retain, nonatomic) UIImageView *adImageView; // @synthesize adImageView=_adImageView;
-@property(nonatomic) __weak id <CSJFullScreenInterstitialAdDelegate> intersitialDelegate; // @synthesize intersitialDelegate=_intersitialDelegate;
-- (id)adExtraDataDtictionary:(id)arg1;
+@property(nonatomic) __weak id <CSJFullScreenInterstitialAdDelegate> Push_ADXR1; // @synthesize Push_ADXR1=_Push_ADXR1;
+- (id)Out_XzjLevi:(id)arg1;
 - (id)interstitialPlayer;
-- (id)c_xyDict_secWithTapView:(id)arg1;
+- (id)Res_IdDocs:(id)arg1;
 - (id)c_xyDict;
 - (void)downloadButtonTapped:(id)arg1 extraDic:(id)arg2;
 - (void)downloadBarTapped:(id)arg1 extraDic:(id)arg2;
@@ -62,10 +62,10 @@
 - (void)adTapGestureAction:(id)arg1;
 - (void)closeButtonTapped:(id)arg1;
 - (void)dislikeButtonTapped:(id)arg1;
-- (struct CGSize)textString:(id)arg1 size:(struct CGSize)arg2 font:(id)arg3;
+- (struct CGSize)Http_A2Not:(id)arg1 size:(struct CGSize)arg2 font:(id)arg3;
 - (void)layoutSubviews;
-- (void)setupSubViews;
-- (id)initWithMaterial:(id)arg1 adSlot:(id)arg2 imageStyle:(unsigned long long)arg3;
+- (void)Str_PosHpp;
+- (id)initWithMaterial:(id)arg1 adSlot:(id)arg2 Docs_TypeX2:(unsigned long long)arg3;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

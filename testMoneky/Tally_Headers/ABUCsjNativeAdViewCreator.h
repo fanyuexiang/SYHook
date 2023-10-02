@@ -6,21 +6,21 @@
 
 #import <objc/NSObject.h>
 
-#import "ABUMediatedNativeAdViewCreator-Protocol.h"
+#import "BUMMediatedNativeAdViewCreator-Protocol.h"
 
-@class NSString, UIButton, UIImageView, UILabel, UIView;
-@protocol ABUCsj_BUNativeAd, ABUCsj_BUNativeAdRelatedView, ABUCsj_BUVideoAdReportor;
+@class BUNativeAd, BUNativeAdRelatedView, NSString, UIButton, UIImageView, UILabel, UIView;
+@protocol BUVideoAdReportor;
 
-@interface ABUCsjNativeAdViewCreator : NSObject <ABUMediatedNativeAdViewCreator>
+@interface ABUCsjNativeAdViewCreator : NSObject <BUMMediatedNativeAdViewCreator>
 {
-    id <ABUCsj_BUNativeAd> _ad;
-    id <ABUCsj_BUNativeAdRelatedView> _adRelatedView;
+    BUNativeAd *_ad;
+    BUNativeAdRelatedView *_adRelatedView;
 }
 
 - (void).cxx_destruct;
-@property(retain, nonatomic) id <ABUCsj_BUNativeAdRelatedView> adRelatedView; // @synthesize adRelatedView=_adRelatedView;
-@property(retain, nonatomic) id <ABUCsj_BUNativeAd> ad; // @synthesize ad=_ad;
-@property(readonly, nonatomic) id <ABUCsj_BUVideoAdReportor> videoAdReportor;
+@property(retain, nonatomic) BUNativeAdRelatedView *adRelatedView; // @synthesize adRelatedView=_adRelatedView;
+@property(retain, nonatomic) BUNativeAd *ad; // @synthesize ad=_ad;
+@property(readonly, nonatomic) id <BUVideoAdReportor> videoAdReportor;
 @property(readonly, nonatomic) UIView *adLogoView;
 @property(readonly, nonatomic) UIImageView *iconImageView;
 @property(readonly, nonatomic) UIButton *dislikeBtn;

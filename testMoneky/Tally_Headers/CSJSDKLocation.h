@@ -15,25 +15,25 @@
     NSNumber *_latitude;
     NSNumber *_longitude;
     CLLocationManager *_locationManager;
-    NSDate *_latestUpdateTimestamp;
-    struct CLLocationCoordinate2D _latestLocation;
+    NSDate *_Or_Y1Lock;
+    struct CLLocationCoordinate2D _Can_JsonDict;
 }
 
 + (id)allocWithZone:(struct _NSZone *)arg1;
-+ (id)locationService;
++ (id)Icon_AreTop;
 - (void).cxx_destruct;
-@property(nonatomic) struct CLLocationCoordinate2D latestLocation; // @synthesize latestLocation=_latestLocation;
-@property(retain, nonatomic) NSDate *latestUpdateTimestamp; // @synthesize latestUpdateTimestamp=_latestUpdateTimestamp;
+@property(nonatomic) struct CLLocationCoordinate2D Can_JsonDict; // @synthesize Can_JsonDict=_Can_JsonDict;
+@property(retain, nonatomic) NSDate *Or_Y1Lock; // @synthesize Or_Y1Lock=_Or_Y1Lock;
 @property(retain, nonatomic) CLLocationManager *locationManager; // @synthesize locationManager=_locationManager;
 @property(retain) NSNumber *longitude; // @synthesize longitude=_longitude;
 @property(retain) NSNumber *latitude; // @synthesize latitude=_latitude;
 - (void)locationManager:(id)arg1 didUpdateLocations:(id)arg2;
 - (void)locationManager:(id)arg1 didFailWithError:(id)arg2;
-- (id)downNumber:(double)arg1;
-- (_Bool)serviceEnable;
+- (id)Cell_KeyLen:(double)arg1;
+- (_Bool)Ipv4_ADXXzj;
 - (id)copyWithZone:(struct _NSZone *)arg1;
-- (void)asyncStartUpdate;
-- (void)requestLatestStatus;
+- (void)AdID_DoEnd;
+- (void)Nil_MaySet;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

@@ -72,6 +72,7 @@
 - (void)nativeExpressAdViewRenderSuccess:(id)arg1;
 - (void)nativeExpressAdConverter:(id)arg1 nativeExpressAdViewArray:(id)arg2;
 - (id)expressAdViewDelegateInNativeExpressAdConverter:(id)arg1;
+- (void)splashAdLoadTimeWithDuration:(long long)arg1 extraData:(id)arg2 error:(id)arg3 timeOut:(_Bool)arg4;
 - (void)splashResourceLoadFailWithError:(id)arg1;
 - (void)splashResourceLoadSuccess;
 - (void)p_tapLogo;

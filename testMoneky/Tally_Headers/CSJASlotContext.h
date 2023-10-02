@@ -6,43 +6,50 @@
 
 #import <objc/NSObject.h>
 
-@class CSJAdSlot, CSJDislikeContext, CSJMaterialMeta, NSNumber, NSString, UIViewController;
+@class CSJAdInfoViewModel, CSJAdSlot, CSJDislikeContext, CSJMaterialMeta, NSNumber, NSString, UIViewController;
 
 @interface CSJASlotContext : NSObject
 {
-    _Bool _fromMiddlePage;
-    _Bool _fromPlayable;
-    _Bool _autoPlayIfVideo;
+    _Bool _Ad_LogoVar;
+    _Bool _From_posIpv4;
+    _Bool _Text_lenAPI;
+    _Bool _At_WhenAPI;
+    _Bool __dir_StdYES;
     _Bool _isTransform;
     _Bool _openPlayableLandingPage;
     UIViewController *_rootViewController;
     NSString *_source;
     CSJAdSlot *_adSlot;
     CSJDislikeContext *_dislikeContext;
-    CDUnknownBlockType _didCloseOtherController;
+    CDUnknownBlockType _Int_OnlyDic;
     double _playTimeIfVideo;
     double _totalPlayTimeIfVideo;
-    NSNumber *_currentPlayProgress;
-    CDUnknownBlockType _closePolicyBlock;
+    NSNumber *_Pods_SELLock;
+    CDUnknownBlockType _List_FileInit;
     CSJMaterialMeta *_materialMeta;
+    CSJAdInfoViewModel *_infoViewModel;
 }
 
 - (void).cxx_destruct;
+@property(retain, nonatomic) CSJAdInfoViewModel *infoViewModel; // @synthesize infoViewModel=_infoViewModel;
 @property(retain, nonatomic) CSJMaterialMeta *materialMeta; // @synthesize materialMeta=_materialMeta;
-@property(copy, nonatomic) CDUnknownBlockType closePolicyBlock; // @synthesize closePolicyBlock=_closePolicyBlock;
+@property(copy, nonatomic) CDUnknownBlockType List_FileInit; // @synthesize List_FileInit=_List_FileInit;
 @property(nonatomic) _Bool openPlayableLandingPage; // @synthesize openPlayableLandingPage=_openPlayableLandingPage;
-@property(retain, nonatomic) NSNumber *currentPlayProgress; // @synthesize currentPlayProgress=_currentPlayProgress;
+@property(retain, nonatomic) NSNumber *Pods_SELLock; // @synthesize Pods_SELLock=_Pods_SELLock;
 @property(nonatomic) _Bool isTransform; // @synthesize isTransform=_isTransform;
-@property(nonatomic) _Bool autoPlayIfVideo; // @synthesize autoPlayIfVideo=_autoPlayIfVideo;
+@property(nonatomic) _Bool _dir_StdYES; // @synthesize _dir_StdYES=__dir_StdYES;
 @property(nonatomic) double totalPlayTimeIfVideo; // @synthesize totalPlayTimeIfVideo=_totalPlayTimeIfVideo;
 @property(nonatomic) double playTimeIfVideo; // @synthesize playTimeIfVideo=_playTimeIfVideo;
-@property(nonatomic) _Bool fromPlayable; // @synthesize fromPlayable=_fromPlayable;
-@property(nonatomic) _Bool fromMiddlePage; // @synthesize fromMiddlePage=_fromMiddlePage;
-@property(copy, nonatomic) CDUnknownBlockType didCloseOtherController; // @synthesize didCloseOtherController=_didCloseOtherController;
+@property(nonatomic) _Bool At_WhenAPI; // @synthesize At_WhenAPI=_At_WhenAPI;
+@property(nonatomic) _Bool Text_lenAPI; // @synthesize Text_lenAPI=_Text_lenAPI;
+@property(nonatomic) _Bool From_posIpv4; // @synthesize From_posIpv4=_From_posIpv4;
+@property(nonatomic) _Bool Ad_LogoVar; // @synthesize Ad_LogoVar=_Ad_LogoVar;
+@property(copy, nonatomic) CDUnknownBlockType Int_OnlyDic; // @synthesize Int_OnlyDic=_Int_OnlyDic;
 @property(retain, nonatomic) CSJDislikeContext *dislikeContext; // @synthesize dislikeContext=_dislikeContext;
 @property(retain, nonatomic) CSJAdSlot *adSlot; // @synthesize adSlot=_adSlot;
 @property(copy, nonatomic) NSString *source; // @synthesize source=_source;
 @property(nonatomic) __weak UIViewController *rootViewController; // @synthesize rootViewController=_rootViewController;
+- (_Bool)isUgenJump;
 
 @end
 

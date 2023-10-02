@@ -11,7 +11,6 @@
 @interface CSJADLoadDurationManager : NSObject
 {
     struct os_unfair_lock_s _weakCacheLock;
-    int _weakCacheLock_deprecated;
     unsigned long long _APPActiveType;
     NSMapTable *_weakCache;
 }

@@ -6,14 +6,14 @@
 
 #import <objc/NSObject.h>
 
-#import "ABUCustomSplashAdapter-Protocol.h"
 #import "ABUGDT_GDTSplashAdDelegate-Protocol.h"
 #import "ABUGDT_GDTSplashZoomOutViewdelegate-Protocol.h"
+#import "BUMCustomSplashAdapter-Protocol.h"
 
 @class NSString, UIView;
-@protocol ABUCustomConfigAdapter, ABUCustomSplashAdapterBridge><ABUCustomSplashAdapterZoomOutViewBridge><ABUCustomSplashAdapterCardViewBridge, ABUGDT_GDTSplashAd;
+@protocol ABUGDT_GDTSplashAd, BUMCustomConfigAdapter, BUMCustomSplashAdapterBridge><BUMCustomSplashAdapterZoomOutViewBridge><BUMCustomSplashAdapterCardViewBridge;
 
-@interface ABUGdtSplashAdapter : NSObject <ABUGDT_GDTSplashAdDelegate, ABUGDT_GDTSplashZoomOutViewdelegate, ABUCustomSplashAdapter>
+@interface ABUGdtSplashAdapter : NSObject <ABUGDT_GDTSplashAdDelegate, ABUGDT_GDTSplashZoomOutViewdelegate, BUMCustomSplashAdapter>
 {
     _Bool _hasLoadSucc;
     _Bool _hasZoomViewClosed;
@@ -57,8 +57,8 @@
 - (_Bool)enablePreloadWhenCurrentIsDisplay;
 
 // Remaining properties
-@property(nonatomic) __weak id <ABUCustomSplashAdapterBridge><ABUCustomSplashAdapterZoomOutViewBridge><ABUCustomSplashAdapterCardViewBridge> bridge;
-@property(retain, nonatomic) id <ABUCustomConfigAdapter> configAdapter;
+@property(nonatomic) __weak id <BUMCustomSplashAdapterBridge><BUMCustomSplashAdapterZoomOutViewBridge><BUMCustomSplashAdapterCardViewBridge> bridge;
+@property(retain, nonatomic) id <BUMCustomConfigAdapter> configAdapter;
 @property(readonly, copy) NSString *debugDescription;
 @property(readonly, copy) NSString *description;
 @property(readonly) unsigned long long hash;

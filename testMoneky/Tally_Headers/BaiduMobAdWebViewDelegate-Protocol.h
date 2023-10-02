@@ -6,15 +6,16 @@
 
 #import "NSObject-Protocol.h"
 
-@class BaiduMobAdWebView, NSError, NSURLRequest, UIScrollView;
+@class BaiduMobAdWebView, NSError, NSURLRequest, UIScrollView, WKScriptMessage;
 
 @protocol BaiduMobAdWebViewDelegate <NSObject>
+
+@optional
+- (void)bdWebView:(BaiduMobAdWebView *)arg1 didClickWithMessage:(WKScriptMessage *)arg2;
+- (void)bdWebViewScrollViewDidScroll:(BaiduMobAdWebView *)arg1 scrollView:(UIScrollView *)arg2;
 - (void)bdWebView:(BaiduMobAdWebView *)arg1 didFailLoadWithError:(NSError *)arg2;
 - (void)bdWebViewDidFinishLoad:(BaiduMobAdWebView *)arg1;
 - (void)bdWebViewDidStartLoad:(BaiduMobAdWebView *)arg1;
 - (_Bool)bdWebView:(BaiduMobAdWebView *)arg1 shouldStartLoadWithRequest:(NSURLRequest *)arg2 navigationType:(long long)arg3;
-
-@optional
-- (void)bdWebViewScrollViewDidScroll:(BaiduMobAdWebView *)arg1 scrollView:(UIScrollView *)arg2;
 @end
 

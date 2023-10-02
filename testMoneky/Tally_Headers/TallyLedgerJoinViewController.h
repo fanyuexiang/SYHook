@@ -7,20 +7,25 @@
 #import <UIKit/UIViewController.h>
 
 #import "UIGestureRecognizerDelegate-Protocol.h"
+#import "UINavigationControllerDelegate-Protocol.h"
 #import "UITextFieldDelegate-Protocol.h"
 #import "UITextViewDelegate-Protocol.h"
 
 @class NSString, UIButton, UIScrollView, UITextField, UITextView;
 
-@interface TallyLedgerJoinViewController : UIViewController <UITextFieldDelegate, UIGestureRecognizerDelegate, UITextViewDelegate>
+@interface TallyLedgerJoinViewController : UIViewController <UITextFieldDelegate, UIGestureRecognizerDelegate, UITextViewDelegate, UINavigationControllerDelegate>
 {
     UIScrollView *_contentScroll;
-    UITextField *_codeTextField;
     UITextView *_desTextView;
     UIButton *_commitBtn;
+    UITextField *_codeTextField;
+    UIButton *_backBtn;
 }
 
 - (void).cxx_destruct;
+@property(retain, nonatomic) UIButton *backBtn; // @synthesize backBtn=_backBtn;
+@property(retain, nonatomic) UITextField *codeTextField; // @synthesize codeTextField=_codeTextField;
+- (void)navigationController:(id)arg1 didShowViewController:(id)arg2 animated:(_Bool)arg3;
 - (void)textViewDidChange:(id)arg1;
 - (_Bool)textField:(id)arg1 shouldChangeCharactersInRange:(struct _NSRange)arg2 replacementString:(id)arg3;
 - (void)commitButtonAction;

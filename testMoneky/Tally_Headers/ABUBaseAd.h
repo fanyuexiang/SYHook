@@ -10,24 +10,25 @@
 #import "ABUCustomAdapterBridgeExtension-Protocol.h"
 #import "ABUMediationWaterfallDelegate-Protocol.h"
 
-@class ABUAdLoadConfig, ABUAdPackage, NSArray, NSDictionary, NSMutableDictionary, NSString, UIViewController;
+@class ABUAdLoadConfig, ABUAdPackage, ABUUValueRule, NSArray, NSDictionary, NSMutableDictionary, NSString, UIViewController;
 @protocol ABUMediationWaterfall;
 
 @interface ABUBaseAd : NSObject <ABUConfigActionListener, ABUCustomAdapterBridgeExtension, ABUMediationWaterfallDelegate>
 {
     _Bool _bidNotify;
-    _Bool _didDownloadVideo;
+    _Bool _isPreloadWhenShow;
     long long _requestType;
     unsigned long long _expectAdCount;
     NSString *_rit;
     NSString *_scenarioID;
     double _mediationFillTimestamp;
     NSMutableDictionary *_adapterToAdPackage;
-    ABUAdLoadConfig *_loadConfig;
     unsigned long long _controlStatus;
+    ABUUValueRule *_uvalueRule;
     UIViewController *_viewController;
     CDUnknownBlockType _completeCallback;
     NSMutableDictionary *_params;
+    ABUAdLoadConfig *_loadConfig;
     NSDictionary *_preloadInfo;
 }
 
@@ -36,14 +37,15 @@
 + (id)adHandleLoadPool;
 - (void).cxx_destruct;
 @property(copy, nonatomic) NSDictionary *preloadInfo; // @synthesize preloadInfo=_preloadInfo;
+@property(nonatomic) _Bool isPreloadWhenShow; // @synthesize isPreloadWhenShow=_isPreloadWhenShow;
+@property(retain, nonatomic) ABUAdLoadConfig *loadConfig; // @synthesize loadConfig=_loadConfig;
 @property(retain, nonatomic) NSMutableDictionary *params; // @synthesize params=_params;
 @property(copy, nonatomic) CDUnknownBlockType completeCallback; // @synthesize completeCallback=_completeCallback;
 @property(nonatomic) __weak UIViewController *viewController; // @synthesize viewController=_viewController;
+@property(retain, nonatomic) ABUUValueRule *uvalueRule; // @synthesize uvalueRule=_uvalueRule;
 @property(nonatomic) unsigned long long controlStatus; // @synthesize controlStatus=_controlStatus;
-@property(retain, nonatomic) ABUAdLoadConfig *loadConfig; // @synthesize loadConfig=_loadConfig;
 @property(retain, nonatomic) NSMutableDictionary *adapterToAdPackage; // @synthesize adapterToAdPackage=_adapterToAdPackage;
 @property(nonatomic) double mediationFillTimestamp; // @synthesize mediationFillTimestamp=_mediationFillTimestamp;
-@property(nonatomic) _Bool didDownloadVideo; // @synthesize didDownloadVideo=_didDownloadVideo;
 @property(nonatomic) _Bool bidNotify; // @synthesize bidNotify=_bidNotify;
 @property(copy, nonatomic) NSString *scenarioID; // @synthesize scenarioID=_scenarioID;
 @property(readonly, copy, nonatomic) NSString *rit; // @synthesize rit=_rit;
@@ -69,10 +71,10 @@
 - (void)configPreviewAdInfos:(id)arg1;
 - (void)_dealBaseActionWhenAdShowListenCalling:(id)arg1;
 - (void)_dealBaseActionWhenAdShowCalling:(id)arg1;
-- (void)setConfigSuccessCallback:(CDUnknownBlockType)arg1;
-- (_Bool)hasAdConfig;
 - (id)getAdLoadInfoList;
 - (id)waterfallFillFailMessages;
+- (_Bool)didFinishAdnPreload;
+- (void)setDidFinishAdnPreload:(_Bool)arg1;
 - (_Bool)didFinishPreloadCache;
 - (void)setDidFinishPreloadCache:(_Bool)arg1;
 @property(retain, nonatomic) ABUAdPackage *showAdPackage;
@@ -99,6 +101,7 @@
 - (int)logType;
 - (long long)adType;
 - (_Bool)enableCurrentAdnPreload;
+- (_Bool)enablePreloadExtra;
 - (_Bool)enablePreloadCache;
 - (id)createWaterfallFailedWithLoadConfig:(id)arg1;
 - (unsigned long long)moduleControl;
@@ -114,6 +117,7 @@
 - (void)waterfall:(id)arg1 didLoadMediaAd:(id)arg2 withAdapter:(id)arg3;
 - (void)waterfall:(id)arg1 willStartLoadWithParams:(id)arg2 error:(id)arg3;
 - (void)waterfall:(id)arg1 didCollectedAdsTokens:(id)arg2 andResumeHandler:(CDUnknownBlockType)arg3;
+- (_Bool)isLoadViaMediation;
 - (void)waterfall:(id)arg1 loadFailedWithError:(id)arg2;
 - (void)waterfallDidLoadSuccess:(id)arg1;
 - (id)cacheRitList;
@@ -135,7 +139,7 @@
 - (_Bool)shouldStartLoadAd:(id *)arg1;
 - (void)addParam:(id)arg1 withKey:(id)arg2;
 - (void)loadAdDataWithConfig:(id)arg1;
-- (void)bindLinkID;
+- (id)checkPreloadCacheExistWithWaterfall:(id)arg1 errorType:(long long *)arg2;
 - (void)loadAdDataWithMediaSlotConfigIDs:(id)arg1 sign:(long long)arg2;
 - (void)preloadByUser;
 - (void)loadAdData;

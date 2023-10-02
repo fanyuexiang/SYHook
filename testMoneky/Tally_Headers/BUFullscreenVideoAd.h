@@ -36,7 +36,6 @@
 - (id)initWithSlotID:(id)arg1;
 
 // Remaining properties
-@property(readonly, nonatomic, getter=isAdValid) _Bool adValid; // @dynamic adValid;
 @property(readonly, copy) NSString *debugDescription;
 @property(readonly, copy) NSString *description;
 @property(readonly, nonatomic) double expireTimestamp; // @dynamic expireTimestamp;

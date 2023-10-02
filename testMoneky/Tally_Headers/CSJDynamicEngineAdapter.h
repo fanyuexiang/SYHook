@@ -6,11 +6,16 @@
 
 #import <objc/NSObject.h>
 
+@class CSJDynamicViewGlobalModel;
+
 @interface CSJDynamicEngineAdapter : NSObject
 {
+    CSJDynamicViewGlobalModel *_globalModel;
 }
 
-+ (id)dynamicEngineAdapterWithDynamicEnginVersion:(long long)arg1;
++ (id)dynamicEngineAdapterWithDynamicEnginVersion:(long long)arg1 globalModel:(id)arg2;
+- (void).cxx_destruct;
+@property(retain, nonatomic) CSJDynamicViewGlobalModel *globalModel; // @synthesize globalModel=_globalModel;
 - (long long)componentNotExistErrorCode;
 - (id)version_log_key;
 - (id)dynamic_sub_render_end;
@@ -18,7 +23,7 @@
 - (id)dynamic_sub_analysis_end;
 - (id)dynamic_sub_analysis_start;
 - (id)beginAnalysisUserInfo;
-- (id)layoutInfoWithOriginInfo:(id)arg1 infoViewModel:(id)arg2 userInfo:(id *)arg3 error:(id *)arg4;
+- (id)layoutInfoWithUserInfo:(id *)arg1 error:(id *)arg2;
 
 @end
 

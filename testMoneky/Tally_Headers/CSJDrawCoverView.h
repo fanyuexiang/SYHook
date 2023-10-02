@@ -17,7 +17,7 @@
 @property(retain, nonatomic) CAGradientLayer *gradientLayer; // @synthesize gradientLayer=_gradientLayer;
 - (void)pbu_override_buildViewData;
 - (void)pbu_override_buildView;
-- (void)downloadButtonAction:(id)arg1;
+- (void)URL_ClsTv:(id)arg1;
 
 @end
 

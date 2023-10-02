@@ -6,13 +6,13 @@
 
 #import "NSObject-Protocol.h"
 
-@class CSJDynamicEngine, CSJDynamicView, NSDictionary, NSError;
+@class CSJDynamicEngine, CSJDynamicView, NSError;
 
 @protocol CSJDynamicEngineDelegate <NSObject>
 - (void)endRenderInDynamicEngine:(CSJDynamicEngine *)arg1 error:(NSError *)arg2;
 - (void)middleRenderInDynamicEngine:(CSJDynamicEngine *)arg1 dynamicView:(CSJDynamicView *)arg2 error:(NSError *)arg3;
 - (void)beginRenderInDynamicEngine:(CSJDynamicEngine *)arg1;
-- (void)endParseInDynamicEngine:(CSJDynamicEngine *)arg1 layoutInfo:(NSDictionary *)arg2 error:(NSError *)arg3;
+- (void)endParseInDynamicEngine:(CSJDynamicEngine *)arg1 error:(NSError *)arg2;
 - (void)beginParseInDynamicEngine:(CSJDynamicEngine *)arg1;
 @end
 

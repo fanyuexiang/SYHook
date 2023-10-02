@@ -11,35 +11,35 @@
 
 @interface CSJNativeExpressVideoAdParentViewController : UIViewController
 {
-    _Bool _isExpress;
-    _Bool _isShowLoadingAnimaition;
+    _Bool _isAn_TempPos;
+    _Bool _isOut_LeftUI;
     _Bool _isRotate;
     _Bool _supportPortraitLandscape;
     CSJMaterialMeta *_materialMeta;
     unsigned long long _systemOrientation;
     unsigned long long _videoOrientation;
-    UIView<CSJLoadingPageProtocol> *_loadingPageView;
+    UIView<CSJLoadingPageProtocol> *_In_ExtNeed;
 }
 
 - (void).cxx_destruct;
 @property(nonatomic) _Bool supportPortraitLandscape; // @synthesize supportPortraitLandscape=_supportPortraitLandscape;
 @property(nonatomic) _Bool isRotate; // @synthesize isRotate=_isRotate;
-@property(nonatomic) _Bool isShowLoadingAnimaition; // @synthesize isShowLoadingAnimaition=_isShowLoadingAnimaition;
-@property(retain, nonatomic) UIView<CSJLoadingPageProtocol> *loadingPageView; // @synthesize loadingPageView=_loadingPageView;
+@property(nonatomic) _Bool isOut_LeftUI; // @synthesize isOut_LeftUI=_isOut_LeftUI;
+@property(retain, nonatomic) UIView<CSJLoadingPageProtocol> *In_ExtNeed; // @synthesize In_ExtNeed=_In_ExtNeed;
 @property(nonatomic) unsigned long long videoOrientation; // @synthesize videoOrientation=_videoOrientation;
 @property(nonatomic) unsigned long long systemOrientation; // @synthesize systemOrientation=_systemOrientation;
-@property(nonatomic) _Bool isExpress; // @synthesize isExpress=_isExpress;
+@property(nonatomic) _Bool isAn_TempPos; // @synthesize isAn_TempPos=_isAn_TempPos;
 @property(retain, nonatomic) CSJMaterialMeta *materialMeta; // @synthesize materialMeta=_materialMeta;
-- (void)pbu_addLoading;
+- (void)Stmt_BOOLThe;
 - (void)removeLoading;
-- (unsigned long long)pbu_normal_supportedInterfaceOrientations;
-- (unsigned long long)pbu_express_supportedInterfaceOrientations;
+- (unsigned long long)Xzj_LeftDict;
+- (unsigned long long)Org_IdxKey;
 - (_Bool)supportLandscapeBySystemConfiguration;
 - (long long)preferredInterfaceOrientationForPresentation;
 - (unsigned long long)supportedInterfaceOrientations;
 - (_Bool)shouldAutorotate;
 - (_Bool)prefersStatusBarHidden;
-- (void)layoutIntersitialStyle;
+- (void)Y1_NotId;
 - (void)viewWillLayoutSubviews;
 - (void)viewDidLoad;
 - (void)viewWillAppear:(_Bool)arg1;

@@ -10,12 +10,12 @@
 #import "ABUBaidu_BaiduMobAdNativeCacheDelegate-Protocol.h"
 #import "ABUBaidu_BaiduMobAdNativeInterationDelegate-Protocol.h"
 #import "ABUBaidu_BaiduMobAdVideoViewDelegate-Protocol.h"
-#import "ABUCustomDrawAdapter-Protocol.h"
+#import "BUMCustomDrawAdapter-Protocol.h"
 
 @class NSDictionary, NSMutableDictionary, NSString;
-@protocol ABUBaidu_BaiduMobAdNative, ABUCustomConfigAdapter, ABUCustomDrawAdapterBridge;
+@protocol ABUBaidu_BaiduMobAdNative, BUMCustomConfigAdapter, BUMCustomDrawAdapterBridge;
 
-@interface ABUBaiduDrawAdapter : NSObject <ABUBaidu_BaiduMobAdNativeAdDelegate, ABUBaidu_BaiduMobAdNativeCacheDelegate, ABUBaidu_BaiduMobAdVideoViewDelegate, ABUBaidu_BaiduMobAdNativeInterationDelegate, ABUCustomDrawAdapter>
+@interface ABUBaiduDrawAdapter : NSObject <ABUBaidu_BaiduMobAdNativeAdDelegate, ABUBaidu_BaiduMobAdNativeCacheDelegate, ABUBaidu_BaiduMobAdVideoViewDelegate, ABUBaidu_BaiduMobAdNativeInterationDelegate, BUMCustomDrawAdapter>
 {
     NSDictionary *_parameters;
     long long _biddingType;
@@ -57,8 +57,8 @@
 - (void)loadDrawAdWithSlotID:(id)arg1 andSize:(struct CGSize)arg2 andParameter:(id)arg3;
 
 // Remaining properties
-@property(nonatomic) __weak id <ABUCustomDrawAdapterBridge> bridge;
-@property(retain, nonatomic) id <ABUCustomConfigAdapter> configAdapter;
+@property(nonatomic) __weak id <BUMCustomDrawAdapterBridge> bridge;
+@property(retain, nonatomic) id <BUMCustomConfigAdapter> configAdapter;
 @property(readonly, copy) NSString *debugDescription;
 @property(readonly, copy) NSString *description;
 @property(readonly) unsigned long long hash;

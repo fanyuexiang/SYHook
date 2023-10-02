@@ -17,18 +17,18 @@
 
 - (void).cxx_destruct;
 @property(retain, nonatomic) CSJCoverView *coverView; // @synthesize coverView=_coverView;
-- (id)logKeyName;
+- (id)Use_HttpIos;
 - (long long)renderType;
-- (long long)playerTotalTime;
-- (double)playerCurrentTime;
+- (long long)Of_RectDoes;
+- (double)Http_CodeSdk;
 - (void)coverViewClickDownload:(id)arg1 clickExtraInfo:(id)arg2;
 - (void)coverViewClickAdLogo:(id)arg1;
 - (void)coverViewClickClose:(id)arg1;
 - (void)coverViewClickVideo:(id)arg1;
 - (void)coverViewClick:(id)arg1 areaCategory:(long long)arg2 clickExtraInfo:(id)arg3;
-- (void)updateWithThemeStatus:(long long)arg1;
-- (void)render_really;
-- (void)async_to_main_render_really;
+- (void)Init_OrVar:(long long)arg1;
+- (void)Ft_AdInfo;
+- (void)Main_Type_pos;
 - (void)render;
 
 // Remaining properties

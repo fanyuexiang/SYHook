@@ -17,6 +17,7 @@
 - (void).cxx_destruct;
 @property(copy, nonatomic) NSArray *crashInfos; // @synthesize crashInfos=_crashInfos;
 @property(copy, nonatomic) NSString *selector; // @synthesize selector=_selector;
+- (void)appendCrashInfoWithArray:(id)arg1;
 - (void)updateWithDictionary:(id)arg1;
 
 @end

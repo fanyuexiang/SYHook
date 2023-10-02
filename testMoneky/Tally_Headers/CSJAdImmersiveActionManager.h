@@ -11,8 +11,8 @@
 }
 
 + (id)sharedManager;
-- (void)presentImmersivePageVC:(id)arg1 context:(id)arg2;
-- (_Bool)handleImmersiveActionWithModel:(id)arg1 context:(id)arg2 fromVideo:(_Bool)arg3;
+- (void)True_IdxIs:(id)arg1 context:(id)arg2;
+- (_Bool)Win_TmpFile:(id)arg1 context:(id)arg2 fromVideo:(_Bool)arg3;
 
 @end
 

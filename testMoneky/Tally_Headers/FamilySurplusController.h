@@ -17,6 +17,7 @@
 - (void).cxx_destruct;
 @property(retain, nonatomic) FamilySurplusView *surplusView; // @synthesize surplusView=_surplusView;
 @property(copy, nonatomic) NSString *year; // @synthesize year=_year;
+- (void)surplusTypeChange:(id)arg1;
 - (void)viewWillDisappear:(_Bool)arg1;
 - (void)viewWillAppear:(_Bool)arg1;
 - (void)viewDidLoad;

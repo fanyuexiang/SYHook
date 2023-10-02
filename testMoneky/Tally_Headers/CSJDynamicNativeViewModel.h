@@ -23,6 +23,10 @@
 @property(retain, nonatomic) CSJDynamicAppInfoModel *appInfoModel; // @synthesize appInfoModel=_appInfoModel;
 @property(retain, nonatomic) CSJDynamicTemplateInfoModel *templateInfoModel; // @synthesize templateInfoModel=_templateInfoModel;
 @property(copy, nonatomic) NSDictionary *originDictionary; // @synthesize originDictionary=_originDictionary;
+- (id)adDescription;
+- (id)adTitle;
+- (id)source;
+- (id)firstImageModel;
 - (id)calcuColor;
 - (double)skipTime;
 - (struct CGSize)recommendSize;

@@ -11,6 +11,7 @@
 }
 
 + (id)forwardingTargetForSelector:(SEL)arg1;
+- (id)mediation;
 - (id)forwardingTargetForSelector:(SEL)arg1;
 
 @end

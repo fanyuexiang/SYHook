@@ -19,6 +19,7 @@
 - (void).cxx_destruct;
 @property(retain, nonatomic) TallyLedgerTabBarMidButton *midButton; // @synthesize midButton=_midButton;
 @property(copy, nonatomic) CDUnknownBlockType midButtonActionBlcok; // @synthesize midButtonActionBlcok=_midButtonActionBlcok;
+- (void)memberinfochanged:(id)arg1;
 - (void)refreshThemeChanged;
 - (void)themeChangedNotification:(id)arg1;
 - (void)userAccountChangedNotification:(id)arg1;

@@ -6,16 +6,24 @@
 
 #import <UIKit/UIViewController.h>
 
-@class NSMutableArray;
+@class NSMutableArray, UIScrollView;
 
 @interface NewAboutController : UIViewController
 {
     _Bool _isShowAlert;
     NSMutableArray *_items;
+    UIScrollView *_mainScrollView;
 }
 
 - (void).cxx_destruct;
+@property(retain, nonatomic) UIScrollView *mainScrollView; // @synthesize mainScrollView=_mainScrollView;
 @property(retain, nonatomic) NSMutableArray *items; // @synthesize items=_items;
+- (void)showPhoneServiceActionOKey;
+- (void)showPhoneServiceActionPhoneBind;
+- (void)showPhoneServiceActionLogin;
+- (void)showPhoneServiceAction;
+- (void)showOnlineServiceAction;
+- (void)showCustomerServiceAction;
 - (void)pushWebViewActionWithTitle:(id)arg1 url:(id)arg2;
 - (void)clickItemButtonAction:(id)arg1;
 - (void)tapGestureRecognizerAction:(id)arg1;

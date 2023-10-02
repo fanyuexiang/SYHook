@@ -13,13 +13,13 @@
 @interface UIViewController (MiniProgramsNavigationBar) <GADBannerViewDelegate>
 + (void)sk_recoverNavigationbar:(id)arg1 toNavigationBar:(id)arg2;
 + (id)wvTopViewController:(id)arg1;
++ (void)csj_handleMethodSwizzle;
 + (id)bu_topViewController;
 + (id)bu_recursiveFindCurrentShowViewControllerFromViewController:(id)arg1;
 + (id)bu_nextNavigationControllerFor:(id)arg1;
 + (id)bu_nextViewControllerFor:(id)arg1;
 + (id)bu_mainWindowRootViewController;
 + (id)bu_presentingViewController;
-+ (void)csj_handleMethodSwizzle;
 - (id)miniProgramsName;
 - (void)sk_customNavigationCloseAction;
 - (void)sk_customNavigationAbountAction;
@@ -111,12 +111,13 @@
 - (void)wpk_addEndPoint:(id)arg1;
 - (void)wpk_addBeginPoint:(id)arg1;
 @property(retain, nonatomic) NSMutableDictionary *wpk_pagePointDic;
-- (id)bu_presentingViewController;
-- (void)bu_safelyPresentVC:(id)arg1 needNav:(_Bool)arg2 animated:(_Bool)arg3 completion:(CDUnknownBlockType)arg4;
-- (void)bu_safelyPresentViewController:(id)arg1 animated:(_Bool)arg2 completion:(CDUnknownBlockType)arg3;
 - (void)bu_windowMotionBegan:(long long)arg1 withEvent:(id)arg2;
 - (void)bu_addMotionBegan:(long long)arg1 withEvent:(id)arg2;
 - (void)bu_swizzleMotionBegan:(long long)arg1 withEvent:(id)arg2;
+- (void)bu_safelyAddChildViewController:(id)arg1;
+- (id)bu_presentingViewController;
+- (void)bu_safelyPresentVC:(id)arg1 needNav:(_Bool)arg2 animated:(_Bool)arg3 completion:(CDUnknownBlockType)arg4;
+- (void)bu_safelyPresentViewController:(id)arg1 animated:(_Bool)arg2 completion:(CDUnknownBlockType)arg3;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

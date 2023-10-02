@@ -15,17 +15,19 @@
 #import "BaiduMobAdShakeComponentDelegate-Protocol.h"
 #import "BaiduMobAdSkipComponentDelegate-Protocol.h"
 #import "BaiduMobAdSlideComponentDelegate-Protocol.h"
+#import "UIGestureRecognizerDelegate-Protocol.h"
 
 @class BaiduMobAdAnswerCardComponent, BaiduMobAdComponentModel, BaiduMobAdCountdownComponent, BaiduMobAdDislikeManager, BaiduMobAdFlipCardComponent, BaiduMobAdGiftCountdownComponent, BaiduMobAdGiftPressComponent, BaiduMobAdH5Renderer, BaiduMobAdInstance, BaiduMobAdRendererHelper, BaiduMobAdShakeComponent, BaiduMobAdSlideComponent, BaiduMobAdStarsView, NSArray, NSDictionary, NSMutableArray, NSMutableDictionary, NSString, UIView;
 @protocol BaiduMobAdComponentDelegate, IBaiduMobAdRenderEventDelegate;
 
-@interface BaiduMobAdNativeProfessionalComponent : NSObject <BaiduMobAdSlideComponentDelegate, BaiduMobAdSkipComponentDelegate, BaiduMobAdShakeComponentDelegate, BaiduMobAdDislikeDelegate, BaiduMobAdGiftPressComponentDelegate, BaiduMobAdComponentLottieDelegate, BaiduMobAdGiftCountdownComponentDelegate, BaiduMobAdFlipCardComponentDelegate, BaiduMobAdAnswerCardComponentDelegate>
+@interface BaiduMobAdNativeProfessionalComponent : NSObject <BaiduMobAdSlideComponentDelegate, BaiduMobAdSkipComponentDelegate, BaiduMobAdShakeComponentDelegate, BaiduMobAdDislikeDelegate, BaiduMobAdGiftPressComponentDelegate, BaiduMobAdComponentLottieDelegate, BaiduMobAdGiftCountdownComponentDelegate, BaiduMobAdFlipCardComponentDelegate, BaiduMobAdAnswerCardComponentDelegate, UIGestureRecognizerDelegate>
 {
     _Bool _videoIsNoClick;
     _Bool _videoIsPlayClick;
     _Bool _isShare;
     _Bool _successfullyCreated;
     _Bool _jsonError;
+    _Bool _isSizeToAndroid;
     _Bool _isComponentDestory;
     int _dislikeType;
     NSDictionary *_jsonDic;
@@ -64,20 +66,29 @@
     NSArray *_starSrcArr;
     NSMutableDictionary *_configDic;
     NSMutableArray *_themeComponent;
+    NSMutableArray *_allowSlideTranspentViews;
+    double _safeScaleSize;
     UIView *_videoView;
     UIView *_taiView;
     BaiduMobAdStarsView *_starView;
     UIView *_recommendView;
     double _delayAutoClickTime;
+    struct CGPoint _startPoint;
+    struct CGPoint _endPoint;
 }
 
 - (void).cxx_destruct;
+@property(nonatomic) struct CGPoint endPoint; // @synthesize endPoint=_endPoint;
+@property(nonatomic) struct CGPoint startPoint; // @synthesize startPoint=_startPoint;
 @property(nonatomic) _Bool isComponentDestory; // @synthesize isComponentDestory=_isComponentDestory;
 @property(nonatomic) double delayAutoClickTime; // @synthesize delayAutoClickTime=_delayAutoClickTime;
 @property(retain, nonatomic) UIView *recommendView; // @synthesize recommendView=_recommendView;
 @property(retain, nonatomic) BaiduMobAdStarsView *starView; // @synthesize starView=_starView;
 @property(retain, nonatomic) UIView *taiView; // @synthesize taiView=_taiView;
 @property(retain, nonatomic) UIView *videoView; // @synthesize videoView=_videoView;
+@property(nonatomic) double safeScaleSize; // @synthesize safeScaleSize=_safeScaleSize;
+@property(nonatomic) _Bool isSizeToAndroid; // @synthesize isSizeToAndroid=_isSizeToAndroid;
+@property(retain, nonatomic) NSMutableArray *allowSlideTranspentViews; // @synthesize allowSlideTranspentViews=_allowSlideTranspentViews;
 @property(retain, nonatomic) NSMutableArray *themeComponent; // @synthesize themeComponent=_themeComponent;
 @property(retain, nonatomic) NSMutableDictionary *configDic; // @synthesize configDic=_configDic;
 @property(retain, nonatomic) NSArray *starSrcArr; // @synthesize starSrcArr=_starSrcArr;
@@ -127,6 +138,7 @@
 - (void)nativeFlipCardComponentClick:(id)arg1 viewId:(id)arg2 viewName:(id)arg3;
 - (void)nativeFlipCardComponentClose:(id)arg1 viewId:(id)arg2 viewName:(id)arg3;
 - (void)nativeComponentLottieSendFinish:(_Bool)arg1 view:(id)arg2 viewName:(id)arg3 special:(id)arg4;
+- (void)nativeComponentLottieSendStartWithView:(id)arg1 viewName:(id)arg2 special:(id)arg3;
 - (void)nativeComponentLottieSendClickView:(id)arg1 viewName:(id)arg2 special:(id)arg3;
 - (void)nativeGiftCountdownComponentSendFinish:(id)arg1 viewName:(id)arg2 special:(id)arg3 finish:(_Bool)arg4;
 - (void)dislikeViewDismiss;
@@ -136,6 +148,10 @@
 - (void)nativeSkipComponentSendClick:(id)arg1 viewName:(id)arg2 special:(id)arg3;
 - (void)nativeSlideComponentSendClick:(id)arg1 viewName:(id)arg2 special:(id)arg3;
 - (void)nativeGiftPressComponentSendClick:(id)arg1 viewName:(id)arg2 special:(id)arg3;
+- (_Bool)gestureRecognizer:(id)arg1 shouldRecognizeSimultaneouslyWithGestureRecognizer:(id)arg2;
+- (_Bool)checkSlidePath:(id)arg1;
+- (void)slideAction:(id)arg1;
+- (void)addSlideFunc:(id)arg1 targetView:(id)arg2;
 - (void)handleClickEvent:(id)arg1;
 - (void)autoClick;
 - (void)addTarget:(id)arg1 targetView:(id)arg2 viewModel:(id)arg3;

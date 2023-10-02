@@ -10,14 +10,17 @@
 {
 }
 
++ (id)modelIdentifier;
++ (_Bool)isiOSAppOnMac;
 + (id)systemName;
 + (id)systemVersion;
-+ (id)heimdallrRootPath;
++ (id)heimdallrBURootPath;
 + (id)libraryPath;
 + (void)initPath;
 + (id)payloadWithDecryptData:(id)arg1 withKey:(id)arg2 iv:(id)arg3;
 + (_Bool)isClassFromApp:(Class)arg1;
 + (id)dateStringFromDate:(id)arg1 isUTC:(_Bool)arg2 isMilloFormat:(_Bool)arg3;
++ (_Bool)canFindDebuggerAttached;
 + (void)initialize;
 + (void)load;
 

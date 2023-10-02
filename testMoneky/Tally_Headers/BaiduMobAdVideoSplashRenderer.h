@@ -17,6 +17,7 @@
 - (void).cxx_destruct;
 @property(nonatomic) _Bool isFinish; // @synthesize isFinish=_isFinish;
 @property(copy, nonatomic) NSString *path; // @synthesize path=_path;
+- (void)splashCardViewClick;
 - (void)addSplashTwistView;
 - (void)addSplashShakeView;
 - (void)onPlayerRateChange;

@@ -98,15 +98,16 @@ struct CLLocationCoordinate2D {
     double longitude;
 };
 
-struct CacheItem;
-
-struct DelegateFlags {
-    unsigned int didSelectedItemAtIndexFlag:1;
-    unsigned int didClickSelectedItemAtIndexFlag:1;
-    unsigned int didScrollSelectedItemAtIndexFlag:1;
-    unsigned int canClickItemAtIndexFlag:1;
-    unsigned int scrollingFromLeftIndexToRightIndexFlag:1;
+struct CSJLOT_Subpath {
+    int _field1;
+    double _field2;
+    struct CGPoint _field3;
+    struct CGPoint _field4;
+    struct CGPoint _field5;
+    struct CSJLOT_Subpath *_field6;
 };
+
+struct CacheItem;
 
 struct GADAdSize {
     struct CGSize size;
@@ -196,11 +197,9 @@ struct Registers {
     unsigned long long _field1[32];
 };
 
-struct SVGCurve {
-    unsigned long long _field1;
-    struct CGPoint _field2;
-    struct CGPoint _field3;
-    struct CGPoint _field4;
+struct SDImagePixelFormat {
+    unsigned int _field1;
+    unsigned long long _field2;
 };
 
 struct TFC_FeatureConfigItem {
@@ -214,6 +213,11 @@ struct TFC_FeatureConfigItem {
     struct JMapWrapper *_field8;
     long long _field9;
     struct JMapWrapper *_field10;
+};
+
+struct UGYGValue {
+    float _field1;
+    int _field2;
 };
 
 struct UIEdgeInsets {
@@ -347,6 +351,12 @@ struct WBSDKJKTokenValue {
     struct WBSDKJKTokenCacheItem *_field5;
 };
 
+struct _CSJReportFlag {
+    _Bool reportLoadStart;
+    _Bool reportLoadFinish;
+    _Bool reportLoadFailed;
+};
+
 struct _HashMap {
     CDStruct_183601bc **_field1;
     int _field2;
@@ -363,14 +373,6 @@ struct _HashMap {
     CDUnknownFunctionPointerType _field13;
     CDUnknownFunctionPointerType _field14;
     CDUnknownFunctionPointerType _field15;
-};
-
-struct _IESFileMD5HashComputationContext {
-    CDUnknownFunctionPointerType _field1;
-    CDUnknownFunctionPointerType _field2;
-    CDUnknownFunctionPointerType _field3;
-    unsigned long long _field4;
-    char **_field5;
 };
 
 struct _NSRange {
@@ -392,8 +394,6 @@ struct _opaque_pthread_rwlock_t {
     long long __sig;
     char __opaque[192];
 };
-
-struct _opaque_pthread_t;
 
 struct _vm_param {
     int _field1;
@@ -511,45 +511,6 @@ struct bu_unz_global_info_s {
     unsigned short _field3;
 };
 
-struct hmdbu_async_byteorder;
-
-struct hmdbu_async_macho {
-    unsigned long long _field1;
-    long long _field2;
-    char *_field3;
-    char _field4[40];
-    struct mach_header _field5;
-    unsigned long long _field6;
-    unsigned int _field7;
-    struct hmdbu_async_mem_range _field8;
-    struct hmdbu_async_mem_range _field9;
-    struct hmdbu_async_mem_range _field10;
-    struct hmdbu_async_mem_range _field11;
-    struct hmdbu_async_mem_range _field12;
-    struct hmdbu_async_segment *_field13;
-    int _field14;
-    _Bool _field15;
-    _Bool _field16;
-    struct hmdbu_async_byteorder *_field17;
-};
-
-struct hmdbu_async_mem_range {
-    unsigned long long _field1;
-    unsigned long long _field2;
-};
-
-struct hmdbu_async_segment;
-
-struct hmdbubt_backtrace {
-    struct hmdbubt_frame *_field1;
-    unsigned long long _field2;
-    char *_field3;
-    unsigned long long _field4;
-    unsigned int _field5;
-};
-
-struct hmdbubt_frame;
-
 struct in6_addr {
     union {
         unsigned char _field1[16];
@@ -560,16 +521,6 @@ struct in6_addr {
 
 struct in_addr {
     unsigned int _field1;
-};
-
-struct mach_header {
-    unsigned int _field1;
-    int _field2;
-    int _field3;
-    unsigned int _field4;
-    unsigned int _field5;
-    unsigned int _field6;
-    unsigned int _field7;
 };
 
 struct os_unfair_lock_s {
@@ -664,13 +615,6 @@ typedef struct {
 } CDStruct_322d555a;
 
 typedef struct {
-    unsigned char r;
-    unsigned char g;
-    unsigned char b;
-    unsigned char a;
-} CDStruct_6181342a;
-
-typedef struct {
     unsigned long long x;
     unsigned long long y;
 } CDStruct_73b5d383;
@@ -717,21 +661,10 @@ typedef struct {
 } CDStruct_c3b9c2ee;
 
 typedef struct {
-    float x;
-    float y;
-    float width;
-    float height;
-} CDStruct_0f55ad9b;
-
-typedef struct {
     float _field1;
     float _field2;
     float _field3;
 } CDStruct_869f9c67;
-
-typedef struct {
-    float _field1;
-} CDStruct_37a3040a;
 
 typedef struct {
     int _field1;
@@ -825,18 +758,6 @@ typedef struct {
     int size;
     int p;
 } CDStruct_a66b4930;
-
-typedef struct {
-    struct _opaque_pthread_t *_field1;
-    unsigned int _field2;
-    struct _opaque_pthread_t *_field3;
-    unsigned int _field4;
-    char _field5[128];
-    void *_field6[50];
-    int _field7;
-    int _field8;
-    _Bool _field9;
-} CDStruct_cdf7d4c0;
 
 typedef struct {
     int _field1;

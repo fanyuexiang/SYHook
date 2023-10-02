@@ -126,6 +126,7 @@
 @property(copy, nonatomic) CDUnknownBlockType willDisplayAdBlock; // @synthesize willDisplayAdBlock=_willDisplayAdBlock;
 @property(retain, nonatomic) NSMutableDictionary *parametersDictionary; // @synthesize parametersDictionary=_parametersDictionary;
 @property(retain, nonatomic) BaiduMobAdRenderer *currentAdRenderer; // @synthesize currentAdRenderer=_currentAdRenderer;
+- (id)getAdDataForKey:(id)arg1;
 - (id)getAdDataFromAdm:(id)arg1;
 - (id)getS2SBiddingToken:(id)arg1;
 - (void)onAdFailedDisplayAd:(id)arg1 adInstance:(id)arg2 reason:(int)arg3 dictionary:(id)arg4;

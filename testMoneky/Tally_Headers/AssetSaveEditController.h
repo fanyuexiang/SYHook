@@ -6,7 +6,7 @@
 
 #import "AssetBaseController.h"
 
-@class AssetItemModel, NSDictionary, NSMutableArray, NSString, UIScrollView;
+@class AssetItemModel, NSDictionary, NSMutableArray, NSString, UIScrollView, UITextField;
 
 @interface AssetSaveEditController : AssetBaseController
 {
@@ -17,9 +17,11 @@
     AssetItemModel *_accountModel;
     NSDictionary *_model;
     NSMutableArray *_params;
+    UITextField *_weakTxtField;
 }
 
 - (void).cxx_destruct;
+@property(nonatomic) __weak UITextField *weakTxtField; // @synthesize weakTxtField=_weakTxtField;
 @property(retain, nonatomic) NSMutableArray *params; // @synthesize params=_params;
 @property(retain, nonatomic) NSDictionary *model; // @synthesize model=_model;
 @property(nonatomic) _Bool needCloseWithAddFinished; // @synthesize needCloseWithAddFinished=_needCloseWithAddFinished;

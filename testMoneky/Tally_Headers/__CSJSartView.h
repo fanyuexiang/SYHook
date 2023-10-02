@@ -10,7 +10,7 @@
 
 @interface __CSJSartView : UIView
 {
-    NSArray *_starImageViewArray;
+    NSArray *_Str_ItemIf;
     double _starMargin;
     struct CGSize _starSize;
 }
@@ -18,7 +18,7 @@
 - (void).cxx_destruct;
 @property(nonatomic) double starMargin; // @synthesize starMargin=_starMargin;
 @property(nonatomic) struct CGSize starSize; // @synthesize starSize=_starSize;
-@property(copy, nonatomic) NSArray *starImageViewArray; // @synthesize starImageViewArray=_starImageViewArray;
+@property(copy, nonatomic) NSArray *Str_ItemIf; // @synthesize Str_ItemIf=_Str_ItemIf;
 - (void)layoutSubviews;
 - (id)initWithFrame:(struct CGRect)arg1 imageName:(id)arg2;
 

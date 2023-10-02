@@ -11,32 +11,32 @@
 
 @interface BUTNCNetwork : NSObject
 {
-    NSMutableDictionary *_requestMap;
-    NSMutableDictionary *_failDomains;
-    NSMutableDictionary *_lastTimeIntervals;
+    NSMutableDictionary *_Get_LoadCta;
+    NSMutableDictionary *_Ext_XzjCarl;
+    NSMutableDictionary *_Zone_PodsThe;
     NSLock *_lock;
-    NSObject<OS_dispatch_semaphore> *_requestSemaphore;
-    NSMutableDictionary *_persistences;
+    NSObject<OS_dispatch_semaphore> *_All_AdsX2;
+    NSMutableDictionary *_X1_CarlLoad;
     NSMutableDictionary *_domains;
-    NSDictionary *_cur_domains;
+    NSDictionary *_Hopo_TrueZone;
 }
 
 + (id)sharedInstance;
 - (void).cxx_destruct;
-@property(copy) NSDictionary *cur_domains; // @synthesize cur_domains=_cur_domains;
+@property(copy) NSDictionary *Hopo_TrueZone; // @synthesize Hopo_TrueZone=_Hopo_TrueZone;
 @property(retain, nonatomic) NSMutableDictionary *domains; // @synthesize domains=_domains;
-@property(retain, nonatomic) NSMutableDictionary *persistences; // @synthesize persistences=_persistences;
-@property(retain, nonatomic) NSObject<OS_dispatch_semaphore> *requestSemaphore; // @synthesize requestSemaphore=_requestSemaphore;
+@property(retain, nonatomic) NSMutableDictionary *X1_CarlLoad; // @synthesize X1_CarlLoad=_X1_CarlLoad;
+@property(retain, nonatomic) NSObject<OS_dispatch_semaphore> *All_AdsX2; // @synthesize All_AdsX2=_All_AdsX2;
 @property(retain, nonatomic) NSLock *lock; // @synthesize lock=_lock;
-@property(retain, nonatomic) NSMutableDictionary *lastTimeIntervals; // @synthesize lastTimeIntervals=_lastTimeIntervals;
-@property(retain, nonatomic) NSMutableDictionary *failDomains; // @synthesize failDomains=_failDomains;
-@property(retain, nonatomic) NSMutableDictionary *requestMap; // @synthesize requestMap=_requestMap;
-- (id)persistenceCrateWithAppKey:(id)arg1;
-- (id)domainsWithAppKey:(id)arg1;
-- (void)handleFailRequest:(id)arg1;
-- (void)updateDomains:(id)arg1 withAppKey:(id)arg2;
-- (void)getDomainsWithConfig:(id)arg1 andCompletion:(CDUnknownBlockType)arg2;
-- (_Bool)recordFailCountDomain:(id)arg1;
+@property(retain, nonatomic) NSMutableDictionary *Zone_PodsThe; // @synthesize Zone_PodsThe=_Zone_PodsThe;
+@property(retain, nonatomic) NSMutableDictionary *Ext_XzjCarl; // @synthesize Ext_XzjCarl=_Ext_XzjCarl;
+@property(retain, nonatomic) NSMutableDictionary *Get_LoadCta; // @synthesize Get_LoadCta=_Get_LoadCta;
+- (id)Msg_RowHost:(id)arg1;
+- (id)Dict_RootNeed:(id)arg1;
+- (void)Mute_ViewOr:(id)arg1;
+- (void)From_LoadMask:(id)arg1 withAppKey:(id)arg2;
+- (void)Self_IfNet:(id)arg1 andCompletion:(CDUnknownBlockType)arg2;
+- (_Bool)Been_IDMay:(id)arg1;
 - (id)init;
 
 @end

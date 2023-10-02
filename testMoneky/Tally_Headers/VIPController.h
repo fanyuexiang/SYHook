@@ -8,7 +8,7 @@
 
 #import "UIScrollViewDelegate-Protocol.h"
 
-@class AdjustButton, IndentLabel, NSArray, NSMutableArray, NSString, SKVIPBuyGuideView, UIButton, UIImageView, UILabel, UIScrollView, UIView, VIPActivityCountdownView, VIPModel;
+@class AdjustButton, IndentLabel, NSArray, NSMutableArray, NSString, SKVIPBuyGuideView, UIButton, UIImageView, UILabel, UIScrollView, UIView, VIPActivityCountdownView, VIPModel, VIPWeekExpVIPExchangeView;
 
 @interface VIPController : UIViewController <UIScrollViewDelegate>
 {
@@ -35,6 +35,10 @@
     UIView *_commentView;
     UIView *_feedbackView;
     UIView *_bottomView;
+    UIView *_agreementView0;
+    UIView *_agreementView1;
+    _Bool _isagree;
+    UIImageView *_agreeicon;
     UIButton *_rightMoreBtn;
     UIView *_rightMoreView;
     UILabel *_pricedetaildesc;
@@ -47,15 +51,24 @@
     UIImageView *_topimageView;
     UIView *_viptopview;
     UIView *_adviptopview;
+    UIView *_freeviptopview;
     UIView *_vipView;
     UIView *_advipView;
+    UIView *_freevipView;
     UIView *_adrightsView;
     UIView *_adpriceView;
     long long _adpriceindex;
     UILabel *_adpricedetaildesc;
     UIView *_adfeedbackView;
+    UIView *_freerightsView;
+    UIButton *_freerightMoreBtn;
+    UIView *_freerightMoreView;
+    UIView *_freedesView;
+    UIView *_freevipEntranceView;
+    UIView *_freefeedbackView;
     SKVIPBuyGuideView *_vipGuideView;
     UIView *_loadingView;
+    VIPWeekExpVIPExchangeView *_expVIPExchangeView;
     long long _action;
     NSArray *_dataArray;
     VIPModel *_vipModel;
@@ -80,6 +93,7 @@
 @property(retain, nonatomic) VIPModel *vipModel; // @synthesize vipModel=_vipModel;
 @property(retain, nonatomic) NSArray *dataArray; // @synthesize dataArray=_dataArray;
 @property(nonatomic) long long action; // @synthesize action=_action;
+@property(nonatomic) __weak VIPWeekExpVIPExchangeView *expVIPExchangeView; // @synthesize expVIPExchangeView=_expVIPExchangeView;
 - (void)failedRequest;
 - (void)showrequestFailedView;
 - (void)requestABInfo;
@@ -116,6 +130,20 @@
 - (void)selectMonth:(id)arg1;
 - (void)setupBottomView;
 - (double)setupOpenVIPViews:(double)arg1;
+- (void)showAutoVIPTip;
+- (void)vipExchangeAction;
+- (id)vipExchangeBtn;
+- (void)freefeedbackMrore;
+- (void)setContentFreeVIPFeedbackView:(double)arg1;
+- (void)freevipinviteVIPExchange;
+- (void)freevipinvitetally;
+- (void)freevipinvitefriends;
+- (id)freeVIPActivityView:(id)arg1 actionTitle:(id)arg2 image:(id)arg3 sel:(SEL)arg4;
+- (void)setContentFreeVIPGet:(double)arg1;
+- (void)setContentFreeDes:(double)arg1;
+- (void)freerightdetail:(id)arg1;
+- (void)freerightMrore;
+- (void)setContentFreeRightsView:(double)arg1;
 - (void)renewClick;
 - (void)adfeedbackMrore;
 - (void)setContentADFeedbackView:(double)arg1;
@@ -126,6 +154,7 @@
 - (void)scrollViewDidScroll:(id)arg1;
 - (void)abClickBuyVIP;
 - (void)adjustBuyButton:(long long)arg1;
+- (void)clickAgreeIcon;
 - (void)setContentBuyBtn;
 - (void)feedbackMrore;
 - (void)setContentFeedbackView:(double)arg1;
@@ -137,6 +166,7 @@
 - (void)setContentRightsView:(double)arg1;
 - (void)adjustViewIndex:(long long)arg1;
 - (void)toptabclick:(id)arg1;
+- (void)setFreeVIPTopView:(double)arg1;
 - (void)setADVIPTopView:(double)arg1;
 - (void)setVIPTopView:(double)arg1;
 - (void)setContentVipInfoView;

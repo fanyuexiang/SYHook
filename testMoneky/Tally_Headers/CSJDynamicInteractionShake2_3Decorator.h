@@ -6,21 +6,38 @@
 
 #import "CSJDynamicInteractionAbstractDecorator.h"
 
-@class CSJSplashShakeComponentView;
+#import "CSJShakeTriggerDelegate-Protocol.h"
 
-@interface CSJDynamicInteractionShake2_3Decorator : CSJDynamicInteractionAbstractDecorator
+@class CSJDynamicClickInfo, CSJSplashShakeComponentView, NSString;
+
+@interface CSJDynamicInteractionShake2_3Decorator : CSJDynamicInteractionAbstractDecorator <CSJShakeTriggerDelegate>
 {
+    _Bool _shakeAnimationValid;
     CSJSplashShakeComponentView *_shakeAnimationMask;
+    CSJDynamicClickInfo *_clickInfo;
 }
 
 - (void).cxx_destruct;
+@property(nonatomic) _Bool shakeAnimationValid; // @synthesize shakeAnimationValid=_shakeAnimationValid;
+@property(retain, nonatomic) CSJDynamicClickInfo *clickInfo; // @synthesize clickInfo=_clickInfo;
 @property(retain, nonatomic) CSJSplashShakeComponentView *shakeAnimationMask; // @synthesize shakeAnimationMask=_shakeAnimationMask;
+- (id)contentView;
+- (void)dealloc;
+- (void)p_acceleroMotionAction;
+- (id)p_shakeScence;
 - (void)interactionGestureAction:(id)arg1;
 - (void)interactionViewDidShow;
+- (void)shakeTriggerWithDataSource:(id)arg1;
 - (void)showShakeAnimation;
 - (void)hiddenInteractionAnimaiton;
 - (void)showInteractionAnimation;
 - (void)render;
+
+// Remaining properties
+@property(readonly, copy) NSString *debugDescription;
+@property(readonly, copy) NSString *description;
+@property(readonly) unsigned long long hash;
+@property(readonly) Class superclass;
 
 @end
 

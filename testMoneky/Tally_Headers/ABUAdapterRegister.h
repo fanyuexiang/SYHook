@@ -17,9 +17,9 @@
 + (id)adapterConfigWithServerKey:(id)arg1;
 + (void)unregisterAdapterWithConfig:(id)arg1;
 + (_Bool)registerAdapterWithConfig:(id)arg1;
-- (id)__ABU__baidu;
 - (id)__ABU__gdt;
 - (id)__ABU__pangle;
+- (id)__ABU__baidu;
 
 @end
 

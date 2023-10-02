@@ -10,11 +10,11 @@
 {
 }
 
-+ (void)csj_postDidOpenURLNotificationWith:(_Bool)arg1;
-+ (void)csj_postWillOpenURLNotification;
-+ (_Bool)csj_canOpenURL:(id)arg1;
-+ (void)csj_openURL:(id)arg1 options:(id)arg2 completion:(CDUnknownBlockType)arg3;
-+ (void)csj_openURL:(id)arg1;
++ (void)Ads_FileThe:(_Bool)arg1;
++ (void)If_FromNow;
++ (_Bool)Will_RushTry:(id)arg1;
++ (void)Y1_AdBeen:(id)arg1 options:(id)arg2 completion:(CDUnknownBlockType)arg3;
++ (void)Y1_AdBeen:(id)arg1;
 
 @end
 

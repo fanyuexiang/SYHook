@@ -11,7 +11,9 @@
 
 @interface ABUAdPackage : NSObject
 {
+    _Bool _inUse;
     _Bool _isInvalid;
+    _Bool _isFillAfterTotalLoadFail;
     _Bool _hasCompletion;
     _Bool _fromCustomAdapter;
     NSString *_packageID;
@@ -47,6 +49,7 @@
 @property(nonatomic) _Bool hasCompletion; // @synthesize hasCompletion=_hasCompletion;
 @property(readonly, nonatomic) NSNumber *pricingType; // @synthesize pricingType=_pricingType;
 @property(nonatomic) unsigned long long count; // @synthesize count=_count;
+@property(nonatomic) _Bool isFillAfterTotalLoadFail; // @synthesize isFillAfterTotalLoadFail=_isFillAfterTotalLoadFail;
 @property(nonatomic) _Bool isInvalid; // @synthesize isInvalid=_isInvalid;
 @property(retain, nonatomic) ABUMediaAdProcess *process; // @synthesize process=_process;
 @property(copy, nonatomic) NSDictionary *mediaExt; // @synthesize mediaExt=_mediaExt;
@@ -54,6 +57,7 @@
 @property(copy, nonatomic) NSString *reuseIdentifier; // @synthesize reuseIdentifier=_reuseIdentifier;
 @property(copy, nonatomic) NSString *reuseLinkID; // @synthesize reuseLinkID=_reuseLinkID;
 @property(copy, nonatomic) NSString *linkID; // @synthesize linkID=_linkID;
+@property _Bool inUse; // @synthesize inUse=_inUse;
 @property(nonatomic) unsigned long long reuseCount; // @synthesize reuseCount=_reuseCount;
 @property(nonatomic) long long status; // @synthesize status=_status;
 @property(copy, nonatomic) NSString *mediaRitId; // @synthesize mediaRitId=_mediaRitId;
@@ -86,6 +90,8 @@
 - (void)updateWithBlock:(CDUnknownBlockType)arg1;
 - (CDUnknownBlockType)preload;
 - (CDUnknownBlockType)preloadCache;
+- (void)removeInUseMark;
+- (void)addInUseMark;
 - (CDUnknownBlockType)reuse;
 - (_Bool)isEqual:(id)arg1;
 - (id)init;

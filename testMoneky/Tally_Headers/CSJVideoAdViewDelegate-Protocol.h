@@ -15,6 +15,7 @@
 - (void)videoAdViewFinishViewDidClick:(CSJVideoAdView *)arg1;
 - (void)videoAdViewDidClick:(CSJVideoAdView *)arg1;
 - (void)playerDidPlayFinish:(CSJVideoAdView *)arg1;
+- (void)videoAdView:(CSJVideoAdView *)arg1 rewardDidCountDown:(long long)arg2;
 - (void)videoAdView:(CSJVideoAdView *)arg1 stateDidChanged:(long long)arg2;
 - (void)playerReadyToPlay:(CSJVideoAdView *)arg1;
 - (void)videoAdView:(CSJVideoAdView *)arg1 didLoadFailWithError:(NSError *)arg2;

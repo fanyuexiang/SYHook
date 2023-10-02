@@ -10,7 +10,7 @@
 {
 }
 
-+ (void)requestWithModel:(id)arg1 filterWords:(id)arg2 comment:(id)arg3 dislikeSource:(id)arg4;
++ (void)Win_ZoneIcon:(id)arg1 filterWords:(id)arg2 comment:(id)arg3 dislikeSource:(id)arg4;
 
 @end
 

@@ -7,7 +7,7 @@
 #import <objc/NSObject.h>
 
 @class UIView;
-@protocol ABUCsj_BUVideoAdReportor, ABUMediatedNativeAdData, ABUMediatedNativeAdViewCreator;
+@protocol ABUMediatedNativeAdData, ABUMediatedNativeAdViewCreator;
 
 @interface ABUMediatedNativeAd : NSObject
 {
@@ -22,7 +22,8 @@
 @property(retain, nonatomic) UIView *view; // @synthesize view=_view;
 @property(retain, nonatomic) id <ABUMediatedNativeAdViewCreator> viewCreator; // @synthesize viewCreator=_viewCreator;
 @property(retain, nonatomic) id <ABUMediatedNativeAdData> data; // @synthesize data=_data;
-@property(readonly, nonatomic) id <ABUCsj_BUVideoAdReportor> videoAdReportor;
+- (_Bool)isMemberOfClass:(Class)arg1;
+- (_Bool)isKindOfClass:(Class)arg1;
 
 @end
 

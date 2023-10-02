@@ -6,13 +6,13 @@
 
 #import <objc/NSObject.h>
 
-#import "ABUMediatedNativeAdData-Protocol.h"
-#import "ABUMediatedNativeAdViewCreator-Protocol.h"
+#import "BUMMediatedNativeAdData-Protocol.h"
+#import "BUMMediatedNativeAdViewCreator-Protocol.h"
 
-@class ABUImage, NSArray, NSDictionary, NSString, UIButton, UIImageView, UILabel, UIView;
+@class BUMImage, NSArray, NSDictionary, NSString, UIButton, UIImageView, UILabel, UIView;
 @protocol ABUBaidu_BaiduMobAdNativeAdObject, ABUBaidu_BaiduMobAdVideoView;
 
-@interface ABUBaiduDrawViewHelper : NSObject <ABUMediatedNativeAdViewCreator, ABUMediatedNativeAdData>
+@interface ABUBaiduDrawViewHelper : NSObject <BUMMediatedNativeAdViewCreator, BUMMediatedNativeAdData>
 {
     UIView<ABUBaidu_BaiduMobAdVideoView> *_view;
     NSObject<ABUBaidu_BaiduMobAdNativeAdObject> *_objc;
@@ -44,8 +44,8 @@
 - (id)AdDescription;
 - (id)AdTitle;
 - (id)sdkLogo;
-@property(readonly, nonatomic) ABUImage *adLogo;
-@property(readonly, nonatomic) ABUImage *icon;
+@property(readonly, nonatomic) BUMImage *adLogo;
+@property(readonly, nonatomic) BUMImage *icon;
 - (id)imageAry;
 @property(readonly, copy, nonatomic) NSArray *imageList;
 @property(readonly, nonatomic) long long callToType;

@@ -6,7 +6,7 @@
 
 #import <UIKit/UIViewController.h>
 
-@class DetaiTableView, DetailAccountingCycleTipView, DetailTopView, InformationRedDot, KnowledgePurchaseDetailView, LOTAnimationView, MarqueeView, NSCalendar, NSDateFormatter, NSMutableDictionary, NSString, NTallyModel, OperationManager, SAImagePickerManager, SKNormalHighlightedButton, UIButton, UIImageView, UILabel, UIView, VIPPopopStayView, WXLoginButton;
+@class DetaiTableView, DetailAccountingCycleTipView, DetailTopView, InformationRedDot, LOTAnimationView, MarqueeView, NSCalendar, NSDateFormatter, NSMutableDictionary, NSString, NTallyModel, OperationManager, SAImagePickerManager, SKNormalHighlightedButton, UIButton, UIImageView, UILabel, UIView, VIPPopopStayView, WXLoginButton;
 
 @interface DetailViewController : UIViewController
 {
@@ -20,7 +20,6 @@
     NSMutableDictionary *_recommendDict;
     _Bool _needLoginAfterEvent;
     _Bool _needSmartEvent;
-    KnowledgePurchaseDetailView *_knowledgePurchaseView;
     VIPPopopStayView *_vipstayView;
     SAImagePickerManager *_imagePicker;
     DetaiTableView *_tableView;
@@ -135,8 +134,6 @@
 - (void)goMonthBill;
 - (void)VIPPopupViewClick;
 - (void)showVIPPopupView;
-- (void)knowledgeViewClick;
-- (void)showKnowledgePurchaseView;
 - (void)addTimesToRecommend;
 - (void)recommendClose;
 - (void)recommendBtnClick;

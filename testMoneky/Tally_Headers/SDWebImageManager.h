@@ -7,10 +7,14 @@
 #import <objc/NSObject.h>
 
 @class NSMutableSet, SDImageCache;
-@protocol OS_dispatch_semaphore, SDImageLoader, SDImageTransformer, SDWebImageCacheKeyFilter, SDWebImageCacheSerializer, SDWebImageManagerDelegate, SDWebImageOptionsProcessor;
+@protocol SDImageLoader, SDImageTransformer, SDWebImageCacheKeyFilter, SDWebImageCacheSerializer, SDWebImageManagerDelegate, SDWebImageOptionsProcessor;
 
 @interface SDWebImageManager : NSObject
 {
+    struct os_unfair_lock_s _failedURLsLock;
+    int _failedURLsLock_deprecated;
+    struct os_unfair_lock_s _runningOperationsLock;
+    int _runningOperationsLock_deprecated;
     id <SDWebImageManagerDelegate> _delegate;
     SDImageCache *_imageCache;
     id <SDImageLoader> _imageLoader;
@@ -19,9 +23,7 @@
     id <SDWebImageCacheSerializer> _cacheSerializer;
     id <SDWebImageOptionsProcessor> _optionsProcessor;
     NSMutableSet *_failedURLs;
-    NSObject<OS_dispatch_semaphore> *_failedURLsLock;
     NSMutableSet *_runningOperations;
-    NSObject<OS_dispatch_semaphore> *_runningOperationsLock;
 }
 
 + (id)sharedManager;
@@ -30,9 +32,7 @@
 + (void)setDefaultImageCache:(id)arg1;
 + (id)defaultImageCache;
 - (void).cxx_destruct;
-@property(retain, nonatomic) NSObject<OS_dispatch_semaphore> *runningOperationsLock; // @synthesize runningOperationsLock=_runningOperationsLock;
 @property(retain, nonatomic) NSMutableSet *runningOperations; // @synthesize runningOperations=_runningOperations;
-@property(retain, nonatomic) NSObject<OS_dispatch_semaphore> *failedURLsLock; // @synthesize failedURLsLock=_failedURLsLock;
 @property(retain, nonatomic) NSMutableSet *failedURLs; // @synthesize failedURLs=_failedURLs;
 @property(retain, nonatomic) id <SDWebImageOptionsProcessor> optionsProcessor; // @synthesize optionsProcessor=_optionsProcessor;
 @property(retain, nonatomic) id <SDWebImageCacheSerializer> cacheSerializer; // @synthesize cacheSerializer=_cacheSerializer;
@@ -43,12 +43,13 @@
 @property(nonatomic) __weak id <SDWebImageManagerDelegate> delegate; // @synthesize delegate=_delegate;
 - (id)processedResultForURL:(id)arg1 options:(unsigned long long)arg2 context:(id)arg3;
 - (_Bool)shouldBlockFailedURLWithURL:(id)arg1 error:(id)arg2 options:(unsigned long long)arg3 context:(id)arg4;
-- (void)callCompletionBlockForOperation:(id)arg1 completion:(CDUnknownBlockType)arg2 image:(id)arg3 data:(id)arg4 error:(id)arg5 cacheType:(long long)arg6 finished:(_Bool)arg7 url:(id)arg8;
-- (void)callCompletionBlockForOperation:(id)arg1 completion:(CDUnknownBlockType)arg2 error:(id)arg3 url:(id)arg4;
-- (void)storeImage:(id)arg1 imageData:(id)arg2 forKey:(id)arg3 cacheType:(long long)arg4 options:(unsigned long long)arg5 context:(id)arg6 completion:(CDUnknownBlockType)arg7;
+- (void)callCompletionBlockForOperation:(id)arg1 completion:(CDUnknownBlockType)arg2 image:(id)arg3 data:(id)arg4 error:(id)arg5 cacheType:(long long)arg6 finished:(_Bool)arg7 queue:(id)arg8 url:(id)arg9;
+- (void)callCompletionBlockForOperation:(id)arg1 completion:(CDUnknownBlockType)arg2 error:(id)arg3 queue:(id)arg4 url:(id)arg5;
+- (void)storeImage:(id)arg1 imageData:(id)arg2 forKey:(id)arg3 options:(unsigned long long)arg4 context:(id)arg5 imageCache:(id)arg6 cacheType:(long long)arg7 finished:(_Bool)arg8 completion:(CDUnknownBlockType)arg9;
 - (void)safelyRemoveOperationFromRunning:(id)arg1;
-- (void)callTransformProcessForOperation:(id)arg1 url:(id)arg2 options:(unsigned long long)arg3 context:(id)arg4 originalImage:(id)arg5 originalData:(id)arg6 finished:(_Bool)arg7 progress:(CDUnknownBlockType)arg8 completed:(CDUnknownBlockType)arg9;
-- (void)callStoreCacheProcessForOperation:(id)arg1 url:(id)arg2 options:(unsigned long long)arg3 context:(id)arg4 downloadedImage:(id)arg5 downloadedData:(id)arg6 finished:(_Bool)arg7 progress:(CDUnknownBlockType)arg8 completed:(CDUnknownBlockType)arg9;
+- (void)callStoreCacheProcessForOperation:(id)arg1 url:(id)arg2 options:(unsigned long long)arg3 context:(id)arg4 image:(id)arg5 data:(id)arg6 cacheType:(long long)arg7 finished:(_Bool)arg8 completed:(CDUnknownBlockType)arg9;
+- (void)callStoreOriginCacheProcessForOperation:(id)arg1 url:(id)arg2 options:(unsigned long long)arg3 context:(id)arg4 originalImage:(id)arg5 cacheImage:(id)arg6 originalData:(id)arg7 cacheData:(id)arg8 cacheType:(long long)arg9 finished:(_Bool)arg10 completed:(CDUnknownBlockType)arg11;
+- (void)callTransformProcessForOperation:(id)arg1 url:(id)arg2 options:(unsigned long long)arg3 context:(id)arg4 originalImage:(id)arg5 originalData:(id)arg6 cacheType:(long long)arg7 finished:(_Bool)arg8 completed:(CDUnknownBlockType)arg9;
 - (void)callDownloadProcessForOperation:(id)arg1 url:(id)arg2 options:(unsigned long long)arg3 context:(id)arg4 cachedImage:(id)arg5 cachedData:(id)arg6 cacheType:(long long)arg7 progress:(CDUnknownBlockType)arg8 completed:(CDUnknownBlockType)arg9;
 - (void)callOriginalCacheProcessForOperation:(id)arg1 url:(id)arg2 options:(unsigned long long)arg3 context:(id)arg4 progress:(CDUnknownBlockType)arg5 completed:(CDUnknownBlockType)arg6;
 - (void)callCacheProcessForOperation:(id)arg1 url:(id)arg2 options:(unsigned long long)arg3 context:(id)arg4 progress:(CDUnknownBlockType)arg5 completed:(CDUnknownBlockType)arg6;
@@ -59,6 +60,7 @@
 - (id)loadImageWithURL:(id)arg1 options:(unsigned long long)arg2 context:(id)arg3 progress:(CDUnknownBlockType)arg4 completed:(CDUnknownBlockType)arg5;
 - (id)loadImageWithURL:(id)arg1 options:(unsigned long long)arg2 progress:(CDUnknownBlockType)arg3 completed:(CDUnknownBlockType)arg4;
 - (id)cacheKeyForURL:(id)arg1 context:(id)arg2;
+- (id)originalCacheKeyForURL:(id)arg1 context:(id)arg2;
 - (id)cacheKeyForURL:(id)arg1;
 - (id)initWithCache:(id)arg1 loader:(id)arg2;
 - (id)init;

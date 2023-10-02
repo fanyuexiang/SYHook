@@ -74,7 +74,7 @@
 - (unsigned long long)moduleControl;
 - (void)adLoadDidFailedWithError:(id)arg1;
 - (void)adLoadDidSuccess;
-@property(readonly) NSString *adUnitID;
+@property(readonly, copy, nonatomic) NSString *adUnitID;
 - (void)setUserData:(id)arg1 error:(id *)arg2;
 @property(nonatomic) __weak UIViewController *rootViewController;
 - (void)destoryAd;

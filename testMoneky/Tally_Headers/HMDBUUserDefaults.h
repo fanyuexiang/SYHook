@@ -6,44 +6,38 @@
 
 #import <objc/NSObject.h>
 
-@class NSDictionary, NSMutableDictionary, NSURL;
+@class NSDictionary;
 @protocol OS_dispatch_queue;
 
 @interface HMDBUUserDefaults : NSObject
 {
-    NSURL *_directoryURL;
-    NSURL *_fileURL;
-    NSDictionary *_persistedDataDictionary;
-    NSMutableDictionary *_dataDictionary;
-    NSObject<OS_dispatch_queue> *_concurrentDictionaryQueue;
-    NSObject<OS_dispatch_queue> *_synchronizationQueue;
+    struct __CFString *_appNameRef;
+    NSDictionary *_historyDic;
+    NSObject<OS_dispatch_queue> *_serialSetQueue;
 }
 
 + (id)standardUserDefaults;
 - (void).cxx_destruct;
-@property(readonly, nonatomic) NSObject<OS_dispatch_queue> *synchronizationQueue; // @synthesize synchronizationQueue=_synchronizationQueue;
-@property(readonly, nonatomic) NSObject<OS_dispatch_queue> *concurrentDictionaryQueue; // @synthesize concurrentDictionaryQueue=_concurrentDictionaryQueue;
-@property(readonly, nonatomic) NSMutableDictionary *dataDictionary; // @synthesize dataDictionary=_dataDictionary;
-@property(readonly, copy, nonatomic) NSDictionary *persistedDataDictionary; // @synthesize persistedDataDictionary=_persistedDataDictionary;
-@property(readonly, copy, nonatomic) NSURL *fileURL; // @synthesize fileURL=_fileURL;
-@property(readonly, copy, nonatomic) NSURL *directoryURL; // @synthesize directoryURL=_directoryURL;
-- (id)loadDefaults;
-- (void)synchronize;
-- (id)dictionaryRepresentation;
+@property(readonly, nonatomic) NSObject<OS_dispatch_queue> *serialSetQueue; // @synthesize serialSetQueue=_serialSetQueue;
+@property(readonly) struct __CFString *appNameRef; // @synthesize appNameRef=_appNameRef;
 - (void)removeAllObjects;
 - (void)removeObjectForKey:(id)arg1;
 - (void)setInteger:(long long)arg1 forKey:(id)arg2;
 - (void)setBool:(_Bool)arg1 forKey:(id)arg2;
 - (void)setString:(id)arg1 forKey:(id)arg2;
 - (void)setObject:(id)arg1 forKey:(id)arg2;
+- (double)doubleForKey:(id)arg1;
 - (long long)integerForKey:(id)arg1;
 - (_Bool)boolForKey:(id)arg1;
 - (id)stringForKey:(id)arg1;
+- (id)dictForKey:(id)arg1;
 - (id)objectForKey:(id)arg1;
-- (id)generateDirectoryURLForBaseURL:(id)arg1;
-- (id)generateDirectoryURL;
+- (id)objectForKeyCompatibleWithHistory:(id)arg1;
+- (id)sharedHistory;
+- (id)initWithSuiteName:(id)arg1;
 - (id)init;
 - (id)copyWithZone:(struct _NSZone *)arg1;
+- (void)dealloc;
 
 @end
 

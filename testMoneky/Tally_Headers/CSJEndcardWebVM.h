@@ -8,21 +8,21 @@
 
 @interface CSJEndcardWebVM : CSJRewardedVideoWebViewControllerVM
 {
-    _Bool _isRenderSucc;
+    _Bool _isLong_APIRet;
 }
 
-@property(nonatomic) _Bool isRenderSucc; // @synthesize isRenderSucc=_isRenderSucc;
-- (void)showDefaultView:(_Bool)arg1;
+@property(nonatomic) _Bool isLong_APIRet; // @synthesize isLong_APIRet=_isLong_APIRet;
+- (void)Do_RootOrg:(_Bool)arg1;
 - (void)logoImageViewTapped:(id)arg1;
-- (double)getCloseDelayTime;
+- (double)Sdk_CidIf;
 - (_Bool)shouldTrack;
-- (void)setPageUrlString:(id)arg1;
-- (id)getPageUrlString;
-- (id)closeDictWithDuration:(double)arg1;
-- (void)webCloseAction;
+- (void)setUa_CodeNot:(id)arg1;
+- (id)Id_TagPos;
+- (id)Left_SDKAds:(double)arg1;
+- (void)Weak_TapIdx;
 - (void)reopenSKoverlay;
-- (void)addReopenSKOverlayObserver;
-- (void)checkSKOverlay:(_Bool)arg1;
+- (void)New_WeakLd;
+- (void)New_FailMark:(_Bool)arg1;
 - (_Bool)useLandingPageNewStyle;
 - (void)handleViewWillLayoutSubviews;
 - (void)handleViewDidAppear:(_Bool)arg1;

@@ -12,28 +12,28 @@
 {
     long long _clockType;
     NSString *_sentNotification;
-    NSTimer *_trackerTimer;
-    long long _batchInterval;
-    unsigned long long _bgTask;
+    NSTimer *_Dic_R0_pos;
+    long long _Api_HttpItem;
+    unsigned long long _Bu_y_VarType;
     CSJTrackerProxy *_trackerProxy;
 }
 
 - (void).cxx_destruct;
 @property(nonatomic) __weak CSJTrackerProxy *trackerProxy; // @synthesize trackerProxy=_trackerProxy;
-@property(nonatomic) unsigned long long bgTask; // @synthesize bgTask=_bgTask;
-@property(nonatomic) long long batchInterval; // @synthesize batchInterval=_batchInterval;
-@property(retain, nonatomic) NSTimer *trackerTimer; // @synthesize trackerTimer=_trackerTimer;
+@property(nonatomic) unsigned long long Bu_y_VarType; // @synthesize Bu_y_VarType=_Bu_y_VarType;
+@property(nonatomic) long long Api_HttpItem; // @synthesize Api_HttpItem=_Api_HttpItem;
+@property(retain, nonatomic) NSTimer *Dic_R0_pos; // @synthesize Dic_R0_pos=_Dic_R0_pos;
 @property(copy, nonatomic) NSString *sentNotification; // @synthesize sentNotification=_sentNotification;
 @property(nonatomic) long long clockType; // @synthesize clockType=_clockType;
-- (void)removeBackgroundTask;
+- (void)Bu_y_ResRit;
 - (void)trackerSentFinishedNotification:(id)arg1;
 - (void)didEnterBackground:(id)arg1;
 - (void)willEnterForeground:(id)arg1;
 - (void)startTrackerCleanerFromTimer;
-- (void)stopTrackerCleanerTimer;
-- (void)startTrackerCleanerTimer;
-- (void)startWithClockType:(long long)arg1;
-- (id)initWithTrackerProxy:(id)arg1;
+- (void)Used_SizeTime;
+- (void)Id_MapSdk;
+- (void)Api_ZoneLock:(long long)arg1;
+- (id)initLLevi_DataCn:(id)arg1;
 - (void)dealloc;
 
 @end

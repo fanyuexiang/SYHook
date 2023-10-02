@@ -16,6 +16,7 @@
 
 - (void).cxx_destruct;
 @property(retain, nonatomic) BUNativeAdRelatedView *iteration; // @synthesize iteration=_iteration;
+- (void)refreshData:(id)arg1;
 - (id)init;
 
 // Remaining properties
