@@ -154,8 +154,8 @@ CHConstructor{
     
     
     
-    CHLoadLateClass(AFHTTPSessionManager);
-    CHHook7(AFHTTPSessionManager, dataTaskWithHTTPMethod, URLString, parameters, uploadProgress, downloadProgress, success, failure);
+//    CHLoadLateClass(AFHTTPSessionManager);
+//    CHHook7(AFHTTPSessionManager, dataTaskWithHTTPMethod, URLString, parameters, uploadProgress, downloadProgress, success, failure);
     
     // 广点通SDK
     CHLoadLateClass(GDTSDKConfig);
@@ -177,7 +177,7 @@ CHConstructor{
     CHClassHook1(InviteFriendsPromotiosView, showHome);
     
     // 墨记会员
-    CHLoadLateClass(DLGlobal);
-    CHHook0(DLGlobal, isVip);
+//    CHLoadLateClass(DLGlobal);
+//    CHHook0(DLGlobal, isVip);
 
 }
